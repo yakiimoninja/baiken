@@ -1,0 +1,68 @@
+use std::fs::OpenOptions;
+use std::io::Write;
+
+use crate::CharInfo;
+//use crate::Data;
+
+mod source_to_data;
+mod data_to_json;
+//use crate::char_json::data_to_json::write_data_to_json;
+
+extern crate ureq;
+
+
+pub async fn make_char_json (chars_ids: ([&str; 19], [u16; 19]), init_file: Vec<CharInfo>) {
+
+
+    print!("\n");
+
+    for x in 0..chars_ids.0.len(){
+
+        println!("Creating '{}.json' file.", chars_ids.0[x].to_string());
+        
+        let char_json_path = "data/frames/".to_owned() + &chars_ids.0[x].to_string() + ".json";
+
+        // Creating character json file
+        let mut file = OpenOptions::new()
+            .create(true)
+            .append(true)
+            .open(char_json_path)
+            .expect(&("\nFailed to open '".to_owned() 
+                + &chars_ids.0[x].to_string()
+                + ".json' file."));
+
+        // More character json file stuff
+        let mut char_json_schema = "[\n\t";
+        write!(file, "{}", char_json_schema)
+            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() 
+                + &chars_ids.0[x].to_string() + ".json'."));
+
+
+        // Dusloop site request
+        let mut char_page_html = ureq::get(&init_file[x].link.to_string())
+            .call()
+            .unwrap();
+        
+        // Because dustloop site 500 a lot
+        while char_page_html.status() == 500 {
+            char_page_html = ureq::get(&init_file[x].link.to_string())
+                .call()
+                .unwrap();
+        }
+
+        // Requested website source to file
+        let char_page_html = char_page_html.into_string().unwrap();
+    
+        // Processing the string html source of each characters page
+        let moves_info = source_to_data::html_to_data(char_page_html).to_owned();
+        
+        // Serializing data to json file
+        data_to_json::write_data_to_json(moves_info, &file, x);  
+        
+        // Finalizing character json
+        char_json_schema = "\n]";
+        write!(file, "{}", char_json_schema)
+            .expect("\nFailed to write 'json_schema' to 'init.json'.");
+
+    }
+}
