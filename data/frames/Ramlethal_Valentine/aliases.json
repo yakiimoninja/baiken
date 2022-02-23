@@ -1,0 +1,14 @@
+[
+	{"input":"236S","aliases":"Bajoneto"},
+	{"input":"236H","aliases":"Bajoneto"},
+	{"input":"623P","aliases":"Dauro"},
+	{"input":"214K","aliases":"Sildo Detruo"},
+	{"input":"j.214K","aliases":"Sildo Detruo"},
+	{"input":"214H","aliases":"Sabrubato"},
+	{"input":"214P","aliases":"Erarlumo"},
+	{"input":"214P 214P","aliases":"Erarlumo"},
+	{"input":"214P 214P 214P","aliases":"Erarlumo"},
+	{"input":"j.214S","aliases":"Agressa Ordono"},
+	{"input":"632146H","aliases":"Calvados"},
+	{"input":"236236S","aliases":"Mortobato"}	
+]
