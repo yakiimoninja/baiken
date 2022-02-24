@@ -1,5 +1,8 @@
 use std::fs::OpenOptions;
 use std::io::Write;
+use std::path::Path;
+
+use tokio::fs::remove_file;
 
 use crate::CharInfo;
 //use crate::Data;
@@ -18,34 +21,35 @@ pub async fn make_char_json (chars_ids: ([&str; 19], [u16; 19]), init_file: Vec<
 
     for x in 0..chars_ids.0.len(){
 
-        println!("Creating '{}.json' file.", chars_ids.0[x].to_string());
+        println!("Creating '{}.json' file.", chars_ids.0[x]);
         
-        let char_json_path = "data/frames/".to_owned() + &chars_ids.0[x].to_string() + ".json";
+        let char_json_path = "data/frames/".to_owned() + &chars_ids.0[x] +"/"+ &chars_ids.0[x] + ".json";
+
+        if Path::new(&char_json_path).exists() == true{
+            remove_file(&char_json_path).await.unwrap();
+        }
 
         // Creating character json file
         let mut file = OpenOptions::new()
             .create(true)
             .append(true)
             .open(char_json_path)
-            .expect(&("\nFailed to open '".to_owned() 
-                + &chars_ids.0[x].to_string()
-                + ".json' file."));
+            .expect(&("\nFailed to open '".to_owned() + &chars_ids.0[x] + ".json' file."));
 
         // More character json file stuff
         let mut char_json_schema = "[\n\t";
         write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() 
-                + &chars_ids.0[x].to_string() + ".json'."));
+            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + &chars_ids.0[x] + ".json'."));
 
 
         // Dusloop site request
-        let mut char_page_html = ureq::get(&init_file[x].link.to_string())
+        let mut char_page_html = ureq::get(&init_file[x].link)
             .call()
             .unwrap();
         
         // Because dustloop site 500 a lot
         while char_page_html.status() == 500 {
-            char_page_html = ureq::get(&init_file[x].link.to_string())
+            char_page_html = ureq::get(&init_file[x].link)
                 .call()
                 .unwrap();
         }

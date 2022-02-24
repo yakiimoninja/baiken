@@ -1,5 +1,5 @@
 use serde_json;
-use std::{fs::{File, OpenOptions},io::prelude::*, time::SystemTime};
+use std::{fs::{File, OpenOptions},io::prelude::*};
 
 use crate::CHARS;
 use crate::CharInfo;
@@ -30,12 +30,13 @@ pub fn init_json(){
         // Iterating through the names and ids of each character
         // And constructing the link and page field values
         let init_json = serde_json::to_vec(&CharInfo{ 
-            page: ("GGST/".to_owned() + &CHARS.0[x].to_string() + "/Frame_Data" ),
+            page: ("GGST/".to_owned() + &CHARS.0[x] + "/Frame_Data" ),
             link: (SITE_LINK.to_owned() + &CHARS.1[x].to_string() +  SITE_HALF),
             pageid: CHARS.1[x],
-            update_timestamp: (SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)
-                                                .expect("\nFailed getting the UNIX timestamp.")
-                                                .as_secs()),
+            // For time based restriction
+            // update_timestamp: (SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)
+            //                                     .expect("\nFailed getting the UNIX timestamp.")
+            //                                     .as_secs()),
         },).expect("\nFailed to serialize to json.");
         
         // Writting the char data

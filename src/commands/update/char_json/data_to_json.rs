@@ -25,6 +25,7 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
 
             // Vectoring move data
             let vectored_frame_data = serde_json::to_vec(&Frames{
+                input: move_information[x-13].to_string(),
                 r#move: move_information[x-13].to_string(),
                 damage: move_information[x-12].to_string(),
                 guard: move_information[x-11].to_string(),
@@ -62,7 +63,8 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
 
             // Vectoring move data
             let vectored_frame_data = serde_json::to_vec(&Frames{
-                r#move: move_information[x-13].to_string().replace("c.", "5").replace("f.", "5"),
+                input: move_information[x-13].to_string().replace("c.", "5").replace("f.", "5"),
+                r#move: move_information[x-12].to_string().replace("c.", "5").replace("f.", "5"),
                 damage: move_information[x-11].to_string(),
                 guard: move_information[x-10].to_string(),
                 invincibility: move_information[x-0].to_string(),
@@ -76,7 +78,7 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
             }).unwrap();
             
             file.write_all(&vectored_frame_data)
-                .expect(&("\nFailed to serialize '".to_owned() + CHARS.0[char_count]+ ".json'."));
+                .expect(&("\nFailed to serialize '".to_owned() + CHARS.0[char_count] + ".json'."));
 
             if x != move_information.len() - 1 || move_information[x-13] == "bt.22" {
                 if move_information[x-13] != "bt.22"{

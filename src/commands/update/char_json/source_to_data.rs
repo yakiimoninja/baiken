@@ -80,7 +80,7 @@ pub fn html_to_data(html: String) -> String {
     moves_info = moves_info.replace(r#"\u00d"#, " ");
     moves_info = moves_info.replace(" \n", ";|");
     moves_info = moves_info.replace("a href=\\\"/wiki/index.php?title=Tiger_Knee\\\" title=\\\"Tiger Knee\\\">TK/a>", "TK");
-    moves_info = moves_info.to_owned() + &";".to_string();
+    moves_info = moves_info.to_owned() + &";";
     let moves_info: Vec<&str> = moves_info.split("\n").collect();
     let mut moves_info = moves_info.join("|");
     moves_info = moves_info.replacen("|", "", 1);

@@ -8,7 +8,7 @@ use serenity::prelude::*;
 use crate::{CHARS, CharInfo};
 
 mod char_json;
-mod init_json;
+pub(crate) mod init_json;
 
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&pageid=";
 const SITE_HALF: &str = "&prop=text&formatversion=2";
@@ -22,36 +22,33 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
         // Checking if image folder and image txts exist
         if Path::new("data/images").exists() == true{
             for c in 0..CHARS.0.len(){
-                if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == true{
-                    continue;
-                } else {
+                if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == true{}
+                else {
                     // Error message cause a specific file is missing
-                    let error_msg = "The '".to_owned() + &("data/images/".to_owned()+ CHARS.0[c]+".txt") + "' file was not found.\nPlease import all character '.txt' files to 'data/images' folder.";
+                    let error_msg = "The `".to_owned() + &("data/images/".to_owned()+ CHARS.0[c] + ".txt") + "` file was not found.\nPlease import all character `.txt` files to `data/images` folder.";
                     msg.channel_id.say(&ctx.http, &error_msg).await?;
                     print!("\n");
-                    panic!("{}", error_msg);
+                    panic!("{}", error_msg.replace("`", "'"));
                 }
             }
             println!("\nSuccesfully read {} '.txt' files from 'data/images' folder.", CHARS.0.len());
         }
         else{
             // Error message cause 'images' folder doesnt exist
-            let error_msg= "The 'data/images' folder was not found.\nPlease import all character '.txt' files to 'data/images' folder.";
+            let error_msg= "The `data/images` folder was not found.\nPlease import all character `.txt` files to `data/images` folder.";
             msg.channel_id.say(&ctx.http, error_msg).await?;
             print!("\n");
-            panic!("{}", error_msg);
+            panic!("{}", error_msg.replace("`", "'"));
         }
 
-        // Checking if frames folder exist and creates it if not
-        if Path::new("data/frames").exists() == true {}
-        else{
+        // Creating the frames folder if it doesnt exist
+        if Path::new("data/frames").exists() == false {
             fs::create_dir_all("data/frames")
                 .expect("\nFailed to create 'data/frames' directory.");
         }
 
-        // If init.json doesnt exist
+        // If init.json doesnt exist initialize it
         if Path::new("data/init.json").exists() == false {
-            // Initialize it
             init_json::init_json();
         }
 
@@ -59,7 +56,6 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
         if Path::new("data/init.json").exists() == true {
 
             // Reading init.json file
-            println!("\nAttempting to read from 'init.json'.");
             let data_from_file = fs::read_to_string("data/init.json")
                 .expect("\nFailed to read 'init.json' file.");
 
@@ -74,7 +70,6 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
 
             char_json::make_char_json(CHARS, file).await;
             msg.channel_id.say(&ctx.http, "Update succesful!").await?;
-
         }
 
     }
@@ -84,10 +79,10 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
             .expect("\nFailed to create 'data' directory.");   
         
         // Error message cause 'images' folder is empty
-        let error_msg = "The 'data/images' folder was empty.\nPlease import all character '.txt' files to 'data/images' folder.";
+        let error_msg = "The `data/images` folder was empty.\nPlease import all character `.txt` files to `data/images` folder.";
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
-        panic!("{}", error_msg);
+        panic!("{}", error_msg.replace("`", "'"));
     }
     
     return Ok(());

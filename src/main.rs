@@ -10,6 +10,8 @@ use serenity::{async_trait,
     framework::standard::macros::group};
 
 mod commands;
+mod init_check;
+
 use commands::{frames::*, update::*};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -17,11 +19,11 @@ pub struct CharInfo {
     page: String,
     link: String,
     pageid: u16,
-    update_timestamp: u64,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Frames {
+    input: String,
     r#move: String,
     damage: String,
     guard: String,
@@ -33,6 +35,13 @@ pub struct Frames {
     recovery: String,
     counter: String,
     img_link: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
+
+pub struct MoveAliases {
+    input: String,
+    aliases: Vec<String>,
 }
 
 pub const CHARS: ([&str; 19], [u16; 19]) = (
@@ -53,6 +62,7 @@ impl EventHandler for Handler {
 
     async fn ready(&self, _: Context, ready: Ready) {
         println!("\n{} is connected!", ready.user.name);
+        init_check::init_check();
     }
 }
 
@@ -63,11 +73,10 @@ struct General;
 #[tokio::main]
 async fn main() {
    
-
     dotenv::dotenv().expect("Failed to load .env file");
     
     // Debuging
-    tracing_subscriber::fmt::init();
+    //tracing_subscriber::fmt::init();
 
     let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
 

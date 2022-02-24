@@ -7,16 +7,16 @@ use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
 
-use crate::{CHARS, Frames};
+use crate::{CHARS, Frames, MoveAliases};
 // use crate::CharFrames;
 
 #[command]
 async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
+    //let character_extra_arg = args.next();
     // Getting character and move args
     let character = args.single::<String>()?;
-    let character_move = args.single::<String>()?;
-
+    let mut character_move = args.rest().to_string();
 
     // Checking for correct character argument
     if character.len() < 3 {
@@ -41,23 +41,24 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     // Checking if 'frames' folder and character jsons exist
     if Path::new("data/frames").exists() == true{
         for c in 0..CHARS.0.len(){
-            if Path::new(&("data/frames/".to_owned()+ CHARS.0[c]+".json")).exists() == true{
+            let json_path = &("data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json");
+            if Path::new(json_path).exists() == true{
                 continue;
             } else {
                 // Error message cause a specific file is missing
-                let error_msg = "The '".to_owned() + &("data/frames/".to_owned()+ CHARS.0[c]+".json") + "' file was not found.\nPlease import all character '.txt' files to 'data/images' folder.";
+                let error_msg = "The `".to_owned() + json_path + "` file was not found.\nPlease import all character `.txt` files to `data/images` folder.";
                 msg.channel_id.say(&ctx.http, &error_msg).await?;
                 print!("\n");
-                panic!("{}", error_msg);
+                panic!("{}", error_msg.replace("`", "'"));
             }
         }
     }
     else{
         // Error message cause 'frames' folder doesnt exist
-        let error_msg= "The 'data/frames' folder was not found.\nPlease execute the `b.update` command.";
+        let error_msg= "The `data/frames` folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
-        panic!("{}", error_msg);
+        panic!("{}", error_msg.replace("`", "'"));
     }
 
     // Initializing variables for the embed
@@ -79,22 +80,49 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
         if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true{
 
             // Reading the character json if found
-            let char_file_path = "data/frames/".to_owned() + &CHARS.0[c].to_string() + ".json";
+            let char_file_path = "data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
             let char_file_data = fs::read_to_string(char_file_path)
-                .expect(&("\nFailed to read '".to_owned() + &CHARS.0[c].to_string() + ".json" + "' file."));
+                .expect(&("\nFailed to read '".to_owned() + &CHARS.0[c] + ".json" + "' file."));
             
             //Deserializing from character json
             let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
             
-            println!("\nSuccesfully read '{}.json' file.", &CHARS.0[c].to_string());
+            println!("\nSuccesfully read '{}.json' file.", &CHARS.0[c]);
+
+            // Checking if aliases for this character exists
+            let aliases_path = &("data/frames/".to_owned() + CHARS.0[c] + "/aliases.json");
+            if Path::new(aliases_path).exists() == true{
+                
+                // Reading the aliases json
+                let aliases_data = fs::read_to_string(aliases_path)
+                    .expect(&("\nFailed to read ".to_owned() + &CHARS.0[c] + " 'aliases.json' file."));
+                
+                // Deserializing the aliases json
+                let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
+
+                for a in 0..aliases_data.len(){
+                    for b in 0..aliases_data[a].aliases.len(){
+                        
+                        // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
+                        // Change the given argument (character_move) to the actual move name instead of the alias
+                        if aliases_data[a].aliases[b].to_lowercase().trim() == character_move.to_lowercase().trim() {
+                            character_move = aliases_data[a].input.to_string();
+                        }
+                    }
+                }
+            }
+            
 
             for m in 0..move_frames.len(){
                 // Iterating through the moves of the json file to find the move requested
-                if move_frames[m].r#move.to_string().to_lowercase().replace(".", "") 
-                == character_move.to_string().to_lowercase().replace(".", ""){
+                if move_frames[m].input.to_string().to_lowercase().replace(".", "") 
+                == character_move.to_string().to_lowercase().replace(".", "")
+                || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) == true{
                     
-                    let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &CHARS.0[c].to_string() + "/Frame_Data";
-                    let title_embed = "Move: ".to_owned() + &move_frames[m].r#move.to_string();
+                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].r#move.to_string(), &CHARS.0[c]);
+
+                    let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &CHARS.0[c] + "/Frame_Data";
+                    let title_embed = "Move: ".to_owned() + &move_frames[m].input.to_string();
 
                     // Checking if the respective data field in the json file is empty
                     // If they aren't empty, the variables initialized above will be replaced
@@ -170,7 +198,9 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                     break;
                 }
             }
+        
         }
     }
     Ok(())
 }
+
