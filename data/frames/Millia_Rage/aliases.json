@@ -1,12 +1,12 @@
 [
-	{"input":"236S","aliases":"Tandem Top"},
-	{"input":"236H","aliases":"Tandem Top"},
-	{"input":"214S","aliases":"Lust Shaker"},
-	{"input":"214P","aliases":"Iron Savior"},
-	{"input":"j.236P","aliases":"Bad Moon"},
-	{"input":"j.236K","aliases":"Turbo Fall"},
-	{"input":"214K","aliases":"Mirazh"},
-	{"input":"j.236H","aliases":"Kapel"},
-	{"input":"236236S","aliases":"Septem Voices"},
-	{"input":"632146H","aliases":"Winger"}
+	{"input":"236S","aliases":["Tandem Top"]},
+	{"input":"236H","aliases":["Tandem Top"]},
+	{"input":"214S","aliases":["Lust Shaker"]},
+	{"input":"214P","aliases":["Iron Savior"]},
+	{"input":"j.236P","aliases":["Bad Moon"]},
+	{"input":"j.236K","aliases":["Turbo Fall"]},
+	{"input":"214K","aliases":["Mirazh"]},
+	{"input":"j.236H","aliases":["Kapel"]},
+	{"input":"236236S","aliases":["Septem Voices"]},
+	{"input":"632146H","aliases":["Winger"]}
 ]

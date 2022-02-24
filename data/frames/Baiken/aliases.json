@@ -1,12 +1,12 @@
 [
-	{"input":"236K","aliases":"Tatami Gaeshi"},
-	{"input":"j.236K","aliases":"Tatami Gaeshi"},
-	{"input":"41236S","aliases":"Kabari"},
-	{"input":"41236H","aliases":"Kabari"},
-	{"input":"41236H~H","aliases":"Kabari Followup"},
-	{"input":"j.236S","aliases":"Youzansen"},
-	{"input":"236P","aliases":"Hiiragi"},
-	{"input":"236236S","aliases":"Tsurane Sanzu-watashi"},
-	{"input":"214214P","aliases":"Kenjyu"},
-	{"input":"j.214214P","aliases":"Kenjyu"}
+	{"input":"236K","aliases":["Tatami Gaeshi"]},
+	{"input":"j.236K","aliases":["Tatami Gaeshi"]},
+	{"input":"41236S","aliases":["Kabari"]},
+	{"input":"41236H","aliases":["Kabari"]},
+	{"input":"41236H~H","aliases":["Kabari Followup"]},
+	{"input":"j.236S","aliases":["Youzansen"]},
+	{"input":"236P","aliases":["Hiiragi"]},
+	{"input":"236236S","aliases":["Tsurane Sanzu-watashi"]},
+	{"input":"214214P","aliases":["Kenjyu"]},
+	{"input":"j.214214P","aliases":["Kenjyu"]}
 ]

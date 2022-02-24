@@ -1,13 +1,13 @@
 [
-	{"input":"236S","aliases":"Zarameyuki"},
-	{"input":"236K","aliases":"Fukyo"},
-	{"input":"214K","aliases":"Fukyo"},
-	{"input":"214H","aliases":"Kamuriyuki"},
-	{"input":"623H","aliases":"Shizuriyuki"},
-	{"input":"623HH","aliases":"Shizuriyuki"},
-	{"input":"623P","aliases":"Bloodsucking Universe"},
-	{"input":"632146S","aliases":"Wasureyuki"},
-	{"input":"632146H","aliases":"Zansetsu"},
-	{"input":"BR Activation","aliases":"BR Activation"},
-	{"input":"BR Deactivation","aliases":"BR Deactivation"}
+	{"input":"236S","aliases":["Zarameyuki"]},
+	{"input":"236K","aliases":["Fukyo"]},
+	{"input":"214K","aliases":["Fukyo"]},
+	{"input":"214H","aliases":["Kamuriyuki"]},
+	{"input":"623H","aliases":["Shizuriyuki"]},
+	{"input":"623HH","aliases":["Shizuriyuki"]},
+	{"input":"623P","aliases":["Bloodsucking Universe"]},
+	{"input":"632146S","aliases":["Wasureyuki"]},
+	{"input":"632146H","aliases":["Zansetsu"]},
+	{"input":"BR Activation","aliases":["BR Activation"]},
+	{"input":"BR Deactivation","aliases":["BR Deactivation"]}
 ]

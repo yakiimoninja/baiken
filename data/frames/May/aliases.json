@@ -1,12 +1,12 @@
 [
-	{"input":"[4]6S","aliases":"Mr. Dolphin Horizontal"},
-	{"input":"[4]6H","aliases":"Mr. Dolphin Horizontal"},
-	{"input":"[2]8S","aliases":"Mr. Dolphin Vertical"},
-	{"input":"[2]8H","aliases":"Mr. Dolphin Vertical"},
-	{"input":"623K","aliases":"Overhead Kiss"},
-	{"input":"214P","aliases":"Arisugawa Sparkle"},
-	{"input":"214K","aliases":"Arisugawa Sparkle"},
-	{"input":"236236S","aliases":"Great Yamada Attack"},
-	{"input":"632146H","aliases":"The Wonderful and Dynamic Goshogawara"},
-	{"input":"j.632146H","aliases":"The Wonderful and Dynamic Goshogawara"}
+	{"input":"[4]6S","aliases":["Mr. Dolphin Horizontal"]},
+	{"input":"[4]6H","aliases":["Mr. Dolphin Horizontal"]},
+	{"input":"[2]8S","aliases":["Mr. Dolphin Vertical"]},
+	{"input":"[2]8H","aliases":["Mr. Dolphin Vertical"]},
+	{"input":"623K","aliases":["Overhead Kiss"]},
+	{"input":"214P","aliases":["Arisugawa Sparkle"]},
+	{"input":"214K","aliases":["Arisugawa Sparkle"]},
+	{"input":"236236S","aliases":["Great Yamada Attack"]},
+	{"input":"632146H","aliases":["The Wonderful and Dynamic Goshogawara"]},
+	{"input":"j.632146H","aliases":["The Wonderful and Dynamic Goshogawara"]}
 ]
