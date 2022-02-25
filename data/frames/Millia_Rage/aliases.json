@@ -1,12 +1,12 @@
 [
-	{"input":"236S","aliases":["Tandem Top"]},
-	{"input":"236H","aliases":["Tandem Top"]},
-	{"input":"214S","aliases":["Lust Shaker"]},
-	{"input":"214P","aliases":["Iron Savior"]},
-	{"input":"j.236P","aliases":["Bad Moon"]},
-	{"input":"j.236K","aliases":["Turbo Fall"]},
-	{"input":"214K","aliases":["Mirazh"]},
-	{"input":"j.236H","aliases":["Kapel"]},
-	{"input":"236236S","aliases":["Septem Voices"]},
-	{"input":"632146H","aliases":["Winger"]}
+	{"input":"236S","aliases":["Tandem Top","Disk","STT"]},
+	{"input":"236H","aliases":["Tandem Top","Heavy Disk","HTT"]},
+	{"input":"214S","aliases":["Lust Shaker","Stab","LS"]},
+	{"input":"214P","aliases":["Iron Savior","Cart","IS"]},
+	{"input":"j.236P","aliases":["Bad Moon","Overhead","BM"]},
+	{"input":"j.236K","aliases":["Turbo Fall","Fast Fall","Fall","FF","TF"]},
+	{"input":"214K","aliases":["Mirazh","Dash"]},
+	{"input":"j.236H","aliases":["Kapel","Rose","Air Dash","AD"]},
+	{"input":"236236S","aliases":["Septem Voices","Wheel Super","SV","WS"]},
+	{"input":"632146H","aliases":["Winger","Wing Super","WS"]}
 ]
