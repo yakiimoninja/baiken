@@ -1,14 +1,14 @@
 [
-	{"input":"236P","aliases":["Shitsu","butterfly"]},
-	{"input":"236K","aliases":["Suigetsu No Hakobi"]},
-	{"input":"236S","aliases":["Kou"]},
-	{"input":"236H","aliases":["Fuujin"]},
-	{"input":"236H P","aliases":["Shin: Ichishiki"]},
-	{"input":"236H K","aliases":["Issokutobi"]},
-	{"input":"236H S","aliases":["Nagiha"]},
-	{"input":"236H H","aliases":["Rin"]},
-	{"input":"632146H","aliases":["Issei Ougi: Sai"]},
-	{"input":"632146S","aliases":["Kachoufuugetsu Kai"]},
-	{"input":"632146S Attack Near","aliases":["Kachoufuugetsu Kai"]},
-	{"input":"632146S Attack Far","aliases":["Kachoufuugetsu Kai"]}
+	{"input":"236P","aliases":["Shitsu","Butterfly"]},
+	{"input":"236K","aliases":["Suigetsu No Hakobi","Spin","Autoguard"]},
+	{"input":"236S","aliases":["Kou","Anti Air","AntiAir","AA"]},
+	{"input":"236H","aliases":["Fuujin","Fujin"]},
+	{"input":"236H P","aliases":["Shin: Ichishiki","Fans","Fan Needles","Needles","FN"]},
+	{"input":"236H K","aliases":["Issokutobi","Hop"]},
+	{"input":"236H S","aliases":["Nagiha","Fujin Low","Fuujin Low","FL"]},
+	{"input":"236H H","aliases":["Rin","Overhead","Fuujin Overhead","Fujin Overhead","FO"]},
+	{"input":"632146H","aliases":["Issei Ougi: Sai","Super"]},
+	{"input":"632146S","aliases":["Kachoufuugetsu Kai","Parry","Parry Super"]},
+	{"input":"632146S Attack Near","aliases":["Kachoufuugetsu Kai","Parry","Parry Super"]},
+	{"input":"632146S Attack Far","aliases":["Kachoufuugetsu Kai","Parry","Parry Super"]}
 ]
