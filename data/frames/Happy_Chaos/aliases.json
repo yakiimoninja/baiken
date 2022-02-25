@@ -1,16 +1,16 @@
 [
-	{"input":"H","aliases":["At the Ready"]},
-	{"input":"236S","aliases":["At the Ready"]},
-	{"input":"236S H","aliases":["Fire"]},
-	{"input":"214S","aliases":["Steady Aim"]},
-	{"input":"214S H","aliases":["Fire"]},
-	{"input":"236S 2H","aliases":["Cancel Aim"]},
-	{"input":"214S 214S","aliases":["Cancel Aim"]},
+	{"input":"H","aliases":["At the Ready","Aim","Gun","ATR","AR"]},
+	{"input":"236S","aliases":["At the Ready","S Aim","S Gun","SATR","SAR"]},
+	{"input":"236S H","aliases":["Fire","S Fire","SF"]},
+	{"input":"214S","aliases":["Steady Aim","Focus Aim","FA"]},
+	{"input":"214S H","aliases":["Fire","Focus Fire","FF"]},
+	{"input":"236S 2H","aliases":["Cancel Aim","CAS"]},
+	{"input":"214S 214S","aliases":["Cancel Aim Focus","CAF"]},
 	{"input":"22P","aliases":["Reload"]},
 	{"input":"214P","aliases":["Focus"]},
 	{"input":"214K","aliases":["Roll"]},
-	{"input":"236K","aliases":["Scapegoat"]},
-	{"input":"236P","aliases":["Curse"]},
-	{"input":"632146S","aliases":["Deus Ex Machina"]},
-	{"input":"214214P","aliases":["Super Focus"]}
+	{"input":"236K","aliases":["Scapegoat","Clone"]},
+	{"input":"236P","aliases":["Curse","Ball"]},
+	{"input":"632146S","aliases":["Deus Ex Machina","DEM","Gun Super","GS"]},
+	{"input":"214214P","aliases":["Super Focus","SFS"]}
 ]
