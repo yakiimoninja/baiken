@@ -1,9 +1,9 @@
 [
-	{"input":"236K","aliases":["Trovao"]},
-	{"input":"214K","aliases":["Sepuura"]},
-	{"input":"623S","aliases":["Sol Nascente"]},
-	{"input":"214S","aliases":["Sol Poente"]},
-	{"input":"j.214S","aliases":["Sol Poente"]},
-	{"input":"632146H","aliases":["Ventania"]},
-	{"input":"j.236236H","aliases":["Tempestade"]}	
+	{"input":"236K","aliases":["Trovao","Spiral Arrow","Arrow","SA"]},
+	{"input":"214K","aliases":["Sepuura","Wolf Kick","WK"]},
+	{"input":"623S","aliases":["Sol Nascente","DP","Anti Air","AntiAir","AA","SN"]},
+	{"input":"214S","aliases":["Sol Poente","Overhead","Splits","SP"]},
+	{"input":"j.214S","aliases":["Sol Poente","Air Overhead","Air Splits","JSP"]},
+	{"input":"632146H","aliases":["Ventania","Super","Beyblade Super","BBS","BS"]},
+	{"input":"j.236236H","aliases":["Tempestade","Air Super","Divekick Super","DKS","DS"]}	
 ]
