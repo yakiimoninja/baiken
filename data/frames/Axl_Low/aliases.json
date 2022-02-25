@@ -1,14 +1,14 @@
 [
-	{"input":"[4]6S","aliases":["Sickle Flash"]},
-	{"input":"[4]6S 8","aliases":["Soaring Chain Strike"]},
-	{"input":"[4]6S 2","aliases":["Spinning Chain Strike"]},
-	{"input":"[4]6S S","aliases":["Winter Cherry"]},
-	{"input":"41236H","aliases":["Winter Mantis"]},
-	{"input":"214S","aliases":["Rainwater"]},
+	{"input":"[4]6S","aliases":["Sickle Flash","SF"]},
+	{"input":"[4]6S 8","aliases":["Soaring Chain Strike","SCS"]},
+	{"input":"[4]6S 2","aliases":["Spinning Chain Strike","Fan","Spin"]},
+	{"input":"[4]6S S","aliases":["Winter Cherry","Explosion","WC"]},
+	{"input":"41236H","aliases":["Winter Mantis","Command Grab","CG"]},
+	{"input":"214S","aliases":["Rainwater","RW"]},
 	{"input":"214H","aliases":["Snail"]},
-	{"input":"j.214H","aliases":["Snail"]},
-	{"input":"j.623H","aliases":["Axl Bomber"]},
-	{"input":"236236H","aliases":["Sickle Storm"]},
-	{"input":"632146P","aliases":["One Vision"]},
-	{"input":"632146P Attack","aliases":["One Vision"]}
+	{"input":"j.214H","aliases":["Snail","Air Snail","JSL"]},
+	{"input":"j.623H","aliases":["Axl Bomber","Bomber"]},
+	{"input":"236236H","aliases":["Sickle Storm","Explosion Super","SS"]},
+	{"input":"632146P","aliases":["One Vision","One Vision Install","OVI"]},
+	{"input":"632146P Attack","aliases":["One Vision","One Vision Activation","Za warudo","JoJo","OVA"]}
 ]
