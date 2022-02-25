@@ -1,14 +1,14 @@
 [
-	{"input":"236S","aliases":["Stroke the Big Tree"]},
-	{"input":"236H","aliases":["Stroke the Big Tree"]},
-	{"input":"j.236K","aliases":["Sury Performance"]},
-	{"input":"j.236S","aliases":["Sury Performance"]},
-	{"input":"j.236H","aliases":["Sury Performance"]},
-	{"input":"214P","aliases":["Antidepressant Scale"]},
-	{"input":"j.214P","aliases":["Antidepressant Scale"]},
-	{"input":"214K","aliases":["Chemical Love"]},
-	{"input":"j.214K","aliases":["Chemical Love"]},
-	{"input":"632146H","aliases":["Megalomania"]},
-	{"input":"632146S","aliases":["Uimate Fortissimo"]},
-	{"input":"j.632146S","aliases":["Uimate Fortissimo"]}
+	{"input":"236S","aliases":["Stroke the Big Tree","Stroke","STBT","SBT","SS"]},
+	{"input":"236H","aliases":["Stroke the Big Tree","Heavy Stroke","HSTBT","HSBT","HS"]},
+	{"input":"j.236K","aliases":["Sury Performance","Dive Kick","Divekick","KDK"]},
+	{"input":"j.236S","aliases":["Sury Performance","S Dive Kick","S Divekick","SDK"]},
+	{"input":"j.236H","aliases":["Sury Performance","H Dive Kick","H Divekick","HDK"]},
+	{"input":"214P","aliases":["Antidepressant Scale","Note","AS"]},
+	{"input":"j.214P","aliases":["Antidepressant Scale","Air Note","JAS"]},
+	{"input":"214K","aliases":["Chemical Love","CL"]},
+	{"input":"j.214K","aliases":["Chemical Love","Air CL","JCL"]},
+	{"input":"632146H","aliases":["Megalomania","Command Grab Super","Grab Super","CGS","GS"]},
+	{"input":"632146S","aliases":["Ultimate Fortissimo","Super","UF"]},
+	{"input":"j.632146S","aliases":["Ultimate Fortissimo","Air Super","JUF"]}
 ]
