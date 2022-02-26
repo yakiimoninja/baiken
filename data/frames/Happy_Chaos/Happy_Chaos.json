@@ -32,5 +32,5 @@
 	{"input":"632146S","move":"Deus Ex Machina","damage":"20, 1x17, 100","guard":"All","invincibility":"","startup":"13+(193 Flash)+7","block":"-25","hit":"KD","active":"","recovery":"","counter":"Small","img_link":"https://dustloop.com/wiki/images/0/0d/GGST_Happy_Chaos_Deus_Ex_Machina.png"},
 	{"input":"214214P","move":"Super Focus","damage":"NA","guard":"NA","invincibility":"","startup":"5","block":"NA","hit":"NA","active":"(52 Flash)","recovery":"6","counter":"","img_link":"https://dustloop.com/wiki/images/1/14/GGST_Happy_Chaos_Super_Focus.png"},
 	{"input":"Ground Throw","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"NA","hit":"HKD","active":"3","recovery":"38","counter":"","img_link":"https://dustloop.com/wiki/images/4/4a/GGST_Happy_Chaos_Ground_Throw.png"},
-	{"iinput":"Air Throw","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"NA","hit":"HKD","active":"3","recovery":"Until landing+10","counter":"","img_link":"https://dustloop.com/wiki/images/9/9b/GGST_Happy_Chaos_Air_Throw.png"}
+	{"input":"Air Throw","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"NA","hit":"HKD","active":"3","recovery":"Until landing+10","counter":"","img_link":"https://dustloop.com/wiki/images/9/9b/GGST_Happy_Chaos_Air_Throw.png"}
 ]
