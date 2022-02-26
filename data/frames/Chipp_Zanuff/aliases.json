@@ -1,10 +1,10 @@
 [
 	{"input":"236P","aliases":["Alpha Blade Horizontal","HAB","ABH"]},
-	{"input":"j.236P","aliases":["Alpha Blade Horizontal","JHAB","JABH"]},
+	{"input":"j.236P","aliases":["Air Alpha Blade Horizontal","AHAB","AABH","JHAB","JABH"]},
 	{"input":"236K","aliases":["Alpha Blade Diagonal","DAB","ABD"]},
-	{"input":"j.236K","aliases":["Alpha Blade Diagonal","JDAB","JABD"]},
+	{"input":"j.236K","aliases":["Air Alpha Blade Diagonal","ADAB","AABD","JDAB","JABD"]},
 	{"input":"623S","aliases":["Beta Blade","DP","BD"]},
-	{"input":"j.623S","aliases":["Beta Blade","Air DP","JDP","JBD"]},
+	{"input":"j.623S","aliases":["Air Beta Blade","Air DP","ADP","JDP","JBD"]},
 	{"input":"236H","aliases":["Gamma Blade","Clone","GB"]},
 	{"input":"236S","aliases":["Resshou","Rekka 1","Rekka1","Sushi"]},
 	{"input":"236S 236S","aliases":["Rokusai","Rekka 2","Rekka2","Rekka Low","Sukiyaki"]},
