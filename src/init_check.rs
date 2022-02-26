@@ -4,7 +4,7 @@ use std::{fs, path::Path};
 pub fn init_check() {
     
     // Checking if 'data' folder exists
-    if Path::new("data").exists() == true{
+    if Path::new("data").exists() == true {
 
         // If init.json doesnt exist initialize it
         if Path::new("data/init.json").exists() == false {
@@ -33,7 +33,7 @@ pub fn init_check() {
 
             // Checking if character folders exist
             for x in 0..CHARS.0.len(){
-                if Path::new(&("data/frames/".to_owned() + &CHARS.0[x] + "/")).exists() == false{
+                if Path::new(&("data/frames/".to_owned() + &CHARS.0[x] + "/")).exists() == false {
                     panic!("The '{}' folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.",&("data/frames/".to_owned() + &CHARS.0[x] + "/"));
                 }
             }
@@ -41,7 +41,7 @@ pub fn init_check() {
             // Checking if character jsons exist in their respective folder
             for x in 0..CHARS.0.len(){
                 let character_json = &("data/frames/".to_owned() + &CHARS.0[x] + "/" + &CHARS.0[x] +".json");
-                if Path::new(&character_json).exists() == false{
+                if Path::new(&character_json).exists() == false {
                     print!("\n");
                     panic!("Missing '{}'.\nPlease execute the 'b.update' command.", &character_json);
                 }
@@ -50,10 +50,9 @@ pub fn init_check() {
         }
 
         // Checking if image folder and image txts exist
-        if Path::new("data/images").exists() == true{
+        if Path::new("data/images").exists() == true {
             for c in 0..CHARS.0.len(){
-                if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == true{}
-                else {
+                if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == false {
                     // Error message cause a specific file is missing
                     let error_msg = "The '".to_owned() + &("data/images/".to_owned()+ CHARS.0[c]+".txt") + "' file was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
                     print!("\n");
