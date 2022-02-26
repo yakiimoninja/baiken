@@ -12,10 +12,10 @@ use serenity::{async_trait,
 mod commands;
 mod init_check;
 
-use commands::{frames::*, update::*, print_moves::*};
+use commands::{frames::*, update::*, print_moves::*, print_aliases::*};
 
 #[group]
-#[commands(f, update, m)]
+#[commands(f, update, m, a)]
 struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -48,11 +48,6 @@ pub struct MoveAliases {
     aliases: Vec<String>,
 }
 
-pub const CHARS: ([&str; 19], [u16; 19]) = (
-    ["Jack-O", "Nagoriyuki", "Millia_Rage", "Chipp_Zanuff", "Sol_Badguy", "Ky_Kiske", "May", "Zato-1", "I-No", "Happy_Chaos", "Baiken", "Anji_Mito", "Leo_Whitefang", "Faust", "Axl_Low", "Potemkin", "Ramlethal_Valentine", "Giovanna", "Goldlewis_Dickinson"],
-    [27121, 25406, 25419, 25425, 25177, 25428, 25429, 25427, 25422, 29465, 32523, 25421, 23572, 25409, 25424, 25423, 25426, 25420, 26496]
-);
-
 struct ShardManagerContainer;
 
 impl TypeMapKey for ShardManagerContainer{
@@ -69,6 +64,11 @@ impl EventHandler for Handler {
         init_check::init_check();
     }
 }
+
+pub const CHARS: ([&str; 19], [u16; 19]) = (
+    ["Jack-O", "Nagoriyuki", "Millia_Rage", "Chipp_Zanuff", "Sol_Badguy", "Ky_Kiske", "May", "Zato-1", "I-No", "Happy_Chaos", "Baiken", "Anji_Mito", "Leo_Whitefang", "Faust", "Axl_Low", "Potemkin", "Ramlethal_Valentine", "Giovanna", "Goldlewis_Dickinson"],
+    [27121, 25406, 25419, 25425, 25177, 25428, 25429, 25427, 25422, 29465, 32523, 25421, 23572, 25409, 25424, 25423, 25426, 25420, 26496]
+);
 
 #[tokio::main]
 async fn main() {
