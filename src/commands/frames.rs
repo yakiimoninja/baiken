@@ -94,12 +94,12 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             character_found = true;
 
             // Checking if aliases for this character exist
-            let aliases_path = &("data/frames/".to_owned() + CHARS.0[c] + "/aliases.json");
-            if Path::new(aliases_path).exists() == true{
+            let aliases_path = "data/frames/".to_owned() + CHARS.0[c] + "/aliases.json";
+            if Path::new(&aliases_path).exists() == true{
                 
                 // Reading the aliases json
-                let aliases_data = fs::read_to_string(aliases_path)
-                    .expect(&("\nFailed to read ".to_owned() + &CHARS.0[c] + " 'aliases.json' file."));
+                let aliases_data = fs::read_to_string(&aliases_path)
+                    .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
                 
                 // Deserializing the aliases json
                 let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
