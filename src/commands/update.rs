@@ -25,7 +25,7 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
                 if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == true{}
                 else {
                     // Error message cause a specific file is missing
-                    let error_msg = "The `".to_owned() + &("data/images/".to_owned()+ CHARS.0[c] + ".txt") + "` file was not found.\nPlease import all character `.txt` files to `data/images` folder.";
+                    let error_msg = "The `".to_owned() + &("data/images/".to_owned()+ CHARS.0[c] + ".txt") + "` file was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
                     msg.channel_id.say(&ctx.http, &error_msg).await?;
                     print!("\n");
                     panic!("{}", error_msg.replace("`", "'"));
@@ -35,7 +35,7 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
         }
         else{
             // Error message cause 'images' folder doesnt exist
-            let error_msg= "The `data/images` folder was not found.\nPlease import all character `.txt` files to `data/images` folder.";
+            let error_msg= "The `data/images` folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
             msg.channel_id.say(&ctx.http, error_msg).await?;
             print!("\n");
             panic!("{}", error_msg.replace("`", "'"));
@@ -79,7 +79,7 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
             .expect("\nFailed to create 'data' directory.");   
         
         // Error message cause 'images' folder is empty
-        let error_msg = "The `data/images` folder was empty.\nPlease import all character `.txt` files to `data/images` folder.";
+        let error_msg = "The `data/images` folder was empty.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
