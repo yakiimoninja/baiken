@@ -46,7 +46,7 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 continue;
             } else {
                 // Error message cause a specific file is missing
-                let error_msg = "The `".to_owned() + json_path + "` file was not found.\nPlease import all character `.txt` files to `data/images` folder.";
+                let error_msg = "The `".to_owned() + json_path + "` file was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
                 msg.channel_id.say(&ctx.http, &error_msg).await?;
                 print!("\n");
                 panic!("{}", error_msg.replace("`", "'"));
