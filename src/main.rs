@@ -12,7 +12,11 @@ use serenity::{async_trait,
 mod commands;
 mod init_check;
 
-use commands::{frames::*, update::*};
+use commands::{frames::*, update::*, print_moves::*};
+
+#[group]
+#[commands(f, update, m)]
+struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CharInfo {
@@ -65,10 +69,6 @@ impl EventHandler for Handler {
         init_check::init_check();
     }
 }
-
-#[group]
-#[commands(f, update)]
-struct General;
 
 #[tokio::main]
 async fn main() {
