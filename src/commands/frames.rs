@@ -13,15 +13,13 @@ use crate::{CHARS, Frames, MoveAliases};
 #[command]
 async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
-    //let character_extra_arg = args.next();
     // Getting character and move args
     let character = args.single::<String>()?;
     let mut character_move = args.rest().to_string();
 
     // Checking for correct character argument
     if character.len() < 3 {
-        if character.to_lowercase() == "ky"{}
-        else{
+        if character.to_lowercase() != "ky"{
             let error_msg = "Invalid character name!";
             msg.channel_id.say(&ctx.http, &error_msg).await?;
             print!("\n");
@@ -74,10 +72,14 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     let mut recovery_embed = "-".to_string();
     let mut counter_embed = "-".to_string();
 
+    let mut character_found = false;
+    let mut move_found = false;
+
     for c in 0..CHARS.0.len() {
 
         // Iterating through the character jsons to find the character requested
-        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true{
+        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true ||
+            CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true{
 
             // Reading the character json if found
             let char_file_path = "data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
@@ -88,8 +90,10 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
             
             println!("\nSuccesfully read '{}.json' file.", &CHARS.0[c]);
+            
+            character_found = true;
 
-            // Checking if aliases for this character exists
+            // Checking if aliases for this character exist
             let aliases_path = &("data/frames/".to_owned() + CHARS.0[c] + "/aliases.json");
             if Path::new(aliases_path).exists() == true{
                 
@@ -120,6 +124,8 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) == true{
                     
                     println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
+
+                    move_found = true;
 
                     let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &CHARS.0[c] + "/Frame_Data";
                     let title_embed = "Move: ".to_owned() + &move_frames[m].input.to_string();
@@ -198,9 +204,24 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                     break;
                 }
             }
-        
         }
     }
+
+    // Error message cause given characters json was not found
+    if character_found == false {
+        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
+        msg.channel_id.say(&ctx.http, error_msg).await?;
+        print!("\n");
+        panic!("{}", error_msg.replace("`", "'"));
+    }
+    // Error message cause given move wasnt found in the json
+    if character_found == true && move_found == false {
+        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!");
+        msg.channel_id.say(&ctx.http, error_msg).await?;
+        print!("\n");
+        panic!("{}", error_msg.replace("`", "'"));
+    }
+
     Ok(())
 }
 
