@@ -1,8 +1,10 @@
 //use std::{fs::OpenOptions, io::Write};
 //const CHAR_AMOUNT: usize = 19;
+const MALFORMED_STRINGS: ([&str; 4], [&str; 4]) = (["Sury","Uimate","Kaes","Sepuura"],["Sultry","Ultimate","Kaltes","Sepultura"]);
 
 pub fn html_to_data(html: String) -> String {
     
+
     // Processing the string html source of each characters page
     // To extract data from it
     let html: Vec<&str> = html.split(" ").collect();
@@ -84,6 +86,13 @@ pub fn html_to_data(html: String) -> String {
     let moves_info: Vec<&str> = moves_info.split("\n").collect();
     let mut moves_info = moves_info.join("|");
     moves_info = moves_info.replacen("|", "", 1);
+
+    // Fix for breaking some move names when parsing data from the page source
+    for m in 0..MALFORMED_STRINGS.0.len(){
+        if moves_info.contains(&MALFORMED_STRINGS.0[m]) == true {
+            moves_info = moves_info.replace(&MALFORMED_STRINGS.0[m], &MALFORMED_STRINGS.1[m]);
+        }
+    }
     
     // Debuging move data file
     // let mut file_1 = OpenOptions::new()
