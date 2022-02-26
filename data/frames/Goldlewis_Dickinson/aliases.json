@@ -26,5 +26,6 @@
 	{"input":"1080P","aliases":["Down With The System Level 3","Super Level 3","DWTS3","S3"]},
 	{"input":"236236K Level 1","aliases":["Burn It Down","Burn It Down Level 1","Laser","Laser Level 1","Laser Super","Laser Super Level 1","BID1","LL1","LS1"]},
 	{"input":"236236K Level 2","aliases":["Burn It Down Level 2","Laser Level 2","Laser Super Level 2","BID2","LL2","LS2"]},
-	{"input":"236236K Level 3","aliases":["Burn It Down Level 3","Laser Level 3","Laser Super Level 3","BID3","LL3","LS3"]}
+	{"input":"236236K Level 3","aliases":["Burn It Down Level 3","Laser Level 3","Laser Super Level 3","BID3","LL3","LS3"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

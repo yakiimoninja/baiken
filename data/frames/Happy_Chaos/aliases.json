@@ -12,5 +12,6 @@
 	{"input":"236K","aliases":["Scapegoat","Clone"]},
 	{"input":"236P","aliases":["Curse","Ball"]},
 	{"input":"632146S","aliases":["Deus Ex Machina","DEM","Gun Super","GS"]},
-	{"input":"214214P","aliases":["Super Focus","SFS"]}
+	{"input":"214214P","aliases":["Super Focus","SFS"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

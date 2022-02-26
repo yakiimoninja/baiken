@@ -23,5 +23,6 @@
 	{"input":"100T Weight","aliases":["100T Weight","Weight"]},
 	{"input":"Earthquake","aliases":["Earthquake","Quake"]},
 	{"input":"Horn","aliases":["Horn","Trumpet"]},
-	{"input":"Meteors","aliases":["Meteors","Meteor"]}
+	{"input":"Meteors","aliases":["Meteors","Meteor"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

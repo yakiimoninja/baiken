@@ -3,8 +3,8 @@
 	{"input":"[4]6H","aliases":["H Graviert Wurde","H Fireball","HFB"]},
 	{"input":"[2]8S","aliases":["Eisen Sturm","DP"]},
 	{"input":"[2]8H","aliases":["H Eisen Sturm","HDP"]},
-	{"input":"236S","aliases":["Kaes Gestöber Erst","KGE","Run"]},
-	{"input":"236H","aliases":["Kaes Gestöber Zweit","Run Through","KGZ","RT"]},
+	{"input":"236S","aliases":["Kaltes Gestöber Erst","KGE","Run"]},
+	{"input":"236H","aliases":["Kaltes Gestöber Zweit","Run Through","KGZ","RT"]},
 	{"input":"214S","aliases":["Turbulenz","Firewall"]},
 	{"input":"bt.P","aliases":["Back Turn Punch","Backturn Punch","BP"]},
 	{"input":"bt.K","aliases":["Back Turn Kick","Back Turn Low","Backturn Kick","Backturn Low","BK","BTL","BL"]},
@@ -15,5 +15,6 @@
 	{"input":"bt.214K","aliases":["Gländzendes Dunkel","Command Grab","GD","CG"]},
 	{"input":"bt.214H","aliases":["Blitzschlag","Blitz"]},
 	{"input":"632146S","aliases":["Stahl Wirbel","Fan Super","SW","FS"]},
-	{"input":"632146H","aliases":["Liedenschaft des Dirigenten","LDD","Slashing Super","SS"]}	
+	{"input":"632146H","aliases":["Liedenschaft des Dirigenten","LDD","Slashing Super","SS"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

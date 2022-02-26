@@ -12,5 +12,6 @@
 	{"input":"214H","aliases":["Garuda Impact","GI"]},
 	{"input":"236236S","aliases":["Heavenly Potemkin Buster","HPB","Command Grab Super","CGS"]},
 	{"input":"632146H","aliases":["Giganter Kai","Super","GK"]},
-	{"input":"Mirror","aliases":["Giganter Kai Barrier","Mirror","GKB"]}	
+	{"input":"Mirror","aliases":["Giganter Kai Barrier","Mirror","GKB"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

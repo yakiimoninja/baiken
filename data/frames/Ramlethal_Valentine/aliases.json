@@ -10,5 +10,6 @@
 	{"input":"214P 214P 214P","aliases":["Erarlumo 3","Rekka 3","Rekka 3"]},
 	{"input":"j.214S","aliases":["Agressa Ordono","Air Sword Swing","AO","JSS"]},
 	{"input":"632146H","aliases":["Calvados","Laser","LS"]},
-	{"input":"236236S","aliases":["Mortobato","Sword Super","SWS"]}	
+	{"input":"236236S","aliases":["Mortobato","Sword Super","SWS"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

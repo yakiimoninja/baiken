@@ -27,5 +27,6 @@
 	{"input":"DI j.632146H","aliases":["Dragon Install Air Ride the Lightning","DI Air Ride the Lightning","DIARTL","DIJRTL","Dragon Install Air Super","DI Air Super","DIAS","DIJS"]},
 	{"input":"236236P","aliases":["Sacred Edge","SAE","Fireball Super","FBS"]},
 	{"input":"DI 236236P","aliases":["Dragon Install Sacred Edge","DISAE","Dragon Install Fireball Super","DI Fireball Super","DIFBS"]},
-	{"input":"214214H","aliases":["Dragon Install","DI"]}
+	{"input":"214214H","aliases":["Dragon Install","DI"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]

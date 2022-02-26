@@ -15,5 +15,6 @@
 	{"input":"214S","aliases":["Night Raid Vortex","NRV"]},
 	{"input":"41236H","aliases":["Fafnir","Faf"]},
 	{"input":"632146H","aliases":["Tyrant Rave","Super","TR"]},
-	{"input":"214214H","aliases":["Heavy Mob Cemetery","Dragon Super","Command Grab Super","HMC","DS","CGS"]}	
+	{"input":"214214H","aliases":["Heavy Mob Cemetery","Dragon Super","Command Grab Super","HMC","DS","CGS"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
 ]
