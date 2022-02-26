@@ -23,9 +23,18 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
         // Proceed to write the data of these 14 positions
         if move_information[x].contains(";") == true {
 
+            // Replaces the contents of the input field with the actual input for both throws
+            let mut move_input = move_information[x-13].to_string();
+            if move_information[x-13] == "Ground Throw" {
+                move_input = move_information[x-13].replace("Ground Throw", "6D or 4D");
+            }
+            else if move_information[x-13] == "Air Throw" {
+                move_input = move_information[x-13].replace("Air Throw", "j.6D or j.4D");
+            }
+
             // Vectoring move data
             let vectored_frame_data = serde_json::to_vec(&Frames{
-                input: move_information[x-13].to_string(),
+                input: move_input,
                 r#move: move_information[x-13].to_string(),
                 damage: move_information[x-12].to_string(),
                 guard: move_information[x-11].to_string(),
