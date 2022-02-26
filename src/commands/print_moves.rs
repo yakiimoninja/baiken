@@ -47,7 +47,7 @@ async fn m (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
         panic!("{}", error_msg.replace("`", "'"));
     }
 
-    let mut move_found = false;
+    let mut character_found = false;
     for c in 0..CHARS.0.len() {
 
         // Iterating through the character jsons to find the character requested
@@ -73,12 +73,12 @@ async fn m (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             moves_as_msg = moves_as_msg + &"```".to_string();
             msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
             
-            move_found = true;
+            character_found = true;
         }
     }
 
-    // Error message cause character.json was not found
-    if move_found == false {
+    // Error message cause given characters json was not found
+    if character_found == false {
         let error_msg= &("Character `".to_owned() + &character + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
