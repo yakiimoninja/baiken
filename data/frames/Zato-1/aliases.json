@@ -16,5 +16,5 @@
 	{"input":"214H","aliases":["Unsummon Eddie","Unsummon","UE"]},
 	{"input":"632146H","aliases":["Amorphous","Bite","Bite Super","BS"]},
 	{"input":"632146S","aliases":["Sun Void","Sword","Sword Super","SS"]},
-	{"input":"j.632146S","aliases":["Sun Void","Air Sword","Air Sword Super","JSS"]}
+	{"nput":"j.632146S","aliases":["Sun Void","Air Sword","Air Sword Super","JSS"]}
 ]
