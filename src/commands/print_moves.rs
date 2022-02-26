@@ -12,8 +12,7 @@ async fn m (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
     let character = args.single::<String>()?;
-    //let mut character_move = args.rest().to_string();
-    println!("{}", character);
+  
     // Checking for correct character argument
     if character.len() < 3 {
         if character.to_lowercase() != "ky"{
@@ -25,12 +24,10 @@ async fn m (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     }
 
     // Checking if 'frames' folder and character jsons exist
-    if Path::new("data/frames").exists() == true{
+    if Path::new("data/frames").exists() == true {
         for c in 0..CHARS.0.len(){
             let json_path = &("data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json");
-            if Path::new(json_path).exists() == true{
-                continue;
-            } else {
+            if Path::new(json_path).exists() == false {
                 // Error message cause a specific file is missing
                 let error_msg = "The `".to_owned() + json_path + "` file was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
                 msg.channel_id.say(&ctx.http, &error_msg).await?;
@@ -51,8 +48,8 @@ async fn m (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     for c in 0..CHARS.0.len() {
 
         // Iterating through the character jsons to find the character requested
-        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true /*||
-            CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true */{
+        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true ||
+            CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true {
 
             // Reading the character json if found
             let char_file_path = "data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
@@ -63,17 +60,17 @@ async fn m (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
             
             println!("\nSuccesfully read '{}.json' file.", &CHARS.0[c]);
-
+            character_found = true;
+            
+            // Formatting string for in discord print
             let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Moves**__\n```";
 
             for m in 0..move_frames.len(){
-                moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &move_frames[m].r#move.to_string() 
-                    + " -> Input: " + &move_frames[m].input.to_string() + ".";
+                moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &move_frames[m].r#move
+                    + "\nInput: " + &move_frames[m].input + "\n";
             }
             moves_as_msg = moves_as_msg + &"```".to_string();
             msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
-            
-            character_found = true;
         }
     }
 
