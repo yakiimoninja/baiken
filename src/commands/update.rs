@@ -20,10 +20,9 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
     if Path::new("data").exists() == true{
 
         // Checking if image folder and image txts exist
-        if Path::new("data/images").exists() == true{
+        if Path::new("data/images").exists() == true {
             for c in 0..CHARS.0.len(){
-                if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == true{}
-                else {
+                if Path::new(&("data/images/".to_owned()+ CHARS.0[c]+".txt")).exists() == false {
                     // Error message cause a specific file is missing
                     let error_msg = "The `".to_owned() + &("data/images/".to_owned()+ CHARS.0[c] + ".txt") + "` file was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
                     msg.channel_id.say(&ctx.http, &error_msg).await?;
