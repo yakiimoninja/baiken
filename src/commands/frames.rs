@@ -119,7 +119,7 @@ async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 == character_move.to_string().to_lowercase().replace(".", "")
                 || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) == true{
                     
-                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].r#move.to_string(), &CHARS.0[c]);
+                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
 
                     let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &CHARS.0[c] + "/Frame_Data";
                     let title_embed = "Move: ".to_owned() + &move_frames[m].input.to_string();
