@@ -11,7 +11,8 @@ use crate::{CHARS, Frames, MoveAliases};
 // use crate::CharFrames;
 
 #[command]
-async fn f (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+#[aliases("f")]
+async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
     let character = args.single::<String>()?;

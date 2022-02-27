@@ -14,6 +14,7 @@ const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&pageid="
 const SITE_HALF: &str = "&prop=text&formatversion=2";
 
 #[command]
+#[aliases("u")]
 pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
 
     // Checking if 'data' folder exists

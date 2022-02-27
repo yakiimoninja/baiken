@@ -8,7 +8,8 @@ use serenity::prelude::*;
 use crate::{CHARS, MoveAliases};
 
 #[command]
-async fn a (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+#[aliases("a")]
+async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
     let character = args.single::<String>()?;

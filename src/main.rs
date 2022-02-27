@@ -15,7 +15,7 @@ mod init_check;
 use commands::{frames::*, update::*, print_moves::*, print_aliases::*, help::*};
 
 #[group]
-#[commands(f, update, m, a, h)]
+#[commands(frames, update, moves, aliases, help)]
 struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
