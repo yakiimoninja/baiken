@@ -3,7 +3,8 @@ use serenity::model::prelude::*;
 use serenity::prelude::*;
 
 #[command]
-async fn h (ctx: &Context, msg: &Message) -> CommandResult {
+#[aliases("h","?")]
+async fn help (ctx: &Context, msg: &Message) -> CommandResult {
 
     let help_message = r#"
 __**Commands**__
@@ -22,11 +23,14 @@ __**Commands**__
 • Use `b.a` or `b.aliases` followed by the `character` you want.
 • Example: `b.a leo` or `b.moves leo`.
 
+• Command: `b.u` or `b.update`.
+• Updates the frame data according to <https://dustloop.com/>.
+
 • Command: `b.h` or `b.help` or `b.?`.
 • Displays this help message.
 
 __**Github**__
-https://github.com/yakiimoninja/baiken-bot
+<https://github.com/yakiimoninja/baiken-bot>
 "#;
 
     msg.channel_id.say(&ctx.http, help_message).await?;
