@@ -5,3 +5,4 @@ pub mod frames;
 pub mod update;
 pub mod print_moves;
 pub mod print_aliases;
+pub mod help;
