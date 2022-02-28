@@ -29,25 +29,24 @@ pub fn init_check() {
         if Path::new("data/frames").exists() == false {
             panic!("The 'data/frames' folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.");
         }
-        else{
-
-            // Checking if character folders exist
-            for x in 0..CHARS.0.len(){
-                if Path::new(&("data/frames/".to_owned() + &CHARS.0[x] + "/")).exists() == false {
-                    panic!("The '{}' folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.",&("data/frames/".to_owned() + &CHARS.0[x] + "/"));
-                }
+        
+        // Checking if character folders exist
+        for x in 0..CHARS.0.len(){
+            if Path::new(&("data/frames/".to_owned() + &CHARS.0[x] + "/")).exists() == false {
+                panic!("The '{}' folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.",&("data/frames/".to_owned() + &CHARS.0[x] + "/"));
             }
-
-            // Checking if character jsons exist in their respective folder
-            for x in 0..CHARS.0.len(){
-                let character_json = &("data/frames/".to_owned() + &CHARS.0[x] + "/" + &CHARS.0[x] +".json");
-                if Path::new(&character_json).exists() == false {
-                    print!("\n");
-                    panic!("Missing '{}'.\nPlease execute the 'b.update' command.", &character_json);
-                }
-            }
-            println!("\nSuccesfully read {} character.json files from 'data/frames' folder.", &CHARS.0.len());
         }
+
+        // Checking if character jsons exist in their respective folder
+        for x in 0..CHARS.0.len(){
+            let character_json = &("data/frames/".to_owned() + &CHARS.0[x] + "/" + &CHARS.0[x] +".json");
+            if Path::new(&character_json).exists() == false {
+                print!("\n");
+                panic!("Missing '{}'.\nPlease execute the 'b.update' command.", &character_json);
+            }
+        }
+        println!("\nSuccesfully read {} character.json files from 'data/frames' folder.", &CHARS.0.len());
+        
 
         // Checking if image folder and image txts exist
         if Path::new("data/images").exists() == true {
@@ -69,13 +68,9 @@ pub fn init_check() {
         }
     }   
     
-    else {
-        //Creating the 'data' folder
-        fs::create_dir_all("data/images")
-            .expect("\nFailed to create 'data' directory.");   
-        
-        // Error message cause 'images' folder is empty
-        let error_msg = "The 'data/images' folder was empty.\nDownload and import the 'data/images' folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
+    else {        
+        // Error message cause 'data' folder does not exist
+        let error_msg = "The 'data' folder does not exist.\nDownload and import the 'data' folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
         print!("\n");
         panic!("{}", error_msg);
     }
