@@ -5,7 +5,7 @@ use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
 
-use crate::{CHARS, MoveAliases};
+use crate::{CHARS, MoveAliases, check};
 
 #[command]
 #[aliases("a")]
@@ -24,38 +24,45 @@ async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
         }            
     }
 
-    // Checking if 'frames' folder and character jsons exist
-    if Path::new("data/frames").exists() == true {
-        for c in 0..CHARS.0.len(){
-
-            // Error message cause a specific file is missing
-            let json_path = &("data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json");
-            if Path::new(json_path).exists() == false {
-                let error_msg = "The `".to_owned() + json_path + "` file was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
-                msg.channel_id.say(&ctx.http, &error_msg).await?;
-                print!("\n");
-                panic!("{}", error_msg.replace("`", "'"));
-            }
-
-            // Checking if aliases for this character exist
-            let aliases_path = "data/frames/".to_owned() + CHARS.0[c] + "/aliases.json";
-            if Path::new(&aliases_path).exists() == false {
-                // Error message cause a specific file is missing
-                let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";
-                msg.channel_id.say(&ctx.http, &error_msg).await?;
-                print!("\n");
-                panic!("{}", error_msg.replace("`", "'"));            
-            }
-        }
-
-        
-    }
-    else{
-        // Error message cause 'frames' folder doesnt exist
-        let error_msg= "The `data/frames` folder was not found.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
-        msg.channel_id.say(&ctx.http, error_msg).await?;
+    // Checking if data folder exists
+    if let Some(error_msg) = check::data_folder_exists(false){
+        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
-        panic!("{}", error_msg.replace("`", "'"));
+        panic!("{}", error_msg.replace("\n", " "));
+    }
+
+    // Checking if frames folder exist
+    if let Some(error_msg) = check::frames_folder_exists(false) {
+        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        print!("\n");
+        panic!("{}", error_msg.replace("\n", " "));
+    }
+    
+    // Checking if character folders exist
+    if let Some(error_msg) = check::character_folders_exist(false) {
+        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        print!("\n");
+        panic!("{}", error_msg.replace("\n", " "));
+    }
+
+    // Checking if character folders exist
+    if let Some(error_msg) = check::character_folder_contents_exist(false) {
+        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        print!("\n");
+        panic!("{}", error_msg.replace("\n", " "));
+    }
+ 
+    for c in 0..CHARS.0.len(){
+
+        // Checking if aliases for this character exist
+        let aliases_path = "data/frames/".to_owned() + CHARS.0[c] + "/aliases.json";
+        if Path::new(&aliases_path).exists() == false {
+            // Error message cause a specific file is missing
+            let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";
+            msg.channel_id.say(&ctx.http, &error_msg).await?;
+            print!("\n");
+            panic!("{}", error_msg.replace("`", "'"));            
+        }
     }
 
     let mut character_found = false;

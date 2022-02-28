@@ -10,7 +10,7 @@ use serenity::{async_trait,
     framework::standard::macros::group};
 
 mod commands;
-mod init_check;
+mod check;
 
 use commands::{frames::*, update::*, print_moves::*, print_aliases::*, help::*};
 
@@ -61,7 +61,14 @@ impl EventHandler for Handler {
 
     async fn ready(&self, _: Context, ready: Ready) {
         println!("\n{} is connected!", ready.user.name);
-        init_check::init_check();
+        // Running initial checks
+        check::data_folder_exists(true);
+        check::frames_folder_exists(true);
+        check::character_folders_exist(true);
+        check::character_folder_contents_exist(true);
+        check::image_folder_exists(true);
+        check::image_folder_contents_exist(true);
+        check::init_json_exists(true);
     }
 }
 
