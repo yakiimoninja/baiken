@@ -4,7 +4,7 @@ by providing you with character moves and their frame data.**
 
 ## Requirements
 - You will need a bot token.
-- You will need to download the exe from [here](https://github.com/yakiimoninja/baiken-bot/releases/latest).
+- You will need to download the exe from [here](https://github.com/yakiimoninja/baiken/releases/latest).
 - You will put it that token inside the `.env` file.
 - You will also need to have `data` folder and `.env` file in the same folder as `baiken-bot.exe`.
 
