@@ -23,7 +23,7 @@ pub async fn make_char_json (chars_ids: ([&str; 19], [u16; 19]), init_file: Vec<
 
         println!("Creating '{}.json' file.", chars_ids.0[x]);
         
-        let char_json_path = "data/frames/".to_owned() + &chars_ids.0[x] +"/"+ &chars_ids.0[x] + ".json";
+        let char_json_path = "data/".to_owned() + &chars_ids.0[x] +"/"+ &chars_ids.0[x] + ".json";
 
         if Path::new(&char_json_path).exists() == true{
             remove_file(&char_json_path).await.unwrap();
