@@ -1,6 +1,6 @@
 # Baiken
 **Your favorite one-handed samurai lady helps you learn Guilty Gear Strive \
-by providing you with each character's moves frame data and their hitboxes.**
+by providing you with each character's moves, frame data and their hitboxes.**
 
 ## Requirements
 - You will need a bot token.
