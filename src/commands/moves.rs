@@ -8,7 +8,7 @@ use crate::{CHARS, Frames, check};
 
 #[command]
 #[aliases("m")]
-async fn moves (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
     let character = args.single::<String>()?;
@@ -23,13 +23,6 @@ async fn moves (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
         }            
     }
 
-    // Checking if frames folder exist
-    if let Some(error_msg) = check::frames_folder_exists(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
-    }
-
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
@@ -38,7 +31,7 @@ async fn moves (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     }
     
     // Checking if character jsons exist
-    if let Some(error_msg) = check::character_folder_contents_exist(false) {
+    if let Some(error_msg) = check::character_jsons_exist(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
@@ -52,7 +45,7 @@ async fn moves (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true {
 
             // Reading the character json if found
-            let char_file_path = "data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
+            let char_file_path = "data/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
             let char_file_data = fs::read_to_string(char_file_path)
                 .expect(&("\nFailed to read '".to_owned() + &CHARS.0[c] + ".json" + "' file."));
             
