@@ -9,7 +9,7 @@ use crate::{CHARS, MoveAliases, check};
 
 #[command]
 #[aliases("a")]
-async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
     let character = args.single::<String>()?;
@@ -30,13 +30,6 @@ async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
-
-    // Checking if frames folder exist
-    if let Some(error_msg) = check::frames_folder_exists(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
-    }
     
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
@@ -45,8 +38,8 @@ async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
         panic!("{}", error_msg.replace("\n", " "));
     }
 
-    // Checking if character folders exist
-    if let Some(error_msg) = check::character_folder_contents_exist(false) {
+    // Checking if character jsons exist
+    if let Some(error_msg) = check::character_jsons_exist(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
@@ -55,7 +48,7 @@ async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     for c in 0..CHARS.0.len(){
 
         // Checking if aliases for this character exist
-        let aliases_path = "data/frames/".to_owned() + CHARS.0[c] + "/aliases.json";
+        let aliases_path = "data/".to_owned() + CHARS.0[c] + "/aliases.json";
         if Path::new(&aliases_path).exists() == false {
             // Error message cause a specific file is missing
             let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";
@@ -76,7 +69,7 @@ async fn aliases (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
             character_found = true;
 
             // Reading the aliases json
-            let aliases_path = "data/frames/".to_owned() + &CHARS.0[c] + "/aliases.json";
+            let aliases_path = "data/".to_owned() + &CHARS.0[c] + "/aliases.json";
             let aliases_data = fs::read_to_string(&aliases_path)
                 .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
             
