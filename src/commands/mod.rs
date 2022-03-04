@@ -3,6 +3,7 @@
 //pub mod owner;
 pub mod frames;
 pub mod update;
-pub mod print_moves;
-pub mod print_aliases;
+pub mod moves;
+pub mod aliases;
 pub mod help;
+pub mod hitboxes;
