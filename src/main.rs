@@ -12,10 +12,10 @@ use serenity::{async_trait,
 mod commands;
 mod check;
 
-use commands::{frames::*, update::*, print_moves::*, print_aliases::*, help::*};
+use commands::{frames::*, update::*, moves::*, aliases::*, help::*, hitboxes::*};
 
 #[group]
-#[commands(frames, update, moves, aliases, help)]
+#[commands(frames, update, moves, aliases, help, hitboxes)]
 struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -38,11 +38,16 @@ pub struct Frames {
     active: String,
     recovery: String,
     counter: String,
-    img_link: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct ImageLinks {
+    r#move: String,
+    move_img: String,
+    hitbox_img: Vec<String>,
+}
 
+#[derive(Serialize, Deserialize, Debug)]
 pub struct MoveAliases {
     input: String,
     aliases: Vec<String>,
@@ -63,12 +68,10 @@ impl EventHandler for Handler {
         println!("\n{} is connected!", ready.user.name);
         // Running initial checks
         check::data_folder_exists(true);
-        check::frames_folder_exists(true);
         check::character_folders_exist(true);
-        check::character_folder_contents_exist(true);
-        check::image_folder_exists(true);
-        check::image_folder_contents_exist(true);
+        check::character_images_exist(true);
         check::init_json_exists(true);
+        check::character_jsons_exist(true);
     }
 }
 
