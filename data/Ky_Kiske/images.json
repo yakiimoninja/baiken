@@ -1,0 +1,362 @@
+[
+    {
+        "move": "5P",
+        "move_img": "https://dustloop.com/wiki/images/e/ec/GGST_Ky_Kiske_5P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/d/d0/GGST_Ky_5P_hitbox.png"
+        ]
+    },
+    {
+        "move": "5K",
+        "move_img": "https://dustloop.com/wiki/images/b/b6/GGST_Ky_Kiske_5K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b4/GGST_Ky_5K_hitbox.png"
+        ]
+    },
+    {
+        "move": "c.S",
+        "move_img": "https://dustloop.com/wiki/images/e/e0/GGST_Ky_Kiske_cS.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/d/dd/GGST_Ky_c.S_hitbox.png"
+        ]
+    },
+    {
+        "move": "f.S",
+        "move_img": "https://dustloop.com/wiki/images/7/7e/GGST_Ky_Kiske_fS.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/6/6a/GGST_Ky_f.S_hitbox.png"
+        ]
+    },
+    {
+        "move": "5H",
+        "move_img": "https://dustloop.com/wiki/images/5/57/GGST_Ky_Kiske_5H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/a/a7/GGST_Ky_5H_hitbox.png"
+        ]
+    },
+    {
+        "move": "2P",
+        "move_img": "https://dustloop.com/wiki/images/4/45/GGST_Ky_Kiske_2P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/ed/GGST_Ky_2P_hitbox.png"
+        ]
+    },
+    {
+        "move": "2K",
+        "move_img": "https://dustloop.com/wiki/images/3/3a/GGST_Ky_Kiske_2K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/97/GGST_Ky_2K_hitbox.png"
+        ]
+    },
+    {
+        "move": "2S",
+        "move_img": "https://dustloop.com/wiki/images/5/5a/GGST_Ky_Kiske_2S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/e5/GGST_Ky_2S_hitbox.png"
+        ]
+    },
+    {
+        "move": "2H",
+        "move_img": "https://dustloop.com/wiki/images/1/1c/GGST_Ky_Kiske_2H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/5/54/GGST_Ky_2H_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.P",
+        "move_img": "https://dustloop.com/wiki/images/8/89/GGST_Ky_Kiske_jP.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/4a/GGST_Ky_j.P_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.K",
+        "move_img": "https://dustloop.com/wiki/images/8/8c/GGST_Ky_Kiske_jK.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/c/cd/GGST_Ky_j.K_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.S",
+        "move_img": "https://dustloop.com/wiki/images/a/a2/GGST_Ky_Kiske_jS.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/3/3c/GGST_Ky_j.S_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.H",
+        "move_img": "https://dustloop.com/wiki/images/c/c5/GGST_Ky_Kiske_jH.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/c/ca/GGST_Ky_j.H_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.D",
+        "move_img": "https://dustloop.com/wiki/images/2/2c/GGST_Ky_Kiske_jD.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/5/5c/GGST_Ky_j.D_hitbox.png"
+        ]
+    },
+    {
+        "move": "6P",
+        "move_img": "https://dustloop.com/wiki/images/2/27/GGST_Ky_Kiske_6P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/f/f0/GGST_Ky_6P_hitbox.png"
+        ]
+    },
+    {
+        "move": "6K",
+        "move_img": "https://dustloop.com/wiki/images/3/3b/GGST_Ky_Kiske_6K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/6/6a/GGST_Ky_6K_hitbox.png"
+        ]
+    },
+    {
+        "move": "6H",
+        "move_img": "https://dustloop.com/wiki/images/f/f9/GGST_Ky_Kiske_6H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/c/c6/GGST_Ky_6H_hitbox.png"
+        ]
+    },
+    {
+        "move": "2D",
+        "move_img": "https://dustloop.com/wiki/images/2/2f/GGST_Ky_Kiske_2D.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/0/0e/GGST_Ky_2D_hitbox.png"
+        ]
+    },
+    {
+        "move": "5D",
+        "move_img": "https://dustloop.com/wiki/images/c/cd/GGST_Ky_Kiske_5D.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b1/GGST_Ky_5D_hitbox.png"
+        ]
+    },
+    {
+        "move": "5[D]",
+        "move_img": "https://dustloop.com/wiki/images/c/cd/GGST_Ky_Kiske_5D.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b1/GGST_Ky_5D_hitbox.png"
+        ]
+    },
+    {
+        "move": "236S",
+        "move_img": "https://dustloop.com/wiki/images/e/e6/GGST_Ky_Kiske_236S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/0/09/GGST_Ky_Kiske_236S_Hitbox_1.png",
+            "https://dustloop.com/wiki/images/a/a2/GGST_Ky_Kiske_236S_Hitbox_2.png"
+        ]
+    },
+    {
+        "move": "DI 236S",
+        "move_img": "https://dustloop.com/wiki/images/e/e6/GGST_Ky_Kiske_236S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/0/09/GGST_Ky_Kiske_236S_Hitbox_1.png",
+            "https://dustloop.com/wiki/images/a/a2/GGST_Ky_Kiske_236S_Hitbox_2.png"
+        ]
+    },
+    {
+        "move": "236H",
+        "move_img": "https://dustloop.com/wiki/images/f/f6/GGST_Ky_Kiske_236H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/8c/GGST_Ky_Kiske_236H_Hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 236H",
+        "move_img": "https://dustloop.com/wiki/images/f/f6/GGST_Ky_Kiske_236H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/8c/GGST_Ky_Kiske_236H_Hitbox.png"
+        ]
+    },
+    {
+        "move": "j.236S",
+        "move_img": "https://dustloop.com/wiki/images/a/a5/GGST_Ky_Kiske_j236X.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/70/GGST_Ky_Aerial_Stun_Edge_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI j.236S",
+        "move_img": "https://dustloop.com/wiki/images/a/a5/GGST_Ky_Kiske_j236X.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/70/GGST_Ky_Aerial_Stun_Edge_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.236H",
+        "move_img": "https://dustloop.com/wiki/images/a/a5/GGST_Ky_Kiske_j236X.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/70/GGST_Ky_Aerial_Stun_Edge_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI j.236H",
+        "move_img": "https://dustloop.com/wiki/images/a/a5/GGST_Ky_Kiske_j236X.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/70/GGST_Ky_Aerial_Stun_Edge_hitbox.png"
+        ]
+    },
+    {
+        "move": "623S",
+        "move_img": "https://dustloop.com/wiki/images/0/0e/GGST_Ky_Kiske_623S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/9e/GGST_Ky_623S_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 623S",
+        "move_img": "https://dustloop.com/wiki/images/0/0e/GGST_Ky_Kiske_623S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/9e/GGST_Ky_623S_hitbox.png"
+        ]
+    },
+    {
+        "move": "623H",
+        "move_img": "https://dustloop.com/wiki/images/7/73/GGST_Ky_Kiske_623H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/42/GGST_Ky_623H_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 623H",
+        "move_img": "https://dustloop.com/wiki/images/7/73/GGST_Ky_Kiske_623H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/42/GGST_Ky_623H_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.623S",
+        "move_img": "https://dustloop.com/wiki/images/0/0e/GGST_Ky_Kiske_623S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/9e/GGST_Ky_623S_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI j.623S",
+        "move_img": "https://dustloop.com/wiki/images/0/0e/GGST_Ky_Kiske_623S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/9e/GGST_Ky_623S_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.623H",
+        "move_img": "https://dustloop.com/wiki/images/7/73/GGST_Ky_Kiske_623H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/42/GGST_Ky_623H_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI j.623H",
+        "move_img": "https://dustloop.com/wiki/images/7/73/GGST_Ky_Kiske_623H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/42/GGST_Ky_623H_hitbox.png"
+        ]
+    },
+    {
+        "move": "236K",
+        "move_img": "https://dustloop.com/wiki/images/8/89/GGST_Ky_Kiske_236K_1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/archive/4/43/20211012041536%21GGST_Ky_236K_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 236K",
+        "move_img": "https://dustloop.com/wiki/images/8/89/GGST_Ky_Kiske_236K_1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/43/GGST_Ky_236K_hitbox.png",
+            "https://dustloop.com/wiki/images/f/fd/GGST_Ky_236K_hitbox2.png"
+        ]
+    },
+    {
+        "move": "214K",
+        "move_img": "https://dustloop.com/wiki/images/6/66/GGST_Ky_Kiske_214K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/f/fb/GGST_Ky_214K_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 214K",
+        "move_img": "https://dustloop.com/wiki/images/6/66/GGST_Ky_Kiske_214K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/f/fb/GGST_Ky_214K_hitbox.png"
+        ]
+    },
+    {
+        "move": "214S",
+        "move_img": "https://dustloop.com/wiki/images/e/ef/GGST_Ky_Kiske_214S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/e6/GGST_Ky_214S_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 214S",
+        "move_img": "https://dustloop.com/wiki/images/e/ef/GGST_Ky_Kiske_214S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/e6/GGST_Ky_214S_hitbox.png"
+        ]
+    },
+    {
+        "move": "632146H",
+        "move_img": "https://dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 632146H",
+        "move_img": "https://dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.632146H",
+        "move_img": "https://dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI j.632146H",
+        "move_img": "https://dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+        ]
+    },
+    {
+        "move": "236236P",
+        "move_img": "https://dustloop.com/wiki/images/b/b1/GGST_Ky_Kiske_236236P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/3/31/GGST_Ky_Kiske_Sacred_Edge_hitbox.png"
+        ]
+    },
+    {
+        "move": "DI 236236P",
+        "move_img": "https://dustloop.com/wiki/images/b/b1/GGST_Ky_Kiske_236236P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/3/31/GGST_Ky_Kiske_Sacred_Edge_hitbox.png"
+        ]
+    },
+    {
+        "move": "214214H",
+        "move_img": "https://dustloop.com/wiki/images/e/e6/GGST_Ky_Kiske_214214H_2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/4e/GGST_Ky_Kiske_Dragon_Install_hitbox.png"
+        ]
+    },
+    {
+        "move": "6D or 4D",
+        "move_img": "https://dustloop.com/wiki/images/3/35/GGST_Ky_Kiske_Ground_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "move": "j.6D or j.4D",
+        "move_img": "https://dustloop.com/wiki/images/8/8d/GGST_Ky_Kiske_Air_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    }
+]

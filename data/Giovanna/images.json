@@ -1,0 +1,224 @@
+[
+    {
+        "move": "5P",
+        "move_img": "https://dustloop.com/wiki/images/2/20/GGST_Giovanna_5P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/7a/GGST_Giovanna_5P_Hitbox.png"
+        ]
+    },
+    {
+        "move": "5K",
+        "move_img": "https://dustloop.com/wiki/images/4/4f/GGST_Giovanna_5K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/94/GGST_Giovanna_5K_Hitbox.png"
+        ]
+    },
+    {
+        "move": "c.S",
+        "move_img": "https://dustloop.com/wiki/images/3/3a/GGST_Giovanna_cS.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/1/1c/GGST_Giovanna_cS_Hitbox.png"
+        ]
+    },
+    {
+        "move": "f.S",
+        "move_img": "https://dustloop.com/wiki/images/e/e0/GGST_Giovanna_fS1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/75/GGST_Giovanna_fS1_hitbox.png",
+            "https://dustloop.com/wiki/images/2/20/GGST_Giovanna_fS2_hitbox.png",
+            "https://dustloop.com/wiki/images/7/7b/GGST_Giovanna_fS3_hitbox.png"
+        ]
+    },
+    {
+        "move": "5H",
+        "move_img": "https://dustloop.com/wiki/images/6/6c/GGST_Giovanna_5H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/84/GGST_Giovanna_5H_Hitbox.png"
+        ]
+    },
+    {
+        "move": "2P",
+        "move_img": "https://dustloop.com/wiki/images/2/2a/GGST_Giovanna_2P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/e5/GGST_Giovanna_2P_Hitbox.png"
+        ]
+    },
+    {
+        "move": "2K",
+        "move_img": "https://dustloop.com/wiki/images/8/80/GGST_Giovanna_2K.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/f/f2/GGST_Giovanna_2K_Hitbox.png"
+        ]
+    },
+    {
+        "move": "2S",
+        "move_img": "https://dustloop.com/wiki/images/4/49/GGST_Giovanna_2S2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/90/GGST_Giovanna_2S1_hitbox.png",
+            "https://dustloop.com/wiki/images/4/46/GGST_Giovanna_2S2_hitbox.png"
+        ]
+    },
+    {
+        "move": "2H",
+        "move_img": "https://dustloop.com/wiki/images/0/0a/GGST_Giovanna_2H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/a/ab/GGST_Giovanna_2H_Hitbox.png"
+        ]
+    },
+    {
+        "move": "j.P",
+        "move_img": "https://dustloop.com/wiki/images/7/79/GGST_Giovanna_jP.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/9/91/GGST_Giovanna_jP_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.K",
+        "move_img": "https://dustloop.com/wiki/images/8/88/GGST_Giovanna_jK.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/bf/GGST_Giovanna_jK_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.S",
+        "move_img": "https://dustloop.com/wiki/images/f/f4/GGST_Giovanna_jS.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/1/10/GGST_Giovanna_jS_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.H",
+        "move_img": "https://dustloop.com/wiki/images/7/7f/GGST_Giovanna_jH2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/7/7e/GGST_Giovanna_jH1_hitbox.png",
+            "https://dustloop.com/wiki/images/e/e4/GGST_Giovanna_jH2_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.D",
+        "move_img": "https://dustloop.com/wiki/images/9/9e/GGST_Giovanna_jD_1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/a/ae/GGST_Giovanna_jD_1_hitbox.png",
+            "https://dustloop.com/wiki/images/9/9d/GGST_Giovanna_jD_2_hitbox.png"
+        ]
+    },
+    {
+        "move": "6P",
+        "move_img": "https://dustloop.com/wiki/images/3/34/GGST_Giovanna_6P.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/4d/GGST_Giovanna_6P_Hitbox.png"
+        ]
+    },
+    {
+        "move": "6H",
+        "move_img": "https://dustloop.com/wiki/images/2/2a/GGST_Giovanna_6H.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/81/GGST_Giovanna_6H_hitbox.png"
+        ]
+    },
+    {
+        "move": "6HH",
+        "move_img": "https://dustloop.com/wiki/images/1/1e/GGST_Giovanna_6HH.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/6/68/GGST_Giovanna_6HH_hitbox.png"
+        ]
+    },
+    {
+        "move": "6HHH",
+        "move_img": "https://dustloop.com/wiki/images/0/05/GGST_Giovanna_6HHH.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/86/GGST_Giovanna_6HHH_hitbox.png"
+        ]
+    },
+    {
+        "move": "2D",
+        "move_img": "https://dustloop.com/wiki/images/f/f2/GGST_Giovanna_2D.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/48/GGST_Giovanna_2D_Hitbox.png"
+        ]
+    },
+    {
+        "move": "5D",
+        "move_img": "https://dustloop.com/wiki/images/0/07/GGST_Giovanna_5D.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/6/6c/GGST_Giovanna_5D_Hitbox.png"
+        ]
+    },
+    {
+        "move": "5[D]",
+        "move_img": "https://dustloop.com/wiki/images/0/07/GGST_Giovanna_5D.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/6/6c/GGST_Giovanna_5D_Hitbox.png"
+        ]
+    },
+    {
+        "move": "236K",
+        "move_img": "https://dustloop.com/wiki/images/8/81/GGST_Giovanna_Trovao.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/3/3b/GGST_Giovanna_Trovao_hitbox.png"
+        ]
+    },
+    {
+        "move": "214K",
+        "move_img": "https://dustloop.com/wiki/images/8/8d/GGST_Giovanna_Sepultura.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/5/57/GGST_Giovanna_Sepultura_hitbox.png"
+        ]
+    },
+    {
+        "move": "623S",
+        "move_img": "https://dustloop.com/wiki/images/4/42/GGST_Giovanna_Sol_Nascente.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/f/f1/GGST_Giovanna_Sol_Nascente_hitbox1.png",
+            "https://dustloop.com/wiki/images/e/ed/GGST_Giovanna_Sol_Nascente_hitbox2.png",
+            "https://dustloop.com/wiki/images/1/19/GGST_Giovanna_Sol_Nascente_hitbox3.png"
+        ]
+    },
+    {
+        "move": "214S",
+        "move_img": "https://dustloop.com/wiki/images/1/1f/GGST_Giovanna_Sol_Poente_2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/e5/GGST_Giovanna_Sol_Poente_1_hitbox.png",
+            "https://dustloop.com/wiki/images/8/85/GGST_Giovanna_Sol_Poente_2_hitbox.png",
+            "https://dustloop.com/wiki/images/b/ba/GGST_Giovanna_Sol_Poente_3_hitbox.png"
+        ]
+    },
+    {
+        "move": "j.214S",
+        "move_img": "https://dustloop.com/wiki/images/1/1f/GGST_Giovanna_Sol_Poente_2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/e/e5/GGST_Giovanna_Sol_Poente_1_hitbox.png",
+            "https://dustloop.com/wiki/images/8/85/GGST_Giovanna_Sol_Poente_2_hitbox.png",
+            "https://dustloop.com/wiki/images/b/ba/GGST_Giovanna_Sol_Poente_3_hitbox.png"
+        ]
+    },
+    {
+        "move": "632146H",
+        "move_img": "https://dustloop.com/wiki/images/7/7f/GGST_Giovanna_Ventania.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/8f/GGST_Giovanna_Ventania_hitbox1.png",
+            "https://dustloop.com/wiki/images/8/8a/GGST_Giovanna_Ventania_hitbox2.png"
+        ]
+    },
+    {
+        "move": "j.236236H",
+        "move_img": "https://dustloop.com/wiki/images/9/9f/GGST_Giovanna_Tempestade_1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/4a/GGST_Giovanna_Tempestade_hitbox.png"
+        ]
+    },
+    {
+        "move": "6D or 4D",
+        "move_img": "https://dustloop.com/wiki/images/c/cd/GGST_Giovanna_Ground_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "move": "j.6D or j.4D",
+        "move_img": "https://dustloop.com/wiki/images/a/ab/GGST_Giovanna_Air_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    }
+]

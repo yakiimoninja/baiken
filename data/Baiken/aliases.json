@@ -1,0 +1,13 @@
+[
+	{"input":"236K","aliases":["Tatami Gaeshi","Mat","TG"]},
+	{"input":"j.236K","aliases":["Air Tatami Gaeshi","Air Mat","AM","JTG"]},
+	{"input":"41236S","aliases":["Kabari","Tether","Kabari Tether","KT"]},
+	{"input":"41236H","aliases":["Kabari","Claw","Kabari Claw","KC"]},
+	{"input":"41236H~H","aliases":["Kabari Followup","Claw Followup","Kabari Claw Followup","KF","CF","KCF"]},
+	{"input":"j.236S","aliases":["Youzansen","Fan","Overhead"]},
+	{"input":"236P","aliases":["Hiiragi","Parry","Deflect"]},
+	{"input":"236236S","aliases":["Tsurane Sanzu-watashi","Super"]},
+	{"input":"214214P","aliases":["Kenjyu","Gun","Pistol","Gun Super","Pistol Super"]},
+	{"input":"j.214214P","aliases":["Kenjyu","Air Super","Air Gun", "Air Pistol","AS","AP","AG","JUS","JUK","JG","JUP"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
+]

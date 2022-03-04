@@ -1,0 +1,17 @@
+[
+	{"input":"[4]6H","aliases":["Hammer Fall","HF","46H"]},
+	{"input":"[4]6H P","aliases":["Hammer Fall Break","HFB", "46HP"]},
+	{"input":"632146P","aliases":["Potemkin Buster","Pot Buster","Buster","Command Grab","CG","PB"]},
+	{"input":"623H","aliases":["Heat Knuckle","HK"]},
+	{"input":"236P","aliases":["Mega Fist","Megafist","MF"]},
+	{"input":"214P","aliases":["B Mega Fist","Back Mega fist","Back Megafist","BMF"]},
+	{"input":"2146K~P","aliases":["Mega Fist","Kara Mega Fist","Kara Megafist","KBMF"]},
+	{"input":"236S","aliases":["Slide Head","Slidehead","SH"]},
+	{"input":"63214S","aliases":["F.D.B.","FDB"]},
+	{"input":"Reflect Projectile","aliases":["Reflect Projectile","Reflect"]},
+	{"input":"214H","aliases":["Garuda Impact","GI"]},
+	{"input":"236236S","aliases":["Heavenly Potemkin Buster","HPB","Command Grab Super","CGS"]},
+	{"input":"632146H","aliases":["Giganter Kai","Super","GK"]},
+	{"input":"Mirror","aliases":["Giganter Kai Barrier","Mirror","GKB"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
+]

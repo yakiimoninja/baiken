@@ -1,0 +1,14 @@
+[
+	{"input":"236S","aliases":["Zarameyuki","Clone"]},
+	{"input":"236K","aliases":["F Fukyo","Forward Dash","FD"]},
+	{"input":"214K","aliases":["B Fukyo","Back Dash","BD"]},
+	{"input":"214H","aliases":["Kamuriyuki","Beyblade","BB"]},
+	{"input":"623H","aliases":["Shizuriyuki","DP","AntiAir","Anti Air","AA"]},
+	{"input":"623HH","aliases":["Shizuriyuki Followup","DP Followup","AntiAir Followup","Anti Air Followup","AA Followup","DPF","AAF"]},
+	{"input":"623P","aliases":["Bloodsucking Universe","Bite","Command Grab","BU","CG"]},
+	{"input":"632146S","aliases":["Wasureyuki","Super"]},
+	{"input":"632146H","aliases":["Zansetsu","Bat Super"]},
+	{"input":"BR Activation","aliases":["BR Activation","Mask Off","Maskoff"]},
+	{"input":"BR Deactivation","aliases":["BR Deactivation","Mask On","Maskon"]},
+	{"input":"6D or 4D", "aliases":["Throw"]}
+]
