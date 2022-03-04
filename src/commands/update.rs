@@ -16,22 +16,8 @@ const SITE_HALF: &str = "&prop=text&formatversion=2";
 #[aliases("u")]
 pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
 
-   // Checking if image folder exist
-    if let Some(error_msg) = check::image_folder_exists(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
-    }
-
-    // Checking if character txts exist
-    if let Some(error_msg) = check::image_folder_contents_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
-    }
-
-    // Checking if frames folder exist
-    if let Some(error_msg) = check::frames_folder_exists(false) {
+    // Checking if images jsons exist
+    if let Some(error_msg) = check::character_images_exist(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
