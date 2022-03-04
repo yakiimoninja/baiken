@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"[4]6H","aliases":["Hammer Fall","HF","46H"]},
 	{"input":"[4]6H P","aliases":["Hammer Fall Break","HFB", "46HP"]},
 	{"input":"632146P","aliases":["Potemkin Buster","Pot Buster","Buster","Command Grab","CG","PB"]},

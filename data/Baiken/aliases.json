@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236K","aliases":["Tatami Gaeshi","Mat","TG"]},
 	{"input":"j.236K","aliases":["Air Tatami Gaeshi","Air Mat","AM","JTG"]},
 	{"input":"41236S","aliases":["Kabari","Tether","Kabari Tether","KT"]},

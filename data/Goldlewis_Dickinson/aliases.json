@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"41236H","aliases":["4126BT","4126H"]},
 	{"input":"j.41236H","aliases":["Air 4126BT","Air 4126H","A4126BT","J4126BT","J4126H","A4126H"]},
 	{"input":"63214H","aliases":["6324BT","6324H"]},

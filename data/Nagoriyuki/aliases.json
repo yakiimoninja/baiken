@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236S","aliases":["Zarameyuki","Clone"]},
 	{"input":"236K","aliases":["F Fukyo","Forward Dash","FD"]},
 	{"input":"214K","aliases":["B Fukyo","Back Dash","BD"]},

@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236P","aliases":["Summon Servant","Summon Minion","Servant","Minion","SS","SM"]},
 	{"input":"236[P]","aliases":["Summon Servant Hold","Summon Minion Hold","Servant Hold","Minion Hold","SSH","SMH"]},
 	{"input":"2P (near Servant)","aliases":["Pick Up Servant","Pickup Servant","Pick Up Minion","Pickup Minion","Pick Up","Pickup","Pick Servant","Pick Minion","PS","PM"]},

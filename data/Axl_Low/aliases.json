@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"[4]6S","aliases":["Sickle Flash","SF"]},
 	{"input":"[4]6S 8","aliases":["Soaring Chain Strike","SCS"]},
 	{"input":"[4]6S 2","aliases":["Spinning Chain Strike","Fan","Spin"]},

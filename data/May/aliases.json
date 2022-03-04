@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"[4]6S","aliases":["Mr. Dolphin Horizontal","Dolphin","Totsugeki","ST","SD"]},
 	{"input":"[4]6H","aliases":["Mr. Dolphin Horizontal","H Dolphin","H totsugeki","HT","HD"]},
 	{"input":"[2]8S","aliases":["Mr. Dolphin Vertical","Up Dolphin","Iruka san","SUD","SI"]},

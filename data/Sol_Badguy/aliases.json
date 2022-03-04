@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236P","aliases":["Gun Flame","Fireball","GF","FB"]},
 	{"input":"214P","aliases":["Gun Flame Feint","Feint","GFF"]},
 	{"input":"623S","aliases":["Volcanic Viper","DP","VV"]},

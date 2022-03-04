@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236S","aliases":["Stun Edge","Fireball","SE","FB"]},
 	{"input":"DI 236S","aliases":["Dragon Install Stun Edge","DI Stun Edge","DISE","Dragon Install Fireball","DI Fireball","DIFB"]},
 	{"input":"236H","aliases":["Charged Stun Edge","H Fireball","HSE","CSE","HFB"]},

@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236S","aliases":["Stroke the Big Tree","Stroke","STBT","SBT","SS"]},
 	{"input":"236H","aliases":["Stroke the Big Tree","Heavy Stroke","HSTBT","HSBT","HS"]},
 	{"input":"j.236K","aliases":["Sultry Performance","Dive Kick","Divekick","KDK"]},

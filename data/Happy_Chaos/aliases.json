@@ -1,4 +1,5 @@
 [
+	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"H","aliases":["At the Ready","Aim","Gun","ATR","AR"]},
 	{"input":"236S","aliases":["At the Ready","S Aim","S Gun","SATR","SAR"]},
 	{"input":"236S H","aliases":["Fire","S Fire","SF"]},
