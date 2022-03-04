@@ -7,12 +7,12 @@ use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
 
-use crate::{CHARS, Frames, MoveAliases, check};
+use crate::{CHARS, Frames, MoveAliases, ImageLinks, check};
 // use crate::CharFrames;
 
 #[command]
 #[aliases("f")]
-async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
     let character = args.single::<String>()?;
@@ -36,9 +36,8 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         panic!("{}", error_msg);
     }
 
-
-     // Checking if frames folder exist
-     if let Some(error_msg) = check::frames_folder_exists(false) {
+    // Checking if data folder exists
+    if let Some(error_msg) = check::data_folder_exists(false){
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
@@ -52,7 +51,7 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
     }
     
     // Checking if character jsons exist
-    if let Some(error_msg) = check::character_folder_contents_exist(false) {
+    if let Some(error_msg) = check::character_jsons_exist(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
@@ -81,7 +80,7 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
             CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true{
 
             // Reading the character json if found
-            let char_file_path = "data/frames/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
+            let char_file_path = "data/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
             let char_file_data = fs::read_to_string(char_file_path)
                 .expect(&("\nFailed to read '".to_owned() + &CHARS.0[c] + ".json" + "' file."));
             
@@ -93,7 +92,7 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
             character_found = true;
 
             // Checking if aliases for this character exist
-            let aliases_path = "data/frames/".to_owned() + CHARS.0[c] + "/aliases.json";
+            let aliases_path = "data/".to_owned() + CHARS.0[c] + "/aliases.json";
             if Path::new(&aliases_path).exists() == true{
                 
                 // Reading the aliases json
@@ -114,6 +113,13 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
                     }
                 }
             }
+
+            // Reading images.json for this character
+            let image_links = fs::read_to_string(&("data/".to_owned() + CHARS.0[c] + "/images.json"))
+                .expect(&("\nFailed to read 'data/".to_owned() + CHARS.0[c] + "'/images.json' file."));
+
+            // Deserializing images.json for this character
+            let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
             
 
             for m in 0..move_frames.len(){
@@ -133,34 +139,34 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
                     // If they aren't empty, the variables initialized above will be replaced
                     // With the corresponind data from the json file
                     // Otherwise they will remain as '-'
-                    if move_frames[m].img_link.to_string().is_empty() == false{
-                        image_embed = move_frames[m].img_link.to_string();
+                    if image_links[m].move_img.is_empty() == false{
+                        image_embed = image_links[m].move_img.to_string();
                     }
-                    if move_frames[m].damage.to_string().is_empty() == false{
+                    if move_frames[m].damage.is_empty() == false{
                         damage_embed = move_frames[m].damage.to_string();
                     }
-                    if move_frames[m].guard.to_string().is_empty() == false {
+                    if move_frames[m].guard.is_empty() == false {
                         guard_embed = move_frames[m].guard.to_string();
                     }
-                    if move_frames[m].invincibility.to_string().is_empty() == false {
+                    if move_frames[m].invincibility.is_empty() == false {
                         invin_embed = move_frames[m].invincibility.to_string();
                     }
-                    if move_frames[m].startup.to_string().is_empty() == false {
+                    if move_frames[m].startup.is_empty() == false {
                         startup_embed = move_frames[m].startup.to_string();
                     }
-                    if move_frames[m].hit.to_string().is_empty() == false {
+                    if move_frames[m].hit.is_empty() == false {
                         hit_embed = move_frames[m].hit.to_string();
                     }
-                    if move_frames[m].block.to_string().is_empty() == false {
+                    if move_frames[m].block.is_empty() == false {
                         block_embed = move_frames[m].block.to_string();
                     }
-                    if move_frames[m].active.to_string().is_empty() == false {
+                    if move_frames[m].active.is_empty() == false {
                         active_embed = move_frames[m].active.to_string();
                     }
-                    if move_frames[m].recovery.to_string().is_empty() == false {
+                    if move_frames[m].recovery.is_empty() == false {
                         recovery_embed = move_frames[m].recovery.to_string();
                     }
-                    if move_frames[m].counter.to_string().is_empty() == false {
+                    if move_frames[m].counter.is_empty() == false {
                     counter_embed = move_frames[m].counter.to_string();
                     }
 
@@ -223,4 +229,3 @@ async fn frames (ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
 
     Ok(())
 }
-
