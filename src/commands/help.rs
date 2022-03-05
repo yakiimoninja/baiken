@@ -3,8 +3,8 @@ use serenity::model::prelude::*;
 use serenity::prelude::*;
 
 #[command]
-#[aliases("h","?")]
-async fn help (ctx: &Context, msg: &Message) -> CommandResult {
+#[aliases("?")]
+async fn help(ctx: &Context, msg: &Message) -> CommandResult {
 
     let help_message = r#"
 __**Commands**__
@@ -13,6 +13,11 @@ __**Commands**__
       Displays the frame data of a move.
       Use `b.f` or `b.frames` followed by the `character` and the `move` you want.
       Example: `b.f baiken 236K` or `b.frames baiken 236K`.
+
+• Command: `b.h` or `b.hitbox`. 
+      Displays the hitbox images of a move.
+      Use `b.h` or `b.hitbox` followed by the `character` and the `move` you want.
+      Example: `b.h goldlewis 4126H` or `b.hitbox goldlewis 4126H`.
 
 • Command: `b.m` or `b.moves`.
       Displays all the moves and their inputs of a character.
@@ -27,8 +32,25 @@ __**Commands**__
 • Command: `b.u` or `b.update`.
       Updates the frame data according to <https://dustloop.com>.
 
-• Command: `b.h` or `b.help` or `b.?`.
+• Command: `b.?` or `b.help`.
       Displays this help message.
+
+__**Notes**__
+
+• You don't have to write the full name of a character.
+      This works: `b.frames giovanna 236K`.
+      This will also work: `b.f gio 236K`.
+
+• You can also use aliases when searching for moves.
+      This works: `b.frames nagoriyuki 214H`.
+      This also works: `b.f nagoriyuki beyblade`.
+
+• When searching for charged dust attack use the alias `5D!`.
+      Example: `b.f chipp 5D!`.
+
+• Searching is case insensitive.
+      This works: `b.hitbox Ky DP`.
+      This also works: `b.h ky dp`.
 
 __**Github**__
 <https://github.com/yakiimoninja/baiken-bot>
