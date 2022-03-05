@@ -4,9 +4,9 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 ## Requirements
 - You will need a bot token.
-- You will need to download the exe from [here](https://github.com/yakiimoninja/baiken/releases/latest).
-- You will put it that token inside the `.env` file.
-- You will also need to have `data` folder and `.env` file in the same folder as `baiken-bot.exe`.
+- You will need to **download** the `exe` from [here](https://github.com/yakiimoninja/baiken/releases/latest).
+- You will need to create a `.env` file and put that token inside that file.
+- You will also need to have the `data` folder and the `.env` file in the same folder as `baiken.exe`.
 
 ## Usage
 - Either open the `baiken-bot.exe` itself or run it in the command prompt.
