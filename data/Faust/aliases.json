@@ -1,8 +1,8 @@
 [
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"41236K","aliases":["Thrust","Stab"]},
-	{"input":"41236K 4","aliases":["Pull Back","Pull"]},
-	{"input":"41236K 4 H","aliases":["Home Run!","Bat","Swing","Bat Swing"]},
+	{"input":"41236K 4","aliases":["Pull Back","Pull","41236K4"]},
+	{"input":"41236K 4 H","aliases":["Home Run!","Bat","Swing","Bat Swing","41236K4H"]},
 	{"input":"236P","aliases":["What Could This Be?","Item Throw","Item","IT"]},
 	{"input":"236S","aliases":["Mix Mix Mix","Tornado","Beyblade","BB"]},
 	{"input":"j.236S","aliases":["Air Mix Mix Mix","Air Tornado","Air Beyblade","JBB"]},

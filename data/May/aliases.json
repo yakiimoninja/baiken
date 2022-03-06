@@ -1,9 +1,9 @@
 [
 	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"[4]6S","aliases":["Mr. Dolphin Horizontal","Dolphin","Totsugeki","ST","SD"]},
-	{"input":"[4]6H","aliases":["Mr. Dolphin Horizontal","H Dolphin","H totsugeki","HT","HD"]},
-	{"input":"[2]8S","aliases":["Mr. Dolphin Vertical","Up Dolphin","Iruka san","SUD","SI"]},
-	{"input":"[2]8H","aliases":["Mr. Dolphin Vertical","H Up Dolphin","H Iruka san","HUD","HI"]},
+	{"input":"[4]6S","aliases":["Mr. Dolphin Horizontal","Dolphin","Totsugeki","ST","SD","46S"]},
+	{"input":"[4]6H","aliases":["Mr. Dolphin Horizontal","H Dolphin","H totsugeki","HT","HD","46H"]},
+	{"input":"[2]8S","aliases":["Mr. Dolphin Vertical","Up Dolphin","Iruka san","SUD","SI","28S"]},
+	{"input":"[2]8H","aliases":["Mr. Dolphin Vertical","H Up Dolphin","H Iruka san","HUD","HI","28H"]},
 	{"input":"623K","aliases":["Overhead Kiss","Command Grab","OK","CG"]},
 	{"input":"214P","aliases":["Arisugawa Sparkle","Ball","PAS"]},
 	{"input":"214K","aliases":["Arisugawa Sparkle","K Ball","KAS"]},
