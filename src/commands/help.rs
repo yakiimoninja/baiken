@@ -53,7 +53,7 @@ __**Notes**__
       This works: `b.frames May [4]6S`.
       This also works: `b.f may 46S`.
 
-• But when searching for charged dust attack use the alias `5D!`.
+• When searching for charged dust attack use the alias `5D!`.
       Example: `b.f chipp 5D!`.
 
 __**Github**__
