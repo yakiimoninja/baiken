@@ -61,7 +61,7 @@ pub fn init_json_exists(init_check: bool) -> Option<String> {
 pub fn character_folders_exist(init_check: bool) -> Option<String> {
 
     // Checking if character folders exist
-    for x in 0..CHARS.0.len(){
+    for x in 0..CHARS.0.len() {
         
         let character_path = &("data/".to_owned() + &CHARS.0[x]);
         if Path::new(&character_path).exists() == false {
@@ -87,7 +87,7 @@ pub fn character_folders_exist(init_check: bool) -> Option<String> {
 pub fn character_jsons_exist(init_check: bool) -> Option<String> {
 
     // Checking if character jsons exist in their respective folders
-    for x in 0..CHARS.0.len(){
+    for x in 0..CHARS.0.len() {
 
         let character_json = &("data/".to_owned() + &CHARS.0[x] + "/" + &CHARS.0[x] +".json");
         if Path::new(&character_json).exists() == false {
@@ -114,7 +114,7 @@ pub fn character_jsons_exist(init_check: bool) -> Option<String> {
 pub fn character_images_exist(init_check: bool) -> Option<String> {
 
     // Checking if character images.jsons exist in their respective folders
-    for x in 0..CHARS.0.len(){
+    for x in 0..CHARS.0.len() {
         
         let images_json = &("data/".to_owned() + &CHARS.0[x] + "/images.json");
         if Path::new(&images_json).exists() == false {

@@ -45,7 +45,7 @@ pub fn html_to_data(html: String) -> String {
     // let mut _link_flag = false;
     
     
-    for line in html.lines(){
+    for line in html.lines() {
 
         // For move information
         if line.contains(&r#"class=\"details-control\">|"#) == true {
@@ -68,7 +68,7 @@ pub fn html_to_data(html: String) -> String {
         //     _link_flag = false;
         // }
         // else if _link_flag == true && (line.contains("Hitbox.png") == false && line.contains("Hit") == false && line.contains("hitbox") == false && line.contains("HB") == false)
-        // && line.contains("/wiki/images/") == true{
+        // && line.contains("/wiki/images/") == true {
         //     moves_image_links.push(line);
         //     _link_flag = false;
         // }
@@ -88,7 +88,7 @@ pub fn html_to_data(html: String) -> String {
     moves_info = moves_info.replacen("|", "", 1);
 
     // Fix for breaking some move names when parsing data from the page source
-    for m in 0..MALFORMED_STRINGS.0.len(){
+    for m in 0..MALFORMED_STRINGS.0.len() {
         if moves_info.contains(&MALFORMED_STRINGS.0[m]) == true {
             moves_info = moves_info.replace(&MALFORMED_STRINGS.0[m], &MALFORMED_STRINGS.1[m]);
         }
@@ -113,7 +113,7 @@ pub fn html_to_data(html: String) -> String {
 
     
     // // Creates a new vector with each image link
-    // for p in 0..moves_image_links.len()-CHAR_AMOUNT{
+    // for p in 0..moves_image_links.len()-CHAR_AMOUNT {
 
     //     // If ".png" exists in the current line
     //     // Pushes the line that contains the image link to the final_links vector

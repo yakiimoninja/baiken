@@ -6,7 +6,7 @@ use crate::CharInfo;
 use crate::commands::update::SITE_LINK;
 use crate::commands::update::SITE_HALF;
 
-pub fn init_json(){
+pub fn init_json() {
 
     File::create("data/init.json")
         .expect("\nFailed to create 'init.json' file.");  
@@ -25,11 +25,11 @@ pub fn init_json(){
         .expect("\nFailed to write 'json_schema' to 'init.json'.");
     
     // Creating all the char data
-    for x in 0..CHARS.0.len(){
+    for x in 0..CHARS.0.len() {
 
         // Iterating through the names and ids of each character
         // And constructing the link and page field values
-        let init_json = serde_json::to_vec(&CharInfo{ 
+        let init_json = serde_json::to_vec(&CharInfo { 
             page: ("GGST/".to_owned() + &CHARS.0[x] + "/Frame_Data" ),
             link: (SITE_LINK.to_owned() + &CHARS.1[x].to_string() +  SITE_HALF),
             pageid: CHARS.1[x],

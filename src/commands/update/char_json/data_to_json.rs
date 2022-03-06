@@ -2,7 +2,7 @@ use std::{fs::File, io::Write};
 use crate::{Frames, CHARS};
 
 
-pub fn write_data_to_json(move_information: String, mut file: &File, char_count: usize){
+pub fn write_data_to_json(move_information: String, mut file: &File, char_count: usize) {
 
     let move_information: Vec<&str> = move_information.split("|").collect();
 
@@ -26,7 +26,7 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
             }
 
             // Vectoring move data
-            let vectored_frame_data = serde_json::to_vec(&Frames{
+            let vectored_frame_data = serde_json::to_vec(&Frames {
                 input: move_input,
                 r#move: move_information[x-13].to_string(),
                 damage: move_information[x-12].to_string(),
@@ -44,7 +44,7 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
                 .expect(&("\nFailed to serialize '".to_owned() + CHARS.0[char_count]+ ".json'."));
 
             if x != move_information.len() - 1 {
-                if move_information[x-13] != "bt.22"{
+                if move_information[x-13] != "bt.22" {
                     
                     file.write(b",\n\t")
                         .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS.0[char_count]+ ".json'."));
@@ -61,7 +61,7 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
         if move_information[x].contains(";") == false {            
 
             // Vectoring move data
-            let vectored_frame_data = serde_json::to_vec(&Frames{
+            let vectored_frame_data = serde_json::to_vec(&Frames {
                 input: move_information[x-13].to_string().replace("c.", "5").replace("f.", "5"),
                 r#move: move_information[x-12].to_string().replace("c.", "5").replace("f.", "5"),
                 damage: move_information[x-11].to_string(),
@@ -79,7 +79,7 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
                 .expect(&("\nFailed to serialize '".to_owned() + CHARS.0[char_count] + ".json'."));
 
             if x != move_information.len() - 1 || move_information[x-13] == "bt.22" {
-                if move_information[x-13] != "bt.22"{
+                if move_information[x-13] != "bt.22" {
 
                     file.write(b",\n\t")
                         .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS.0[char_count]+ ".json'."));

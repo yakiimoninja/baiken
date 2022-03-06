@@ -16,7 +16,7 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
 
     // Checking for correct character argument
     if character.len() < 3 {
-        if character.to_lowercase() != "ky"{
+        if character.to_lowercase() != "ky" {
             let error_msg = "Invalid character name!";
             msg.channel_id.say(&ctx.http, &error_msg).await?;
             print!("\n");
@@ -25,7 +25,7 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
     }
 
     // Checking if data folder exists
-    if let Some(error_msg) = check::data_folder_exists(false){
+    if let Some(error_msg) = check::data_folder_exists(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
@@ -45,7 +45,7 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         panic!("{}", error_msg.replace("\n", " "));
     }
  
-    for c in 0..CHARS.0.len(){
+    for c in 0..CHARS.0.len() {
 
         // Checking if aliases for this character exist
         let aliases_path = "data/".to_owned() + CHARS.0[c] + "/aliases.json";
@@ -80,14 +80,14 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
             let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Move Aliases**__\n```";
             
             // Checks what character info is accessing
-            if CHARS.0[c] != "Faust" && CHARS.0[c] != "Goldlewis_Dickinson" && CHARS.0[c] != "Ky_Kiske"{
+            if CHARS.0[c] != "Faust" && CHARS.0[c] != "Goldlewis_Dickinson" && CHARS.0[c] != "Ky_Kiske" {
                 
                 // Building the message to be sent by the bot
-                for m in 0..aliases_data.len(){
+                for m in 0..aliases_data.len() {
                     moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &aliases_data[m].aliases[0] 
                         + " -> Input: " + &aliases_data[m].input + "\nAliases: ";
     
-                    for a in 0..aliases_data[m].aliases.len(){
+                    for a in 0..aliases_data[m].aliases.len() {
                         if a != aliases_data[m].aliases.len() - 1 {
                             moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
                         }
@@ -100,14 +100,14 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
                 moves_as_msg = moves_as_msg + &"\n```".to_string();
                 msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
             }
-            else{
+            else {
                 // Spliting the message that will be sent by the bot
                 // Into 2 separate messages cause of the character limit
-                for m in 0..aliases_data.len()/2{
+                for m in 0..aliases_data.len() / 2 {
                     moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &aliases_data[m].aliases[0] 
                         + " -> Input: " + &aliases_data[m].input + "\nAliases: ";
     
-                    for a in 0..aliases_data[m].aliases.len(){
+                    for a in 0..aliases_data[m].aliases.len() {
                         if a != aliases_data[m].aliases.len() - 1 {
                             moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
                         }
@@ -122,11 +122,11 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
 
                 // 2nd message builder
                 moves_as_msg = "```".to_string();
-                for m in aliases_data.len()/2..aliases_data.len(){
+                for m in aliases_data.len()/2..aliases_data.len() {
                     moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &aliases_data[m].aliases[0] 
                         + " -> Input: " + &aliases_data[m].input + "\nAliases: ";
     
-                    for a in 0..aliases_data[m].aliases.len(){
+                    for a in 0..aliases_data[m].aliases.len() {
                         if a != aliases_data[m].aliases.len() - 1 {
                             moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
                         }

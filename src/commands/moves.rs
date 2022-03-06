@@ -15,7 +15,7 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
   
     // Checking for correct character argument
     if character.len() < 3 {
-        if character.to_lowercase() != "ky"{
+        if character.to_lowercase() != "ky" {
             let error_msg = "Invalid character name!";
             msg.channel_id.say(&ctx.http, &error_msg).await?;
             print!("\n");
@@ -58,7 +58,7 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             // Formatting string for in discord print
             let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Moves**__\n```";
 
-            for m in 0..move_frames.len(){
+            for m in 0..move_frames.len() {
                 moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &move_frames[m].r#move
                     + "\nInput: " + &move_frames[m].input + "\n";
             }
