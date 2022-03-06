@@ -9,7 +9,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 - You will also need to have the `data` folder and the `.env` file in the same folder as `baiken.exe`.
 
 ## Usage
-- Either open the `baiken-bot.exe` itself or run it in the command prompt.
+- Either open the `baiken.exe` itself or run it in the command prompt.
 - ### Lastly the bot **commands**:
   
   - **Command**: `b.f` or `b.frames`. \
