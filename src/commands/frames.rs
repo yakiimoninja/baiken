@@ -79,7 +79,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
         if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true ||
             CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true{
 
-            // Reading the character json if found
+            // Reading the character json
             let char_file_path = "data/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
             let char_file_data = fs::read_to_string(char_file_path)
                 .expect(&("\nFailed to read '".to_owned() + &CHARS.0[c] + ".json" + "' file."));
@@ -128,9 +128,9 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 == character_move.to_string().to_lowercase().replace(".", "")
                 || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) == true{
                     
-                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
-
+                    
                     move_found = true;
+                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
 
                     let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &CHARS.0[c] + "/Frame_Data";
                     let title_embed = "Move: ".to_owned() + &move_frames[m].input.to_string();
@@ -139,8 +139,13 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                     // If they aren't empty, the variables initialized above will be replaced
                     // With the corresponind data from the json file
                     // Otherwise they will remain as '-'
-                    if image_links[m].move_img.is_empty() == false{
-                        image_embed = image_links[m].move_img.to_string();
+                    for y in 0..image_links.len(){
+                        // Iterating through the image.json to find the move's image links
+                        if move_frames[m].r#move == image_links[y].r#move{
+                            if image_links[y].move_img.is_empty() == false{
+                                image_embed = image_links[y].move_img.to_string();
+                            }
+                        }
                     }
                     if move_frames[m].damage.is_empty() == false{
                         damage_embed = move_frames[m].damage.to_string();

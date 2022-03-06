@@ -12,12 +12,12 @@ use crate::{CHARS, Frames, MoveAliases, ImageLinks, check};
 async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult{
 
     // Getting character and move args
-    let character = args.single::<String>()?;
-    let mut character_move = args.rest().to_string();
+    let character_arg = args.single::<String>()?;
+    let mut character_move_arg = args.rest().to_string();
 
     // Checking for correct character argument
-    if character.len() < 3 {
-        if character.to_lowercase() != "ky"{
+    if character_arg.len() < 3 {
+        if character_arg.to_lowercase() != "ky"{
             let error_msg = "Invalid character name!";
             msg.channel_id.say(&ctx.http, &error_msg).await?;
             print!("\n");
@@ -26,7 +26,7 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     }
 
     // Checking for correct move argument
-    if character_move.len() < 2 {
+    if character_move_arg.len() < 2 {
         let error_msg = "Invalid move!";
         msg.channel_id.say(&ctx.http, &error_msg).await?;
         print!("\n");
@@ -60,8 +60,8 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     for c in 0..CHARS.0.len() {
 
         // Iterating through the character jsons to find the character requested
-        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true ||
-            CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true{
+        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+            CHARS.0[c].to_lowercase().contains(&character_arg.to_lowercase()) == true{
 
             // Reading the character json if found
             let char_file_path = "data/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
@@ -91,8 +91,8 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
                         
                         // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                         // Change the given argument (character_move) to the actual move name instead of the alias
-                        if aliases_data[a].aliases[b].to_lowercase().trim() == character_move.to_lowercase().trim() {
-                            character_move = aliases_data[a].input.to_string();
+                        if aliases_data[a].aliases[b].to_lowercase().trim() == character_move_arg.to_lowercase().trim() {
+                            character_move_arg = aliases_data[a].input.to_string();
                         }
                     }
                 }
@@ -109,21 +109,25 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
             for m in 0..move_frames.len(){
                 // Iterating through the moves of the json file to find the move requested
                 if move_frames[m].input.to_string().to_lowercase().replace(".", "") 
-                == character_move.to_string().to_lowercase().replace(".", "")
-                || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) == true{
+                == character_move_arg.to_string().to_lowercase().replace(".", "")
+                || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true{
                     
-                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
+                    for y in 0..image_links.len(){
+                        // Iterating through the image.json to find the move's hitbox links
+                        if move_frames[m].r#move == image_links[y].r#move{
 
-                    move_found = true;
+                            move_found = true;
+                            println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
 
-                    // Priting hitboxes in discord chat
-                    let bot_msg = "__**Move: ".to_owned() + &image_links[m].r#move + "**__";
-                    msg.channel_id.say(&ctx.http, &bot_msg).await?;
+                            // Priting hitboxes in discord chat
+                            let bot_msg = "__**Move: ".to_owned() + &image_links[m].r#move + "**__";
+                            msg.channel_id.say(&ctx.http, &bot_msg).await?;
 
-                    for i in 0..image_links[m].hitbox_img.len(){                        
-                        msg.channel_id.say(&ctx.http, &image_links[m].hitbox_img[i]).await?;
+                            for i in 0..image_links[y].hitbox_img.len(){                        
+                                msg.channel_id.say(&ctx.http, &image_links[y].hitbox_img[i]).await?;
+                            }
+                        }
                     }
-
                     break;
                 }
             }
@@ -132,14 +136,14 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
 
     // Error message cause given characters json was not found
     if character_found == false {
-        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
+        let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
     // Error message cause given move wasnt found in the json
     if character_found == true && move_found == false {
-        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!");
+        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
