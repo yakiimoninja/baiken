@@ -42,7 +42,7 @@ pub struct Frames {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ImageLinks {
-    r#move: String,
+    input: String,
     move_img: String,
     hitbox_img: Vec<String>,
 }

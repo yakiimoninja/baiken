@@ -1,27 +1,27 @@
 [
     {
-        "move": "5P",
+        "input": "5P",
         "move_img": "https://dustloop.com/wiki/images/0/06/GGST_I-No_5P.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/b/ba/GGST_I-No_5P_Hitbox.png"
         ]
     },
     {
-        "move": "5K",
+        "input": "5K",
         "move_img": "https://dustloop.com/wiki/images/c/c9/GGST_I-No_5K.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/9/9b/GGST_I-No_5K_Hitbox.png"
         ]
     },
     {
-        "move": "c.S",
+        "input": "c.S",
         "move_img": "https://dustloop.com/wiki/images/6/68/GGST_I-No_cS.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/0/04/GGST_I-No_cS_Hitbox.png"
         ]
     },
     {
-        "move": "f.S",
+        "input": "f.S",
         "move_img": "https://dustloop.com/wiki/images/8/8a/GGST_I-No_f.S.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/8/8d/GGST_I-No_f.S_Hitbox_1.png",
@@ -30,7 +30,7 @@
         ]
     },
     {
-        "move": "5H",
+        "input": "5H",
         "move_img": "https://dustloop.com/wiki/images/5/5b/GGST_I-No_5H.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/5/58/GGST_I-No_5H_Hitbox_1.png",
@@ -38,28 +38,28 @@
         ]
     },
     {
-        "move": "2P",
+        "input": "2P",
         "move_img": "https://dustloop.com/wiki/images/3/37/GGST_I-No_2P.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/9/97/GGST_I-No_2P_Hitbox.png"
         ]
     },
     {
-        "move": "2K",
+        "input": "2K",
         "move_img": "https://dustloop.com/wiki/images/1/1e/GGST_I-No_2K.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/8/88/GGST_I-No_2K_Hitbox.png"
         ]
     },
     {
-        "move": "2S",
+        "input": "2S",
         "move_img": "https://dustloop.com/wiki/images/6/69/GGST_I-No_2S.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/c/cb/GGST_I-No_2S_Hitbox.png"
         ]
     },
     {
-        "move": "2H",
+        "input": "2H",
         "move_img": "https://dustloop.com/wiki/images/b/bb/GGST_I-No_2H.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/d/dc/GGST_I-No_2H_Hitbox1.png",
@@ -69,42 +69,42 @@
         ]
     },
     {
-        "move": "j.P",
+        "input": "j.P",
         "move_img": "https://dustloop.com/wiki/images/4/45/GGST_I-No_jP.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/0/0e/GGST_I-No_jP_Hitbox.png"
         ]
     },
     {
-        "move": "j.K",
+        "input": "j.K",
         "move_img": "https://dustloop.com/wiki/images/0/0e/GGST_I-No_jK.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/6/67/GGST_I-No_jK_Hitbox.png"
         ]
     },
     {
-        "move": "j.S",
+        "input": "j.S",
         "move_img": "https://dustloop.com/wiki/images/6/62/GGST_I-No_jS.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/9/92/GGST_I-No_jS_Hitbox.png"
         ]
     },
     {
-        "move": "j.H",
+        "input": "j.H",
         "move_img": "https://dustloop.com/wiki/images/f/f1/GGST_I-No_jH.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/b/b1/GGST_I-No_jH_Hitbox.png"
         ]
     },
     {
-        "move": "j.D",
+        "input": "j.D",
         "move_img": "https://dustloop.com/wiki/images/0/0f/GGST_I-No_jD.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/6/63/GGST_I-No_jD_Hitbox.png"
         ]
     },
     {
-        "move": "6P",
+        "input": "6P",
         "move_img": "https://dustloop.com/wiki/images/6/6a/GGST_I-No_6P.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/2/27/GGST_I-No_6P_Hurtbox_1.png",
@@ -112,7 +112,7 @@
         ]
     },
     {
-        "move": "6H",
+        "input": "6H",
         "move_img": "https://dustloop.com/wiki/images/9/93/GGST_I-No_6H.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/9/9c/GGST_I-No_6H_Hitbox1.png",
@@ -123,28 +123,28 @@
         ]
     },
     {
-        "move": "2D",
+        "input": "2D",
         "move_img": "https://dustloop.com/wiki/images/8/8f/GGST_I-No_2D.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/a/a0/GGST_I-No_2D_Hitbox.png"
         ]
     },
     {
-        "move": "5D",
+        "input": "5D",
         "move_img": "https://dustloop.com/wiki/images/1/18/GGST_I-No_5D.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/d/da/GGST_I-No_5D_Hitbox.png"
         ]
     },
     {
-        "move": "5[D]",
+        "input": "5[D]",
         "move_img": "https://dustloop.com/wiki/images/1/18/GGST_I-No_5D.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/d/da/GGST_I-No_5D_Hitbox.png"
         ]
     },
     {
-        "move": "236S",
+        "input": "236S",
         "move_img": "https://dustloop.com/wiki/images/7/73/GGST_I-No_Stroke_the_Big_Tree.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/5/5f/GGST_I-No_Stroke_the_Big_Tree_Hitbox_1.png",
@@ -156,7 +156,7 @@
         ]
     },
     {
-        "move": "236H",
+        "input": "236H",
         "move_img": "https://dustloop.com/wiki/images/7/73/GGST_I-No_Stroke_the_Big_Tree.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/5/5f/GGST_I-No_Stroke_the_Big_Tree_Hitbox_1.png",
@@ -168,42 +168,42 @@
         ]
     },
     {
-        "move": "j.236K",
+        "input": "j.236K",
         "move_img": "https://dustloop.com/wiki/images/f/f3/GGST_I-No_Sultry_Performance_1.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/f/f1/GGST_I-No_Sultry_Performance_1_Hitbox.png"
         ]
     },
     {
-        "move": "j.236S",
+        "input": "j.236S",
         "move_img": "https://dustloop.com/wiki/images/8/8b/GGST_I-No_Sultry_Performance_2.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/9/94/GGST_I-No_Sultry_Performance_2_Hitbox.png"
         ]
     },
     {
-        "move": "j.236H",
+        "input": "j.236H",
         "move_img": "https://dustloop.com/wiki/images/f/f9/GGST_I-No_Sultry_Performance_3.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/1/14/GGST_I-No_Sultry_Performance_3_Hitbox.png"
         ]
     },
     {
-        "move": "214P",
+        "input": "214P",
         "move_img": "https://dustloop.com/wiki/images/d/df/GGST_I-No_Antidepressant_Scale.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/1/1c/GGST_I-No_Antidepressant_Scale_Hitbox.png"
         ]
     },
     {
-        "move": "j.214P",
+        "input": "j.214P",
         "move_img": "https://dustloop.com/wiki/images/d/df/GGST_I-No_Antidepressant_Scale.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/1/1c/GGST_I-No_Antidepressant_Scale_Hitbox.png"
         ]
     },
     {
-        "move": "214K",
+        "input": "214K",
         "move_img": "https://dustloop.com/wiki/images/d/d5/GGST_I-No_Chemical_Love.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/0/07/GGST_I-No_Chemical_Love_Hitbox_1.png",
@@ -214,7 +214,7 @@
         ]
     },
     {
-        "move": "j.214K",
+        "input": "j.214K",
         "move_img": "https://dustloop.com/wiki/images/d/d5/GGST_I-No_Chemical_Love.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/0/07/GGST_I-No_Chemical_Love_Hitbox_1.png",
@@ -225,35 +225,35 @@
         ]
     },
     {
-        "move": "632146H",
+        "input": "632146H",
         "move_img": "https://dustloop.com/wiki/images/1/1e/GGST_I-No_Megalomania_1.png",
         "hitbox_img": [
             ""
         ]
     },
     {
-        "move": "632146S",
+        "input": "632146S",
         "move_img": "https://dustloop.com/wiki/images/3/3e/GGST_I-No_Ultimate_Fortissimo.png",
         "hitbox_img": [
             ""
         ]
     },
     {
-        "move": "j.632146S",
+        "input": "j.632146S",
         "move_img": "https://dustloop.com/wiki/images/3/3e/GGST_I-No_Ultimate_Fortissimo.png",
         "hitbox_img": [
             ""
         ]
     },
     {
-        "move": "6D or 4D",
+        "input": "6D or 4D",
         "move_img": "https://dustloop.com/wiki/images/3/3d/GGST_I-No_Ground_Throw.png",
         "hitbox_img": [
             ""
         ]
     },
     {
-        "move": "j.6D or j.4D",
+        "input": "j.6D or j.4D",
         "move_img": "https://dustloop.com/wiki/images/0/01/GGST_I-No_Air_Throw.png",
         "hitbox_img": [
             ""

@@ -141,7 +141,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                     // Otherwise they will remain as '-'
                     for y in 0..image_links.len() {
                         // Iterating through the image.json to find the move's image links
-                        if move_frames[m].input == image_links[y].r#move {
+                        if move_frames[m].input == image_links[y].input {
                             if image_links[y].move_img.is_empty() == false {
                                 image_embed = image_links[y].move_img.to_string();
                                 break;

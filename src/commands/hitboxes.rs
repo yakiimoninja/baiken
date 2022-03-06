@@ -114,13 +114,13 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
                     
                     for y in 0..image_links.len() {
                         // Iterating through the image.json to find the move's hitbox links
-                        if move_frames[m].input == image_links[y].r#move {
+                        if move_frames[m].input == image_links[y].input {
 
                             move_found = true;
                             println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
 
                             // Priting hitboxes in discord chat
-                            let bot_msg = "__**Move: ".to_owned() + &image_links[m].r#move + "**__";
+                            let bot_msg = "__**Move: ".to_owned() + &image_links[m].input + "**__";
                             msg.channel_id.say(&ctx.http, &bot_msg).await?;
 
                             for i in 0..image_links[y].hitbox_img.len() {                        
