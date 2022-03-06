@@ -41,19 +41,23 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 - ### **Notes**
 
+- **Searching is case insensitive.**
+  - This works: `b.hitbox Ky DP`.
+  - This also works: `b.h ky dp`.
+
 - **You don't have to write the full name of a character.**
   - This works: `b.frames giovanna 236K`.
   - This will also work: `b.f gio 236K`.
 
 - **You can also use aliases when searching for moves.**
-  - This works: `b.frames nagoriyuki 214H`.
-  - This also works: `b.f nagoriyuki beyblade`.
+  - This works: `b.frames Anji 236HP`.
+  - This also works: `b.f Anji Needles`.
+
+- **You can omit the `[]` when searching for a charged move.**
+  - This works: `b.frames May [4]6S`.
+  - This also works: `b.f may 46S`.
 
 - **When searching for charged dust attack use the alias `5D!`.**
   - Example: `b.f chipp 5D!`.
-
-- **Searching is case insensitive.**
-  - This works: `b.hitbox Ky DP`.
-  - This also works: `b.h ky dp`.
   # 
  ### That's all folks!
