@@ -15,13 +15,13 @@ use crate::{CHARS, Frames, MoveAliases, ImageLinks, check};
 async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
-    let character = args.single::<String>()?;
-    let mut character_move = args.rest().to_string();
+    let character_arg = args.single::<String>()?;
+    let mut character_move_arg = args.rest().to_string();
 
     // Checking for correct character argument
-    if character.len() < 3 {
-        if character.to_lowercase() != "ky"{
-            let error_msg = "Invalid character name!";
+    if character_arg.len() < 3 {
+        if character_arg.to_lowercase() != "ky" {
+            let error_msg = "Character name: `".to_owned() + &character_arg + "` is invalid!";
             msg.channel_id.say(&ctx.http, &error_msg).await?;
             print!("\n");
             panic!("{}", error_msg);
@@ -29,15 +29,15 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     }
 
     // Checking for correct move argument
-    if character_move.len() < 2 {
-        let error_msg = "Invalid move!";
+    if character_move_arg.len() < 2 {
+        let error_msg = "Move: `".to_owned() + &character_move_arg + "` is invalid!";
         msg.channel_id.say(&ctx.http, &error_msg).await?;
         print!("\n");
         panic!("{}", error_msg);
     }
 
     // Checking if data folder exists
-    if let Some(error_msg) = check::data_folder_exists(false){
+    if let Some(error_msg) = check::data_folder_exists(false) {
         msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
@@ -76,8 +76,8 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     for c in 0..CHARS.0.len() {
 
         // Iterating through the character jsons to find the character requested
-        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true ||
-            CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true{
+        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+            CHARS.0[c].to_lowercase().contains(&character_arg.to_lowercase()) == true {
 
             // Reading the character json
             let char_file_path = "data/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
@@ -93,7 +93,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
             // Checking if aliases for this character exist
             let aliases_path = "data/".to_owned() + CHARS.0[c] + "/aliases.json";
-            if Path::new(&aliases_path).exists() == true{
+            if Path::new(&aliases_path).exists() == true {
                 
                 // Reading the aliases json
                 let aliases_data = fs::read_to_string(&aliases_path)
@@ -102,13 +102,13 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 // Deserializing the aliases json
                 let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
-                for a in 0..aliases_data.len(){
-                    for b in 0..aliases_data[a].aliases.len(){
+                for a in 0..aliases_data.len() {
+                    for b in 0..aliases_data[a].aliases.len() {
                         
                         // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                         // Change the given argument (character_move) to the actual move name instead of the alias
-                        if aliases_data[a].aliases[b].to_lowercase().trim() == character_move.to_lowercase().trim() {
-                            character_move = aliases_data[a].input.to_string();
+                        if aliases_data[a].aliases[b].to_lowercase().trim() == character_move_arg.to_lowercase().trim() {
+                            character_move_arg = aliases_data[a].input.to_string();
                         }
                     }
                 }
@@ -122,11 +122,11 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
             
 
-            for m in 0..move_frames.len(){
+            for m in 0..move_frames.len() {
                 // Iterating through the moves of the json file to find the move requested
                 if move_frames[m].input.to_string().to_lowercase().replace(".", "") 
-                == character_move.to_string().to_lowercase().replace(".", "")
-                || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) == true{
+                == character_move_arg.to_string().to_lowercase().replace(".", "")
+                || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
                     
                     
                     move_found = true;
@@ -139,15 +139,16 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                     // If they aren't empty, the variables initialized above will be replaced
                     // With the corresponind data from the json file
                     // Otherwise they will remain as '-'
-                    for y in 0..image_links.len(){
+                    for y in 0..image_links.len() {
                         // Iterating through the image.json to find the move's image links
-                        if move_frames[m].r#move == image_links[y].r#move{
-                            if image_links[y].move_img.is_empty() == false{
+                        if move_frames[m].input == image_links[y].r#move {
+                            if image_links[y].move_img.is_empty() == false {
                                 image_embed = image_links[y].move_img.to_string();
+                                break;
                             }
                         }
                     }
-                    if move_frames[m].damage.is_empty() == false{
+                    if move_frames[m].damage.is_empty() == false {
                         damage_embed = move_frames[m].damage.to_string();
                     }
                     if move_frames[m].guard.is_empty() == false {
@@ -219,14 +220,14 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Error message cause given characters json was not found
     if character_found == false {
-        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
+        let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
     // Error message cause given move wasnt found in the json
     if character_found == true && move_found == false {
-        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!");
+        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
