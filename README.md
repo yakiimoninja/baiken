@@ -2,7 +2,10 @@
 **Your favorite one-handed samurai lady helps you learn Guilty Gear Strive \
 by providing you with each character's moves, frame data and their hitboxes.**
 
-## Requirements
+## Invite the bot to your server
+- You can invite Baiken to your server by pressing [here](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=517544070208&scope=bot) 
+
+## Host the bot yourself
 - You will need a bot token.
 - You will need to **download** the `exe` from [here](https://github.com/yakiimoninja/baiken/releases/latest).
 - You will need to create a `.env` file and put that token inside that file.
