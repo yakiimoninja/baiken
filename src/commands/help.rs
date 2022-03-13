@@ -56,8 +56,8 @@ __**Notes**__
 • When searching for charged dust attack use the alias `5D!`.
       Example: `b.f chipp 5D!`.
 
-__**Github**__
-<https://github.com/yakiimoninja/baiken-bot>
+__**Author:**__  __<https://github.com/yakiimoninja/baiken-bot>__
+__**Artwork:**__  __<https://twitter.com/gogalking>__
 "#;
 
     msg.channel_id.say(&ctx.http, help_message).await?;
