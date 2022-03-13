@@ -62,4 +62,4 @@ Displays this help message.
 - **When searching for charged dust attack use the alias `5D!`.**
   - Example: `b.f chipp 5D!`.
 # 
-### Credits for the Baiken artwork: [@gogalking](https://mobile.twitter.com/gogalking).
+### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking).
