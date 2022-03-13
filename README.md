@@ -8,7 +8,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 ## Host the bot yourself
 - You will need a bot token.
 - You will need to **download** the `exe` from [**here**](https://github.com/yakiimoninja/baiken/releases/latest).
-- You will need to create a `.env` file and put that token inside that file.
+- You will need to create a `.env` file and put that token inside that.
 - You will also need to have the `data` folder and the `.env` file in the same folder as `baiken.exe`.
 
 ## Usage
@@ -62,5 +62,4 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 - **When searching for charged dust attack use the alias `5D!`.**
   - Example: `b.f chipp 5D!`.
-  # 
- ### That's all folks!
+# 
