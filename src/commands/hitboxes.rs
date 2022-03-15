@@ -71,7 +71,8 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
             //Deserializing from character json
             let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
             
-            println!("\nSuccesfully read '{}.json' file.", &CHARS.0[c]);
+            println!("\nUser input: '{} {}'", character_arg, character_move_arg);
+            println!("Succesfully read '{}.json' file.", &CHARS.0[c]);
             
             character_found = true;
 

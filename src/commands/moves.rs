@@ -11,11 +11,11 @@ use crate::{CHARS, Frames, check};
 async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Getting character and move args
-    let character = args.single::<String>()?;
+    let character_arg = args.single::<String>()?;
   
     // Checking for correct character argument
-    if character.len() < 3 {
-        if character.to_lowercase() != "ky" {
+    if character_arg.len() < 3 {
+        if character_arg.to_lowercase() != "ky" {
             let error_msg = "Invalid character name!";
             msg.channel_id.say(&ctx.http, &error_msg).await?;
             print!("\n");
@@ -41,8 +41,8 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     for c in 0..CHARS.0.len() {
 
         // Iterating through the character jsons to find the character requested
-        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character.to_lowercase()) == true ||
-            CHARS.0[c].to_lowercase().contains(&character.to_lowercase()) == true {
+        if CHARS.0[c].to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+            CHARS.0[c].to_lowercase().contains(&character_arg.to_lowercase()) == true {
 
             // Reading the character json if found
             let char_file_path = "data/".to_owned() + CHARS.0[c] + "/" + CHARS.0[c] + ".json";
@@ -52,6 +52,7 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             //Deserializing from character json
             let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
             
+            println!("\nUser input: '{}'", character_arg);
             println!("\nSuccesfully read '{}.json' file.", &CHARS.0[c]);
             character_found = true;
             
@@ -69,7 +70,7 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Error message cause given characters json was not found
     if character_found == false {
-        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
+        let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
