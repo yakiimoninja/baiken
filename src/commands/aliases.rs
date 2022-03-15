@@ -65,7 +65,7 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         if CHARS.0[c].to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
             CHARS.0[c].to_lowercase().contains(&character_arg.to_lowercase()) == true {          
             
-            println!("\nUser input: '{}'", character_arg);
+            println!("\nUser input: 'b.a {}'", character_arg);
             println!("Succesfully read '{}.json' file.", &CHARS.0[c]);
             character_found = true;
 
