@@ -14,6 +14,7 @@ const SITE_HALF: &str = "&prop=text&formatversion=2";
 
 #[command]
 #[aliases("u")]
+#[owners_only]
 pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
 
     // Checking if images jsons exist
