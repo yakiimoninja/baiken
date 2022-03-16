@@ -78,15 +78,15 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
             let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
             // Formatting string for in discord print
-            let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Move Aliases**__\n```";
+            let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Move Aliases**__\n```diff";
             
             // Checks what character info is accessing
             if CHARS.0[c] != "Faust" && CHARS.0[c] != "Goldlewis_Dickinson" && CHARS.0[c] != "Ky_Kiske" {
                 
                 // Building the message to be sent by the bot
                 for m in 0..aliases_data.len() {
-                    moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &aliases_data[m].aliases[0] 
-                        + " -> Input: " + &aliases_data[m].input + "\nAliases: ";
+                    moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+                        + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
     
                     for a in 0..aliases_data[m].aliases.len() {
                         if a != aliases_data[m].aliases.len() - 1 {

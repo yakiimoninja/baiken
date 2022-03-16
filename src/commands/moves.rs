@@ -57,11 +57,11 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             character_found = true;
             
             // Formatting string for in discord print
-            let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Moves**__\n```";
+            let mut moves_as_msg = "__**".to_string() + &CHARS.0[c].replace("_", " ") + " Moves**__\n```diff";
 
             for m in 0..move_frames.len() {
-                moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &move_frames[m].r#move
-                    + "\nInput: " + &move_frames[m].input + "\n";
+                moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[m].r#move
+                    + "\n+ Input: " + &move_frames[m].input + "\n";
             }
             moves_as_msg = moves_as_msg + &"```".to_string();
             msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
