@@ -7,3 +7,4 @@ pub mod moves;
 pub mod aliases;
 pub mod help;
 pub mod hitboxes;
+pub mod request;

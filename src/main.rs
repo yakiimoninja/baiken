@@ -12,10 +12,10 @@ use serenity::{async_trait,
 mod commands;
 mod check;
 
-use commands::{frames::*, update::*, moves::*, aliases::*, help::*, hitboxes::*};
+use commands::{frames::*, update::*, moves::*, aliases::*, help::*, hitboxes::*, request::*};
 
 #[group]
-#[commands(frames, update, moves, aliases, help, hitboxes)]
+#[commands(frames, update, moves, aliases, help, hitboxes, request)]
 struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
