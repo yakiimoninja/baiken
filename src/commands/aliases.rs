@@ -105,8 +105,8 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
                 // Spliting the message that will be sent by the bot
                 // Into 2 separate messages cause of the character limit
                 for m in 0..aliases_data.len() / 2 {
-                    moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &aliases_data[m].aliases[0] 
-                        + " -> Input: " + &aliases_data[m].input + "\nAliases: ";
+                    moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+                        + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
     
                     for a in 0..aliases_data[m].aliases.len() {
                         if a != aliases_data[m].aliases.len() - 1 {
@@ -124,8 +124,8 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
                 // 2nd message builder
                 moves_as_msg = "```".to_string();
                 for m in aliases_data.len()/2..aliases_data.len() {
-                    moves_as_msg = moves_as_msg.to_owned() + "\nMove: "+ &aliases_data[m].aliases[0] 
-                        + " -> Input: " + &aliases_data[m].input + "\nAliases: ";
+                    moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+                        + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
     
                     for a in 0..aliases_data[m].aliases.len() {
                         if a != aliases_data[m].aliases.len() - 1 {
