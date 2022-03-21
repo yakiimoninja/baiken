@@ -59,7 +59,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Initializing variables for the embed
     // They must not be empty cause then the embed wont send
-    let mut image_embed = "-".to_string();
+    let mut image_embed = "This move has no image!".to_string();
     let mut damage_embed = "-".to_string();
     let mut guard_embed = "-".to_string();
     let mut invin_embed = "-".to_string();
@@ -179,7 +179,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
                     // Debugging prints
                     // println!("{}", content_embed);
-                    // println!("{}", image_embed);
+                    println!("{}", image_embed);
                     // println!("{}", title_embed);
                     // println!("{}", damage_embed);
                     // println!("{}", guard_embed);
