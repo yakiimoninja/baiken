@@ -7,6 +7,8 @@ use serenity::prelude::*;
 
 use crate::{CHARS, Frames, MoveAliases, ImageLinks, check};
 
+const IMAGE_DEFAULT: &str = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/src/commands/images/no_hitbox.png";
+
 #[command]
 #[aliases("hitbox","hit", "h")]
 async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
@@ -120,13 +122,25 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
                             move_found = true;
                             println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &CHARS.0[c]);
 
-                            // Priting hitboxes in discord chat
-                            let bot_msg = "__**Move: ".to_owned() + &image_links[m].input + "**__";
-                            msg.channel_id.say(&ctx.http, &bot_msg).await?;
+                            
+                            if image_links[y].hitbox_img[0].is_empty() == false {
 
-                            for i in 0..image_links[y].hitbox_img.len() {                        
-                                msg.channel_id.say(&ctx.http, &image_links[y].hitbox_img[i]).await?;
+                                // Priting hitboxes in discord chat
+                                let bot_msg = "__**Move: ".to_owned() + &image_links[y].input + "**__";
+                                msg.channel_id.say(&ctx.http, &bot_msg).await?;
+
+                                for i in 0..image_links[y].hitbox_img.len() {                        
+                                    msg.channel_id.say(&ctx.http, &image_links[y].hitbox_img[i]).await?;
+                                }
                             }
+                            else{
+                                
+                                // Priting hitboxes in discord chat
+                                let bot_msg = "__**Move: ".to_owned() + &image_links[m].input + "**__";
+                                msg.channel_id.say(&ctx.http, &bot_msg).await?;
+                                msg.channel_id.say(&ctx.http, &IMAGE_DEFAULT).await?;
+                            }
+                            
                         }
                     }
                     break;

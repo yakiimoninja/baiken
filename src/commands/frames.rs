@@ -59,7 +59,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // Initializing variables for the embed
     // They must not be empty cause then the embed wont send
-    let mut image_embed = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/src/commands/no_image.png".to_string();
+    let mut image_embed = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/src/commands/images/no_image.png".to_string();
     let mut damage_embed = "-".to_string();
     let mut guard_embed = "-".to_string();
     let mut invin_embed = "-".to_string();
