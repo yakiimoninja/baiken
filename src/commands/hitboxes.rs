@@ -134,7 +134,7 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
                                 }
                             }
                             else{
-                                
+
                                 // Priting hitboxes in discord chat
                                 let bot_msg = "__**Move: ".to_owned() + &image_links[m].input + "**__";
                                 msg.channel_id.say(&ctx.http, &bot_msg).await?;
