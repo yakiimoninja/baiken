@@ -26,9 +26,10 @@
 	{"input":"41236H~H","move":"Kabari Followup","damage":"48","guard":"All","invincibility":"","startup":"11 [23]","block":"-3","hit":"HKD (+58)","active":"3","recovery":"10","counter":""},
 	{"input":"j.236S","move":"Youzansen","damage":"39","guard":"High","invincibility":"","startup":"9","block":"-18 (TK)","hit":"+3 (TK)","active":"12","recovery":"Landing+10","counter":""},
 	{"input":"236P","move":"Hiiragi","damage":"130","guard":"","invincibility":"1-6 Catch","startup":"","block":"","hit":"KD (+14)","active":"","recovery":"45","counter":""},
-	{"input":"236236S","move":"Tsurane Sanzu-watashi","damage":"45×2,100","guard":"All","invincibility":"","startup":"7+1","block":"-32","hit":"HKD (+42)","active":"","recovery":"48","counter":""},
+	{"input":"236236S","move":"Tsurane Sanzu-watashi","damage":"45×2,100","guard":"All","invincibility":"1~10 Full","startup":"7+1","block":"-32","hit":"HKD (+42)","active":"3(20)3(36)3","recovery":"48","counter":""},
 	{"input":"214214P","move":"Kenjyu","damage":"110","guard":"All (Guard Crush)","invincibility":"","startup":"8+3","block":"+5","hit":"HKD","active":"","recovery":"","counter":""},
 	{"input":"j.214214P","move":"Kenjyu","damage":"110","guard":"All (Guard Crush)","invincibility":"","startup":"11+3","block":"","hit":"HKD","active":"","recovery":"","counter":""},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"20,60","guard":"Ground Throw (90000)","invincibility":"none","startup":"2","block":"","hit":"HKD (+60)","active":"3","recovery":"38","counter":""},
+	{"input":"Ground Throw (Tether)","move":"Ground Throw (Tether)","damage":"20,60","guard":"Ground Throw (90000)","invincibility":"none","startup":"2","block":"","hit":"HKD +60","active":"3","recovery":"38","counter":""},
+	{"input":"Ground Throw (Knockback)","move":"Ground Throw (Knockback)","damage":"20,60","guard":"Ground Throw (90000)","invincibility":"none","startup":"2","block":"","hit":"HKD +47","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"20,60","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until Landing+10","counter":""}
 ]

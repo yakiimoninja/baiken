@@ -44,6 +44,6 @@
 	{"input":"632146H","move":"Zansetsu","damage":"200","guard":"Mid","invincibility":"1~26F Full","startup":"11+(58 Flash)+10","block":"-66","hit":"HKD","active":"6","recovery":"80","counter":"Small"},
 	{"input":"BR Activation","move":"BR Activation","damage":"N/A","guard":"Guard Crush","invincibility":"1~15f Full after freeze","startup":"4+38+3","block":"-7","hit":"HKD","active":"10","recovery":"70","counter":""},
 	{"input":"BR Deactivation","move":"BR Deactivation","damage":"N/A","guard":"N/A","invincibility":"","startup":"1+59","block":"N/A","hit":"N/A","active":"N/A","recovery":"N/A","counter":""},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"90","guard":"Ground Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"90","guard":"Ground Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD +41","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"90","guard":"Air Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]

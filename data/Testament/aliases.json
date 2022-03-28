@@ -1,0 +1,16 @@
+[
+    {"input":"5[D]","aliases":["5D!"]},
+    {"input":"N/a","aliases":["Stain State","SS","Stain","Pop"]},
+    {"input":"236S","aliases":["Grave Reaper","Exe Beast","Beast","GR","EB","B"]},
+    {"input":"236[S]","aliases":["Held Grave Reaper","Held Exe Beast","Exe Beast!","Beast!","GR!","EB!","B!"]},
+    {"input":"236H","aliases":["Heavy Grave Reaper","H Grave Reaper","Heavy Exe Beast","H Exe Beast","H Beast","HGR","HEB","HB"]},
+    {"input":"j.236S","aliases":["Air Grave Reaper","Air Exe Beast","Air Beast","AGR","AEB","AB"]},
+    {"input":"j.236H","aliases":["Air Heavy Grave Reaper","Air Heavy Exe Beast","Air H Exe Beast","Air H Beast","AHGR","AHEB","AHB"]},
+    {"input":"214P","aliases":["Unholy Diver","Crow","Bird"]},
+    {"input":"214K","aliases":["Possession","Teleport","TP"]},
+    {"input":"214S","aliases":["Arbiter Sign","Low Beast","AS","LB"]},
+    {"input":"214H","aliases":["Heavy Arbiter Sign","Overehad Beast","HAS","OB"]},
+    {"input":"236236P","aliases":["Nostrovia","Succubus Super"]},
+    {"input":"236236K","aliases":["Calamity One","Beast Super","CO"]},
+    {"input":"6D or 4D","aliases":["Throw"]}
+]

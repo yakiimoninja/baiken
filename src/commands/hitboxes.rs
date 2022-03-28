@@ -7,7 +7,7 @@ use serenity::prelude::*;
 
 use crate::{CHARS, Frames, MoveAliases, ImageLinks, check};
 
-const IMAGE_DEFAULT: &str = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/src/commands/images/no_hitbox.png";
+const IMAGE_DEFAULT: &str = "https://github.com/yakiimoninja/baiken/blob/main/src/commands/images/no_hitbox.png?raw=true";
 
 #[command]
 #[aliases("hitbox","hit", "h")]

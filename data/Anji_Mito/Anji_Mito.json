@@ -27,9 +27,9 @@
 	{"input":"236H S","move":"Nagiha","damage":"36","guard":"Low","invincibility":"","startup":"13 (26 with early cancel)","block":"-7","hit":"","active":"4","recovery":"20","counter":"Mid"},
 	{"input":"236H H","move":"Rin","damage":"45","guard":"High","invincibility":"","startup":"25 (38 with early cancel)","block":"-15","hit":"","active":"2","recovery":"30","counter":"Large"},
 	{"input":"632146H","move":"Issei Ougi: Sai","damage":"13×6,60","guard":"All","invincibility":"","startup":"11+6","block":"-30","hit":"","active":"","recovery":"","counter":"Small"},
-	{"input":"632146S","move":"Kachoufuugetsu Kai","damage":"","guard":"","invincibility":"1-?? Guard","startup":"","block":"","hit":"","active":"","recovery":"Total 32","counter":""},
+	{"input":"632146S","move":"Kachoufuugetsu Kai","damage":"","guard":"","invincibility":"1-30 Guard","startup":"","block":"","hit":"","active":"","recovery":"Total 40","counter":""},
 	{"input":"632146S Attack Near","move":"Kachoufuugetsu Kai","damage":"66,15×4,60","guard":"All","invincibility":"","startup":"2+1","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"632146S Attack Far","move":"Kachoufuugetsu Kai","damage":"60, 80","guard":"All","invincibility":"","startup":"2+1","block":"-1","hit":"","active":"","recovery":"","counter":"Mid"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"HKD +59","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"","active":"3","recovery":"Until L+10","counter":""}
 ]

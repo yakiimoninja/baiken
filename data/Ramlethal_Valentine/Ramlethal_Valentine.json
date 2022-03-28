@@ -21,7 +21,7 @@
 	{"input":"236S","move":"Bajoneto","damage":"30,35","guard":"All","invincibility":"","startup":"20","block":"+9","hit":"22~40","active":"","recovery":"Total 37","counter":"Small"},
 	{"input":"236H","move":"Bajoneto","damage":"30,35","guard":"All","invincibility":"","startup":"20","block":"+3","hit":"KD","active":"","recovery":"Total 43","counter":"Small"},
 	{"input":"623P","move":"Dauro","damage":"35","guard":"All","invincibility":"","startup":"11","block":"-10","hit":"+5","active":"3","recovery":"27","counter":"Mid"},
-	{"input":"214K","move":"Sildo Detruo","damage":"40","guard":"Mid","invincibility":"","startup":"30","block":"+2","hit":"+6","active":"2","recovery":"18","counter":"Mid"},
+	{"input":"214K","move":"Sildo Detruo","damage":"40","guard":"Mid","invincibility":"","startup":"30","block":"+2","hit":"+6","active":"2","recovery":"13","counter":"Mid"},
 	{"input":"j.214K","move":"Sildo Detruo","damage":"40","guard":"Mid","invincibility":"","startup":"30","block":"-3~+3","hit":"+3~+6","active":"Until L","recovery":"","counter":"Mid"},
 	{"input":"214H","move":"Sabrubato","damage":"100 [75] {50}","guard":"All","invincibility":"","startup":"19","block":"-27 [-27] {-32}","hit":"KD","active":"4","recovery":"42","counter":"Large"},
 	{"input":"214P","move":"Erarlumo","damage":"30","guard":"All","invincibility":"","startup":"16","block":"-5","hit":"+10","active":"7","recovery":"12","counter":"Mid"},
@@ -30,6 +30,6 @@
 	{"input":"j.214S","move":"Agressa Ordono","damage":"30,30 [24,30] [30,24] {24,24}","guard":"All","invincibility":"","startup":"12","block":"","hit":"KD","active":"4(10)4","recovery":"24","counter":"Small"},
 	{"input":"632146H","move":"Calvados","damage":"4×29,40","guard":"All (Guard Crush)","invincibility":"","startup":"11+13","block":"+16","hit":"KD","active":"","recovery":"","counter":"Small"},
 	{"input":"236236S","move":"Mortobato","damage":"160 [130] {100}","guard":"All","invincibility":"","startup":"7+2","block":"-30 [-30] {-35}","hit":"KD","active":"6","recovery":"42","counter":"Mid"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +55","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"Until L+10","counter":""}
 ]

@@ -31,6 +31,6 @@
 	{"input":"236P","move":"Curse","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"29 total","counter":""},
 	{"input":"632146S","move":"Deus Ex Machina","damage":"20, 1x17, 100","guard":"All","invincibility":"","startup":"13+(193 Flash)+7","block":"-25","hit":"KD","active":"","recovery":"","counter":"Small"},
 	{"input":"214214P","move":"Super Focus","damage":"-","guard":"-","invincibility":"","startup":"5","block":"-","hit":"-","active":"(52 Flash)","recovery":"6","counter":""},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"-","hit":"HKD","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"-","hit":"HKD +43","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"-","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]

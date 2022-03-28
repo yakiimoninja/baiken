@@ -33,9 +33,9 @@
 	{"input":"63214S","move":"Genrouzan","damage":"20,20,67","guard":"Throw","invincibility":"","startup":"27","block":"N/A","hit":"HKD","active":"11","recovery":"15","counter":""},
 	{"input":"j.214P","move":"Shuriken","damage":"10","guard":"All","invincibility":"","startup":"22","block":"","hit":"","active":"Until Hit","recovery":"Total#160??","counter":"Small"},
 	{"input":"236236K","move":"Banki Messai","damage":"15×5, 9×3, 30","guard":"All","invincibility":"","startup":"6+1","block":"-20","hit":"HKD","active":"","recovery":"","counter":"Small"},
-	{"input":"632146H","move":"Zansei Rouga","damage":"10×4, 135","guard":"All","invincibility":"","startup":"20+1","block":"","hit":"HKD","active":"","recovery":"","counter":"Small"},
-	{"input":"j.632146H","move":"Zansei Rouga","damage":"10×4, 135","guard":"All","invincibility":"","startup":"13+1","block":"","hit":"HKD","active":"","recovery":"","counter":"Small"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"20×2, 30","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38","counter":""},
+	{"input":"632146H","move":"Zansei Rouga","damage":"10×4, 135","guard":"All","invincibility":"6~22 Full","startup":"20+1","block":"","hit":"HKD","active":"","recovery":"","counter":"Small"},
+	{"input":"j.632146H","move":"Zansei Rouga","damage":"10×4, 135","guard":"All","invincibility":"4~15 Full","startup":"13+1","block":"","hit":"HKD","active":"","recovery":"","counter":"Small"},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"20×2, 30","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +50","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"70","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until L+10","counter":""},
 	{"input":"Wall Run","move":"Wall Run","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""}
 ]

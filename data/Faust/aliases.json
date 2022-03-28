@@ -25,5 +25,5 @@
 	{"input":"Earthquake","aliases":["Earthquake","Quake"]},
 	{"input":"Horn","aliases":["Horn","Trumpet"]},
 	{"input":"Meteors","aliases":["Meteors","Meteor"]},
-	{"input":"6D or 4D", "aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw"]}
 ]

@@ -25,8 +25,8 @@
 	{"input":"623S","move":"Sol Nascente","damage":"40","guard":"All","invincibility":"upper body invuln 1~6 above the knees 7~9","startup":"7","block":"-15","hit":"KD","active":"8","recovery":"21","counter":"Mid"},
 	{"input":"214S","move":"Sol Poente","damage":"30","guard":"All, High","invincibility":"","startup":"4 [30]","block":"+4","hit":"KD","active":"6(20)3","recovery":"10","counter":"Mid"},
 	{"input":"j.214S","move":"Sol Poente","damage":"30","guard":"All, High","invincibility":"","startup":"4 [30]","block":"+4","hit":"KD","active":"6(20) 3","recovery":"Until L+4","counter":"Mid"},
-	{"input":"632146H","move":"Ventania","damage":"21×4, 84","guard":"All","invincibility":"","startup":"4+3","block":"-37","hit":"HKD","active":"","recovery":"","counter":"Mid"},
+	{"input":"632146H","move":"Ventania","damage":"21×4, 84","guard":"All","invincibility":"1~10F Full","startup":"4+3","block":"-37","hit":"HKD","active":"4(4)4(4)4(4)4(4)7","recovery":"49","counter":"Mid"},
 	{"input":"j.236236H","move":"Tempestade","damage":"42, 10×5, 21, 31","guard":"All","invincibility":"","startup":"3+1","block":"+6","hit":"KD","active":"Until L","recovery":"","counter":"Mid"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Throw","invincibility":"","startup":"2","block":"N/A","hit":"KD","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD +38","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Throw","invincibility":"","startup":"2","block":"N/A","hit":"KD","active":"3","recovery":"Until L+10","counter":""}
 ]

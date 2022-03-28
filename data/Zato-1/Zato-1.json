@@ -14,7 +14,7 @@
 	{"input":"j.H","move":"j.H","damage":"38","guard":"High","invincibility":"","startup":"12","block":"","hit":"","active":"14","recovery":"13","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"40","guard":"High","invincibility":"","startup":"11","block":"","hit":"","active":"4","recovery":"22","counter":"Large"},
 	{"input":"6P","move":"6P","damage":"30","guard":"All","invincibility":"1 ~ 3 Upper Body 4 ~ 15 Above Knees","startup":"12","block":"-6","hit":"KD","active":"8","recovery":"12","counter":"Mid"},
-	{"input":"6K","move":"6K","damage":"30","guard":"High","invincibility":"","startup":"28","block":"-2","hit":"+1","active":"4","recovery":"17","counter":"Mid"},
+	{"input":"6K","move":"6K","damage":"30","guard":"High","invincibility":"","startup":"28","block":"-2","hit":"+1","active":"4","recovery":"12","counter":"Mid"},
 	{"input":"6H","move":"6H","damage":"65","guard":"All","invincibility":"","startup":"30","block":"-4","hit":"+1","active":"4","recovery":"11","counter":"Large"},
 	{"input":"2D","move":"2D","damage":"27","guard":"Low","invincibility":"","startup":"10","block":"-9","hit":"HKD","active":"6","recovery":"17","counter":"Large"},
 	{"input":"5D","move":"5D","damage":"40","guard":"High","invincibility":"","startup":"20","block":"-15","hit":"0","active":"3","recovery":"26","counter":"Mid"},
@@ -37,6 +37,6 @@
 	{"input":"632146H","move":"Amorphous","damage":"150","guard":"All","invincibility":"","startup":"11+8","block":"+12","hit":"","active":"","recovery":"","counter":""},
 	{"input":"632146S","move":"Sun Void","damage":"20×3","guard":"All","invincibility":"","startup":"11+14","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"j.632146S","move":"Sun Void","damage":"20×3","guard":"All","invincibility":"","startup":"11+14","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +43","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"Until Landing + 10","counter":""}
 ]

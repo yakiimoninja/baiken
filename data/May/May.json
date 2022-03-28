@@ -14,7 +14,7 @@
 	{"input":"j.H","move":"j.H","damage":"50","guard":"High","invincibility":"","startup":"12","block":"","hit":"","active":"10","recovery":"15","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"60","guard":"High","invincibility":"","startup":"10","block":"","hit":"","active":"6","recovery":"21","counter":"Mid"},
 	{"input":"j.2H","move":"j.2H","damage":"40","guard":"High","invincibility":"","startup":"13","block":"","hit":"","active":"Until L","recovery":"","counter":"Small"},
-	{"input":"6P","move":"6P","damage":"35","guard":"All","invincibility":"1-3 upper body 4-17 above knees","startup":"12","block":"-7","hit":"KD","active":"6","recovery":"19","counter":"Mid"},
+	{"input":"6P","move":"6P","damage":"35","guard":"All","invincibility":"1-3 upper body 4-17 above knees","startup":"12","block":"-7","hit":"KD","active":"6","recovery":"18","counter":"Mid"},
 	{"input":"6K","move":"6K","damage":"35","guard":"High","invincibility":"","startup":"20","block":"-2","hit":"+1","active":"5","recovery":"11","counter":"Small"},
 	{"input":"3K","move":"3K","damage":"35","guard":"Low","invincibility":"","startup":"11","block":"-13","hit":"HKD","active":"6","recovery":"21","counter":"Small"},
 	{"input":"6H","move":"6H","damage":"70 [90]","guard":"All [All (Guard Crush)]","invincibility":"","startup":"16 [40]","block":"-8 [+8]","hit":"-5[KD]","active":"6 [6]","recovery":"24 [24]","counter":"Large"},
@@ -29,8 +29,8 @@
 	{"input":"214P","move":"Arisugawa Sparkle","damage":"50","guard":"All","invincibility":"","startup":"48","block":"+29","hit":"+32","active":"6","recovery":"Total 45","counter":"Small"},
 	{"input":"214K","move":"Arisugawa Sparkle","damage":"50","guard":"All","invincibility":"","startup":"48","block":"+29","hit":"+32","active":"10","recovery":"Total 45","counter":"Small"},
 	{"input":"236236S","move":"Great Yamada Attack","damage":"190","guard":"All","invincibility":"","startup":"10+","block":"-54","hit":"HKD","active":"","recovery":"88","counter":"Small"},
-	{"input":"632146H","move":"The Wonderful and Dynamic Goshogawara","damage":"80, 100","guard":"All","invincibility":"1~15 Full","startup":"6+4","block":"-21","hit":"HKD","active":"12(22)10","recovery":"","counter":"Small"},
-	{"input":"j.632146H","move":"The Wonderful and Dynamic Goshogawara","damage":"80, 100","guard":"All","invincibility":"1~15 Full","startup":"6+4","block":"-21","hit":"HKD","active":"12(22+)10","recovery":"","counter":"Small"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38","counter":""},
+	{"input":"632146H","move":"The Wonderful and Dynamic Goshogawara","damage":"80, 100","guard":"All","invincibility":"1~21 Full","startup":"6+4","block":"-21","hit":"HKD","active":"12(22)10","recovery":"","counter":"Small"},
+	{"input":"j.632146H","move":"The Wonderful and Dynamic Goshogawara","damage":"80, 100","guard":"All","invincibility":"1~21 Full","startup":"6+4","block":"-21","hit":"HKD","active":"12(22+)10","recovery":"","counter":"Small"},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +48","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]

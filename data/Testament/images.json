@@ -1,0 +1,233 @@
+[
+    {
+        "input": "5P",
+        "move_img": "https://www.dustloop.com/wiki/images/2/2f/GGST_Testament_5P.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "5K",
+        "move_img": "https://www.dustloop.com/wiki/images/e/e8/GGST_Testament_5K.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "c.S",
+        "move_img": "https://www.dustloop.com/wiki/images/f/f4/GGST_Testament_cS.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "f.S",
+        "move_img": "https://www.dustloop.com/wiki/images/3/38/GGST_Testament_fS.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "5H",
+        "move_img": "https://www.dustloop.com/wiki/images/d/d0/GGST_Testament_5H.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "5D",
+        "move_img": "https://www.dustloop.com/wiki/images/2/24/GGST_Testament_5D.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "5[D]",
+        "move_img": "https://www.dustloop.com/wiki/images/2/24/GGST_Testament_5D.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "6P",
+        "move_img": "https://www.dustloop.com/wiki/images/4/46/GGST_Testament_6P.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "6H",
+        "move_img": "https://www.dustloop.com/wiki/images/8/8c/GGST_Testament_6H2.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "2P",
+        "move_img": "https://www.dustloop.com/wiki/images/3/39/GGST_Testament_2P.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "2K",
+        "move_img": "https://www.dustloop.com/wiki/images/c/cf/GGST_Testament_2K.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "2S",
+        "move_img": "https://www.dustloop.com/wiki/images/2/2d/GGST_Testament_2S.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "2H",
+        "move_img": "https://www.dustloop.com/wiki/images/4/47/GGST_Testament_2H.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "2D",
+        "move_img": "https://www.dustloop.com/wiki/images/b/ba/GGST_Testament_2D.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.P",
+        "move_img": "https://www.dustloop.com/wiki/images/0/06/GGST_Testament_jP.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.K",
+        "move_img": "https://www.dustloop.com/wiki/images/7/71/GGST_Testament_jK.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.S",
+        "move_img": "https://www.dustloop.com/wiki/images/f/f7/GGST_Testament_jS.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.H",
+        "move_img": "https://www.dustloop.com/wiki/images/8/87/GGST_Testament_jH.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.D",
+        "move_img": "https://www.dustloop.com/wiki/images/6/66/GGST_Testament_jD.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "N/a",
+        "move_img": "https://www.dustloop.com/wiki/images/a/ab/GGST_Testament_Stain_Hit.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "236S",
+        "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236S.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "236[S]",
+        "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236S.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "236H",
+        "move_img": "https://www.dustloop.com/wiki/images/a/ae/GGST_Testament_236H.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.236S",
+        "move_img": "https://www.dustloop.com/wiki/images/a/aa/GGST_Testament_j236S.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "j.236H",
+        "move_img": "https://www.dustloop.com/wiki/images/1/13/GGST_Testament_j236H.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "214P",
+        "move_img": "https://www.dustloop.com/wiki/images/3/3c/GGST_Testament_214P.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "214K",
+        "move_img": "https://www.dustloop.com/wiki/images/a/a8/GGST_Testament_214K.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "214S",
+        "move_img": "https://www.dustloop.com/wiki/images/2/2e/GGST_Testament_214S.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "214H",
+        "move_img": "https://www.dustloop.com/wiki/images/0/00/GGST_Testament_214H.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "236236P",
+        "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236236P.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "236236K",
+        "move_img": "https://www.dustloop.com/wiki/images/3/3e/GGST_Testament_236236K.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "Ground Throw",
+        "move_img": "https://www.dustloop.com/wiki/images/7/77/GGST_Testament_Ground_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "Air Throw",
+        "move_img": "https://www.dustloop.com/wiki/images/f/ff/GGST_Testament_Air_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    }
+]

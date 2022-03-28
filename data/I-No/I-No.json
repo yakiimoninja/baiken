@@ -30,6 +30,6 @@
 	{"input":"632146H","move":"Megalomania","damage":"13×18 (17×11)","guard":"Ground Throw, All","invincibility":"","startup":"11+0(41)","block":"N/A(-18)","hit":"","active":"","recovery":"","counter":""},
 	{"input":"632146S","move":"Ultimate Fortissimo","damage":"40,20×2,100","guard":"All (Guard Crush)","invincibility":"Full F1~11","startup":"6+2","block":"+26","hit":"","active":"4 (42) 9","recovery":"13","counter":""},
 	{"input":"j.632146S","move":"Ultimate Fortissimo","damage":"20×2,100","guard":"All (Guard Crush)","invincibility":"","startup":"5+3","block":"+37","hit":"","active":"","recovery":"","counter":""},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +56","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"Until Landing+10","counter":""}
 ]

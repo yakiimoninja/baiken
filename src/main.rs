@@ -77,9 +77,9 @@ impl EventHandler for Handler {
     }
 }
 
-pub const CHARS: ([&str; 19], [u16; 19]) = (
-    ["Jack-O", "Nagoriyuki", "Millia_Rage", "Chipp_Zanuff", "Sol_Badguy", "Ky_Kiske", "May", "Zato-1", "I-No", "Happy_Chaos", "Baiken", "Anji_Mito", "Leo_Whitefang", "Faust", "Axl_Low", "Potemkin", "Ramlethal_Valentine", "Giovanna", "Goldlewis_Dickinson"],
-    [27121, 25406, 25419, 25425, 25177, 25428, 25429, 25427, 25422, 29465, 32523, 25421, 23572, 25409, 25424, 25423, 25426, 25420, 26496]
+pub const CHARS: ([&str; 20], [u16; 20]) = (
+    ["Testament","Jack-O", "Nagoriyuki", "Millia_Rage", "Chipp_Zanuff", "Sol_Badguy", "Ky_Kiske", "May", "Zato-1", "I-No", "Happy_Chaos", "Baiken", "Anji_Mito", "Leo_Whitefang", "Faust", "Axl_Low", "Potemkin", "Ramlethal_Valentine", "Giovanna", "Goldlewis_Dickinson"],
+    [33875, 27121, 25406, 25419, 25425, 25177, 25428, 25429, 25427, 25422, 29465, 32523, 25421, 23572, 25409, 25424, 25423, 25426, 25420, 26496]
 );
 
 #[tokio::main]

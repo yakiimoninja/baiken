@@ -33,6 +33,6 @@
 	{"input":"236236S","move":"Heavenly Potemkin Buster","damage":"220","guard":"Air Unblockable","invincibility":"1~12F Full","startup":"12+0","block":"N/A","hit":"KD","active":"15","recovery":"16","counter":"Small"},
 	{"input":"632146H","move":"Giganter Kai","damage":"120","guard":"All","invincibility":"1~10F Full 11~21F Strike","startup":"10+9","block":"+1","hit":"KD","active":"3(2)","recovery":"28","counter":"Mid"},
 	{"input":"Mirror","move":"Giganter Kai (Barrier)","damage":"25x3","guard":"All","invincibility":"","startup":"10+14","block":"","hit":"KD","active":"301","recovery":"","counter":"Small"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"90","guard":"Ground Throw","invincibility":"","startup":"2","block":"N/A","hit":"KD","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"90","guard":"Ground Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD +55","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"90","guard":"Air Throw","invincibility":"","startup":"2","block":"N/A","hit":"KD","active":"3","recovery":"Until Landing + 10","counter":""}
 ]

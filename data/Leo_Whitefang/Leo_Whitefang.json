@@ -31,7 +31,7 @@
 	{"input":"bt.214H","move":"Blitzschlag","damage":"65","guard":"Guard Break","invincibility":"","startup":"29","block":"+21","hit":"","active":"3","recovery":"13","counter":"Large"},
 	{"input":"632146S","move":"Stahl Wirbel","damage":"170","guard":"All","invincibility":"1-4","startup":"4+1","block":"+14","hit":"","active":"","recovery":"Total 27F","counter":"Small"},
 	{"input":"632146H","move":"Liedenschaft des Dirigenten","damage":"20×4,50","guard":"All","invincibility":"1-18","startup":"10+1","block":"-33","hit":"","active":"8(15)12(13)8(10)8(44)6","recovery":"43","counter":"Mid"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"38","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +50","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"Until L+10","counter":""},
 	{"input":"bt.P","move":"","damage":"30","guard":"All","invincibility":"1-10 Upper Body","startup":"7","block":"-2","hit":"13","active":"4","recovery":"12","counter":"Mid"},
 	{"input":"bt.K","move":"","damage":"20","guard":"Low","invincibility":"","startup":"5","block":"+3","hit":"+6","active":"3","recovery":"6","counter":"Small"},
