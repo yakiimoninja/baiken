@@ -264,12 +264,5 @@
         "hitbox_img": [
             ""
         ]
-    },
-    {
-        "input": "Wall Run",
-        "move_img": "https://dustloop.com/wiki/images/e/e9/GGST_Chipp_Zanuff_Wall_Run.png",
-        "hitbox_img": [
-            ""
-        ]
     }
 ]
