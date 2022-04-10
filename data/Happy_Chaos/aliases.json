@@ -1,7 +1,6 @@
 [
-	{"input":"H","aliases":["5H"]},
 	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"H","aliases":["At the Ready","Aim","Gun","ATR","AR"]},
+	{"input":"H","aliases":["At the Ready","Aim","Gun","ATR","AR","5H"]},
 	{"input":"236S","aliases":["At the Ready","S Aim","S Gun","SATR","SAR"]},
 	{"input":"236S H","aliases":["Fire","S Fire","SF","236SH"]},
 	{"input":"214S","aliases":["Steady Aim","Focus Aim","FA"]},
