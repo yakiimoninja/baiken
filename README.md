@@ -7,10 +7,10 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 ## Host the bot yourself
 - You will need a bot token.
-- You will need to **download** the `exe` from [**here**](https://github.com/yakiimoninja/baiken/releases/latest).
+- You will need to **download** and **compile** the source code.
 - You will need to create a `.env` file and put that token inside that.
 - You will also need to have the `data` folder and the `.env` file in the same folder as `baiken.exe`.
-- Lastly execute the `baiken.exe` or run it in the command prompt.
+- Lastly execute the compiled code.
 
 ## Usage
 
