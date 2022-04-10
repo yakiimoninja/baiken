@@ -236,8 +236,15 @@
         ]
     },
     {
-        "input": "6D or 4D",
+        "input": "Ground Throw (Tether)",
         "move_img": "https://dustloop.com/wiki/images/8/82/GGST_Baiken_Ground_Throw.png",
+        "hitbox_img": [
+            ""
+        ]
+    },
+    {
+        "input": "Ground Throw (Knockback)",
+        "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Baiken_Ground_Throw_2.png",
         "hitbox_img": [
             ""
         ]
