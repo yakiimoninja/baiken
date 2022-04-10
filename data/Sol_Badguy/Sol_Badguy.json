@@ -37,6 +37,5 @@
 	{"input":"632146H","move":"Tyrant Rave","damage":"70, 100 [70, 130]","guard":"All","invincibility":"1~8F Full","startup":"5+2","block":"-34","hit":"HKD (+30) [HKD (+59)]","active":"3(20)20","recovery":"31","counter":"Mid, Small"},
 	{"input":"214214H","move":"Heavy Mob Cemetery","damage":"40, 161","guard":"Ground Throw: 150000","invincibility":"14~35F Throw, Guardpoint","startup":"13+7","block":"","hit":"HKD (+27)","active":"16","recovery":"49","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw: 90000","invincibility":"","startup":"2","block":"","hit":"HKD (+32)","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw: 200000","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""},
-	{"input":"Finish Blow","move":"Finish Blow","damage":"80","guard":"","invincibility":"","startup":"11","block":"","hit":"HKD (+23)","active":"","recovery":"","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw: 200000","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]

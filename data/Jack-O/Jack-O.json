@@ -34,6 +34,5 @@
 	{"input":"236236S","move":"Cheer Servant On (S)","damage":"","guard":"-","invincibility":"Jack-O: None Servants: 4~14F Full","startup":"3","block":"See Notes","hit":"-","active":"","recovery":"12","counter":""},
 	{"input":"236236H","move":"Cheer Servant On (H)","damage":"","guard":"-","invincibility":"Jack-O: None Servants: 4~14F Full","startup":"3","block":"See Notes","hit":"-","active":"","recovery":"12","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"HKD +60","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until L+10","counter":""},
-	{"input":"Finishing Blow","move":"Finishing Blow","damage":"80","guard":"","invincibility":"","startup":"12","block":"","hit":"HKD +23","active":"2","recovery":"","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until L+10","counter":""}
 ]
