@@ -10,7 +10,7 @@
 	{"input":"236S","aliases":["Resshou","Rekka 1","Rekka1","Sushi"]},
 	{"input":"236S 236S","aliases":["Rokusai","Rekka 2","Rekka2","Rekka Low","Sukiyaki"]},
 	{"input":"236S 236K","aliases":["Senshuu","Rekka 3","Rekka3","Rekka Overhead","Banzai"]},
-	{"input":"63214S","aliases":["Genrouzan","Command Grab","Leaf Throw","CG"]},
+	{"input":"63214S","aliases":["Genrouzan","Command Grab","Leaf Throw","CG","624S"]},
 	{"input":"j.214P","aliases":["Shuriken"]},
 	{"input":"236236K","aliases":["Banki Messai","Clone Super","BM","CUS"]},
 	{"input":"632146H","aliases":["Zansei Rouga","Teleport Super","ZR","TP"]},
