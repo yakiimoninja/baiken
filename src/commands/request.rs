@@ -19,7 +19,7 @@ async fn request(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         .open("request.txt")
         .expect(&("\nFailed to open 'request.txt' file."));
     
-    let string = character_arg.to_owned() +" " + &character_move_arg +" " + &character_alias_arg;
+    let string = character_arg.to_owned() +" " + &character_move_arg +" " + &character_alias_arg +"\n";
 
     write!(file, "{}", string)
         .expect(&("\nFailed to write to 'request.txt'"));
