@@ -12,7 +12,7 @@
 	{"input":"214P","aliases":["Scarecrow","Front Teleport","FT"]},
 	{"input":"214K","aliases":["Scarecrow Back","Back Teleport","Crossup Teleport","BT","CT"]},
 	{"input":"214S","aliases":["Scarecrow Overhead","Overhead Teleport","Overhead","OT"]},
-	{"input":"632146H","aliases":["Bone-crushing Excitement","Wheelchair Super","Clover Super","Wheelchair","Clover","WS","CS"]},
+	{"input":"632146H","aliases":["Bone-crushing Excitement","Bone Crushing Excitement","Wheelchair Super","Clover Super","Wheelchair","Clover","WS","CS"]},
 	{"input":"236236P","aliases":["W-W-What Could This Be?","Item Super","Item Throw Super","5 Items","IS","ITS","5I"]},
 	{"input":"236236236P","aliases":["W-W-W-W-W-W-W-W-W-What Could This Be?","10 Items","10 Item Super","10 Item Throw Super","10I","10IS","10ITS"]},
 	{"input":"Bomb","aliases":["Bomb"]},
