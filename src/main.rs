@@ -53,6 +53,11 @@ pub struct MoveAliases {
     aliases: Vec<String>,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Nicknames {
+    character: String,
+    nicknames: Vec<String>,
+}
 struct ShardManagerContainer;
 
 impl TypeMapKey for ShardManagerContainer{
@@ -72,6 +77,7 @@ impl EventHandler for Handler {
         check::character_folders_exist(true);
         check::character_images_exist(true);
         check::init_json_exists(true);
+        check::nicknames_json_exists(true);
         check::character_jsons_exist(true);
         }
     }

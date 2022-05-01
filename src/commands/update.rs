@@ -6,8 +6,8 @@ use serenity::prelude::*;
 
 use crate::{CHARS, CharInfo, check};
 
-mod char_json;
 pub(crate) mod init_json;
+mod char_json;
 
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&pageid=";
 const SITE_HALF: &str = "&prop=text&formatversion=2";
