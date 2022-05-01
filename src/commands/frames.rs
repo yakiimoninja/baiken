@@ -225,7 +225,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             // println!("{}", recovery_embed);
             // println!("{}", counter_embed);
 
-            msg.channel_id.say(&ctx.http, r"A new version is out!
+            msg.channel_id.say(&ctx.http, r"New version 0.4.0 is out!
 Take a peek at the patch notes here.
 __<https://github.com/yakiimoninja/baiken/blob/main/patch_notes/v0.4.0.md>__").await?;
 
