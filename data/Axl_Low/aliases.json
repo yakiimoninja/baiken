@@ -1,6 +1,6 @@
 [
 	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"[4]6S","aliases":["Sickle Flash","SF","46S"]},
+	{"input":"[4]6S","aliases":["Sickle Flash","SF","46S","Rensen"]},
 	{"input":"[4]6S 8","aliases":["Soaring Chain Strike","SCS","46S8"]},
 	{"input":"[4]6S 2","aliases":["Spinning Chain Strike","Fan","Spin","46S2"]},
 	{"input":"[4]6S S","aliases":["Winter Cherry","Explosion","WC","46SS"]},
