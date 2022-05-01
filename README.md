@@ -2,23 +2,21 @@
 **Your favorite one-handed samurai lady helps you learn Guilty Gear Strive \
 by providing you with each character's moves, frame data and their hitboxes.**
 
----
+
 ## Table of contents
   - [Latest patch notes.](#patch-notes)
   - [Invite Baiken to your server.](#invite-the-bot-to-your-server)
   - [Host Baiken yourself.](#host-the-bot-yourself)
   - [Commands.](#commands)
   - [Usage notes.](#usage-notes)
----
+
 ## Patch notes
 - You can view the latest patch notes by pressing [**here**](patch_notes/v0.4.0.md)
 
----
 
 ## Invite the bot to your server
 - You can **invite** Baiken to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=517544070208&scope=bot).
 
----
 
 ## Host the bot yourself
 - You will need a bot token.
@@ -27,7 +25,6 @@ by providing you with each character's moves, frame data and their hitboxes.**
 - You will also need to have the `data` folder and the `.env` file in the same folder as `baiken.exe`.
 - Lastly execute the compiled code.
 
----
 
 ## Commands
 
@@ -52,8 +49,6 @@ Downloads and updates new frame data from [**dustloop**](https://dustloop.com).
 
 - **Command**: `b.?` or `b.help`.\
 Displays a help message.  
-
----
 
 ## Usage notes
 
@@ -85,5 +80,6 @@ Displays a help message.
 - **When searching for charged dust attack use the alias `5D!`.**
   - Example: `b.f chipp 5D!`.
 
-# 
+#
+
 ### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking).
