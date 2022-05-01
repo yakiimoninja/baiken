@@ -1,5 +1,7 @@
-use crate::{CHARS, CharInfo, commands};
+use crate::{CHARS, CharInfo, commands, Nicknames};
 use std::{fs, path::Path};
+
+// Collection of functions that check for stuff
 
 pub fn data_folder_exists(init_check: bool) -> Option<String> {
 
@@ -42,6 +44,35 @@ pub fn init_json_exists(init_check: bool) -> Option<String> {
         },
         Err(_) => {
             let error_msg = "Failed to deserialize 'init.json' file. Delete 'init.json' from the 'data' folder and rerun the bot.".to_string();
+            
+            if init_check == true {
+                // Printing the error message in the console
+                // If it is the initial check
+                print!("\n");
+                panic!("{}", error_msg);
+            }
+            else {
+                // Returning the error message for in-discord printing
+                return Some(error_msg);
+            }
+            
+        },
+    };
+}
+
+pub fn nicknames_json_exists(init_check: bool) -> Option<String> {
+
+    // Reading nicknames.json file
+    let data_from_file = fs::read_to_string("data/nicknames.json")
+        .expect("\nFailed to read 'nicknames.json' file.");
+
+    match serde_json::from_str::<Vec<Nicknames>>(&data_from_file) {
+        Ok(_) => {
+            println!("\nSuccesfully read 'nicknames.json' file.");
+            return None;
+        },
+        Err(_) => {
+            let error_msg = "Failed to deserialize 'nicknames.json' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot..".to_string();
             
             if init_check == true {
                 // Printing the error message in the console
@@ -135,4 +166,27 @@ pub fn character_images_exist(init_check: bool) -> Option<String> {
         }
     }
     return None;
+}
+
+pub fn correct_character_arg(character_arg: &String) -> Option<String>{
+    // Checking for correct character argument
+    if character_arg.len() < 2 {
+        let error_msg = "Character name: `".to_owned() + &character_arg + "` is invalid!";
+        return Some(error_msg);
+    }
+    else{
+        return None;
+    }
+}
+  
+pub fn correct_character_move_arg(character_move_arg: &String) -> Option<String>{
+
+    // Checking for correct move argument
+    if character_move_arg.len() < 2 {
+        let error_msg = "Move: `".to_owned() + &character_move_arg + "` is invalid!";
+        return Some(error_msg);
+    }
+    else{
+        return None;
+    }
 }
