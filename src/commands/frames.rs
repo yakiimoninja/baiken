@@ -259,7 +259,7 @@ __<https://github.com/yakiimoninja/baiken/blob/main/patch_notes/v0.4.0.md>__").a
     if character_found == true && move_found == false {
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
         msg.channel_id.say(&ctx.http, error_msg).await?;
-        msg.channel_id.say(&ctx.http, "You can request the addition of an alias by executing\n the `b.r` command followed by the character then move and lastly alias.\nExample: `b.r giovanna 236k arrow`.").await?;
+        msg.channel_id.say(&ctx.http, "You can request the addition of an alias by executing\nthe `b.r` command followed by the character then move and lastly alias.\nExample: `b.r giovanna 236k arrow`.").await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
