@@ -4,7 +4,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Table of contents
-  - [Latest patch notes.](#patch-notes)
+  - [Latest patch notes.](patch_notes/v0.4.0.md)
   - [Invite Baiken to your server.](#invite-the-bot-to-your-server)
   - [Host Baiken yourself.](#host-the-bot-yourself)
   - [Commands.](#commands)
