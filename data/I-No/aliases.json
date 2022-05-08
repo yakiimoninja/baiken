@@ -12,5 +12,6 @@
 	{"input":"632146H","aliases":["Megalomania","Command Grab Super","Grab Super","CGS","GS"]},
 	{"input":"632146S","aliases":["Ultimate Fortissimo","Super","UF"]},
 	{"input":"j.632146S","aliases":["Air Ultimate Fortissimo","Air Super","JUF","AUF","JUS"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

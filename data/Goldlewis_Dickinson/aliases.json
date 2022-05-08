@@ -28,5 +28,6 @@
 	{"input":"236236K Level 1","aliases":["Burn It Down","Burn It Down Level 1","Laser","Laser Level 1","Laser Super","Laser Super Level 1","BID1","LL1","LS1"]},
 	{"input":"236236K Level 2","aliases":["Burn It Down Level 2","Laser Level 2","Laser Super Level 2","BID2","LL2","LS2"]},
 	{"input":"236236K Level 3","aliases":["Burn It Down Level 3","Laser Level 3","Laser Super Level 3","BID3","LL3","LS3"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

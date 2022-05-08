@@ -15,5 +15,6 @@
 	{"input":"632146P","aliases":["Forever Elysion Driver","Command Grab Super","FED"]},
 	{"input":"236236S","aliases":["Cheer Servant On S","Barrier Super","Defend Super","DS","SBS","MBS"]},
 	{"input":"236236H","aliases":["Cheer Servant On H","Attack Super","AS","SAS","MAS"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

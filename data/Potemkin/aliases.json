@@ -14,5 +14,6 @@
 	{"input":"236236S","aliases":["Heavenly Potemkin Buster","HPB","Command Grab Super","CGS"]},
 	{"input":"632146H","aliases":["Giganter Kai","Super","GK"]},
 	{"input":"Mirror","aliases":["Giganter Kai Barrier","Mirror","GKB"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

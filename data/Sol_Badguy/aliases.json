@@ -17,5 +17,6 @@
 	{"input":"41236H","aliases":["Fafnir","Faf"]},
 	{"input":"632146H","aliases":["Tyrant Rave","Super","TR"]},
 	{"input":"214214H","aliases":["Heavy Mob Cemetery","Dragon Super","Command Grab Super","HMC","DS","CGS"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

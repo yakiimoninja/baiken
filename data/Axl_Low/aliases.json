@@ -12,5 +12,6 @@
 	{"input":"236236H","aliases":["Sickle Storm","Explosion Super","SS"]},
 	{"input":"632146P","aliases":["One Vision","One Vision Install","OVI"]},
 	{"input":"632146P Attack","aliases":["One Vision","One Vision Activation","Za warudo","JoJo","OVA"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

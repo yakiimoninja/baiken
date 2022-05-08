@@ -10,5 +10,6 @@
     {"input":"214H","aliases":["Heavy Arbiter Sign","Overehad Beast","HAS","OB"]},
     {"input":"236236P","aliases":["Nostrovia","Succubus Super"]},
     {"input":"236236K","aliases":["Calamity One","Beast Super","CO"]},
-    {"input":"6D or 4D","aliases":["Throw"]}
+    {"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

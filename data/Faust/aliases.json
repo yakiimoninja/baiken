@@ -25,5 +25,6 @@
 	{"input":"Earthquake","aliases":["Earthquake","Quake"]},
 	{"input":"Horn","aliases":["Horn","Trumpet"]},
 	{"input":"Meteors","aliases":["Meteors","Meteor"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

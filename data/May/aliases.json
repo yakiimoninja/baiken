@@ -4,11 +4,12 @@
 	{"input":"[4]6H","aliases":["Mr. Dolphin Horizontal","H Dolphin","H totsugeki","HT","HD","46H"]},
 	{"input":"[2]8S","aliases":["Mr. Dolphin Vertical","Up Dolphin","Iruka san","SUD","SI","28S"]},
 	{"input":"[2]8H","aliases":["Mr. Dolphin Vertical","H Up Dolphin","H Iruka san","HUD","HI","28H"]},
-	{"input":"623K","aliases":["Overhead Kiss","Command Grab","OK","CG"]},
+	{"input":"623K","aliases":["Overhead Kiss","Command Grab","OHK","OK","CG"]},
 	{"input":"214P","aliases":["Arisugawa Sparkle","Beachball","Ball","PAS"]},
 	{"input":"214K","aliases":["Arisugawa Sparkle","K Beachball","K Ball","KAS"]},
 	{"input":"236236S","aliases":["Great Yamada Attack","Whale","Whale Super","WS","GYA"]},
 	{"input":"632146H","aliases":["The Wonderful and Dynamic Goshogawara","Orca","Orca Super","OS","WDG"]},
 	{"input":"j.632146H","aliases":["Air The Wonderful and Dynamic Goshogawara","Air Orca","Air Orca Super","AO","AOS","JOS","JUS","AS"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

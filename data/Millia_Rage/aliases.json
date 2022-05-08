@@ -10,5 +10,6 @@
 	{"input":"j.236H","aliases":["Kapel","Rose","Air Dash","AD"]},
 	{"input":"236236S","aliases":["Septem Voices","Wheel Super","SV","WS"]},
 	{"input":"632146H","aliases":["Winger","Wing Super","WS"]},
-	{"input":"6D or 4D","aliases":["Throw"]}
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
 ]

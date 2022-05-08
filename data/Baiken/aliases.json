@@ -10,6 +10,7 @@
 	{"input":"236236S","aliases":["Tsurane Sanzu-watashi","Super"]},
 	{"input":"214214P","aliases":["Kenjyu","Gun","Pistol","Gun Super","Pistol Super"]},
 	{"input":"j.214214P","aliases":["Kenjyu","Air Super","Air Gun","Air Pistol","AS","AP","AG","JUS","JUK","JG","JUP"]},
-	{"input":"Ground Throw (Tether)","aliases":["6D or 4D","Throw","Tether Throw"]},
-	{"input":"Ground Throw (Knockback)","aliases":["6D! or 4D!","Regular Throw"]}	
+	{"input":"Ground Throw (Tether)","aliases":["Throw","Tether Throw","6D","4D"]},
+	{"input":"Ground Throw (Knockback)","aliases":["Regular Throw","6D!","4D!"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}	
 ]
