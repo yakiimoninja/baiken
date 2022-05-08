@@ -35,7 +35,7 @@
 	{"input":"214S","move":"Night Raid Vortex","damage":"45 [55]","guard":"All","invincibility":"7F til 1F before active Low Profile","startup":"15~31 [32]","block":"-17","hit":"HKD (+66) [HKD (+64)]","active":"2 [8]","recovery":"32 [26]","counter":"Large"},
 	{"input":"41236H","move":"Fafnir","damage":"65","guard":"All (Guard Crush)","invincibility":"","startup":"24","block":"+11","hit":"HKD (+76)","active":"3","recovery":"16","counter":"Mid"},
 	{"input":"632146H","move":"Tyrant Rave","damage":"70, 100 [70, 130]","guard":"All","invincibility":"1~8F Full","startup":"5+2","block":"-34","hit":"HKD (+30) [HKD (+59)]","active":"3(20)20","recovery":"31","counter":"Mid, Small"},
-	{"input":"214214H","move":"Heavy Mob Cemetery","damage":"40, 161","guard":"Ground Throw: 150000","invincibility":"14~35F Throw, Guardpoint","startup":"13+7","block":"","hit":"HKD (+27)","active":"16","recovery":"49","counter":""},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw: 90000","invincibility":"","startup":"2","block":"","hit":"HKD (+32)","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw: 200000","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
+	{"input":"214214H","move":"Heavy Mob Cemetery","damage":"40, 161","guard":"Ground Throw","invincibility":"14~35F Throw, Guardpoint","startup":"13+7","block":"","hit":"HKD (+27)","active":"16","recovery":"49","counter":""},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD (+32)","active":"3","recovery":"38","counter":""},
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]
