@@ -158,6 +158,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     
 
     for m in 0..move_frames.len() {
+        
         // Iterating through the moves of the json file to find the move requested
         if move_frames[m].input.to_string().to_lowercase().replace(".", "") 
         == character_move_arg.to_string().to_lowercase().replace(".", "")
@@ -225,9 +226,10 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             // println!("{}", recovery_embed);
             // println!("{}", counter_embed);
 
-            msg.channel_id.say(&ctx.http, r"New version 0.4.0 is out!
-Take a peek at the patch notes here.
-__<https://github.com/yakiimoninja/baiken/blob/main/patch_notes/v0.4.0.md>__").await?;
+            // New version notification
+            //msg.channel_id.say(&ctx.http, r"New version 0.4.0 is out!
+//Take a peek at the patch notes here.
+//__<https://github.com/yakiimoninja/baiken/blob/main/patch_notes/v0.4.0.md>__").await?;
 
             // Sending the data as an embed
             let _msg = msg.channel_id.send_message(&ctx.http, |m| {
