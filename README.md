@@ -4,7 +4,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Table of contents
-  - [Latest patch notes.](patch_notes/v0.4.0.md)
+  - [Patch notes.](patch_notes/)
   - [Invite Baiken to your server.](#invite-the-bot-to-your-server)
   - [Host Baiken yourself.](#host-the-bot-yourself)
   - [Commands.](#commands)
@@ -74,8 +74,8 @@ Displays a help message.
 
 - **For Testament's different Grave Reaper versions use as shown.**
   - Regular version: `b.f testament 236S`.
-  - Partially charged version: `b.f testament 236H@`.
-  - Fully charged version: `b.f testament 236S!`.
+  - Partially charged version: `b.f testament 236S!`.
+  - Fully charged version: `b.f testament 236S!!`.
 
 - **When searching for charged dust attack use the alias `5D!`.**
   - Example: `b.f chipp 5D!`.
