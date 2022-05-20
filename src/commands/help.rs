@@ -17,7 +17,7 @@ __**Usage Notes:**__
 __<https://github.com/yakiimoninja/baiken/blob/main/README.md#usage-notes>__
 
 __**Patch Notes:**__
-__<https://github.com/yakiimoninja/baiken/blob/main/patch_notes/>__
+__<https://github.com/yakiimoninja/baiken/blob/main/patch-notes/>__
 
 __**Artwork:**__
 __<https://twitter.com/gogalking/status/1307199393607553024>__
