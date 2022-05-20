@@ -1,7 +1,7 @@
 [
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236S","aliases":["Stroke the Big Tree","Stroke","STBT","SBT","SS"]},
-	{"input":"236H","aliases":["Stroke the Big Tree","Heavy Stroke","HSTBT","HSBT","HS"]},
+	{"input":"236H","aliases":["Stroke the Big Tree","Heavy Stroke","H Stroke","HSTBT","HSBT","HS"]},
 	{"input":"j.236K","aliases":["Sultry Performance","Dive Kick","Divekick","KDK"]},
 	{"input":"j.236S","aliases":["S Sultry Performance","S Dive Kick","S Divekick","SDK"]},
 	{"input":"j.236H","aliases":["H Sultry Performance","H Dive Kick","H Divekick","HDK"]},
