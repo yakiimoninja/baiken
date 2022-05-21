@@ -229,7 +229,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             // New version notification
             //msg.channel_id.say(&ctx.http, r"Baiken has a new version 0.4.2!
 //See what is new this time around.
-//__<https://github.com/yakiimoninja/baiken/blob/main/patch-notes/v0.4.2.md>__").await?;
+//__<https://github.com/yakiimoninja/baiken/blob/main/patch-notes/0.4.2.md>__").await?;
 
             // Sending the data as an embed
             let _msg = msg.channel_id.send_message(&ctx.http, |m| {
