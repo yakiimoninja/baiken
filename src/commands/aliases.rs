@@ -175,8 +175,10 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
         moves_as_msg = moves_as_msg + &"\n```".to_string();
-        msg.channel_id.say(&ctx.http, &moves_as_msg).await?;                
+        msg.channel_id.say(&ctx.http, &moves_as_msg).await?;    
     }
+
+    msg.channel_id.say(&ctx.http, "You can request the addition of a non-existing alias by executing\nthe `b.r` command followed by the character, then the move and lastly the alias you want added.\nExample: `b.r giovanna 236k arrow`.").await?;
 
     Ok(())
 }
