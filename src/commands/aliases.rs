@@ -140,8 +140,8 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
     }
     else {
         // Spliting the message that will be sent by the bot
-        // Into 2 separate messages cause of the character limit
-        for m in 0..aliases_data.len() / 2 {
+        // Into 3 separate messages cause of the character limit
+        for m in 0..aliases_data.len() / 3 {
             moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
                 + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
 
@@ -159,8 +159,8 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
 
         // 2nd message builder
-        moves_as_msg = "```".to_string();
-        for m in aliases_data.len()/2..aliases_data.len() {
+        moves_as_msg = "```diff".to_string();
+        for m in aliases_data.len() / 3..(aliases_data.len() /3 ) * 2{
             moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
                 + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
 
@@ -175,7 +175,26 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
         moves_as_msg = moves_as_msg + &"\n```".to_string();
-        msg.channel_id.say(&ctx.http, &moves_as_msg).await?;    
+        msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
+
+        // 3nd message builder
+        moves_as_msg = "```diff".to_string();
+        for m in (aliases_data.len() / 3) * 2..aliases_data.len() {
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+                + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+
+            for a in 0..aliases_data[m].aliases.len() {
+                if a != aliases_data[m].aliases.len() - 1 {
+                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
+                }
+                else {
+                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+                }
+            }
+            moves_as_msg = moves_as_msg.to_owned() + ".\n";
+        }
+        moves_as_msg = moves_as_msg + &"\n```".to_string();
+        msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
     }
 
     msg.channel_id.say(&ctx.http, "You can request the addition of a non-existing alias by executing\nthe `b.r` command followed by the character, then the move and lastly the alias you want added.\nExample: `b.r giovanna 236k arrow`.").await?;
