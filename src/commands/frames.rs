@@ -214,7 +214,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
             // Debugging prints
             // println!("{}", content_embed);
-            //println!("{}", image_embed);
+            // println!("{}", image_embed);
             // println!("{}", title_embed);
             // println!("{}", damage_embed);
             // println!("{}", guard_embed);
