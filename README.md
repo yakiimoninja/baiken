@@ -11,7 +11,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
   - [Usage notes.](#usage-notes)
 
 ## Patch notes
-- You can view the latest patch notes by pressing [**here**](patch-notes/)
+- You can view the latest patch notes by pressing [**here**](patch-notes/).
 
 
 ## Invite the bot to your server
