@@ -41,7 +41,8 @@
         "input": "2P",
         "move_img": "https://dustloop.com/wiki/images/5/5c/GGST_Axl_Low_2P.png",
         "hitbox_img": [
-            ""
+            "https://dustloop.com/wiki/images/1/1a/GGST_Axl_Low_2P_hitbox_1.png",
+            "https://dustloop.com/wiki/images/3/33/GGST_Axl_Low_2P_hitbox_2.png"
         ]
     },
     {
@@ -55,14 +56,16 @@
         "input": "2S",
         "move_img": "https://dustloop.com/wiki/images/d/d6/GGST_Axl_Low_2S.png",
         "hitbox_img": [
-            ""
+            "https://dustloop.com/wiki/images/7/7e/GGST_Axl_Low_2S_hitbox_1.png",
+            "https://dustloop.com/wiki/images/8/82/GGST_Axl_Low_2S_hitbox_2.png"
         ]
     },
     {
         "input": "2H",
         "move_img": "https://dustloop.com/wiki/images/9/91/GGST_Axl_Low_2H.png",
         "hitbox_img": [
-            ""
+            "https://dustloop.com/wiki/images/f/f5/GGST_Axl_Low_2H_hitbox_1.png",
+            "https://dustloop.com/wiki/images/b/bc/GGST_Axl_Low_2H_hitbox_2.png "
         ]
     },
     {
@@ -98,7 +101,7 @@
         "input": "j.D",
         "move_img": "https://dustloop.com/wiki/images/9/9c/GGST_Axl_Low_j.D.png",
         "hitbox_img": [
-            ""
+            "https://dustloop.com/wiki/images/a/a4/GGST_Axl_Low_j.D-hitbox.png"
         ]
     },
     {

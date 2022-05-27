@@ -134,7 +134,8 @@
         "input": "2D",
         "move_img": "https://dustloop.com/wiki/images/f/f2/GGST_Giovanna_2D.png",
         "hitbox_img": [
-            "https://dustloop.com/wiki/images/4/48/GGST_Giovanna_2D_Hitbox.png"
+            "https://dustloop.com/wiki/images/4/48/GGST_Giovanna_2D_Hitbox.png",
+            "https://dustloop.com/wiki/images/9/9f/GGST_Giovanna_2D_2_Hitbox.png"
         ]
     },
     {

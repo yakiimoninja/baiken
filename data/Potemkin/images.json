@@ -17,7 +17,7 @@
         "input": "c.S",
         "move_img": "https://dustloop.com/wiki/images/5/53/GGST_Potemkin_c.S.png",
         "hitbox_img": [
-            ""
+            "https://dustloop.com/wiki/images/4/4a/GGST_Potemkin_c.S_hitbox.png"
         ]
     },
     {
@@ -52,7 +52,8 @@
         "input": "2P",
         "move_img": "https://dustloop.com/wiki/images/8/8b/GGST_Potemkin_2P.png",
         "hitbox_img": [
-            "https://dustloop.com/wiki/images/5/59/GGST_Potemkin_2P_1_Hitbox.png"
+            "https://dustloop.com/wiki/images/5/59/GGST_Potemkin_2P_1_Hitbox.png",
+            "https://dustloop.com/wiki/images/3/38/GGST_Potemkin_2P_2_Hitbox.png.png"
         ]
     },
     {

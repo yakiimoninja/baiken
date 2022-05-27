@@ -24,7 +24,8 @@
         "input": "f.S",
         "move_img": "https://dustloop.com/wiki/images/1/15/GGST_Happy_Chaos_fS.png",
         "hitbox_img": [
-            ""
+            "https://dustloop.com/wiki/images/7/77/GGST_Happy_Chaos_fS_Hitbox1.png",
+            "https://dustloop.com/wiki/images/c/c9/GGST_Happy_Chaos_fS_Hitbox2.png"
         ]
     },
     {

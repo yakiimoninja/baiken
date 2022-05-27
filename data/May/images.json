@@ -217,14 +217,18 @@
         "input": "632146H",
         "move_img": "https://dustloop.com/wiki/images/7/7e/GGST_May_The_Wonderful_and_Dynamic_Goshogawara.png",
         "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/b9/GGST_May_The_Wonderful_and_Dynamic_Goshogawara-Hitbox.png"
+            "https://dustloop.com/wiki/images/6/66/GGST_May_632146H_1_Hitbox.png",
+            "https://dustloop.com/wiki/images/d/d1/GGST_May_632146H_2_Hitbox.png",
+            "https://dustloop.com/wiki/images/1/1d/GGST_May_632146H_3_Hitbox.png"
         ]
     },
     {
         "input": "j.632146H",
         "move_img": "https://dustloop.com/wiki/images/7/7e/GGST_May_The_Wonderful_and_Dynamic_Goshogawara.png",
         "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/b9/GGST_May_The_Wonderful_and_Dynamic_Goshogawara-Hitbox.png"
+            "https://dustloop.com/wiki/images/6/66/GGST_May_632146H_1_Hitbox.png",
+            "https://dustloop.com/wiki/images/d/d1/GGST_May_632146H_2_Hitbox.png",
+            "https://dustloop.com/wiki/images/1/1d/GGST_May_632146H_3_Hitbox.png"
         ]
     },
     {

@@ -54,7 +54,9 @@
         "input": "6P",
         "move_img": "https://dustloop.com/wiki/images/6/62/GGST_Millia_Rage_6P.png",
         "hitbox_img": [
-            "https://dustloop.com/wiki/images/a/ad/GGST_Millia_Rage_6P_Hitbox_1.png"
+            "https://dustloop.com/wiki/images/b/b4/GGST_Millia_Rage_6P_Startup_Hitbox.png",
+            "https://dustloop.com/wiki/images/a/ad/GGST_Millia_Rage_6P_Hitbox_1.png",
+            "https://dustloop.com/wiki/images/7/70/GGST_Millia_Rage_6P_Hitbox_2.png"
         ]
     },
     {
