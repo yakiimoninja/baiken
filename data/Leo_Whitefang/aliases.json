@@ -1,5 +1,6 @@
 [
 	{"input":"5[D]","aliases":["5D!"]},
+	{"input":"[s/h] h/s","aliases":["s!h","h!s"]},
 	{"input":"[4]6S","aliases":["Graviert Wurde","Fireball","FB","46S"]},
 	{"input":"[4]6H","aliases":["H Graviert Wurde","H Fireball","HFB","46H"]},
 	{"input":"[2]8S","aliases":["Eisen Sturm","DP","28S"]},
