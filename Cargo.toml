@@ -13,9 +13,11 @@ license = "GPL-3.0"
 serenity = {version = "0.10.9", default-features = false, features = ["client", "framework", "standard_framework", "gateway", "rustls_backend", "model"] }
 tokio = { version = "1.0", features = ["macros", "signal", "rt-multi-thread"] }
 ureq = { version = "2.4.0", features = ["charset"] }
-tracing-subscriber = "0.3.3"
-tracing = "0.1.29"
 dotenv = "0.15"
 serde_derive = "1.0"
 serde_json = "1.0"
 serde = "1.0"
+
+# Uncomment for debugging
+# tracing = "0.1.29"
+# tracing-subscriber = "0.3.3"
