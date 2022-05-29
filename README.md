@@ -18,7 +18,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 - You can **invite** Baiken to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=517544070208&scope=bot).
 - Or scan the **QR Code** with your Camera or Discord application.
 
-<img src="baiken_qr.png" width="250" height="250" />
+<img src="data/images/baiken_qr.png" width="250" height="250" />
 
 
 ## Host the bot yourself
