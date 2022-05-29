@@ -235,6 +235,7 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
             let _msg = msg.channel_id.send_message(&ctx.http, |m| {
                 m.content(&content_embed);
                 m.embed(|e| {
+                    e.color((140,75,64));
                     e.title(&title_embed);
                     //e.description("This is a description");
                     e.image(&image_embed);
