@@ -48,6 +48,8 @@ Displays all the aliases for each special/super move of a character.\
 Example: `b.a leo` or `b.moves leo`.
 
 - **Command**: `b.u` or `b.update`.\
+**This command only works for owners.** \
+Meaning that you need to run your own instance of the source code to use it. \
 Downloads and updates new frame data from [**dustloop**](https://dustloop.com).
 
 - **Command**: `b.?` or `b.help`.\
