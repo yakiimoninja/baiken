@@ -10,7 +10,7 @@ use crate::{Frames, MoveAliases, ImageLinks, check, Nicknames};
 const IMAGE_DEFAULT: &str = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/no_hitbox.png";
 
 #[command]
-#[aliases("hitbox","hit", "h")]
+#[aliases("h")]
 async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
 
     // This will store the full character name in case user input was an alias
