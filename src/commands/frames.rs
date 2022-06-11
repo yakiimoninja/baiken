@@ -142,7 +142,8 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                if aliases_data[a].aliases[b].to_lowercase().trim() == character_move_arg.to_lowercase().trim() {
+                if aliases_data[a].aliases[b].to_lowercase().trim().replace(".", "")
+                == character_move_arg.to_lowercase().trim().replace(".", "") {
                     character_move_arg = aliases_data[a].input.to_string();
                 }
             }
