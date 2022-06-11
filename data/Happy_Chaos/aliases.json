@@ -4,7 +4,7 @@
 	{"input":"236S","aliases":["At the Ready","S Aim","S Gun","SATR","SAR"]},
 	{"input":"236S H","aliases":["Fire","S Fire","SF","236SH"]},
 	{"input":"214S","aliases":["Steady Aim","Focus Aim","FA"]},
-	{"input":"214S H","aliases":["Fire","Focus Fire","FF","214SH"]},
+	{"input":"214S H","aliases":["Focus Fire","FF","214SH"]},
 	{"input":"236S 2H","aliases":["Cancel Aim","CAS","236S2H"]},
 	{"input":"214S 214S","aliases":["Cancel Aim Focus","CAF"]},
 	{"input":"22P","aliases":["Reload"]},
