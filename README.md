@@ -58,7 +58,7 @@ Displays a help message.
 ## Usage notes
 
 - **Searching is case insensitive.**
-  - This works: `b.hitbox Ky DP`.
+  - This works: `b.hitboxes Ky DP`.
   - This also works: `b.h ky dp`.
 
 - **You don't have to search using the full name of a character.**
