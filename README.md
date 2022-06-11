@@ -87,4 +87,4 @@ Displays a help message.
 
 #
 
-### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking).
+### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
