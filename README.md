@@ -35,22 +35,22 @@ by providing you with each character's moves, frame data and their hitboxes.**
 Displays the frame data of a move along with an image.\
 Example: `b.f baiken 236K` or `b.frames baiken 236K`.
   
-- **Command**: `b.h` or `b.hitbox`. \
+- **Command**: `b.h` or `b.hitboxes`. \
 Displays the hitbox images of a move. \
-Example: `b.h goldlewis 426H` or `b.hitbox goldlewis 426H`.
+Example: `b.h goldlewis 426H` or `b.hitboxes goldlewis 426H`.
   
 - **Command**: `b.m` or `b.moves`.\
 Displays all the moves and inputs of a character.\
 Example: `b.m sol` or `b.moves sol`.
 
 - **Command**: `b.a` or `b.aliases`.\
-Displays all the aliases for each special/super move of a character.\
+Displays all the aliases for each normal/special/super move of a character.\
 Example: `b.a leo` or `b.moves leo`.
 
 - **Command**: `b.u` or `b.update`.\
 **This command only works for owners.** \
 Meaning that you need to run your own instance of the source code to use it. \
-Downloads and updates new frame data from [**dustloop**](https://dustloop.com).
+Updates the frame data according to [**dustloop**](https://dustloop.com).
 
 - **Command**: `b.?` or `b.help`.\
 Displays a help message.  
