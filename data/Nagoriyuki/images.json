@@ -273,14 +273,14 @@
     },
     {
         "input": "623H",
-        "move_img": "https://dustloop.com/wiki/images/8/81/GGST_Nagoriyuki_Shiuriyuki1.png",
+        "move_img": "https://dustloop.com/wiki/images/8/81/GGST_Nagoriyuki_Shizuriyuki1.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/8/80/GGST_Nagoriyuki_Shizuriyuki1-Hitbox.png"
         ]
     },
     {
         "input": "623HH",
-        "move_img": "https://dustloop.com/wiki/images/e/e4/GGST_Nagoriyuki_Shiuriyuki2.png",
+        "move_img": "https://dustloop.com/wiki/images/e/e4/GGST_Nagoriyuki_Shizuriyuki2.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/3/33/GGST_Nagoriyuki_Shizuriyuki2-Hitbox.png"
         ]
