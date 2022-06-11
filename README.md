@@ -15,7 +15,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Invite the bot to your server
-- You can **invite** Baiken to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=517544070208&scope=bot).
+- You can **invite** Baiken to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=52224&scope=bot).
 - Or scan the **QR Code** with your Camera or Discord application.
 
 <img src="data/images/baiken_qr.png" width="250" height="250" />
@@ -48,6 +48,8 @@ Displays all the aliases for each special/super move of a character.\
 Example: `b.a leo` or `b.moves leo`.
 
 - **Command**: `b.u` or `b.update`.\
+**This command only works for owners.** \
+Meaning that you need to run your own instance of the source code to use it. \
 Downloads and updates new frame data from [**dustloop**](https://dustloop.com).
 
 - **Command**: `b.?` or `b.help`.\
