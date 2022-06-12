@@ -110,8 +110,12 @@ async fn main() {
         Err(why) => panic!("Could not access application info: {:?}", why),
     };
 
-    let framework = StandardFramework::new().configure(|c| c.owners(owners).prefix("b.")).group(&GENERAL_GROUP);
-
+    let framework = StandardFramework::new().configure(|c|
+        c.owners(owners)
+        .prefixes(vec!["b.","!"])
+        .case_insensitivity(true))
+        .group(&GENERAL_GROUP);
+        
     // Creating a new bot instance
     let mut client = Client::builder(&token)
         .framework(framework)
