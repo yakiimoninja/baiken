@@ -21,7 +21,7 @@
         ]
     },
     {
-        "input": "f.S",
+        "input": "f.S Level 1",
         "move_img": "https://dustloop.com/wiki/images/4/41/GGST_Nagoriyuki_fS1.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/b/b9/GGST_Nagoriyuki_fS1-Hitbox.png",
@@ -29,14 +29,58 @@
         ]
     },
     {
-        "input": "f.SS",
+        "input": "f.S Level 2",
+        "move_img": "https://dustloop.com/wiki/images/4/41/GGST_Nagoriyuki_fS1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b9/GGST_Nagoriyuki_fS1-Hitbox.png",
+            "https://dustloop.com/wiki/images/5/5d/GGST_Nagoriyuki_fS1-BR-Hitbox.png"
+        ]
+    },
+    {
+        "input": "f.S Level 3",
+        "move_img": "https://dustloop.com/wiki/images/4/41/GGST_Nagoriyuki_fS1.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/b9/GGST_Nagoriyuki_fS1-Hitbox.png",
+            "https://dustloop.com/wiki/images/5/5d/GGST_Nagoriyuki_fS1-BR-Hitbox.png"
+        ]
+    },
+    {
+        "input": "f.SS Level 1",
         "move_img": "https://dustloop.com/wiki/images/2/2d/GGST_Nagoriyuki_fS2.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/4/46/GGST_Nagoriyuki_fS2-Hitbox.png"
         ]
     },
     {
-        "input": "f.SSS",
+        "input": "f.SS Level 2",
+        "move_img": "https://dustloop.com/wiki/images/2/2d/GGST_Nagoriyuki_fS2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/46/GGST_Nagoriyuki_fS2-Hitbox.png"
+        ]
+    },
+    {
+        "input": "f.SS Level 3",
+        "move_img": "https://dustloop.com/wiki/images/2/2d/GGST_Nagoriyuki_fS2.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/4/46/GGST_Nagoriyuki_fS2-Hitbox.png"
+        ]
+    },
+    {
+        "input": "f.SSS Level 1",
+        "move_img": "https://dustloop.com/wiki/images/1/1b/GGST_Nagoriyuki_fS3.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/bc/GGST_Nagoriyuki_fS3-Hitbox.png"
+        ]
+    },
+    {
+        "input": "f.SSS Level 2",
+        "move_img": "https://dustloop.com/wiki/images/1/1b/GGST_Nagoriyuki_fS3.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/b/bc/GGST_Nagoriyuki_fS3-Hitbox.png"
+        ]
+    },
+    {
+        "input": "f.SSS Level 3",
         "move_img": "https://dustloop.com/wiki/images/1/1b/GGST_Nagoriyuki_fS3.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/b/bc/GGST_Nagoriyuki_fS3-Hitbox.png"
@@ -85,7 +129,21 @@
         ]
     },
     {
-        "input": "2S",
+        "input": "2S Level 1",
+        "move_img": "https://dustloop.com/wiki/images/2/29/GGST_Nagoriyuki_2S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/88/GGST_Nagoriyuki_2S-Hitbox.png"
+        ]
+    },
+    {
+        "input": "2S Level 2",
+        "move_img": "https://dustloop.com/wiki/images/2/29/GGST_Nagoriyuki_2S.png",
+        "hitbox_img": [
+            "https://dustloop.com/wiki/images/8/88/GGST_Nagoriyuki_2S-Hitbox.png"
+        ]
+    },
+    {
+        "input": "2S Level 3",
         "move_img": "https://dustloop.com/wiki/images/2/29/GGST_Nagoriyuki_2S.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/8/88/GGST_Nagoriyuki_2S-Hitbox.png"
