@@ -8,7 +8,9 @@ by providing you with each character's moves, frame data and their hitboxes.**
   - [Invite Baiken to your server.](#invite-the-bot-to-your-server)
   - [Host Baiken yourself.](#host-the-bot-yourself)
   - [Commands.](#commands)
-  - [Usage notes.](#usage-notes)
+    - [Usage notes.](#usage-notes)
+    - [Nicknames.](#you-can-use-character-nicknames-when-searching)
+    - [Character specifics.](#character-specifics)
 
 ## Patch notes
 - You can view the latest patch notes by pressing [**here**](patch-notes/).
@@ -57,34 +59,55 @@ Displays a help message.
 
 ## Usage notes
 
+- **You can substitute the prefix `b.` with `!` if you prefer**.
+  - Example: `!f baiken 2k`.
+
 - **Searching is case insensitive.**
-  - This works: `b.hitboxes Ky DP`.
-  - This also works: `b.h ky dp`.
+  - Example: `b.h ky dp`.
 
 - **You don't have to search using the full name of a character.**
-  - This works: `b.frames giovanna 236K`.
-  - This will also work: `b.f gio 236K`.
+  - Example: `b.f gio 236K`.
 
-- **You can use character nicknames when searching.**
-  - This works: `b.moves hc`.
-  - This also works: `b.m Chaos`.  
+- #### **You can use character nicknames when searching.**
+  - Example: `b.moves hc`.
+  - [List of nicknames.](data/nicknames.json)
 
-- **You can also use aliases when searching for moves.**
-  - This works: `b.frames Anji 236HP`.
-  - This also works: `b.f Anji Needles`.
+- **You can also use aliases instead of inputs when searching for moves.**
+  - Example: `b.f Anji Needles`.
 
 - **You can omit the `[]` when searching for a charged move.**
-  - This works: `b.frames May [4]6S`.
-  - This also works: `b.f may 46S`.
+  - Example: `b.frames May [4]6S`.
+  - Example: `b.f may 46S`.
+
+- **When searching for charged dust attack use the alias `5D!`.**
+  - Example: `b.f chipp 5D!`.
+
+## Character specifics
+- **For normals that have levels like Nagoriyuki.**
+  - Add the level number next to the normal.
+  - For Level 1 `fS`: `b.f nago fs`. 
+  - For Level 2 `fS`: `b.f nago fs2`.
+  - For Level 3 `fS`: `b.f nago fs3`.
+  - If it's a level 1 normal nothing needs to be added since it's the default state.
+
+- **For specials that have levels like Goldlewis.**
+  - Add the level number next to the special.
+  - For Level 1 `Thunderbird`: `b.f gold Drone`.
+  - For Level 2 `Thunderbird`: `b.f gold Drone 2`.
+  - For Level 3 `Thunderbird`: `b.f gold Drone 3`.
+  - The above is not always the case depending on the alias you use.
+  - For Level 1 `Thunderbird`: `b.f gold D1`.
+  - For Level 2 `Thunderbird`: `b.f gold D2`.
+  - For Level 3 `Thunderbird`: `b.f gold D3`.
+  - See `b.a gold` for more info on his aliases.
 
 - **For Testament's different Grave Reaper versions use as shown.**
   - Regular version: `b.f testament 236S`.
   - Partially charged version: `b.f testament 236S!`.
   - Fully charged version: `b.f testament 236S!!`.
 
-- **When searching for charged dust attack use the alias `5D!`.**
-  - Example: `b.f chipp 5D!`.
-
 #
 
 ### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
+
+
