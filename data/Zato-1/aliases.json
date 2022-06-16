@@ -10,7 +10,7 @@
 	{"input":"]H[","aliases":["Negative Edge Oppose","Negative Edge Tickle Monster","Negative Edge Shield","NE Oppose","NE Tickle Monster","NE Shield","NEO","NETM","NESH","NEH"]},
 	{"input":"236H","aliases":["Oppose","Tickle Monster","Shield","TM"]},
 	{"input":"623S","aliases":["Damned Fang","Command Grab","DF","CG"]},
-	{"input":"214[K]","aliases":["Break The Law","Pool","BTL","214K"]},
+	{"input":"214K","aliases":["Break The Law","Pool","BTL"]},
 	{"input":"214S","aliases":["Drunkard Shade","Reflect","DS"]},
 	{"input":"214S (Dash)","aliases":["Eddie Dash","ED"]},
 	{"input":"214H","aliases":["Summon Eddie","Summon","SE"]},
