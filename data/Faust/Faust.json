@@ -1,7 +1,7 @@
 [
 	{"input":"5P","move":"5P","damage":"25","guard":"All","invincibility":"","startup":"5","block":"-2","hit":"+1","active":"4","recovery":"8","counter":"Small"},
 	{"input":"5K","move":"5K","damage":"30","guard":"All","invincibility":"","startup":"7","block":"-2","hit":"+1","active":"8","recovery":"8","counter":"Small"},
-	{"input":"c.S","move":"c.S","damage":"40","guard":"All","invincibility":"","startup":"8","block":"+1","hit":"+4","active":"6","recovery":"12","counter":"Mid"},
+	{"input":"c.S","move":"c.S","damage":"40","guard":"All","invincibility":"","startup":"8","block":"-1","hit":"+3","active":"6","recovery":"12","counter":"Mid"},
 	{"input":"f.S","move":"f.S","damage":"33","guard":"All","invincibility":"","startup":"12","block":"-8","hit":"-5","active":"2","recovery":"20","counter":"1500"},
 	{"input":"5H","move":"5H","damage":"40","guard":"All","invincibility":"","startup":"13","block":"-7","hit":"-4","active":"8","recovery":"18","counter":"Large"},
 	{"input":"5HH","move":"5HH","damage":"60","guard":"","invincibility":"","startup":"1","block":"","hit":"KD","active":"","recovery":"2","counter":""},
@@ -37,6 +37,7 @@
 	{"input":"236236236P","move":"W-W-W-W-W-W-W-W-W-What Could This Be?","damage":"","guard":"","invincibility":"","startup":"1+7","block":"N/A","hit":"N/A","active":"N/A","recovery":"","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +55","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until L+10","counter":""},
+	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 26","counter":""},
 	{"input":"Bomb","move":"Bomb","damage":"70","guard":"All","invincibility":"","startup":"","block":"","hit":"KD","active":"","recovery":"","counter":"Small"},
 	{"input":"Banana","move":"Banana","damage":"Heal 20","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"Donut","move":"Donut","damage":"Heal 20","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},

@@ -47,5 +47,6 @@
 	{"input":"236236K Level 2","move":"Burn It Down","damage":"8×10","guard":"All","invincibility":"none","startup":"13+(84 Flash)+79","block":"","hit":"","active":"52","recovery":"27 Total","counter":"Small"},
 	{"input":"236236K Level 3","move":"Burn It Down","damage":"8×15","guard":"All","invincibility":"none","startup":"13+(84 Flash)+79","block":"","hit":"","active":"72","recovery":"27 Total","counter":"Small"},
 	{"input":"6D or 4D","move":"6D or 4D","damage":"80","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"HKD +54","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"j.6D or j.4D","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"","active":"3","recovery":"Until L+10","counter":""}
+	{"input":"j.6D or j.4D","move":"j.6D or j.4D","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"","active":"3","recovery":"Until L+10","counter":""},
+	{"input":"66","move":"66","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 22","counter":""}
 ]

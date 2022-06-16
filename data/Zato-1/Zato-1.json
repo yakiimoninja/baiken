@@ -29,7 +29,7 @@
 	{"input":"]H[","move":"Oppose","damage":"30×3","guard":"All","invincibility":"8~59 Guardpoint","startup":"66","block":"","hit":"KD","active":"3×6","recovery":"(Summon Vanishes)","counter":"Small"},
 	{"input":"236H","move":"Oppose","damage":"30×3","guard":"All","invincibility":"16~67 {20~71} Guardpoint","startup":"74 {78}","block":"","hit":"KD","active":"3×6","recovery":"(Summon Vanishes) [36 Zato]","counter":"Small"},
 	{"input":"623S","move":"Damned Fang","damage":"1x13, 89","guard":"Ground Throw","invincibility":"1~5 Throw","startup":"6","block":"","hit":"HKD","active":"1","recovery":"39","counter":""},
-	{"input":"214[K]","move":"Break The Law","damage":"","guard":"","invincibility":"13~[71] Full 14~21~[77] Strike","startup":"28 Total (Max 95)","block":"","hit":"","active":"","recovery":"","counter":""},
+	{"input":"214K","move":"Break The Law","damage":"","guard":"","invincibility":"13~[71] Full 14~21~[77] Strike","startup":"28 Total (Max 95)","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"214S","move":"Drunkard Shade","damage":"31","guard":"All","invincibility":"3~18 Reflect","startup":"9","block":"-8","hit":"-5","active":"10","recovery":"12","counter":"Mid"},
 	{"input":"214S (Dash)","move":"Eddie Dash","damage":"","guard":"","invincibility":"","startup":"30 Total","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"214H","move":"Summon Eddie","damage":"","guard":"","invincibility":"","startup":"21","block":"","hit":"","active":"","recovery":"36 Zato","counter":""},
@@ -38,5 +38,6 @@
 	{"input":"632146S","move":"Sun Void","damage":"20×3","guard":"All","invincibility":"","startup":"11+14","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"j.632146S","move":"Sun Void","damage":"20×3","guard":"All","invincibility":"","startup":"11+14","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +43","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"Until Landing + 10","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"","active":"3","recovery":"Until Landing + 10","counter":""},
+	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 26","counter":""}
 ]

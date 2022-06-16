@@ -20,11 +20,11 @@
 	{"input":"j.D","move":"j.D","damage":"46","guard":"High","invincibility":"","startup":"12","block":"","hit":"","active":"6","recovery":"22","counter":"Mid"},
 	{"input":"N/A","move":"Stain","damage":"40","guard":"All","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":"Small"},
 	{"input":"236S","move":"Grave Reaper","damage":"43, 31","guard":"All","invincibility":"","startup":"16~22","block":"-4","hit":"KD","active":"4, (5), 30","recovery":"27","counter":"Mid, Small"},
-	{"input":"236H","move":"Grave Reaper","damage":"43, 31","guard":"All","invincibility":"","startup":"13~19","block":"-4","hit":"KD","active":"4, (5), 30","recovery":"27","counter":"Mid, Small"},
+	{"input":"236H","move":"Grave Reaper","damage":"43, 31","guard":"All","invincibility":"","startup":"13~19","block":"+2","hit":"KD","active":"4, (5), 30","recovery":"27","counter":"Mid, Small"},
 	{"input":"236{S}","move":"Grave Reaper","damage":"48, 36","guard":"All","invincibility":"","startup":"23~29","block":"+3","hit":"KD","active":"4, (5), 70","recovery":"22","counter":"Mid, Small"},
-	{"input":"236{H}","move":"Grave Reaper","damage":"48, 36","guard":"All","invincibility":"","startup":"20~26","block":"+3","hit":"KD","active":"4, (5), 70","recovery":"22","counter":"Mid, Small"},
+	{"input":"236{H}","move":"Grave Reaper","damage":"48, 36","guard":"All","invincibility":"","startup":"20~26","block":"+9","hit":"KD","active":"4, (5), 70","recovery":"22","counter":"Mid, Small"},
 	{"input":"236[S]","move":"Grave Reaper","damage":"53, 41","guard":"All","invincibility":"","startup":"30~36","block":"+10","hit":"KD","active":"4, (5), 110","recovery":"19","counter":"Mid, Small"},
-	{"input":"236[H]","move":"Grave Reaper","damage":"53, 41","guard":"All","invincibility":"","startup":"27~33","block":"+10","hit":"KD","active":"4, (5), 110","recovery":"19","counter":"Mid, Small"},
+	{"input":"236[H]","move":"Grave Reaper","damage":"53, 41","guard":"All","invincibility":"","startup":"27~33","block":"+16","hit":"KD","active":"4, (5), 110","recovery":"19","counter":"Mid, Small"},
 	{"input":"214P","move":"Unholy Diver","damage":"23","guard":"All","invincibility":"","startup":"21","block":"+1","hit":"+4","active":"","recovery":"Total 39","counter":"Small"},
 	{"input":"214K","move":"Possession","damage":"","guard":"","invincibility":"16~25","startup":"16","block":"","hit":"","active":"","recovery":"Total 34","counter":""},
 	{"input":"214S","move":"Arbiter Sign","damage":"63","guard":"Low","invincibility":"","startup":"24","block":"-12","hit":"KD","active":"3","recovery":"35","counter":"Small"},
@@ -33,5 +33,6 @@
 	{"input":"236236K","move":"Calamity One","damage":"143","guard":"All","invincibility":"1~19F Full","startup":"11+4","block":"-67","hit":"HKD","active":"5","recovery":"67","counter":"Small"},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"","block":"","hit":"HKD (+??)","active":"3","recovery":"38","counter":""},
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""},
-	{"input":"Finish Blow","move":"Finish Blow","damage":"80","guard":"","invincibility":"","startup":"","block":"","hit":"HKD (+23)","active":"","recovery":"","counter":""}
+	{"input":"Finish Blow","move":"Finish Blow","damage":"80","guard":"","invincibility":"","startup":"","block":"","hit":"HKD (+23)","active":"","recovery":"","counter":""},
+	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 26","counter":""}
 ]

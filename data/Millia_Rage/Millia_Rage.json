@@ -30,5 +30,6 @@
 	{"input":"236236S","move":"Septem Voices","damage":"20×2,60","guard":"All","invincibility":"9-26F Airborne","startup":"4+5","block":"+8","hit":"HKD","active":"till corner","recovery":"Total 43","counter":"Small"},
 	{"input":"632146H","move":"Winger","damage":"20×5,60","guard":"All","invincibility":"1-8F Full 7-40F Airborne","startup":"8+1","block":"-32","hit":"HKD","active":"10(9)15","recovery":"40","counter":"Mid"},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"0,70","guard":"Ground Throw","invincibility":"None","startup":"2","block":"-","hit":"HKD +33","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"0,40,30","guard":"Air Throw","invincibility":"None","startup":"2","block":"-","hit":"HKD","active":"3","recovery":"Until land+10","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"0,40,30","guard":"Air Throw","invincibility":"None","startup":"2","block":"-","hit":"HKD","active":"3","recovery":"Until land+10","counter":""},
+	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 24","counter":""}
 ]

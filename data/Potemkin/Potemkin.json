@@ -19,7 +19,7 @@
 	{"input":"j.S","move":"j.S","damage":"45","guard":"High","invincibility":"","startup":"13","block":"","hit":"","active":"5","recovery":"23","counter":"Mid"},
 	{"input":"j.H","move":"j.H","damage":"55","guard":"High","invincibility":"","startup":"12","block":"","hit":"","active":"4","recovery":"16","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"50","guard":"All","invincibility":"","startup":"13","block":"","hit":"","active":"Until Landing","recovery":"9 After landing","counter":"Mid"},
-	{"input":"[4]6H","move":"Hammer Fall","damage":"58","guard":"All","invincibility":"","startup":"18~47","block":"-9","hit":"SKD (+22)","active":"2f","recovery":"26","counter":"Mid"},
+	{"input":"[4]6H","move":"Hammer Fall","damage":"58","guard":"All","invincibility":"","startup":"18~62","block":"-9","hit":"SKD (+22)","active":"2f","recovery":"26","counter":"Mid"},
 	{"input":"[4]6H P","move":"Hammer Fall Break","damage":"N/A","guard":"N/A","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"27","counter":""},
 	{"input":"632146P","move":"Potemkin Buster","damage":"175","guard":"Ground Throw","invincibility":"1 ~ 8F Throw","startup":"5","block":"","hit":"","active":"4","recovery":"37","counter":""},
 	{"input":"623H","move":"Heat Knuckle","damage":"0,8×7,60","guard":"Air Guard Crush","invincibility":"","startup":"12","block":"+10~+1","hit":"KD/Wall Break","active":"4","recovery":"18","counter":"Small"},
