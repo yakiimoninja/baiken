@@ -9,7 +9,7 @@ use crate::{CHARS, CharInfo, check};
 pub(crate) mod init_json;
 mod char_json;
 
-const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&pageid=";
+const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&page=";
 const SITE_HALF: &str = "&prop=text&formatversion=2";
 
 #[command]

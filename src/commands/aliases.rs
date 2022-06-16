@@ -47,10 +47,10 @@ async fn aliases(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         panic!("{}", error_msg.replace("\n", " "));
     }
  
-    for c in 0..CHARS.0.len() {
+    for c in 0..CHARS.len() {
 
         // Checking if aliases for this characters moves exist
-        let aliases_path = "data/".to_owned() + CHARS.0[c] + "/aliases.json";
+        let aliases_path = "data/".to_owned() + CHARS[c] + "/aliases.json";
         if Path::new(&aliases_path).exists() == false {
             // Error message cause a specific file is missing
             let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";

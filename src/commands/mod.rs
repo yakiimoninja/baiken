@@ -8,3 +8,4 @@ pub mod aliases;
 pub mod help;
 pub mod hitboxes;
 pub mod request;
+pub mod easter;

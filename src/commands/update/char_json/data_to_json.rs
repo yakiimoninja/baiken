@@ -41,13 +41,13 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
             }).unwrap();
 
             file.write_all(&vectored_frame_data)
-                .expect(&("\nFailed to serialize '".to_owned() + CHARS.0[char_count]+ ".json'."));
+                .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count]+ ".json'."));
 
             if x != move_information.len() - 1 {
                 if move_information[x-13] != "bt.22" {
                     
                     file.write(b",\n\t")
-                        .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS.0[char_count]+ ".json'."));
+                        .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
                 }
             }            
         }
@@ -76,13 +76,13 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
             }).unwrap();
             
             file.write_all(&vectored_frame_data)
-                .expect(&("\nFailed to serialize '".to_owned() + CHARS.0[char_count] + ".json'."));
+                .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count] + ".json'."));
 
             if x != move_information.len() - 1 || move_information[x-13] == "bt.22" {
                 if move_information[x-13] != "bt.22" {
 
                     file.write(b",\n\t")
-                        .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS.0[char_count]+ ".json'."));
+                        .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
                 
                 }
             }  

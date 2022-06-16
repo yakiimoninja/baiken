@@ -12,17 +12,19 @@ use serenity::{async_trait,
 mod commands;
 mod check;
 
-use commands::{frames::*, update::*, moves::*, aliases::*, help::*, hitboxes::*, request::*};
+use commands::{frames::*,
+    update::*, moves::*, 
+    aliases::*, help::*, 
+    hitboxes::*, request::*,
+    easter::*};
 
 #[group]
-#[commands(frames, update, moves, aliases, help, hitboxes, request)]
+#[commands(frames, update, moves, aliases, help, hitboxes, request, easter)]
 struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CharInfo {
-    page: String,
-    link: String,
-    pageid: u16,
+    page: String
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -83,10 +85,7 @@ impl EventHandler for Handler {
     }
 }
 
-pub const CHARS: ([&str; 20], [u16; 20]) = (
-    ["Testament","Jack-O", "Nagoriyuki", "Millia_Rage", "Chipp_Zanuff", "Sol_Badguy", "Ky_Kiske", "May", "Zato-1", "I-No", "Happy_Chaos", "Baiken", "Anji_Mito", "Leo_Whitefang", "Faust", "Axl_Low", "Potemkin", "Ramlethal_Valentine", "Giovanna", "Goldlewis_Dickinson"],
-    [33875, 27121, 25406, 25419, 25425, 25177, 25428, 25429, 25427, 25422, 29465, 32523, 25421, 23572, 25409, 25424, 25423, 25426, 25420, 26496]
-);
+pub const CHARS: [&str; 20] = ["Anji_Mito","Axl_Low","Baiken","Chipp_Zanuff","Faust","Giovanna","Goldlewis_Dickinson","Happy_Chaos","I-No","Jack-O","Ky_Kiske","Leo_Whitefang","May","Millia_Rage","Nagoriyuki","Potemkin","Ramlethal_Valentine","Sol_Badguy","Testament","Zato-1"];
 
 #[tokio::main]
 async fn main() {

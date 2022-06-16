@@ -1,10 +1,10 @@
 use std::fs::OpenOptions;
 use std::io::Write;
 use std::path::Path;
-
 use tokio::fs::remove_file;
-
 use crate::CharInfo;
+use crate::commands::update::SITE_LINK;
+use crate::commands::update::SITE_HALF;
 //use crate::Data;
 
 mod source_to_data;
@@ -14,16 +14,16 @@ mod data_to_json;
 extern crate ureq;
 
 
-pub async fn make_char_json (chars_ids: ([&str; 20], [u16; 20]), init_file: Vec<CharInfo>) {
+pub async fn make_char_json (chars_ids: [&str; 20], init_file: Vec<CharInfo>) {
 
 
     print!("\n");
 
-    for x in 0..chars_ids.0.len() {
+    for x in 0..chars_ids.len() {
 
-        println!("Creating '{}.json' file.", chars_ids.0[x]);
+        println!("Creating '{}.json' file.", chars_ids[x]);
         
-        let char_json_path = "data/".to_owned() + &chars_ids.0[x] +"/"+ &chars_ids.0[x] + ".json";
+        let char_json_path = "data/".to_owned() + &chars_ids[x] +"/"+ &chars_ids[x] + ".json";
 
         if Path::new(&char_json_path).exists() == true {
             remove_file(&char_json_path).await.unwrap();
@@ -34,22 +34,24 @@ pub async fn make_char_json (chars_ids: ([&str; 20], [u16; 20]), init_file: Vec<
             .create(true)
             .append(true)
             .open(char_json_path)
-            .expect(&("\nFailed to open '".to_owned() + &chars_ids.0[x] + ".json' file."));
+            .expect(&("\nFailed to open '".to_owned() + &chars_ids[x] + ".json' file."));
 
         // More character json file stuff
         let mut char_json_schema = "[\n\t";
         write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + &chars_ids.0[x] + ".json'."));
+            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + &chars_ids[x] + ".json'."));
 
+        // Creating request link from init file
+        let character_link = SITE_LINK.to_owned() + &init_file[x].page.to_string() +  SITE_HALF;
 
         // Dusloop site request
-        let mut char_page_html = ureq::get(&init_file[x].link)
+        let mut char_page_html = ureq::get(&character_link)
             .call()
             .unwrap();
         
         // Because dustloop site 500 a lot
         while char_page_html.status() == 500 {
-            char_page_html = ureq::get(&init_file[x].link)
+            char_page_html = ureq::get(&character_link)
                 .call()
                 .unwrap();
         }
