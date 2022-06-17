@@ -15,11 +15,10 @@ mod check;
 use commands::{frames::*,
     update::*, moves::*, 
     aliases::*, help::*, 
-    hitboxes::*, request::*,
-    easter::*};
+    hitboxes::*, request::*};
 
 #[group]
-#[commands(frames, update, moves, aliases, help, hitboxes, request, easter)]
+#[commands(frames, update, moves, aliases, help, hitboxes, request)]
 struct General;
 
 #[derive(Serialize, Deserialize, Debug)]
