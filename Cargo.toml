@@ -1,6 +1,6 @@
 [package]
 name = "baiken"
-version = "0.5.0"
+version = "0.6.0"
 edition = "2021"
 authors = ["yakiimoninja"]
 repository = "https://github.com/yakiimoninja/baiken"
@@ -10,13 +10,14 @@ license = "GPL-3.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-serenity = {version = "0.10.9", default-features = false, features = ["client", "framework", "standard_framework", "gateway", "rustls_backend", "model"] }
+serenity = {version = "0.10.9", default-features = false, features = ["client", "framework", "standard_framework", "gateway", "rustls_backend", "model","cache"] }
 tokio = { version = "1.0", features = ["macros", "signal", "rt-multi-thread"] }
 ureq = { version = "2.4.0", features = ["charset"] }
 dotenv = "0.15"
 serde_derive = "1.0"
 serde_json = "1.0"
 serde = "1.0"
+rand = "0.8.5"
 
 # Uncomment for debugging
 # tracing = "0.1.29"
