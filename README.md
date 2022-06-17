@@ -59,8 +59,8 @@ Displays a help message.
 
 ## Usage notes
 
-- **You can substitute the prefix `b.` with `!` if you prefer**.
-  - Example: `!f baiken 2k`.
+ - ### You can substitute the prefix **`b.`** with **`!`** if you prefer.
+   - Example: `!f baiken 2k`.
 
 - **Searching is case insensitive.**
   - Example: `b.h ky dp`.
