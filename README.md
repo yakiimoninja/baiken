@@ -95,7 +95,7 @@ Displays a help message.
   - For Level 1 `Thunderbird`: `b.f gold Drone`.
   - For Level 2 `Thunderbird`: `b.f gold Drone 2`.
   - For Level 3 `Thunderbird`: `b.f gold Drone 3`.
-  - The above is not always the case depending on the alias you use.
+  - The above is not always the case depending on the special move and alias you use.
   - For Level 1 `Thunderbird`: `b.f gold D1`.
   - For Level 2 `Thunderbird`: `b.f gold D2`.
   - For Level 3 `Thunderbird`: `b.f gold D3`.
