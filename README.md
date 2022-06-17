@@ -4,7 +4,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Table of contents
-  - [Patch notes.](patch-notes/)
+  - [Patch notes.](https://github.com/yakiimoninja/baiken/releases)
   - [Invite Baiken to your server.](#invite-the-bot-to-your-server)
   - [Host Baiken yourself.](#host-the-bot-yourself)
   - [Commands.](#commands)
@@ -13,7 +13,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
     - [Character specifics.](#character-specifics)
 
 ## Patch notes
-- You can view the latest patch notes by pressing [**here**](patch-notes/).
+- You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
 
 
 ## Invite the bot to your server
