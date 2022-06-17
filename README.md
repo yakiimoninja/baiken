@@ -32,7 +32,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Commands
-
+### Both **`b.`** and **`!`** can be used as prefixes.
 - **Command**: `b.f` or `b.frames`. \
 Displays the frame data of a move along with an image.\
 Example: `b.f baiken 236K` or `b.frames baiken 236K`.
