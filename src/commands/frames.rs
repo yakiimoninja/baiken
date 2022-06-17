@@ -7,6 +7,7 @@ use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
 
+use crate::commands::easter::easter;
 use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
 
 #[command]
@@ -254,6 +255,11 @@ async fn frames(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
                 });
                 m
             }).await;
+
+            // Easter egg ***
+            if let Some(quote) = easter(&ctx, &msg).await{
+                msg.channel_id.say(&ctx.http, &quote).await?;
+            }
 
             break;
         }
