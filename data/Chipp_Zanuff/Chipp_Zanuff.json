@@ -39,10 +39,10 @@
 	{"input":"j.6D or j.4D","move":"Air Throw","damage":"70","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until L+10","counter":""},
 	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 24","counter":""},
 	{"input":"Wall Run","move":"Wall Run","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"","move":"","damage":"31","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"","move":"","damage":"28","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"","move":"","damage":"45","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"","move":"","damage":"36","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"","move":"","damage":"50","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""},
-	{"input":"","move":"","damage":"72","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"","counter":""}
+	{"input":"Wall Run P","move":"Wall Run P","damage":"31","guard":"","invincibility":"","startup":"9","block":"","hit":"","active":"3","recovery":"","counter":""},
+	{"input":"Wall Run K","move":"Wall Run K","damage":"28","guard":"","invincibility":"","startup":"6","block":"","hit":"","active":"5","recovery":"","counter":""},
+	{"input":"Wall Run S","move":"Wall Run S","damage":"45","guard":"","invincibility":"","startup":"6","block":"","hit":"","active":"2","recovery":"","counter":""},
+	{"input":"Wall Run SS","move":"Wall Run SS","damage":"36","guard":"","invincibility":"","startup":"7","block":"","hit":"","active":"2","recovery":"","counter":""},
+	{"input":"Wall Run H","move":"Wall Run H","damage":"50","guard":"","invincibility":"","startup":"10","block":"","hit":"","active":"7","recovery":"","counter":""},
+	{"input":"Wall Run 6H","move":"Wall Run 6H","damage":"72","guard":"","invincibility":"","startup":"17","block":"","hit":"","active":"6","recovery":"","counter":""}
 ]
