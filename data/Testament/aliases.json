@@ -1,6 +1,6 @@
 [
     {"input":"5[D]","aliases":["5D!"]},
-    {"input":"N/A","aliases":["Stain","SS","Stain","Pop"]},    
+    {"input":"Stain","aliases":["Stain","SS","Stain","Pop"]},    
     {"input":"236S","aliases":["Grave Reaper","Beast","GR","B"]},
     {"input":"236H","aliases":["Heavy Grave Reaper","H Grave Reaper","Heavy Beast","H Beast","HGR","HB"]},
     {"input":"236{S}","aliases":["236S!","Partial Grave Reaper","Partial Beast","Beast!","GR!","B!"]},
