@@ -33,7 +33,7 @@ pub async fn easter(ctx: &Context, msg: &Message) -> Option<String> {
 
 
     // Getting guild id
-    let g_id = ctx.cache.guild_channel(msg.channel_id).await.expect("Failed to get guild id!").guild_id;
+    let g_id = ctx.cache.guild_channel(msg.channel_id).await.unwrap().guild_id;
     let g_id: u64 = g_id.as_u64().to_owned();
 
     let mut found_bots: Vec<UserId> = Vec::new();
