@@ -12,7 +12,7 @@
 	{"input":"236S 236K","aliases":["Senshuu","Rekka 3","Rekka3","Rekka Overhead","Banzai"]},
 	{"input":"63214S","aliases":["Genrouzan","Command Grab","Leaf Throw","CG","624S"]},
 	{"input":"j.214P","aliases":["Shuriken"]},
-	{"input":"236236K","aliases":["Banki Messai","Clone Super","BM","CUS"]},
+	{"input":"236236P","aliases":["Banki Messai","Super","Clone Super","BM","CUS"]},
 	{"input":"632146H","aliases":["Zansei Rouga","Teleport Super","ZR","TP"]},
 	{"input":"j.632146H","aliases":["Air Zansei Rouga","Air Super","Air Teleport Super","JZR","AZR","AS","JUS","ATS","JTP"]},
 	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
