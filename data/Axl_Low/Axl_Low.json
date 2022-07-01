@@ -28,7 +28,7 @@
 	{"input":"214H","move":"Snail","damage":"45","guard":"All","invincibility":"","startup":"14","block":"-24","hit":"KD","active":"12","recovery":"29","counter":"Mid"},
 	{"input":"j.214H","move":"Snail","damage":"45","guard":"All","invincibility":"","startup":"14","block":"-19","hit":"KD","active":"9","recovery":"Until L+10","counter":"Mid"},
 	{"input":"j.623H","move":"Axl Bomber","damage":"80","guard":"All","invincibility":"","startup":"9","block":"-22","hit":"HKD","active":"10","recovery":"Until L+7","counter":"Large"},
-	{"input":"236236H","move":"Sickle Storm","damage":"50×2, 20×3","guard":"All","invincibility":"1~15F Strike","startup":"11+1","block":"-2","hit":"HKD","active":"8(24)13","recovery":"26","counter":"Mid"},
+	{"input":"236236H","move":"Sickle Storm","damage":"50×2, 20×3","guard":"All","invincibility":"1~15F All","startup":"11+1","block":"-2","hit":"HKD","active":"8(24)13","recovery":"26","counter":"Mid"},
 	{"input":"632146P","move":"One Vision","damage":"","guard":"","invincibility":"","startup":"5+22","block":"","hit":"","active":"","recovery":"","counter":""},
 	{"input":"632146P Attack","move":"One Vision","damage":"","guard":"All","invincibility":"","startup":"8+0","block":"0","hit":"","active":"1","recovery":"","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +41","active":"3","recovery":"38","counter":""},

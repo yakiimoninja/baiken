@@ -57,7 +57,7 @@
 	{"input":"214H","move":"Kamuriyuki","damage":"50","guard":"Mid","invincibility":"","startup":"14","block":"-3","hit":"HKD","active":"5","recovery":"17","counter":"Large"},
 	{"input":"623H","move":"Shizuriyuki","damage":"45","guard":"Mid","invincibility":"1-13F Upper Body","startup":"11","block":"-7","hit":"HKD","active":"3","recovery":"21","counter":"Large"},
 	{"input":"623HH","move":"Shizuriyuki","damage":"55","guard":"Mid","invincibility":"","startup":"10","block":"-16","hit":"HKD","active":"6","recovery":"29","counter":"Large"},
-	{"input":"623P","move":"Bloodsucking Universe","damage":"80,90,100","guard":"Ground Throw","invincibility":"1~8F Throw","startup":"7","block":"NA","hit":"HKD","active":"2","recovery":"48","counter":""},
+	{"input":"623P","move":"Bloodsucking Universe","damage":"80/90/100","guard":"Ground Throw","invincibility":"1~8F Throw","startup":"7","block":"NA","hit":"HKD","active":"2","recovery":"48","counter":""},
 	{"input":"632146S","move":"Wasureyuki","damage":"70, 3×17, 60","guard":"Mid","invincibility":"1~10F Full","startup":"7+(173 Flash)+2","block":"-37","hit":"HKD","active":"2","recovery":"54","counter":"Mid"},
 	{"input":"632146H","move":"Zansetsu","damage":"200","guard":"Mid","invincibility":"1~26F Full","startup":"11+(58 Flash)+10","block":"-66","hit":"HKD","active":"6","recovery":"80","counter":"Very Small"},
 	{"input":"BR Activation","move":"BR Activation","damage":"N/A","guard":"Guard Crush","invincibility":"1~15f Full after freeze","startup":"4+38+3","block":"-12","hit":"HKD","active":"10","recovery":"70","counter":""},

@@ -23,7 +23,7 @@
 	{"input":"214S","move":"Steady Aim","damage":"-","guard":"-","invincibility":"","startup":"18","block":"-","hit":"-","active":"-","recovery":"-","counter":""},
 	{"input":"214S H","move":"Fire","damage":"55 [35]","guard":"Guard Crush (43f) [All]","invincibility":"","startup":"1","block":"+10*","hit":"KD","active":"2","recovery":"43","counter":"Very Small"},
 	{"input":"236S 2H","move":"Cancel Aim","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"-","counter":""},
-	{"input":"214S 214S","move":"Cancel Aim","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"28 total","counter":""},
+	{"input":"214S 214S","move":"Cancel Aim","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"16 total","counter":""},
 	{"input":"22P","move":"Reload","damage":"-","guard":"-","invincibility":"","startup":"23","block":"-","hit":"-","active":"-","recovery":"23~77 total","counter":""},
 	{"input":"214P","move":"Focus","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"46 total","counter":""},
 	{"input":"214K","move":"Roll","damage":"-","guard":"-","invincibility":"4~15 Upper Body","startup":"-","block":"-","hit":"-","active":"-","recovery":"35 total","counter":""},
