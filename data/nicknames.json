@@ -2,6 +2,7 @@
     {"character":"Anji_Mito","nicknames":["AM","Lanji"]},
     {"character":"Axl_Low","nicknames":["AL"]},
     {"character":"Baiken","nicknames":["BA"]},
+    {"character":"Bridget","nicknames":["BR"]},
     {"character":"Chipp_Zanuff","nicknames":["CZ"]},
     {"character":"Faust","nicknames":["FA","Laust"]},
     {"character":"Giovanna","nicknames":["Gio"]},
@@ -11,12 +12,12 @@
     {"character":"Jack-O","nicknames":["JA"]},
     {"character":"Ky_Kiske","nicknames":["KK","Kyle"]},
     {"character":"Leo_Whitefang","nicknames":["LW","Gorilla"]},
-    {"character":"May","nicknames":[""]},
+    {"character":"May","nicknames":["MA"]},
     {"character":"Millia_Rage","nicknames":["MR"]},
     {"character":"Nagoriyuki","nicknames":["Vampire"]},
-    {"character":"Potemkin","nicknames":[""]},
+    {"character":"Potemkin","nicknames":["POT"]},
     {"character":"Ramlethal_Valentine","nicknames":["RV"]},
     {"character":"Sol_Badguy","nicknames":["SB","Frederick","Helios"]},
     {"character":"Testament","nicknames":["TE","Testie"]},
-    {"character":"Zato-1","nicknames":[""]}
+    {"character":"Zato-1","nicknames":["ZA"]}
 ]
