@@ -14,7 +14,7 @@ mod data_to_json;
 extern crate ureq;
 
 
-pub async fn make_char_json (chars_ids: [&str; 20], init_file: Vec<CharInfo>) {
+pub async fn make_char_json (chars_ids: [&str; 21], init_file: Vec<CharInfo>) {
 
 
     print!("\n");

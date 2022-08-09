@@ -84,7 +84,7 @@ impl EventHandler for Handler {
     }
 }
 
-pub const CHARS: [&str; 20] = ["Anji_Mito","Axl_Low","Baiken","Chipp_Zanuff","Faust","Giovanna","Goldlewis_Dickinson","Happy_Chaos","I-No","Jack-O","Ky_Kiske","Leo_Whitefang","May","Millia_Rage","Nagoriyuki","Potemkin","Ramlethal_Valentine","Sol_Badguy","Testament","Zato-1"];
+pub const CHARS: [&str; 21] = ["Anji_Mito","Axl_Low","Baiken","Bridget","Chipp_Zanuff","Faust","Giovanna","Goldlewis_Dickinson","Happy_Chaos","I-No","Jack-O","Ky_Kiske","Leo_Whitefang","May","Millia_Rage","Nagoriyuki","Potemkin","Ramlethal_Valentine","Sol_Badguy","Testament","Zato-1"];
 
 #[tokio::main]
 async fn main() {
