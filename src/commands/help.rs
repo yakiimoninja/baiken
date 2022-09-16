@@ -1,10 +1,8 @@
-use serenity::framework::standard::{macros::command, CommandResult};
-use serenity::model::prelude::*;
-use serenity::prelude::*;
+use crate::{Context, Error};
 
-#[command]
-#[aliases("?")]
-async fn help(ctx: &Context, msg: &Message) -> CommandResult {
+/// Prints a help message.
+#[poise::command(prefix_command, slash_command, aliases("?"))]
+pub async fn help(ctx: Context<'_>) -> Result<(), Error> {
 
     let help_message = r#"
 __**Patch Notes:**__
@@ -23,6 +21,6 @@ __**Artwork:**__
 __<https://twitter.com/gogalking/status/1307199393607553024>__
 "#;
 
-    msg.channel_id.say(&ctx.http, help_message).await?;
+    ctx.say(help_message).await?;
     Ok(())
 }

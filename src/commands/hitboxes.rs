@@ -1,17 +1,17 @@
 use std::fs;
 use std::path::Path;
 use std::string::String;
-use serenity::framework::standard::{macros::command, Args, CommandResult};
-use serenity::model::prelude::*;
-use serenity::prelude::*;
-
-use crate::{Frames, MoveAliases, ImageLinks, check, Nicknames};
+use crate::{Frames, MoveAliases, ImageLinks, check, Nicknames, Context, Error};
 
 const IMAGE_DEFAULT: &str = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/no_hitbox.png";
 
-#[command]
-#[aliases("h")]
-async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+/// Prints the hitbox images for a character's move.
+#[poise::command(prefix_command, slash_command, aliases("h"))]
+pub async fn hitboxes(
+    ctx: Context<'_>,
+    #[description = "Character name or nickname."] character_arg: String,
+    #[description = "Move name, input or alias."] mut character_move_arg: String,
+) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
@@ -19,41 +19,37 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     let mut character_found = false;
     let mut move_found = false;
 
-    // Getting character and move args
-    let character_arg = args.single::<String>()?;
-    let mut character_move_arg = args.rest().to_string();
-
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
-        msg.channel_id.say(&ctx.http, &error_msg).await?;
+        ctx.say(&error_msg).await?;
         print!("\n");
         panic!("{}", error_msg);
     }
 
     // Checking if move user argument is correct
     if let Some(error_msg) = check::correct_character_move_arg(&character_move_arg){
-        msg.channel_id.say(&ctx.http, &error_msg).await?;
+        ctx.say(&error_msg).await?;
         print!("\n");
         panic!("{}", error_msg);
     }
 
     // Checking if data folder exists
     if let Some(error_msg) = check::data_folder_exists(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
 
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
     
     // Checking if character jsons exist
     if let Some(error_msg) = check::character_jsons_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
@@ -96,7 +92,7 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     // Error out cause requested character was not found in the json
     if character_found == false {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
-        msg.channel_id.say(&ctx.http, error_msg).await?;
+        ctx.say(error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
@@ -164,18 +160,18 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
 
                         // Priting hitboxes in discord chat
                         let bot_msg = "__**Move: ".to_owned() + &image_links[y].input + "**__";
-                        msg.channel_id.say(&ctx.http, &bot_msg).await?;
+                        ctx.say(&bot_msg).await?;
 
                         for i in 0..image_links[y].hitbox_img.len() {                        
-                            msg.channel_id.say(&ctx.http, &image_links[y].hitbox_img[i]).await?;
+                            ctx.say(&image_links[y].hitbox_img[i]).await?;
                         }
                     }
                     else{
 
                         // Priting hitboxes in discord chat
                         let bot_msg = "__**Move: ".to_owned() + &image_links[m].input + "**__";
-                        msg.channel_id.say(&ctx.http, &bot_msg).await?;
-                        msg.channel_id.say(&ctx.http, &IMAGE_DEFAULT).await?;
+                        ctx.say(&bot_msg).await?;
+                        ctx.say(&*IMAGE_DEFAULT).await?;
                     }
                     
                 }
@@ -189,15 +185,15 @@ async fn hitboxes(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     // Error message cause given characters json was not found
     if character_found == false {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
-        msg.channel_id.say(&ctx.http, error_msg).await?;
+        ctx.say(error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
     // Error message cause given move wasnt found in the json
     if character_found == true && move_found == false {
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
-        msg.channel_id.say(&ctx.http, error_msg).await?;
-        msg.channel_id.say(&ctx.http, "You can request the addition of an alias by executing\n the `b.r` command followed by the character then move and lastly alias.\nExample: `b.r giovanna 236k arrow`.").await?;
+        ctx.say(error_msg).await?;
+        ctx.say("You can request something or leave feedback by executing the `/request` command.").await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }

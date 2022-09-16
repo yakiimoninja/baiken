@@ -3,8 +3,6 @@ use std::io::Write;
 use std::path::Path;
 use tokio::fs::remove_file;
 use crate::CharInfo;
-use crate::commands::update::SITE_LINK;
-use crate::commands::update::SITE_HALF;
 //use crate::Data;
 
 mod source_to_data;
@@ -13,6 +11,8 @@ mod data_to_json;
 
 extern crate ureq;
 
+const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&page=";
+const SITE_HALF: &str = "&prop=text&formatversion=2";
 
 pub async fn make_char_json (chars_ids: [&str; 21], init_file: Vec<CharInfo>) {
 

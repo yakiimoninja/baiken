@@ -1,40 +1,36 @@
 use std::fs;
 use std::string::String;
-use serenity::framework::standard::{macros::command, Args, CommandResult};
-use serenity::model::prelude::*;
-use serenity::prelude::*;
+use crate::{Frames, check, Nicknames, Context, Error};
 
-use crate::{Frames, check, Nicknames};
-
-#[command]
-#[aliases("m")]
-async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+/// Prints a character's full movelist.
+#[poise::command(prefix_command, slash_command, aliases("m"))]
+pub async fn moves(
+    ctx: Context<'_>,
+    #[description = "Character name or nickname."] character_arg: String,
+) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
     // Flag that will be used for logic to determine output
     let mut character_found = false;
 
-    // Getting character arg
-    let character_arg = args.single::<String>()?;
-
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
-        msg.channel_id.say(&ctx.http, &error_msg).await?;
+        ctx.say(&error_msg).await?;
         print!("\n");
         panic!("{}", error_msg);
     }
 
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
     
     // Checking if character jsons exist
     if let Some(error_msg) = check::character_jsons_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
@@ -77,7 +73,7 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     // Error out cause requested character was not found in the json
     if character_found == false {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
-        msg.channel_id.say(&ctx.http, error_msg).await?;
+        ctx.say(error_msg).await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
@@ -102,7 +98,7 @@ async fn moves(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     }
 
     moves_as_msg = moves_as_msg + &"```".to_string();
-    msg.channel_id.say(&ctx.http, &moves_as_msg).await?;
+    ctx.say(&moves_as_msg).await?;
         
     Ok(())
 }

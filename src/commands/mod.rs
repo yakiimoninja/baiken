@@ -1,11 +1,9 @@
-//pub mod math;
-//pub mod meta;
-//pub mod owner;
 pub mod frames;
+pub mod easter;
 pub mod update;
 pub mod moves;
 pub mod aliases;
 pub mod help;
 pub mod hitboxes;
 pub mod request;
-pub mod easter;
+pub mod register;

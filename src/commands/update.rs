@@ -1,39 +1,32 @@
 use std::fs;
-use serde_json;
-use serenity::framework::standard::{macros::command, CommandResult};
-use serenity::model::prelude::*;
-use serenity::prelude::*;
-
-use crate::{CHARS, CharInfo, check};
+use crate::{Context, Error, CHARS, CharInfo, check};
 
 pub(crate) mod init_json;
 mod char_json;
 
-const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&page=";
-const SITE_HALF: &str = "&prop=text&formatversion=2";
-
-#[command]
-#[aliases("u")]
-#[owners_only]
-pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
+/// Downloads new frame data from the dustloop website. Owners only!
+#[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
+pub async fn update (
+    ctx: Context<'_>,
+) -> Result<(), Error> {
 
     // Checking if images jsons exist
     if let Some(error_msg) = check::character_images_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
 
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
 
     // Checking if init.json exists
     if let Some(error_msg) = check::init_json_exists(false) {
-        msg.channel_id.say(&ctx.http, &error_msg.replace("'", "`")).await?;
+        ctx.say(&error_msg.replace("'", "`")).await?;
         print!("\n");
         panic!("{}", error_msg.replace("\n", " "));
     }
@@ -47,7 +40,7 @@ pub async fn update(ctx: &Context, msg: &Message) -> CommandResult {
         .expect("\nFailed to deserialize from 'init.json' file.\nConsider deleting 'init.json' from the 'frame_data' folder.");
 
     char_json::make_char_json(CHARS, file).await;
-    msg.channel_id.say(&ctx.http, "Update succesful!").await?;
+    ctx.say("Update succesful!").await?;
     
     return Ok(());
 }

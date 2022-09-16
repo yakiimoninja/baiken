@@ -1,16 +1,14 @@
 use std::fs::OpenOptions;
 use std::io::Write;
-use serenity::framework::standard::{macros::command, Args, CommandResult};
-use serenity::model::prelude::*;
-use serenity::prelude::*;
+use crate::{Context, Error};
 
-#[command]
-#[aliases("r")]
-async fn request(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+/// Gives feedback or requests something from the dev.
+#[poise::command(prefix_command, slash_command, aliases("r"))]
+pub async fn request(
+    ctx: Context<'_>,
+    #[description = "Message for the dev."] text: String,
+) -> Result<(), Error> {
 
-    let character_arg = args.single::<String>()?;
-    let character_move_arg = args.single::<String>()?;
-    let character_alias_arg = args.rest().to_string();
     
     // Creating character json file
     let mut file = OpenOptions::new()
@@ -19,13 +17,13 @@ async fn request(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult 
         .open("request.txt")
         .expect(&("\nFailed to open 'request.txt' file."));
     
-    let string = character_arg.to_owned() +" " + &character_move_arg +" " + &character_alias_arg +"\n";
+    let new_text = text.to_owned() + "\n\n";
 
-    write!(file, "{}", string)
+    write!(file, "{}", new_text)
         .expect(&("\nFailed to write to 'request.txt'"));
     
-    println!("Done writting '{}' to 'request.txt'", string);
-    msg.channel_id.say(&ctx.http, "Submitted succesfully!").await?;
+    println!("Done writting '{}' to 'request.txt'", text);
+    ctx.say("Submitted succesfully!").await?;
 
     Ok(())
 }
