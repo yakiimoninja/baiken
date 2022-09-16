@@ -164,7 +164,7 @@
     },
     {
         "input": "236S/H",
-        "move_img": "https://dustloop.com/wiki/images/7/72/GGST_Bridget_236S.png",
+        "move_img": "https://dustloop.com/wiki/images/d/da/GGST_Bridget_Stop_and_Dash_Overlay.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/3/3b/GGST_Bridget_236H_1_Hitbox.png",
             "https://dustloop.com/wiki/images/b/b9/GGST_Bridget_236S_2_Hitbox.png",
@@ -173,7 +173,7 @@
     },
     {
         "input": "214S/H",
-        "move_img": "https://dustloop.com/wiki/images/7/72/GGST_Bridget_236S.png",
+        "move_img": "https://dustloop.com/wiki/images/d/da/GGST_Bridget_Stop_and_Dash_Overlay.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/3/3b/GGST_Bridget_236H_1_Hitbox.png",
             "https://dustloop.com/wiki/images/b/b9/GGST_Bridget_236S_2_Hitbox.png",
