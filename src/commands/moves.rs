@@ -2,7 +2,7 @@ use std::fs;
 use std::string::String;
 use crate::{Frames, check, Nicknames, Context, Error};
 
-/// Prints a character's full movelist.
+/// Displays all the moves and inputs of a character.
 #[poise::command(prefix_command, slash_command, aliases("m"))]
 pub async fn moves(
     ctx: Context<'_>,

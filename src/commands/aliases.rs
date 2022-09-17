@@ -3,7 +3,7 @@ use std::path::Path;
 use std::string::String;
 use crate::{CHARS, MoveAliases, check, Nicknames, Context, Error};
 
-/// Prints a character's aliases for every move applicable.
+/// Displays all the aliases for each normal/special/super move of a character.
 #[poise::command(prefix_command, slash_command, aliases("a"))]
 pub async fn aliases(
     ctx: Context<'_>,

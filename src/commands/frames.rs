@@ -6,7 +6,7 @@ use std::string::String;
 use crate::{Context, Error};
 use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
 
-/// Prints the frame data for a character's move.
+/// Displays the frame data of a move along with an image.
 #[poise::command(prefix_command, slash_command, aliases("f"))]
 pub async fn frames(
     ctx: Context<'_>,

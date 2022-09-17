@@ -4,7 +4,7 @@ use crate::{Context, Error, CHARS, CharInfo, check};
 pub(crate) mod init_json;
 mod char_json;
 
-/// Downloads new frame data from the dustloop website. Owners only!
+/// Updates the frame data according to dustloop. Owners only!
 #[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
 pub async fn update (
     ctx: Context<'_>,

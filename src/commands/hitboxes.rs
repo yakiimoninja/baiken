@@ -5,7 +5,7 @@ use crate::{Frames, MoveAliases, ImageLinks, check, Nicknames, Context, Error};
 
 const IMAGE_DEFAULT: &str = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/no_hitbox.png";
 
-/// Prints the hitbox images for a character's move.
+/// Displays the hitbox images of a character's move.
 #[poise::command(prefix_command, slash_command, aliases("h"))]
 pub async fn hitboxes(
     ctx: Context<'_>,
