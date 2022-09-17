@@ -32,79 +32,87 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Commands
-### Both **`b.`** and **`!`** can be used as prefixes.
-- **Command**: `b.f` or `b.frames`. \
+### Both **`/`** and **`Mentioning Baiken`** can be used to invoke commands.
+- **Command**: `/frames`. \
 Displays the frame data of a move along with an image.\
-Example: `b.f baiken 236K` or `b.frames baiken 236K`.
+Example: `/frames baiken 236K`.
   
-- **Command**: `b.h` or `b.hitboxes`. \
-Displays the hitbox images of a move. \
-Example: `b.h goldlewis 426H` or `b.hitboxes goldlewis 426H`.
+- **Command**: `/hitboxes`. \
+Displays the hitbox images of a character's move. \
+Example: `/hitboxes goldlewis 426H`.
   
-- **Command**: `b.m` or `b.moves`.\
+- **Command**: `/moves`.\
 Displays all the moves and inputs of a character.\
-Example: `b.m sol` or `b.moves sol`.
+Example: `/moves sol`.
 
-- **Command**: `b.a` or `b.aliases`.\
+- **Command**: `/aliases`.\
 Displays all the aliases for each normal/special/super move of a character.\
-Example: `b.a leo` or `b.moves leo`.
+Example: `/aliases leo`.
 
-- **Command**: `b.u` or `b.update`.\
+- **Command**: `/update`.\
 **This command only works for owners.** \
 Meaning that you need to run your own instance of the source code to use it. \
 Updates the frame data according to [**dustloop**](https://dustloop.com).
 
-- **Command**: `b.?` or `b.help`.\
+- **Command**: `/request`.\
+Sends a request or feedback to the dev.
+
+- **Command**: `/help`.\
 Displays a help message.  
 
 ## Usage notes
 
- - ### You can substitute the prefix **`b.`** with **`!`** if you prefer.
-   - Example: `!f baiken 2k`.
+ - ### You can substitute **`/`** commands with direct mentions if you prefer.
+   - Doing so will enable you to use shorthand commands.
+      - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
+      - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
+      - Example: `@Baiken m leo` same as `/moves leo`.
+      - Example: `@Baiken a chipp` same as `/aliases chipp`.
+
 
 - **Searching is case insensitive.**
-  - Example: `b.h ky dp`.
+  - Example: `/hitboxes ky dp`.
 
 - **You don't have to search using the full name of a character.**
-  - Example: `b.f gio 236K`.
+  - Example: `/frames gio 236K`.
 
 - #### **You can use character nicknames when searching.**
-  - Example: `b.moves hc`.
+  - Example: `/moves hc`.
   - [List of nicknames.](data/nicknames.json)
 
 - **You can also use aliases instead of inputs when searching for moves.**
-  - Example: `b.f Anji Needles`.
+  - Example: `/frames Anji Needles`.
 
 - **You can omit the `[]` when searching for a charged move.**
-  - Example: `b.frames May [4]6S`.
-  - Example: `b.f may 46S`.
+  - Example: `/frames May [4]6S`.
+  - Example: `/frames may 46S`.
 
 - **When searching for charged dust attack use the alias `5D!`.**
-  - Example: `b.f chipp 5D!`.
+  - Example: `/frames chipp 5D!`.
 
 ## Character specifics
 - **For normals that have levels like Nagoriyuki.**
   - Add the level number next to the normal.
-  - For Level 1 `fS`: `b.f nago fs`. 
-  - For Level 2 `fS`: `b.f nago fs2`.
-  - For Level 3 `fS`: `b.f nago fs3`.
+  - For Level 1 `fS`: `/frames nago fs`. 
+  - For Level 2 `fS`: `/frames nago fs2`.
+  - For Level 3 `fS`: `/frames nago fs3`.
   - If it's a level 1 normal nothing needs to be added since it's the default state.
 
 - **For specials that have levels like Goldlewis.**
   - Add the level number next to the special.
-  - For Level 1 `Thunderbird`: `b.f gold Drone`.
-  - For Level 2 `Thunderbird`: `b.f gold Drone 2`.
-  - For Level 3 `Thunderbird`: `b.f gold Drone 3`.
+  - For Level 1 `Thunderbird`: `/frames gold Drone`.
+  - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
+  - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
   - The above is not always the case depending on the special move and alias you use.
-  - For Level 1 `Thunderbird`: `b.f gold D1`.
-  - For Level 2 `Thunderbird`: `b.f gold D2`.
-  - For Level 3 `Thunderbird`: `b.f gold D3`.
-  - See `b.a gold` for more info on his aliases.
+  - For Level 1 `Thunderbird`: `/frames gold D1`.
+  - For Level 2 `Thunderbird`: `/frames gold D2`.
+  - For Level 3 `Thunderbird`: `/frames gold D3`.
+  - See `/aliases gold` for more info on his aliases.
 
 - **For Testament's different Grave Reaper versions use as shown.**
-  - Regular version: `b.f testament 236S`.
-  - Partially charged version: `b.f testament 236S!`.
-  - Fully charged version: `b.f testament 236S!!`.
+  - Regular version: `/frames testament 236S`.
+  - Partially charged version: `/frames testament 236S!`.
+  - Fully charged version: `/frames testament 236S!!`.
 
 #
 
