@@ -1,7 +1,7 @@
 # Version 0.7.0 Patch Notes.
 
 ### General
- - Prefix commands will be replaced with slash commands from `19/September/2022` due to changes in Discord's API.
+ - Prefix commands will be replaced with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes in Discord's API.
  - Refactored code to support slash commands and the new gateway intents.
  - Slash commands have context menus to help with command execution.
  - Added a new easter egg and removed the previous one.
