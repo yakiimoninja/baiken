@@ -99,7 +99,7 @@ pub async fn aliases(
         panic!("{}", error_msg.replace("`", "'"));
     }    
 
-    println!("\nUser input: 'b.a {}'", character_arg);
+    println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
     println!("Succesfully read '{}.json' file.", &character_arg_altered);
 
     // Reading the aliases json

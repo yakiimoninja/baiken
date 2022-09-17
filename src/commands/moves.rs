@@ -86,7 +86,7 @@ pub async fn moves(
     //Deserializing from character json
     let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
     
-    println!("\nUser input: 'b.m {}'", character_arg);
+    println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
     println!("Succesfully read '{}.json' file.", &character_arg_altered);
     
     // Formatting string for in discord print

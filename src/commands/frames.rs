@@ -119,7 +119,7 @@ pub async fn frames(
     // Deserializing from character json
     let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
     
-    println!("\nUser input: 'b.f {} {}'", character_arg, character_move_arg);
+    println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
     println!("Succesfully read '{}.json' file.", character_arg_altered);
     
 
