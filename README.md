@@ -3,21 +3,21 @@
 by providing you with each character's moves, frame data and their hitboxes.**
 
 
-## Table of contents
+## Table of contents.
   - [Patch notes.](https://github.com/yakiimoninja/baiken/releases)
-  - [Invite Baiken to your server.](#invite-the-bot-to-your-server)
-  - [Host Baiken yourself.](#host-the-bot-yourself)
+  - [Inviting Baiken to a server.](#inviting-the-bot-to-a-server)
+  - [Hosting an instance of the bot.](#hosting-an-instance-of-the-bot)
   - [Commands.](#commands)
     - [Usage notes.](#usage-notes)
     - [Nicknames.](data/nicknames.json)
     - [Character specifics.](#character-specifics)
 
-## Patch notes
+## Patch notes.
 - You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
 
 
-## Invite the bot to your server
-- Baiken can be **invited** to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
+## Inviting the bot to a server.
+- Baiken can be **invited** to a server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with your Camera or Discord application.
 
 <img src="data/images/baiken_qr.png" width="250" height="250" />
@@ -29,7 +29,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 - Lastly execute the compiled code.
 
 
-## Commands
+## Commands.
 ### Both **`/`** and **`Mentioning Baiken`** can be used to invoke commands.
 - **Command**: `/frames`. \
 Displays the frame data of a move along with an image.\
@@ -58,7 +58,7 @@ Sends a request or feedback to the dev.
 - **Command**: `/help`.\
 Displays a help message.  
 
-## Usage notes
+## Usage notes.
 
  - ### **`/`** commands can be substituted with direct mentions if prefered.
    - Doing so will enable the use of shorthand commands.
@@ -88,7 +88,7 @@ Displays a help message.
 - **For a fully charged dust attack the alias `5D!` can be used instead.**
   - Example: `/frames chipp 5D!`.
 
-## Character specifics
+## Character specifics.
 - **For normals that have levels like Nagoriyuki.**
   - Add the level number next to the normal.
   - For Level 1 `fS`: `/frames nago fs`. 
@@ -115,5 +115,3 @@ Displays a help message.
 #
 
 ### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
-
-
