@@ -17,17 +17,15 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Invite the bot to your server
-- You can **invite** Baiken to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
-- Or scan the **QR Code** with your Camera or Discord application.
+- Baiken can be **invited** to your server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
+- Or scanning the **QR Code** with your Camera or Discord application.
 
 <img src="data/images/baiken_qr.png" width="250" height="250" />
 
 
-## Host the bot yourself
-- You will need a bot token.
-- You will need to **download** and **compile** the source code.
-- You will need to create a `.env` file and put that token inside that.
-- You will also need to have the `data` folder and the `.env` file in the same folder as `baiken.exe`.
+## Hosting an instance of the bot.
+- A bot token is required.
+- A `.env` file with a token inside is required.
 - Lastly execute the compiled code.
 
 
@@ -51,7 +49,7 @@ Example: `/aliases leo`.
 
 - **Command**: `/update`.\
 **This command only works for owners.** \
-Meaning that you need to run your own instance of the source code to use it. \
+Meaning that it requires an instance of the source code to use it. \
 Updates the frame data according to [**dustloop**](https://dustloop.com).
 
 - **Command**: `/request`.\
@@ -62,8 +60,8 @@ Displays a help message.
 
 ## Usage notes
 
- - ### You can substitute **`/`** commands with direct mentions if you prefer.
-   - Doing so will enable you to use shorthand commands.
+ - ### **`/`** commands can be substituted with direct mentions if prefered.
+   - Doing so will enable the use of shorthand commands.
       - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
       - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
       - Example: `@Baiken m leo` same as `/moves leo`.
@@ -73,21 +71,21 @@ Displays a help message.
 - **Searching is case insensitive.**
   - Example: `/hitboxes ky dp`.
 
-- **You don't have to search using the full name of a character.**
+- **Searching using the full name of a character isn't necessary.**
   - Example: `/frames gio 236K`.
 
-- #### **You can use character nicknames when searching.**
+- #### **Character nicknames can be used when searching.**
   - Example: `/moves hc`.
   - [List of nicknames.](data/nicknames.json)
 
-- **You can also use aliases instead of inputs when searching for moves.**
+- **Aliases instead of inputs can be used when searching for moves.**
   - Example: `/frames Anji Needles`.
 
-- **You can omit the `[]` when searching for a charged move.**
+- **When searching for a charged move  the `[]` can be omitted.**
   - Example: `/frames May [4]6S`.
   - Example: `/frames may 46S`.
 
-- **When searching for charged dust attack use the alias `5D!`.**
+- **For a fully charged dust attack the alias `5D!` can be used instead.**
   - Example: `/frames chipp 5D!`.
 
 ## Character specifics
@@ -103,7 +101,7 @@ Displays a help message.
   - For Level 1 `Thunderbird`: `/frames gold Drone`.
   - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
   - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
-  - The above is not always the case depending on the special move and alias you use.
+  - The above is not always the case depending on the special move and alias used.
   - For Level 1 `Thunderbird`: `/frames gold D1`.
   - For Level 2 `Thunderbird`: `/frames gold D2`.
   - For Level 3 `Thunderbird`: `/frames gold D3`.
