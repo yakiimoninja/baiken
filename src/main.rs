@@ -6,17 +6,14 @@ mod check;
 use commands::*;
 use poise::serenity_prelude as serenity;
 use serde::{Serialize, Deserialize};
-use std::{collections::HashMap, sync::Mutex, time::Duration};
+use std::time::Duration;
 
 // Types used by all command functions
 type Error = Box<dyn std::error::Error + Send + Sync>;
 type Context<'a> = poise::Context<'a, Data, Error>;
 
 // Custom user data passed to all command functions
-#[allow(dead_code)]
-pub struct Data {
-    votes: Mutex<HashMap<String, u32>>,
-}
+pub struct Data {}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CharInfo {
@@ -101,27 +98,31 @@ async fn main() {
             update::update(),        
         ],
         prefix_options: poise::PrefixFrameworkOptions {
-            prefix: Some("!".into()),
+            //prefix: Some("!".into()),
             edit_tracker: Some(poise::EditTracker::for_timespan(Duration::from_secs(3600))),
-            additional_prefixes: vec![
-                poise::Prefix::Literal("b."),
-            ],
+            //additional_prefixes: vec![
+            //    poise::Prefix::Literal("b."),
+            //],
             ..Default::default()
         },
+        
         /// The global error handler for all error cases that may occur
         on_error: |error| Box::pin(on_error(error)),
+        
         // /// This code is run before every command
         // pre_command: |ctx| {
         //     Box::pin(async move {
         //         println!("\nExecuting command {}...", ctx.command().qualified_name);
         //     })
         // },
-        /// This code is run after a command if it was successful (returned Ok)
-        post_command: |ctx| {
-            Box::pin(async move {
-                println!("Executed command {}!", ctx.command().qualified_name);
-            })
-        },
+
+        // /// This code is run after a command if it was successful (returned Ok)
+        // post_command: |ctx| {
+        //     Box::pin(async move {
+        //         println!("Executed command {}!", ctx.command().qualified_name);
+        //     })
+        // },
+
         /// Every command invocation must pass this check to continue execution
         command_check: Some(|ctx| {
             Box::pin(async move {
@@ -148,14 +149,12 @@ async fn main() {
         .token(std::env::var("DISCORD_TOKEN").expect("missing DISCORD_TOKEN"))
         .user_data_setup(move |_ctx, _ready, _framework| {
             Box::pin(async move {
-                Ok(Data {
-                    votes: Mutex::new(HashMap::new()),
-                })
+                Ok(Data {})
             })
         })
         .options(options)
         .intents(
-            serenity::GatewayIntents::non_privileged() | serenity::GatewayIntents::MESSAGE_CONTENT,
+            serenity::GatewayIntents::non_privileged() /*| serenity::GatewayIntents::MESSAGE_CONTENT*/,
         )
         .run()
         .await
