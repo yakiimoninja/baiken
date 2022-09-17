@@ -9,7 +9,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
   - [Host Baiken yourself.](#host-the-bot-yourself)
   - [Commands.](#commands)
     - [Usage notes.](#usage-notes)
-    - [Nicknames.](#you-can-use-character-nicknames-when-searching)
+    - [Nicknames.](data/nicknames.json)
     - [Character specifics.](#character-specifics)
 
 ## Patch notes
