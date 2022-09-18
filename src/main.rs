@@ -62,13 +62,13 @@ async fn on_error(error: poise::FrameworkError<'_, Data, Error>) {
     // They are many errors that can occur, so we only handle the ones we want to customize
     // and forward the rest to the default handler
     match error {
-        poise::FrameworkError::Setup { error, .. } => panic!("Failed to start bot: {:?}", error),
+        poise::FrameworkError::Setup { error, .. } => panic!("Failed to start bot: {:?}.", error),
         poise::FrameworkError::Command { error, ctx } => {
-            println!("Error in command `{}`: {:?}", ctx.command().name, error,);
+            println!("Error in command `{}`: {:?}.", ctx.command().name, error,);
         }
         error => {
             if let Err(e) = poise::builtins::on_error(error).await {
-                println!("Error while handling error: {}", e)
+                println!("Error while handling error: {}.", e)
             }
         }
     }
@@ -143,10 +143,10 @@ async fn main() {
         ..Default::default()
     };
 
-    dotenv::dotenv().expect("Failed to load .env file");
+    dotenv::dotenv().expect("Failed to load .env file.");
 
     poise::Framework::builder()
-        .token(std::env::var("DISCORD_TOKEN").expect("missing DISCORD_TOKEN"))
+        .token(std::env::var("DISCORD_TOKEN").expect("missing DISCORD_TOKEN."))
         .user_data_setup(move |_ctx, _ready, _framework| {
             Box::pin(async move {
                 Ok(Data {})
