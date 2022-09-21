@@ -193,7 +193,7 @@ pub async fn aliases(
         ctx.say(&moves_as_msg).await?;
     }
 
-    ctx.say("You can request the addition of a non-existing alias by executing\nthe `b.r` command followed by the character, then the move and lastly the alias you want added.\nExample: `b.r giovanna 236k arrow`.").await?;
+    ctx.say("You can request the addition of an alias, nickname, feature\nor simply leave feedback by executing the `/request` command.").await?;
 
     Ok(())
 }
