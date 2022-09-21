@@ -1,3 +1,21 @@
+# Version 0.7.1 Patch Notes.
+
+### General
+ - Changed move not found case for `/frames` command.
+ - Changed follow up message for `/aliases` command.
+ 
+### Move Aliases
+ - **`Chipp Zanuff`**:
+   - `63214S` Added alias: `Leaf Grab`.
+
+### Nicknames
+ - `Goldlewis` Added nickname: `GL`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.7.0 Patch Notes.
 
 ### General
