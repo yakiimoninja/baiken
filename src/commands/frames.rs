@@ -260,7 +260,7 @@ pub async fn frames(
     if character_found == true && move_found == false {
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
         ctx.say(error_msg).await?;
-        ctx.say("View moves of a character by executing `b.m baiken`.\nView aliases of a character by executing `b.a baiken`.").await?;
+        ctx.say("View moves of a character by executing `/moves`.\nView aliases of a character by executing `/aliases`.").await?;
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
