@@ -9,13 +9,10 @@ __**Patch Notes:**__
 __<https://github.com/yakiimoninja/baiken/releases>__
 
 __**Commands:**__
-__<https://github.com/yakiimoninja/baiken/blob/main/README.md#commands>__
+__<https://github.com/yakiimoninja/baiken#commands>__
 
-__**Usage Notes:**__
-__<https://github.com/yakiimoninja/baiken/blob/main/README.md#usage-notes>__
-
-__**Source Code:**__
-__<https://github.com/yakiimoninja/baiken>__
+__**Support The Project:**__
+__<https://github.com/sponsors/yakiimoninja>__
 
 __**Artwork:**__
 __<https://twitter.com/gogalking/status/1307199393607553024>__
