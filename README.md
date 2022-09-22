@@ -113,5 +113,6 @@ Displays a help message.
   - Fully charged version: `/frames testament 236S!!`.
 
 #
-
+### Help support the project.
+[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
 ### Credits for the Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
