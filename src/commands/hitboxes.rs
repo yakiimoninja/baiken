@@ -62,27 +62,27 @@ pub async fn hitboxes(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    for x in 0..vec_nicknames.len() {
+    for x_nicknames in vec_nicknames {
 
         // If user input is part of a characters full name or the full name itself
-        // Then pass the full name to the new var 'character_arg_altered'
-        if vec_nicknames[x].character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-        vec_nicknames[x].character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
+        if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+        x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
             
             character_found = true;
-            character_arg_altered = vec_nicknames[x].character.to_owned();
+            character_arg_altered = x_nicknames.character.to_owned();
             break;
         }
 
         // Iterating through the nicknames.json nickname entries
-        for y in 0..vec_nicknames[x].nicknames.len(){
+        for y_nicknames in x_nicknames.nicknames {
 
             // If user input equals a character nickname then pass the full character name
             // To the new variable 'character_arg_altered'
-            if vec_nicknames[x].nicknames[y].to_lowercase() == character_arg.to_lowercase().trim() {
+            if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
 
                 character_found = true;
-                character_arg_altered = vec_nicknames[x].character.to_owned();
+                character_arg_altered = x_nicknames.character.to_owned();
                 break;
             }   
         }
@@ -122,13 +122,13 @@ pub async fn hitboxes(
         // Deserializing the aliases json
         let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
-        for a in 0..aliases_data.len() {
-            for b in 0..aliases_data[a].aliases.len() {
+        for alias_data in aliases_data {
+            for x_aliases in alias_data.aliases {
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                if aliases_data[a].aliases[b].to_lowercase().trim() == character_move_arg.to_lowercase().trim() {
-                    character_move_arg = aliases_data[a].input.to_string();
+                if x_aliases.to_lowercase().trim() == character_move_arg.to_lowercase().trim() {
+                    character_move_arg = alias_data.input.to_string();
                 }
             }
         }
@@ -142,34 +142,34 @@ pub async fn hitboxes(
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
     
 
-    for m in 0..move_frames.len() {
+    for mframes in move_frames {
         // Iterating through the moves of the json file to find the move requested
-        if move_frames[m].input.to_string().to_lowercase().replace(".", "") 
+        if mframes.input.to_string().to_lowercase().replace(".", "") 
         == character_move_arg.to_string().to_lowercase().replace(".", "")
-        || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+        || mframes.r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
             
-            for y in 0..image_links.len() {
+            for img_links in image_links {
                 // Iterating through the image.json to find the move's hitbox links
-                if move_frames[m].input == image_links[y].input {
+                if mframes.input == img_links.input {
 
                     move_found = true;
-                    println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), &character_arg_altered);
+                    println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
 
                     
-                    if image_links[y].hitbox_img[0].is_empty() == false {
+                    if img_links.hitbox_img[0].is_empty() == false {
 
                         // Priting hitboxes in discord chat
-                        let bot_msg = "__**Move: ".to_owned() + &image_links[y].input + "**__";
+                        let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                         ctx.say(&bot_msg).await?;
 
-                        for i in 0..image_links[y].hitbox_img.len() {                        
-                            ctx.say(&image_links[y].hitbox_img[i]).await?;
+                        for htbx_img in img_links.hitbox_img {                        
+                            ctx.say(&htbx_img).await?;
                         }
                     }
                     else{
 
                         // Priting hitboxes in discord chat
-                        let bot_msg = "__**Move: ".to_owned() + &image_links[m].input + "**__";
+                        let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                         ctx.say(&bot_msg).await?;
                         ctx.say(&*IMAGE_DEFAULT).await?;
                     }
