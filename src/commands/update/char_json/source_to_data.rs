@@ -87,7 +87,7 @@ pub fn html_to_data(html: String) -> String {
     let mut moves_info = moves_info.join("|");
     moves_info = moves_info.replacen("|", "", 1);
 
-    // Fix for breaking some move names when parsing data from the page source
+    // Fix for breaking some move names containig "lt" when parsing data from the page source
     for m in 0..MALFORMED_STRINGS.0.len() {
         if moves_info.contains(&MALFORMED_STRINGS.0[m]) == true {
             moves_info = moves_info.replace(&MALFORMED_STRINGS.0[m], &MALFORMED_STRINGS.1[m]);
