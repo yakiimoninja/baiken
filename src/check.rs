@@ -92,9 +92,9 @@ pub fn nicknames_json_exists(init_check: bool) -> Option<String> {
 pub fn character_folders_exist(init_check: bool) -> Option<String> {
 
     // Checking if character folders exist
-    for x in 0..CHARS.len() {
+    for char in CHARS {
         
-        let character_path = &("data/".to_owned() + &CHARS[x]);
+        let character_path = &("data/".to_owned() + &char);
         if Path::new(&character_path).exists() == false {
             
             // Error if character folder doesnt exist
@@ -118,9 +118,9 @@ pub fn character_folders_exist(init_check: bool) -> Option<String> {
 pub fn character_jsons_exist(init_check: bool) -> Option<String> {
 
     // Checking if character jsons exist in their respective folders
-    for x in 0..CHARS.len() {
+    for char in CHARS {
 
-        let character_json = &("data/".to_owned() + &CHARS[x] + "/" + &CHARS[x] +".json");
+        let character_json = &("data/".to_owned() + &char + "/" + &char +".json");
         if Path::new(&character_json).exists() == false {
 
             // Error if character json doesnt exist
@@ -145,9 +145,9 @@ pub fn character_jsons_exist(init_check: bool) -> Option<String> {
 pub fn character_images_exist(init_check: bool) -> Option<String> {
 
     // Checking if character images.jsons exist in their respective folders
-    for x in 0..CHARS.len() {
+    for char in CHARS {
         
-        let images_json = &("data/".to_owned() + &CHARS[x] + "/images.json");
+        let images_json = &("data/".to_owned() + &char + "/images.json");
         if Path::new(&images_json).exists() == false {
 
             // Error if images json doesnt exist

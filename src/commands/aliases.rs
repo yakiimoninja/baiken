@@ -43,10 +43,10 @@ pub async fn aliases(
         panic!("{}", error_msg.replace("\n", " "));
     }
  
-    for c in 0..CHARS.len() {
+    for char in CHARS {
 
         // Checking if aliases for this characters moves exist
-        let aliases_path = "data/".to_owned() + CHARS[c] + "/aliases.json";
+        let aliases_path = "data/".to_owned() + char + "/aliases.json";
         if Path::new(&aliases_path).exists() == false {
             // Error message cause a specific file is missing
             let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";
@@ -64,27 +64,27 @@ pub async fn aliases(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    for x in 0..vec_nicknames.len() {
+    for x_nicknames in vec_nicknames {
 
         // If user input is part of a characters full name or the full name itself
-        // Then pass the full name to the new var 'character_arg_altered'
-        if vec_nicknames[x].character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-        vec_nicknames[x].character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
+        if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+        x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
             
             character_found = true;
-            character_arg_altered = vec_nicknames[x].character.to_owned();
+            character_arg_altered = x_nicknames.character.to_owned();
             break;
         }
 
         // Iterating through the nicknames.json nickname entries
-        for y in 0..vec_nicknames[x].nicknames.len(){
+        for y_nicknames in x_nicknames.nicknames {
 
             // If user input equals a character nickname then pass the full character name
             // To the new variable 'character_arg_altered'
-            if vec_nicknames[x].nicknames[y].to_lowercase() == character_arg.to_lowercase().trim() {
+            if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
 
                 character_found = true;
-                character_arg_altered = vec_nicknames[x].character.to_owned();
+                character_arg_altered = x_nicknames.character.to_owned();
                 break;
             }   
         }
@@ -113,20 +113,20 @@ pub async fn aliases(
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Move Aliases**__\n```diff";
     
-    // Checks what character info is accessing
+    // Checks what character info is accessing to check later cause of discord message character limit
     if character_arg_altered != "Faust" && character_arg_altered != "Goldlewis_Dickinson" && character_arg_altered != "Ky_Kiske" {
         
         // Building the message to be sent by the bot
-        for m in 0..aliases_data.len() {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-                + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+        for alias_data in aliases_data {
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &alias_data.aliases[0] 
+                + " -> Input: " + &alias_data.input + "\n+ Aliases: ";
 
-            for a in 0..aliases_data[m].aliases.len() {
-                if a != aliases_data[m].aliases.len() - 1 {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
+            for a in 0..alias_data.aliases.len() {
+                if a != alias_data.aliases.len() - 1 {
+                    moves_as_msg = moves_as_msg.to_owned() + &alias_data.aliases[a] + ", ";
                 }
                 else {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+                    moves_as_msg = moves_as_msg.to_owned() + &alias_data.aliases[a];
                 }
             }
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
