@@ -1,3 +1,18 @@
+# Version 0.7.2 Patch Notes.
+
+### General
+ - Cleaned up some code.
+ - Reworked error messages when moves are not found.
+
+### Move Aliases
+ - **`Millia Rage`**:
+   - `j.236K` Added alias: `Turbofall`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.7.1 Patch Notes.
 
 ### General
