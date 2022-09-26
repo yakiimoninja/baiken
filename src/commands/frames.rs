@@ -76,27 +76,27 @@ pub async fn frames(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    for x in 0..vec_nicknames.len() {
+    for x_nicknames in vec_nicknames {
 
         // If user input is part of a characters full name or the full name itself
-        // Then pass the full name to the new var 'character_arg_altered'
-        if vec_nicknames[x].character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-        vec_nicknames[x].character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
+        if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+        x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
             
             character_found = true;
-            character_arg_altered = vec_nicknames[x].character.to_owned();
+            character_arg_altered = x_nicknames.character.to_owned();
             break;
         }
 
         // Iterating through the nicknames.json nickname entries
-        for y in 0..vec_nicknames[x].nicknames.len(){
+        for y_nicknames in x_nicknames.nicknames {
 
             // If user input equals a character nickname then pass the full character name
             // To the new variable 'character_arg_altered'
-            if vec_nicknames[x].nicknames[y].to_lowercase() == character_arg.to_lowercase().trim() {
+            if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
 
                 character_found = true;
-                character_arg_altered = vec_nicknames[x].character.to_owned();
+                character_arg_altered = x_nicknames.character.to_owned();
                 break;
             }   
         }
@@ -134,14 +134,14 @@ pub async fn frames(
         // Deserializing the aliases json
         let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
-        for a in 0..aliases_data.len() {
-            for b in 0..aliases_data[a].aliases.len() {
+        for alias_data in aliases_data {
+            for x_aliases in alias_data.aliases {
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                if aliases_data[a].aliases[b].to_lowercase().trim().replace(".", "")
+                if x_aliases.to_lowercase().trim().replace(".", "")
                 == character_move_arg.to_lowercase().trim().replace(".", "") {
-                    character_move_arg = aliases_data[a].input.to_string();
+                    character_move_arg = alias_data.input.to_string();
                 }
             }
         }
@@ -155,59 +155,59 @@ pub async fn frames(
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
     
 
-    for m in 0..move_frames.len() {
+    for mframes in move_frames {
         
         // Iterating through the moves of the json file to find the move requested
-        if move_frames[m].input.to_string().to_lowercase().replace(".", "") 
+        if mframes.input.to_string().to_lowercase().replace(".", "") 
         == character_move_arg.to_string().to_lowercase().replace(".", "")
-        || move_frames[m].r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+        || mframes.r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
             
             
             move_found = true;
-            println!("Succesfully read move '{}' in '{}.json' file.", &move_frames[m].input.to_string(), character_arg_altered);
+            println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
 
             let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Frame_Data";
-            let title_embed = "Move: ".to_owned() + &move_frames[m].input.to_string();
+            let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
 
             // Checking if the respective data field in the json file is empty
             // If they aren't empty, the variables initialized above will be replaced
             // With the corresponind data from the json file
             // Otherwise they will remain as '-'
-            for y in 0..image_links.len() {
+            for img_links in image_links {
                 // Iterating through the image.json to find the move's image links
-                if move_frames[m].input == image_links[y].input {
-                    if image_links[y].move_img.is_empty() == false {
-                        image_embed = image_links[y].move_img.to_string();
+                if mframes.input == img_links.input {
+                    if img_links.move_img.is_empty() == false {
+                        image_embed = img_links.move_img.to_string();
                         break;
                     }
                 }
             }
-            if move_frames[m].damage.is_empty() == false {
-                damage_embed = move_frames[m].damage.to_string();
+            if mframes.damage.is_empty() == false {
+                damage_embed = mframes.damage.to_string();
             }
-            if move_frames[m].guard.is_empty() == false {
-                guard_embed = move_frames[m].guard.to_string();
+            if mframes.guard.is_empty() == false {
+                guard_embed = mframes.guard.to_string();
             }
-            if move_frames[m].invincibility.is_empty() == false {
-                invin_embed = move_frames[m].invincibility.to_string();
+            if mframes.invincibility.is_empty() == false {
+                invin_embed = mframes.invincibility.to_string();
             }
-            if move_frames[m].startup.is_empty() == false {
-                startup_embed = move_frames[m].startup.to_string();
+            if mframes.startup.is_empty() == false {
+                startup_embed = mframes.startup.to_string();
             }
-            if move_frames[m].hit.is_empty() == false {
-                hit_embed = move_frames[m].hit.to_string();
+            if mframes.hit.is_empty() == false {
+                hit_embed = mframes.hit.to_string();
             }
-            if move_frames[m].block.is_empty() == false {
-                block_embed = move_frames[m].block.to_string();
+            if mframes.block.is_empty() == false {
+                block_embed = mframes.block.to_string();
             }
-            if move_frames[m].active.is_empty() == false {
-                active_embed = move_frames[m].active.to_string();
+            if mframes.active.is_empty() == false {
+                active_embed = mframes.active.to_string();
             }
-            if move_frames[m].recovery.is_empty() == false {
-                recovery_embed = move_frames[m].recovery.to_string();
+            if mframes.recovery.is_empty() == false {
+                recovery_embed = mframes.recovery.to_string();
             }
-            if move_frames[m].counter.is_empty() == false {
-            counter_embed = move_frames[m].counter.to_string();
+            if mframes.counter.is_empty() == false {
+            counter_embed = mframes.counter.to_string();
             }
 
             // Debugging prints
