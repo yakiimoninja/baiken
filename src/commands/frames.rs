@@ -258,9 +258,10 @@ pub async fn frames(
 
     // Error message cause given move wasnt found in the json
     if character_found == true && move_found == false {
-        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
+        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!" + "\nView moves of a character by executing `/moves`.\nView aliases of a character by executing `/aliases`.");
         ctx.say(error_msg).await?;
-        ctx.say("View moves of a character by executing `/moves`.\nView aliases of a character by executing `/aliases`.").await?;
+        // Console error print 
+        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
