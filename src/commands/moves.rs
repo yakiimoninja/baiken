@@ -43,27 +43,27 @@ pub async fn moves(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    for x in 0..vec_nicknames.len() {
+    for x_nicknames in vec_nicknames {
 
         // If user input is part of a characters full name or the full name itself
-        // Then pass the full name to the new var 'character_arg_altered'
-        if vec_nicknames[x].character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-        vec_nicknames[x].character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
+        if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+        x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
             
             character_found = true;
-            character_arg_altered = vec_nicknames[x].character.to_owned();
+            character_arg_altered = x_nicknames.character.to_owned();
             break;
         }
 
         // Iterating through the nicknames.json nickname entries
-        for y in 0..vec_nicknames[x].nicknames.len(){
+        for y_nicknames in x_nicknames.nicknames {
 
             // If user input equals a character nickname then pass the full character name
             // To the new variable 'character_arg_altered'
-            if vec_nicknames[x].nicknames[y].to_lowercase() == character_arg.to_lowercase().trim() {
+            if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
 
                 character_found = true;
-                character_arg_altered = vec_nicknames[x].character.to_owned();
+                character_arg_altered = x_nicknames.character.to_owned();
                 break;
             }   
         }
@@ -92,9 +92,9 @@ pub async fn moves(
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Moves**__\n```diff";
 
-    for m in 0..move_frames.len() {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[m].r#move
-            + "\n+ Input: " + &move_frames[m].input + "\n";
+    for mframes in move_frames {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &mframes.r#move
+            + "\n+ Input: " + &mframes.input + "\n";
     }
 
     moves_as_msg = moves_as_msg + &"```".to_string();
