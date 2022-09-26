@@ -1,9 +1,9 @@
-pub mod frames;
-pub mod easter;
-pub mod update;
-pub mod moves;
 pub mod aliases;
+pub mod easter;
+pub mod frames;
 pub mod help;
 pub mod hitboxes;
-pub mod request;
+pub mod moves;
 pub mod register;
+pub mod request;
+pub mod update;
