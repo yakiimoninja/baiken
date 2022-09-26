@@ -182,7 +182,7 @@ pub async fn hitboxes(
 
 
 
-    // Error message cause given characters json was not found
+    // Error message cause given character was not found
     if character_found == false {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         ctx.say(error_msg).await?;
@@ -191,9 +191,10 @@ pub async fn hitboxes(
     }
     // Error message cause given move wasnt found in the json
     if character_found == true && move_found == false {
-        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
+        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/request` command.");
         ctx.say(error_msg).await?;
-        ctx.say("You can request something or leave feedback by executing the `/request` command.").await?;
+        // Console error print
+        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
         print!("\n");
         panic!("{}", error_msg.replace("`", "'"));
     }
