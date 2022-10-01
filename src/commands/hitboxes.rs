@@ -163,7 +163,7 @@ pub async fn hitboxes(
                         ctx.say(&bot_msg).await?;
 
                         for htbx_img in img_links.hitbox_img {                        
-                            ctx.say(&htbx_img).await?;
+                            ctx.channel_id().say(ctx.discord(), &htbx_img).await?;
                         }
                     }
                     else{
@@ -171,7 +171,7 @@ pub async fn hitboxes(
                         // Priting hitboxes in discord chat
                         let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                         ctx.say(&bot_msg).await?;
-                        ctx.say(&*IMAGE_DEFAULT).await?;
+                        ctx.channel_id().say(ctx.discord(), &*IMAGE_DEFAULT).await?;
                     }
                     
                 }

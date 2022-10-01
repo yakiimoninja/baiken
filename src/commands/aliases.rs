@@ -152,7 +152,7 @@ pub async fn aliases(
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
         moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.say(&moves_as_msg).await?;
+        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
 
         // 2nd message builder
         moves_as_msg = "```diff".to_string();
@@ -171,7 +171,7 @@ pub async fn aliases(
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
         moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.say(&moves_as_msg).await?;
+        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
 
         // 3nd message builder
         moves_as_msg = "```diff".to_string();
@@ -190,10 +190,10 @@ pub async fn aliases(
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
         moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.say(&moves_as_msg).await?;
+        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
     }
 
-    ctx.say("You can request the addition of an alias, nickname, feature\nor simply leave feedback by executing the `/request` command.").await?;
+    ctx.channel_id().say(ctx.discord(), "You can request the addition of an alias, nickname, feature\nor simply leave feedback by executing the `/request` command.").await?;
 
     Ok(())
 }
