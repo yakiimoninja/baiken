@@ -1,3 +1,20 @@
+# Version 0.7.3 Patch Notes.
+
+### General
+ - Cleaned up bot message formatting.
+
+### Nicknames.
+ >add a nickname for may called "totsugeki" so we can search up totsugeki totsugeki
+ 
+Say less my guy.
+
+ - `May` Added nickname: `Totsugeki`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.7.2 Patch Notes.
 
 ### General
