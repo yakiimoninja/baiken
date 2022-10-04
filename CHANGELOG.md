@@ -10,6 +10,13 @@ Say less my guy.
 
  - `May` Added nickname: `Totsugeki`.
 
+### Move Aliases
+ - **`Nagoriyuki`**:
+   - `j.D Level 1` Added alias: `j.D`.
+   - `j.D Level 2` Added alias: `j.D2`.
+   - `j.D Level 3` Added alias: `j.D3`.
+   - `j.D Level BR` Added alias: `j.DB`.
+
 &#x200B;
 &#x200B;
 &#x200B;
