@@ -31,13 +31,13 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
                 r#move: move_information[x-13].to_string(),
                 damage: move_information[x-12].to_string(),
                 guard: move_information[x-11].to_string(),
-                invincibility: move_information[x-1].to_string(),
+                invincibility: move_information[x-3].to_string(),
                 startup: move_information[x-10].to_string(),
                 block: move_information[x-7].to_string(),
                 hit: move_information[x-6].to_string(),
                 active: move_information[x-9].to_string(),
                 recovery: move_information[x-8].to_string(),
-                counter: move_information[x-2].to_string(),
+                counter: move_information[x-4].to_string(),
             }).unwrap();
 
             file.write_all(&vectored_frame_data)
@@ -66,13 +66,13 @@ pub fn write_data_to_json(move_information: String, mut file: &File, char_count:
                 r#move: move_information[x-12].to_string().replace("c.", "5").replace("f.", "5"),
                 damage: move_information[x-11].to_string(),
                 guard: move_information[x-10].to_string(),
-                invincibility: move_information[x-0].to_string(),
+                invincibility: move_information[x-2].to_string(),
                 startup: move_information[x-9].to_string(),
                 block: move_information[x-6].to_string(),
                 hit: move_information[x-5].to_string(),
                 active: move_information[x-8].to_string(),
                 recovery: move_information[x-7].to_string(),
-                counter: move_information[x-1].to_string(),
+                counter: move_information[x-3].to_string(),
             }).unwrap();
             
             file.write_all(&vectored_frame_data)
