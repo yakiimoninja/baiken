@@ -1,6 +1,6 @@
 [
 	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236S","aliases":["Bajoneto","Sword Throw","ST"]},
+	{"input":"236S","aliases":["Bajoneto","S Bajoneto","Sword Throw","S Sword Throw","ST"]},
 	{"input":"236H","aliases":["H Bajoneto","H Sword Throw","HST"]},
 	{"input":"623P","aliases":["Dauro","DP"]},
 	{"input":"214K","aliases":["Sildo Detruo","Dunk","SD"]},
