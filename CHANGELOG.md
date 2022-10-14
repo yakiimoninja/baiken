@@ -1,6 +1,91 @@
 # Version 0.7.3 Patch Notes.
 
 ### General
+ - Updated frame data.
+ 
+### Fixes 
+ - Fixed `The application did not respond` error when invoking the `/update` command.
+ - Fixed `invincibility` and `counter` showing `RISC` and `Proration` values.
+ - Fixed `Sol` `Air Volcanic Viper` alias displaying framedata for `H Volcanic Viper` and vice versa.
+
+### Move Aliases
+ - **`Axl Low`**:
+   - `j.236H` Added alias: `TKB`.
+ 
+
+ - **`Baiken`**:
+   - `j.214214P` Added alias: `Air Kenjyu`.
+
+
+ - **`Faust`**:
+   - `214P` Added alias: `P Scarecrow`.
+   - `214K` Added alias: `K Scarecrow`.
+   - `214S` Added alias: `S Scarecrow`.
+
+
+ - **`I-no`**:
+   - `j.236K` Added alias: `K Sultry Performance`.
+   - `236H` Added alias: `H Stroke The Big Tree`.
+
+
+ - **`Ky Kiske`**:
+   - `DI 236K` Added alias: `DI Stun Dipper`.
+   - `DI 214K` Added alias: `DI Foudre Arc`.
+   - `DI 214S` Added alias: `DI Dire Eclat`.
+   - `DI 236236P` Added alias: `DI Sacred Edge`.
+
+
+ - **`Leo Whitefang`**:
+   - `bt.P` Added alias: `Bt Punch`,`BTP`.
+   - `bt.K` Added alias: `Bt Low`, `BTK`, `BK`.
+   - `bt.S` Added alias: `Bt Cross`, `BTS`.
+   - `bt.H` Added alias: `Bt Overhead`, `BTH`, `BH`.
+   - `bt.D` Added alias: `Back Turn Dust`, `Backturn Dust`, `Back Turn Parry`, `Bt Parry`.
+   - `bt.22` Added alias: `Bt Cancel`.
+   - `bt.214K` Added alias: `Bt Command Grab`,`Bt Grab`,`Bt Throw`,`BTCG`,`BTG`,`BTT`. 
+   - `bt.214H` Added alias: `Bt Blitz`.
+   - `bt.214K` Removed alias `BTP` as duplicate.
+
+
+ - **`May`**:
+   - `[4]6S` Added alias: `S Dolphin`.
+   - `[2]8S` Added alias: `S Up Dolphin`.
+
+
+ - **`Millia Rage`**:
+   - `236S` Added alias: `S Disk`.
+   - `236H` Added alias: `H Disk`.
+
+
+ - **`Nagoriyuki`**:
+   - `623H` Added alias: `Shizuriyuki 1`, `DP1`.
+   - `623HH` Added alias: `Shizuriyuki 2`, `DP2`.
+
+
+ - **`Potemkin`**:
+   - `Reflect Projectile` Added alias: `RP`.
+
+
+ - **`Ramlethal Valentine`**:
+   - `236S` Added alias: `S Sword Throw`.
+ 
+
+ - **`Sol Badguy`**:
+   - `214P` Added alias: `Feint Fireball`.
+   - `623S` Added alias: `S Volcanic Viper`.
+   - `236K` Added alias: `Bandit Revolver 1`, `BR1`.
+   - `236KK` Added alias: `Bandit Revolver 2`, `BR2`.
+   - `j.236K` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
+   - `j.236KK` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
+# Version 0.7.3 Patch Notes.
+
+### General
  - Cleaned up bot message formatting.
 
 ### Nicknames.
