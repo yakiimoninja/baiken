@@ -39,8 +39,10 @@ pub async fn update (
     let file = serde_json::from_str::<Vec<CharInfo>>(&data_from_file)
         .expect("\nFailed to deserialize from 'init.json' file.\nConsider deleting 'init.json' from the 'frame_data' folder.");
 
+    ctx.say("Update started!").await?;
+    
     char_json::make_char_json(CHARS, file).await;
-    ctx.say("Update succesful!").await?;
+    ctx.channel_id().say(ctx.discord(), "Update succesful!").await?;
     
     return Ok(());
 }
