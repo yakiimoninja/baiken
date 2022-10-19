@@ -2,7 +2,7 @@ use std::fs::OpenOptions;
 use std::io::Write;
 use std::path::Path;
 use tokio::fs::remove_file;
-use crate::CharInfo;
+use crate::CHARS;
 //use crate::Data;
 
 mod source_to_data;
@@ -11,10 +11,10 @@ mod data_to_json;
 
 extern crate ureq;
 
-const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&page=";
-const SITE_HALF: &str = "&prop=text&formatversion=2";
+const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=parse&page=GGST/";
+const SITE_HALF: &str = "/Frame_Data&prop=text&formatversion=2";
 
-pub async fn make_char_json (chars_ids: [&str; 21], init_file: Vec<CharInfo>) {
+pub async fn make_char_json (chars_ids: [&str; CHARS.len()]) {
 
 
     print!("\n");
@@ -42,7 +42,7 @@ pub async fn make_char_json (chars_ids: [&str; 21], init_file: Vec<CharInfo>) {
             .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + &chars_ids[x] + ".json'."));
 
         // Creating request link from init file
-        let character_link = SITE_LINK.to_owned() + &init_file[x].page.to_string() +  SITE_HALF;
+        let character_link = SITE_LINK.to_owned() + &chars_ids[x]/*&init_file[x].page.to_string()*/ +  SITE_HALF;
 
         // Dusloop site request
         let mut char_page_html = ureq::get(&character_link)
@@ -67,8 +67,9 @@ pub async fn make_char_json (chars_ids: [&str; 21], init_file: Vec<CharInfo>) {
         
         // Finalizing character json
         char_json_schema = "\n]";
-        write!(file, "{}", char_json_schema)
-            .expect("\nFailed to write 'json_schema' to 'init.json'.");
 
+        let error_msg = "\nFailed to write 'json_schema' to '{".to_owned() + chars_ids[x] + "}.json'.";
+        write!(file, "{}", char_json_schema)
+            .expect(&error_msg);
     }
 }
