@@ -68,8 +68,7 @@ pub async fn make_char_json (chars_ids: [&str; CHARS.len()]) {
         // Finalizing character json
         char_json_schema = "\n]";
 
-        let error_msg = "\nFailed to write 'json_schema' to '{".to_owned() + chars_ids[x] + "}.json'.";
         write!(file, "{}", char_json_schema)
-            .expect(&error_msg);
+            .expect("\nFailed to write 'json_schema' to '{".to_owned() + chars_ids[x] + "}.json'.");
     }
 }
