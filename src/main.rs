@@ -81,7 +81,6 @@ async fn main() {
     check::data_folder_exists(true);
     check::character_folders_exist(true);
     check::character_images_exist(true);
-    check::init_json_exists(true);
     check::nicknames_json_exists(true);
     check::character_jsons_exist(true);
 
