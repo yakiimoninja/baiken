@@ -1,4 +1,4 @@
-# Version 0.7.3 Patch Notes.
+# Version 0.7.4 Patch Notes.
 
 ### General
  - Updated frame data.
