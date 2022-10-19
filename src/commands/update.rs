@@ -1,7 +1,5 @@
-use std::fs;
-use crate::{Context, Error, CHARS, CharInfo, check};
+use crate::{Context, Error, CHARS, check};
 
-pub(crate) mod init_json;
 mod char_json;
 
 /// Updates the frame data according to dustloop. Owners only!
@@ -24,24 +22,9 @@ pub async fn update (
         panic!("{}", error_msg.replace("\n", " "));
     }
 
-    // Checking if init.json exists
-    if let Some(error_msg) = check::init_json_exists(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
-    }
-
-    // Reading init.json file
-    let data_from_file = fs::read_to_string("data/init.json")
-        .expect("\nFailed to read 'init.json' file.");
-
-    // Deserializing from init.json
-    let file = serde_json::from_str::<Vec<CharInfo>>(&data_from_file)
-        .expect("\nFailed to deserialize from 'init.json' file.\nConsider deleting 'init.json' from the 'frame_data' folder.");
-
     ctx.say("Update started!").await?;
     
-    char_json::make_char_json(CHARS, file).await;
+    char_json::make_char_json(CHARS).await;
     ctx.channel_id().say(ctx.discord(), "Update succesful!").await?;
     
     return Ok(());
