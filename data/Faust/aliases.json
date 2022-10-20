@@ -1,4 +1,5 @@
-[
+[	
+	{"input":"c.S","aliases":["5S"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"41236K","aliases":["Thrust","Stab","Scalpel"]},
 	{"input":"41236K 4","aliases":["Pull Back","Pull","41236K4"]},

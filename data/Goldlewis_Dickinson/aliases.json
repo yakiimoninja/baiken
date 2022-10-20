@@ -1,4 +1,5 @@
-[
+[	
+	{"input":"c.S","aliases":["5S"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"41236H","aliases":["426BT","426H"]},
 	{"input":"j.41236H","aliases":["Air 426BT","Air 426H","A426BT","J426BT","J426H","A426H"]},

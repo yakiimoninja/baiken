@@ -1,4 +1,5 @@
-[
+[	
+	{"input":"c.S","aliases":["5S"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236S","aliases":["Tandem Top","S Tandem Top","Disk","S Disk","TT"]},
 	{"input":"236H","aliases":["H Tandem Top","Heavy Disk","H Disk","HTT"]},
