@@ -1,3 +1,13 @@
+# Version 0.7.5 Patch Notes.
+
+### General
+ - Code clean up. Removed the use of the `init.json` file.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.7.4 Patch Notes.
 
 ### General
