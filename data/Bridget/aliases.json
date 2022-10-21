@@ -1,4 +1,7 @@
-[
+[	
+	{"input":"c.S","aliases":["5S"]},
+	{"input":"S","aliases":["SS",""]},
+	{"input":"H","aliases":["HH"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236S/H","aliases":["Stop and Dash","Fireball","Yoyo Throw","SD","YYT"]},
 	{"input":"214S/H","aliases":["Stop and Dash Return","Return Fireball","Yoyo Return","SDR","YYR"]},
