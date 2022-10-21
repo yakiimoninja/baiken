@@ -3,6 +3,26 @@
 ### General
  - Code clean up. Removed the use of the `init.json` file.
 
+### Move Aliases
+
+ - **`All Characters`**:
+   - `c.S` added alias `5S`.
+
+ - **`Bridget`**:
+   - `S` added alias `SS`.
+   - `H` added alias `HH`.
+
+ - **`Chipp Zanuff`**
+   - `236P` added alias `P Alpha`, `PA`.
+   - `j.236P` added alias `Air P Alpha`, `APA`.
+   - `236K` added alias `K Alpha`, `KA`.
+   - `j.236K` added alias `Air K Alpha`, `AKA`.
+   - `623S` added alias `Beta`.
+   - `j.623S` added alias `Air Beta`, `AB`.
+   - `236H` added alias `Gamma`.
+
+
+
 &#x200B;
 &#x200B;
 &#x200B;
@@ -200,7 +220,7 @@ Say less my guy.
 
  # Version 0.6.3 Patch Notes.
 
-### General 
+### General
  - Updated some of the frame data.
  
 ### Fixes
@@ -243,7 +263,7 @@ Say less my guy.
 ### General
 
  - Cleaned up some of the code regarding `init.json`.
- - Added additional prefix for Baiken. Now both **`b.`** and **`!`** work as prefixes.
+ - Added additional prefix for Baiken. Now both **`b.`** and **`!`** work as preFixes
  - Made all commands case insensitive. Now `b.f` and `B.F` work.
  - Added some special interactions when `b.f` is used while other frame data bots are present on the same server.
  - Updated [README.md](https://github.com/yakiimoninja/baiken#readme) with character specific stuff and minor adjustments.
