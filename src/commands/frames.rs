@@ -143,7 +143,6 @@ pub async fn frames(
                 == character_move_arg.to_lowercase().trim().replace(".", "") {
                     character_move_arg = alias_data.input.to_string();
                 }
-                println!("character move arg: {}",character_move_arg);
             }
         }
     }
