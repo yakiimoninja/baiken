@@ -3,6 +3,11 @@
 ### General
  - Code clean up. Removed the use of the `init.json` file.
 
+### Nicknames
+ - Added the full name as a nickname for all characters applicable.
+ - **`Sol Badguy`**:
+   - Added nickname `Sol Goodman`.
+   
 ### Move Aliases
 
  - **`All Characters`**:
