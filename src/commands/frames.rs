@@ -123,7 +123,7 @@ pub async fn frames(
     println!("Succesfully read '{}.json' file.", character_arg_altered);
     
 
-    // Checking if aliases for this character exist
+    // Checking if aliases for this characters moves exist
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
     if Path::new(&aliases_path).exists() == true {
         
@@ -143,6 +143,7 @@ pub async fn frames(
                 == character_move_arg.to_lowercase().trim().replace(".", "") {
                     character_move_arg = alias_data.input.to_string();
                 }
+                println!("character move arg: {}",character_move_arg);
             }
         }
     }

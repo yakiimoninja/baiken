@@ -111,7 +111,7 @@ pub async fn hitboxes(
     
     character_found = true;
 
-    // Checking if aliases for this character exist
+    // Checking if aliases for this characters moves exist
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
     if Path::new(&aliases_path).exists() == true {
         
