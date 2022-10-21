@@ -9,8 +9,10 @@
    - `c.S` added alias `5S`.
 
  - **`Bridget`**:
-   - `S` added alias `SS`.
-   - `H` added alias `HH`.
+   - `SS` added alias `5SS`.
+   - `HH` added alias `5HH`.
+   - `236KP` modified alias from `SB` to `SLB` due to alias overlap.
+   - `236KK` modified alias from `SS` to `SLS` due to alias overlap.
 
  - **`Chipp Zanuff`**
    - `236P` added alias `P Alpha`, `PA`.
