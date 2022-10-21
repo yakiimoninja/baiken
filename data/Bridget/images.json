@@ -29,7 +29,7 @@
         ]
     },
     {
-        "input": "S",
+        "input": "SS",
         "move_img": "https://dustloop.com/wiki/images/e/e3/GGST_Bridget_S.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/c/cc/GGST_Bridget_S_1_Hitbox.png",
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "input": "H",
+        "input": "HH",
         "move_img": "https://dustloop.com/wiki/images/b/bc/GGST_Bridget_H.png",
         "hitbox_img": [
             "https://dustloop.com/wiki/images/4/45/GGST_Bridget_H_1_Hitbox.png",
