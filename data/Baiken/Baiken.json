@@ -23,7 +23,7 @@
 	{"input":"j.236K","move":"Air Tatami Gaeshi","damage":"40","guard":"All","invincibility":"","startup":"20","block":"","hit":"","active":"Until Landing","recovery":"Landing+7","counter":"Very Small"},
 	{"input":"41236S","move":"S Kabari","damage":"30","guard":"All","invincibility":"","startup":"31","block":"+2","hit":"+5","active":"11","recovery":"16","counter":"Mid"},
 	{"input":"41236H","move":"H Kabari","damage":"30","guard":"All","invincibility":"","startup":"18","block":"-3","hit":"0","active":"11","recovery":"19","counter":"Mid"},
-	{"input":"41236H~H","move":"Kabari Followup","damage":"48","guard":"All","invincibility":"","startup":"11 [23]","block":"-7","hit":"HKD (+58)","active":"3","recovery":"14","counter":"Mid"},
+	{"input":"41236HH","move":"Kabari Followup","damage":"48","guard":"All","invincibility":"","startup":"11 [23]","block":"-7","hit":"HKD (+58)","active":"3","recovery":"14","counter":"Mid"},
 	{"input":"j.236S","move":"Youzansen","damage":"50","guard":"High","invincibility":"","startup":"9","block":"-14 (TK)","hit":"+6 (TK)","active":"12","recovery":"Landing+7","counter":"Mid"},
 	{"input":"236P","move":"Hiiragi","damage":"130","guard":"","invincibility":"F1~6 Strike","startup":"1","block":"","hit":"KD (+14) [+11]","active":"6","recovery":"32","counter":""},
 	{"input":"236236S","move":"Tsurane Sanzu-watashi","damage":"45×2, 100 [45×2, 60]","guard":"All","invincibility":"1~10 Full","startup":"8+1","block":"-32","hit":"HKD (+42)","active":"3(20)3(36)3","recovery":"48","counter":"Mid"},
