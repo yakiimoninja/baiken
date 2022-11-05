@@ -1,3 +1,14 @@
+# Version 0.7.6 Patch Notes.
+ 
+### Fixes 
+ - Fixed `Faust 5K` broken hitbox image link.
+ - Fixed `Nagoriyuki` aliases command not displaying anything.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.7.5 Patch Notes.
 
 ### General
@@ -27,8 +38,6 @@
    - `623S` added alias `Beta`.
    - `j.623S` added alias `Air Beta`, `AB`.
    - `236H` added alias `Gamma`.
-
-
 
 &#x200B;
 &#x200B;
