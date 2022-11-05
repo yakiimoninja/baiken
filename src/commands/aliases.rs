@@ -114,7 +114,10 @@ pub async fn aliases(
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Move Aliases**__\n```diff";
     
     // Checks what character info is accessing to check later cause of discord message character limit
-    if character_arg_altered != "Faust" && character_arg_altered != "Goldlewis_Dickinson" && character_arg_altered != "Ky_Kiske" {
+    if character_arg_altered != "Faust" 
+        && character_arg_altered != "Goldlewis_Dickinson" 
+        && character_arg_altered != "Ky_Kiske" 
+        && character_arg_altered != "Nagoriyuki" {
         
         // Building the message to be sent by the bot
         for alias_data in aliases_data {
