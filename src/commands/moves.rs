@@ -35,8 +35,8 @@ pub async fn moves(
         panic!("{}", error_msg.replace("\n", " "));
     }
 
-        // Reading the nicknames json
-        let data_from_file = fs::read_to_string("data/nicknames.json")
+    // Reading the nicknames json
+    let data_from_file = fs::read_to_string("data/nicknames.json")
         .expect("\nFailed to read 'nicknames.json' file.");
     
     // Deserializing from nicknames json
