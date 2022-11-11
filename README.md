@@ -30,7 +30,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Commands.
-### Both **`/`** and **`Mentioning Baiken`** can be used to invoke commands.
+### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 - **Command**: `/frames`. \
 Displays the frame data of a move along with an image.\
 Example: `/frames baiken 236K`.
@@ -46,6 +46,9 @@ Example: `/moves sol`.
 - **Command**: `/aliases`.\
 Displays all the aliases for each normal/special/super move of a character.\
 Example: `/aliases leo`.
+
+- **Command**: `/nicknames`.\
+Displays all the nicknames for each character.\
 
 - **Command**: `/update`.\
 **This command only works for owners.** \
