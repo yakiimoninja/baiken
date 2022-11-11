@@ -91,6 +91,7 @@ async fn main() {
             frames::frames(),
             help::help(),
             hitboxes::hitboxes(),
+            nicknames::nicknames(),
             moves::moves(),
             register::register(),
             request::request(),
