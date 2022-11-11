@@ -3,6 +3,7 @@ pub mod easter;
 pub mod frames;
 pub mod help;
 pub mod hitboxes;
+pub mod nicknames;
 pub mod moves;
 pub mod register;
 pub mod request;
