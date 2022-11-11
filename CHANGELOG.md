@@ -1,3 +1,19 @@
+# Version 0.8.0 Patch Notes.
+
+### General
+ - Added new command `nicknames` to print all existing nicknames for characters.
+
+### Nicknames
+
+ - Removed all 2 letter nicknames from file for characters without 2 part names, as redundant. Bot can find characters as is.
+ - **`Zato-1`**:
+   - Added nickname `Zato One`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.7.6 Patch Notes.
  
 ### Fixes 
