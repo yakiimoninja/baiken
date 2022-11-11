@@ -48,7 +48,7 @@ Displays all the aliases for each normal/special/super move of a character.\
 Example: `/aliases leo`.
 
 - **Command**: `/nicknames`.\
-Displays all the nicknames for each character.\
+Displays all the nicknames for each character.
 
 - **Command**: `/update`.\
 **This command only works for owners.** \
