@@ -66,11 +66,11 @@ Displays a help message.
 ## Usage notes.
 
   - **`/` commands can be substituted with direct mentions if preferred.**
-   - Doing so will enable the use of shorthand commands.
-      - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
-      - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
-      - Example: `@Baiken m leo` same as `/moves leo`.
-      - Example: `@Baiken a chipp` same as `/aliases chipp`.
+     - Doing so will enable the use of shorthand commands.
+        - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
+        - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
+        - Example: `@Baiken m leo` same as `/moves leo`.
+        - Example: `@Baiken a chipp` same as `/aliases chipp`.
 
 
 - **All searching is case insensitive.**
