@@ -1,0 +1,20 @@
+[
+	{"input":"c.S","aliases":["5S"]},
+	{"input":"5[D]","aliases":["5D!"]},
+	{"input":"236H","aliases":["Beak Driver","BD"]},
+	{"input":"236HH","aliases":["Beak Driver Followup","BDF"]},
+	{"input":"623S","aliases":["Hawk Baker","HB"]},
+	{"input":"623SS","aliases":["Hawk Baker Followup","HBF"]},
+	{"input":"214S","aliases":["Hoof Stomp","HS"]},
+	{"input":"214SS","aliases":["Hoof Stomp Followup","HSF"]},
+	{"input":"236K","aliases":["Elk Hunt","EH"]},
+	{"input":"236KK","aliases":["Elk Hunt Followup","EHF"]},
+	{"input":"66","aliases":["Gazelle Step","GS"]},
+	{"input":"63214P","aliases":["Still Growing","Eat","Food","SG"]},
+	{"input":"632146H","aliases":["R.T.L.","RTL"]},
+	{"input":"632146HH","aliases":["R.T.L. Followup","RTLF"]},
+	{"input":"236236P","aliases":["Tyrant Barrel","Tyrant Rave","TB","TR"]},
+	{"input":"236236PP","aliases":["Tyrant Barrel Followup","Tyrant Rave Followup","TBF","TRF"]},
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
+]
