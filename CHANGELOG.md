@@ -8,9 +8,9 @@
    - Added nickname `SK`.
 
 ### Move Aliases
-  - **`Sol Badguy`**:
-   - `236P` added alias `Gunflame`.
-   - `214P` added alias `Feint Gunflame`.
+ - **`Sol Badguy`**:
+  - `236P` added alias `Gunflame`.
+  - `214P` added alias `Feint Gunflame`.
  
  - **`Sin Kiske`**:
   - `c.S` added alias `5S`.
