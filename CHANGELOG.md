@@ -8,27 +8,27 @@
    - Added nickname `SK`.
 
 ### Move Aliases
- - **`Sol Badguy`**:
+- **`Sol Badguy`**:
   - `236P` added alias `Gunflame`.
   - `214P` added alias `Feint Gunflame`.
  
  - **`Sin Kiske`**:
-  - `c.S` added alias `5S`.
-	- `5[D]` added alias `5D!`.
-	- `236H` added alias `Beak Driver`, `BD`.
-	- `236HH` added alias `Beak Driver Followup`, `BDF`.
-	- `623S` added alias `Hawk Baker`, `HB`.
-	- `623SS` added alias `Hawk Baker Followup`, `HBF`.
-	- `214S` added alias `Hoof Stomp`, `HS`.
-	- `214SS` added alias `Hoof Stomp Followup`, `HSF`.
-	- `236K` added alias `Elk Hunt`, `EH`.
-	- `236KK` added alias `Elk Hunt Followup`, `EHF`.
-	- `66` added alias `Gazelle Step`, `GS`.
-	- `63214P` added alias `Still Growing`, `Eat`, `Food`, `SG`.
-	- `632146H` added alias `R.T.L.`, `RTL`.
-	- `632146HH` added alias `R.T.L. Followup`, `RTLF`.
-	- `236236P` added alias `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
-	- `236236PP` added alias `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
+   - `c.S` added alias `5S`.
+   - `5[D]` added alias `5D!`.
+   - `236H` added alias `Beak Driver`, `BD`.
+   - `236HH` added alias `Beak Driver Followup`, `BDF`.
+   - `623S` added alias `Hawk Baker`, `HB`.
+   - `623SS` added alias `Hawk Baker Followup`, `HBF`.
+   - `214S` added alias `Hoof Stomp`, `HS`.
+   - `214SS` added alias `Hoof Stomp Followup`, `HSF`.
+   - `236K` added alias `Elk Hunt`, `EH`.
+   - `236KK` added alias `Elk Hunt Followup`, `EHF`.
+   - `66` added alias `Gazelle Step`, `GS`.
+   - `63214P` added alias `Still Growing`, `Eat`, `Food`, `SG`.
+   - `632146H` added alias `R.T.L.`, `RTL`.
+   - `632146HH` added alias `R.T.L. Followup`, `RTLF`.
+   - `236236P` added alias `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
+   - `236236PP` added alias `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
 
 &#x200B;
 &#x200B;
