@@ -32,7 +32,7 @@
 	{"input":"j.47896H","move":"Air Behemoth Typhoon (486)","damage":"70","guard":"All","invincibility":"none","startup":"12","block":"","hit":"KD","active":"20","recovery":"","counter":"Mid"},
 	{"input":"87412H","move":"Behemoth Typhoon (842)","damage":"70","guard":"Low (Guard Crush)","invincibility":"none","startup":"12","block":"+16","hit":"KD","active":"15","recovery":"18","counter":"Mid"},
 	{"input":"j.87412H","move":"Air Behemoth Typhoon (842)","damage":"70","guard":"All","invincibility":"none","startup":"12","block":"","hit":"KD","active":"15","recovery":"","counter":"Mid"},
-	{"input":"89632H","move":"Behemoth Typhoon (862)","damage":"70","guard":"High (Guard Crush)","invincibility":"none","startup":"12","block":"+12(+14 GI)","hit":"KD","active":"15","recovery":"18","counter":"Mid"},
+	{"input":"89632H","move":"Behemoth Typhoon (862)","damage":"70","guard":"High (Guard Crush)","invincibility":"none","startup":"12","block":"+12","hit":"KD","active":"15","recovery":"18","counter":"Mid"},
 	{"input":"j.89632H","move":"Air Behemoth Typhoon (862)","damage":"70","guard":"All","invincibility":"none","startup":"12","block":"","hit":"KD","active":"20","recovery":"","counter":"Mid"},
 	{"input":"214S Level 1","move":"Thunderbird (Level 1)","damage":"10, 30","guard":"All","invincibility":"","startup":"57","block":"","hit":"","active":"24","recovery":"42 Total","counter":"Very Small"},
 	{"input":"214S Level 2","move":"Thunderbird (Level 2)","damage":"10×2, 30","guard":"All","invincibility":"none","startup":"57","block":"","hit":"","active":"84","recovery":"38 Total","counter":"Very Small"},

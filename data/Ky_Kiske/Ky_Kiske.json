@@ -11,7 +11,7 @@
 	{"input":"j.P","move":"j.P","damage":"20","guard":"High","invincibility":"none","startup":"6","block":"","hit":"","active":"3","recovery":"9","counter":"Small"},
 	{"input":"j.K","move":"j.K","damage":"26","guard":"High","invincibility":"none","startup":"7","block":"","hit":"","active":"4","recovery":"8","counter":"Small"},
 	{"input":"j.S","move":"j.S","damage":"32","guard":"High","invincibility":"none","startup":"7","block":"","hit":"","active":"3","recovery":"21","counter":"Mid"},
-	{"input":"j.H","move":"j.H","damage":"44","guard":"High","invincibility":"none","startup":"13","block":"","hit":"","active":"4","recovery":"23","counter":"Mid"},
+	{"input":"j.H","move":"j.H","damage":"44","guard":"High","invincibility":"none","startup":"13","block":"+5 (IAD)","hit":"+8 (IAD)","active":"4","recovery":"23","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"32","guard":"All","invincibility":"none","startup":"13","block":"","hit":"","active":"6","recovery":"15","counter":"Very Small"},
 	{"input":"6P","move":"6P","damage":"34","guard":"All","invincibility":"1-3f Upper Body 4-13f Above Knees","startup":"9","block":"-8","hit":"-5","active":"5","recovery":"17","counter":"Mid"},
 	{"input":"6K","move":"6K","damage":"40","guard":"All","invincibility":"none","startup":"25","block":"+4","hit":"+7","active":"2","recovery":"11","counter":"Mid"},

@@ -17,7 +17,7 @@
 	{"input":"j.P","move":"j.P","damage":"16","guard":"High","invincibility":"None","startup":"5","block":"-","hit":"-","active":"4","recovery":"12","counter":"Small"},
 	{"input":"j.K","move":"j.K","damage":"20","guard":"High","invincibility":"None","startup":"6","block":"-","hit":"-","active":"4","recovery":"12","counter":"Small"},
 	{"input":"j.S","move":"j.S","damage":"32","guard":"High","invincibility":"None","startup":"7","block":"-","hit":"-","active":"4","recovery":"14","counter":"Mid"},
-	{"input":"j.H","move":"j.H","damage":"35","guard":"High","invincibility":"None","startup":"8","block":"-","hit":"-","active":"10","recovery":"25","counter":"Mid"},
+	{"input":"j.H","move":"j.H","damage":"35","guard":"High","invincibility":"None","startup":"8","block":"+1 (IAD)","hit":"+4 (IAD)","active":"10","recovery":"25","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"35","guard":"High","invincibility":"None","startup":"9","block":"-","hit":"-","active":"7","recovery":"27","counter":"Mid"},
 	{"input":"236S","move":"S Tandem Top","damage":"35","guard":"All","invincibility":"9-41F Airborne 42-45F Below Knee","startup":"12","block":"-14","hit":"KD","active":"14","recovery":"Total 45","counter":"Very Small"},
 	{"input":"236H","move":"H Tandem Top","damage":"32×2","guard":"All","invincibility":"18F onwards Airborne","startup":"73","block":"-","hit":"KD","active":"28,6","recovery":"Total 51","counter":"Very Small"},

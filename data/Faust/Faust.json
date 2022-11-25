@@ -26,7 +26,7 @@
 	{"input":"236P","move":"What Could This Be?","damage":"","guard":"","invincibility":"","startup":"26","block":"","hit":"","active":"","recovery":"Total 40","counter":""},
 	{"input":"236S","move":"Mix Mix Mix","damage":"13×4","guard":"All","invincibility":"","startup":"21","block":"-7","hit":"HKD","active":"","recovery":"","counter":"Very Small"},
 	{"input":"j.236S","move":"Air Mix Mix Mix","damage":"13×4","guard":"All","invincibility":"","startup":"21","block":"","hit":"HKD","active":"","recovery":"","counter":"Very Small"},
-	{"input":"236H","move":"Snip Snip Snip","damage":"70","guard":"Ground Throw","invincibility":"","startup":"6","block":"","hit":"","active":"1","recovery":"43","counter":""},
+	{"input":"236H","move":"Snip Snip Snip","damage":"70","guard":"Ground Throw","invincibility":"1-7F Throw","startup":"6","block":"","hit":"","active":"1","recovery":"43","counter":""},
 	{"input":"j.236P","move":"Love","damage":"18, 40","guard":"All","invincibility":"","startup":"27","block":"","hit":"KD","active":"","recovery":"Total 48","counter":"Very Small"},
 	{"input":"j.236P (With Afro)","move":"Love","damage":"18, 60","guard":"All (Guard Crush)","invincibility":"","startup":"27","block":"","hit":"KD","active":"","recovery":"Total 48","counter":"Very Small"},
 	{"input":"214P","move":"P Scarecrow","damage":"28×2 [28×3]","guard":"All","invincibility":"","startup":"54 [84]","block":"-8 [+7]","hit":"HKD","active":"11,12 [11,8,3]","recovery":"10 [7]","counter":"Very Small"},
