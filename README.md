@@ -5,7 +5,6 @@ by providing you with each character's moves, frame data and their hitboxes.**
 ## Table of contents.
   - [Patch notes](https://github.com/yakiimoninja/baiken/releases).
   - [Inviting Baiken to a server](#inviting-the-bot-to-a-server).
-  - [Hosting an instance of the bot](#hosting-an-instance-of-the-bot).
   - [Commands](#commands).
     - [Usage notes](#usage-notes).
     - [Nicknames](data/nicknames.json).
@@ -19,9 +18,6 @@ by providing you with each character's moves, frame data and their hitboxes.**
 - Or scanning the **QR Code** with a Camera or Discord application.
 
 <img src="data/images/baiken_qr.png" width="250" height="250" />
-
-## Hosting an instance of the bot.
-- [Guide to self hosting](https://github.com/yakiimoninja/baiken/wiki/Self-Hosting).
 
 ## Commands.
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
