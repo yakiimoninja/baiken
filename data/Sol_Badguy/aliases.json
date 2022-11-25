@@ -1,8 +1,8 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
 	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236P","aliases":["Gun Flame","Fireball","GF","FB"]},
-	{"input":"214P","aliases":["Gun Flame Feint","Feint","Feint Fireball","GFF","FF"]},
+	{"input":"236P","aliases":["Gun Flame","Fireball","Gunflame","GF","FB"]},
+	{"input":"214P","aliases":["Gun Flame Feint","Feint","Feint Fireball","Feint Gunflame","GFF","FF"]},
 	{"input":"623S","aliases":["Volcanic Viper","S Volcanic Viper","DP","VV"]},
 	{"input":"623H","aliases":["H Volcanic Viper","Heavy DP","HDP","HVV"]},
 	{"input":"j.623S","aliases":["Air Volcanic Viper","Air DP","JDP","JVV"]},
