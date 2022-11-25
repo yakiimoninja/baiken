@@ -81,7 +81,7 @@ Displays a help message.
       - Example: `/frames Anji Needles` = `/frames Anji 236H P` = `/frames Anji ichi`.
    - Charged moves can be found with or without using `[]`.
       - Example `/frames may 46S` = `/frames may [4]6S`.
-   - For a fully charged dust attack the alias `5D!` can be used instead.**
+   - For a fully charged dust attack the alias `5D!` can be used instead.
       - Example: `/frames chipp 5D!`.
 
 ## Character specifics.
