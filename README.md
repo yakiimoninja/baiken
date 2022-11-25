@@ -2,7 +2,6 @@
 **Your favorite one-handed samurai lady helps you learn Guilty Gear Strive \
 by providing you with each character's moves, frame data and their hitboxes.**
 
-
 ## Table of contents.
   - [Patch notes](https://github.com/yakiimoninja/baiken/releases).
   - [Inviting Baiken to a server](#inviting-the-bot-to-a-server).
@@ -15,17 +14,14 @@ by providing you with each character's moves, frame data and their hitboxes.**
 ## Patch notes.
 - You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
 
-
 ## Inviting the bot to a server.
 - Baiken can be **invited** to a server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with a Camera or Discord application.
 
 <img src="data/images/baiken_qr.png" width="250" height="250" />
 
-
 ## Hosting an instance of the bot.
 - [Guide to self hosting](https://github.com/yakiimoninja/baiken/wiki/Self-Hosting).
-
 
 ## Commands.
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
@@ -72,7 +68,6 @@ Displays a help message.
         - Example: `@Baiken m leo` same as `/moves leo`.
         - Example: `@Baiken a chipp` same as `/aliases chipp`.
 
-
 - **All searching is case insensitive.**
   - All names, nicknames, moves and aliases are case agnostic.
   - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
@@ -89,7 +84,7 @@ Displays a help message.
    - For a fully charged dust attack the alias `5D!` can be used instead.**
       - Example: `/frames chipp 5D!`.
 
-## Character specifics
+## Character specifics.
 - **For normals that have levels like Nagoriyuki.**
   - Add the level number next to the normal.
   - For Level 1 `fS`: `/frames nago fs`. 
