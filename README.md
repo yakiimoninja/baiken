@@ -24,9 +24,7 @@ by providing you with each character's moves, frame data and their hitboxes.**
 
 
 ## Hosting an instance of the bot.
-- A bot token is required.
-- A `.env` file with a token inside is required.
-- Lastly execute the compiled code.
+- [Guide to self hosting](https://github.com/yakiimoninja/baiken/wiki/Self-Hosting).
 
 
 ## Commands.
@@ -55,6 +53,10 @@ Displays all the nicknames for each character.
 Meaning that it requires an instance of the source code to use it. \
 Updates the frame data according to [**dustloop**](https://dustloop.com).
 
+- **Command**: `/register`.\
+**This command only works for owners.** \
+Registers all slash commands in the current server or in every server the bot is in.
+
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
 
@@ -63,7 +65,7 @@ Displays a help message.
 
 ## Usage notes.
 
- - ### **`/`** commands can be substituted with direct mentions if prefered.
+  - **`/` commands can be substituted with direct mentions if preferred.**
    - Doing so will enable the use of shorthand commands.
       - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
       - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
@@ -71,27 +73,23 @@ Displays a help message.
       - Example: `@Baiken a chipp` same as `/aliases chipp`.
 
 
-- **Searching is case insensitive.**
-  - Example: `/hitboxes ky dp`.
+- **All searching is case insensitive.**
+  - All names, nicknames, moves and aliases are case agnostic.
+  - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
-- **Searching using the full name of a character isn't necessary.**
-  - Example: `/frames gio 236K`.
+- **Character searching specifics.**
+  - Characters can be found either using a part of their name, or any of the [nicknames](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
+  - Example: `/frames Happy Chaos cs` = `/frames happy cs` = `/frames hc cs`.
 
-- #### **Character nicknames can be used when searching.**
-  - Example: `/moves hc`.
-  - [List of nicknames.](data/nicknames.json)
+- **Move searching specifics.**
+   - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
+      - Example: `/frames Anji Needles` = `/frames Anji 236H P` = `/frames Anji ichi`.
+   - Charged moves can be found with or without using `[]`.
+      - Example `/frames may 46S` = `/frames may [4]6S`.
+   - For a fully charged dust attack the alias `5D!` can be used instead.**
+      - Example: `/frames chipp 5D!`.
 
-- **Aliases instead of inputs can be used when searching for moves.**
-  - Example: `/frames Anji Needles`.
-
-- **When searching for a charged move  the `[]` can be omitted.**
-  - Example: `/frames May [4]6S`.
-  - Example: `/frames may 46S`.
-
-- **For a fully charged dust attack the alias `5D!` can be used instead.**
-  - Example: `/frames chipp 5D!`.
-
-## Character specifics.
+## Character specifics
 - **For normals that have levels like Nagoriyuki.**
   - Add the level number next to the normal.
   - For Level 1 `fS`: `/frames nago fs`. 
@@ -114,7 +112,6 @@ Displays a help message.
   - Regular version: `/frames testament 236S`.
   - Partially charged version: `/frames testament 236S!`.
   - Fully charged version: `/frames testament 236S!!`.
-
 #
 ### Help support the project.
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
