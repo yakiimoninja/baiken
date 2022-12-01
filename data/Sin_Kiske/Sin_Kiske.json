@@ -26,7 +26,7 @@
 	{"input":"214S","move":"Hoof Stomp","damage":"17, 17","guard":"High","invincibility":"6-23 Foot","startup":"21","block":"-11","hit":"-8","active":"3(?)3","recovery":"22","counter":"Mid"},
 	{"input":"214SS","move":"Hoof Stomp Follow-up","damage":"41","guard":"All","invincibility":"","startup":"13","block":"-8","hit":"KD","active":"3","recovery":"22","counter":"Mid"},
 	{"input":"236K","move":"Elk Hunt","damage":"33","guard":"Low","invincibility":"10-30 Low Profile","startup":"24","block":"-8","hit":"-5","active":"7","recovery":"15","counter":"Mid"},
-	{"input":"236K~K","move":"Elk Hunt Follow-up","damage":"41","guard":"Guard Crush","invincibility":"","startup":"13","block":"+8","hit":"KD","active":"3","recovery":"20","counter":"Mid"},
+	{"input":"236KK","move":"Elk Hunt Follow-up","damage":"41","guard":"Guard Crush","invincibility":"","startup":"13","block":"+8","hit":"KD","active":"3","recovery":"20","counter":"Mid"},
 	{"input":"66","move":"Gazelle Step","damage":"","guard":"-","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 24","counter":""},
 	{"input":"63214P","move":"Still Growing","damage":"","guard":"-","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 49","counter":""},
 	{"input":"632146H","move":"R.T.L","damage":"30×2, 60","guard":"All","invincibility":"1~18 All","startup":"10+5","block":"-55","hit":"HKD","active":"12","recovery":"25+32 After Landing","counter":"Mid"},
