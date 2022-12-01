@@ -1,7 +1,7 @@
 [
 	{"input":"5P","move":"5P","damage":"24","guard":"All","invincibility":"","startup":"4","block":"-2","hit":"+1","active":"2","recovery":"10","counter":"Small"},
 	{"input":"5K","move":"5K","damage":"29","guard":"All","invincibility":"","startup":"7","block":"-3","hit":"0","active":"5","recovery":"10","counter":"Small"},
-	{"input":"c.S","move":"c.S","damage":"43","guard":"All","invincibility":"","startup":"7","block":"+1","hit":"+4","active":"6","recovery":"13","counter":"Mid"},
+	{"input":"c.S","move":"c.S","damage":"43","guard":"All","invincibility":"","startup":"7","block":"+1","hit":"+4","active":"6","recovery":"10","counter":"Mid"},
 	{"input":"f.S","move":"f.S","damage":"33","guard":"All","invincibility":"","startup":"9","block":"-7","hit":"-4","active":"6","recovery":"15","counter":"Mid"},
 	{"input":"5H","move":"5H","damage":"47","guard":"All","invincibility":"","startup":"13","block":"-8","hit":"-5","active":"2","recovery":"25","counter":"Large"},
 	{"input":"2P","move":"2P","damage":"21","guard":"All","invincibility":"","startup":"6","block":"-2","hit":"+1","active":"3","recovery":"9","counter":"Small"},
@@ -31,6 +31,5 @@
 	{"input":"j.214214P","move":"Air Kenjyu","damage":"110","guard":"All (Guard Crush)","invincibility":"","startup":"11+3","block":"","hit":"HKD","active":"","recovery":"","counter":"Small"},
 	{"input":"Ground Throw (Tether)","move":"Ground Throw (Tether)","damage":"20,60","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"HKD +60","active":"3","recovery":"38","counter":""},
 	{"input":"Ground Throw (Knockback)","move":"Ground Throw (Knockback)","damage":"20,60","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"HKD +47","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"20,60","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until Landing+10","counter":""},
-	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 22","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"20,60","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until Landing+10","counter":""}
 ]

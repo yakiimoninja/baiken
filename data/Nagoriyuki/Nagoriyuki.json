@@ -42,7 +42,7 @@
 	{"input":"j.D Level 2","move":"j.D Level 2","damage":"60","guard":"High","invincibility":"","startup":"13","block":"N/A","hit":"N/A","active":"3","recovery":"20","counter":"Mid"},
 	{"input":"j.D Level 3","move":"j.D Level 3","damage":"65","guard":"High","invincibility":"","startup":"11","block":"N/A","hit":"N/A","active":"3","recovery":"20","counter":"Mid"},
 	{"input":"j.D Level BR","move":"j.D Level BR","damage":"84","guard":"High","invincibility":"","startup":"11","block":"N/A","hit":"N/A","active":"3","recovery":"20","counter":"Mid"},
-	{"input":"6P","move":"6P","damage":"34","guard":"Mid","invincibility":"1~3F Upper body 4~17F Above Knee","startup":"12","block":"-6","hit":"-3","active":"5","recovery":"15","counter":"Mid"},
+	{"input":"6P","move":"6P","damage":"34","guard":"Mid","invincibility":"1~3F Upper Body 4~17F Above Knee","startup":"12","block":"-6","hit":"-3","active":"5","recovery":"15","counter":"Mid"},
 	{"input":"6K","move":"6K","damage":"35","guard":"Low","invincibility":"","startup":"15","block":"-4","hit":"-1","active":"3","recovery":"15","counter":"Mid"},
 	{"input":"6H Level 1","move":"6H Level 1","damage":"70","guard":"Mid","invincibility":"","startup":"17","block":"-17","hit":"KD","active":"6","recovery":"30","counter":"Large"},
 	{"input":"6H Level 2","move":"6H Level 2","damage":"80","guard":"Mid","invincibility":"","startup":"16","block":"-17","hit":"KD","active":"6","recovery":"30","counter":"Large"},

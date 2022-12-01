@@ -1,7 +1,7 @@
 [
 	{"input":"5P","move":"5P","damage":"20","guard":"All","invincibility":"None","startup":"7","block":"-2","hit":"+1","active":"5","recovery":"7","counter":"Small"},
 	{"input":"5K","move":"5K","damage":"24","guard":"All","invincibility":"None","startup":"7","block":"-3","hit":"0","active":"3","recovery":"12","counter":"Small"},
-	{"input":"c.S","move":"c.S","damage":"15×2","guard":"All","invincibility":"None","startup":"7","block":"+1","hit":"+13","active":"3,3","recovery":"13","counter":"Mid"},
+	{"input":"c.S","move":"c.S","damage":"15×2","guard":"All","invincibility":"None","startup":"7","block":"+1","hit":"+13","active":"3, 3","recovery":"13","counter":"Mid"},
 	{"input":"f.S","move":"f.S","damage":"30","guard":"All","invincibility":"27-30F Head","startup":"9","block":"-7","hit":"-4","active":"2","recovery":"19","counter":"Mid"},
 	{"input":"5H","move":"5H","damage":"42","guard":"All","invincibility":"None","startup":"12","block":"-8","hit":"-5","active":"4","recovery":"23","counter":"Large"},
 	{"input":"5D","move":"5D","damage":"40","guard":"High","invincibility":"None","startup":"20","block":"-15","hit":"0","active":"3","recovery":"26","counter":"Mid"},

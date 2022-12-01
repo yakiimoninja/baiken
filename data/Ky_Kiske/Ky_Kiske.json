@@ -49,6 +49,5 @@
 	{"input":"DI 236236P","move":"DI Sacred Edge","damage":"20×8","guard":"All","invincibility":"none","startup":"4+3","block":"+21","hit":"+24","active":"Until Hit","recovery":"32","counter":"Very Small"},
 	{"input":"214214H","move":"Dragon Install","damage":"80 [88]","guard":"All","invincibility":"none","startup":"11+1","block":"+4","hit":"HKD (+63)","active":"5","recovery":"25","counter":"Very Small"},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"none","startup":"2","block":"","hit":"HKD (+55)","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38+10 Landing","counter":""},
-	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 22","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"none","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38+10 Landing","counter":""}
 ]
