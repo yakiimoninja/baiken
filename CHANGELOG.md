@@ -1,3 +1,21 @@
+# Version 0.8.2 Patch Notes.
+
+### General
+ - Updated frame data.
+ - Updated command usage instructions.
+
+### Nicknames
+ - **`Axl Low`**:
+   - Added nicknames `Brit`,`British`.
+ 
+ - **`Zato-1`**:
+   - Added nickname `Eddie`.
+
+### Move Aliases
+- **`Zato-1`**:
+  - `236K` added alias `Clap`.
+  - `]K[` added aliases `NE Clap`, `NEC`.
+
 # Version 0.8.1 Patch Notes.
 
 ### General
