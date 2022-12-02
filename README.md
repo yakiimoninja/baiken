@@ -68,14 +68,14 @@ Displays a help message.
   - All names, nicknames, moves and aliases are case agnostic.
   - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
-- **Character searching specifics.**
+- **Character searching.**
   - Characters can be found either using a part of their name, or any of the [nicknames](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
   - Example: `/frames Happy Chaos cs` = `/frames happy cs` = `/frames hc cs`.
 
-- **Move searching specifics.**
+- **Move searching.**
    - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
-      - Example: `/frames Anji Needles` = `/frames Anji 236H P` = `/frames Anji ichi`.
-   - Charged moves can be found with or without using `[]`.
+      - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
+   - Charged moves can be found with or without the use of `[]`.
       - Example `/frames may 46S` = `/frames may [4]6S`.
    - For a fully charged dust attack the alias `5D!` can be used instead.
       - Example: `/frames chipp 5D!`.
