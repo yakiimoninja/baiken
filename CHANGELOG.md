@@ -1,3 +1,17 @@
+# Version 0.8.3 Patch Notes.
+
+### General
+ - Updated frame data.
+
+### Move Aliases
+ - **`Nagoriyuki`**:
+  - `f.S Level 1` added alias `fs`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.8.2 Patch Notes.
 
 ### General
@@ -12,9 +26,14 @@
    - Added nickname `Eddie`.
 
 ### Move Aliases
-- **`Zato-1`**:
+ - **`Zato-1`**:
   - `236K` added alias `Clap`.
   - `]K[` added aliases `NE Clap`, `NEC`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
 
 # Version 0.8.1 Patch Notes.
 
