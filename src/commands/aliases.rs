@@ -140,6 +140,7 @@ pub async fn aliases(
     else {
         // Spliting the message that will be sent by the bot
         // Into 3 separate messages cause of the character limit
+        // 1st message builder which is also a reply
         for m in 0..aliases_data.len() / 3 {
             moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
                 + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
@@ -155,7 +156,7 @@ pub async fn aliases(
             moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
         moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
+        ctx.say(&moves_as_msg).await?;
 
         // 2nd message builder
         moves_as_msg = "```diff".to_string();
@@ -176,7 +177,7 @@ pub async fn aliases(
         moves_as_msg = moves_as_msg + &"\n```".to_string();
         ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
 
-        // 3nd message builder
+        // 3rd message builder
         moves_as_msg = "```diff".to_string();
         for m in (aliases_data.len() / 3) * 2..aliases_data.len() {
             moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
