@@ -92,13 +92,36 @@ pub async fn moves(
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Moves**__\n```diff";
 
-    for mframes in move_frames {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &mframes.r#move
-            + "\n+ Input: " + &mframes.input + "\n";
-    }
+    if &character_arg_altered != "Goldlewis_Dickinson"{
 
-    moves_as_msg = moves_as_msg + &"```".to_string();
-    ctx.say(&moves_as_msg).await?;
-        
+        // For every other character move printing
+        for mframes in move_frames {
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &mframes.r#move
+                + "\n+ Input: " + &mframes.input + "\n";
+        }
+    
+        moves_as_msg = moves_as_msg + &"```".to_string();
+        ctx.say(&moves_as_msg).await?;
+    }
+    else{
+        // For Goldlewis move printing
+        // 1st message builder which is also a reply
+        for z in 0..move_frames.len() / 2 {
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].r#move
+                + "\n+ Input: " + &move_frames[z].input + "\n";
+        }
+        moves_as_msg = moves_as_msg + &"```".to_string();
+        ctx.say(&moves_as_msg).await?;
+
+        // 2nd message builder
+        moves_as_msg = "```diff".to_string();
+        for z in (move_frames.len() / 2)..move_frames.len() {
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].r#move
+                + "\n+ Input: " + &move_frames[z].input + "\n";
+        }
+        moves_as_msg = moves_as_msg + &"```".to_string();
+        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
+    }
+    
     Ok(())
 }
