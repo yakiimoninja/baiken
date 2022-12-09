@@ -20,7 +20,7 @@
 	{"input":"2D","move":"2D","damage":"40","guard":"Low","invincibility":"","startup":"17","block":"-8","hit":"HKD","active":"10","recovery":"12","counter":"Large"},
 	{"input":"5D","move":"5D","damage":"45","guard":"High","invincibility":"","startup":"20","block":"-15","hit":"-0","active":"4","recovery":"25","counter":"Mid"},
 	{"input":"5[D]","move":"5[D]","damage":"56","guard":"High","invincibility":"","startup":"28","block":"-10","hit":"KD","active":"4","recovery":"25","counter":"Mid"},
-	{"input":"236K","move":"Trovao","damage":"48","guard":"All","invincibility":"","startup":"27","block":"+4","hit":"+7","active":"10","recovery":"15","counter":"Mid"},
+	{"input":"236K","move":"Trovao","damage":"48","guard":"All","invincibility":"","startup":"27","block":"+4","hit":"+7","active":"10","recovery":"13","counter":"Mid"},
 	{"input":"214K","move":"Sepultura","damage":"38","guard":"All","invincibility":"","startup":"13","block":"-4","hit":"HKD","active":"3","recovery":"20","counter":"Mid"},
 	{"input":"623S","move":"Sol Nascente","damage":"40","guard":"All","invincibility":"upper body invuln 1~6 above the knees 7~9","startup":"7","block":"-15","hit":"KD","active":"8","recovery":"21","counter":"Mid"},
 	{"input":"214S","move":"Sol Poente","damage":"40, 30","guard":"All, High","invincibility":"7~37F Airborne","startup":"[4] 27","block":"-5","hit":"HKD, KD","active":"6(20)3","recovery":"21","counter":"Very Small"},

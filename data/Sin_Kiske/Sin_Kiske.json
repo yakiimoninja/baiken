@@ -18,7 +18,7 @@
 	{"input":"j.K","move":"j.K","damage":"26","guard":"High","invincibility":"","startup":"7","block":"","hit":"","active":"3","recovery":"15","counter":"Small"},
 	{"input":"j.S","move":"j.S","damage":"33","guard":"High","invincibility":"","startup":"9","block":"","hit":"","active":"4","recovery":"21","counter":"Mid"},
 	{"input":"j.H","move":"j.H","damage":"44","guard":"High","invincibility":"","startup":"11","block":"","hit":"","active":"4","recovery":"26","counter":"Mid"},
-	{"input":"j.D","move":"j.D","damage":"41","guard":"High","invincibility":"","startup":"28","block":"-3 at worst","hit":"","active":"Until Landing","recovery":"16","counter":"Mid"},
+	{"input":"j.D","move":"j.D","damage":"41","guard":"High","invincibility":"","startup":"28","block":"-3 at best","hit":"","active":"Until Landing","recovery":"16","counter":"Mid"},
 	{"input":"236H","move":"Beak Driver","damage":"35","guard":"All","invincibility":"","startup":"16","block":"-14","hit":"-11","active":"6","recovery":"22","counter":"Mid"},
 	{"input":"236HH","move":"Beak Driver Follow-up","damage":"47","guard":"All","invincibility":"","startup":"13","block":"-3","hit":"KD","active":"11","recovery":"9","counter":"Mid"},
 	{"input":"623S","move":"Hawk Baker","damage":"20, 30","guard":"All","invincibility":"1-15 Strike","startup":"9","block":"-26","hit":"KD, -22","active":"6(23)4","recovery":"36","counter":"Large, Very Small"},

@@ -23,7 +23,7 @@
 	{"input":"]P[","move":"Pierce","damage":"20×2","guard":"All","invincibility":"","startup":"13","block":"","hit":"KD","active":"3(17)2","recovery":"24","counter":"Very Small"},
 	{"input":"236P","move":"Pierce","damage":"20×2","guard":"All","invincibility":"","startup":"21 [25]","block":"","hit":"KD","active":"3(17)2","recovery":"24","counter":"Very Small"},
 	{"input":"]K[","move":"That's a lot","damage":"20×4","guard":"All","invincibility":"","startup":"19","block":"","hit":"KD","active":"","recovery":"","counter":"Very Small"},
-	{"input":"236K","move":"That's a lot","damage":"20×4","guard":"All","invincibility":"","startup":"27 {31}","block":"+55","hit":"KD","active":"","recovery":"[36 Zato]","counter":"Very Small"},
+	{"input":"236K","move":"That's a lot","damage":"20×4","guard":"All","invincibility":"","startup":"27 [31]","block":"+55","hit":"KD","active":"","recovery":"","counter":"Very Small"},
 	{"input":"]S[","move":"Leap","damage":"20, 50","guard":"All","invincibility":"","startup":"13","block":"","hit":"KD","active":"2×13","recovery":"34","counter":"Very Small"},
 	{"input":"236S","move":"Leap","damage":"20, 50","guard":"All","invincibility":"","startup":"21 {25}","block":"+46","hit":"KD","active":"2×13","recovery":"34 [36 Zato]","counter":"Very Small"},
 	{"input":"]H[","move":"Oppose","damage":"30×3","guard":"All","invincibility":"8~59 Guardpoint","startup":"66","block":"","hit":"KD","active":"3×6","recovery":"(Summon Vanishes)","counter":"Very Small"},
