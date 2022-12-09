@@ -1,3 +1,14 @@
+# Version 0.8.4 Patch Notes.
+
+### Fixes
+ - Fixed `aliases` command spitting `The application did not respond` error.
+ - Fixed `moves` command not showing anything for `Goldlewis`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.8.3 Patch Notes.
 
 ### General
@@ -5,7 +16,7 @@
 
 ### Move Aliases
  - **`Nagoriyuki`**:
-  - `f.S Level 1` added alias `fs`.
+   - `f.S Level 1` added alias `fs`.
 
 &#x200B;
 &#x200B;
