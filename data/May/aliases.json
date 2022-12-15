@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"[4]6S","aliases":["S Mr. Dolphin Horizontal","Dolphin","S Dolphin","Totsugeki","ST","SD","46S"]},
 	{"input":"[4]6H","aliases":["H Mr. Dolphin Horizontal","H Dolphin","H Totsugeki","HT","HD","46H"]},

@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"f.S Level 1","aliases":["f.S","fs"]},
 	{"input":"f.S Level 2","aliases":["f.S2"]},

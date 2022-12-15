@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236P","aliases":["Alpha Blade Horizontal","P Alpha","PA","HAB","ABH"]},
 	{"input":"j.236P","aliases":["Air Alpha Blade Horizontal","Air P Alpha","APA","AHAB","AABH","JHAB","JABH"]},

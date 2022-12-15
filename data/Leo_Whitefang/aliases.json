@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"[s/h] h/s","aliases":["s!h","h!s"]},
 	{"input":"[4]6S","aliases":["Graviert Wurde","Fireball","FB","46S"]},

@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"22H","aliases":["Invite Hell","Spike","Drill"]},
 	{"input":"]P[","aliases":["Negative Edge Pierce","Negative Edge Slap","NE Pierce","NE Slap","NEP","NESL"]},

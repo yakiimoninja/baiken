@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"5[D]","aliases":["5D!"]},
 	{"input":"236P","aliases":["Summon Servant","Summon Minion","Servant","Minion","SS","SM"]},
 	{"input":"236[P]","aliases":["Summon Servant Hold","Summon Minion Hold","Servant Hold","Minion Hold","SSH","SMH"]},

@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
 	{"input":"SS","aliases":["5SS"]},
 	{"input":"HH","aliases":["5HH"]},
 	{"input":"5[D]","aliases":["5D!"]},

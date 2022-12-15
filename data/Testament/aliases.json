@@ -1,5 +1,6 @@
 [	
 	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
     {"input":"5[D]","aliases":["5D!"]},
     {"input":"Stain","aliases":["Stain","SS","Stain","Pop"]},    
     {"input":"236S","aliases":["Grave Reaper","Beast","GR","B"]},
