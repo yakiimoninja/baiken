@@ -14,12 +14,12 @@
 	{"input":"j.H","move":"j.H","damage":"24×2","guard":"High","invincibility":"","startup":"11","block":"","hit":"","active":"4, 8","recovery":"0","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"45","guard":"High","invincibility":"","startup":"9","block":"","hit":"KD","active":"3","recovery":"17","counter":"Mid"},
 	{"input":"6P","move":"6P","damage":"36","guard":"All","invincibility":"1~2F Upper Body 3~13F Above Knees","startup":"9","block":"-11","hit":"KD (+24)","active":"5","recovery":"20","counter":"Mid"},
-	{"input":"6S","move":"6S","damage":"45","guard":"All","invincibility":"","startup":"15","block":"-7","hit":"-4","active":"6","recovery":"20","counter":"Mid"},
+	{"input":"6S","move":"6S","damage":"45","guard":"All","invincibility":"","startup":"15","block":"-9","hit":"-6","active":"6","recovery":"20","counter":"Mid"},
 	{"input":"6H","move":"6H","damage":"60","guard":"All","invincibility":"","startup":"9","block":"-27","hit":"HKD (+9)","active":"3","recovery":"43","counter":"Large"},
 	{"input":"2D","move":"2D","damage":"36","guard":"Low","invincibility":"5~24F Low Profile","startup":"10","block":"-4","hit":"HKD (+49)","active":"3","recovery":"18","counter":"Large"},
 	{"input":"5D","move":"5D","damage":"50","guard":"High","invincibility":"","startup":"20","block":"-15","hit":"±0","active":"3","recovery":"26","counter":"Mid"},
 	{"input":"5[D]","move":"5[D]","damage":"62","guard":"High","invincibility":"","startup":"28","block":"-10","hit":"KD (+36)","active":"3","recovery":"26","counter":"Mid"},
-	{"input":"236P","move":"Gun Flame","damage":"40→35→30→30","guard":"All","invincibility":"","startup":"20","block":"-8","hit":"KD (+39)","active":"10, 10, 10, 10","recovery":"Total 54","counter":"Very Small"},
+	{"input":"236P","move":"Gun Flame","damage":"40→35→30→30","guard":"All","invincibility":"","startup":"18","block":"-10","hit":"KD","active":"8, 8, 8, 8","recovery":"Total 54","counter":"Very Small"},
 	{"input":"214P","move":"Gun Flame (Feint)","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 25","counter":""},
 	{"input":"623S","move":"S Volcanic Viper","damage":"40","guard":"All","invincibility":"1~11F Strike","startup":"9","block":"-28","hit":"KD (+17)","active":"14","recovery":"18+10 after landing","counter":"Mid"},
 	{"input":"623H","move":"H Volcanic Viper","damage":"35, 40 [35, 100]","guard":"All","invincibility":"1~14F Strike","startup":"13","block":"-26","hit":"KD (+18) [HKD (+54)]","active":"5, 11","recovery":"19+10 after landing","counter":"Large, Very Small"},
@@ -34,10 +34,8 @@
 	{"input":"623K","move":"Wild Throw","damage":"120","guard":"Ground Throw","invincibility":"1~7F Throw","startup":"6","block":"","hit":"HKD (+15)","active":"2","recovery":"41","counter":""},
 	{"input":"214S","move":"Night Raid Vortex","damage":"45 [55]","guard":"All","invincibility":"7F til 1F before active Low Profile","startup":"15~31 [32]","block":"-17","hit":"HKD (+66) [HKD (+72)]","active":"2 [8]","recovery":"32 [26]","counter":"Large"},
 	{"input":"41236H","move":"Fafnir","damage":"65","guard":"All (Guard Crush)","invincibility":"","startup":"24","block":"+11","hit":"HKD (+76)","active":"3","recovery":"16","counter":"Mid"},
-	{"input":"632146H","move":"Tyrant Rave","damage":"70, 100 [70, 130]","guard":"All","invincibility":"1~8F Full","startup":"7+2","block":"-44","hit":"HKD (+19) [HKD (+49)]","active":"3(20)20","recovery":"41","counter":"Mid, Very Small"},
+	{"input":"632146H","move":"Tyrant Rave","damage":"70, 100 [70, 130]","guard":"All","invincibility":"1~11F Full","startup":"7+2","block":"-44","hit":"HKD (+19) [HKD (+49)]","active":"3(20)20","recovery":"41","counter":"Mid, Very Small"},
 	{"input":"214214H","move":"Heavy Mob Cemetery","damage":"40, 161","guard":"Ground Throw","invincibility":"14~35F Throw, Guardpoint","startup":"13+7","block":"","hit":"HKD (+27)","active":"16","recovery":"49","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD (+40)","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38/10 landing recovery","counter":""},
-	{"input":"Finish Blow","move":"Finish Blow","damage":"80","guard":"","invincibility":"","startup":"11","block":"","hit":"HKD (+23)","active":"","recovery":"","counter":""},
-	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 22","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38/10 landing recovery","counter":""}
 ]

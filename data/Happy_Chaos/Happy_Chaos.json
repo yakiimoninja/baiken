@@ -10,7 +10,7 @@
 	{"input":"2S","move":"2S","damage":"29","guard":"Low","invincibility":"","startup":"11","block":"-7","hit":"-4","active":"3","recovery":"18","counter":"Mid"},
 	{"input":"2D","move":"2D","damage":"33","guard":"Low","invincibility":"","startup":"10","block":"-8","hit":"KD","active":"3","recovery":"19","counter":"Large"},
 	{"input":"6P","move":"6P","damage":"26","guard":"All","invincibility":"1~3 Upper Body 4~13 Above Knees","startup":"9","block":"-16","hit":"-13","active":"5","recovery":"25","counter":"Mid"},
-	{"input":"6K","move":"6K","damage":"28","guard":"Low","invincibility":"","startup":"14","block":"-7","hit":"-4","active":"5","recovery":"16","counter":"Mid"},
+	{"input":"6K","move":"6K","damage":"28","guard":"Low","invincibility":"","startup":"16","block":"-7","hit":"-4","active":"5","recovery":"16","counter":"Mid"},
 	{"input":"6S","move":"6S","damage":"45","guard":"All","invincibility":"","startup":"12","block":"-14","hit":"KD","active":"7","recovery":"24","counter":"Mid"},
 	{"input":"j.P","move":"j.P","damage":"17","guard":"High","invincibility":"","startup":"5","block":"-","hit":"-","active":"2","recovery":"18","counter":"Small"},
 	{"input":"j.K","move":"j.K","damage":"21","guard":"High","invincibility":"","startup":"7","block":"-","hit":"-","active":"3","recovery":"18","counter":"Small"},
@@ -21,7 +21,7 @@
 	{"input":"236S","move":"At the Ready","damage":"42","guard":"All","invincibility":"","startup":"9","block":"+3","hit":"KD","active":"3","recovery":"13","counter":"Large"},
 	{"input":"236S H","move":"Fire","damage":"30 [20]","guard":"All","invincibility":"","startup":"1","block":"+23","hit":"+26","active":"2","recovery":"","counter":"Very Small"},
 	{"input":"214S","move":"Steady Aim","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"Total 18","counter":""},
-	{"input":"214S H","move":"Fire","damage":"55 [35]","guard":"Guard Crush (43f) [All]","invincibility":"","startup":"1","block":"a href=\\\"/w/GGST/Happy_Chaos/Frame_Data#Fire_Table\\\" title=\\\"GGST/Happy Chaos/Frame Data\\\">More info/a>","hit":"KD","active":"2","recovery":"43","counter":"Very Small"},
+	{"input":"214S H","move":"Fire","damage":"55 [35]","guard":"Guard Crush (43f) [All]","invincibility":"","startup":"1","block":"~","hit":"KD","active":"2","recovery":"43","counter":"Very Small"},
 	{"input":"236S 2H","move":"Cancel Aim","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"0 [9]","counter":""},
 	{"input":"214S 214S","move":"Cancel Aim","damage":"-","guard":"-","invincibility":"","startup":"-","block":"-","hit":"-","active":"-","recovery":"Total 16","counter":""},
 	{"input":"22P","move":"Reload","damage":"-","guard":"-","invincibility":"","startup":"23","block":"-","hit":"-","active":"-","recovery":"23~77 total","counter":""},
@@ -32,6 +32,5 @@
 	{"input":"632146S","move":"Deus Ex Machina","damage":"20, 1×17, 100","guard":"All","invincibility":"","startup":"13+(193 Flash)+7","block":"-25","hit":"KD","active":"","recovery":"","counter":"Small"},
 	{"input":"214214P","move":"Super Focus","damage":"-","guard":"-","invincibility":"","startup":"5","block":"-","hit":"-","active":"(52 Flash)","recovery":"6","counter":""},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"-","hit":"HKD +43","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"-","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""},
-	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 26","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"-","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]

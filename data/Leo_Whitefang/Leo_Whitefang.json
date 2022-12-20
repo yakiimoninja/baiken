@@ -28,7 +28,7 @@
 	{"input":"236H","move":"Kaltes Gestöber Zweit","damage":"41","guard":"All","invincibility":"","startup":"23 [25]","block":"-6 [+2]","hit":"","active":"3","recovery":"22 [16]","counter":"Very Small"},
 	{"input":"214S","move":"Turbulenz","damage":"55","guard":"All","invincibility":"","startup":"21","block":"-8","hit":"","active":"6","recovery":"21","counter":"Large"},
 	{"input":"bt.214K","move":"Gländzendes Dunkel","damage":"115","guard":"Ground Throw","invincibility":"","startup":"30","block":"","hit":"HKD +50","active":"3","recovery":"42","counter":""},
-	{"input":"bt.214H","move":"Blitzschlag","damage":"65","guard":"Guard Crush","invincibility":"","startup":"29","block":"+21","hit":"","active":"3","recovery":"33","counter":"Large"},
+	{"input":"bt.214H","move":"Blitzschlag","damage":"65","guard":"All (Guard Crush)","invincibility":"","startup":"29","block":"+21","hit":"","active":"3","recovery":"33","counter":"Large"},
 	{"input":"632146S","move":"Stahl Wirbel","damage":"170","guard":"All","invincibility":"","startup":"4+1","block":"+14","hit":"","active":"","recovery":"Total 27F","counter":"Very Small"},
 	{"input":"632146H","move":"Leidenschaft des Dirigenten","damage":"20×4,50","guard":"All","invincibility":"1-18","startup":"10+1","block":"-33","hit":"","active":"8(15)12(13)8(10)8(44)6","recovery":"43","counter":"Mid"},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +50","active":"3","recovery":"38","counter":""},

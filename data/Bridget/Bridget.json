@@ -21,8 +21,8 @@
 	{"input":"j.S","move":"j.S","damage":"14×2","guard":"High","invincibility":"","startup":"10","block":"+3 (IAD)","hit":"+6 (IAD)","active":"6","recovery":"15","counter":"Mid"},
 	{"input":"j.H","move":"j.H","damage":"34","guard":"High","invincibility":"","startup":"10","block":"~","hit":"~","active":"4","recovery":"22","counter":"Mid"},
 	{"input":"j.D","move":"j.D","damage":"16×3","guard":"High","invincibility":"","startup":"15","block":"+0 (IAD)","hit":"KD","active":"18","recovery":"16","counter":"Mid"},
-	{"input":"236S/H","move":"Stop and Dash","damage":"30","guard":"All","invincibility":"","startup":"15","block":"-4","hit":"","active":"21","recovery":"3","counter":"Very Small"},
-	{"input":"214S/H","move":"Stop and Dash","damage":"30","guard":"All","invincibility":"","startup":"130","block":"~","hit":"~","active":"~","recovery":"~","counter":"Very Small"},
+	{"input":"236S/H","move":"Stop and Dash","damage":"40","guard":"All","invincibility":"","startup":"15","block":"-4","hit":"","active":"21","recovery":"3","counter":"Very Small"},
+	{"input":"214S/H","move":"Stop and Dash","damage":"40","guard":"All","invincibility":"","startup":"130","block":"~","hit":"~","active":"~","recovery":"~","counter":"Very Small"},
 	{"input":"214K","move":"Rolling Movement","damage":"32","guard":"All","invincibility":"","startup":"20","block":"+16 (Airborne)","hit":"+19 (Airborne)","active":"Until Landing","recovery":"0","counter":"Very Small"},
 	{"input":"623P","move":"Starship","damage":"16X4","guard":"All","invincibility":"1~11F Strike","startup":"9","block":"-28","hit":"KD","active":"3,3,3,3","recovery":"39","counter":"Large"},
 	{"input":"236K","move":"Kick Start My Heart","damage":"29","guard":"All","invincibility":"","startup":"10","block":"-20~+4","hit":"-17~+4","active":"25","recovery":"9","counter":"Mid"},
@@ -31,7 +31,7 @@
 	{"input":"j.236K","move":"Roger Dive","damage":"25, 35","guard":"All","invincibility":"","startup":"25","block":"-5","hit":"","active":"~","recovery":"15","counter":"Very Small"},
 	{"input":"63214P","move":"Rock the Baby","damage":"100","guard":"Ground / Air Throw","invincibility":"4~20F Airborne","startup":"26","block":"N/A","hit":"N/A","active":"2","recovery":"28","counter":""},
 	{"input":"632146S","move":"Loop the Loop","damage":"[10, 1]×6, 10, 80","guard":"Mid","invincibility":"","startup":"9+2","block":"-29","hit":"+","active":"45","recovery":"47","counter":"Mid"},
-	{"input":"632146H","move":"Return of the Killing Machine","damage":"15×5","guard":"All","invincibility":"","startup":"9+1","block":"+8","hit":"~","active":"~","recovery":"~","counter":"Very Small"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"70","guard":"Ground Throw (90000)","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"70","guard":"","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until Landing+10","counter":""}
+	{"input":"632146H","move":"Return of the Killing Machine","damage":"15×7","guard":"All","invincibility":"","startup":"9+1","block":"+8","hit":"~","active":"~","recovery":"~","counter":"Very Small"},
+	{"input":"6D or 4D","move":"Ground Throw","damage":"70","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"38","counter":""},
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"70","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until Landing+10","counter":""}
 ]

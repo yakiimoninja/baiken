@@ -16,13 +16,13 @@
 	{"input":"j.2H","move":"j.2H","damage":"40","guard":"High","invincibility":"","startup":"13","block":"","hit":"","active":"Until L","recovery":"6","counter":"Very Small"},
 	{"input":"6P","move":"6P","damage":"35","guard":"All","invincibility":"1-3 upper body 4-17 above knees","startup":"12","block":"-7","hit":"KD","active":"6","recovery":"18","counter":"Mid"},
 	{"input":"6K","move":"6K","damage":"35","guard":"High","invincibility":"","startup":"20","block":"-2","hit":"+1","active":"5","recovery":"11","counter":"Very Small"},
-	{"input":"3K","move":"3K","damage":"35","guard":"Low","invincibility":"","startup":"11","block":"-13","hit":"KD","active":"6","recovery":"21","counter":"Very Small"},
+	{"input":"3K","move":"3K","damage":"35","guard":"Low","invincibility":"","startup":"11","block":"-10","hit":"KD","active":"9","recovery":"15","counter":"Very Small"},
 	{"input":"6H","move":"6H","damage":"60 [90]","guard":"All [All (Guard Crush)]","invincibility":"","startup":"16 [40]","block":"-8 [+8]","hit":"-5[KD]","active":"6 [6]","recovery":"24 [24]","counter":"Large"},
 	{"input":"2D","move":"2D","damage":"30","guard":"Low","invincibility":"","startup":"10","block":"-7","hit":"HKD","active":"7","recovery":"17","counter":"Large"},
 	{"input":"5D","move":"5D","damage":"50","guard":"High","invincibility":"","startup":"20","block":"-15","hit":"0","active":"3","recovery":"26","counter":"Mid"},
 	{"input":"5[D]","move":"5[D]","damage":"62","guard":"High","invincibility":"","startup":"28","block":"-10","hit":"KD","active":"3","recovery":"26","counter":"Mid"},
-	{"input":"[4]6S","move":"S Mr. Dolphin Horizontal","damage":"30","guard":"All","invincibility":"","startup":"7","block":"-5","hit":"-2","active":"9 [18]","recovery":"11 (26 OH)","counter":"Mid"},
-	{"input":"[4]6H","move":"H Mr. Dolphin Horizontal","damage":"40","guard":"All","invincibility":"","startup":"25","block":"+5","hit":"+8","active":"9 [18]","recovery":"11 (20 OH)","counter":"Mid"},
+	{"input":"[4]6S","move":"S Mr. Dolphin Horizontal","damage":"30","guard":"All","invincibility":"","startup":"7","block":"-3","hit":"0","active":"9 [18]","recovery":"11 (24 OH)","counter":"Mid"},
+	{"input":"[4]6H","move":"H Mr. Dolphin Horizontal","damage":"40","guard":"All","invincibility":"","startup":"25","block":"+7","hit":"+8","active":"9 [18]","recovery":"11 (18 OH)","counter":"Mid"},
 	{"input":"[2]8S","move":"S Mr. Dolphin Vertical","damage":"40","guard":"All→High","invincibility":"","startup":"6","block":"0 (Airborne)","hit":"KD→+3 (Airborne)","active":"19","recovery":"7 (21 OH)","counter":"Mid"},
 	{"input":"[2]8H","move":"H Mr. Dolphin Vertical","damage":"45","guard":"All→High","invincibility":"","startup":"11","block":"+6 (Airborne)","hit":"HKD→+9 (Airborne)","active":"27","recovery":"8 (19 OH)","counter":"Mid"},
 	{"input":"623K","move":"Overhead Kiss","damage":"30, 40","guard":"Throw","invincibility":"1~6F Throw","startup":"6","block":"N/A","hit":"HKD","active":"1","recovery":"39","counter":""},
@@ -32,6 +32,5 @@
 	{"input":"632146H","move":"The Wonderful and Dynamic Goshogawara","damage":"80, 100","guard":"All","invincibility":"1~21 Full","startup":"6+4","block":"-21","hit":"HKD","active":"12(22)10","recovery":"55","counter":"Mid"},
 	{"input":"j.632146H","move":"Air The Wonderful and Dynamic Goshogawara","damage":"80, 100","guard":"All","invincibility":"1~21 Full","startup":"6+4","block":"-21","hit":"HKD","active":"12(22+)10","recovery":"54","counter":"Mid"},
 	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"","hit":"HKD +48","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""},
-	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 22","counter":""}
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"","hit":"HKD","active":"3","recovery":"Until landing+10","counter":""}
 ]

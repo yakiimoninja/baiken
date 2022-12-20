@@ -27,7 +27,6 @@
 	{"input":"j.214S","move":"Air Sol Poente","damage":"20, 30","guard":"All, High","invincibility":"","startup":"[4] 27","block":"","hit":"HKD, KD","active":"6(20)3","recovery":"Until L+12","counter":"Very Small"},
 	{"input":"632146H","move":"Ventania","damage":"21×4, 84","guard":"All","invincibility":"1~10F Full","startup":"5+4","block":"-37","hit":"HKD","active":"4(4)4(4)4(4)4(4)7","recovery":"49","counter":"Mid"},
 	{"input":"j.236236H","move":"Tempestade","damage":"42, 10×5, 21, 31","guard":"All","invincibility":"","startup":"3+1","block":"0 ~ +6","hit":"HKD","active":"Until L","recovery":"","counter":"Mid"},
-	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD +38","active":"3","recovery":"38","counter":""},
-	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Throw","invincibility":"","startup":"2","block":"N/A","hit":"KD","active":"3","recovery":"Until L+10","counter":""},
-	{"input":"Dash Cancel","move":"Dash Cancel","damage":"","guard":"","invincibility":"","startup":"","block":"","hit":"","active":"","recovery":"Total 22","counter":""}
+	{"input":"6D or 4D","move":"Ground Throw","damage":"80","guard":"Ground Throw","invincibility":"","startup":"2","block":"N/A","hit":"HKD +39","active":"3","recovery":"38","counter":""},
+	{"input":"j.6D or j.4D","move":"Air Throw","damage":"80","guard":"Air Throw","invincibility":"","startup":"2","block":"N/A","hit":"KD","active":"3","recovery":"Until L+10","counter":""}
 ]
