@@ -1,3 +1,20 @@
+# Version 0.8.5 Patch Notes.
+
+### General
+ - Updated frame data.
+
+### Move Aliases
+ - **`All Characters`**:
+   - `2D` added alias `Sweep`.
+ 
+ - **`Sin Kiske`**:
+   - `632S` added alias `DP`.
+   - `632SS` added aliases `DP Followup`, `DPF`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
 # Version 0.8.4 Patch Notes.
 
 ### Fixes
