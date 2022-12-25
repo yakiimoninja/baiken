@@ -23,16 +23,19 @@ pub struct CharInfo {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Frames {
     input: String,
-    r#move: String,
+    name: String,
     damage: String,
     guard: String,
-    invincibility: String,
     startup: String,
-    block: String,
-    hit: String,
     active: String,
     recovery: String,
+    hit: String,
+    block: String,
+    level: String,
     counter: String,
+    scaling: String,
+    riscgain: String,
+    invincibility: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
