@@ -58,15 +58,7 @@ pub async fn frames(
     // Initializing variables for the embed
     // They must not be empty cause then the embed wont send
     let mut image_embed = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/no_image.png".to_string();
-    let mut damage_embed = "-".to_string();
-    let mut guard_embed = "-".to_string();
-    let mut invin_embed = "-".to_string();
-    let mut startup_embed = "-".to_string();
-    let mut hit_embed = "-".to_string();
-    let mut block_embed = "-".to_string();
-    let mut active_embed = "-".to_string();
-    let mut recovery_embed = "-".to_string();
-    let mut counter_embed = "-".to_string();
+
 
     // Reading the nicknames json
     let data_from_file = fs::read_to_string("data/nicknames.json")
@@ -160,7 +152,7 @@ pub async fn frames(
         // Iterating through the moves of the json file to find the move requested
         if mframes.input.to_string().to_lowercase().replace(".", "") 
         == character_move_arg.to_string().to_lowercase().replace(".", "")
-        || mframes.r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+        || mframes.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
             
             
             move_found = true;
@@ -181,33 +173,6 @@ pub async fn frames(
                         break;
                     }
                 }
-            }
-            if mframes.damage.is_empty() == false {
-                damage_embed = mframes.damage.to_string();
-            }
-            if mframes.guard.is_empty() == false {
-                guard_embed = mframes.guard.to_string();
-            }
-            if mframes.invincibility.is_empty() == false {
-                invin_embed = mframes.invincibility.to_string();
-            }
-            if mframes.startup.is_empty() == false {
-                startup_embed = mframes.startup.to_string();
-            }
-            if mframes.hit.is_empty() == false {
-                hit_embed = mframes.hit.to_string();
-            }
-            if mframes.block.is_empty() == false {
-                block_embed = mframes.block.to_string();
-            }
-            if mframes.active.is_empty() == false {
-                active_embed = mframes.active.to_string();
-            }
-            if mframes.recovery.is_empty() == false {
-                recovery_embed = mframes.recovery.to_string();
-            }
-            if mframes.counter.is_empty() == false {
-            counter_embed = mframes.counter.to_string();
             }
 
             // Debugging prints
@@ -237,15 +202,19 @@ pub async fn frames(
                     e.title(&title_embed);
                     //e.description("This is a description");
                     e.image(&image_embed);
-                    e.fields(vec![("Damage", &damage_embed, true),
-                                ("Guard", &guard_embed, true),
-                                ("Invinciblity", &invin_embed, true),
-                                ("Startup", &startup_embed, true),
-                                ("On Hit", &hit_embed, true),
-                                ("On Block", &block_embed, true),
-                                ("Active", &active_embed, true),
-                                ("Recovery", &recovery_embed, true),
-                                ("Counter", &counter_embed, true)]);
+                    e.fields(vec![
+                        ("Damage", &mframes.damage.to_string(), true),
+                        ("Guard", &mframes.guard.to_string(), true),
+                        ("Invinciblity", &mframes.invincibility.to_string(), true),
+                        ("Startup", &mframes.startup.to_string(), true),
+                        ("Active", &mframes.active.to_string(), true),
+                        ("Recovery", &mframes.recovery.to_string(), true),
+                        ("On Hit", &mframes.hit.to_string(), true),
+                        ("On Block", &mframes.block.to_string(), true),
+                        ("Level", &mframes.level.to_string(), true),
+                        ("Risc Gain", &mframes.riscgain.to_string(), true),
+                        ("Scaling", &mframes.scaling.to_string(), true),
+                        ("Counter", &mframes.counter.to_string(), true)]);
                     //e.field("This is the third field", "This is not an inline field", false);
                     e
                 });
