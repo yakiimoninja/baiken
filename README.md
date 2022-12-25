@@ -43,7 +43,8 @@ Displays all the nicknames for each character.
 - **Command**: `/update`.\
 **This command only works for owners.** \
 Meaning that it requires an instance of the source code to use it. \
-Updates the frame data according to [**dustloop**](https://dustloop.com).
+Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). \
+Example: `/update frames all`
 
 - **Command**: `/register`.\
 **This command only works for owners.** \
