@@ -96,7 +96,7 @@ pub async fn moves(
 
         // For every other character move printing
         for mframes in move_frames {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &mframes.r#move
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &mframes.name
                 + "\n+ Input: " + &mframes.input + "\n";
         }
     
@@ -107,7 +107,7 @@ pub async fn moves(
         // For Goldlewis move printing
         // 1st message builder which is also a reply
         for z in 0..move_frames.len() / 2 {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].r#move
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
                 + "\n+ Input: " + &move_frames[z].input + "\n";
         }
         moves_as_msg = moves_as_msg + &"```".to_string();
@@ -116,7 +116,7 @@ pub async fn moves(
         // 2nd message builder
         moves_as_msg = "```diff".to_string();
         for z in (move_frames.len() / 2)..move_frames.len() {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].r#move
+            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
                 + "\n+ Input: " + &move_frames[z].input + "\n";
         }
         moves_as_msg = moves_as_msg + &"```".to_string();

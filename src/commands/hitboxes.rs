@@ -146,7 +146,7 @@ pub async fn hitboxes(
         // Iterating through the moves of the json file to find the move requested
         if mframes.input.to_string().to_lowercase().replace(".", "") 
         == character_move_arg.to_string().to_lowercase().replace(".", "")
-        || mframes.r#move.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+        || mframes.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
             
             for img_links in image_links {
                 // Iterating through the image.json to find the move's hitbox links
