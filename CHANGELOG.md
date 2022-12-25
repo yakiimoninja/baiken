@@ -1,3 +1,35 @@
+# Version 0.9.0 Patch Notes.
+
+### General
+  - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the `frames` commands.
+  - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the character json files.
+  - Completely reworked how data is being parsed from dustloop which cut the `update` time to less than half.
+  - Added auto parsing of images and hitboxes instead of grabbing them manually.
+  - Reworked the `update` command to update frames and or data for all or specific characters.
+  - Updated frame data.
+
+### Nicknames
+  - **`Ramlethal Valentine`**:
+    - Added nicknames `Borgar`.
+  
+  - **`Happy Chaos`**:
+    - Added nicknames `Asshole`.
+
+### Move Aliases
+  - **`Potemkin`**:
+    - `632146P` added alias `Hug`.
+
+  - **`Potemkin`**:
+    - `632146P` added alias `Super Hug`.
+  
+  - **`Happy Chaos`**:
+    - `632146P` added alias `Balls`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.8.5 Patch Notes.
 
 ### General
@@ -15,6 +47,7 @@
 &#x200B;
 &#x200B;
 &#x200B;
+
 # Version 0.8.4 Patch Notes.
 
 ### Fixes
