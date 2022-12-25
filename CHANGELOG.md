@@ -3,8 +3,8 @@
 ### General
   - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the `frames` commands.
   - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the character json files.
-  - Completely reworked how data is being parsed from dustloop which cut the `update` time to less than half.
-  - Added auto parsing of images and hitboxes instead of grabbing them manually.
+  - Completely reworked how framedata is being parsed from dustloop which cut the `update` time to less than half.
+  - Added auto parsing of images and hitboxes instead of having to grab them manually.
   - Reworked the `update` command to update frames and or data for all or specific characters.
   - Updated frame data.
 
