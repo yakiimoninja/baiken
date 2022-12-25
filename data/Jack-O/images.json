@@ -1,260 +1,276 @@
 [
-    {
-        "input": "5P",
-        "move_img": "https://dustloop.com/wiki/images/0/08/GGST_Jack-O_5P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/e/e3/GGST_JackO_5P_Hitbox.png"
-        ]
-    },
-    {
-        "input": "5K",
-        "move_img": "https://dustloop.com/wiki/images/f/fd/GGST_Jack-O_5K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/a/a7/GGST_JackO_5K_Hitbox.png"
-        ]
-    },
-    {
-        "input": "c.S",
-        "move_img": "https://dustloop.com/wiki/images/5/59/GGST_Jack-O_cS.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/7/75/GGST_JackO_cS_Hitbox.png"
-        ]
-    },
-    {
-        "input": "f.S",
-        "move_img": "https://dustloop.com/wiki/images/e/e8/GGST_Jack-O_fS.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/0/00/GGST_Jack-O_far_Slash_Hitbox_1.png",
-            "https://dustloop.com/wiki/images/f/fd/GGST_Jack-O_far_Slash_Hitbox_2.png"
-        ]
-    },
-    {
-        "input": "5H",
-        "move_img": "https://dustloop.com/wiki/images/2/27/GGST_Jack-O_5H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/27/GGST_Jack-O_5H.png"
-        ]
-    },
-    {
-        "input": "2P",
-        "move_img": "https://dustloop.com/wiki/images/4/46/GGST_Jack-O_2P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/8/85/GGST_JackO_2P_Hitbox.png"
-        ]
-    },
-    {
-        "input": "2K",
-        "move_img": "https://dustloop.com/wiki/images/9/92/GGST_Jack-O_2K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/1/14/GGST_JackO_2K_Hitbox.png"
-        ]
-    },
-    {
-        "input": "2S",
-        "move_img": "https://dustloop.com/wiki/images/f/f4/GGST_Jack-O_2S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/bc/GGST_JackO_2S_Hitbox.png"
-        ]
-    },
-    {
-        "input": "2H",
-        "move_img": "https://dustloop.com/wiki/images/a/ad/GGST_Jack-O_2H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/6/63/GGST_Jack-O_2H_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.P",
-        "move_img": "https://dustloop.com/wiki/images/5/52/GGST_Jack-O_jP.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/3/30/GGST_JackO_jP_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.K",
-        "move_img": "https://dustloop.com/wiki/images/6/62/GGST_Jack-O_jK.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/9/9f/GGST_JackO_jK_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.S",
-        "move_img": "https://dustloop.com/wiki/images/5/52/GGST_Jack-O_jS.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/c/c2/GGST_JackO_jS_1_Hitbox.png",
-            "https://dustloop.com/wiki/images/c/c2/GGST_JackO_jS_2_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.H",
-        "move_img": "https://dustloop.com/wiki/images/b/be/GGST_Jack-O_jH.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/7/77/GGST_JackO_jH_1_Hitbox.png",
-            "https://dustloop.com/wiki/images/b/b0/GGST_JackO_jH_2_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.D",
-        "move_img": "https://dustloop.com/wiki/images/e/e2/GGST_Jack-O_jD.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/29/GGST_JackO_jD_Hitbox.png"
-        ]
-    },
-    {
-        "input": "6P",
-        "move_img": "https://dustloop.com/wiki/images/f/f9/GGST_Jack-O_6P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/20/GGST_JackO_6P_Hitbox.png"
-        ]
-    },
-    {
-        "input": "6H",
-        "move_img": "https://dustloop.com/wiki/images/7/75/GGST_Jack-O_6H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/9/90/GGST_JackO_6H_1_Hitbox.png",
-            "https://dustloop.com/wiki/images/4/41/GGST_JackO_6H_2_short_Hitbox.png",
-            "https://dustloop.com/wiki/images/d/da/GGST_JackO_6H_2_long_Hitbox.png"
-        ]
-    },
-    {
-        "input": "2D",
-        "move_img": "https://dustloop.com/wiki/images/b/be/GGST_Jack-O_2D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/4/4b/GGST_Jack-O_2D_Hitbox.png"
-        ]
-    },
-    {
-        "input": "5D",
-        "move_img": "https://dustloop.com/wiki/images/c/ca/GGST_Jack-O_5D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/ba/GGST_JackO_5D_Hitbox.png"
-        ]
-    },
-    {
-        "input": "5[D]",
-        "move_img": "https://dustloop.com/wiki/images/c/ca/GGST_Jack-O_5D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/ba/GGST_JackO_5D_Hitbox.png"
-        ]
-    },
-    {
-        "input": "236P",
-        "move_img": "https://dustloop.com/wiki/images/3/37/GGST_Jack-O_Summon_Servant.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "236[P]",
-        "move_img": "https://dustloop.com/wiki/images/3/37/GGST_Jack-O_Summon_Servant.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "2P (near Servant)",
-        "move_img": "https://dustloop.com/wiki/images/a/ab/GGST_JackO_Pick_Up_Servant.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "6P/6K/6S/6H/6D while holding Servant",
-        "move_img": "https://dustloop.com/wiki/images/8/8b/GGST_JackO_Throw_Servant.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "D while holding Servant",
-        "move_img": "https://dustloop.com/wiki/images/1/1f/GGST_JackO_Release_Servant.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "214P",
-        "move_img": "https://dustloop.com/wiki/images/c/ca/GGST_Jack-O_214P.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "214K",
-        "move_img": "https://dustloop.com/wiki/images/1/15/GGST_Jack-O_214K.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "214S",
-        "move_img": "https://dustloop.com/wiki/images/6/62/GGST_Jack-O_214S.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "214H",
-        "move_img": "https://dustloop.com/wiki/images/e/ec/GGST_Jack-O_214H.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "236K",
-        "move_img": "https://dustloop.com/wiki/images/1/11/GGST_Jack-O_236K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/b0/GGST_JackO_Servant_Shoot_Hitbox.png",
-            "https://dustloop.com/wiki/images/1/11/GGST_JackO_Servant_Shoot_Air_Hitbox.png"
-        ]
-    },
-    {
-        "input": "Bounced Servant",
-        "move_img": "",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "Launched Servant",
-        "move_img": "",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "632146P",
-        "move_img": "https://dustloop.com/wiki/images/6/68/GGST_JackO_Forever_Elysion_Driver.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/1/1f/GGST_JackO_Forever_Elysion_Driver_Hitbox.png"
-        ]
-    },
-    {
-        "input": "236236S",
-        "move_img": "https://dustloop.com/wiki/images/8/85/GGST_JackO_Cheer_Servant_On_S.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "236236H",
-        "move_img": "https://dustloop.com/wiki/images/7/7d/GGST_JackO_Cheer_Servant_On_H.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "6D or 4D",
-        "move_img": "https://dustloop.com/wiki/images/9/91/GGST_JackO_Ground_Throw.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "j.6D or j.4D",
-        "move_img": "https://dustloop.com/wiki/images/7/79/GGST_JackO_Air_Throw.png",
-        "hitbox_img": [
-            ""
-        ]
-    }
+	{
+  "input": "2D",
+  "move_img": "https://www.dustloop.com/wiki/images/b/be/GGST_Jack-O_2D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/4/4b/GGST_Jack-O_2D_Hitbox.png"
+  ]
+},
+	{
+  "input": "2H",
+  "move_img": "https://www.dustloop.com/wiki/images/a/ad/GGST_Jack-O_2H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/6/63/GGST_Jack-O_2H_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/4/46/GGST_Jack-O_2H_Hitbox_2.png"
+  ]
+},
+	{
+  "input": "2K",
+  "move_img": "https://www.dustloop.com/wiki/images/9/92/GGST_Jack-O_2K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/14/GGST_JackO_2K_Hitbox.png"
+  ]
+},
+	{
+  "input": "2P",
+  "move_img": "https://www.dustloop.com/wiki/images/4/46/GGST_Jack-O_2P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/85/GGST_JackO_2P_Hitbox.png"
+  ]
+},
+	{
+  "input": "2S",
+  "move_img": "https://www.dustloop.com/wiki/images/f/f4/GGST_Jack-O_2S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/bc/GGST_JackO_2S_Hitbox.png"
+  ]
+},
+	{
+  "input": "5D",
+  "move_img": "https://www.dustloop.com/wiki/images/c/ca/GGST_Jack-O_5D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/ba/GGST_JackO_5D_Hitbox.png"
+  ]
+},
+	{
+  "input": "5H",
+  "move_img": "https://www.dustloop.com/wiki/images/2/27/GGST_Jack-O_5H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/5/58/GGST_JackO_5H_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/0/0e/GGST_JackO_5H_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "5K",
+  "move_img": "https://www.dustloop.com/wiki/images/f/fd/GGST_Jack-O_5K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/a7/GGST_JackO_5K_Hitbox.png"
+  ]
+},
+	{
+  "input": "5P",
+  "move_img": "https://www.dustloop.com/wiki/images/0/08/GGST_Jack-O_5P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/e/e3/GGST_JackO_5P_Hitbox.png"
+  ]
+},
+	{
+  "input": "5[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/c/ca/GGST_Jack-O_5D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/ba/GGST_JackO_5D_Hitbox.png"
+  ]
+},
+	{
+  "input": "6H",
+  "move_img": "https://www.dustloop.com/wiki/images/5/52/GGST_JackO_6H_1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/90/GGST_JackO_6H_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/4/41/GGST_JackO_6H_2_short_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/d/da/GGST_JackO_6H_2_long_Hitbox.png"
+  ]
+},
+	{
+  "input": "6P",
+  "move_img": "https://www.dustloop.com/wiki/images/f/f9/GGST_Jack-O_6P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/20/GGST_JackO_6P_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/3/38/GGST_JackO_6P_Hitbox2.png"
+  ]
+},
+	{
+  "input": "c.S",
+  "move_img": "https://www.dustloop.com/wiki/images/5/59/GGST_Jack-O_cS.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/75/GGST_JackO_cS_Hitbox.png"
+  ]
+},
+	{
+  "input": "f.S",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e8/GGST_Jack-O_fS.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/0/00/GGST_Jack-O_far_Slash_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/f/fd/GGST_Jack-O_far_Slash_Hitbox_2.png"
+  ]
+},
+	{
+  "input": "j.D",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e2/GGST_Jack-O_jD.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/29/GGST_JackO_jD_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.H",
+  "move_img": "https://www.dustloop.com/wiki/images/b/be/GGST_Jack-O_jH.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/77/GGST_JackO_jH_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/b0/GGST_JackO_jH_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.K",
+  "move_img": "https://www.dustloop.com/wiki/images/6/62/GGST_Jack-O_jK.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/9f/GGST_JackO_jK_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.P",
+  "move_img": "https://www.dustloop.com/wiki/images/5/52/GGST_Jack-O_jP.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/3/30/GGST_JackO_jP_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.S",
+  "move_img": "https://www.dustloop.com/wiki/images/5/52/GGST_Jack-O_jS.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/c/c2/GGST_JackO_jS_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/c/c2/GGST_JackO_jS_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "6D or 4D",
+  "move_img": "https://www.dustloop.com/wiki/images/9/91/GGST_JackO_Ground_Throw.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "j.6D or j.4D",
+  "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_JackO_Air_Throw.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "214H",
+  "move_img": "https://www.dustloop.com/wiki/images/e/ec/GGST_Jack-O_214H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/da/GGST_JackO_Countdown_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/9/9b/GGST_JackO_Countdown_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "214K",
+  "move_img": "https://www.dustloop.com/wiki/images/1/15/GGST_Jack-O_214K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/ac/GGST_JackO_Attack_Command_Hitbox.png"
+  ]
+},
+	{
+  "input": "214P",
+  "move_img": "https://www.dustloop.com/wiki/images/c/ca/GGST_Jack-O_214P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/8d/GGST_JackO_Recover_Servant_Hitbox.png"
+  ]
+},
+	{
+  "input": "214S",
+  "move_img": "https://www.dustloop.com/wiki/images/6/62/GGST_Jack-O_214S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/c/cb/GGST_JackO_Defend_Command_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/0/0d/GGST_JackO_Defend_Command_Held_Hitbox.png"
+  ]
+},
+	{
+  "input": "236K",
+  "move_img": "https://www.dustloop.com/wiki/images/1/11/GGST_Jack-O_236K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b0/GGST_JackO_Servant_Shoot_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/1/11/GGST_JackO_Servant_Shoot_Air_Hitbox.png"
+  ]
+},
+	{
+  "input": "236P",
+  "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Jack-O_Summon_Servant.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/ba/GGST_JackO_Summon_Servant_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/8/8a/GGST_JackO_Summon_Servant_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "236[P]",
+  "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Jack-O_Summon_Servant.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/ba/GGST_JackO_Summon_Servant_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/8/8a/GGST_JackO_Summon_Servant_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "2P (near Servant)",
+  "move_img": "https://www.dustloop.com/wiki/images/a/ab/GGST_JackO_Pick_Up_Servant.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/3/34/GGST_JackO_Pick_Up_Servant_Hitbox.png"
+  ]
+},
+	{
+  "input": "6P/6K/6S/6H/6D while holding Servant",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8b/GGST_JackO_Throw_Servant.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/6/6f/GGST_JackO_Throw_Servant_Hitbox.png"
+  ]
+},
+	{
+  "input": "Bounced Servant",
+  "move_img": "",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "D while holding Servant",
+  "move_img": "https://www.dustloop.com/wiki/images/1/1f/GGST_JackO_Release_Servant.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/2d/GGST_JackO_Release_Servant_Hitbox.png"
+  ]
+},
+	{
+  "input": "Launched Servant",
+  "move_img": "",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "S while holding Servant",
+  "move_img": "https://www.dustloop.com/wiki/images/6/62/GGST_Jack-O_214S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/c/cb/GGST_JackO_Defend_Command_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/0/0d/GGST_JackO_Defend_Command_Held_Hitbox.png"
+  ]
+},
+	{
+  "input": "236236H",
+  "move_img": "https://www.dustloop.com/wiki/images/7/7d/GGST_JackO_Cheer_Servant_On_H.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236236S",
+  "move_img": "https://www.dustloop.com/wiki/images/8/85/GGST_JackO_Cheer_Servant_On_S.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "632146P",
+  "move_img": "https://www.dustloop.com/wiki/images/3/31/GGST_JackO_Forever_Elysion_Driver_Hit.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/1f/GGST_JackO_Forever_Elysion_Driver_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/0/0b/GGST_JackO_Forever_Elysion_Driver_Whiff_Hitbox.png"
+  ]
+}
 ]

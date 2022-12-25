@@ -1,253 +1,260 @@
 [
-    {
-        "input": "5P",
-        "move_img": "https://dustloop.com/wiki/images/a/a9/GGST_Axl_Low_5P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/a/a1/GGST_Axl_5P_Hitbox.png"
-        ]
-    },
-    {
-        "input": "5K",
-        "move_img": "https://dustloop.com/wiki/images/b/b7/GGST_Axl_Low_5K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/a/a1/GGST_Axl_5P_Hitbox.png"
-        ]
-    },
-    {
-        "input": "c.S",
-        "move_img": "https://dustloop.com/wiki/images/3/32/GGST_Axl_Low_c.S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/0/0b/GGST_Axl_cS_Hitbox_1.png",
-            "https://dustloop.com/wiki/images/2/28/GGST_Axl_cS_Hitbox_2.png"
-        ]
-    },
-    {
-        "input": "f.S",
-        "move_img": "https://dustloop.com/wiki/images/4/4a/GGST_Axl_Low_f.S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/e/ea/GGST_Axl_fS_Hitbox.png"
-        ]
-    },
-    {
-        "input": "5H",
-        "move_img": "https://dustloop.com/wiki/images/6/60/GGST_Axl_Low_5H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/f/f6/GGST_Axl_5H_Hitbox_1.png",
-            "https://dustloop.com/wiki/images/c/ca/GGST_Axl_5H_Hitbox_2.png",
-            "https://dustloop.com/wiki/images/d/da/GGST_Axl_5H_Hitbox_3.png"
-        ]
-    },
-    {
-        "input": "2P",
-        "move_img": "https://dustloop.com/wiki/images/5/5c/GGST_Axl_Low_2P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/1/1a/GGST_Axl_Low_2P_hitbox_1.png",
-            "https://dustloop.com/wiki/images/3/33/GGST_Axl_Low_2P_hitbox_2.png"
-        ]
-    },
-    {
-        "input": "2K",
-        "move_img": "https://dustloop.com/wiki/images/f/ff/GGST_Axl_Low_2K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/5/5d/GGST_Axl_2K_Hitbox.png"
-        ]
-    },
-    {
-        "input": "2S",
-        "move_img": "https://dustloop.com/wiki/images/d/d6/GGST_Axl_Low_2S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/7/7e/GGST_Axl_Low_2S_hitbox_1.png",
-            "https://dustloop.com/wiki/images/8/82/GGST_Axl_Low_2S_hitbox_2.png"
-        ]
-    },
-    {
-        "input": "2H",
-        "move_img": "https://dustloop.com/wiki/images/9/91/GGST_Axl_Low_2H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/f/f5/GGST_Axl_Low_2H_hitbox_1.png",
-            "https://dustloop.com/wiki/images/b/bc/GGST_Axl_Low_2H_hitbox_2.png "
-        ]
-    },
-    {
-        "input": "j.P",
-        "move_img": "https://dustloop.com/wiki/images/a/ae/GGST_Axl_Low_j.P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/23/GGST_Axl_Low_j.P_hitbox_1.png",
-            "https://dustloop.com/wiki/images/2/2b/GGST_Axl_Low_j.P_hitbox_2.png"
-        ]
-    },
-    {
-        "input": "j.K",
-        "move_img": "https://dustloop.com/wiki/images/e/e6/GGST_Axl_Low_j.K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/d/db/GGST_Axl_Low_j.K-hitbox.png"
-        ]
-    },
-    {
-        "input": "j.S",
-        "move_img": "https://dustloop.com/wiki/images/2/23/GGST_Axl_Low_j.S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/8/85/GGST_Axl_jS_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.H",
-        "move_img": "https://dustloop.com/wiki/images/2/2e/GGST_Axl_Low_j.H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/8/8d/GGST_Axl_jH_Hitbox.png"
-        ]
-    },
-    {
-        "input": "j.D",
-        "move_img": "https://dustloop.com/wiki/images/9/9c/GGST_Axl_Low_j.D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/a/a4/GGST_Axl_Low_j.D-hitbox.png"
-        ]
-    },
-    {
-        "input": "6P",
-        "move_img": "https://dustloop.com/wiki/images/3/3d/GGST_Axl_Low_6P.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/2c/GGST_Axl_Low_6P-hitbox.png"
-        ]
-    },
-    {
-        "input": "6K",
-        "move_img": "https://dustloop.com/wiki/images/5/52/GGST_Axl_Low_6K.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/d/d7/GGST_Axl_Low_6K_hitbox.png",
-            "https://dustloop.com/wiki/images/1/18/GGST_Axl_Low_6K_hitbox2.png"
-        ]
-    },
-    {
-        "input": "6H",
-        "move_img": "https://dustloop.com/wiki/images/3/3e/GGST_Axl_Low_6H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/8/89/GGST_Axl_Low_6H_hitbox_1.png",
-            "https://dustloop.com/wiki/images/f/fa/GGST_Axl_Low_6H_hitbox_2.png"
-        ]
-    },
-    {
-        "input": "2D",
-        "move_img": "https://dustloop.com/wiki/images/1/16/GGST_Axl_Low_2D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/bb/GGST_Axl_Low_2D_hitbox.png"
-        ]
-    },
-    {
-        "input": "5D",
-        "move_img": "https://dustloop.com/wiki/images/f/ff/GGST_Axl_Low_5D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/bc/GGST_Axl_5D_Hitbox_1.png",
-            "https://dustloop.com/wiki/images/6/67/GGST_Axl_5D_Hitbox_2.png"
-        ]
-    },
-    {
-        "input": "5[D]",
-        "move_img": "https://dustloop.com/wiki/images/f/ff/GGST_Axl_Low_5D.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/b/bc/GGST_Axl_5D_Hitbox_1.png",
-            "https://dustloop.com/wiki/images/6/67/GGST_Axl_5D_Hitbox_2.png"
-        ]
-    },
-    {
-        "input": "[4]6S",
-        "move_img": "https://dustloop.com/wiki/images/2/2f/GGST_Axl_Low_46S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/1/10/GGST_Axl_Low_Sickle_Flash_hitbox_1.png",
-            "https://dustloop.com/wiki/images/9/9c/GGST_Axl_Low_Sickle_Flash_hitbox.png"
-        ]
-    },
-    {
-        "input": "[4]6S 8",
-        "move_img": "https://dustloop.com/wiki/images/3/37/GGST_Axl_Low_46S8.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/d/de/GGST_Axl_Low_Soaring_Chain_Strike_hitbox.png"
-        ]
-    },
-    {
-        "input": "[4]6S 2",
-        "move_img": "https://dustloop.com/wiki/images/c/c9/GGST_Axl_Low_46S2.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/3/30/GGST_Axl_Low_Spinning_Chain_Strike_hitbox.png"
-        ]
-    },
-    {
-        "input": "[4]6S S",
-        "move_img": "https://dustloop.com/wiki/images/9/90/GGST_Axl_Low_46SS_1.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/9/91/GGST_Axl_Low_Winter_Cherry_hitbox.png"
-        ]
-    },
-    {
-        "input": "41236H",
-        "move_img": "https://dustloop.com/wiki/images/f/f2/GGST_Axl_Low_41236H_2.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/23/GGST_Axl_Low_Winter_Mantis_hitbox.png"
-        ]
-    },
-    {
-        "input": "214S",
-        "move_img": "https://dustloop.com/wiki/images/2/21/GGST_Axl_Low_214S.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/4/4e/GGST_Axl_Low_Rainwater_hitbox.png"
-        ]
-    },
-    {
-        "input": "214H",
-        "move_img": "https://dustloop.com/wiki/images/9/9b/GGST_Axl_Low_214H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/9/93/GGST_Axl_Low_Snail_hitbox.png"
-        ]
-    },
-    {
-        "input": "j.214H",
-        "move_img": "https://dustloop.com/wiki/images/9/9b/GGST_Axl_Low_214H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/d/d9/GGST_Axl_Low_Snail_hitbox_Air.png"
-        ]
-    },
-    {
-        "input": "j.236H",
-        "move_img": "https://dustloop.com/wiki/images/8/8d/GGST_Axl_Low_j.623H.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/0/0a/GGST_Axl_Low_Axl_Bomber_hitbox.png"
-        ]
-    },
-    {
-        "input": "236236H",
-        "move_img": "https://dustloop.com/wiki/images/e/e0/GGST_Axl_Low_236236H_1.png",
-        "hitbox_img": [
-            "https://dustloop.com/wiki/images/2/2b/GGST_Axl_Low_Sickle_Storm_hitbox.png",
-            "https://dustloop.com/wiki/images/b/b8/GGST_Axl_Low_Sickle_Storm2_hitbox.png"
-        ]
-    },
-    {
-        "input": "632146P",
-        "move_img": "https://dustloop.com/wiki/images/d/d4/GGST_Axl_Low_632146P_1.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "632146P Attack",
-        "move_img": "https://dustloop.com/wiki/images/8/8d/GGST_Axl_Low_632146P_2.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "6D or 4D",
-        "move_img": "https://dustloop.com/wiki/images/8/8e/GGST_Axl_Low_Ground_Throw.png",
-        "hitbox_img": [
-            ""
-        ]
-    },
-    {
-        "input": "j.6D or j.4D",
-        "move_img": "https://dustloop.com/wiki/images/1/18/GGST_Axl_Low_Air_Throw.png",
-        "hitbox_img": [
-            ""
-        ]
-    }
+	{
+  "input": "2D",
+  "move_img": "https://www.dustloop.com/wiki/images/1/16/GGST_Axl_Low_2D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Axl_Low_2D_hitbox.png"
+  ]
+},
+	{
+  "input": "2H",
+  "move_img": "https://www.dustloop.com/wiki/images/9/91/GGST_Axl_Low_2H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f5/GGST_Axl_Low_2H_hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/b/bc/GGST_Axl_Low_2H_hitbox_2.png"
+  ]
+},
+	{
+  "input": "2K",
+  "move_img": "https://www.dustloop.com/wiki/images/f/ff/GGST_Axl_Low_2K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/5/5d/GGST_Axl_2K_Hitbox.png"
+  ]
+},
+	{
+  "input": "2P",
+  "move_img": "https://www.dustloop.com/wiki/images/5/5c/GGST_Axl_Low_2P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/1a/GGST_Axl_Low_2P_hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/3/33/GGST_Axl_Low_2P_hitbox_2.png"
+  ]
+},
+	{
+  "input": "2S",
+  "move_img": "https://www.dustloop.com/wiki/images/d/d6/GGST_Axl_Low_2S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/7e/GGST_Axl_Low_2S_hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/8/82/GGST_Axl_Low_2S_hitbox_2.png"
+  ]
+},
+	{
+  "input": "5D",
+  "move_img": "https://www.dustloop.com/wiki/images/f/ff/GGST_Axl_Low_5D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/bc/GGST_Axl_5D_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/6/67/GGST_Axl_5D_Hitbox_2.png"
+  ]
+},
+	{
+  "input": "5H",
+  "move_img": "https://www.dustloop.com/wiki/images/6/60/GGST_Axl_Low_5H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f6/GGST_Axl_5H_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/c/ca/GGST_Axl_5H_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/d/da/GGST_Axl_5H_Hitbox_3.png"
+  ]
+},
+	{
+  "input": "5K",
+  "move_img": "https://www.dustloop.com/wiki/images/b/b7/GGST_Axl_Low_5K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/1b/GGST_Axl_5K_Hitbox.png"
+  ]
+},
+	{
+  "input": "5P",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a9/GGST_Axl_Low_5P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/a1/GGST_Axl_5P_Hitbox.png"
+  ]
+},
+	{
+  "input": "5[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/f/ff/GGST_Axl_Low_5D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/bc/GGST_Axl_5D_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/6/67/GGST_Axl_5D_Hitbox_2.png"
+  ]
+},
+	{
+  "input": "6H",
+  "move_img": "https://www.dustloop.com/wiki/images/3/3e/GGST_Axl_Low_6H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/89/GGST_Axl_Low_6H_hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/f/fa/GGST_Axl_Low_6H_hitbox_2.png"
+  ]
+},
+	{
+  "input": "6K",
+  "move_img": "https://www.dustloop.com/wiki/images/5/52/GGST_Axl_Low_6K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d7/GGST_Axl_Low_6K_hitbox.png",
+    "https://www.dustloop.com/wiki/images/1/18/GGST_Axl_Low_6K_hitbox2.png"
+  ]
+},
+	{
+  "input": "6P",
+  "move_img": "https://www.dustloop.com/wiki/images/3/3d/GGST_Axl_Low_6P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/2c/GGST_Axl_Low_6P-hitbox.png"
+  ]
+},
+	{
+  "input": "c.S",
+  "move_img": "https://www.dustloop.com/wiki/images/3/32/GGST_Axl_Low_c.S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/0/0b/GGST_Axl_cS_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/2/28/GGST_Axl_cS_Hitbox_2.png"
+  ]
+},
+	{
+  "input": "f.S",
+  "move_img": "https://www.dustloop.com/wiki/images/4/4a/GGST_Axl_Low_f.S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/e/ea/GGST_Axl_fS_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.D",
+  "move_img": "https://www.dustloop.com/wiki/images/9/9c/GGST_Axl_Low_j.D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/a4/GGST_Axl_Low_j.D-hitbox.png"
+  ]
+},
+	{
+  "input": "j.H",
+  "move_img": "https://www.dustloop.com/wiki/images/2/2e/GGST_Axl_Low_j.H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/8d/GGST_Axl_jH_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.K",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e6/GGST_Axl_Low_j.K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/db/GGST_Axl_Low_j.K-hitbox.png"
+  ]
+},
+	{
+  "input": "j.P",
+  "move_img": "https://www.dustloop.com/wiki/images/a/ae/GGST_Axl_Low_j.P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/23/GGST_Axl_Low_j.P_hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/2/2b/GGST_Axl_Low_j.P_hitbox_2.png"
+  ]
+},
+	{
+  "input": "j.S",
+  "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Axl_Low_j.S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/85/GGST_Axl_jS_Hitbox.png"
+  ]
+},
+	{
+  "input": "6D or 4D",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8e/GGST_Axl_Low_Ground_Throw.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "j.6D or j.4D",
+  "move_img": "https://www.dustloop.com/wiki/images/1/18/GGST_Axl_Low_Air_Throw.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "214H",
+  "move_img": "https://www.dustloop.com/wiki/images/9/9b/GGST_Axl_Low_214H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/93/GGST_Axl_Low_Snail_hitbox.png"
+  ]
+},
+	{
+  "input": "214S",
+  "move_img": "https://www.dustloop.com/wiki/images/2/21/GGST_Axl_Low_214S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/4/4e/GGST_Axl_Low_Rainwater_hitbox.png"
+  ]
+},
+	{
+  "input": "41236H",
+  "move_img": "https://www.dustloop.com/wiki/images/d/d6/GGST_Axl_Low_41236H_1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/23/GGST_Axl_Low_Winter_Mantis_hitbox.png"
+  ]
+},
+	{
+  "input": "j.214H",
+  "move_img": "https://www.dustloop.com/wiki/images/8/86/GGST_Axl_Low_j.214H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d9/GGST_Axl_Low_Snail_hitbox_Air.png"
+  ]
+},
+	{
+  "input": "j.236H",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8d/GGST_Axl_Low_j.623H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/0/0a/GGST_Axl_Low_Axl_Bomber_hitbox.png"
+  ]
+},
+	{
+  "input": "[4]6S",
+  "move_img": "https://www.dustloop.com/wiki/images/2/2f/GGST_Axl_Low_46S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/10/GGST_Axl_Low_Sickle_Flash_hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/9/9c/GGST_Axl_Low_Sickle_Flash_hitbox.png"
+  ]
+},
+	{
+  "input": "[4]6S 2",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c9/GGST_Axl_Low_46S2.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/3/30/GGST_Axl_Low_Spinning_Chain_Strike_hitbox.png"
+  ]
+},
+	{
+  "input": "[4]6S 8",
+  "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Axl_Low_46S8.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/de/GGST_Axl_Low_Soaring_Chain_Strike_hitbox.png"
+  ]
+},
+	{
+  "input": "[4]6S S",
+  "move_img": "https://www.dustloop.com/wiki/images/9/90/GGST_Axl_Low_46SS_1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/91/GGST_Axl_Low_Winter_Cherry_hitbox.png"
+  ]
+},
+	{
+  "input": "236236H",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e0/GGST_Axl_Low_236236H_1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/2b/GGST_Axl_Low_Sickle_Storm_hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/b8/GGST_Axl_Low_Sickle_Storm2_hitbox.png"
+  ]
+},
+	{
+  "input": "632146P",
+  "move_img": "https://www.dustloop.com/wiki/images/d/d4/GGST_Axl_Low_632146P_1.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "632146P Attack",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8d/GGST_Axl_Low_632146P_2.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "j.632146P Attack",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8d/GGST_Axl_Low_632146P_2.png",
+  "hitbox_img": [
+    ""
+  ]
+}
 ]
