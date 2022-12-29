@@ -22,7 +22,7 @@
 	{"input":"6D or 4D","name":"Ground Throw","damage":"80","guard":"90000","startup":"2","active":"3","recovery":"38","hit":"HKD +43","block":"-","level":"-","counter":"-","scaling":"50%","riscgain":"-","invincibility":"-"},
 	{"input":"j.6D or j.4D","name":"Air Throw","damage":"80","guard":"200000 (Air)","startup":"2","active":"3","recovery":"Until Landing + 10","hit":"-","block":"-","level":"-","counter":"-","scaling":"50%","riscgain":"-","invincibility":"-"},
 	{"input":"214H","name":"Unsummon Eddie","damage":"-","guard":"-","startup":"0","active":"-","recovery":"-","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
-	{"input":"214H","name":"Summon Eddie","damage":"-","guard":"-","startup":"-","active":"-","recovery":"20","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
+	{"input":"214H","name":"Summon Eddie","damage":"-","guard":"-","startup":"20","active":"-","recovery":"-","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"214K","name":"Break The Law","damage":"-","guard":"-","startup":"28 Total (Max 95)","active":"-","recovery":"-","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"13~[71] Full, 14~21~[77] Strike"},
 	{"input":"214S","name":"Drunkard Shade","damage":"31","guard":"All","startup":"9","active":"10","recovery":"12","hit":"-5","block":"-8","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"3~18 Reflect"},
 	{"input":"214S (Dash)","name":"Eddie Dash","damage":"-","guard":"-","startup":"30 Total","active":"-","recovery":"-","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
@@ -36,7 +36,7 @@
 	{"input":"]K[","name":"That's a lot","damage":"20×4","guard":"All","startup":"19","active":"-","recovery":"-","hit":"KD","block":"-","level":"2","counter":"Very Small","scaling":"80%","riscgain":"100×4","invincibility":"-"},
 	{"input":"]P[","name":"Pierce","damage":"20×2","guard":"All","startup":"13","active":"3(17)2","recovery":"24","hit":"KD","block":"-","level":"2","counter":"Very Small","scaling":"80%","riscgain":"200×2","invincibility":"-"},
 	{"input":"]S[","name":"Leap","damage":"20, 50","guard":"All","startup":"13","active":"2×13","recovery":"34","hit":"KD","block":"-","level":"3","counter":"Very Small","scaling":"80%","riscgain":"200×2","invincibility":"-"},
-	{"input":"632146H","name":"Amorphous","damage":"150","guard":"All","startup":"8+8","active":"-","recovery":"-","hit":"-","block":"+12","level":"4","counter":"-","scaling":"100%","riscgain":"500","invincibility":"-"},
+	{"input":"632146H","name":"Amorphous","damage":"150","guard":"All","startup":"8+8","active":"-","recovery":"Total 43","hit":"HKD","block":"+12","level":"4","counter":"-","scaling":"100%","riscgain":"500","invincibility":"-"},
 	{"input":"632146S","name":"Sun Void","damage":"20×3","guard":"All","startup":"11+14","active":"-","recovery":"-","hit":"-","block":"-","level":"4","counter":"-","scaling":"100%","riscgain":"100×3","invincibility":"-"},
 	{"input":"j.632146S","name":"Sun Void","damage":"20×3","guard":"All","startup":"11+14","active":"-","recovery":"-","hit":"-","block":"-","level":"4","counter":"-","scaling":"100%","riscgain":"100×3","invincibility":"-"}
 ]
