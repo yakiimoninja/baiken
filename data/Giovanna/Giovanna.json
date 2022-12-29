@@ -16,7 +16,7 @@
 	{"input":"c.S","name":"c.S","damage":"40","guard":"All","startup":"7","active":"6","recovery":"10","hit":"+13","block":"+3","level":"4","counter":"Mid","scaling":"100%","riscgain":"2500","invincibility":"-"},
 	{"input":"f.S","name":"f.S","damage":"10, 10, 16","guard":"All","startup":"9","active":"2(6)2(6)2","recovery":"16","hit":"-1","block":"-4","level":"2","counter":"Mid","scaling":"90%","riscgain":"500×3","invincibility":"-"},
 	{"input":"j.D","name":"j.D","damage":"20, 20","guard":"High","startup":"7","active":"3(7)3","recovery":"18","hit":"-","block":"-","level":"2, 3","counter":"Mid","scaling":"80%","riscgain":"525, 750","invincibility":"-"},
-	{"input":"j.H","name":"j.H","damage":"35","guard":"High","startup":"8","active":"5","recovery":"18","hit":"+7 (IAD)","block":"+4 (IAD)","level":"2","counter":"Mid","scaling":"80%","riscgain":"1125","invincibility":"-"},
+	{"input":"j.H","name":"j.H","damage":"35","guard":"High","startup":"8","active":"5","recovery":"18","hit":"-","block":"-","level":"2","counter":"Mid","scaling":"80%","riscgain":"1125","invincibility":"-"},
 	{"input":"j.K","name":"j.K","damage":"25","guard":"High","startup":"6","active":"3","recovery":"19","hit":"-","block":"-","level":"1","counter":"Small","scaling":"80%","riscgain":"750","invincibility":"-"},
 	{"input":"j.P","name":"j.P","damage":"20","guard":"High","startup":"6","active":"5","recovery":"9","hit":"-","block":"-","level":"0","counter":"Small","scaling":"80%","riscgain":"375","invincibility":"-"},
 	{"input":"j.S","name":"j.S","damage":"30","guard":"High","startup":"7","active":"3","recovery":"24","hit":"-","block":"-","level":"2","counter":"Mid","scaling":"80%","riscgain":"1150","invincibility":"-"},
