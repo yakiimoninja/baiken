@@ -90,7 +90,7 @@ pub fn character_jsons_exist(init_check: bool) -> Option<String> {
         if Path::new(&character_json).exists() == false {
 
             // Error if character json doesnt exist
-            let error_msg ="Missing '".to_owned() + &character_json + "' file.\nPlease execute the 'b.update' command.";
+            let error_msg ="Missing '".to_owned() + &character_json + "' file.\nPlease execute the '/update' command.";
 
             if init_check == true {
                 // Printing the error message in the console
