@@ -62,7 +62,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
-            frames_to_json(char_page_response_json, &file, x);
+            frames_to_json(char_page_response_json, &file, x).await;
 
             // Finalizing character json
             char_json_schema = "\n]";
@@ -112,7 +112,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
 
         // Sending response to get processed and serialized to a json file
         // char_count is a counter to specify which json file fails to update
-        frames_to_json(char_page_response_json, &file, 0);
+        frames_to_json(char_page_response_json, &file, 0).await;
 
         // Finalizing character json
         char_json_schema = "\n]";

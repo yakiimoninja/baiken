@@ -61,7 +61,7 @@ struct Imagetitle {
 const IMAGE_HALF: &str = "https://www.dustloop.com/wiki/images";
 
 
-pub fn frames_to_json(mut char_page_response_json: String, mut file: &File, char_count: usize) {
+pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File, char_count: usize) {
 
     char_page_response_json = char_page_response_json.replace(r#"&lt;br&gt;"#, ", ");
     char_page_response_json = char_page_response_json.replace(r#"&lt;br/&gt;"#, ", ");
@@ -167,7 +167,7 @@ pub fn frames_to_json(mut char_page_response_json: String, mut file: &File, char
     }
 }
 
-pub fn images_to_json(char_images_response_json: String, mut file: &File, char_count: usize) {
+pub async fn images_to_json(char_images_response_json: String, mut file: &File, char_count: usize) {
 
     let mut imagedata: Imageresponse = serde_json::from_str(&char_images_response_json).unwrap();
 
@@ -225,7 +225,7 @@ pub fn images_to_json(char_images_response_json: String, mut file: &File, char_c
                         .replace(" ", "_"));
     
                     // Sending image name to make_link to become a link
-                    image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string());
+                    image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string()).await;
                 }
                 else{
                     // Single image name
@@ -235,7 +235,7 @@ pub fn images_to_json(char_images_response_json: String, mut file: &File, char_c
                         .to_string()
                         .replace(" ", "_"));
                     // Sending image name to make_link to become a link
-                    image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string());
+                    image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string()).await;
                 }
             }
         }
@@ -262,7 +262,7 @@ pub fn images_to_json(char_images_response_json: String, mut file: &File, char_c
                     hitboxes_link.push(make_link(hitbox_str[y]
                         .to_string()
                         .trim()
-                        .replace(" ", "_")));
+                        .replace(" ", "_")).await);
                 }
             }
         }
@@ -291,7 +291,7 @@ pub fn images_to_json(char_images_response_json: String, mut file: &File, char_c
     }
 }
 
-fn make_link(image_name: String) -> String {
+async fn make_link(image_name: String) -> String {
 
     let image_bytes = image_name.as_bytes();
 
