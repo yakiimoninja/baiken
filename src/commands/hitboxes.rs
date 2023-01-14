@@ -1,9 +1,8 @@
 use std::fs;
 use std::path::Path;
 use std::string::String;
-use crate::{Frames, MoveAliases, ImageLinks, check, Nicknames, Context, Error};
+use crate::{Frames, MoveAliases, ImageLinks, Nicknames, Context, Error, HITBOX_DEFAULT, check};
 
-const IMAGE_DEFAULT: &str = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/no_hitbox.png";
 
 /// Displays the hitbox images of a character's move.
 #[poise::command(prefix_command, slash_command, aliases("h"))]
@@ -167,11 +166,10 @@ pub async fn hitboxes(
                         }
                     }
                     else{
-
                         // Priting hitboxes in discord chat
                         let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                         ctx.say(&bot_msg).await?;
-                        ctx.channel_id().say(ctx.discord(), &*IMAGE_DEFAULT).await?;
+                        ctx.channel_id().say(ctx.discord(), &*HITBOX_DEFAULT).await?;
                     }
                     
                 }

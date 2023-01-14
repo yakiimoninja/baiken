@@ -4,7 +4,7 @@ use std::fs;
 use std::path::Path;
 use std::string::String;
 use crate::{Context, Error};
-use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
+use crate::{Frames, MoveAliases, ImageLinks, Nicknames, IMAGE_DEFAULT, check};
 
 /// Displays the frame data of a move along with an image.
 #[poise::command(prefix_command, slash_command, aliases("f"))]
@@ -57,8 +57,7 @@ pub async fn frames(
 
     // Initializing variables for the embed
     // They must not be empty cause then the embed wont send
-    let mut image_embed = "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/no_image.png".to_string();
-
+    let mut image_embed = IMAGE_DEFAULT.to_string();
 
     // Reading the nicknames json
     let data_from_file = fs::read_to_string("data/nicknames.json")
