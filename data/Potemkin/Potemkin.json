@@ -35,5 +35,5 @@
 	{"input":"[4]6H P","name":"Hammer Fall Break","damage":"N/A","guard":"N/A","startup":"-","active":"-","recovery":"27","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"236236S","name":"Heavenly Potemkin Buster","damage":"220","guard":"Air Unblockable","startup":"12+0","active":"15","recovery":"16","hit":"KD","block":"N/A","level":"-","counter":"Very Small","scaling":"100%","riscgain":"-","invincibility":"1 ~ 12F Full"},
 	{"input":"632146H","name":"Giganter Kai","damage":"60","guard":"All","startup":"10+1","active":"5","recovery":"17","hit":"KD","block":"+100","level":"-","counter":"Mid","scaling":"100%","riscgain":"2500","invincibility":"-"},
-	{"input":"Mirror","name":"Giganter Kai (Barrier)","damage":"15×3","guard":"All","startup":"10+6","active":"481","recovery":"-","hit":"KD","block":"-","level":"-","counter":"Very Small","scaling":"100%","riscgain":"100×3","invincibility":"-"}
+	{"input":"Mirror","name":"Giganter Kai (Barrier)","damage":"15×3","guard":"All","startup":"10+23","active":"464","recovery":"-","hit":"KD","block":"-","level":"-","counter":"Very Small","scaling":"100%","riscgain":"100×3","invincibility":"-"}
 ]

@@ -1,5 +1,5 @@
 [
-	{"input":"2D","name":"2D","damage":"40","guard":"Low","startup":"12","active":"6","recovery":"19","hit":"HKD","block":"-8","level":"3","counter":"Large","scaling":"90%","riscgain":"1500","invincibility":"-"},
+	{"input":"2D","name":"2D","damage":"40","guard":"Low","startup":"12","active":"6","recovery":"19","hit":"+48/49/50","block":"-8","level":"3","counter":"Large","scaling":"90%","riscgain":"1500","invincibility":"-"},
 	{"input":"2H","name":"2H","damage":"44","guard":"All","startup":"12","active":"8","recovery":"30","hit":"KD","block":"-20","level":"3","counter":"Large","scaling":"90%","riscgain":"2000","invincibility":"-"},
 	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"7","active":"6","recovery":"11","hit":"-2","block":"-5","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"-"},
 	{"input":"2P","name":"2P","damage":"22","guard":"All","startup":"6","active":"4","recovery":"8","hit":"+1","block":"-2","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
