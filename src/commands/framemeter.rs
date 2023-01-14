@@ -1,12 +1,12 @@
 use std::fs;
 use std::path::Path;
 use std::string::String;
-use crate::{Context, Error};
+use crate::{Context, Error, IMAGE_DEFAULT};
 use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
 
-const green_circle: &str = "🟢";
-const red_square: &str = "🟥";
-const blue_diamond: &str = "🔷";
+const GREEN_CIRCLE: &str = "🟢";
+const RED_SQUARE: &str = "🟥";
+const BLUE_DIAMOND: &str = "🔷";
 
 /// Displays the frame meter of a move.
 #[poise::command(prefix_command, slash_command, aliases("fm"))]
@@ -141,7 +141,7 @@ pub async fn framemeter(
         .expect(&("\nFailed to read 'data/".to_owned() + &character_arg_altered + "'/images.json' file."));
 
     // Deserializing images.json for this character
-    let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
+    let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
     
 
     for mframes in move_frames {
@@ -154,11 +154,45 @@ pub async fn framemeter(
             move_found = true;
             println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
 
+            // Send move image
+            for img_links in image_links {
+                // Iterating through the image.json to find the move's hitbox links
+                if mframes.input == img_links.input {
+
+                    move_found = true;
+                    println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
+
+                    
+                    if img_links.hitbox_img[0].is_empty() == false {
+
+                        // Priting hitboxes in discord chat
+                        let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
+                        ctx.say(&bot_msg).await?;
+
+                        for htbx_img in img_links.hitbox_img {                        
+                            ctx.channel_id().say(ctx.discord(), &htbx_img).await?;
+                        }
+                    }
+                    else{
+                        // Priting hitboxes in discord chat
+                        let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
+                        ctx.say(&bot_msg).await?;
+                        ctx.channel_id().say(ctx.discord(), &*IMAGE_DEFAULT).await?;
+                    }
+                    
+                }
+            }
+            
+            // Keep only first startup
+            // Add all active in vector seperated by "," " " "[]" "()"
+            // add "* multiple hits with gaps"
+            // Recovery
             let frame_meter = r#""#;
 
             let startup: i8 = mframes.startup.parse().unwrap();
             println!("Start up: {}", startup);
             break;
+
         }
     }
 
