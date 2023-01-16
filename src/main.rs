@@ -114,7 +114,7 @@ async fn main() {
         commands: vec![
             aliases::aliases(),
             easter::sake(),
-            framemeter::framemeter(),
+            fmeter::fmeter(),
             frames::frames(),
             help::help(),
             hitboxes::hitboxes(),
