@@ -7,11 +7,10 @@ use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
 const GREEN_CIRCLE: &str = "🟢";
 const RED_SQUARE: &str = "🟥";
 const BLUE_DIAMOND: &str = "🔷";
-const SEPERATORS: [&str; 9] = [" ", ",", "(", ")", "[", "]", "{", "}", "~"];
 
 /// Displays the frame meter of a move.
 #[poise::command(prefix_command, slash_command, aliases("fm"))]
-pub async fn framemeter(
+pub async fn fmeter(
     ctx: Context<'_>,
     #[description = "Character name or nickname."] character_arg: String,
     #[description = "Move name, input or alias."] mut character_move_arg: String,
@@ -166,13 +165,13 @@ pub async fn framemeter(
                     
                     if img_links.move_img.is_empty() == false {
 
-                        // Priting hitboxes in discord chat
+                        // Printing image in discord chat
                         let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                         ctx.say(&bot_msg).await?;
                         ctx.channel_id().say(ctx.discord(), &img_links.move_img).await?;
                     }
                     else{
-                        // Priting hitboxes in discord chat
+                        // Printing default fallback image in discord chat
                         let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                         ctx.say(&bot_msg).await?;
                         ctx.channel_id().say(ctx.discord(), &*IMAGE_DEFAULT).await?;
@@ -181,25 +180,147 @@ pub async fn framemeter(
                 }
             }
             
-            // Keep only first startup
-            // Add all active in vector seperated by "," " " "[]" "()"
-            // add "* multiple hits with gaps"
-            // Recovery
-            let frame_meter = r#""#;
+            let mut frame_meter_msg = r#"__Startup__: "#.to_owned() + &mframes.startup + " → `";
 
-            let mut startup: Vec<&str> = Vec::new();
+            // Processing for startup frames
+            // This bool to determine if bracket was present
+            let mut startup_bra = false;
+            let startup_vec = sep_frame_vec(&mframes.startup).await;
+            
+            // If vec has only one entry and the move has only 1 frame of startup
+            if startup_vec.len() == 1 && startup_vec[0].parse::<i8>().unwrap() == 1 {
+                frame_meter_msg = frame_meter_msg + "-";
+            }
+            // Otherwise execute logic
+            else{
 
-            for sep in SEPERATORS {
-                if mframes.startup.contains(sep) == true {
-                    startup = mframes.startup.split(sep).collect();
+                // Making the message
+                for x in 0..startup_vec.len() {
+
+                    // If vec string entry is a digit
+                    if let Ok(num) = startup_vec[x].parse::<i8>() {
+
+
+                        // Iterate up to its numerical value -1
+                        for _ in 0..num-1 {
+
+                            // If left bracket was not passed previously
+                            if startup_bra == false {
+                                // Put a GREEN_CIRCLE into the message
+                                frame_meter_msg = frame_meter_msg + GREEN_CIRCLE;
+                            }
+                            // If left bracket was passed
+                            else {
+
+                                // The difference between the first possible frame a move can connect
+                                // and the latest frame -1 is the times a GREEN_CIRCLE is going to be 
+                                // put inside the msg and inside brackets
+                                for _ in 0..( (startup_vec[x].parse::<i8>().unwrap()) - (startup_vec[x-2].parse::<i8>()).unwrap() - 1 ) {
+                                    frame_meter_msg = frame_meter_msg + GREEN_CIRCLE;
+                                }
+                                break;
+                            }
+                        }
+                        // if x == startup_vec.len()-1 {
+                        //     frame_meter_msg = frame_meter_msg;
+                        //
+                        // }
+                    }
+                    // If vec string entry isnt a digit
+                    else {
+                        // Display a GREEN_CIRCLE if + is the last frame of the move
+                        if x == startup_vec.len()-2 && startup_vec[x] == "+" {
+                            frame_meter_msg = frame_meter_msg + GREEN_CIRCLE;
+                        }
+                        // Otherwise display the symbol
+                        else {
+                            frame_meter_msg = frame_meter_msg + &startup_vec[x];
+                        }
+
+                        // Execute same logic for [ and ~
+                        if startup_vec[x] == "[" || startup_vec[x] == "~" {
+                            startup_bra = true;
+                        }
+                        else if startup_vec[x] == "]" {
+                            startup_bra = false;
+                        }
+                    }
                 }
             }
 
-            if startup.len() < 2 {
-                startup.push(mframes.startup.as_str());
+            frame_meter_msg = frame_meter_msg + "`\n__Active__: " + &mframes.active + " → `";
+            
+            // Processing for active frames
+            let mut hit_recovery = false;
+            let active_vec = sep_frame_vec(&mframes.active).await;
+
+            // Making the message
+            for x in 0..active_vec.len() {
+                
+                // If vec string entry is a digit
+                if let Ok(num) = active_vec[x].parse::<i8>() {
+
+                    // Iterate up to its numerical value
+                    for _ in 0..num {
+                        
+                        // If left parenthesis was not passed previously
+                        if hit_recovery == false {
+                            frame_meter_msg = frame_meter_msg + RED_SQUARE;
+                        }
+                        // If left parenthesis was passed
+                        else {
+                            frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                        }
+                    }
+
+                    // // Might be useless
+                    // if x == active_vec.len()-1 {
+                    //     frame_meter_msg = frame_meter_msg;
+                    // }
+                }
+                // If vec string entry isnt a digit
+                else {
+                    frame_meter_msg = frame_meter_msg + &active_vec[x];
+                    
+                    if active_vec[x] == "(" {
+                        hit_recovery = true;
+                    }
+                    else if active_vec[x] == ")" {
+                        hit_recovery = false;
+                    }
+                }
             }
-            //mframes.startup.parse().unwrap();
-            println!("Start up: {:?}", startup);
+
+            frame_meter_msg = frame_meter_msg + "`\n__Recovery__: " + &mframes.recovery + " → `";
+
+            // Processing for recovery frames
+            let recovery_vec = sep_frame_vec(&mframes.recovery).await;
+            // Making the message
+            for x in 0..recovery_vec.len() {
+
+                // If vec string entry is a digit
+                if let Ok(num) = recovery_vec[x].parse::<i8>() {
+                    
+                    // Iterate up to its numerical value
+                    for _ in 0..num {
+                        frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                    }
+                    // if x == recovery_vec.len()-1 {
+                    //     frame_meter_msg = frame_meter_msg;
+                    // }
+                }
+                // If vec string entry isnt a digit
+                else {
+                    frame_meter_msg = frame_meter_msg + &recovery_vec[x];
+                }
+            }
+
+            frame_meter_msg = frame_meter_msg + "`";
+            ctx.channel_id().say(ctx.discord(), frame_meter_msg).await?;
+
+            println!("Startup: {:?}", startup_vec);
+            println!("Active: {:?}", active_vec);
+            println!("Recovery: {:?}", recovery_vec);
             break;
 
         }
@@ -216,4 +337,27 @@ pub async fn framemeter(
     }
 
     Ok(())
+}
+
+/// Splits the string into a vec keeping the separators
+async fn sep_frame_vec(text: &String) -> Vec<String> {
+
+    // Remove whitespace
+    let text = text.replace(" ", "");
+    let mut result = Vec::new();
+    let mut last = 0;
+
+    // Split to vector keeping the SEPERATORS
+    for (index, matched) in text.match_indices(|c: char| !(c.is_alphanumeric())) {
+        if last != index {
+            result.push(text[last..index].to_string());
+        }
+        result.push(matched.to_string());
+        last = index + matched.len();
+    }
+    if last < text.len() {
+        result.push(text[last..].to_string());
+    }
+
+    return result;
 }
