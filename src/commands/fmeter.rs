@@ -186,9 +186,14 @@ pub async fn fmeter(
             // This bool to determine if bracket was present
             let mut startup_bra = false;
             let startup_vec = sep_frame_vec(&mframes.startup).await;
+            println!("OOF: {:?}", startup_vec);
             
+            // If vec has only one entry and the entry is empty or -
+            if startup_vec.len() == 1 &&  startup_vec[0] == "-" {
+                frame_meter_msg = frame_meter_msg + "-";
+            }
             // If vec has only one entry and the move has only 1 frame of startup
-            if startup_vec.len() == 1 && startup_vec[0].parse::<i8>().unwrap() == 1 {
+            else if startup_vec.len() == 1 && startup_vec[0].parse::<i8>().unwrap() == 1 {
                 frame_meter_msg = frame_meter_msg + "-";
             }
             // Otherwise execute logic
@@ -253,40 +258,47 @@ pub async fn fmeter(
             // Processing for active frames
             let mut hit_recovery = false;
             let active_vec = sep_frame_vec(&mframes.active).await;
+            println!("OOF2: {:?}", active_vec);
+            
+            if startup_vec.len() == 1 &&  startup_vec[0] == "-" {
+                frame_meter_msg = frame_meter_msg + "-";
+            }
+            else {
 
-            // Making the message
-            for x in 0..active_vec.len() {
-                
-                // If vec string entry is a digit
-                if let Ok(num) = active_vec[x].parse::<i8>() {
+                // Making the message
+                for x in 0..active_vec.len() {
 
-                    // Iterate up to its numerical value
-                    for _ in 0..num {
-                        
-                        // If left parenthesis was not passed previously
-                        if hit_recovery == false {
-                            frame_meter_msg = frame_meter_msg + RED_SQUARE;
+                    // If vec string entry is a digit
+                    if let Ok(num) = active_vec[x].parse::<i8>() {
+
+                        // Iterate up to its numerical value
+                        for _ in 0..num {
+
+                            // If left parenthesis was not passed previously
+                            if hit_recovery == false {
+                                frame_meter_msg = frame_meter_msg + RED_SQUARE;
+                            }
+                            // If left parenthesis was passed
+                            else {
+                                frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                            }
                         }
-                        // If left parenthesis was passed
-                        else {
-                            frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
-                        }
-                    }
 
-                    // // Might be useless
-                    // if x == active_vec.len()-1 {
-                    //     frame_meter_msg = frame_meter_msg;
-                    // }
-                }
-                // If vec string entry isnt a digit
-                else {
-                    frame_meter_msg = frame_meter_msg + &active_vec[x];
-                    
-                    if active_vec[x] == "(" {
-                        hit_recovery = true;
+                        // // Might be useless
+                        // if x == active_vec.len()-1 {
+                        //     frame_meter_msg = frame_meter_msg;
+                        // }
                     }
-                    else if active_vec[x] == ")" {
-                        hit_recovery = false;
+                    // If vec string entry isnt a digit
+                    else {
+                        frame_meter_msg = frame_meter_msg + &active_vec[x];
+
+                        if active_vec[x] == "(" {
+                            hit_recovery = true;
+                        }
+                        else if active_vec[x] == ")" {
+                            hit_recovery = false;
+                        }
                     }
                 }
             }
@@ -295,23 +307,31 @@ pub async fn fmeter(
 
             // Processing for recovery frames
             let recovery_vec = sep_frame_vec(&mframes.recovery).await;
-            // Making the message
-            for x in 0..recovery_vec.len() {
+            println!("OOF3: {:?}", recovery_vec);
+            
+            if startup_vec.len() == 1 && startup_vec[0] == "-" {
+                frame_meter_msg = frame_meter_msg + "-";
+            }
+            else {
 
-                // If vec string entry is a digit
-                if let Ok(num) = recovery_vec[x].parse::<i8>() {
-                    
-                    // Iterate up to its numerical value
-                    for _ in 0..num {
-                        frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                // Making the message
+                for x in 0..recovery_vec.len() {
+
+                    // If vec string entry is a digit
+                    if let Ok(num) = recovery_vec[x].parse::<i8>() {
+
+                        // Iterate up to its numerical value
+                        for _ in 0..num {
+                            frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                        }
+                        // if x == recovery_vec.len()-1 {
+                        //     frame_meter_msg = frame_meter_msg;
+                        // }
                     }
-                    // if x == recovery_vec.len()-1 {
-                    //     frame_meter_msg = frame_meter_msg;
-                    // }
-                }
-                // If vec string entry isnt a digit
-                else {
-                    frame_meter_msg = frame_meter_msg + &recovery_vec[x];
+                    // If vec string entry isnt a digit
+                    else {
+                        frame_meter_msg = frame_meter_msg + &recovery_vec[x];
+                    }
                 }
             }
 
@@ -343,7 +363,6 @@ pub async fn fmeter(
 async fn sep_frame_vec(text: &String) -> Vec<String> {
 
     // Remove whitespace
-    let text = text.replace(" ", "");
     let mut result = Vec::new();
     let mut last = 0;
 
@@ -357,6 +376,34 @@ async fn sep_frame_vec(text: &String) -> Vec<String> {
     }
     if last < text.len() {
         result.push(text[last..].to_string());
+    }
+
+    // Removes empty entries and "total"
+    if result.len() > 1 {
+
+        'outer: loop {
+
+            let cur_it_len = result.len();
+
+            for r in 0..result.len()-1 {
+                if result[r].to_lowercase() == "total" {
+                    result.remove(r);
+                    println!("Index: {}, Removing total.", r);
+                }
+                else if result[r] == "" {
+                    result.remove(r);
+                    println!("Index: {}, Removing empty.", r);
+                }
+                else if result[r] == " " {
+                    result.remove(r);
+                    println!("Index: {}, Removing space.", r);
+                }
+            }
+
+            if cur_it_len == result.len(){
+                break 'outer;
+            }
+        }
     }
 
     return result;
