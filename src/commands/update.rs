@@ -1,8 +1,9 @@
 use std::fs;
 use crate::{Context, Error, CHARS, check, Nicknames};
+mod framedata;
+mod images; 
 mod framedata_json;
 mod images_json; 
-mod make_json;
 
 /// Updates the frame data according to dustloop. Owners only!
 #[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
@@ -80,7 +81,7 @@ pub async fn update (
         // If character arg is all; update frames for all characters
         if character_arg.trim().to_lowercase() == "all"{
             ctx.say("Update started!").await?; 
-            framedata_json::get_char_data(CHARS, "all").await;
+            framedata::get_char_data(CHARS, "all").await;
         }
         else {
             
@@ -98,7 +99,7 @@ pub async fn update (
                 // Update frames for specific character
                 ctx.say("Update started!").await?; 
                 print!("\n");
-                framedata_json::get_char_data(CHARS, &character_arg_altered).await;
+                framedata::get_char_data(CHARS, &character_arg_altered).await;
             }
         }
     }
@@ -108,7 +109,7 @@ pub async fn update (
         // If character arg is all; update images for all characters
         if character_arg.trim().to_lowercase() == "all"{
             ctx.say("Update started!").await?; 
-            images_json::get_char_data(CHARS, "all").await;
+            images::get_char_data(CHARS, "all").await;
         }
         else {
             
@@ -126,7 +127,7 @@ pub async fn update (
                 // Update images for specific character
                 ctx.say("Update started!").await?; 
                 print!("\n");
-                images_json::get_char_data(CHARS, &character_arg_altered).await;
+                images::get_char_data(CHARS, &character_arg_altered).await;
             }
         }
     }
@@ -136,8 +137,8 @@ pub async fn update (
         // If character arg is all; update frames and images for all characters
         if character_arg.trim().to_lowercase() == "all"{
             ctx.say("Update started!").await?;
-            framedata_json::get_char_data(CHARS, "all").await;
-            images_json::get_char_data(CHARS, "all").await;
+            framedata::get_char_data(CHARS, "all").await;
+            images::get_char_data(CHARS, "all").await;
         }
         else {
             
@@ -154,8 +155,8 @@ pub async fn update (
                 // Update frames and images for specific character
                 ctx.say("Update started!").await?; 
                 print!("\n");
-                framedata_json::get_char_data(CHARS, &character_arg_altered).await;
-                images_json::get_char_data(CHARS, &character_arg_altered).await;
+                framedata::get_char_data(CHARS, &character_arg_altered).await;
+                images::get_char_data(CHARS, &character_arg_altered).await;
             }
         }
     }
