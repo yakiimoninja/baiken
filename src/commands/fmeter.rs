@@ -1,6 +1,8 @@
 use std::fs;
 use std::path::Path;
 use std::string::String;
+use poise::serenity_prelude::colours::roles::BLUE;
+
 use crate::{Context, Error, IMAGE_DEFAULT};
 use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
 
@@ -183,13 +185,12 @@ pub async fn fmeter(
             let mut frame_meter_msg = r#"__Startup__: "#.to_owned() + &mframes.startup + " → `";
 
             // Processing for startup frames
-            // This bool to determine if bracket was present
-            let mut startup_bra = false;
+
             let startup_vec = sep_frame_vec(&mframes.startup).await;
             println!("OOF: {:?}", startup_vec);
             
             // If vec has only one entry and the entry is empty or -
-            if startup_vec.len() == 1 &&  startup_vec[0] == "-" {
+            if startup_vec.len() == 1 && startup_vec[0] == "-" {
                 frame_meter_msg = frame_meter_msg + "-";
             }
             // If vec has only one entry and the move has only 1 frame of startup
@@ -199,12 +200,14 @@ pub async fn fmeter(
             // Otherwise execute logic
             else{
 
+                // This bool to determine if bracket was present
+                let mut startup_bra = false;
+                
                 // Making the message
                 for x in 0..startup_vec.len() {
 
                     // If vec string entry is a digit
                     if let Ok(num) = startup_vec[x].parse::<i8>() {
-
 
                         // Iterate up to its numerical value -1
                         for _ in 0..num-1 {
@@ -226,10 +229,6 @@ pub async fn fmeter(
                                 break;
                             }
                         }
-                        // if x == startup_vec.len()-1 {
-                        //     frame_meter_msg = frame_meter_msg;
-                        //
-                        // }
                     }
                     // If vec string entry isnt a digit
                     else {
@@ -256,15 +255,16 @@ pub async fn fmeter(
             frame_meter_msg = frame_meter_msg + "`\n__Active__: " + &mframes.active + " → `";
             
             // Processing for active frames
-            let mut hit_recovery = false;
             let active_vec = sep_frame_vec(&mframes.active).await;
             println!("OOF2: {:?}", active_vec);
             
-            if startup_vec.len() == 1 &&  startup_vec[0] == "-" {
+            if active_vec.len() == 1 && active_vec[0] == "-" {
                 frame_meter_msg = frame_meter_msg + "-";
             }
             else {
 
+                let mut hit_recovery = false;
+                
                 // Making the message
                 for x in 0..active_vec.len() {
 
@@ -283,11 +283,6 @@ pub async fn fmeter(
                                 frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
                             }
                         }
-
-                        // // Might be useless
-                        // if x == active_vec.len()-1 {
-                        //     frame_meter_msg = frame_meter_msg;
-                        // }
                     }
                     // If vec string entry isnt a digit
                     else {
@@ -309,10 +304,12 @@ pub async fn fmeter(
             let recovery_vec = sep_frame_vec(&mframes.recovery).await;
             println!("OOF3: {:?}", recovery_vec);
             
-            if startup_vec.len() == 1 && startup_vec[0] == "-" {
+            if recovery_vec.len() == 1 && recovery_vec[0] == "-" {
                 frame_meter_msg = frame_meter_msg + "-";
             }
             else {
+
+                let mut recovery_tilde = false;
 
                 // Making the message
                 for x in 0..recovery_vec.len() {
@@ -322,15 +319,36 @@ pub async fn fmeter(
 
                         // Iterate up to its numerical value
                         for _ in 0..num {
-                            frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+
+                            // If tilde was not passed previously
+                            if recovery_tilde == false {
+                                // Put a BLUE_DIAMOND into the message
+                                frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                            }
+                            // If tilde was passed
+                            else {
+                                
+                                // The difference between the first possible frame a move can connect
+                                // and the latest frame -1 is the times a BLUE_DIAMOND is going to be 
+                                // put inside the msg
+                                for _ in 0..( (recovery_vec[x].parse::<i8>().unwrap()) - (recovery_vec[x-2].parse::<i8>()).unwrap()) {
+                                    frame_meter_msg = frame_meter_msg + BLUE_DIAMOND;
+                                }
+                                break;
+                            }
                         }
-                        // if x == recovery_vec.len()-1 {
-                        //     frame_meter_msg = frame_meter_msg;
-                        // }
                     }
                     // If vec string entry isnt a digit
                     else {
                         frame_meter_msg = frame_meter_msg + &recovery_vec[x];
+
+                        // Execute same logic for [ and ~
+                        if recovery_vec[x] == "~" {
+                            recovery_tilde = true;
+                        }
+                        else {
+                            recovery_tilde = false;
+                        }
                     }
                 }
             }
