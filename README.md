@@ -57,7 +57,7 @@ Registers or removes all slash commands in the current server or every server th
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
 
-- **Command**: `/help`.\ 
+- **Command**: `/help`.\
 **Example**: `/help` or `/help fmeter`.\
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
 
