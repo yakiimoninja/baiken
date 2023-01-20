@@ -24,7 +24,11 @@ by providing you with each character's moves, frame data and their hitboxes.**
 - **Command**: `/frames`. \
 Example: `/frames baiken 236K`.\
 Displays the frame data of a move along with an image.
-  
+ 
+- **Command**: `/fmeter`.\
+**Example**: `/fmeter cz super`.\
+Displays visually the startup, active and recovery frames of a character's move.
+
 - **Command**: `/hitboxes`. \
 Example: `/hitboxes goldlewis 426H`.\
 Displays the hitbox images of a character's move.
@@ -54,7 +58,7 @@ Registers or removes all slash commands in the current server or every server th
 Sends a request or feedback to the dev.
 
 - **Command**: `/help`.\ 
-**Example**__: `/help` or `/help fmeter`.\
+**Example**: `/help` or `/help fmeter`.\
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
 
 ## Usage notes.
