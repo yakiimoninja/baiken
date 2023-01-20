@@ -64,6 +64,9 @@ async fn help_aliases() -> String {
     let help_msg = r#"
 __**Command**__: `/aliases`.
 __**Example**__: `/aliases leo`.
+
+__**character_arg**__: Character name or nickname. Cannot be empty.
+
 Displays all the aliases for each normal/special/super move of a character."#;
     return help_msg.to_string();
 }
@@ -72,6 +75,10 @@ async fn help_fmeter() -> String {
     let help_msg = r#"
 __**Command**__: `/fmeter`.
 __**Example**__: `/fmeter cz super`.
+
+__**character_arg**__: Character name or nickname. Cannot be empty.
+__**character_move_arg**__: Character move name, input or alias. Cannot be empty.
+
 Displays visually the startup, active and recovery frames of a character's move."#;
     return help_msg.to_string();
 }
@@ -80,6 +87,10 @@ async fn help_frames() -> String {
     let help_msg = r#"
 __**Command**__: `/frames`.
 __**Example**__: `/frames baiken 236K`.
+
+__**character_arg**__: Character name or nickname. Cannot be empty.
+__**character_move_arg**__: Character move name, input or alias. Cannot be empty.
+
 Displays the frame data of a move along with an image."#;
     return help_msg.to_string();
 }
@@ -88,6 +99,9 @@ async fn help_help() -> String {
     let help_msg = r#"
 __**Command**__: `/help`. 
 __**Example**__: `/help` or `/help fmeter`.
+
+__**cmd_arg**__: Any command name, `notes` or specific. Can be empty.
+
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed."#;
     return help_msg.to_string();
 }
@@ -96,6 +110,10 @@ async fn help_hitboxes() -> String {
     let help_msg = r#"
 __**Command**__: `/hitboxes`. 
 __**Example**__: `/hitboxes goldlewis 426H`.
+
+__**character_arg**__: Character name or nickname. Cannot be empty.
+__**character_move_arg**__: Character move name, input or alias. Cannot be empty.
+
 Displays the hitbox images of a character's move."#;
     return help_msg.to_string();
 }
@@ -104,6 +122,9 @@ async fn help_moves() -> String {
     let help_msg = r#"
 __**Command**__: `/moves`.
 __**Example**__: `/moves sol`.
+
+__**character_arg**__: Character name or nickname. Cannot be empty.
+
 Displays all the moves and inputs of a character."#;
     return help_msg.to_string();
 }
@@ -111,6 +132,7 @@ Displays all the moves and inputs of a character."#;
 async fn help_nicknames() -> String {
     let help_msg = r#"
 __**Command**__: `/nicknames`.
+
 Displays all the nicknames for each character."#;
     return help_msg.to_string();
 }
@@ -147,6 +169,7 @@ __**Usage notes.**__
 async fn help_register() -> String {
     let help_msg = r#"
 __**Command**__: `/register`.
+
 **This command only works for owners.**
 Registers or removes all slash commands in the current server or every server the bot is in."#;
     return help_msg.to_string();
@@ -155,6 +178,9 @@ Registers or removes all slash commands in the current server or every server th
 async fn help_request() -> String {
     let help_msg = r#"
 __**Command**__: `/request`.
+
+__**text**__: Any text. Cannot be empty.
+
 Sends a request or feedback to the dev."#;
     return help_msg.to_string();
 }
@@ -193,6 +219,10 @@ async fn help_update() -> String {
     let help_msg = r#"
 __**Command**: `/update`.
 __**Example**__: `/update frames all`.
+
+__**frames_or_images**__: `frames`, `images` or `all`. Cannot be empty.
+__**character_arg**__: Character name or nickname. Cannot be empty.
+
 **This command only works for owners.**
 Meaning that it requires an instance of the source code to use it.
 Updates the frame data and or image links for all or a specific character according to dustloop."#;
