@@ -29,7 +29,7 @@
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 - **Command**: `/frames`. \
 Displays the frame data of a move along with an image.
-    <details>
+    <details open>
         <summary>Show example.</summary>
             <p>
                 <img src="https://user-images.githubusercontent.com/80072600/213763206-277c7615-66f2-4815-8e66-8da6f5fb70a9.png" />
@@ -38,7 +38,7 @@ Displays the frame data of a move along with an image.
 
 - **Command**: `/fmeter`.\
 Displays visually the startup, active and recovery frames of a character's move.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763165-e7499889-9aba-4a98-9e3e-6bd12399e40e.png"/>
@@ -47,7 +47,7 @@ Displays visually the startup, active and recovery frames of a character's move.
 
 - **Command**: `/hitboxes`. \
 Displays the hitbox images of a character's move.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763221-f648e100-be22-4669-9d89-ad01dd0c2736.png"/>
@@ -56,7 +56,7 @@ Displays the hitbox images of a character's move.
   
 - **Command**: `/moves`.\
 Displays all the moves and inputs of a character.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763223-bd3785a8-2070-44ce-93ab-9c8bd2abbc31.png"/>
@@ -65,7 +65,7 @@ Displays all the moves and inputs of a character.
 
 - **Command**: `/aliases`.\
 Displays all the aliases for each normal/special/super move of a character.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213761709-c08bda5a-4b0b-4d66-85b3-7bb6ef4b814d.png"/>
@@ -74,7 +74,7 @@ Displays all the aliases for each normal/special/super move of a character.
 
 - **Command**: `/nicknames`.\
 Displays all the nicknames for each character.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763225-608c9a50-f8bb-4c6b-bbba-72b24082a6d3.png"/>
@@ -85,7 +85,7 @@ Displays all the nicknames for each character.
 **This command only works for owners.** \
 Meaning that it requires an instance of the source code to use it. \
 Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). \
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763235-1305c8cd-e58f-4200-a008-744f65df32d7.png"/>
@@ -95,7 +95,7 @@ Updates the frame data and or image links for all or a specific character accord
 - **Command**: `/register`.\
 **This command only works for owners.** \
 Registers or removes all slash commands in the current server or every server the bot is in.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763229-8e7bc940-ac37-462c-b755-2c6ebd063221.png"/>
@@ -104,7 +104,7 @@ Registers or removes all slash commands in the current server or every server th
 
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763233-b40acb55-53d6-4916-a145-6b7d95c1e15d.png"/>
@@ -113,7 +113,7 @@ Sends a request or feedback to the dev.
 
 - **Command**: `/help`.\
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
-    <details>
+    <details open>
         <summary>Show example.</summary>
         <p>
             <img src="https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png"/>
