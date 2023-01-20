@@ -9,9 +9,9 @@
 #
 
 ## Table of contents.
-  - [Patch notes](https://github.com/yakiimoninja/baiken/releases).
-  - [Inviting Baiken to a server](#inviting-the-bot-to-a-server).
-  - [Commands](#commands).
+- [Patch notes](https://github.com/yakiimoninja/baiken/releases).
+- [Inviting Baiken to a server](#inviting-the-bot-to-a-server).
+- [Commands](#commands).
     - [Usage notes](#usage-notes).
     - [Nicknames](data/nicknames.json).
     - [Character specifics](#character-specifics).
@@ -29,48 +29,82 @@
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 - **Command**: `/frames`. \
 Displays the frame data of a move along with an image.
-  <details>
-  <summary> Click to show example. </summary>
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
-    whatever
-
-  </details>
- 
 - **Command**: `/fmeter`.\
 **Example**: `/fmeter cz super`.\
 Displays visually the startup, active and recovery frames of a character's move.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/hitboxes`. \
 Example: `/hitboxes goldlewis 426H`.\
 Displays the hitbox images of a character's move.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
   
 - **Command**: `/moves`.\
 Example: `/moves sol`.\
 Displays all the moves and inputs of a character.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/aliases`.\
 Example: `/aliases leo`.\
 Displays all the aliases for each normal/special/super move of a character.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/nicknames`.\
 Displays all the nicknames for each character.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/update`.\
 **This command only works for owners.** \
 Meaning that it requires an instance of the source code to use it. \
 Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). \
 Example: `/update frames all`.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/register`.\
 **This command only works for owners.** \
 Registers or removes all slash commands in the current server or every server the bot is in.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 - **Command**: `/help`.\
 **Example**: `/help` or `/help fmeter`.\
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
+    <details>
+        <summary> Click to show example. </summary>
+        whatever
+    </details>
 
 ## Usage notes.
 
