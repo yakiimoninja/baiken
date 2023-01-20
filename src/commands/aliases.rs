@@ -117,6 +117,7 @@ pub async fn aliases(
     if character_arg_altered != "Faust" 
         && character_arg_altered != "Goldlewis_Dickinson" 
         && character_arg_altered != "Ky_Kiske" 
+        && character_arg_altered != "Leo_Whitefang" 
         && character_arg_altered != "Nagoriyuki" {
         
         // Building the message to be sent by the bot
