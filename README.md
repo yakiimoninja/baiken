@@ -1,3 +1,24 @@
+    </details>![fmeter](https://user-images.githubusercontent.com/80072600/213763165-e7499889-9aba-4a98-9e3e-6bd12399e40e.png)
+
+![frames](https://user-images.githubusercontent.com/80072600/213763206-277c7615-66f2-4815-8e66-8da6f5fb70a9.png)
+
+![help_generic](https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png)
+
+![help_specific](https://user-images.githubusercontent.com/80072600/213763215-8dba5d56-5060-4e8f-9808-090bb1517484.png)
+
+![hitboxes](https://user-images.githubusercontent.com/80072600/213763221-f648e100-be22-4669-9d89-ad01dd0c2736.png)
+
+![moves](https://user-images.githubusercontent.com/80072600/213763223-bd3785a8-2070-44ce-93ab-9c8bd2abbc31.png)
+
+![nicknames](https://user-images.githubusercontent.com/80072600/213763225-608c9a50-f8bb-4c6b-bbba-72b24082a6d3.png)
+
+![register](https://user-images.githubusercontent.com/80072600/213763229-8e7bc940-ac37-462c-b755-2c6ebd063221.png)
+
+![request](https://user-images.githubusercontent.com/80072600/213763233-b40acb55-53d6-4916-a145-6b7d95c1e15d.png)
+
+![update](https://user-images.githubusercontent.com/80072600/213763235-1305c8cd-e58f-4200-a008-744f65df32d7.png)
+
+
 # Baiken
 
 <img src="https://user-images.githubusercontent.com/80072600/213743131-11012730-7bcd-4ab2-a6b4-e7406fdec419.jpg" />
@@ -63,8 +84,9 @@ Example: `/aliases leo`.\
 Displays all the aliases for each normal/special/super move of a character.
     <details>
         <summary>Show example.</summary>
-        whatever
-    </details>
+        <p>
+            <img src="https://user-images.githubusercontent.com/80072600/213761709-c08bda5a-4b0b-4d66-85b3-7bb6ef4b814d.png" />
+        </p>
 
 - **Command**: `/nicknames`.\
 Displays all the nicknames for each character.
