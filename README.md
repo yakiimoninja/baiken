@@ -22,20 +22,20 @@ by providing you with each character's moves, frame data and their hitboxes.**
 ## Commands.
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 - **Command**: `/frames`. \
-Displays the frame data of a move along with an image.\
-Example: `/frames baiken 236K`.
+Example: `/frames baiken 236K`.\
+Displays the frame data of a move along with an image.
   
 - **Command**: `/hitboxes`. \
-Displays the hitbox images of a character's move. \
-Example: `/hitboxes goldlewis 426H`.
+Example: `/hitboxes goldlewis 426H`.\
+Displays the hitbox images of a character's move.
   
 - **Command**: `/moves`.\
-Displays all the moves and inputs of a character.\
-Example: `/moves sol`.
+Example: `/moves sol`.\
+Displays all the moves and inputs of a character.
 
 - **Command**: `/aliases`.\
-Displays all the aliases for each normal/special/super move of a character.\
-Example: `/aliases leo`.
+Example: `/aliases leo`.\
+Displays all the aliases for each normal/special/super move of a character.
 
 - **Command**: `/nicknames`.\
 Displays all the nicknames for each character.
@@ -48,18 +48,19 @@ Example: `/update frames all`.
 
 - **Command**: `/register`.\
 **This command only works for owners.** \
-Registers all slash commands in the current server or in every server the bot is in.
+Registers or removes all slash commands in the current server or every server the bot is in.
 
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
 
-- **Command**: `/help`.\
-Displays a help message.  
+- **Command**: `/help`.\ 
+**Example**__: `/help` or `/help fmeter`.\
+Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
 
 ## Usage notes.
 
-  - **`/` commands can be substituted with direct mentions if preferred.**
-     - Doing so will enable the use of shorthand commands.
+- **`/` commands can be substituted with direct mentions if preferred.**
+    - Doing so will enable the use of shorthand commands.
         - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
         - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
         - Example: `@Baiken m leo` same as `/moves leo`.
