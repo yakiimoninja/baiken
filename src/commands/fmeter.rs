@@ -1,8 +1,6 @@
 use std::fs;
 use std::path::Path;
 use std::string::String;
-use poise::serenity_prelude::colours::roles::BLUE;
-
 use crate::{Context, Error, IMAGE_DEFAULT};
 use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
 
@@ -301,8 +299,8 @@ pub async fn fmeter(
             frame_meter_msg = frame_meter_msg + "`\n__Recovery__: " + &mframes.recovery + " → `";
 
             // Processing for recovery frames
+            println!("OOF3: {:?}", mframes.recovery);
             let recovery_vec = sep_frame_vec(&mframes.recovery).await;
-            println!("OOF3: {:?}", recovery_vec);
             
             if recovery_vec.len() == 1 && recovery_vec[0] == "-" {
                 frame_meter_msg = frame_meter_msg + "-";
@@ -342,8 +340,8 @@ pub async fn fmeter(
                     else {
                         frame_meter_msg = frame_meter_msg + &recovery_vec[x];
 
-                        // Execute same logic for [ and ~
-                        if recovery_vec[x] == "~" {
+                        // Execute same logic for ( and ~
+                        if recovery_vec[x] == "~" || recovery_vec[x] == "(" {
                             recovery_tilde = true;
                         }
                         else {
@@ -403,18 +401,24 @@ async fn sep_frame_vec(text: &String) -> Vec<String> {
 
             let cur_it_len = result.len();
 
+            println!("OOF4: {:?}, cur_it_len {}", result, result.len());
             for r in 0..result.len()-1 {
+
+            println!("OOF5: {:?}, index {}, len {}", result, r, result.len());
                 if result[r].to_lowercase() == "total" {
+                    println!("Index: {}, Removing total. {:?}, len {}", r, result, result.len());
                     result.remove(r);
-                    println!("Index: {}, Removing total.", r);
+                    break;
                 }
                 else if result[r] == "" {
+                    println!("Index: {}, Removing empty. {:?}, len {}", r, result, result.len());
                     result.remove(r);
-                    println!("Index: {}, Removing empty.", r);
+                    break;
                 }
                 else if result[r] == " " {
+                    println!("Index: {}, Removing space. {:?}, len {}", r, result, result.len());
                     result.remove(r);
-                    println!("Index: {}, Removing space.", r);
+                    break;
                 }
             }
 
