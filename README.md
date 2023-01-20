@@ -28,8 +28,13 @@
 ## Commands.
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 - **Command**: `/frames`. \
-Example: `/frames baiken 236K`.\
 Displays the frame data of a move along with an image.
+  <details>
+  <summary> Click to show example. </summary>
+
+    whatever
+
+  </details>
  
 - **Command**: `/fmeter`.\
 **Example**: `/fmeter cz super`.\
