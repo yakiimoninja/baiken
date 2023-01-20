@@ -5,7 +5,7 @@
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
 [![GitHub tag](https://img.shields.io/github/tag/yakiimoninja/baiken.svg)](https://github.com/yakiimoninja/baiken/releases/latest)
 
-### Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with each character's moves, frame data and their hitboxes.
+### Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data and hitboxes.
 #
 
 ## Table of contents.
