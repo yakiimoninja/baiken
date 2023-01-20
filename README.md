@@ -1,22 +1,3 @@
-    </details>![fmeter](https://user-images.githubusercontent.com/80072600/213763165-e7499889-9aba-4a98-9e3e-6bd12399e40e.png)
-
-![frames](https://user-images.githubusercontent.com/80072600/213763206-277c7615-66f2-4815-8e66-8da6f5fb70a9.png)
-
-![help_generic](https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png)
-
-![help_specific](https://user-images.githubusercontent.com/80072600/213763215-8dba5d56-5060-4e8f-9808-090bb1517484.png)
-
-![hitboxes](https://user-images.githubusercontent.com/80072600/213763221-f648e100-be22-4669-9d89-ad01dd0c2736.png)
-
-![moves](https://user-images.githubusercontent.com/80072600/213763223-bd3785a8-2070-44ce-93ab-9c8bd2abbc31.png)
-
-![nicknames](https://user-images.githubusercontent.com/80072600/213763225-608c9a50-f8bb-4c6b-bbba-72b24082a6d3.png)
-
-![register](https://user-images.githubusercontent.com/80072600/213763229-8e7bc940-ac37-462c-b755-2c6ebd063221.png)
-
-![request](https://user-images.githubusercontent.com/80072600/213763233-b40acb55-53d6-4916-a145-6b7d95c1e15d.png)
-
-![update](https://user-images.githubusercontent.com/80072600/213763235-1305c8cd-e58f-4200-a008-744f65df32d7.png)
 
 
 # Baiken
@@ -52,7 +33,9 @@
 Displays the frame data of a move along with an image.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763206-277c7615-66f2-4815-8e66-8da6f5fb70a9.png/>
+        </p>
     </details>
 
 - **Command**: `/fmeter`.\
@@ -60,7 +43,9 @@ Displays the frame data of a move along with an image.
 Displays visually the startup, active and recovery frames of a character's move.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763165-e7499889-9aba-4a98-9e3e-6bd12399e40e.png/>
+        </p>
     </details>
 
 - **Command**: `/hitboxes`. \
@@ -68,7 +53,9 @@ Example: `/hitboxes goldlewis 426H`.\
 Displays the hitbox images of a character's move.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763221-f648e100-be22-4669-9d89-ad01dd0c2736.png/>
+        </p>
     </details>
   
 - **Command**: `/moves`.\
@@ -76,7 +63,9 @@ Example: `/moves sol`.\
 Displays all the moves and inputs of a character.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763223-bd3785a8-2070-44ce-93ab-9c8bd2abbc31.png/>
+        </p>
     </details>
 
 - **Command**: `/aliases`.\
@@ -85,14 +74,17 @@ Displays all the aliases for each normal/special/super move of a character.
     <details>
         <summary>Show example.</summary>
         <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213761709-c08bda5a-4b0b-4d66-85b3-7bb6ef4b814d.png" />
+            <img src="<img src"https://user-images.githubusercontent.com/80072600/213761709-c08bda5a-4b0b-4d66-85b3-7bb6ef4b814d.png/>" />
         </p>
+    </details>
 
 - **Command**: `/nicknames`.\
 Displays all the nicknames for each character.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763225-608c9a50-f8bb-4c6b-bbba-72b24082a6d3.png/>
+        </p>
     </details>
 
 - **Command**: `/update`.\
@@ -102,7 +94,9 @@ Updates the frame data and or image links for all or a specific character accord
 Example: `/update frames all`.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763235-1305c8cd-e58f-4200-a008-744f65df32d7.png/>
+        </p>
     </details>
 
 - **Command**: `/register`.\
@@ -110,14 +104,18 @@ Example: `/update frames all`.
 Registers or removes all slash commands in the current server or every server the bot is in.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763229-8e7bc940-ac37-462c-b755-2c6ebd063221.png/>
+        </p>
     </details>
 
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763233-b40acb55-53d6-4916-a145-6b7d95c1e15d.png/>
+        </p>
     </details>
 
 - **Command**: `/help`.\
@@ -125,7 +123,10 @@ Sends a request or feedback to the dev.
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
     <details>
         <summary>Show example.</summary>
-        whatever
+        <p>
+            <img src"https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png/>
+            <img src"https://user-images.githubusercontent.com/80072600/213763215-8dba5d56-5060-4e8f-9808-090bb1517484.png/>
+        </p>
     </details>
 
 ## Usage notes.
