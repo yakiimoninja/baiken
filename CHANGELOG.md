@@ -1,3 +1,15 @@
+# Version 0.10.0 Patch Notes.
+
+### General
+  - Added new command `fmeter` that displays visually the startup, active and recovery frames of a character's move.
+  - Reworked the command `help` to display specific help messages if a command is given in `cmd_arg` option.
+  - Updated framedata.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.9.0 Patch Notes.
 
 ### General
