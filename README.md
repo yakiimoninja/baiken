@@ -30,7 +30,7 @@
 - **Command**: `/frames`. \
 Displays the frame data of a move along with an image.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
@@ -38,7 +38,7 @@ Displays the frame data of a move along with an image.
 **Example**: `/fmeter cz super`.\
 Displays visually the startup, active and recovery frames of a character's move.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
@@ -46,7 +46,7 @@ Displays visually the startup, active and recovery frames of a character's move.
 Example: `/hitboxes goldlewis 426H`.\
 Displays the hitbox images of a character's move.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
   
@@ -54,7 +54,7 @@ Displays the hitbox images of a character's move.
 Example: `/moves sol`.\
 Displays all the moves and inputs of a character.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
@@ -62,14 +62,14 @@ Displays all the moves and inputs of a character.
 Example: `/aliases leo`.\
 Displays all the aliases for each normal/special/super move of a character.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
 - **Command**: `/nicknames`.\
 Displays all the nicknames for each character.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
@@ -79,7 +79,7 @@ Meaning that it requires an instance of the source code to use it. \
 Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). \
 Example: `/update frames all`.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
@@ -87,14 +87,14 @@ Example: `/update frames all`.
 **This command only works for owners.** \
 Registers or removes all slash commands in the current server or every server the bot is in.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
 - **Command**: `/request`.\
 Sends a request or feedback to the dev.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
@@ -102,7 +102,7 @@ Sends a request or feedback to the dev.
 **Example**: `/help` or `/help fmeter`.\
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
     <details>
-        <summary> Click to show example. </summary>
+        <summary>Show example.</summary>
         whatever
     </details>
 
