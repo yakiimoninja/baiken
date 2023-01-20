@@ -3,6 +3,7 @@
 ### General
   - Added new command `fmeter` that displays visually the startup, active and recovery frames of a character's move.
   - Reworked the command `help` to display specific help messages if a command name, `notes` or `specifics` is given in `cmd_arg` option.
+  - Updated the github README. Now has pictures to help explain each command.
   - Updated framedata.
 
 &#x200B;
