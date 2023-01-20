@@ -14,11 +14,14 @@ pub async fn help(ctx: Context<'_>,
                 "aliases" => help_message = help_aliases().await,
                 "fmeter" => help_message = help_fmeter().await,
                 "frames" => help_message = help_frames().await,
+                "help" => help_message = help_help().await,
                 "hitboxes" => help_message = help_hitboxes().await,
                 "moves" => help_message = help_moves().await,
                 "nicknames" => help_message = help_nicknames().await,
+                "notes" => help_message = help_notes().await,
                 "register" => help_message = help_register().await,
                 "request" => help_message = help_request().await,
+                "specifics" => help_message = help_specifics().await,
                 "update" => help_message = help_update().await,
                 _ => {
                     help_message = "Command `".to_owned().to_string() + &cmd + "` not found!";
@@ -81,6 +84,14 @@ Displays the frame data of a move along with an image."#;
     return help_msg.to_string();
 }
 
+async fn help_help() -> String {
+    let help_msg = r#"
+__**Command**__: `/help`. 
+__**Example**__: `/help` or `/help fmeter`.
+Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed."#;
+    return help_msg.to_string();
+}
+
 async fn help_hitboxes() -> String {
     let help_msg = r#"
 __**Command**__: `/hitboxes`. 
@@ -104,6 +115,35 @@ Displays all the nicknames for each character."#;
     return help_msg.to_string();
 }
 
+async fn help_notes() -> String {
+    let help_msg = r#"
+__**Usage notes.**__
+
+- **`/` commands can be substituted with direct mentions if preferred.**
+    - Doing so will enable the use of shorthand commands.
+        - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
+        - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
+        - Example: `@Baiken m leo` same as `/moves leo`.
+        - Example: `@Baiken a chipp` same as `/aliases chipp`.
+
+- **All searching is case insensitive.**
+    - All names, nicknames, moves and aliases are case agnostic.
+    - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
+
+- **Character searching.**
+    - Characters can be found either using a part of their name, or any of their nicknames.
+    - Example: `/frames Happy Chaos cs` = `/frames happy cs` = `/frames hc cs`.
+
+- **Move searching.**
+    - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
+        - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
+    - Charged moves can be found with or without the use of `[]`.
+        - Example `/frames may 46S` = `/frames may [4]6S`.
+    - For a fully charged dust attack the alias `5D!` can be used instead.
+        - Example: `/frames chipp 5D!`."#;
+    return help_msg.to_string();
+}
+
 async fn help_register() -> String {
     let help_msg = r#"
 __**Command**__: `/register`.
@@ -116,6 +156,36 @@ async fn help_request() -> String {
     let help_msg = r#"
 __**Command**__: `/request`.
 Sends a request or feedback to the dev."#;
+    return help_msg.to_string();
+}
+
+async fn help_specifics() -> String {
+    let help_msg = r#"
+__**Character specifics.**__
+
+- **For normals that have levels like Nagoriyuki.**
+  - Add the level number next to the normal.
+  - For Level 1 `fS`: `/frames nago fs`. 
+  - For Level 2 `fS`: `/frames nago fs2`.
+  - For Level 3 `fS`: `/frames nago fs3`.
+  - If it's a level 1 normal nothing needs to be added since it's the default state.
+
+- **For specials that have levels like Goldlewis.**
+  - Add the level number next to the special.
+  - For Level 1 `Thunderbird`: `/frames gold Drone`.
+  - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
+  - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
+  - The above is not always the case depending on the special move and alias used.
+  - For Level 1 `Thunderbird`: `/frames gold D1`.
+  - For Level 2 `Thunderbird`: `/frames gold D2`.
+  - For Level 3 `Thunderbird`: `/frames gold D3`.
+  - See `/aliases gold` for more info on his aliases.
+
+- **For Testament's different Grave Reaper versions use as shown.**
+  - Regular version: `/frames testament 236S`.
+  - Partially charged version: `/frames testament 236S!`.
+  - Fully charged version: `/frames testament 236S!!`.
+"#;
     return help_msg.to_string();
 }
 
