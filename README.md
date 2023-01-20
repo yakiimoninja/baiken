@@ -39,7 +39,6 @@ Displays the frame data of a move along with an image.
     </details>
 
 - **Command**: `/fmeter`.\
-**Example**: `/fmeter cz super`.\
 Displays visually the startup, active and recovery frames of a character's move.
     <details>
         <summary>Show example.</summary>
@@ -49,7 +48,6 @@ Displays visually the startup, active and recovery frames of a character's move.
     </details>
 
 - **Command**: `/hitboxes`. \
-Example: `/hitboxes goldlewis 426H`.\
 Displays the hitbox images of a character's move.
     <details>
         <summary>Show example.</summary>
@@ -59,7 +57,6 @@ Displays the hitbox images of a character's move.
     </details>
   
 - **Command**: `/moves`.\
-Example: `/moves sol`.\
 Displays all the moves and inputs of a character.
     <details>
         <summary>Show example.</summary>
@@ -69,7 +66,6 @@ Displays all the moves and inputs of a character.
     </details>
 
 - **Command**: `/aliases`.\
-Example: `/aliases leo`.\
 Displays all the aliases for each normal/special/super move of a character.
     <details>
         <summary>Show example.</summary>
@@ -91,7 +87,6 @@ Displays all the nicknames for each character.
 **This command only works for owners.** \
 Meaning that it requires an instance of the source code to use it. \
 Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). \
-Example: `/update frames all`.
     <details>
         <summary>Show example.</summary>
         <p>
@@ -119,7 +114,6 @@ Sends a request or feedback to the dev.
     </details>
 
 - **Command**: `/help`.\
-**Example**: `/help` or `/help fmeter`.\
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
     <details>
         <summary>Show example.</summary>
