@@ -1,3 +1,6 @@
+
+<img src="https://user-images.githubusercontent.com/80072600/213743131-11012730-7bcd-4ab2-a6b4-e7406fdec419.jpg">
+
 # Baiken
 **Your favorite one-handed samurai lady helps you learn Guilty Gear Strive \
 by providing you with each character's moves, frame data and their hitboxes.**
