@@ -70,7 +70,7 @@ Displays all the aliases for each normal/special/super move of a character."#;
 
 async fn help_fmeter() -> String {
     let help_msg = r#"
-__**Command**__: `/fmeter`
+__**Command**__: `/fmeter`.
 __**Example**__: `/fmeter cz super`.
 Displays visually the startup, active and recovery frames of a character's move."#;
     return help_msg.to_string();
