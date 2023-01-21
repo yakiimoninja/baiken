@@ -185,7 +185,7 @@ pub async fn fmeter(
             // Processing for startup frames
 
             let startup_vec = sep_frame_vec(&mframes.startup).await;
-            println!("OOF: {:?}", startup_vec);
+            println!("startup_vec: {:?}", startup_vec);
             
             // If vec has only one entry and the entry is empty or -
             if startup_vec.len() == 1 && startup_vec[0] == "-" {
@@ -230,12 +230,29 @@ pub async fn fmeter(
                     }
                     // If vec string entry isnt a digit
                     else {
-                        // Display a GREEN_CIRCLE if + is the last frame of the move
+                        // Display a GREEN_CIRCLE if "+" is the last frame of the move
                         if x == startup_vec.len()-2 && startup_vec[x] == "+" {
-                            frame_meter_msg = frame_meter_msg + GREEN_CIRCLE;
+
+                            // If entry after + is a digit assert its value
+                            if let Ok(num) = startup_vec[x+1].parse::<i8>() {
+
+                                // If value is 1 then print GREEN_CIRCLE instead of "+" 
+                                if num == 1 {
+                                    frame_meter_msg = frame_meter_msg + GREEN_CIRCLE;
+                                }
+                                // Otherwise put GREEN_CIRCLE and  "+" sign
+                                else{
+                                    frame_meter_msg = frame_meter_msg + GREEN_CIRCLE + &startup_vec[x];
+                                }
+                            }
+                            // If entry after + isnt a number ????
+                            else{
+                                frame_meter_msg = frame_meter_msg + &startup_vec[x];
+                            }
                         }
                         // Otherwise display the symbol
                         else {
+                            println!("Indide else: {:?}", startup_vec);
                             frame_meter_msg = frame_meter_msg + &startup_vec[x];
                         }
 
@@ -254,7 +271,7 @@ pub async fn fmeter(
             
             // Processing for active frames
             let active_vec = sep_frame_vec(&mframes.active).await;
-            println!("OOF2: {:?}", active_vec);
+            println!("Active vec: {:?}", active_vec);
             
             if active_vec.len() == 1 && active_vec[0] == "-" {
                 frame_meter_msg = frame_meter_msg + "-";
@@ -299,7 +316,7 @@ pub async fn fmeter(
             frame_meter_msg = frame_meter_msg + "`\n__Recovery__: " + &mframes.recovery + " → `";
 
             // Processing for recovery frames
-            println!("OOF3: {:?}", mframes.recovery);
+            println!("Original recovery: {:?}", mframes.recovery);
             let recovery_vec = sep_frame_vec(&mframes.recovery).await;
             
             if recovery_vec.len() == 1 && recovery_vec[0] == "-" {
@@ -401,10 +418,10 @@ async fn sep_frame_vec(text: &String) -> Vec<String> {
 
             let cur_it_len = result.len();
 
-            println!("OOF4: {:?}, cur_it_len {}", result, result.len());
+            println!("Before loop: {:?}, cur_it_len {}", result, result.len());
             for r in 0..result.len()-1 {
 
-            println!("OOF5: {:?}, index {}, len {}", result, r, result.len());
+            println!("In loop: {:?}, index {}, len {}", result, r, result.len());
                 if result[r].to_lowercase() == "total" {
                     println!("Index: {}, Removing total. {:?}, len {}", r, result, result.len());
                     result.remove(r);
