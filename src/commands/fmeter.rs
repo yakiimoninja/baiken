@@ -150,9 +150,6 @@ pub async fn fmeter(
         if mframes.input.to_string().to_lowercase().replace(".", "") 
         == character_move_arg.to_string().to_lowercase().replace(".", "")
         || mframes.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
-            
-            move_found = true;
-            println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
 
             // Send move image
             for img_links in image_links {
