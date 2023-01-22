@@ -84,7 +84,7 @@ Displays all the nicknames for each character.
 - **Command**: `/update`.\
 **This command only works for owners.** \
 Meaning that it requires an instance of the source code to use it. \
-Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). \
+Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).
     <details open>
         <summary>Show example.</summary>
         <p>
@@ -170,6 +170,6 @@ Displays a help message. If used in conjunction with a command name, `notes` or 
   - Partially charged version: `/frames testament 236S!`.
   - Fully charged version: `/frames testament 236S!!`.
 #
-### Help support the project.
+### Support the project.
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
 ### Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
