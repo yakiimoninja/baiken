@@ -1,4 +1,4 @@
-# Version 0.10.0 Patch Notes.
+# Version 0.10.1 Patch Notes.
 
 ### Fixes
 - Fixed missing moves for `Nagoriyuki` and `Ky`.
