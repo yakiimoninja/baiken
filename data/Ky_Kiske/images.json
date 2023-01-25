@@ -350,5 +350,19 @@
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
   ]
+},
+	{
+  "input": "DI j.632146H",
+  "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+  ]
+},
+	{
+  "input": "j.632146H",
+  "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+  ]
 }
 ]
