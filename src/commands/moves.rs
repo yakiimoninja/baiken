@@ -43,29 +43,39 @@ pub async fn moves(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    for x_nicknames in vec_nicknames {
-
-        // If user input is part of a characters full name or the full name itself
-        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-        if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-        x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
-            
-            character_found = true;
-            character_arg_altered = x_nicknames.character.to_owned();
-            break;
+    if character_found == false {
+        
+        'outer: for x_nicknames in &vec_nicknames {
+        
+            // Iterating through the nicknames.json nickname entries
+            for y_nicknames in &x_nicknames.nicknames {
+    
+                // If user input equals a character nickname then pass the full character name
+                // To the new variable 'character_arg_altered'
+                if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
+    
+                    character_found = true;
+                    character_arg_altered = x_nicknames.character.to_owned();
+                    break 'outer;
+                }   
+            }
         }
+    }
 
-        // Iterating through the nicknames.json nickname entries
-        for y_nicknames in x_nicknames.nicknames {
+    if character_found == false {
+        
+        // Iterating through the nicknames.json character entries
+        for x_nicknames in &vec_nicknames {
 
-            // If user input equals a character nickname then pass the full character name
-            // To the new variable 'character_arg_altered'
-            if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
-
+            // If user input is part of a characters full name or the full name itself
+            // Then pass the full and correct charactet name to the new var 'character_arg_altered'
+            if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+                
                 character_found = true;
                 character_arg_altered = x_nicknames.character.to_owned();
                 break;
-            }   
+            }
         }
     }
     
@@ -92,7 +102,7 @@ pub async fn moves(
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Moves**__\n```diff";
 
-    if &character_arg_altered != "Goldlewis_Dickinson"{
+    if &character_arg_altered != "Goldlewis_Dickinson" || &character_arg_altered != "Nagoriyuki"{
 
         // For every other character move printing
         for mframes in move_frames {
