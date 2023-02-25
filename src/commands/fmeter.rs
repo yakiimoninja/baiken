@@ -64,32 +64,41 @@ pub async fn fmeter(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    for x_nicknames in vec_nicknames {
-
-        // If user input is part of a characters full name or the full name itself
-        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-        if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-        x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+    if character_found == false {
             
-            character_found = true;
-            character_arg_altered = x_nicknames.character.to_owned();
-            break;
-        }
+        'outer: for x_nicknames in &vec_nicknames {
+        
+            // Iterating through the nicknames.json nickname entries
+            for y_nicknames in &x_nicknames.nicknames {
 
-        // Iterating through the nicknames.json nickname entries
-        for y_nicknames in x_nicknames.nicknames {
+                // If user input equals a character nickname then pass the full character name
+                // To the new variable 'character_arg_altered'
+                if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
 
-            // If user input equals a character nickname then pass the full character name
-            // To the new variable 'character_arg_altered'
-            if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
-
-                character_found = true;
-                character_arg_altered = x_nicknames.character.to_owned();
-                break;
-            }   
+                    character_found = true;
+                    character_arg_altered = x_nicknames.character.to_owned();
+                    break 'outer;
+                }   
+            }
         }
     }
 
+    if character_found == false {
+        
+        // Iterating through the nicknames.json character entries
+        for x_nicknames in &vec_nicknames {
+
+            // If user input is part of a characters full name or the full name itself
+            // Then pass the full and correct charactet name to the new var 'character_arg_altered'
+            if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
+            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+                
+                character_found = true;
+                character_arg_altered = x_nicknames.character.to_owned();
+                break;
+            }
+        }
+    }
     
     // If user input isnt the full name, part of a full name or a nickname
     // Error out cause requested character was not found in the json
@@ -182,7 +191,7 @@ pub async fn fmeter(
             // Processing for startup frames
 
             let startup_vec = sep_frame_vec(&mframes.startup).await;
-            println!("startup_vec: {:?}", startup_vec);
+            //println!("startup_vec: {:?}", startup_vec);
             
             // If vec has only one entry and the entry is empty or -
             if startup_vec.len() == 1 && startup_vec[0] == "-" {
@@ -249,7 +258,7 @@ pub async fn fmeter(
                         }
                         // Otherwise display the symbol
                         else {
-                            println!("Indide else: {:?}", startup_vec);
+                            //println!("Indide else: {:?}", startup_vec);
                             frame_meter_msg = frame_meter_msg + &startup_vec[x];
                         }
 
@@ -268,7 +277,7 @@ pub async fn fmeter(
             
             // Processing for active frames
             let active_vec = sep_frame_vec(&mframes.active).await;
-            println!("Active vec: {:?}", active_vec);
+            //println!("Active vec: {:?}", active_vec);
             
             if active_vec.len() == 1 && active_vec[0] == "-" {
                 frame_meter_msg = frame_meter_msg + "-";
@@ -313,7 +322,7 @@ pub async fn fmeter(
             frame_meter_msg = frame_meter_msg + "`\n__Recovery__: " + &mframes.recovery + " → `";
 
             // Processing for recovery frames
-            println!("Original recovery: {:?}", mframes.recovery);
+            //println!("Original recovery: {:?}", mframes.recovery);
             let recovery_vec = sep_frame_vec(&mframes.recovery).await;
             
             if recovery_vec.len() == 1 && recovery_vec[0] == "-" {
@@ -368,9 +377,9 @@ pub async fn fmeter(
             frame_meter_msg = frame_meter_msg + "`";
             ctx.channel_id().say(ctx.discord(), frame_meter_msg).await?;
 
-            println!("Startup: {:?}", startup_vec);
-            println!("Active: {:?}", active_vec);
-            println!("Recovery: {:?}", recovery_vec);
+            // println!("Startup: {:?}", startup_vec);
+            // println!("Active: {:?}", active_vec);
+            // println!("Recovery: {:?}", recovery_vec);
             break;
 
         }
@@ -415,22 +424,22 @@ async fn sep_frame_vec(text: &String) -> Vec<String> {
 
             let cur_it_len = result.len();
 
-            println!("Before loop: {:?}, cur_it_len {}", result, result.len());
+            //println!("Before loop: {:?}, cur_it_len {}", result, result.len());
             for r in 0..result.len()-1 {
 
-            println!("In loop: {:?}, index {}, len {}", result, r, result.len());
+            //println!("In loop: {:?}, index {}, len {}", result, r, result.len());
                 if result[r].to_lowercase() == "total" {
-                    println!("Index: {}, Removing total. {:?}, len {}", r, result, result.len());
+                    //println!("Index: {}, Removing total. {:?}, len {}", r, result, result.len());
                     result.remove(r);
                     break;
                 }
                 else if result[r] == "" {
-                    println!("Index: {}, Removing empty. {:?}, len {}", r, result, result.len());
+                    //println!("Index: {}, Removing empty. {:?}, len {}", r, result, result.len());
                     result.remove(r);
                     break;
                 }
                 else if result[r] == " " {
-                    println!("Index: {}, Removing space. {:?}, len {}", r, result, result.len());
+                    //println!("Index: {}, Removing space. {:?}, len {}", r, result, result.len());
                     result.remove(r);
                     break;
                 }
