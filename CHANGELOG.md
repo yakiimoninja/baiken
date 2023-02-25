@@ -1,3 +1,17 @@
+# Version 0.10.2 Patch Notes.
+
+### Fixes
+- Fixed `the application did not respond` error when using the `/moves` command for Nagoriyuki.
+
+### General
+- Refactored code to exhaustively search through the character nicknames first.
+- Updated framedata. 
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.10.1 Patch Notes.
 
 ### Fixes
