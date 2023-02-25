@@ -349,5 +349,112 @@
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/8/80/GGST_Nagoriyuki_jS-Hitbox.png"
   ]
+},
+	{
+  "input": "j.S Level 3",
+  "move_img": "https://www.dustloop.com/wiki/images/1/17/GGST_Nagoriyuki_jS.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/80/GGST_Nagoriyuki_jS-Hitbox.png"
+  ]
+},
+	{
+  "input": "j.S Level BR",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e8/GGST_Nagoriyuki_jS2.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/e/e6/GGST_Nagoriyuki_jSBR-Hitbox.png"
+  ]
+},
+	{
+  "input": "6D or 4D",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Nagoriyuki_Ground_Throw.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "BR Activation",
+  "move_img": "https://www.dustloop.com/wiki/images/d/d6/GGST_Nagoriyuki_Activation.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/77/GGST_Nagoriyuki_Activation-Hitbox.png"
+  ]
+},
+	{
+  "input": "BR Deactivation",
+  "move_img": "https://www.dustloop.com/wiki/images/9/92/GGST_Nagoriyuki_Deactivation.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "j.6D or j.4D",
+  "move_img": "https://www.dustloop.com/wiki/images/f/fc/GGST_Nagoriyuki_Air_Throw.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d5/GGST_Nagoriyuki_Air_Throw_Hitbox.png"
+  ]
+},
+	{
+  "input": "214H",
+  "move_img": "https://www.dustloop.com/wiki/images/3/3d/GGST_Nagoriyuki_Kamuriyuki1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/a9/GGST_Nagoriyuki_Kamuriyuki1-Hitbox.png",
+    "https://www.dustloop.com/wiki/images/3/37/GGST_Nagoriyuki_Kamuriyuki2-Hitbox.png"
+  ]
+},
+	{
+  "input": "214K",
+  "move_img": "https://www.dustloop.com/wiki/images/7/7b/GGST_Nagoriyuki_Fukyo.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/fe/GGST_Nagoriyuki_Fukyo-Hitbox.png"
+  ]
+},
+	{
+  "input": "236K",
+  "move_img": "https://www.dustloop.com/wiki/images/7/7b/GGST_Nagoriyuki_Fukyo.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/fe/GGST_Nagoriyuki_Fukyo-Hitbox.png"
+  ]
+},
+	{
+  "input": "236S",
+  "move_img": "https://www.dustloop.com/wiki/images/9/97/GGST_Nagoriyuki_Zarameyuki1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/ae/GGST_Nagoriyuki_Zarameyuki1-Hitbox.png",
+    "https://www.dustloop.com/wiki/images/c/ce/GGST_Nagoriyuki_Zarameyuki2-Hitbox.png"
+  ]
+},
+	{
+  "input": "623H",
+  "move_img": "https://www.dustloop.com/wiki/images/8/81/GGST_Nagoriyuki_Shizuriyuki1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/80/GGST_Nagoriyuki_Shizuriyuki1-Hitbox.png"
+  ]
+},
+	{
+  "input": "623HH",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e4/GGST_Nagoriyuki_Shizuriyuki2.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/3/33/GGST_Nagoriyuki_Shizuriyuki2-Hitbox.png"
+  ]
+},
+	{
+  "input": "623P",
+  "move_img": "https://www.dustloop.com/wiki/images/b/ba/GGST_Nagoriyuki_Bloodsucking_Universe.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/6/6a/GGST_Nagoriyuki_Bloodsucking_Universe-Hitbox.png"
+  ]
+},
+	{
+  "input": "632146H",
+  "move_img": "https://www.dustloop.com/wiki/images/1/11/GGST_Nagoriyuki_Zansetsu2.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d1/GGST_Nagoriyuki_Zansetsu-Hitbox.png"
+  ]
+},
+	{
+  "input": "632146S",
+  "move_img": "https://www.dustloop.com/wiki/images/9/95/GGST_Nagoriyuki_Wasureyuki1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/83/GGST_Nagoriyuki_Wasureyuki1-Hitbox.png"
+  ]
 }
 ]

@@ -1,10 +1,23 @@
+# Version 0.10.1 Patch Notes.
+
+### Fixes
+- Fixed missing moves for `Nagoriyuki` and `Ky`.
+
+### General
+- Updated framedata.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.10.0 Patch Notes.
 
 ### General
-  - Added new command `fmeter` that displays visually the startup, active and recovery frames of a character's move.
-  - Reworked the command `help` to display specific help messages if a command name, `notes` or `specifics` is given in `cmd_arg` option.
-  - Updated the github README. Now has pictures to help explain each command.
-  - Updated framedata.
+- Added new command `fmeter` that displays visually the startup, active and recovery frames of a character's move.
+- Reworked the command `help` to display specific help messages if a command name, `notes` or `specifics` is given in `cmd_arg` option.
+- Updated the github README. Now has pictures to help explain each command.
+- Updated framedata.
 
 &#x200B;
 &#x200B;
@@ -14,28 +27,28 @@
 # Version 0.9.0 Patch Notes.
 
 ### General
-  - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the `frames` commands.
-  - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the character json files.
-  - Completely reworked how framedata is being parsed from dustloop which cut the `update` time to less than half.
-  - Added auto parsing of images and hitboxes instead of having to grab them manually.
-  - Reworked the `update` command to update frames and or data for all or specific characters.
-  - Updated frame data.
+- Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the `frames` commands.
+- Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the character json files.
+- Completely reworked how framedata is being parsed from dustloop which cut the `update` time to less than half.
+- Added auto parsing of images and hitboxes instead of having to grab them manually.
+- Reworked the `update` command to update frames and or data for all or specific characters.
+- Updated frame data.
 
 ### Nicknames
-  - **`Ramlethal Valentine`**:
+- **`Ramlethal Valentine`**:
     - Added nicknames `Borgar`.
   
-  - **`Happy Chaos`**:
+- **`Happy Chaos`**:
     - Added nicknames `Asshole`.
 
 ### Move Aliases
-  - **`Potemkin`**:
+- **`Potemkin`**:
     - `632146P` added alias `Hug`.
 
-  - **`Potemkin`**:
+- **`Potemkin`**:
     - `632146P` added alias `Super Hug`.
   
-  - **`Happy Chaos`**:
+- **`Happy Chaos`**:
     - `632146P` added alias `Balls`.
 
 &#x200B;
@@ -46,15 +59,15 @@
 # Version 0.8.5 Patch Notes.
 
 ### General
- - Updated frame data.
+- Updated frame data.
 
 ### Move Aliases
- - **`All Characters`**:
-   - `2D` added alias `Sweep`.
+- **`All Characters`**:
+    - `2D` added alias `Sweep`.
  
- - **`Sin Kiske`**:
-   - `632S` added alias `DP`.
-   - `632SS` added aliases `DP Followup`, `DPF`.
+- **`Sin Kiske`**:
+    - `632S` added alias `DP`.
+    - `632SS` added aliases `DP Followup`, `DPF`.
 
 &#x200B;
 &#x200B;
@@ -64,8 +77,8 @@
 # Version 0.8.4 Patch Notes.
 
 ### Fixes
- - Fixed `aliases` command spitting `The application did not respond` error.
- - Fixed `moves` command not showing anything for `Goldlewis`.
+- Fixed `aliases` command spitting `The application did not respond` error.
+- Fixed `moves` command not showing anything for `Goldlewis`.
 
 &#x200B;
 &#x200B;
@@ -75,11 +88,11 @@
 # Version 0.8.3 Patch Notes.
 
 ### General
- - Updated frame data.
+- Updated frame data.
 
 ### Move Aliases
- - **`Nagoriyuki`**:
-   - `f.S Level 1` added alias `fs`.
+- **`Nagoriyuki`**:
+    - `f.S Level 1` added alias `fs`.
 
 &#x200B;
 &#x200B;
@@ -89,20 +102,20 @@
 # Version 0.8.2 Patch Notes.
 
 ### General
- - Updated frame data.
- - Updated command usage instructions.
+- Updated frame data.
+- Updated command usage instructions.
 
 ### Nicknames
- - **`Axl Low`**:
-   - Added nicknames `Brit`,`British`.
+- **`Axl Low`**:
+    - Added nicknames `Brit`,`British`.
  
- - **`Zato-1`**:
-   - Added nickname `Eddie`.
+- **`Zato-1`**:
+    - Added nickname `Eddie`.
 
 ### Move Aliases
- - **`Zato-1`**:
-  - `236K` added alias `Clap`.
-  - `]K[` added aliases `NE Clap`, `NEC`.
+- **`Zato-1`**:
+    - `236K` added alias `Clap`.
+    - `]K[` added aliases `NE Clap`, `NEC`.
 
 &#x200B;
 &#x200B;
@@ -112,34 +125,34 @@
 # Version 0.8.1 Patch Notes.
 
 ### General
- - Added `Sin Kiske` along with his framedata, hitboxes, aliases.
+- Added `Sin Kiske` along with his framedata, hitboxes, aliases.
 
 ### Nicknames
- - **`Sin_Kiske`**:
-   - Added nickname `SK`.
+- **`Sin_Kiske`**:
+    - Added nickname `SK`.
 
 ### Move Aliases
 - **`Sol Badguy`**:
-  - `236P` added alias `Gunflame`.
-  - `214P` added alias `Feint Gunflame`.
- 
+    - `236P` added alias `Gunflame`.
+    - `214P` added alias `Feint Gunflame`.
+
 - **`Sin Kiske`**:
-  - `c.S` added alias `5S`.
-  - `5[D]` added alias `5D!`.
-  - `236H` added alias `Beak Driver`, `BD`.
-  - `236HH` added alias `Beak Driver Followup`, `BDF`.
-  - `623S` added alias `Hawk Baker`, `HB`.
-  - `623SS` added alias `Hawk Baker Followup`, `HBF`.
-  - `214S` added alias `Hoof Stomp`, `HS`.
-  - `214SS` added alias `Hoof Stomp Followup`, `HSF`.
-  - `236K` added alias `Elk Hunt`, `EH`.
-  - `236KK` added alias `Elk Hunt Followup`, `EHF`.
-  - `66` added alias `Gazelle Step`, `GS`.
-  - `63214P` added alias `Still Growing`, `Eat`, `Food`, `SG`.
-  - `632146H` added alias `R.T.L.`, `RTL`.
-  - `632146HH` added alias `R.T.L. Followup`, `RTLF`.
-  - `236236P` added alias `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
-  - `236236PP` added alias `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
+    - `c.S` added alias `5S`.
+    - `5[D]` added alias `5D!`.
+    - `236H` added alias `Beak Driver`, `BD`.
+    - `236HH` added alias `Beak Driver Followup`, `BDF`.
+    - `623S` added alias `Hawk Baker`, `HB`.
+    - `623SS` added alias `Hawk Baker Followup`, `HBF`.
+    - `214S` added alias `Hoof Stomp`, `HS`.
+    - `214SS` added alias `Hoof Stomp Followup`, `HSF`.
+    - `236K` added alias `Elk Hunt`, `EH`.
+    - `236KK` added alias `Elk Hunt Followup`, `EHF`.
+    - `66` added alias `Gazelle Step`, `GS`.
+    - `63214P` added alias `Still Growing`, `Eat`, `Food`, `SG`.
+    - `632146H` added alias `R.T.L.`, `RTL`.
+    - `632146HH` added alias `R.T.L. Followup`, `RTLF`.
+    - `236236P` added alias `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
+    - `236236PP` added alias `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
 
 &#x200B;
 &#x200B;
@@ -149,13 +162,13 @@
 # Version 0.8.0 Patch Notes.
 
 ### General
- - Added new command `nicknames` to print all existing nicknames for characters.
+- Added new command `nicknames` to print all existing nicknames for characters.
 
 ### Nicknames
 
- - Removed all 2 letter nicknames from file for characters without 2 part names, as redundant. Bot can find characters as is.
- - **`Zato-1`**:
-   - Added nickname `Zato One`.
+- Removed all 2 letter nicknames from file for characters without 2 part names, as redundant. Bot can find characters as is.
+- **`Zato-1`**:
+    - Added nickname `Zato One`.
 
 &#x200B;
 &#x200B;
@@ -165,8 +178,8 @@
 # Version 0.7.6 Patch Notes.
  
 ### Fixes 
- - Fixed `Faust 5K` broken hitbox image link.
- - Fixed `Nagoriyuki` aliases command not displaying anything.
+- Fixed `Faust 5K` broken hitbox image link.
+- Fixed `Nagoriyuki` aliases command not displaying anything.
 
 &#x200B;
 &#x200B;
@@ -176,32 +189,32 @@
 # Version 0.7.5 Patch Notes.
 
 ### General
- - Code clean up. Removed the use of the `init.json` file.
+- Code clean up. Removed the use of the `init.json` file.
 
 ### Nicknames
- - Added the full name as a nickname for all characters applicable.
- - **`Sol Badguy`**:
-   - Added nickname `Sol Goodman`.
+- Added the full name as a nickname for all characters applicable.
+- **`Sol Badguy`**:
+    - Added nickname `Sol Goodman`.
    
 ### Move Aliases
 
- - **`All Characters`**:
-   - `c.S` added alias `5S`.
+- **`All Characters`**:
+    - `c.S` added alias `5S`.
 
- - **`Bridget`**:
-   - `SS` added alias `5SS`.
-   - `HH` added alias `5HH`.
-   - `236KP` modified alias from `SB` to `SLB` due to alias overlap.
-   - `236KK` modified alias from `SS` to `SLS` due to alias overlap.
+- **`Bridget`**:
+    - `SS` added alias `5SS`.
+    - `HH` added alias `5HH`.
+    - `236KP` modified alias from `SB` to `SLB` due to alias overlap.
+    - `236KK` modified alias from `SS` to `SLS` due to alias overlap.
 
- - **`Chipp Zanuff`**
-   - `236P` added alias `P Alpha`, `PA`.
-   - `j.236P` added alias `Air P Alpha`, `APA`.
-   - `236K` added alias `K Alpha`, `KA`.
-   - `j.236K` added alias `Air K Alpha`, `AKA`.
-   - `623S` added alias `Beta`.
-   - `j.623S` added alias `Air Beta`, `AB`.
-   - `236H` added alias `Gamma`.
+- **`Chipp Zanuff`**
+    - `236P` added alias `P Alpha`, `PA`.
+    - `j.236P` added alias `Air P Alpha`, `APA`.
+    - `236K` added alias `K Alpha`, `KA`.
+    - `j.236K` added alias `Air K Alpha`, `AKA`.
+    - `623S` added alias `Beta`.
+    - `j.623S` added alias `Air Beta`, `AB`.
+    - `236H` added alias `Gamma`.
 
 &#x200B;
 &#x200B;
@@ -211,82 +224,72 @@
 # Version 0.7.4 Patch Notes.
 
 ### General
- - Updated frame data.
- 
+- Updated frame data.
+
 ### Fixes 
- - Fixed `The application did not respond` error when invoking the `/update` command.
- - Fixed `invincibility` and `counter` showing `RISC` and `Proration` values.
- - Fixed `Sol` `Air Volcanic Viper` alias displaying framedata for `H Volcanic Viper` and vice versa.
+- Fixed `The application did not respond` error when invoking the `/update` command.
+- Fixed `invincibility` and `counter` showing `RISC` and `Proration` values.
+- Fixed `Sol` `Air Volcanic Viper` alias displaying framedata for `H Volcanic Viper` and vice versa.
 
 ### Move Aliases
- - **`Axl Low`**:
-   - `j.236H` Added alias: `TKB`.
- 
+- **`Axl Low`**:
+    - `j.236H` Added alias: `TKB`.
 
- - **`Baiken`**:
-   - `j.214214P` Added alias: `Air Kenjyu`.
+- **`Baiken`**:
+    - `j.214214P` Added alias: `Air Kenjyu`.
 
+- **`Faust`**:
+    - `214P` Added alias: `P Scarecrow`.
+    - `214K` Added alias: `K Scarecrow`.
+    - `214S` Added alias: `S Scarecrow`.
 
- - **`Faust`**:
-   - `214P` Added alias: `P Scarecrow`.
-   - `214K` Added alias: `K Scarecrow`.
-   - `214S` Added alias: `S Scarecrow`.
+- **`I-no`**:
+    - `j.236K` Added alias: `K Sultry Performance`.
+    - `236H` Added alias: `H Stroke The Big Tree`.
 
+- **`Ky Kiske`**:
+    - `DI 236K` Added alias: `DI Stun Dipper`.
+    - `DI 214K` Added alias: `DI Foudre Arc`.
+    - `DI 214S` Added alias: `DI Dire Eclat`.
+    - `DI 236236P` Added alias: `DI Sacred Edge`.
 
- - **`I-no`**:
-   - `j.236K` Added alias: `K Sultry Performance`.
-   - `236H` Added alias: `H Stroke The Big Tree`.
+- **`Leo Whitefang`**:
+    - `bt.P` Added alias: `Bt Punch`,`BTP`.
+    - `bt.K` Added alias: `Bt Low`, `BTK`, `BK`.
+    - `bt.S` Added alias: `Bt Cross`, `BTS`.
+    - `bt.H` Added alias: `Bt Overhead`, `BTH`, `BH`.
+    - `bt.D` Added alias: `Back Turn Dust`, `Backturn Dust`, `Back Turn Parry`, `Bt Parry`.
+    - `bt.22` Added alias: `Bt Cancel`.
+    - `bt.214K` Added alias: `Bt Command Grab`,`Bt Grab`,`Bt Throw`,`BTCG`,`BTG`,`BTT`. 
+    - `bt.214H` Added alias: `Bt Blitz`.
+    - `bt.214K` Removed alias `BTP` as duplicate.
 
-
- - **`Ky Kiske`**:
-   - `DI 236K` Added alias: `DI Stun Dipper`.
-   - `DI 214K` Added alias: `DI Foudre Arc`.
-   - `DI 214S` Added alias: `DI Dire Eclat`.
-   - `DI 236236P` Added alias: `DI Sacred Edge`.
-
-
- - **`Leo Whitefang`**:
-   - `bt.P` Added alias: `Bt Punch`,`BTP`.
-   - `bt.K` Added alias: `Bt Low`, `BTK`, `BK`.
-   - `bt.S` Added alias: `Bt Cross`, `BTS`.
-   - `bt.H` Added alias: `Bt Overhead`, `BTH`, `BH`.
-   - `bt.D` Added alias: `Back Turn Dust`, `Backturn Dust`, `Back Turn Parry`, `Bt Parry`.
-   - `bt.22` Added alias: `Bt Cancel`.
-   - `bt.214K` Added alias: `Bt Command Grab`,`Bt Grab`,`Bt Throw`,`BTCG`,`BTG`,`BTT`. 
-   - `bt.214H` Added alias: `Bt Blitz`.
-   - `bt.214K` Removed alias `BTP` as duplicate.
-
-
- - **`May`**:
-   - `[4]6S` Added alias: `S Dolphin`.
-   - `[2]8S` Added alias: `S Up Dolphin`.
+- **`May`**:
+    - `[4]6S` Added alias: `S Dolphin`.
+    - `[2]8S` Added alias: `S Up Dolphin`.
 
 
- - **`Millia Rage`**:
-   - `236S` Added alias: `S Disk`.
-   - `236H` Added alias: `H Disk`.
+- **`Millia Rage`**:
+    - `236S` Added alias: `S Disk`.
+    - `236H` Added alias: `H Disk`.
 
+- **`Nagoriyuki`**:
+    - `623H` Added alias: `Shizuriyuki 1`, `DP1`.
+    - `623HH` Added alias: `Shizuriyuki 2`, `DP2`.
 
- - **`Nagoriyuki`**:
-   - `623H` Added alias: `Shizuriyuki 1`, `DP1`.
-   - `623HH` Added alias: `Shizuriyuki 2`, `DP2`.
+- **`Potemkin`**:
+    - `Reflect Projectile` Added alias: `RP`.
 
+- **`Ramlethal Valentine`**:
+    - `236S` Added alias: `S Sword Throw`.
 
- - **`Potemkin`**:
-   - `Reflect Projectile` Added alias: `RP`.
-
-
- - **`Ramlethal Valentine`**:
-   - `236S` Added alias: `S Sword Throw`.
- 
-
- - **`Sol Badguy`**:
-   - `214P` Added alias: `Feint Fireball`.
-   - `623S` Added alias: `S Volcanic Viper`.
-   - `236K` Added alias: `Bandit Revolver 1`, `BR1`.
-   - `236KK` Added alias: `Bandit Revolver 2`, `BR2`.
-   - `j.236K` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
-   - `j.236KK` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
+- **`Sol Badguy`**:
+    - `214P` Added alias: `Feint Fireball`.
+    - `623S` Added alias: `S Volcanic Viper`.
+    - `236K` Added alias: `Bandit Revolver 1`, `BR1`.
+    - `236KK` Added alias: `Bandit Revolver 2`, `BR2`.
+    - `j.236K` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
+    - `j.236KK` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
 
 &#x200B;
 &#x200B;
@@ -296,21 +299,21 @@
 # Version 0.7.3 Patch Notes.
 
 ### General
- - Cleaned up bot message formatting.
+- Cleaned up bot message formatting.
 
 ### Nicknames.
- >add a nickname for may called "totsugeki" so we can search up totsugeki totsugeki
+>add a nickname for may called "totsugeki" so we can search up totsugeki totsugeki
  
 Say less my guy.
 
- - `May` Added nickname: `Totsugeki`.
+- `May` Added nickname: `Totsugeki`.
 
 ### Move Aliases
- - **`Nagoriyuki`**:
-   - `j.D Level 1` Added alias: `j.D`.
-   - `j.D Level 2` Added alias: `j.D2`.
-   - `j.D Level 3` Added alias: `j.D3`.
-   - `j.D Level BR` Added alias: `j.DB`.
+- **`Nagoriyuki`**:
+    - `j.D Level 1` Added alias: `j.D`.
+    - `j.D Level 2` Added alias: `j.D2`.
+    - `j.D Level 3` Added alias: `j.D3`.
+    - `j.D Level BR` Added alias: `j.DB`.
 
 &#x200B;
 &#x200B;
@@ -320,12 +323,12 @@ Say less my guy.
 # Version 0.7.2 Patch Notes.
 
 ### General
- - Cleaned up some code.
- - Reworked error messages when moves are not found.
+- Cleaned up some code.
+- Reworked error messages when moves are not found.
 
 ### Move Aliases
- - **`Millia Rage`**:
-   - `j.236K` Added alias: `Turbofall`.
+- **`Millia Rage`**:
+    - `j.236K` Added alias: `Turbofall`.
 
 &#x200B;
 &#x200B;
@@ -335,15 +338,15 @@ Say less my guy.
 # Version 0.7.1 Patch Notes.
 
 ### General
- - Changed move not found case for `/frames` command.
- - Changed follow up message for `/aliases` command.
+- Changed move not found case for `/frames` command.
+- Changed follow up message for `/aliases` command.
  
 ### Move Aliases
- - **`Chipp Zanuff`**:
-   - `63214S` Added alias: `Leaf Grab`.
+- **`Chipp Zanuff`**:
+    - `63214S` Added alias: `Leaf Grab`.
 
 ### Nicknames
- - `Goldlewis` Added nickname: `GL`.
+- `Goldlewis` Added nickname: `GL`.
 
 &#x200B;
 &#x200B;
@@ -353,19 +356,19 @@ Say less my guy.
 # Version 0.7.0 Patch Notes.
 
 ### General
- - Prefix commands will be replaced with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes in Discord's API.
- - Refactored code to support slash commands and the new gateway intents.
- - Slash commands have context menus to help with command execution.
- - Added a new easter egg and removed the previous one.
- - Reworked how the `request` command works.
- - New invite link and QR Code.
+- Prefix commands will be replaced with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes in Discord's API.
+- Refactored code to support slash commands and the new gateway intents.
+- Slash commands have context menus to help with command execution.
+- Added a new easter egg and removed the previous one.
+- Reworked how the `request` command works.
+- New invite link and QR Code.
 
 ### Nicknames
- - `Baiken` Added nickname: `Bacon`.
- - `Bridget` Added nickname: `Brisket`.
+- `Baiken` Added nickname: `Bacon`.
+- `Bridget` Added nickname: `Brisket`.
  
 ### Move Aliases
- - **`Bridget`**:
+- **`Bridget`**:
     - `236S/H` Added aliases: `Stop and Dash`, `Fireball`, `Yoyo Throw`, `SD`, `YYT`.
     - `214S/H` Added aliases: `Stop and Dash Return`, `Return Fireball`, `Yoyo Return`, `SDR`, `YYR`.
     - `214K` Added aliases: `Rolling Movement`, `Ball`, `Spin`, `Sonic`, `Sonic Spin`, `RM`.
@@ -379,8 +382,8 @@ Say less my guy.
     - `632146H` Added aliases: `Return of the Killing Machine`, `Fire Teddy Super`, `Fire Roger Super`, `FRS`, `FTS`, `ROTKM`.
 
 ### Fixes
- - Fixed `Bridget` missing images.
- - Fixed `Faust` `c.S` displaying super instead of `c.S` due to overlap of aliases.
+- Fixed `Bridget` missing images.
+- Fixed `Faust` `c.S` displaying super instead of `c.S` due to overlap of aliases.
 
 &#x200B;
 &#x200B;
@@ -390,8 +393,8 @@ Say less my guy.
  # Version 0.6.4 Patch Notes.
 
 ### General
- - Added Bridgets framedata/hitboxes.
- - Updated some existing framedata.
+- Added Bridgets framedata/hitboxes.
+- Updated some existing framedata.
 
 &#x200B;
 &#x200B;
@@ -401,10 +404,10 @@ Say less my guy.
  # Version 0.6.3 Patch Notes.
 
 ### General
- - Updated some of the frame data.
- 
+- Updated some of the frame data.
+
 ### Fixes
- - Fixed Chipp `Banki Messai` not displaying cause of changed input.
+- Fixed Chipp `Banki Messai` not displaying cause of changed input.
 
 &#x200B;
 &#x200B;
@@ -414,7 +417,7 @@ Say less my guy.
 # Version 0.6.2 Patch Notes.
 
 ### General
- - Updated some of the frame data.
+- Updated some of the frame data.
 
 &#x200B;
 &#x200B;
@@ -424,8 +427,8 @@ Say less my guy.
 # Version 0.6.1 Patch Notes.
 
 ### Fixes
- - Fixes Testament's `Greave Reapers` not displaying anything cause of dustloop updating them. 
- - Fixed missing move images and hitboxes for:
+- Fixes Testament's `Greave Reapers` not displaying anything cause of dustloop updating them. 
+- Fixed missing move images and hitboxes for:
     - `Chipp Wall Run P`.
     - `Chipp Wall Run K`.
     - `Chipp Wall Run S`.
@@ -441,16 +444,15 @@ Say less my guy.
 # Version 0.6.0 Patch Notes.
 
 ### General
-
- - Cleaned up some of the code regarding `init.json`.
- - Added additional prefix for Baiken. Now both **`b.`** and **`!`** work as preFixes
- - Made all commands case insensitive. Now `b.f` and `B.F` work.
- - Added some special interactions when `b.f` is used while other frame data bots are present on the same server.
- - Updated [README.md](https://github.com/yakiimoninja/baiken#readme) with character specific stuff and minor adjustments.
+- Cleaned up some of the code regarding `init.json`.
+- Added additional prefix for Baiken. Now both **`b.`** and **`!`** work as preFixes
+- Made all commands case insensitive. Now `b.f` and `B.F` work.
+- Added some special interactions when `b.f` is used while other frame data bots are present on the same server.
+- Updated [README.md](https://github.com/yakiimoninja/baiken#readme) with character specific stuff and minor adjustments.
 
 ### Move aliases
 
- - **`Nagoriyuki`**:
+- **`Nagoriyuki`**:
     - `f.S Level 1`: Added alias `f.S`.
     - `f.S Level 2`: Added alias `f.S2`.
     - `f.S Level 3`: Added alias `f.S3`.
@@ -460,12 +462,12 @@ Say less my guy.
     - `f.SS Level 2`: Added alias `f.SS2`.
     - `f.SS Level 3`: Added alias `f.SS3`.
     - `f.SS Level BR`: Added alias `f.SSB`.
-    
+
     - `f.SSS Level 1`: Added alias `f.SSS`.
     - `f.SSS Level 2`: Added alias `f.SSS2`.
     - `f.SSS Level 3`: Added alias `f.SSS3`.
     - `f.SSS Level BR`: Added alias `f.SSSB`.
-    
+
     - `2S Level 1`: Added alias `2S`.
     - `2S Level 2`: Added alias `2S2`.
     - `2S Level 3`: Added alias `2S3`.
@@ -473,7 +475,7 @@ Say less my guy.
 
 ### Fixes
 
- - Fixed missing move image and hitboxes for:
+- Fixed missing move image and hitboxes for:
     - `nago fS Level 1`.
     - `nago fS Level 2`.
     - `nago fS Level 3`.
@@ -499,22 +501,22 @@ Say less my guy.
 # Version 0.5.0 Patch Notes.
 
 ### General
- - Season 2 is out but the new frame data will have to be updated gradually. \
+- Season 2 is out but the new frame data will have to be updated gradually. \
  Meaning we'll need to wait for the chads at dustloop to bless us. \
  Support them if you can. They are doing gods work!
  
- - Removed patch notes folder but moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
+- Removed patch notes folder but moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
 
 ### Commands
- - Removed the command aliases `hit` and `hitbox` from `b.h`. \
+- Removed the command aliases `hit` and `hitbox` from `b.h`. \
  Although `b.h` and `b.hitboxes` still work.
 
 ### Move Aliases
- - `Happy Chaos`:
+- `Happy Chaos`:
     - `Focus 214S H`: Removed alias `Fire` as it's a duplicate of the `Regular 236S H`. \
     `Focus Fire` can be used instead.
 
- - `Nagoriyuki`: \
+- `Nagoriyuki`: \
    Since Nagoriyuki has a lot variation in his normals due to Blood Rage, aliases have now been added to distinguish them from each other.
  
     - `5H Level 1`: Added alias `5H`.
@@ -537,28 +539,28 @@ Say less my guy.
     - `j.H Level 3`: Added alias `jH3`.
     - `j.H Level BR`: Added alias `jHB`.
 
- - `Goldlewis Dickinson`: \
+- `Goldlewis Dickinson`: \
    Same principle with Nagoriyuki adding more aliases to distinguish between specials and their leveled up counterparts.
 
-   - `214S Level 1`: Added alias `D1`.
-   - `214S Level 2`: Added alias `Thunderbird 2`, `Drone 2`,`D2`. 
-   - `214S Level 3`: Added alias `Thunderbird 3`, `Drone 3`,`D3`.
+    - `214S Level 1`: Added alias `D1`.
+    - `214S Level 2`: Added alias `Thunderbird 2`, `Drone 2`,`D2`. 
+    - `214S Level 3`: Added alias `Thunderbird 3`, `Drone 3`,`D3`.
 
-   - `236S Level 1`: Added alias `Minigun`, `MG1`, `G1`.
-   - `236S Level 2`: Added alias `Skyfish 2`, `Minigun 2`, `MG2`, `Gun 2`, `G2`.
-      - Existing wrong alias `GL1` changed to `GL2`.
-   - `236S Level 3`: Added alias `Skyfish 3`, `Minigun 3`, `MG3`, `Gun 3`, `G3`.
+    - `236S Level 1`: Added alias `Minigun`, `MG1`, `G1`.
+    - `236S Level 2`: Added alias `Skyfish 2`, `Minigun 2`, `MG2`, `Gun 2`, `G2`.
+        - Existing wrong alias `GL1` changed to `GL2`.
+    - `236S Level 3`: Added alias `Skyfish 3`, `Minigun 3`, `MG3`, `Gun 3`, `G3`.
 
-   - `720P`: Added alias `Down With The System 2`, `Super 2`.
-   - `1080P`: Added alias `Down With The System 3`, `Super 3`.
+    - `720P`: Added alias `Down With The System 2`, `Super 2`.
+    - `1080P`: Added alias `Down With The System 3`, `Super 3`.
 
-   - `236236K Level 1`: Added alias `L1`.
-   - `236236K Level 2`: Added alias `Burn It Down 2`, `Laser 2`, `Laser Super 2`, `L2`.
-   - `236236K Level 3`: Added alias `Burn It Down 3`, `Laser 3`, `Laser Super 3`, `L3`.
+    - `236236K Level 1`: Added alias `L1`.
+    - `236236K Level 2`: Added alias `Burn It Down 2`, `Laser 2`, `Laser Super 2`, `L2`.
+    - `236236K Level 3`: Added alias `Burn It Down 3`, `Laser 3`, `Laser Super 3`, `L3`.
 
 
 ### Fixes 
- - Fixed `b.f` broken move image links for:
+- Fixed `b.f` broken move image links for:
     - `nago 623H`.
     - `nago 623HH`.
 
@@ -574,11 +576,11 @@ Say less my guy.
 <img src="../data/images/baiken_qr.png" width="200" height="200"/>
 
 ### Miscellaneous
-  - Changed the embed line's color to match Baiken's profile picture. 
-  - Moved `images` folder out of `src` and to `data`.
+- Changed the embed line's color to match Baiken's profile picture. 
+- Moved `images` folder out of `src` and to `data`.
 
 ### Fixes
-  - Fixed broken image links after the `images` folder move.
+- Fixed broken image links after the `images` folder move.
 
 &#x200B;
 &#x200B;
@@ -589,34 +591,34 @@ Say less my guy.
 
 ### Move Aliases
 
-   - `Leo Whitefang`:
-      - Autoguard attack `[s/h] h/s`: Added aliases `s!h` and `h!s`.
+- `Leo Whitefang`:
+    - Autoguard attack `[s/h] h/s`: Added aliases `s!h` and `h!s`.
 
-   - `Faust`:
-      - `236S`: Added alias `MMM`.
-      - `j236S`: Added aliases `AMMM` and `JMMM`.
+- `Faust`:
+    - `236S`: Added alias `MMM`.
+    - `j236S`: Added aliases `AMMM` and `JMMM`.
 
 ### Fixes
 
-   - Fixed `b.h` missing hitbox images for:
-      - `axl 2P`
-      - `axl 2S`
-      - `axl 2H`
-      - `axl jD`
-      - `chipp 236236K`
-      - `giovanna 2D`
-      - `hc fS`
-      - `jacko fS`
-      - `jacko 2H`
-      - `jacko jS`
-      - `jacko jH`
-      - `jacko 2D`
-      - `jacko 236K`
-      - `ky 236K`
-      - `may 632146H`
-      - `may j632146H`
-      - `millia 6P`
-      - `potemkin cS`
+- Fixed `b.h` missing hitbox images for:
+    - `axl 2P`
+    - `axl 2S`
+    - `axl 2H`
+    - `axl jD`
+    - `chipp 236236K`
+    - `giovanna 2D`
+    - `hc fS`
+    - `jacko fS`
+    - `jacko 2H`
+    - `jacko jS`
+    - `jacko jH`
+    - `jacko 2D`
+    - `jacko 236K`
+    - `ky 236K`
+    - `may 632146H`
+    - `may j632146H`
+    - `millia 6P`
+    - `potemkin cS`
 
 &#x200B;
 &#x200B;
@@ -626,16 +628,16 @@ Say less my guy.
 # Version 0.4.3 Patch Notes.
 
 ### Fixes
- - Fixed `b.a` not printing anything for Ky.
- - Fixed `b.a` command not coloring properly.
+- Fixed `b.a` not printing anything for Ky.
+- Fixed `b.a` command not coloring properly.
 
 ### Miscellaneous
- - Changed message of `b.f` command when the move given by the user is incorrect and advizing them to look at the moves and aliases.
+- Changed message of `b.f` command when the move given by the user is incorrect and advizing them to look at the moves and aliases.
 
 
 ### Sidenote:
- - Refrain from requesting aliases that already exist or are similar to what already exists.
- - Read the instructions on how to request before doing so.
+- Refrain from requesting aliases that already exist or are similar to what already exists.
+- Read the instructions on how to request before doing so.
 
 &#x200B;
 &#x200B;

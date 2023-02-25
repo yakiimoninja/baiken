@@ -35,5 +35,5 @@
 	{"input":"S while holding Servant","name":"Held Defend Command","damage":"33","guard":"-","startup":"3+1","active":"28","recovery":"Total 24","hit":"+31","block":"-","level":"-","counter":"-","scaling":"80%","riscgain":"-","invincibility":"none"},
 	{"input":"236236H","name":"Cheer Servant On (H)","damage":"-","guard":"-","startup":"3","active":"-","recovery":"12","hit":"-","block":"See Notes","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"Jack-O: None, Servants: 4~14F Full"},
 	{"input":"236236S","name":"Cheer Servant On (S)","damage":"-","guard":"-","startup":"3","active":"-","recovery":"12","hit":"-","block":"See Notes","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"Jack-O: None, Servants: 4~14F Full"},
-	{"input":"632146P","name":"Forever Elysion Driver","damage":"179","guard":"Throw","startup":"10+1","active":"2","recovery":"58","hit":"HKD","block":"-","level":"-","counter":"-","scaling":"100%","riscgain":"-","invincibility":"All 1~12F, Throw 1~55F"}
+	{"input":"632146P","name":"Forever Elysion Driver","damage":"179","guard":"Throw","startup":"10+1","active":"2","recovery":"58","hit":"HKD","block":"-","level":"-","counter":"-","scaling":"100%","riscgain":"-","invincibility":"1~12F All, 1~55F Throw"}
 ]

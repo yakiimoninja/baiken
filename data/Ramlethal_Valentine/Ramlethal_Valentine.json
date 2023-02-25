@@ -30,6 +30,6 @@
 	{"input":"623P","name":"Dauro","damage":"35","guard":"All","startup":"11","active":"3","recovery":"27","hit":"+5","block":"-10","level":"4","counter":"Mid","scaling":"90%","riscgain":"2500","invincibility":"-"},
 	{"input":"j.214K","name":"Air Sildo Detruo","damage":"40","guard":"All","startup":"30","active":"Until Landing","recovery":"-","hit":"+3~+6","block":"-3~+3","level":"3","counter":"Mid","scaling":"80%","riscgain":"2000","invincibility":"-"},
 	{"input":"j.214S","name":"Agressa Ordono","damage":"30,30 [24,24]","guard":"All","startup":"12","active":"4(10)4","recovery":"24","hit":"KD","block":"-","level":"3","counter":"Very Small","scaling":"90%","riscgain":"1000×2 [700×2]","invincibility":"-"},
-	{"input":"236236S","name":"Mortobato","damage":"160 [130] {100}","guard":"All","startup":"7+2","active":"6","recovery":"51","hit":"KD","block":"-38 [-38] {-43}","level":"4 [4] {2}","counter":"Mid","scaling":"100%","riscgain":"2500 {1500}","invincibility":"All 1~14"},
+	{"input":"236236S","name":"Mortobato","damage":"160 [130] {100}","guard":"All","startup":"7+2","active":"6","recovery":"51","hit":"KD","block":"-38 [-38] {-43}","level":"4 [4] {2}","counter":"Mid","scaling":"100%","riscgain":"2500 {1500}","invincibility":"1~14 All"},
 	{"input":"632146H","name":"Calvados","damage":"1×29, 127","guard":"All (Guard Crush)","startup":"11+13","active":"-","recovery":"-","hit":"KD","block":"+16","level":"1","counter":"Small","scaling":"100%","riscgain":"100×30","invincibility":"-"}
 ]
