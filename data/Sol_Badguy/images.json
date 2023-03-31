@@ -148,7 +148,7 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/f/fb/GGST_Sol_Badguy_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/a/a1/GGST_Sol_Badguy_Ground_Throw_Hitbox.png"
   ]
 },
 	{
@@ -222,7 +222,7 @@
 },
 	{
   "input": "623K",
-  "move_img": "https://www.dustloop.com/wiki/images/6/62/GGST_Sol_Badguy_623K-1.png",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e3/GGST_Sol_Badguy_623K_2.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/d/d0/GGST_Sol_623K_Hitbox.png"
   ]

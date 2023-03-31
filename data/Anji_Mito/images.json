@@ -169,6 +169,7 @@
   "input": "236H K",
   "move_img": "https://www.dustloop.com/wiki/images/4/42/GGST_Anji_Mito_236HK.png",
   "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/96/GGST_Anji_Mito_Issokutobi_Hitbox_1.png",
     "https://www.dustloop.com/wiki/images/6/65/GGST_Anji_Mito_Issokutobi_Hitbox.png"
   ]
 },
@@ -197,13 +198,16 @@
   "input": "236P",
   "move_img": "https://www.dustloop.com/wiki/images/8/81/GGST_Anji_Mito_236P.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/1/1a/GGST_Anji_Mito_Shitsu_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/1/1a/GGST_Anji_Mito_Shitsu_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/4/43/GGST_Anji_Mito_Shitsu_Hitbox2.png",
+    "https://www.dustloop.com/wiki/images/1/1c/GGST_Anji_Mito_Shitsu_Hitbox3.png"
   ]
 },
 	{
   "input": "236S",
   "move_img": "https://www.dustloop.com/wiki/images/6/6f/GGST_Anji_Mito_236S.png",
   "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/85/GGST_Anji_Mito_Kou_0_Hitbox.png",
     "https://www.dustloop.com/wiki/images/d/d1/GGST_Anji_Mito_Kou_1_Hitbox.png",
     "https://www.dustloop.com/wiki/images/6/64/GGST_Anji_Mito_Kou_2_Hitbox.png"
   ]

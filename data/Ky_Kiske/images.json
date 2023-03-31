@@ -144,7 +144,7 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/3/35/GGST_Ky_Kiske_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/c/c9/GGST_Ky_Kiske_Ground_Throw_Hitbox.png"
   ]
 },
 	{
@@ -334,7 +334,8 @@
   "input": "632146H",
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Ky_Kiske_632146H_Range.png"
   ]
 },
 	{
@@ -348,21 +349,24 @@
   "input": "DI 632146H",
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Ky_Kiske_632146H_Range.png"
   ]
 },
 	{
   "input": "DI j.632146H",
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Ky_Kiske_632146H_Range.png"
   ]
 },
 	{
   "input": "j.632146H",
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Ky_Kiske_632146H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png"
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Ky_Kiske_Ride_The_Lightning_hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Ky_Kiske_632146H_Range.png"
   ]
 }
 ]

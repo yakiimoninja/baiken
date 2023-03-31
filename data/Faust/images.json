@@ -234,7 +234,7 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/9b/GGST_Faust_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/c/c5/GGST_Faust_Ground_Throw_Hitbox.png"
   ]
 },
 	{
@@ -356,7 +356,8 @@
   "input": "632146H",
   "move_img": "https://www.dustloop.com/wiki/images/b/b4/GGST_Faust_632146H_1.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/c/c9/GGST_Faust_632146H_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/c/c9/GGST_Faust_632146H_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/7/76/GGST_Faust_632146H_Hitbox_2.png"
   ]
 }
 ]
