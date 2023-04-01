@@ -1,3 +1,21 @@
+# Version 0.10.3 Patch Notes.
+
+### General
+- Updated framedata. 
+
+### Move Aliases
+- **`Chipp Zanuff`**:
+    - `236S` added alias `Rekka`.
+
+- **`Ramlethal Valentine`**:
+    - `236236S` added alias `Motorboat`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
+
 # Version 0.10.2 Patch Notes.
 
 ### Fixes
