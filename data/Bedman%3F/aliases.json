@@ -1,0 +1,21 @@
+[
+    {"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
+	{"input":"5[D]","aliases":["5D!"]},
+    {"input":"(236H) 214P","aliases":["214PH"]},
+    {"input":"(236P) 214P","aliases":["214PP"]},
+    {"input":"(236S) 214P","aliases":["214PS"]},
+    {"input":"214K","aliases":["call 0x$1.00","C1","Delay"]},
+    {"input":"214P","aliases":["call 0x$0.20","C2","Instant"]},
+    {"input":"236H","aliases":["call 4B9 (Malfunction)","4B9","Arm Swing","Swing","AS"]},
+    {"input":"236P","aliases":["call 4BA","4BA","Fireball","FB"]},
+    {"input":"236S","aliases":["call 4B3","4B3","Beyblade","BB"]},
+    {"input":"j.214K","aliases":["Air call 0x$1.00","Air C1","Air Delay","AC1","AD"]},
+    {"input":"j.214P","aliases":["Air call 0x$0.20","Air C2","Air Instant","AC2","AI"]},
+    {"input":"j.236P","aliases":["Air call 4BA","Air 4BA","A4BA","Air Fireball","Air FB","AFB"]},
+    {"input":"j.236S","aliases":["Air call 4B3","Air 4B3","A4B3","Air Beyblade","Air BB","ABB"]},
+    {"input":"632146H","aliases":["call 4CC","4CC","Super"]},
+    {"input":"632146S","aliases":["call 13C","13C","Install"]},
+    {"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
+]
