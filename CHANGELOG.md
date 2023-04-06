@@ -1,3 +1,35 @@
+# Version 0.10.4 Patch Notes.
+
+### General
+- Updated framedata.
+- Added character Bedman?.
+
+### Nicknames
+- **`Bedman?`**:
+    - Added nicknames `Bedwoman`, `Bed`.
+
+### Move Aliases
+- **`Bedman`**:
+    - `(236H) 214P`added alias `214PH`.
+    - `(236P) 214P` added alias `214PP`.
+    - `(236S) 214P` added alias `214PS`.
+    - `214K` added aliases `call 0x$1.00`, `C1`, `Delay`.
+    - `214P` added aliases `call 0x$0.20`, `C2`, `Instant`.
+    - `236H` added aliases `call 4B9 (Malfunction)`,`4B9`,`Arm Swing`,`Swing`,`AS`.
+    - `236P` added aliases `call 4BA`,`4BA`,`Fireball`,`FB`.
+    - `236S` added aliases `call 4B3`,`4B3`,`Beyblade`,`BB`.
+    - `j.214K`added aliases `Air call 0x$1.00`, `Air C1`, `Air Delay`, `AC1`, `AD`.
+    - `j.214P`added aliases `Air call 0x$0.20`, `Air C2`, `Air Instant`, `AC2`, `AI`.
+    - `j.236P` added aliases `Air call 4BA`,`Air 4BA`,`A4BA`,`Air Fireball`,`Air FB`,`AFB`.
+    - `j.236S` added aliases `Air call 4B3`,`Air 4B3`,`A4B3`,`Air Beyblade`,`Air BB`,`ABB`.
+    - `632146H` added aliases `call 4CC`,`4CC`,`Super`.
+    - `632146S` added aliases `call 13C`,`13C`,`Install`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.10.3 Patch Notes.
 
 ### General
