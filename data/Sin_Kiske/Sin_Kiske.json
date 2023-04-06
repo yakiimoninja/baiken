@@ -33,6 +33,6 @@
 	{"input":"66 after special move","name":"Gazelle Step","damage":"-","guard":"-","startup":"-","active":"-","recovery":"Total 24","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"236236P","name":"Tyrant Barrel","damage":"50","guard":"All","startup":"9+1","active":"3","recovery":"38","hit":"HKD","block":"-22","level":"4","counter":"Mid","scaling":"100%","riscgain":"2500","invincibility":"None"},
 	{"input":"236236P~]P[","name":"Tyrant Barrel Follow-up","damage":"50→70→90→120","guard":"All (Guard Crush)","startup":"3","active":"3","recovery":"39","hit":"HKD","block":"-12","level":"4","counter":"Mid","scaling":"100%","riscgain":"2500","invincibility":"None"},
-	{"input":"632146H","name":"R.T.L","damage":"30×2, 60","guard":"All","startup":"10+5","active":"12","recovery":"25+32 After Landing","hit":"HKD","block":"-55","level":"2","counter":"Mid","scaling":"100%","riscgain":"500×3","invincibility":"1~18 All"},
+	{"input":"632146H","name":"R.T.L","damage":"30×2, 60","guard":"All","startup":"11+5","active":"12","recovery":"25+32 After Landing","hit":"HKD","block":"-55","level":"2","counter":"Mid","scaling":"100%","riscgain":"500×3","invincibility":"1~18 All"},
 	{"input":"632146HH","name":"R.T.L Follow-up","damage":"10 ~ 100","guard":"All","startup":"12","active":"8","recovery":"39+15 After Landing (Grounded)","hit":"HKD","block":"-43 (Grounded)","level":"4","counter":"Very Small","scaling":"100%","riscgain":"2500","invincibility":"-"}
 ]

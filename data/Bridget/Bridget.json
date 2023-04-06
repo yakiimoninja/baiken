@@ -9,7 +9,7 @@
 	{"input":"5K","name":"5K","damage":"24","guard":"All","startup":"6","active":"5","recovery":"9","hit":"+1","block":"-2","level":"1","counter":"Small","scaling":"90%","riscgain":"1000","invincibility":"-"},
 	{"input":"5P","name":"5P","damage":"20","guard":"All","startup":"8","active":"2","recovery":"14","hit":"-3","block":"-6","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"5[D]","name":"Charged","damage":"62","guard":"High","startup":"28","active":"3","recovery":"26","hit":"-","block":"-10","level":"4","counter":"Very Small","scaling":"100%","riscgain":"1875","invincibility":"-"},
-	{"input":"6H","name":"6H","damage":"45","guard":"All","startup":"13","active":"9","recovery":"-","hit":"-","block":"-12","level":"3","counter":"Large","scaling":"90%","riscgain":"2000","invincibility":"13~??F Airborne"},
+	{"input":"6H","name":"6H","damage":"45","guard":"All","startup":"13","active":"9","recovery":"13","hit":"-","block":"-12","level":"3","counter":"Large","scaling":"90%","riscgain":"2000","invincibility":"13~??F Airborne"},
 	{"input":"6K","name":"6K","damage":"29","guard":"All","startup":"12","active":"5","recovery":"13","hit":"-1","block":"-4","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"-"},
 	{"input":"6P","name":"6P","damage":"27","guard":"All","startup":"10","active":"6","recovery":"20","hit":"-9","block":"-12","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"1~3F Upper Body, 4~17F Above Knee"},
 	{"input":"c.S","name":"c.S","damage":"18×2","guard":"All","startup":"7","active":"3, 3","recovery":"13","hit":"+13","block":"+1","level":"3","counter":"Mid","scaling":"100%","riscgain":"1000×2","invincibility":"-"},
