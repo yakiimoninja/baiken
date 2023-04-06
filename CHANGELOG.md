@@ -9,7 +9,7 @@
     - Added nicknames `Bedwoman`, `Bed`.
 
 ### Move Aliases
-- **`Bedman`**:
+- **`Bedman?`**:
     - `(236H) 214P`added alias `214PH`.
     - `(236P) 214P` added alias `214PP`.
     - `(236S) 214P` added alias `214PS`.
@@ -24,6 +24,11 @@
     - `j.236S` added aliases `Air call 4B3`,`Air 4B3`,`A4B3`,`Air Beyblade`,`Air BB`,`ABB`.
     - `632146H` added aliases `call 4CC`,`4CC`,`Super`.
     - `632146S` added aliases `call 13C`,`13C`,`Install`.
+
+### Fixes
+- **`Leo Whitefang`**:
+    - `632146S` replaced aliases `Fan Super` and `FS` with `Projectile Super` and `PS`. \
+    Due to overlap couldn't access data for `fS` before this change.
 
 &#x200B;
 &#x200B;

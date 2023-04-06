@@ -18,7 +18,7 @@
 	{"input":"bt.22","aliases":["Brynhildr Cancel","Stance Cancel","Bt Cancel","BRC","SC"]},
 	{"input":"bt.214K","aliases":["Gländzendes Dunkel","Command Grab","Bt Command Grab","Bt Grab","Bt Throw","BTCG","BTG","BTT","GD","CG"]},
 	{"input":"bt.214H","aliases":["Blitzschlag","Blitz","Bt Blitz"]},
-	{"input":"632146S","aliases":["Stahl Wirbel","Fan Super","SW","FS"]},
+	{"input":"632146S","aliases":["Stahl Wirbel","Projectile Super","SW","PS"]},
 	{"input":"632146H","aliases":["Liedenschaft des Dirigenten","LDD","Slashing Super","SS"]},
 	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
 	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
