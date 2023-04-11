@@ -59,7 +59,7 @@ pub const CHARS: [&str; 23] = [
     "Anji_Mito",
     "Axl_Low",
     "Baiken",
-    "Bedman%3F",
+    "Bedman",
     "Bridget",
     "Chipp_Zanuff",
     "Faust",
