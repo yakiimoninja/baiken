@@ -1,3 +1,8 @@
+# Version 0.10.5 Patch Notes.
+
+### Fixes
+- Fixed `Bedman` not displaying stuff properly. 
+
 # Version 0.10.4 Patch Notes.
 
 ### General
