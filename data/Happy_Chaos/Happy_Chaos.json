@@ -1,6 +1,6 @@
 [
 	{"input":"2D","name":"2D","damage":"33","guard":"Low","startup":"10","active":"3","recovery":"19","hit":"KD","block":"-8","level":"2","counter":"Large","scaling":"90%","riscgain":"1125","invincibility":"-"},
-	{"input":"2K","name":"2K","damage":"21","guard":"Low","startup":"7","active":"4","recovery":"12","hit":"-1","block":"-4","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"-"},
+	{"input":"2K","name":"2K","damage":"21","guard":"Low","startup":"7","active":"4","recovery":"12","hit":"-1","block":"-4","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"5~10F Low Profile"},
 	{"input":"2P","name":"2P","damage":"18","guard":"All","startup":"5","active":"2","recovery":"10","hit":"+1","block":"-2","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"2S","name":"2S","damage":"29","guard":"Low","startup":"11","active":"3","recovery":"18","hit":"-4","block":"-7","level":"2","counter":"Mid","scaling":"90%","riscgain":"1125","invincibility":"-"},
 	{"input":"5D","name":"Uncharged","damage":"40","guard":"High","startup":"20","active":"3","recovery":"26","hit":"0","block":"-15","level":"2","counter":"Mid","scaling":"80%","riscgain":"1125","invincibility":"-"},
@@ -23,7 +23,7 @@
 	{"input":"214P","name":"Focus","damage":"-","guard":"-","startup":"-","active":"-","recovery":"46 total","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"214S","name":"Steady Aim","damage":"-","guard":"-","startup":"-","active":"-","recovery":"Total 18","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"214S 214S","name":"Cancel Aim","damage":"-","guard":"-","startup":"-","active":"-","recovery":"Total 16","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
-	{"input":"214S H","name":"Fire","damage":"55 [35]","guard":"Guard Crush (43f) [All]","startup":"1","active":"2","recovery":"43","hit":"KD","block":"[[GGST/Happy_Chaos/Frame_Data#Fire Table|More info]]","level":"3","counter":"Very Small","scaling":"80%","riscgain":"500","invincibility":"-"},
+	{"input":"214S H","name":"Fire","damage":"55 [35]","guard":"All (Guard Crush)","startup":"1","active":"2","recovery":"43","hit":"KD","block":"[[GGST/Happy_Chaos/Frame_Data#Fire Table|More info]]","level":"3","counter":"Very Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"22P","name":"Reload","damage":"-","guard":"-","startup":"23","active":"-","recovery":"23~77 total","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"236K","name":"Scapegoat","damage":"-","guard":"-","startup":"10","active":"180 [45]","recovery":"43 total","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"10~30F Airborne"},
 	{"input":"236P","name":"Curse","damage":"-","guard":"-","startup":"-","active":"-","recovery":"29 total","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},

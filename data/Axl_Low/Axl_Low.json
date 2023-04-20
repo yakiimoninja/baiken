@@ -1,7 +1,7 @@
 [
 	{"input":"2D","name":"2D","damage":"34","guard":"Low","startup":"10","active":"6","recovery":"17","hit":"HKD","block":"-9","level":"2","counter":"Large","scaling":"90%","riscgain":"1125","invincibility":"-"},
 	{"input":"2H","name":"2H","damage":"45 [58]","guard":"Low","startup":"11","active":"9","recovery":"26","hit":"-15","block":"-18","level":"3 [4]","counter":"Large","scaling":"90%","riscgain":"1500","invincibility":"-"},
-	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"5","active":"5","recovery":"11","hit":"+1","block":"-4","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"-"},
+	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"5","active":"5","recovery":"11","hit":"+1","block":"-4","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"3~12F Low Profile"},
 	{"input":"2P","name":"2P","damage":"30 [39]","guard":"Low","startup":"10","active":"4","recovery":"21","hit":"-10","block":"-13","level":"1","counter":"Small","scaling":"80%","riscgain":"750","invincibility":"-"},
 	{"input":"2S","name":"2S","damage":"35 [45]","guard":"All","startup":"9","active":"10","recovery":"23","hit":"-13","block":"-16","level":"3 [4]","counter":"Mid","scaling":"90%","riscgain":"2000","invincibility":"-"},
 	{"input":"5D","name":"Uncharged","damage":"45","guard":"High","startup":"20","active":"6","recovery":"23","hit":"0","block":"-15","level":"2","counter":"Mid","scaling":"80%","riscgain":"1125","invincibility":"-"},
@@ -31,7 +31,7 @@
 	{"input":"[4]6S 8","name":"Soaring Chain Strike","damage":"30","guard":"All","startup":"8","active":"16","recovery":"34","hit":"HKD","block":"-11","level":"3","counter":"Mid","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"[4]6S S","name":"Winter Cherry","damage":"40 [60]","guard":"All","startup":"18 [22]","active":"10","recovery":"24","hit":"KD","block":"-3 [+10]","level":"3 [4]","counter":"Very Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"236236H","name":"Sickle Storm","damage":"50×2, 20×3","guard":"All","startup":"11+1","active":"4, 4(24)13","recovery":"26","hit":"HKD","block":"-2","level":"4","counter":"Mid","scaling":"100%","riscgain":"800×2, 200","invincibility":"1~15F All"},
-	{"input":"632146P","name":"One Vision","damage":"-","guard":"-","startup":"5+30","active":"-","recovery":"-","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
-	{"input":"632146P Attack","name":"One Vision","damage":"-","guard":"All","startup":"8+0","active":"1","recovery":"-","hit":"-","block":"0","level":"-","counter":"-","scaling":"100%","riscgain":"-","invincibility":"-"},
-	{"input":"j.632146P Attack","name":"One Vision","damage":"-","guard":"All","startup":"8+0","active":"1","recovery":"-","hit":"-","block":"0","level":"-","counter":"-","scaling":"100%","riscgain":"-","invincibility":"-"}
+	{"input":"632146P","name":"One Vision","damage":"-","guard":"-","startup":"5","active":"(Flash)","recovery":"30","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
+	{"input":"632146P Attack","name":"One Vision","damage":"0","guard":"All","startup":"8+1+0","active":"1","recovery":"11","hit":"-","block":"0","level":"1","counter":"-","scaling":"100%","riscgain":"0","invincibility":"8~9 Full"},
+	{"input":"j.632146P Attack","name":"One Vision","damage":"0","guard":"All","startup":"8+1+0","active":"1","recovery":"11","hit":"-","block":"0","level":"1","counter":"-","scaling":"100%","riscgain":"0","invincibility":"8~9 Full"}
 ]
