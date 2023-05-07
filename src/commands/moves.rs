@@ -97,41 +97,28 @@ pub async fn moves(
     let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
-    println!("Succesfully read '{}.json' file.", &character_arg_altered);
+    println!("Successfully read '{}.json' file.", &character_arg_altered);
     
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Moves**__\n```diff";
 
-    if &character_arg_altered != "Goldlewis_Dickinson" || &character_arg_altered != "Nagoriyuki"{
-
-        // For every other character move printing
-        for mframes in move_frames {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &mframes.name
-                + "\n+ Input: " + &mframes.input + "\n";
-        }
-    
-        moves_as_msg = moves_as_msg + &"```".to_string();
-        ctx.say(&moves_as_msg).await?;
+    // Message split due to discord character limit
+    // 1st message builder which is also a reply
+    for z in 0..move_frames.len() / 2 {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
+            + "\n+ Input: " + &move_frames[z].input + "\n";
     }
-    else{
-        // For Goldlewis move printing
-        // 1st message builder which is also a reply
-        for z in 0..move_frames.len() / 2 {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
-                + "\n+ Input: " + &move_frames[z].input + "\n";
-        }
-        moves_as_msg = moves_as_msg + &"```".to_string();
-        ctx.say(&moves_as_msg).await?;
+    moves_as_msg = moves_as_msg + &"```".to_string();
+    ctx.say(&moves_as_msg).await?;
 
-        // 2nd message builder
-        moves_as_msg = "```diff".to_string();
-        for z in (move_frames.len() / 2)..move_frames.len() {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
-                + "\n+ Input: " + &move_frames[z].input + "\n";
-        }
-        moves_as_msg = moves_as_msg + &"```".to_string();
-        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
+    // 2nd message builder
+    moves_as_msg = "```diff".to_string();
+    for z in (move_frames.len() / 2)..move_frames.len() {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
+            + "\n+ Input: " + &move_frames[z].input + "\n";
     }
+    moves_as_msg = moves_as_msg + &"```".to_string();
+    ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
     
     Ok(())
 }
