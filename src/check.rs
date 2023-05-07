@@ -34,7 +34,7 @@ pub fn nicknames_json_exists(init_check: bool) -> Option<String> {
 
     match serde_json::from_str::<Vec<Nicknames>>(&data_from_file) {
         Ok(_) => {
-            println!("\nSuccesfully read 'nicknames.json' file.");
+            println!("\nSuccessfully read 'nicknames.json' file.");
             return None;
         },
         Err(_) => {
@@ -104,7 +104,7 @@ pub fn character_jsons_exist(init_check: bool) -> Option<String> {
             }
         }
     }
-    println!("\nSuccesfully read {} character.json files.", &CHARS.len());
+    println!("\nSuccessfully read {} character.json files.", &CHARS.len());
     return None;
 }
 

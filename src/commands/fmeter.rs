@@ -118,7 +118,7 @@ pub async fn fmeter(
     let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
-    println!("Succesfully read '{}.json' file.", character_arg_altered);
+    println!("Successfully read '{}.json' file.", character_arg_altered);
     
 
     // Checking if aliases for this characters moves exist
@@ -166,7 +166,7 @@ pub async fn fmeter(
                 if mframes.input == img_links.input {
 
                     move_found = true;
-                    println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
+                    println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
 
                     
                     if img_links.move_img.is_empty() == false {

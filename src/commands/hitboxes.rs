@@ -115,7 +115,7 @@ pub async fn hitboxes(
     let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
-    println!("Succesfully read '{}.json' file.", &character_arg_altered);
+    println!("Successfully read '{}.json' file.", &character_arg_altered);
     
     character_found = true;
 
@@ -161,7 +161,7 @@ pub async fn hitboxes(
                 if mframes.input == img_links.input {
 
                     move_found = true;
-                    println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
+                    println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
 
                     
                     if img_links.hitbox_img[0].is_empty() == false {

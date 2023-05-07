@@ -121,7 +121,7 @@ pub async fn frames(
     let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
-    println!("Succesfully read '{}.json' file.", character_arg_altered);
+    println!("Successfully read '{}.json' file.", character_arg_altered);
     
 
     // Checking if aliases for this characters moves exist
@@ -164,7 +164,7 @@ pub async fn frames(
         || mframes.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
             
             move_found = true;
-            println!("Succesfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
+            println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
 
             let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Frame_Data";
             let title_embed = "Move: ".to_owned() + &mframes.input.to_string();

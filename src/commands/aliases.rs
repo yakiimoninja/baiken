@@ -110,7 +110,7 @@ pub async fn aliases(
     }    
 
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
-    println!("Succesfully read '{}.json' file.", &character_arg_altered);
+    println!("Successfully read '{}.json' file.", &character_arg_altered);
 
     // Reading the aliases json
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
