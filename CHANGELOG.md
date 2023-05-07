@@ -1,7 +1,36 @@
+# Version 0.10.6 Patch Notes.
+
+### General
+- Updated framedata.
+
+### Fixes
+- Fixed dots in `nicknames` command.
+- Fixed some typos.
+
+### Move Aliases
+- **`Anji`**:
+    -`236P` added alias `Bird`.
+
+### Nicknames
+- `Jack-O`:
+    - Added nickname `Jack-O Valentine`.
+- `Bedman?`:
+    - Added nickname `Delilah`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.10.5 Patch Notes.
 
 ### Fixes
-- Fixed `Bedman` not displaying stuff properly. 
+- Fixed `Bedman` not displaying stuff properly.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
 
 # Version 0.10.4 Patch Notes.
 
