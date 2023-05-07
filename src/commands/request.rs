@@ -23,7 +23,7 @@ pub async fn request(
         .expect(&("\nFailed to write to 'request.txt'"));
     
     println!("Done writting to 'request.txt'");
-    ctx.say("Submitted succesfully!").await?;
+    ctx.say("Submitted successfully!").await?;
 
     Ok(())
 }
