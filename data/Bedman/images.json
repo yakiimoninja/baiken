@@ -159,20 +159,6 @@
   ]
 },
 	{
-  "input": "!H",
-  "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Bedman_error_6E_H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/60/GGST_Bedman_error_6E_H_Hitbox.png"
-  ]
-},
-	{
-  "input": "!H",
-  "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Bedman_error_6E_H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/60/GGST_Bedman_error_6E_H_Hitbox.png"
-  ]
-},
-	{
   "input": "!P",
   "move_img": "https://www.dustloop.com/wiki/images/7/75/GGST_Bedman_error_6E_P.png",
   "hitbox_img": [
@@ -186,6 +172,20 @@
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/c/c6/GGST_Bedman_error_6E_S_hitbox_1.png",
     "https://www.dustloop.com/wiki/images/1/18/GGST_Bedman_error_6E_S_hitbox_2.png"
+  ]
+},
+	{
+  "input": "![H]",
+  "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Bedman_error_6E_H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/6/60/GGST_Bedman_error_6E_H_Hitbox.png"
+  ]
+},
+	{
+  "input": "!{H}",
+  "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Bedman_error_6E_H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/6/60/GGST_Bedman_error_6E_H_Hitbox.png"
   ]
 },
 	{
