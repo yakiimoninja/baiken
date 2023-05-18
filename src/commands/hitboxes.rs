@@ -5,6 +5,7 @@ use crate::{Frames, MoveAliases, ImageLinks, Nicknames, Context, Error, HITBOX_D
 
 
 /// Displays the hitbox images of a character's move.
+#[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command, aliases("h"))]
 pub async fn hitboxes(
     ctx: Context<'_>,
@@ -149,55 +150,64 @@ pub async fn hitboxes(
     // Deserializing images.json for this character
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
     
+    // Default vaule never used
+    let mut mframes = &move_frames[0];
 
-    for mframes in move_frames {
+    for mframes_index in 0..move_frames.len() {
         // Iterating through the moves of the json file to find the move requested
-        if mframes.input.to_string().to_lowercase().replace(".", "") 
-        == character_move_arg.to_string().to_lowercase().replace(".", "")
-        || mframes.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
-            
-            for img_links in image_links {
-                // Iterating through the image.json to find the move's hitbox links
-                if mframes.input == img_links.input {
-
-                    move_found = true;
-                    println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
-
-                    
-                    if img_links.hitbox_img[0].is_empty() == false {
-
-                        // Priting hitboxes in discord chat
-                        let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
-                        ctx.say(&bot_msg).await?;
-
-                        for htbx_img in img_links.hitbox_img {                        
-                            ctx.channel_id().say(ctx.discord(), &htbx_img).await?;
-                        }
-                    }
-                    else{
-                        // Priting hitboxes in discord chat
-                        let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
-                        ctx.say(&bot_msg).await?;
-                        ctx.channel_id().say(ctx.discord(), &*HITBOX_DEFAULT).await?;
-                    }
-                    
-                }
-            }
+        // Specifically if user arg is exactly move input
+        if move_frames[mframes_index].input.to_string().to_lowercase().replace(".", "") 
+        == character_move_arg.to_string().to_lowercase().replace(".", "") {
+            mframes = &move_frames[mframes_index];
+            move_found = true;
             break;
+        }        
+    }
+
+    if move_found == false {
+        for mframes_index in 0..move_frames.len() {
+            // Iterating through the moves of the json file to find the move requested
+            // Specifically if user arg is contained in move name
+            if move_frames[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+                mframes = &move_frames[mframes_index];
+                move_found = true;
+                break;
+            } 
         }
     }
 
+    if move_found == true {
+            
+        for img_links in image_links {
+            // Iterating through the image.json to find the move's hitbox links
+            if mframes.input == img_links.input {
 
+                move_found = true;
+                println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
 
-    // Error message cause given character was not found
-    if character_found == false {
-        let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
-        ctx.say(error_msg).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("`", "'"));
+                
+                if img_links.hitbox_img[0].is_empty() == false {
+
+                    // Priting hitboxes in discord chat
+                    let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
+                    ctx.say(&bot_msg).await?;
+
+                    for htbx_img in img_links.hitbox_img {                        
+                        ctx.channel_id().say(ctx.discord(), &htbx_img).await?;
+                    }
+                }
+                else{
+                    // Priting hitboxes in discord chat
+                    let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
+                    ctx.say(&bot_msg).await?;
+                    ctx.channel_id().say(ctx.discord(), &*HITBOX_DEFAULT).await?;
+                }
+                
+            }
+        }
     }
     // Error message cause given move wasnt found in the json
-    if character_found == true && move_found == false {
+    else {
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/request` command.");
         ctx.say(error_msg).await?;
         // Console error print

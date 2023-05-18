@@ -7,6 +7,7 @@ use crate::{Context, Error};
 use crate::{Frames, MoveAliases, ImageLinks, Nicknames, IMAGE_DEFAULT, check};
 
 /// Displays the frame data of a move along with an image.
+#[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command, aliases("f"))]
 pub async fn frames(
     ctx: Context<'_>,
@@ -155,86 +156,101 @@ pub async fn frames(
     // Deserializing images.json for this character
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
     
+    // Default vaule never used
+    let mut mframes = &move_frames[0];
 
-    for mframes in move_frames {
-        
+    for mframes_index in 0..move_frames.len() {
         // Iterating through the moves of the json file to find the move requested
-        if mframes.input.to_string().to_lowercase().replace(".", "") 
-        == character_move_arg.to_string().to_lowercase().replace(".", "")
-        || mframes.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
-            
+        // Specifically if user arg is exactly move input
+        if move_frames[mframes_index].input.to_string().to_lowercase().replace(".", "") 
+        == character_move_arg.to_string().to_lowercase().replace(".", "") {
+            mframes = &move_frames[mframes_index];
             move_found = true;
-            println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
-
-            let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Frame_Data";
-            let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
-
-            // Checking if the respective data field in the json file is empty
-            // If they aren't empty, the variables initialized above will be replaced
-            // With the corresponind data from the json file
-            // Otherwise they will remain as '-'
-            for img_links in image_links {
-                // Iterating through the image.json to find the move's image links
-                if mframes.input == img_links.input {
-                    if img_links.move_img.is_empty() == false {
-                        image_embed = img_links.move_img.to_string();
-                        break;
-                    }
-                }
-            }
-
-            // Debugging prints
-            // println!("{}", content_embed);
-            // println!("{}", image_embed);
-            // println!("{}", title_embed);
-            // println!("{}", damage_embed);
-            // println!("{}", guard_embed);
-            // println!("{}", invin_embed);
-            // println!("{}", startup_embed);
-            // println!("{}", hit_embed);
-            // println!("{}", block_embed);
-            // println!("{}", active_embed);
-            // println!("{}", recovery_embed);
-            // println!("{}", counter_embed);
-
-            // New version notification
-            //ctx.say(r"Baiken enters season 2 with a new version 0.5.0!
-//As always a link to the patch notes is below.
-//__<https://github.com/yakiimoninja/baiken/releases>__").await?;
-
-            // Sending the data as an embed
-            let _msg = ctx.send(|m| {
-                m.content(&content_embed);
-                m.embed(|e| {
-                    e.color((140,75,64));
-                    e.title(&title_embed);
-                    //e.description("This is a description");
-                    e.image(&image_embed);
-                    e.fields(vec![
-                        ("Damage", &mframes.damage.to_string(), true),
-                        ("Guard", &mframes.guard.to_string(), true),
-                        ("Invinciblity", &mframes.invincibility.to_string(), true),
-                        ("Startup", &mframes.startup.to_string(), true),
-                        ("Active", &mframes.active.to_string(), true),
-                        ("Recovery", &mframes.recovery.to_string(), true),
-                        ("On Hit", &mframes.hit.to_string(), true),
-                        ("On Block", &mframes.block.to_string(), true),
-                        ("Level", &mframes.level.to_string(), true),
-                        ("Risc Gain", &mframes.riscgain.to_string(), true),
-                        ("Scaling", &mframes.scaling.to_string(), true),
-                        ("Counter", &mframes.counter.to_string(), true)]);
-                    //e.field("This is the third field", "This is not an inline field", false);
-                    e
-                });
-                m
-            }).await;
-
             break;
+        }        
+    }
+
+    if move_found == false {
+        for mframes_index in 0..move_frames.len() {
+            // Iterating through the moves of the json file to find the move requested
+            // Specifically if user arg is contained in move name
+            if move_frames[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+                mframes = &move_frames[mframes_index];
+                move_found = true;
+                break;
+            } 
         }
     }
 
+    if move_found == true {
+   
+        println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
+
+        let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Frame_Data";
+        let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
+
+        // Checking if the respective data field in the json file is empty
+        // If they aren't empty, the variables initialized above will be replaced
+        // With the corresponind data from the json file
+        // Otherwise they will remain as '-'
+        for img_links in image_links {
+            // Iterating through the image.json to find the move's image links
+            if mframes.input == img_links.input {
+                if img_links.move_img.is_empty() == false {
+                    image_embed = img_links.move_img.to_string();
+                    break;
+                }
+            }
+        }
+
+        // Debugging prints
+        // println!("{}", content_embed);
+        // println!("{}", image_embed);
+        // println!("{}", title_embed);
+        // println!("{}", damage_embed);
+        // println!("{}", guard_embed);
+        // println!("{}", invin_embed);
+        // println!("{}", startup_embed);
+        // println!("{}", hit_embed);
+        // println!("{}", block_embed);
+        // println!("{}", active_embed);
+        // println!("{}", recovery_embed);
+        // println!("{}", counter_embed);
+
+        // New version notification
+        //ctx.say(r"Baiken enters season 2 with a new version 0.5.0!
+//As always a link to the patch notes is below.
+//__<https://github.com/yakiimoninja/baiken/releases>__").await?;
+
+        // Sending the data as an embed
+        let _msg = ctx.send(|m| {
+            m.content(&content_embed);
+            m.embed(|e| {
+                e.color((140,75,64));
+                e.title(&title_embed);
+                //e.description("This is a description");
+                e.image(&image_embed);
+                e.fields(vec![
+                    ("Damage", &mframes.damage.to_string(), true),
+                    ("Guard", &mframes.guard.to_string(), true),
+                    ("Invinciblity", &mframes.invincibility.to_string(), true),
+                    ("Startup", &mframes.startup.to_string(), true),
+                    ("Active", &mframes.active.to_string(), true),
+                    ("Recovery", &mframes.recovery.to_string(), true),
+                    ("On Hit", &mframes.hit.to_string(), true),
+                    ("On Block", &mframes.block.to_string(), true),
+                    ("Level", &mframes.level.to_string(), true),
+                    ("Risc Gain", &mframes.riscgain.to_string(), true),
+                    ("Scaling", &mframes.scaling.to_string(), true),
+                    ("Counter", &mframes.counter.to_string(), true)]);
+                //e.field("This is the third field", "This is not an inline field", false);
+                e
+            });
+            m
+        }).await;
+    }
     // Error message cause given move wasnt found in the json
-    if character_found == true && move_found == false {
+    else {
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!" + "\nView moves of a character by executing `/moves`.\nView aliases of a character by executing `/aliases`.");
         ctx.say(error_msg).await?;
         // Console error print 
