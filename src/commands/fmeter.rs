@@ -245,7 +245,7 @@ pub async fn fmeter(
                             // The difference between the first possible frame a move can connect
                             // and the latest frame -1 is the times a GREEN_CIRCLE is going to be 
                             // put inside the msg and inside brackets
-                            for _ in 0..( (startup_vec[x].parse::<i8>().unwrap()) - (startup_vec[x-2].parse::<i8>()).unwrap() - 1 ) {
+                            for _ in 0..( (startup_vec[x].parse::<i8>().unwrap()) - (startup_vec[x-2].parse::<i8>()).unwrap()) {
                                 frame_meter_msg = frame_meter_msg + GREEN_CIRCLE;
                             }
                             break;
