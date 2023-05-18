@@ -34,7 +34,11 @@
     - `236{H}` added aliases `Partial call 4B9 (Malfunction)`, `P4B9`, `Partial Arm Swing`, `Partial Swing`, `PAS`, `236!H`
     - `236[H]` added aliases `Charged call 4B9 (Malfunction)`, `C4B9`, `Charged Arm Swing`, `Charged Swing`, `CAS`, `236!!H`.
 
-
+- **`Nagoriyuki`**:
+	- `j.S Level 1` added alias `j.S`.
+	- `j.S Level 2` added alias`j.S2`.
+	- `j.S Level 3` added alias`j.S3`.
+	- `j.S Level BR` added alias`j.SB`.
 
 # Version 0.10.6 Patch Notes.
 
