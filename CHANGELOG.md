@@ -1,3 +1,41 @@
+# Version 0.11.0 Patch Notes.
+
+### General
+- Updated framedata.
+
+### Fixes
+- Fixed an issue where `Bedman` was displaying different moves than what user request. \
+    e.g. `/fmeter bedman 214P` displaying info for `(236H) 214P`. \
+    Bedman's specials broke bot's program logic (error 6E lmao).
+
+- Fixed and issue where `/fmeter` wasn't displaying the right amount of startup frames inside `[ brackets ]`.
+
+### Move Aliases
+- **`Bedman?`**:
+    - `!H` added aliases `error 6E H`, `6EH`, `EH`.
+    - `!{H}` added aliases `Partial error 6E {H}`, `6E!H`, `P6EH`, `E!H`, `PEH`.
+    - `![H]` added aliases `Charged error 6E [H]`, `6E!!H`, `C6EH`, `E!!H`, `CEH`.
+    - `!P` added aliases `error 6E P`, `6EP`, `EP`.
+    - `!S` added aliases `error 6E S`, `6ES`, `ES`.
+    - `(236H) 214P` added aliases `call 0x$0.20 236H`, `Instant H`, `IH`, `C2H`.
+    - `(236P) 214P` added aliases `call 0x$0.20 236P`, `Instant P`, `IP`, `C2P`.
+    - `(236S) 214P` added aliases `call 0x$0.20 236S`, `Instant S`, `IS`, `C2S`.
+    - `13C !H` added aliases `13C error 6E H`, `13C6EH`, `13CEH`.
+    - `13C !P` added aliases `13C error 6E P`, `13C6EP`, `13CEP`.
+    - `13C !S` added aliases `13C error 6E S`, `13C6ES`, `13CES`.
+    - `13C (214H) 236P` added aliases `13C call 0x$0.20 H`, `13CC2H`.
+    - `13C (214P) 236P` added aliases `13C call 0x$0.20 P`, `13CC2P`.
+    - `13C (214S) 236P` added aliases `13C call 0x$0.20 S`, `13CC2S`.
+    - `214K` added aliases `call 0x$1.00`, `C1`, `Delay`.
+    - `214P` added aliases `call 0x$0.20`, `C2`, `Instant`.
+    - `236P` added aliases `call 4BA`, `4BA`, `Fireball`, `FB`.
+    - `236S` added aliases `call 4B3`, `4B3`, `Beyblade`, `BB`.
+    - `236H` added aliases `call 4B9 (Malfunction)`, `4B9`, `Arm Swing`, `Swing`, `AS`, `236H`.
+    - `236{H}` added aliases `Partial call 4B9 (Malfunction)`, `P4B9`, `Partial Arm Swing`, `Partial Swing`, `PAS`, `236!H`
+    - `236[H]` added aliases `Charged call 4B9 (Malfunction)`, `C4B9`, `Charged Arm Swing`, `Charged Swing`, `CAS`, `236!!H`.
+
+
+
 # Version 0.10.6 Patch Notes.
 
 ### General
@@ -9,7 +47,7 @@
 
 ### Move Aliases
 - **`Anji`**:
-    -`236P` added alias `Bird`.
+    - `236P` added alias `Bird`.
 
 ### Nicknames
 - `Jack-O`:
