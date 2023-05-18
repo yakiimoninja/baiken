@@ -187,6 +187,30 @@
   ]
 },
 	{
+  "input": "214S (3-Hit)",
+  "move_img": "https://www.dustloop.com/wiki/images/7/72/GGST_Millia_Rage_Lust_Shaker.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f4/GGST_Millia_Rage_Lust_Shaker_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Millia_Rage_Lust_Shaker_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "214S (6-Hit)",
+  "move_img": "https://www.dustloop.com/wiki/images/7/72/GGST_Millia_Rage_Lust_Shaker.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f4/GGST_Millia_Rage_Lust_Shaker_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Millia_Rage_Lust_Shaker_2_Hitbox.png"
+  ]
+},
+	{
+  "input": "214S (9-Hit)",
+  "move_img": "https://www.dustloop.com/wiki/images/7/72/GGST_Millia_Rage_Lust_Shaker.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f4/GGST_Millia_Rage_Lust_Shaker_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/b/b7/GGST_Millia_Rage_Lust_Shaker_2_Hitbox.png"
+  ]
+},
+	{
   "input": "236H",
   "move_img": "https://www.dustloop.com/wiki/images/2/2e/GGST_Millia_Rage_Tandem_Top_Full.png",
   "hitbox_img": [

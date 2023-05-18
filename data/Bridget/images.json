@@ -246,6 +246,14 @@
   ]
 },
 	{
+  "input": "j.63214P",
+  "move_img": "https://www.dustloop.com/wiki/images/3/34/GGST_Bridget_63214P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/18/GGST_Bridget_63214P_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/9/9d/GGST_Bridget_j63214P_Hitbox.png"
+  ]
+},
+	{
   "input": "632146H",
   "move_img": "https://www.dustloop.com/wiki/images/b/b2/GGST_Bridget_632146H.png",
   "hitbox_img": [
