@@ -1,3 +1,20 @@
+# Version 0.12.0 Patch Notes.
+
+### General
+- Optimized alias searching loops to break when alias is found (i had forgor 💀).
+
+### Fixes
+- Fixed an issue where `/hitboxes` would not display moves when using aliases that had a `.` in them.
+- Fixed Bedman?'s aliases file move input: 
+    - From: `13C (214H) 236P` to: `13C (236H) 236P`.
+    - From: `13C (214P) 236P` to: `13C (236P) 236P`.
+    - From: `13C (214S) 236P` to: `13C (236S) 236P`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.11.0 Patch Notes.
 
 ### General
@@ -39,6 +56,11 @@
 	- `j.S Level 2` added alias`j.S2`.
 	- `j.S Level 3` added alias`j.S3`.
 	- `j.S Level BR` added alias`j.SB`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
 
 # Version 0.10.6 Patch Notes.
 
