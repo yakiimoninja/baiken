@@ -133,14 +133,15 @@ pub async fn fmeter(
         // Deserializing the aliases json
         let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
-        for alias_data in aliases_data {
+        'outer: for alias_data in aliases_data {
             for x_aliases in alias_data.aliases {
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                if x_aliases.to_lowercase().trim().replace(".", "")
+                if x_aliases.to_lowercase().trim().replace(".", "") 
                 == character_move_arg.to_lowercase().trim().replace(".", "") {
                     character_move_arg = alias_data.input.to_string();
+                    break 'outer;
                 }
             }
         }
