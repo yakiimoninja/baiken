@@ -1,3 +1,20 @@
+# Version 0.13.0 Patch Notes.
+
+### General
+- Updated framedata.
+
+### Nicknames
+- `Asuka R`:
+    - Added nicknames `Asuka`, `That Man`, `Oscar`.
+
+### Fixes
+- Fixed and issue where using `/aliases` for Jacko wouldn't display anything.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.12.0 Patch Notes.
 
 ### General
