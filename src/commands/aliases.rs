@@ -123,90 +123,64 @@ pub async fn aliases(
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Move Aliases**__\n```diff";
     
-    // Checks what character info is accessing to check later cause of discord message character limit
-    if character_arg_altered != "Faust" 
-        && character_arg_altered != "Goldlewis_Dickinson" 
-        && character_arg_altered != "Ky_Kiske" 
-        && character_arg_altered != "Leo_Whitefang" 
-        && character_arg_altered != "Nagoriyuki" {
-        
-        // Building the message to be sent by the bot
-        for alias_data in aliases_data {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &alias_data.aliases[0] 
-                + " -> Input: " + &alias_data.input + "\n+ Aliases: ";
+    // Spliting the message that will be sent by the bot
+    // Into 3 separate messages cause of the character limit
+    // 1st message builder which is also a reply
+    for m in 0..aliases_data.len() / 3 {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+            + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
 
-            for a in 0..alias_data.aliases.len() {
-                if a != alias_data.aliases.len() - 1 {
-                    moves_as_msg = moves_as_msg.to_owned() + &alias_data.aliases[a] + ", ";
-                }
-                else {
-                    moves_as_msg = moves_as_msg.to_owned() + &alias_data.aliases[a];
-                }
+        for a in 0..aliases_data[m].aliases.len() {
+            if a != aliases_data[m].aliases.len() - 1 {
+                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
             }
-            moves_as_msg = moves_as_msg.to_owned() + ".\n";
+            else {
+                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+            }
         }
-        moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.say(&moves_as_msg).await?;
+        moves_as_msg = moves_as_msg.to_owned() + ".\n";
     }
-    else {
-        // Spliting the message that will be sent by the bot
-        // Into 3 separate messages cause of the character limit
-        // 1st message builder which is also a reply
-        for m in 0..aliases_data.len() / 3 {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-                + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+    moves_as_msg = moves_as_msg + &"\n```".to_string();
+    ctx.say(&moves_as_msg).await?;
 
-            for a in 0..aliases_data[m].aliases.len() {
-                if a != aliases_data[m].aliases.len() - 1 {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
-                }
-                else {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
-                }
+    // 2nd message builder
+    moves_as_msg = "```diff".to_string();
+    for m in aliases_data.len() / 3..(aliases_data.len() /3 ) * 2{
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+            + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+
+        for a in 0..aliases_data[m].aliases.len() {
+            if a != aliases_data[m].aliases.len() - 1 {
+                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
             }
-            moves_as_msg = moves_as_msg.to_owned() + ".\n";
-        }
-        moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.say(&moves_as_msg).await?;
-
-        // 2nd message builder
-        moves_as_msg = "```diff".to_string();
-        for m in aliases_data.len() / 3..(aliases_data.len() /3 ) * 2{
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-                + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
-
-            for a in 0..aliases_data[m].aliases.len() {
-                if a != aliases_data[m].aliases.len() - 1 {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
-                }
-                else {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
-                }
+            else {
+                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
             }
-            moves_as_msg = moves_as_msg.to_owned() + ".\n";
         }
-        moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
-
-        // 3rd message builder
-        moves_as_msg = "```diff".to_string();
-        for m in (aliases_data.len() / 3) * 2..aliases_data.len() {
-            moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-                + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
-
-            for a in 0..aliases_data[m].aliases.len() {
-                if a != aliases_data[m].aliases.len() - 1 {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
-                }
-                else {
-                    moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
-                }
-            }
-            moves_as_msg = moves_as_msg.to_owned() + ".\n";
-        }
-        moves_as_msg = moves_as_msg + &"\n```".to_string();
-        ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
+        moves_as_msg = moves_as_msg.to_owned() + ".\n";
     }
+    moves_as_msg = moves_as_msg + &"\n```".to_string();
+    ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
+
+    // 3rd message builder
+    moves_as_msg = "```diff".to_string();
+    for m in (aliases_data.len() / 3) * 2..aliases_data.len() {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
+            + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+
+        for a in 0..aliases_data[m].aliases.len() {
+            if a != aliases_data[m].aliases.len() - 1 {
+                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
+            }
+            else {
+                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+            }
+        }
+        moves_as_msg = moves_as_msg.to_owned() + ".\n";
+    }
+    moves_as_msg = moves_as_msg + &"\n```".to_string();
+    
+    ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
 
     ctx.channel_id().say(ctx.discord(), "You can request the addition of an alias, nickname, feature\nor simply leave feedback by executing the `/request` command.").await?;
 
