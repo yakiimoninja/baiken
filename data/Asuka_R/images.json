@@ -1,233 +1,9 @@
 [
 	{
-  "input": "214X",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "22H~X",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "22P/K/S",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "236X",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
   "input": "5H",
   "move_img": "https://www.dustloop.com/wiki/images/8/8f/GGST_Asuka_R_5H.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/0/03/GGST_Asuka_R_5H_Hitbox.png"
-  ]
-},
-	{
-  "input": "632146P/K",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "632146S",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Accipiter Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/d/d8/GGST_Asuka_R_Accipiter_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Aquila Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/4/40/GGST_Asuka_R_Aquila_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Bit Shift Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f3/GGST_Asuka_R_Bit_Shift_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Bookmark (Auto Import)",
-  "move_img": "https://www.dustloop.com/wiki/images/8/82/GGST_Asuka_R_Bookmark_(Auto_Import).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Bookmark (Full Import)",
-  "move_img": "https://www.dustloop.com/wiki/images/9/9f/GGST_Asuka_R_Bookmark_(Full_Import).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Bookmark (Random Import)",
-  "move_img": "https://www.dustloop.com/wiki/images/5/56/GGST_Asuka_R_Bookmark_(Random_Import).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Chaotic Option",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f7/GGST_Asuka_R_Chaotic_Option.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Delayed Howling Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/2/2b/GGST_Asuka_R_Delayed_Howling_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Delayed Tardus Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/a/a1/GGST_Asuka_R_Delayed_Tardus_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Go to Marker",
-  "move_img": "https://www.dustloop.com/wiki/images/4/4d/GGST_Asuka_R_Go_to_Marker.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Gravity Rod (Shooting)",
-  "move_img": "https://www.dustloop.com/wiki/images/0/0f/GGST_Asuka_R_Gravity_Rod_(Shooting).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "High-Pass Filter Gravity",
-  "move_img": "https://www.dustloop.com/wiki/images/6/64/GGST_Asuka_R_High-Pass_Filter_Gravity.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Howling Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/c/ca/GGST_Asuka_R_Howling_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Howling Metron MS Processing",
-  "move_img": "https://www.dustloop.com/wiki/images/2/25/GGST_Asuka_R_Howling_Metron_MS_Processing.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Low-Pass Filter Gravity",
-  "move_img": "https://www.dustloop.com/wiki/images/a/a8/GGST_Asuka_R_Low-Pass_Filter_Gravity.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Metron Arpeggio",
-  "move_img": "https://www.dustloop.com/wiki/images/5/5b/GGST_Asuka_R_Metron_Arpeggio.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Metron Screamer 808",
-  "move_img": "https://www.dustloop.com/wiki/images/5/5c/GGST_Asuka_R_Metron_Screamer_808.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Recover Mana (Continuous)",
-  "move_img": "https://www.dustloop.com/wiki/images/8/8f/GGST_Asuka_R_Recover_Mana_(Continuous).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Recover Mana (Instant)",
-  "move_img": "https://www.dustloop.com/wiki/images/3/35/GGST_Asuka_R_Recover_Mana_(Instant).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Reduce Mana Cost",
-  "move_img": "https://www.dustloop.com/wiki/images/d/d0/GGST_Asuka_R_Reduce_Mana_Cost.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Repulsive Rod (Shooting)",
-  "move_img": "https://www.dustloop.com/wiki/images/4/40/GGST_Asuka_R_Repulsive_Rod_(Shooting).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "RMS Boost Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/0/04/GGST_Asuka_R_RMS_Boost_Metron.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Sampler 404",
-  "move_img": "https://www.dustloop.com/wiki/images/1/16/GGST_Asuka_R_Sampler_404.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Shooting Time Stretch (Accelerate)",
-  "move_img": "https://www.dustloop.com/wiki/images/d/dc/GGST_Asuka_R_Shooting_Time_Stretch_(Accelerate).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Shooting Time Stretch (Decelerate)",
-  "move_img": "https://www.dustloop.com/wiki/images/a/a3/GGST_Asuka_R_Shooting_Time_Stretch_(Decelerate).png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Terra Metron",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e6/GGST_Asuka_R_Terra_Metron.png",
-  "hitbox_img": [
-    ""
   ]
 },
 	{
@@ -375,6 +151,237 @@
   "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Asuka_R_Air_Throw.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/d/dd/GGST_Asuka_R_Air_Throw_Hitbox.png"
+  ]
+},
+	{
+  "input": "214X",
+  "move_img": "https://www.dustloop.com/wiki/images/4/44/GGST_Asuka_R_214X.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d6/GGST_Asuka_R_214X_Hitbox.png"
+  ]
+},
+	{
+  "input": "22H~X",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Asuka_R_22HX.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/4/40/GGST_Asuka_R_22HX_Hitbox.png"
+  ]
+},
+	{
+  "input": "22P/K/S",
+  "move_img": "https://www.dustloop.com/wiki/images/4/49/GGST_Asuka_R_22PKS.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b9/GGST_Asuka_R_22PKS_Hitbox.png"
+  ]
+},
+	{
+  "input": "236X",
+  "move_img": "https://www.dustloop.com/wiki/images/c/ca/GGST_Asuka_R_Howling_Metron.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "j.214X",
+  "move_img": "https://www.dustloop.com/wiki/images/4/44/GGST_Asuka_R_214X.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d6/GGST_Asuka_R_214X_Hitbox.png"
+  ]
+},
+	{
+  "input": "Accipiter Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/d/d8/GGST_Asuka_R_Accipiter_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b0/GGST_Asuka_R_Accipiter_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Aquila Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/4/40/GGST_Asuka_R_Aquila_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b6/GGST_Asuka_R_Aquila_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Bit Shift Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/f/f3/GGST_Asuka_R_Bit_Shift_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/23/GGST_Asuka_R_Bit_Shift_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Bookmark (Auto Import)",
+  "move_img": "https://www.dustloop.com/wiki/images/8/82/GGST_Asuka_R_Bookmark_(Auto_Import).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Bookmark (Full Import)",
+  "move_img": "https://www.dustloop.com/wiki/images/9/9f/GGST_Asuka_R_Bookmark_(Full_Import).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Bookmark (Random Import)",
+  "move_img": "https://www.dustloop.com/wiki/images/5/56/GGST_Asuka_R_Bookmark_(Random_Import).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Chaotic Option",
+  "move_img": "https://www.dustloop.com/wiki/images/f/f7/GGST_Asuka_R_Chaotic_Option.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Delayed Howling Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/2/2b/GGST_Asuka_R_Delayed_Howling_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/96/GGST_Asuka_R_Delayed_Howling_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Delayed Tardus Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a1/GGST_Asuka_R_Delayed_Tardus_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/73/GGST_Asuka_R_Delayed_Tardus_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Go to Marker",
+  "move_img": "https://www.dustloop.com/wiki/images/4/4d/GGST_Asuka_R_Go_to_Marker.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/7a/GGST_Asuka_R_Go_to_Marker_Hitbox.png"
+  ]
+},
+	{
+  "input": "Gravity Rod (Shooting)",
+  "move_img": "https://www.dustloop.com/wiki/images/0/0f/GGST_Asuka_R_Gravity_Rod_(Shooting).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "High-Pass Filter Gravity",
+  "move_img": "https://www.dustloop.com/wiki/images/6/64/GGST_Asuka_R_High-Pass_Filter_Gravity.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Howling Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/c/ca/GGST_Asuka_R_Howling_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/1a/GGST_Asuka_R_Howling_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Howling Metron MS Processing",
+  "move_img": "https://www.dustloop.com/wiki/images/2/25/GGST_Asuka_R_Howling_Metron_MS_Processing.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/c/c0/GGST_Asuka_R_Howling_Metron_MS_Processing_Hitbox.png"
+  ]
+},
+	{
+  "input": "Low-Pass Filter Gravity",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a8/GGST_Asuka_R_Low-Pass_Filter_Gravity.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Metron Arpeggio",
+  "move_img": "https://www.dustloop.com/wiki/images/5/5b/GGST_Asuka_R_Metron_Arpeggio.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/3/3f/GGST_Asuka_R_Metron_Arpeggio_Hitbox.png"
+  ]
+},
+	{
+  "input": "Metron Screamer 808",
+  "move_img": "https://www.dustloop.com/wiki/images/5/5c/GGST_Asuka_R_Metron_Screamer_808.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f6/GGST_Asuka_R_Metron_Screamer_808_Hitbox.png"
+  ]
+},
+	{
+  "input": "Recover Mana (Continuous)",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8f/GGST_Asuka_R_Recover_Mana_(Continuous).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Recover Mana (Instant)",
+  "move_img": "https://www.dustloop.com/wiki/images/3/35/GGST_Asuka_R_Recover_Mana_(Instant).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Reduce Mana Cost",
+  "move_img": "https://www.dustloop.com/wiki/images/d/d0/GGST_Asuka_R_Reduce_Mana_Cost.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Repulsive Rod (Shooting)",
+  "move_img": "https://www.dustloop.com/wiki/images/4/40/GGST_Asuka_R_Repulsive_Rod_(Shooting).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "RMS Boost Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/0/04/GGST_Asuka_R_RMS_Boost_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/4/4a/GGST_Asuka_R_RMS_Boost_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "Sampler 404",
+  "move_img": "https://www.dustloop.com/wiki/images/1/16/GGST_Asuka_R_Sampler_404.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Shooting Time Stretch (Accelerate)",
+  "move_img": "https://www.dustloop.com/wiki/images/d/dc/GGST_Asuka_R_Shooting_Time_Stretch_(Accelerate).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Shooting Time Stretch (Decelerate)",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a3/GGST_Asuka_R_Shooting_Time_Stretch_(Decelerate).png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Terra Metron",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e6/GGST_Asuka_R_Terra_Metron.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d9/GGST_Asuka_R_Terra_Metron_Hitbox.png"
+  ]
+},
+	{
+  "input": "632146P/K",
+  "move_img": "https://www.dustloop.com/wiki/images/8/8e/GGST_Asuka_R_632146PK.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/29/GGST_Asuka_R_632146PK_Hitbox.png"
+  ]
+},
+	{
+  "input": "632146S",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c6/GGST_Asuka_R_632146S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/c/cb/GGST_Asuka_R_632146S_hitbox.png"
   ]
 }
 ]
