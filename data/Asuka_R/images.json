@@ -144,6 +144,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/f/fe/GGST_Asuka_R_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/f/fe/GGST_Asuka_R_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/6/69/GGST_Asuka_R_Ground_Throw.png",
   "hitbox_img": [
@@ -187,7 +201,7 @@
 },
 	{
   "input": "236X",
-  "move_img": "https://www.dustloop.com/wiki/images/3/37/GST_Asuka_236X.png",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c1/GGST_Asuka_236X.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/2/28/GGST_Asuka_236X_Hitbox.png"
   ]
