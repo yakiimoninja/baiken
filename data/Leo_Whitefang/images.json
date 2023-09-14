@@ -150,6 +150,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/4/4f/GGST_Leo_Whitefang_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/4/4f/GGST_Leo_Whitefang_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Leo_Whitefang_Ground_Throw.png",
   "hitbox_img": [

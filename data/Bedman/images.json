@@ -138,6 +138,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/c/cb/GGST_Bedman_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/c/cb/GGST_Bedman_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/6/6b/GGST_Bedman_Ground_Throw.png",
   "hitbox_img": [

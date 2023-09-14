@@ -157,17 +157,17 @@
   ]
 },
 	{
-  "input": "236P 100T Weight",
-  "move_img": "https://www.dustloop.com/wiki/images/a/a7/GGST_Faust_100T_Weight.png",
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e9/GGST_Faust_236D.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/3/31/GGST_Faust_100T_Weight_1_Hitbox.png"
+    ""
   ]
 },
 	{
   "input": "236P 100T Weight",
   "move_img": "https://www.dustloop.com/wiki/images/a/a7/GGST_Faust_100T_Weight.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/c/c5/GGST_Faust_100T_Weight_2_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/3/31/GGST_Faust_100T_Weight_1_Hitbox.png"
   ]
 },
 	{
@@ -202,6 +202,13 @@
   ]
 },
 	{
+  "input": "236P Earthquake",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a7/GGST_Faust_100T_Weight.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/c/c5/GGST_Faust_100T_Weight_2_Hitbox.png"
+  ]
+},
+	{
   "input": "236P Hammer",
   "move_img": "https://www.dustloop.com/wiki/images/4/4c/GGST_Faust_Hammer.png",
   "hitbox_img": [
@@ -231,10 +238,31 @@
   ]
 },
 	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e9/GGST_Faust_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/9b/GGST_Faust_Ground_Throw.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/c/c5/GGST_Faust_Ground_Throw_Hitbox.png"
+  ]
+},
+	{
+  "input": "Afro (ignition on block)",
+  "move_img": "https://www.dustloop.com/wiki/images/3/3f/GGST_Faust_Afro.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "Afro (ignition on hit)",
+  "move_img": "https://www.dustloop.com/wiki/images/3/3f/GGST_Faust_Afro.png",
+  "hitbox_img": [
+    ""
   ]
 },
 	{
@@ -273,6 +301,13 @@
   ]
 },
 	{
+  "input": "22P",
+  "move_img": "https://www.dustloop.com/wiki/images/8/80/GGST_Faust_22P.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/8f/GGST_Faust_22P_Hitbox.png"
+  ]
+},
+	{
   "input": "236H",
   "move_img": "https://www.dustloop.com/wiki/images/0/00/GGST_Faust_236H_1.png",
   "hitbox_img": [
@@ -291,6 +326,13 @@
   "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Faust_236S.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/2/2c/GGST_Faust_236S_Hitbox.png"
+  ]
+},
+	{
+  "input": "236[P]",
+  "move_img": "https://www.dustloop.com/wiki/images/1/19/GGST_Faust_236(P).png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/83/GGST_Faust_236(P)_Hitbox.png"
   ]
 },
 	{
@@ -313,6 +355,14 @@
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Faust_41236K_4_H.png",
   "hitbox_img": [
     ""
+  ]
+},
+	{
+  "input": "41236[K]",
+  "move_img": "https://www.dustloop.com/wiki/images/b/bf/GGST_Faust_41236K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/e/eb/GGST_Faust_41236K_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/2/28/GGST_Faust_41236K_2_Hitbox.png"
   ]
 },
 	{

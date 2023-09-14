@@ -159,6 +159,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_May_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_May_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_May_Ground_Throw.png",
   "hitbox_img": [
@@ -223,6 +237,20 @@
   "move_img": "https://www.dustloop.com/wiki/images/2/29/GGST_May_Mr._Dolphin_Horizontal.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/d/de/GGST_May_Mr._Dolphin_Horizontal-Hitbox.png"
+  ]
+},
+	{
+  "input": "[4]6S/H~K",
+  "move_img": "https://www.dustloop.com/wiki/images/0/04/GGST_May_46X-K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/a/ac/GGST_May_46X-K_hitbox.png"
+  ]
+},
+	{
+  "input": "[4]6S/H~P",
+  "move_img": "",
+  "hitbox_img": [
+    ""
   ]
 },
 	{

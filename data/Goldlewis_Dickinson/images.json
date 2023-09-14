@@ -138,6 +138,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/9/91/GGST_Goldlewis_Dickinson_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/98/GGST_Goldlewis_Dickinson_Ground_Throw.png",
   "hitbox_img": [

@@ -131,6 +131,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/1/1c/GGST_Happy_Chaos_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/1/1c/GGST_Happy_Chaos_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/4/4a/GGST_Happy_Chaos_Ground_Throw.png",
   "hitbox_img": [

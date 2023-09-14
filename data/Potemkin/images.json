@@ -144,6 +144,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Potemkin_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Potemkin_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Potemkin_Ground_Throw.png",
   "hitbox_img": [
@@ -213,6 +227,7 @@
   "input": "63214S",
   "move_img": "https://www.dustloop.com/wiki/images/c/cf/GGST_Potemkin_FDB.png",
   "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/1d/GGST_Potemkin_62134S_hitbox.png",
     "https://www.dustloop.com/wiki/images/5/5b/GGST_Potemkin_FDB_Hitbox.png"
   ]
 },

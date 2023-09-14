@@ -154,6 +154,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Giovanna_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Giovanna_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/c/cd/GGST_Giovanna_Ground_Throw.png",
   "hitbox_img": [
@@ -165,6 +179,13 @@
   "move_img": "https://www.dustloop.com/wiki/images/a/ab/GGST_Giovanna_Air_Throw.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/7/7a/GGST_Giovanna_Air_Throw_Hitbox.png"
+  ]
+},
+	{
+  "input": "214H",
+  "move_img": "https://www.dustloop.com/wiki/images/1/1e/GGST_Giovanna_214H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b0/GGST_Giovanna_214H_Hitbox.png"
   ]
 },
 	{
