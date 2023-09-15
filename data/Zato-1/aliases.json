@@ -13,6 +13,7 @@
 	{"input":"236H","aliases":["Oppose","Tickle Monster","Shield","TM"]},
 	{"input":"623S","aliases":["Damned Fang","Command Grab","DF","CG"]},
 	{"input":"214K","aliases":["Break The Law","Pool","BTL"]},
+	{"input":"22 During 214K(HOLD)","aliases":["Eddie Swap","ES"]},	
 	{"input":"214S","aliases":["Drunkard Shade","Reflect","DS"]},
 	{"input":"214S (Dash)","aliases":["Eddie Dash","ED"]},
 	{"input":"214H","aliases":["Summon Eddie","Summon","SE"]},
