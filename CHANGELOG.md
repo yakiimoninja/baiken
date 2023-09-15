@@ -1,3 +1,60 @@
+# Version 0.14.0 Patch Notes.
+
+### General
+- Added Johnny.
+- Updated framedata.
+
+### Move Aliases
+
+- **`All Characters`**:
+    -`236D` added aliases `Wild Assault`, `WA`.
+    -`236[D]` added aliases `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
+
+- **`Anji Mito`**:
+    - `236K~214P` added aliases `Midare`, `Fish`.
+
+- **`Faust`**:
+    - `236P` added aliases `22P`, `Spit`.
+    - `236[P]` added aliases `What Could This Be?`,`Item Eat`,`Eat`,`IE`,`236P!`
+
+- **`Giovanna`**:
+    - `214H` added aliases `Chave`, `Dash`.
+
+- **`I-No`**:
+    - `214S` added aliases `Mad Love Agitato`, `MLA`.
+
+- **`Ramlethal Valentine`**:
+    - `236K` added aliases `Ondo`, `Rock`.
+
+- **`Zato-1`**:
+    -`22 During 214K(HOLD)` added aliases `Eddie Swap`, `ES`.
+
+- **`Johnny`**:
+    - `214H` added aliases `Ensenga`.
+    - `214[P/K/S]` added aliases `Mist Finer Stance`, `214K!`, `214P!`, `214S!`, `MF`.
+    - `214]K[` added aliases `Mist Finer (Horizontal)`, `214K`, `Mist Finer`, `MFH`, `MFK`.
+    - `214]P[` added aliases `Mist Finer (Upward)`, `214P`, `Mist Finer Up`, `MFU`, `MFP`.
+    - `214]S[` added aliases `Mist Finer (Downward)`, `214S`, `Mist Finer Down`, `MFD`, `MFS`.
+    - `236H` added aliases `Vault`.
+    - `236HH` added aliases `Vault Deal`, `Flip Card`, `VD`, `FC`.
+    - `236P/K/S` added aliases `Deal`, `Card`, `236P`, `236K`, `236S`.
+    - `Card hit by Mist Finer` added aliases `Turn Up`, `Card Cut, `, `TU`, `CC`.
+    - `H or D` added aliases `Mist Finer Cancel`, `MFC`.
+    - `j.214[P/K/S]` added aliases `Mist Finer Stance`, `Air Mist Finer Stance`, `AMF`.
+    - `j.214]K[` added aliases `Air Mist Finer (Horizontal)`, `j.214K`, `AMFH`, `AMFK`.
+    - `j.214]P[` added aliases `Air Mist Finer (Upward)`, `j.214k`, `AMFU`, `AMFP`.
+    - `j.214]S[` added aliases `Air Mist Finer (Downward)`, `j.214k`, `AMFD`, `AMFK`, `Overhead`.
+    - `j.236H` added aliases `Air Deal`, `AD`, `Air Card`, `AC`.
+    - `Mist Finer 44` added aliases `Mist Finer Dash (Backward)`, `MFBD`.
+    - `Mist Finer 66` added aliases `Mist Finer Dash (Forward)`, `MFFD`.
+    - `236236S` added aliases `Joker Trick`, `Card Super`, `JT`, `CS`.
+    - `632146H` added aliases `That's My Name`, `Super`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.13.0 Patch Notes.
 
 ### General
