@@ -10,10 +10,13 @@
 	{"input":"236H K","aliases":["Issokutobi","Hop","236HK"]},
 	{"input":"236H S","aliases":["Nagiha","Fujin Low","Fuujin Low","FL","236HS"]},
 	{"input":"236H H","aliases":["Rin","Overhead","Fuujin Overhead","Fujin Overhead","FO","236HH"]},
+	{"input":"236K~214P","aliases":["Midare","Fish"]},
 	{"input":"632146H","aliases":["Issei Ougi: Sai","Super"]},
 	{"input":"632146S","aliases":["Kachoufuugetsu Kai","Parry","Parry Super","KFK","PS"]},
 	{"input":"632146S Attack Near","aliases":["Near Kachoufuugetsu Kai","Near Parry","Near Parry Super","NKFK","NP","NPS"]},
 	{"input":"632146S Attack Far","aliases":["Far Kachoufuugetsu Kai","Far Parry","Far Parry Super","FKFK","FP","FPS"]},
 	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]}
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
+	{"input":"236D","aliases":["Wild Assault","WA"]},
+    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
 ]

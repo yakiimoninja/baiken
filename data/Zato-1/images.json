@@ -25,6 +25,7 @@
   "input": "2P",
   "move_img": "https://www.dustloop.com/wiki/images/7/7f/GGST_Zato-1_2P.png",
   "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/e/e7/GGST_Zato-1_2P_Hitbox_1.png",
     "https://www.dustloop.com/wiki/images/0/04/GGST_Zato-1_2P_Hitbox.png"
   ]
 },
@@ -62,6 +63,7 @@
   "input": "5P",
   "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Zato-1_5P.png",
   "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/4/4f/GGST_Zato-1_5P_Hitbox_1.png",
     "https://www.dustloop.com/wiki/images/e/e0/GGST_Zato-1_5P_Hitbox.png"
   ]
 },
@@ -99,7 +101,8 @@
   "input": "c.S",
   "move_img": "https://www.dustloop.com/wiki/images/9/97/GGST_Zato-1_c.S.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/02/GGST_Zato-1_c.S_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/0/02/GGST_Zato-1_c.S_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/6/61/GGST_Zato-1_cS_Hitbox2.png"
   ]
 },
 	{
@@ -151,6 +154,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_Zato-1_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_Zato-1_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/1/14/GGST_Zato-1_Ground_Throw.png",
   "hitbox_img": [
@@ -195,6 +212,13 @@
 	{
   "input": "214S (Dash)",
   "move_img": "https://www.dustloop.com/wiki/images/0/02/GGST_Zato-1_Drunkard_Shade_Dash.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "22 During 214K(HOLD)",
+  "move_img": "https://www.dustloop.com/wiki/images/a/aa/GGST_Zato-1_Break_The_Law.png",
   "hitbox_img": [
     ""
   ]

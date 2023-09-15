@@ -141,6 +141,13 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/1/17/GGST_Ky_Kiske_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/3/35/GGST_Ky_Kiske_Ground_Throw.png",
   "hitbox_img": [
@@ -227,7 +234,7 @@
   "input": "DI 236H",
   "move_img": "https://www.dustloop.com/wiki/images/f/f6/GGST_Ky_Kiske_236H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/8/8c/GGST_Ky_Kiske_236H_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/8/8f/GGST_Ky_Kiske_236H_DI_Hitbox.png"
   ]
 },
 	{
@@ -242,8 +249,7 @@
   "input": "DI 236S",
   "move_img": "https://www.dustloop.com/wiki/images/e/e6/GGST_Ky_Kiske_236S.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/09/GGST_Ky_Kiske_236S_Hitbox_1.png",
-    "https://www.dustloop.com/wiki/images/a/a2/GGST_Ky_Kiske_236S_Hitbox_2.png"
+    "https://www.dustloop.com/wiki/images/6/60/GGST_Ky_Kiske_236S_DI_Hitbox.png"
   ]
 },
 	{
@@ -342,7 +348,7 @@
   "input": "DI 236236P",
   "move_img": "https://www.dustloop.com/wiki/images/b/b1/GGST_Ky_Kiske_236236P.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/3/31/GGST_Ky_Kiske_Sacred_Edge_hitbox.png"
+    "https://www.dustloop.com/wiki/images/8/8f/GGST_Ky_Kiske_Sacred_Edge_DI_hitbox.png"
   ]
 },
 	{

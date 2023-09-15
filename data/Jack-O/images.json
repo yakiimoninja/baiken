@@ -141,6 +141,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/5/55/GGST_Jack-O_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/5/55/GGST_Jack-O_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/91/GGST_JackO_Ground_Throw.png",
   "hitbox_img": [
@@ -180,16 +194,14 @@
   "input": "214S",
   "move_img": "https://www.dustloop.com/wiki/images/6/62/GGST_Jack-O_214S.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/c/cb/GGST_JackO_Defend_Command_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/0/0d/GGST_JackO_Defend_Command_Held_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/c/cb/GGST_JackO_Defend_Command_Hitbox.png"
   ]
 },
 	{
   "input": "236K",
   "move_img": "https://www.dustloop.com/wiki/images/1/11/GGST_Jack-O_236K.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b0/GGST_JackO_Servant_Shoot_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/1/11/GGST_JackO_Servant_Shoot_Air_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/b/b0/GGST_JackO_Servant_Shoot_Hitbox.png"
   ]
 },
 	{
@@ -237,6 +249,20 @@
   ]
 },
 	{
+  "input": "j.236K",
+  "move_img": "https://www.dustloop.com/wiki/images/c/ce/GGST_Jack-O_236K_air.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/1/11/GGST_JackO_Servant_Shoot_Air_Hitbox.png"
+  ]
+},
+	{
+  "input": "K while holding Servant",
+  "move_img": "https://www.dustloop.com/wiki/images/b/b1/GGST_Jack-O_214K_Held.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/9/93/GGST_Jack-O_214K_Held_Hitbox.png"
+  ]
+},
+	{
   "input": "Launched Servant",
   "move_img": "",
   "hitbox_img": [
@@ -245,9 +271,8 @@
 },
 	{
   "input": "S while holding Servant",
-  "move_img": "https://www.dustloop.com/wiki/images/6/62/GGST_Jack-O_214S.png",
+  "move_img": "https://www.dustloop.com/wiki/images/a/ad/GGST_JackO_Defend_Command_Held.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/c/cb/GGST_JackO_Defend_Command_Hitbox.png",
     "https://www.dustloop.com/wiki/images/0/0d/GGST_JackO_Defend_Command_Held_Hitbox.png"
   ]
 },
