@@ -148,6 +148,13 @@
   ]
 },
 	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/1/17/GGST_Ky_Kiske_236D.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/3/35/GGST_Ky_Kiske_Ground_Throw.png",
   "hitbox_img": [
