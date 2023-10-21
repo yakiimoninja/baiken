@@ -8,7 +8,7 @@
 	{"input":"5P","name":"5P","damage":"21","guard":"All","startup":"5","active":"4","recovery":"7","hit":"+2","block":"-1","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"5[D]","name":"Charged","damage":"50","guard":"High","startup":"28","active":"3","recovery":"26","hit":"KD +36","block":"-10","level":"4","counter":"Mid","scaling":"100%","riscgain":"1875","invincibility":"-"},
 	{"input":"6K","name":"6K","damage":"28","guard":"Low","startup":"16","active":"5","recovery":"16","hit":"-4","block":"-7","level":"2","counter":"Mid","scaling":"90%","riscgain":"1125","invincibility":"-"},
-	{"input":"6P","name":"6P","damage":"26","guard":"All","startup":"9","active":"5","recovery":"25","hit":"-13","block":"-16","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"1~3 Upper Body, 4~13 Above Knees"},
+	{"input":"6P","name":"6P","damage":"26","guard":"All","startup":"9","active":"5","recovery":"25","hit":"-13","block":"-16","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"1-3 Upper Body, 4-13 Above Knees"},
 	{"input":"6S","name":"6S","damage":"45","guard":"All","startup":"12","active":"7","recovery":"24","hit":"KD +24","block":"-14","level":"3","counter":"Mid","scaling":"90%","riscgain":"2000","invincibility":"-"},
 	{"input":"c.S","name":"c.S","damage":"38","guard":"All","startup":"7","active":"6","recovery":"10","hit":"+4","block":"+1","level":"3","counter":"Mid","scaling":"100%","riscgain":"2000","invincibility":"-"},
 	{"input":"f.S","name":"f.S","damage":"30","guard":"All","startup":"10","active":"7","recovery":"21","hit":"-11","block":"-14","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"-"},
