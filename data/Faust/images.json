@@ -252,14 +252,7 @@
   ]
 },
 	{
-  "input": "Afro (ignition on block)",
-  "move_img": "https://www.dustloop.com/wiki/images/3/3f/GGST_Faust_Afro.png",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "Afro (ignition on hit)",
+  "input": "Afro Explosion",
   "move_img": "https://www.dustloop.com/wiki/images/3/3f/GGST_Faust_Afro.png",
   "hitbox_img": [
     ""
