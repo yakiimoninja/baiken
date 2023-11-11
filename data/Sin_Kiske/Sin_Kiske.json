@@ -8,7 +8,7 @@
 	{"input":"5H","name":"5H","damage":"25, 25","guard":"All","startup":"16","active":"3(12)3","recovery":"18","hit":"+1","block":"-2","level":"4","counter":"Large","scaling":"90%","riscgain":"1000×2","invincibility":"-"},
 	{"input":"5K","name":"5K","damage":"29","guard":"All","startup":"7","active":"3","recovery":"12","hit":"0","block":"-3","level":"1","counter":"Small","scaling":"90%","riscgain":"1000","invincibility":"-"},
 	{"input":"5P","name":"5P","damage":"26","guard":"All","startup":"6","active":"3","recovery":"7","hit":"+3","block":"0","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
-	{"input":"5[D]","name":"Charged","damage":"56","guard":"High","startup":"28","active":"4","recovery":"25","hit":"KD +36","block":"-10","level":"4","counter":"Mid","scaling":"100%","riscgain":"1875","invincibility":"-"},
+	{"input":"5[D]","name":"Charged","damage":"56","guard":"High","startup":"28","active":"3","recovery":"26","hit":"KD +36","block":"-10","level":"4","counter":"Mid","scaling":"100%","riscgain":"1875","invincibility":"-"},
 	{"input":"6H","name":"6H","damage":"48","guard":"All","startup":"15","active":"4","recovery":"17","hit":"KD +30","block":"-4","level":"3","counter":"Large","scaling":"90%","riscgain":"2000","invincibility":"-"},
 	{"input":"6K","name":"6K","damage":"36","guard":"Low","startup":"21","active":"4","recovery":"10","hit":"KD +39","block":"+3","level":"3","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"-"},
 	{"input":"6P","name":"6P","damage":"34","guard":"All","startup":"11","active":"6","recovery":"20","hit":"-9","block":"-12","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"1-3 Upper Body, 4-16 Above Knee"},
