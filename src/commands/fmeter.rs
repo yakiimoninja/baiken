@@ -193,13 +193,13 @@ pub async fn fmeter(
                     // Printing image in discord chat
                     let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                     ctx.say(&bot_msg).await?;
-                    ctx.channel_id().say(ctx.discord(), &img_links.move_img).await?;
+                    ctx.channel_id().say(ctx, &img_links.move_img).await?;
                 }
                 else{
                     // Printing default fallback image in discord chat
                     let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                     ctx.say(&bot_msg).await?;
-                    ctx.channel_id().say(ctx.discord(), &*IMAGE_DEFAULT).await?;
+                    ctx.channel_id().say(ctx, &*IMAGE_DEFAULT).await?;
                 }
                 
             }
@@ -394,7 +394,7 @@ pub async fn fmeter(
         }
 
         frame_meter_msg = frame_meter_msg + "`";
-        ctx.channel_id().say(ctx.discord(), frame_meter_msg).await?;
+        ctx.channel_id().say(ctx, frame_meter_msg).await?;
 
         // println!("Startup: {:?}", startup_vec);
         // println!("Active: {:?}", active_vec);

@@ -118,7 +118,7 @@ pub async fn moves(
             + "\n+ Input: " + &move_frames[z].input + "\n";
     }
     moves_as_msg = moves_as_msg + &"```".to_string();
-    ctx.channel_id().say(ctx.discord(), &moves_as_msg).await?;
+    ctx.channel_id().say(ctx, &moves_as_msg).await?;
     
     Ok(())
 }

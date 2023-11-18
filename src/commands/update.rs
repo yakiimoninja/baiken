@@ -168,7 +168,7 @@ pub async fn update (
         panic!("{}", error_msg.replace("`", "'"));
     }
 
-    ctx.channel_id().say(ctx.discord(), "Update succesful!").await?;
+    ctx.channel_id().say(ctx, "Update succesful!").await?;
 
     return Ok(());
 }
