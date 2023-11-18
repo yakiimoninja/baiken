@@ -135,7 +135,7 @@ async fn main() {
             ..Default::default()
         },
         
-        /// The global error handler for all error cases that may occur
+        // The global error handler for all error cases that may occur
         on_error: |error| Box::pin(on_error(error)),
         
         // /// This code is run before every command
@@ -152,7 +152,7 @@ async fn main() {
         //     })
         // },
 
-        /// Every command invocation must pass this check to continue execution
+        // Every command invocation must pass this check to continue execution
         command_check: Some(|ctx| {
             Box::pin(async move {
                 if ctx.author().id == 123456789 {
@@ -176,7 +176,7 @@ async fn main() {
 
     poise::Framework::builder()
         .token(std::env::var("DISCORD_TOKEN").expect("missing DISCORD_TOKEN."))
-        .user_data_setup(move |_ctx, _ready, _framework| {
+        .setup(move |_ctx, _ready, _framework| {
             Box::pin(async move {
                 Ok(Data {})
             })
