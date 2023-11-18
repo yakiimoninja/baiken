@@ -10,9 +10,9 @@ pub async fn nicknames(
 
     // Checking if nicknames.json exist
     if let Some(error_msg) = check::nicknames_json_exists(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
 
     // Reading the nicknames json
@@ -33,12 +33,12 @@ pub async fn nicknames(
         nicks_as_msg = nicks_as_msg.to_owned() + "\n* Character: " + &nicknames.character.to_string();
         
         // Nickname portion
-        nicks_as_msg = nicks_as_msg + "\n+ Nicknames: ";
+        nicks_as_msg += "\n+ Nicknames: ";
         
         for x in 0..nicknames.nicknames.len() {
             if x != nicknames.nicknames.len() - 1 {
                 // Taking into account the lack of nicknames for some characters
-                if nicknames.nicknames[x] != "" {
+                if !nicknames.nicknames[x].is_empty() {
                     nicks_as_msg = nicks_as_msg + &nicknames.nicknames[x] + ", ";
                 }
                 else {
@@ -52,8 +52,8 @@ pub async fn nicknames(
         nicks_as_msg = nicks_as_msg.to_owned() + ".\n";
     }
     
-    nicks_as_msg = nicks_as_msg + &"```".to_string();
-    nicks_as_msg = nicks_as_msg + "";
+    nicks_as_msg += "```";
+    nicks_as_msg += "";
     ctx.say(&nicks_as_msg).await?;
         
     Ok(())

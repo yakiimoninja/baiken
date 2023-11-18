@@ -22,36 +22,36 @@ pub async fn hitboxes(
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
         ctx.say(&error_msg).await?;
-        print!("\n");
+        println!();
         panic!("{}", error_msg);
     }
 
     // Checking if move user argument is correct
     if let Some(error_msg) = check::correct_character_move_arg(&character_move_arg){
         ctx.say(&error_msg).await?;
-        print!("\n");
+        println!();
         panic!("{}", error_msg);
     }
 
     // Checking if data folder exists
     if let Some(error_msg) = check::data_folder_exists(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
 
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
     
     // Checking if character jsons exist
     if let Some(error_msg) = check::character_jsons_exist(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
 
     // Reading the nicknames json
@@ -62,7 +62,7 @@ pub async fn hitboxes(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    if character_found == false {
+    if !character_found {
         
         'outer: for x_nicknames in &vec_nicknames {
         
@@ -81,15 +81,15 @@ pub async fn hitboxes(
         }
     }
 
-    if character_found == false {
+    if !character_found {
         
         // Iterating through the nicknames.json character entries
         for x_nicknames in &vec_nicknames {
 
             // If user input is part of a characters full name or the full name itself
             // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character_arg.to_lowercase()) ||
+            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) {
                 
                 character_found = true;
                 character_arg_altered = x_nicknames.character.to_owned();
@@ -100,11 +100,11 @@ pub async fn hitboxes(
 
     // If user input isnt the full name, part of a full name or a nickname
     // Error out cause requested character was not found in the json
-    if character_found == false {
+    if !character_found {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         ctx.say(error_msg).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("`", "'"));
+        println!();
+        panic!("{}", error_msg.replace('`', "'"));
     }
 
     // Reading the character json if found
@@ -122,7 +122,7 @@ pub async fn hitboxes(
 
     // Checking if aliases for this characters moves exist
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
-    if Path::new(&aliases_path).exists() == true {
+    if Path::new(&aliases_path).exists() {
         
         // Reading the aliases json
         let aliases_data = fs::read_to_string(&aliases_path)
@@ -136,8 +136,8 @@ pub async fn hitboxes(
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                if x_aliases.to_lowercase().trim().replace(".", "") 
-                == character_move_arg.to_lowercase().trim().replace(".", "") {
+                if x_aliases.to_lowercase().trim().replace('.', "") 
+                == character_move_arg.to_lowercase().trim().replace('.', "") {
                     character_move_arg = alias_data.input.to_string();
                     break 'outer;
                 }
@@ -146,7 +146,7 @@ pub async fn hitboxes(
     }
 
     // Reading images.json for this character
-    let image_links = fs::read_to_string(&("data/".to_owned() + &character_arg_altered + "/images.json"))
+    let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
         .expect(&("\nFailed to read 'data/".to_owned() + &character_arg_altered + "'/images.json' file."));
 
     // Deserializing images.json for this character
@@ -158,19 +158,19 @@ pub async fn hitboxes(
     for mframes_index in 0..move_frames.len() {
         // Iterating through the moves of the json file to find the move requested
         // Specifically if user arg is exactly move input
-        if move_frames[mframes_index].input.to_string().to_lowercase().replace(".", "") 
-        == character_move_arg.to_string().to_lowercase().replace(".", "") {
+        if move_frames[mframes_index].input.to_string().to_lowercase().replace('.', "") 
+        == character_move_arg.to_string().to_lowercase().replace('.', "") {
             mframes = &move_frames[mframes_index];
             move_found = true;
             break;
         }        
     }
 
-    if move_found == false {
+    if !move_found {
         for mframes_index in 0..move_frames.len() {
             // Iterating through the moves of the json file to find the move requested
             // Specifically if user arg is contained in move name
-            if move_frames[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) == true {
+            if move_frames[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
                 mframes = &move_frames[mframes_index];
                 move_found = true;
                 break;
@@ -178,7 +178,7 @@ pub async fn hitboxes(
         }
     }
 
-    if move_found == true {
+    if move_found {
             
         for img_links in image_links {
             // Iterating through the image.json to find the move's hitbox links
@@ -188,7 +188,7 @@ pub async fn hitboxes(
                 println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
 
                 
-                if img_links.hitbox_img[0].is_empty() == false {
+                if !img_links.hitbox_img[0].is_empty() {
 
                     // Priting hitboxes in discord chat
                     let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
@@ -202,7 +202,7 @@ pub async fn hitboxes(
                     // Priting hitboxes in discord chat
                     let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                     ctx.say(&bot_msg).await?;
-                    ctx.channel_id().say(ctx, &*HITBOX_DEFAULT).await?;
+                    ctx.channel_id().say(ctx, HITBOX_DEFAULT).await?;
                 }
                 
             }
@@ -214,8 +214,8 @@ pub async fn hitboxes(
         ctx.say(error_msg).await?;
         // Console error print
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
-        print!("\n");
-        panic!("{}", error_msg.replace("`", "'"));
+        println!();
+        panic!("{}", error_msg.replace('`', "'"));
     }
 
     Ok(())

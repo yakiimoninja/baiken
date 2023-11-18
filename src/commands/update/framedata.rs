@@ -16,7 +16,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     // For timing the updates
     let now = Instant::now();
     
-    print!("\n");
+    println!();
 
     if specific_char == "all"{
     
@@ -24,9 +24,9 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     
             println!("Creating '{}.json' file.", chars_ids[x]);
             
-            let char_json_path = "data/".to_owned() + &chars_ids[x] +"/"+ &chars_ids[x] + ".json";
+            let char_json_path = "data/".to_owned() + chars_ids[x] +"/"+ chars_ids[x] + ".json";
     
-            if Path::new(&char_json_path).exists() == true {
+            if Path::new(&char_json_path).exists() {
                 remove_file(&char_json_path).await.unwrap();
             }
     
@@ -35,10 +35,10 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
                 .create(true)
                 .append(true)
                 .open(char_json_path)
-                .expect(&("\nFailed to open '".to_owned() + &chars_ids[x] + ".json' file."));
+                .expect(&("\nFailed to open '".to_owned() + chars_ids[x] + ".json' file."));
     
             // Creating request link 
-            let character_link = SITE_LINK.to_owned() + &chars_ids[x].replace("_", " ") +  SITE_HALF;
+            let character_link = SITE_LINK.to_owned() + &chars_ids[x].replace('_', " ") +  SITE_HALF;
     
             // Dusloop site request
             let mut char_page_response_json = ureq::get(&character_link)
@@ -58,7 +58,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             // More character json file stuff
             let mut char_json_schema = "[\n\t";
             write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + &chars_ids[x] + ".json'."));
+                .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + chars_ids[x] + ".json'."));
             
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
@@ -76,7 +76,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
 
         let char_json_path = "data/".to_owned() + specific_char +"/"+ specific_char + ".json";
 
-        if Path::new(&char_json_path).exists() == true {
+        if Path::new(&char_json_path).exists() {
             remove_file(&char_json_path).await.unwrap();
         }
 
@@ -88,7 +88,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             .expect(&("\nFailed to open '".to_owned() + specific_char + ".json' file."));
 
         // Creating request link
-        let character_link = SITE_LINK.to_owned() + &specific_char.replace("_", " ") + SITE_HALF;
+        let character_link = SITE_LINK.to_owned() + &specific_char.replace('_', " ") + SITE_HALF;
 
         // Dusloop site request
         let mut char_page_response_json = ureq::get(&character_link)

@@ -52,7 +52,7 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
         }
         else{
             // Skips finish blow for sol
-            if framedata.cargoquery[x].title.input.as_ref().unwrap().to_string() == "j.XX during Homing Jump" {
+            if *framedata.cargoquery[x].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
                 continue;
             }
         }
@@ -61,11 +61,11 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
         }
         else {
             // Skips dash cancel entry, ino hoverdash chipp escape zato flight and finish blow 
-            if framedata.cargoquery[x].title.name.as_ref().unwrap().to_string() == "Dash Cancel" || 
-            framedata.cargoquery[x].title.name.as_ref().unwrap().to_string() == "Hoverdash" ||
-            framedata.cargoquery[x].title.name.as_ref().unwrap().to_string() == "Finish Blow" ||
-            framedata.cargoquery[x].title.name.as_ref().unwrap().to_string() == "Flight" ||
-            framedata.cargoquery[x].title.name.as_ref().unwrap().to_string() == "Escape" {
+            if *framedata.cargoquery[x].title.name.as_ref().unwrap() == "Dash Cancel" || 
+            *framedata.cargoquery[x].title.name.as_ref().unwrap() == "Hoverdash" ||
+            *framedata.cargoquery[x].title.name.as_ref().unwrap() == "Finish Blow" ||
+            *framedata.cargoquery[x].title.name.as_ref().unwrap() == "Flight" ||
+            *framedata.cargoquery[x].title.name.as_ref().unwrap() == "Escape" {
                 continue;
             }
         }
@@ -130,12 +130,14 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
         // Skip writting comma/tab if next and last iteration 
         // contains 'finish blow' in last the input field
         if x == framedata.cargoquery.len() -2 &&
-        framedata.cargoquery[x+1].title.input.as_ref().unwrap().to_string() == "j.XX during Homing Jump"{
+        *framedata.cargoquery[x+1].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
             continue;
         }
         else if x != framedata.cargoquery.len() - 1 {         
             // Adding comma/tab
-            file.write(b",\n\t")
+            // file.write(b",\n\t")
+            //     .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
+            (&mut file).write_all(b",\n\t")
                 .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
         } 
     }

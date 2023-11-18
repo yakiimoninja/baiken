@@ -15,12 +15,12 @@ pub async fn request(
         .create(true)
         .append(true)
         .open("request.txt")
-        .expect(&("\nFailed to open 'request.txt' file."));
+        .expect("\nFailed to open 'request.txt' file.");
     
     let new_text = text.to_owned() + "\n\n";
 
     write!(file, "{}", new_text)
-        .expect(&("\nFailed to write to 'request.txt'"));
+        .expect("\nFailed to write to 'request.txt'");
     
     println!("Done writting to 'request.txt'");
     ctx.say("Submitted successfully!").await?;

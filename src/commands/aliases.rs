@@ -18,41 +18,41 @@ pub async fn aliases(
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
         ctx.say(&error_msg).await?;
-        print!("\n");
+        println!();
         panic!("{}", error_msg);
     }
 
     // Checking if data folder exists
     if let Some(error_msg) = check::data_folder_exists(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
     
     // Checking if character folders exist
     if let Some(error_msg) = check::character_folders_exist(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
 
     // Checking if character jsons exist
     if let Some(error_msg) = check::character_jsons_exist(false) {
-        ctx.say(&error_msg.replace("'", "`")).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("\n", " "));
+        ctx.say(&error_msg.replace('\'', "`")).await?;
+        println!();
+        panic!("{}", error_msg.replace('\n', " "));
     }
  
     for char in CHARS {
 
         // Checking if aliases for this characters moves exist
         let aliases_path = "data/".to_owned() + char + "/aliases.json";
-        if Path::new(&aliases_path).exists() == false {
+        if !Path::new(&aliases_path).exists() {
             // Error message cause a specific file is missing
             let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";
             ctx.say(&error_msg).await?;
-            print!("\n");
-            panic!("{}", error_msg.replace("`", "'"));            
+            println!();
+            panic!("{}", error_msg.replace('`', "'"));            
         }
     }
 
@@ -64,7 +64,7 @@ pub async fn aliases(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
 
     // Iterating through the nicknames.json character entries
-    if character_found == false {
+    if !character_found {
     
         'outer: for x_nicknames in &vec_nicknames {
         
@@ -83,15 +83,15 @@ pub async fn aliases(
         }
     }
 
-    if character_found == false {
+    if !character_found {
         
         // Iterating through the nicknames.json character entries
         for x_nicknames in &vec_nicknames {
 
             // If user input is part of a characters full name or the full name itself
             // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace("-", "").contains(&character_arg.to_lowercase()) == true ||
-            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) == true {
+            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character_arg.to_lowercase()) ||
+            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) {
                 
                 character_found = true;
                 character_arg_altered = x_nicknames.character.to_owned();
@@ -102,11 +102,11 @@ pub async fn aliases(
 
     // If user input isnt the full name, part of a full name or a nickname
     // Error out cause requested character was not found in the json
-    if character_found == false {
+    if !character_found {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         ctx.say(error_msg).await?;
-        print!("\n");
-        panic!("{}", error_msg.replace("`", "'"));
+        println!();
+        panic!("{}", error_msg.replace('`', "'"));
     }    
 
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
@@ -121,7 +121,7 @@ pub async fn aliases(
     let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
     // Formatting string for in discord print
-    let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace("_", " ") + " Move Aliases**__\n```diff";
+    let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace('_', " ") + " Move Aliases**__\n```diff";
     
     // Spliting the message that will be sent by the bot
     // Into 3 separate messages cause of the character limit
@@ -140,7 +140,7 @@ pub async fn aliases(
         }
         moves_as_msg = moves_as_msg.to_owned() + ".\n";
     }
-    moves_as_msg = moves_as_msg + &"\n```".to_string();
+    moves_as_msg += "\n```";
     ctx.say(&moves_as_msg).await?;
 
     // 2nd message builder
@@ -159,7 +159,7 @@ pub async fn aliases(
         }
         moves_as_msg = moves_as_msg.to_owned() + ".\n";
     }
-    moves_as_msg = moves_as_msg + &"\n```".to_string();
+    moves_as_msg += "\n```";
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
 
     // 3rd message builder
@@ -178,7 +178,7 @@ pub async fn aliases(
         }
         moves_as_msg = moves_as_msg.to_owned() + ".\n";
     }
-    moves_as_msg = moves_as_msg + &"\n```".to_string();
+    moves_as_msg += "\n```";
     
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
 
