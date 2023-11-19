@@ -21,11 +21,11 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
     if specific_char == "all"{
 
-        for x in 0..chars_ids.len() {
+        for (x, char_id) in chars_ids.iter().enumerate() {
     
-            println!("Creating {} 'images.json' file.", chars_ids[x]);
+            println!("Creating {} 'images.json' file.", char_id);
             
-            let images_json_path = "data/".to_owned() + chars_ids[x] +"/images.json";
+            let images_json_path = "data/".to_owned() + char_id +"/images.json";
     
             if Path::new(&images_json_path).exists() {
                 remove_file(&images_json_path).await.unwrap();
@@ -36,10 +36,10 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
                 .create(true)
                 .append(true)
                 .open(images_json_path)
-                .expect(&("\nFailed to open ".to_owned() + chars_ids[x] + " 'images.json' file."));
+                .expect(&("\nFailed to open ".to_owned() + char_id + " 'images.json' file."));
     
             // Creating images request link 
-            let character_images_link = SITE_LINK.to_owned() + &chars_ids[x].replace('_', " ") +  SITE_HALF;
+            let character_images_link = SITE_LINK.to_owned() + &char_id.replace('_', " ") +  SITE_HALF;
     
             // Dusloop site request
             let mut char_images_response_json = ureq::get(&character_images_link)
