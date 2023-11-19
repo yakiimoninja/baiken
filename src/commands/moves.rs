@@ -1,6 +1,6 @@
 use std::fs;
 use std::string::String;
-use crate::{Frames, check, Nicknames, Context, Error};
+use crate::{MoveInfo, check, Nicknames, Context, Error};
 
 /// Displays all the moves and inputs of a character.
 #[poise::command(prefix_command, slash_command, aliases("m"))]
@@ -94,7 +94,7 @@ pub async fn moves(
         .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
     
     //Deserializing from character json
-    let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
+    let move_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
     println!("Successfully read '{}.json' file.", &character_arg_altered);
@@ -104,20 +104,22 @@ pub async fn moves(
 
     // Message split due to discord character limit
     // 1st message builder which is also a reply
-    for z in 0..move_frames.len() / 2 {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
-            + "\n+ Input: " + &move_frames[z].input + "\n";
+    for z in 0..move_info.len() / 2 {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_info[z].name
+            + "\n+ Input: " + &move_info[z].input + "\n";
     }
     moves_as_msg += "```";
+
     ctx.say(&moves_as_msg).await?;
 
     // 2nd message builder
     moves_as_msg = "```diff".to_string();
-    for z in (move_frames.len() / 2)..move_frames.len() {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_frames[z].name
-            + "\n+ Input: " + &move_frames[z].input + "\n";
+    for z in (move_info.len() / 2)..move_info.len() {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_info[z].name
+            + "\n+ Input: " + &move_info[z].input + "\n";
     }
     moves_as_msg += "```";
+    
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
     
     Ok(())
