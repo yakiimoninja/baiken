@@ -119,7 +119,7 @@ pub async fn frames(
         .expect(&("\nFailed to read '".to_owned() + &character_arg + ".json" + "' file."));
     
     // Deserializing from character json
-    let move_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
+    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
     println!("Successfully read '{}.json' file.", character_arg_altered);
@@ -158,25 +158,25 @@ pub async fn frames(
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
     
     // Default vaule never used
-    let mut mframes = &move_info[0];
+    let mut mframes = &moves_info[0];
 
-    for mframes_index in 0..move_info.len() {
+    for mframes_index in 0..moves_info.len() {
         // Iterating through the moves of the json file to find the move requested
         // Specifically if user arg is exactly move input
-        if move_info[mframes_index].input.to_string().to_lowercase().replace('.', "") 
+        if moves_info[mframes_index].input.to_string().to_lowercase().replace('.', "") 
         == character_move_arg.to_string().to_lowercase().replace('.', "") {
-            mframes = &move_info[mframes_index];
+            mframes = &moves_info[mframes_index];
             move_found = true;
             break;
         }        
     }
 
     if !move_found {
-        for mframes_index in 0..move_info.len() {
+        for mframes_index in 0..moves_info.len() {
             // Iterating through the moves of the json file to find the move requested
             // Specifically if user arg is contained in move name
-            if move_info[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
-                mframes = &move_info[mframes_index];
+            if moves_info[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
+                mframes = &moves_info[mframes_index];
                 move_found = true;
                 break;
             } 

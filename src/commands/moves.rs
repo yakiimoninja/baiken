@@ -94,7 +94,7 @@ pub async fn moves(
         .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
     
     //Deserializing from character json
-    let move_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
+    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
     println!("Successfully read '{}.json' file.", &character_arg_altered);
@@ -104,7 +104,7 @@ pub async fn moves(
 
     // Message split due to discord character limit
     // 1st message builder which is also a reply
-    for moves in move_info.iter().take(move_info.len() / 2) {
+    for moves in moves_info.iter().take(moves_info.len() / 2) {
         moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name
             + "\n+ Input: " + &moves.input + "\n";
     }
@@ -114,7 +114,7 @@ pub async fn moves(
 
     // 2nd message builder
     moves_as_msg = "```diff".to_string();
-    for moves in move_info.iter().skip(move_info.len() / 2) {
+    for moves in moves_info.iter().skip(moves_info.len() / 2) {
         moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name
             + "\n+ Input: " + &moves.input + "\n";
     }
