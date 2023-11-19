@@ -104,9 +104,9 @@ pub async fn moves(
 
     // Message split due to discord character limit
     // 1st message builder which is also a reply
-    for z in 0..move_info.len() / 2 {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_info[z].name
-            + "\n+ Input: " + &move_info[z].input + "\n";
+    for moves in move_info.iter().take(move_info.len() / 2) {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name
+            + "\n+ Input: " + &moves.input + "\n";
     }
     moves_as_msg += "```";
 
@@ -114,9 +114,9 @@ pub async fn moves(
 
     // 2nd message builder
     moves_as_msg = "```diff".to_string();
-    for z in (move_info.len() / 2)..move_info.len() {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &move_info[z].name
-            + "\n+ Input: " + &move_info[z].input + "\n";
+    for moves in move_info.iter().skip(move_info.len() / 2) {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name
+            + "\n+ Input: " + &moves.input + "\n";
     }
     moves_as_msg += "```";
     
