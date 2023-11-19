@@ -19,7 +19,7 @@ pub struct CharInfo {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct Frames {
+pub struct MoveInfo {
     input: String,
     name: String,
     damage: String,
