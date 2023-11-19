@@ -2,7 +2,7 @@ use std::fs;
 use std::path::Path;
 use std::string::String;
 use crate::{Context, Error, IMAGE_DEFAULT};
-use crate::{Frames, MoveAliases, ImageLinks, Nicknames, check};
+use crate::{MoveInfo, MoveAliases, ImageLinks, Nicknames, check};
 
 const GREEN_CIRCLE: &str = "🟢";
 const RED_SQUARE: &str = "🟥";
@@ -116,7 +116,7 @@ pub async fn fmeter(
         .expect(&("\nFailed to read '".to_owned() + &character_arg + ".json" + "' file."));
     
     // Deserializing from character json
-    let move_frames = serde_json::from_str::<Vec<Frames>>(&char_file_data).unwrap();            
+    let move_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
     println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
     println!("Successfully read '{}.json' file.", character_arg_altered);
@@ -155,25 +155,25 @@ pub async fn fmeter(
     let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
     // Default vaule never used
-    let mut mframes = &move_frames[0];    
+    let mut mframes = &move_info[0];    
 
-    for mframes_index in 0..move_frames.len() {
+    for mframes_index in 0..move_info.len() {
         // Iterating through the moves of the json file to find the move requested
         // Specifically if user arg is exactly move input
-        if move_frames[mframes_index].input.to_string().to_lowercase().replace('.', "") 
+        if move_info[mframes_index].input.to_string().to_lowercase().replace('.', "") 
         == character_move_arg.to_string().to_lowercase().replace('.', "") {
-            mframes = &move_frames[mframes_index];
+            mframes = &move_info[mframes_index];
             move_found = true;
             break;
         }        
     }
 
     if !move_found {
-        for mframes_index in 0..move_frames.len() {
+        for mframes_index in 0..move_info.len() {
             // Iterating through the moves of the json file to find the move requested
             // Specifically if user arg is contained in move name
-            if move_frames[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
-                mframes = &move_frames[mframes_index];
+            if move_info[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
+                mframes = &move_info[mframes_index];
                 move_found = true;
                 break;
             }
