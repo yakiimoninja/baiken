@@ -381,12 +381,7 @@ pub async fn fmeter(
                     frame_meter_msg = frame_meter_msg + &recovery_vec[x];
 
                     // Execute same logic for ( and ~
-                    if recovery_vec[x] == "~" || recovery_vec[x] == "(" {
-                        recovery_tilde = true;
-                    }
-                    else {
-                        recovery_tilde = false;
-                    }
+                    recovery_tilde = recovery_vec[x] == "~" || recovery_vec[x] == "(";
                 }
             }
         }
