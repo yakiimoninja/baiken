@@ -160,23 +160,23 @@ pub async fn frames(
     // Default vaule never used
     let mut mframes = &moves_info[0];
 
-    for mframes_index in 0..moves_info.len() {
+    for moves in &moves_info {
         // Iterating through the moves of the json file to find the move requested
         // Specifically if user arg is exactly move input
-        if moves_info[mframes_index].input.to_string().to_lowercase().replace('.', "") 
+        if moves.input.to_string().to_lowercase().replace('.', "") 
         == character_move_arg.to_string().to_lowercase().replace('.', "") {
-            mframes = &moves_info[mframes_index];
+            mframes = &moves;
             move_found = true;
             break;
         }        
     }
 
     if !move_found {
-        for mframes_index in 0..moves_info.len() {
+        for moves in &moves_info {
             // Iterating through the moves of the json file to find the move requested
             // Specifically if user arg is contained in move name
-            if moves_info[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
-                mframes = &moves_info[mframes_index];
+            if moves.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
+                mframes = &moves;
                 move_found = true;
                 break;
             } 

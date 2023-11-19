@@ -157,23 +157,23 @@ pub async fn fmeter(
     // Default vaule never used
     let mut mframes = &moves_info[0];    
 
-    for mframes_index in 0..moves_info.len() {
+    for moves in &moves_info {
         // Iterating through the moves of the json file to find the move requested
         // Specifically if user arg is exactly move input
-        if moves_info[mframes_index].input.to_string().to_lowercase().replace('.', "") 
+        if moves.input.to_string().to_lowercase().replace('.', "") 
         == character_move_arg.to_string().to_lowercase().replace('.', "") {
-            mframes = &moves_info[mframes_index];
+            mframes = &moves;
             move_found = true;
             break;
         }        
     }
 
     if !move_found {
-        for mframes_index in 0..moves_info.len() {
+        for moves in &moves_info {
             // Iterating through the moves of the json file to find the move requested
             // Specifically if user arg is contained in move name
-            if moves_info[mframes_index].name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
-                mframes = &moves_info[mframes_index];
+            if moves.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
+                mframes = &moves;
                 move_found = true;
                 break;
             }
@@ -304,10 +304,10 @@ pub async fn fmeter(
             let mut hit_recovery = false;
             
             // Making the message
-            for x in 0..active_vec.len() {
+            for active_vec_string in &active_vec {
 
                 // If vec string entry is a digit
-                if let Ok(num) = active_vec[x].parse::<i8>() {
+                if let Ok(num) = active_vec_string.parse::<i8>() {
 
                     // Iterate up to its numerical value
                     for _ in 0..num {
@@ -324,12 +324,12 @@ pub async fn fmeter(
                 }
                 // If vec string entry isnt a digit
                 else {
-                    frame_meter_msg = frame_meter_msg + &active_vec[x];
+                    frame_meter_msg = frame_meter_msg + &active_vec_string;
 
-                    if active_vec[x] == "(" {
+                    if active_vec_string == "(" {
                         hit_recovery = true;
                     }
-                    else if active_vec[x] == ")" {
+                    else if active_vec_string == ")" {
                         hit_recovery = false;
                     }
                 }

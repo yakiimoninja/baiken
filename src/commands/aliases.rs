@@ -126,16 +126,16 @@ pub async fn aliases(
     // Spliting the message that will be sent by the bot
     // Into 3 separate messages cause of the character limit
     // 1st message builder which is also a reply
-    for m in 0..aliases_data.len() / 3 {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-            + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+    for moves in aliases_data.iter().take(aliases_data.len() / 3) {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.aliases[0] 
+            + " -> Input: " + &moves.input + "\n+ Aliases: ";
 
-        for a in 0..aliases_data[m].aliases.len() {
-            if a != aliases_data[m].aliases.len() - 1 {
-                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
+        for a in 0..moves.aliases.len() {
+            if a != moves.aliases.len() - 1 {
+                moves_as_msg = moves_as_msg.to_owned() + &moves.aliases[a] + ", ";
             }
             else {
-                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+                moves_as_msg = moves_as_msg.to_owned() + &moves.aliases[a];
             }
         }
         moves_as_msg = moves_as_msg.to_owned() + ".\n";
@@ -145,16 +145,16 @@ pub async fn aliases(
 
     // 2nd message builder
     moves_as_msg = "```diff".to_string();
-    for m in aliases_data.len() / 3..(aliases_data.len() /3 ) * 2{
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-            + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+    for moves in aliases_data.iter().take((aliases_data.len() / 3 ) * 2).skip(aliases_data.len() / 3) {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.aliases[0] 
+            + " -> Input: " + &moves.input + "\n+ Aliases: ";
 
-        for a in 0..aliases_data[m].aliases.len() {
-            if a != aliases_data[m].aliases.len() - 1 {
-                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
+        for a in 0..moves.aliases.len() {
+            if a != moves.aliases.len() - 1 {
+                moves_as_msg = moves_as_msg.to_owned() + &moves.aliases[a] + ", ";
             }
             else {
-                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+                moves_as_msg = moves_as_msg.to_owned() + &moves.aliases[a];
             }
         }
         moves_as_msg = moves_as_msg.to_owned() + ".\n";
@@ -164,16 +164,16 @@ pub async fn aliases(
 
     // 3rd message builder
     moves_as_msg = "```diff".to_string();
-    for m in (aliases_data.len() / 3) * 2..aliases_data.len() {
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &aliases_data[m].aliases[0] 
-            + " -> Input: " + &aliases_data[m].input + "\n+ Aliases: ";
+    for moves in aliases_data.iter().skip((aliases_data.len() / 3 ) * 2) {
+        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.aliases[0] 
+            + " -> Input: " + &moves.input + "\n+ Aliases: ";
 
-        for a in 0..aliases_data[m].aliases.len() {
-            if a != aliases_data[m].aliases.len() - 1 {
-                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a] + ", ";
+        for a in 0..moves.aliases.len() {
+            if a != moves.aliases.len() - 1 {
+                moves_as_msg = moves_as_msg.to_owned() + &moves.aliases[a] + ", ";
             }
             else {
-                moves_as_msg = moves_as_msg.to_owned() + &aliases_data[m].aliases[a];
+                moves_as_msg = moves_as_msg.to_owned() + &moves.aliases[a];
             }
         }
         moves_as_msg = moves_as_msg.to_owned() + ".\n";
