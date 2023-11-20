@@ -20,8 +20,8 @@ async fn autocomplete_character<'a>(
 pub async fn hitboxes(
     ctx: Context<'_>,
     #[description = "Character name or nickname."]
-    #[autocomplete = "autocomplete_character"] character_arg: String,
-    #[description = "Move name, input or alias."] mut character_move_arg: String,
+    #[autocomplete = "autocomplete_character"] character: String,
+    #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
@@ -31,14 +31,14 @@ pub async fn hitboxes(
     let mut move_found = false;
 
     // Checking if character user argument is correct
-    if let Some(error_msg) = check::correct_character_arg(&character_arg){
+    if let Some(error_msg) = check::correct_character_arg(&character){
         ctx.say(&error_msg).await?;
         println!("\nError: {}", error_msg);
         return Ok(());
     }
 
     // Checking if move user argument is correct
-    if let Some(error_msg) = check::correct_character_move_arg(&character_move_arg){
+    if let Some(error_msg) = check::correct_character_move_arg(&character_move){
         ctx.say(&error_msg).await?;
         println!("\nError: {}", error_msg);
         return Ok(());
@@ -82,7 +82,7 @@ pub async fn hitboxes(
     
                 // If user input equals a character nickname then pass the full character name
                 // To the new variable 'character_arg_altered'
-                if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
+                if y_nicknames.to_lowercase() == character.to_lowercase().trim() {
     
                     character_found = true;
                     character_arg_altered = x_nicknames.character.to_owned();
@@ -99,8 +99,8 @@ pub async fn hitboxes(
 
             // If user input is part of a characters full name or the full name itself
             // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character_arg.to_lowercase()) ||
-            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) {
+            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character.to_lowercase()) ||
+            x_nicknames.character.to_lowercase().contains(&character.to_lowercase()) {
                 
                 character_found = true;
                 character_arg_altered = x_nicknames.character.to_owned();
@@ -112,7 +112,7 @@ pub async fn hitboxes(
     // If user input isnt the full name, part of a full name or a nickname
     // Error out cause requested character was not found in the json
     if !character_found {
-        let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
+        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
         ctx.say(error_msg).await?;
         println!("\nError: {}", error_msg.replace('`', "'"));
         return Ok(());
@@ -126,7 +126,7 @@ pub async fn hitboxes(
     //Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
-    println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character_arg, character_move_arg);
+    println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character, character_move);
     println!("Successfully read '{}.json' file.", &character_arg_altered);
     
     character_found = true;
@@ -148,8 +148,8 @@ pub async fn hitboxes(
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
                 if x_aliases.to_lowercase().trim().replace('.', "") 
-                == character_move_arg.to_lowercase().trim().replace('.', "") {
-                    character_move_arg = alias_data.input.to_string();
+                == character_move.to_lowercase().trim().replace('.', "") {
+                    character_move = alias_data.input.to_string();
                     break 'outer;
                 }
             }
@@ -170,7 +170,7 @@ pub async fn hitboxes(
         // Iterating through the moves of the json file to find the move requested
         // Specifically if user arg is exactly move input
         if moves.input.to_string().to_lowercase().replace('.', "") 
-        == character_move_arg.to_string().to_lowercase().replace('.', "") {
+        == character_move.to_string().to_lowercase().replace('.', "") {
             mframes = &moves;
             move_found = true;
             break;
@@ -181,7 +181,7 @@ pub async fn hitboxes(
         for moves in &moves_info {
             // Iterating through the moves of the json file to find the move requested
             // Specifically if user arg is contained in move name
-            if moves.name.to_string().to_lowercase().contains(&character_move_arg.to_string().to_lowercase()) {
+            if moves.name.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) {
                 mframes = &moves;
                 move_found = true;
                 break;
@@ -221,10 +221,10 @@ pub async fn hitboxes(
     }
     // Error message cause given move wasnt found in the json
     else {
-        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/request` command.");
+        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/request` command.");
         ctx.say(error_msg).await?;
         // Console error print
-        println!("{}", "\nError: Move '".to_owned() + &character_move_arg + "' was not found!");
+        println!("{}", "\nError: Move '".to_owned() + &character_move + "' was not found!");
     }
 
     Ok(())

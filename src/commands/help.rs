@@ -27,12 +27,12 @@ async fn autocomplete_help<'a>(
 #[poise::command(prefix_command, slash_command, aliases("?"))]
 pub async fn help(ctx: Context<'_>,
     #[description = "Pick a command to display help for."] 
-    #[autocomplete = "autocomplete_help"] cmd_arg: String
+    #[autocomplete = "autocomplete_help"] option: String
     ) -> Result<(), Error> {
 
     let help_message;
 
-    match cmd_arg.trim() {
+    match option.trim() {
                 "aliases" => help_message = help_aliases().await,
                 "fmeter" => help_message = help_fmeter().await,
                 "frames" => help_message = help_frames().await,
@@ -47,15 +47,15 @@ pub async fn help(ctx: Context<'_>,
                 "specifics" => help_message = help_specifics().await,
                 "update" => help_message = help_update().await,
                 _ => {
-                    help_message = "Help for `".to_owned().to_string() + &cmd_arg + "` not found!";
-                    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg);
+                    help_message = "Help for `".to_owned().to_string() + &option + "` not found!";
+                    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &option);
                     ctx.say(&help_message).await?;
                     println!("\nError: {}", &help_message);
                     return Ok(());
                 }
     }
 
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg);
+    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &option);
     ctx.say(help_message).await?;
     Ok(())
 }
@@ -127,7 +127,7 @@ async fn help_help() -> String {
 __**Command**__: `/help`. 
 __**Example**__: `/help` or `/help fmeter`.
 
-__**cmd_arg**__: Any command name, `notes` or specific. Can be empty.
+__**option**__: Any command name, `notes` or specific. Can be empty.
 
 Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed."#;
     

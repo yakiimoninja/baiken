@@ -18,7 +18,7 @@ async fn autocomplete_character<'a>(
 pub async fn moves(
     ctx: Context<'_>,
     #[description = "Character name or nickname."]
-    #[autocomplete = "autocomplete_character"] character_arg: String,
+    #[autocomplete = "autocomplete_character"] character: String,
 ) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
@@ -27,7 +27,7 @@ pub async fn moves(
     let mut character_found = false;
 
     // Checking if character user argument is correct
-    if let Some(error_msg) = check::correct_character_arg(&character_arg){
+    if let Some(error_msg) = check::correct_character_arg(&character){
         ctx.say(&error_msg).await?;
         println!("\nError: {}", error_msg);
         return Ok(());
@@ -64,7 +64,7 @@ pub async fn moves(
     
                 // If user input equals a character nickname then pass the full character name
                 // To the new variable 'character_arg_altered'
-                if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
+                if y_nicknames.to_lowercase() == character.to_lowercase().trim() {
     
                     character_found = true;
                     character_arg_altered = x_nicknames.character.to_owned();
@@ -81,8 +81,8 @@ pub async fn moves(
 
             // If user input is part of a characters full name or the full name itself
             // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character_arg.to_lowercase()) ||
-            x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) {
+            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character.to_lowercase()) ||
+            x_nicknames.character.to_lowercase().contains(&character.to_lowercase()) {
                 
                 character_found = true;
                 character_arg_altered = x_nicknames.character.to_owned();
@@ -94,7 +94,7 @@ pub async fn moves(
     // If user input isnt the full name, part of a full name or a nickname
     // Error out cause requested character was not found in the json
     if !character_found {
-        let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
+        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
         ctx.say(error_msg).await?;
         println!("\nError: {}", error_msg.replace('`', "'"));
         return Ok(());
@@ -108,7 +108,7 @@ pub async fn moves(
     //Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
+    println!("\nCommand: '{} {}'", ctx.command().qualified_name, character);
     println!("Successfully read '{}.json' file.", &character_arg_altered);
     
     // Formatting string for in discord print
