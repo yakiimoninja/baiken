@@ -1,17 +1,27 @@
-// use std::fs::File;
-// use std::io::Write;
 use std::fs;
 use std::path::Path;
 use std::string::String;
 use crate::{Context, Error};
-use crate::{MoveInfo, MoveAliases, ImageLinks, Nicknames, IMAGE_DEFAULT, check};
+use crate::serenity::futures::{Stream, StreamExt, self};
+use crate::{MoveInfo, MoveAliases, ImageLinks, Nicknames, IMAGE_DEFAULT, CHARS,check};
+
+// Autocompletes the character name
+async fn autocomplete_character<'a>(
+    _ctx: Context<'_>,
+    partial: &'a str,
+) -> impl Stream<Item = String> + 'a {
+    futures::stream::iter(&CHARS)
+        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+        .map(|name| name.to_string())
+}
 
 /// Displays the frame data of a move along with an image.
 #[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command, aliases("f"))]
 pub async fn frames(
     ctx: Context<'_>,
-    #[description = "Character name or nickname."] character_arg: String,
+    #[description = "Character name or nickname."]
+    #[autocomplete = "autocomplete_character"] character_arg: String,
     #[description = "Move name, input or alias."] mut character_move_arg: String,
 ) -> Result<(), Error> {
 

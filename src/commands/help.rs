@@ -1,19 +1,42 @@
 use crate::{Context, Error};
+use crate::serenity::futures::{Stream, StreamExt, self};
+
+async fn autocomplete_help<'a>(
+    _ctx: Context<'_>,
+    partial: &'a str,
+) -> impl Stream<Item = String> + 'a {
+    futures::stream::iter(&[
+        "aliases",
+        "fmeter",
+        "frames",
+        "general",
+        "help",
+        "hitboxes",
+        "moves",
+        "nicknames",
+        "notes",
+        "register",
+        "request",
+        "specifics",
+        "update"])
+        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+        .map(|name| name.to_string())
+}
 
 /// Prints a help message.
 #[poise::command(prefix_command, slash_command, aliases("?"))]
 pub async fn help(ctx: Context<'_>,
-    #[description = "Pick a command to display help for or leave empty for generic message."] mut cmd_arg: Option<String>
+    #[description = "Pick a command to display help for."] 
+    #[autocomplete = "autocomplete_help"] cmd_arg: String
     ) -> Result<(), Error> {
 
     let help_message;
 
-    match &cmd_arg {
-        Some(cmd) => {
-            match cmd.trim() {
+    match cmd_arg.trim() {
                 "aliases" => help_message = help_aliases().await,
                 "fmeter" => help_message = help_fmeter().await,
                 "frames" => help_message = help_frames().await,
+                "general" => help_message = help_default().await,
                 "help" => help_message = help_help().await,
                 "hitboxes" => help_message = help_hitboxes().await,
                 "moves" => help_message = help_moves().await,
@@ -24,26 +47,30 @@ pub async fn help(ctx: Context<'_>,
                 "specifics" => help_message = help_specifics().await,
                 "update" => help_message = help_update().await,
                 _ => {
-                    help_message = "Command `".to_owned().to_string() + &cmd + "` not found!";
-                    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg.expect("null"));
+                    help_message = "Help for `".to_owned().to_string() + &cmd_arg + "` not found!";
+                    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg);
                     ctx.say(&help_message).await?;
-                    panic!("{}", &help_message);
+                    println!("\nError: {}", &help_message);
+                    return Ok(());
                 }
-            }
-        },
-        None => {
-            help_message = help_default().await;
-            cmd_arg = Some("empty".to_string());
-        }
     }
 
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg.unwrap());
+    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg);
     ctx.say(help_message).await?;
     Ok(())
 }
 
 async fn help_default() -> String {
     let help_msg = r#"
+__**List of commands**__
+```frames``````
+hitboxes``````
+fmeter``````
+aliases``````
+moves``````
+nicknames``````
+request```
+
 __**Patch notes:**__
 __<https://github.com/yakiimoninja/baiken/releases>__
 
@@ -52,9 +79,6 @@ __<https://github.com/yakiimoninja/baiken#commands>__
 
 __**Support the project:**__
 __<https://github.com/sponsors/yakiimoninja>__
-
-__**Artwork:**__
-__<https://twitter.com/gogalking/status/1307199393607553024>__
 "#;
 
     help_msg.to_string()

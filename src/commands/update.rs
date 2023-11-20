@@ -1,15 +1,27 @@
 use std::fs;
 use crate::{Context, Error, CHARS, check, Nicknames};
+use crate::serenity::futures::{Stream, StreamExt, self};
 mod framedata;
 mod images; 
 mod framedata_json;
-mod images_json; 
+mod images_json;
+
+// Autocompletes the character name
+async fn autocomplete_character<'a>(
+    _ctx: Context<'_>,
+    partial: &'a str,
+) -> impl Stream<Item = String> + 'a {
+    futures::stream::iter(&CHARS)
+        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+        .map(|name| name.to_string())
+}
 
 /// Updates the frame data according to dustloop. Owners only!
 #[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
 pub async fn update (
     ctx: Context<'_>,
-    #[description = r#"Character name, nickname or "all"."#] character_arg: String,
+    #[description = r#"Character name, nickname or "all"."#]
+    #[autocomplete = "autocomplete_character"] character_arg: String,
     #[description = r#"Select "frames", "images" or "all"."#] frames_or_images: String,
 ) -> Result<(), Error> {
 

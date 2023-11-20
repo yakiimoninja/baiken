@@ -1,12 +1,24 @@
 use std::fs;
 use std::string::String;
-use crate::{MoveInfo, check, Nicknames, Context, Error};
+use crate::serenity::futures::{Stream, StreamExt, self};
+use crate::{MoveInfo, check, Nicknames, Context, Error, CHARS};
+
+// Autocompletes the character name
+async fn autocomplete_character<'a>(
+    _ctx: Context<'_>,
+    partial: &'a str,
+) -> impl Stream<Item = String> + 'a {
+    futures::stream::iter(&CHARS)
+        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+        .map(|name| name.to_string())
+}
 
 /// Displays all the moves and inputs of a character.
 #[poise::command(prefix_command, slash_command, aliases("m"))]
 pub async fn moves(
     ctx: Context<'_>,
-    #[description = "Character name or nickname."] character_arg: String,
+    #[description = "Character name or nickname."]
+    #[autocomplete = "autocomplete_character"] character_arg: String,
 ) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
