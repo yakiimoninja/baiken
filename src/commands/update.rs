@@ -9,8 +9,8 @@ mod images_json;
 #[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
 pub async fn update (
     ctx: Context<'_>,
+    #[description = r#"Character name, nickname or "all"."#] character_arg: String,
     #[description = r#"Select "frames", "images" or "all"."#] frames_or_images: String,
-    #[description = r#"Character name or nickname or "all"."#] character_arg: String,
 ) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
@@ -23,8 +23,8 @@ pub async fn update (
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
         ctx.say(&error_msg).await?;
-        println!();
-        panic!("{}", error_msg);
+        println!("\nError: {}", error_msg);
+        return Ok(());
     }
     
     // Checking if images jsons exist
@@ -92,8 +92,8 @@ pub async fn update (
     
                 let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
                 ctx.say(error_msg).await?;
-                println!();
-                panic!("{}", error_msg.replace('`', "'"));
+                println!("\nError: {}", error_msg.replace('`', "'"));
+                return Ok(());
             }
             else {
                 // Update frames for specific character
@@ -120,8 +120,8 @@ pub async fn update (
     
                 let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
                 ctx.say(error_msg).await?;
-                println!();
-                panic!("{}", error_msg.replace('`', "'"));
+                println!("\nError: {}", error_msg.replace('`', "'"));
+                return Ok(());
             }
             else {
                 // Update images for specific character
@@ -148,8 +148,8 @@ pub async fn update (
     
                 let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
                 ctx.say(error_msg).await?;
-                println!();
-                panic!("{}", error_msg.replace('`', "'"));
+                println!("\nError: {}", error_msg.replace('`', "'"));
+                return Ok(());
             }
             else {
                 // Update frames and images for specific character
@@ -164,8 +164,8 @@ pub async fn update (
     else {
         let error_msg= &("Selection `".to_owned() + &frames_or_images + "` is invalid!");
         ctx.say(error_msg).await?;
-        println!();
-        panic!("{}", error_msg.replace('`', "'"));
+        println!("\n{}", "Error: Selection '".to_owned() + &frames_or_images + "' is invalid!");
+        return Ok(());
     }
 
     ctx.channel_id().say(ctx, "Update succesful!").await?;
