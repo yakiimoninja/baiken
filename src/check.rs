@@ -11,7 +11,7 @@ pub fn data_folder_exists(init_check: bool) -> Option<String> {
     }
     else {
         // Error message cause data folder does not exist
-        let error_msg = "The 'data' folder does not exist.\nDownload and import the 'data' folder from:\nhttps://github.com/yakiimoninja/baiken-bot.".to_string();
+        let error_msg = "Error: The 'data' folder does not exist.\nDownload and import the 'data' folder from:\nhttps://github.com/yakiimoninja/baiken-bot.".to_string();
 
         if init_check {
             // Printing the error message in the console
@@ -38,7 +38,7 @@ pub fn nicknames_json_exists(init_check: bool) -> Option<String> {
             None
         },
         Err(_) => {
-            let error_msg = "Failed to deserialize 'nicknames.json' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot..".to_string();
+            let error_msg = "Error: Failed to deserialize 'nicknames.json' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot..".to_string();
             
             if init_check {
                 // Printing the error message in the console
@@ -64,7 +64,7 @@ pub fn character_folders_exist(init_check: bool) -> Option<String> {
         if !Path::new(&character_path).exists() {
             
             // Error if character folder doesnt exist
-            let error_msg = "Missing '".to_owned() + &character_path +"' folder.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
+            let error_msg = "Error: Missing '".to_owned() + &character_path +"' folder.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
             
             if init_check {
                 // Printing the error message in the console
@@ -91,7 +91,7 @@ pub fn character_jsons_exist(init_check: bool) -> Option<String> {
         if !Path::new(&character_json).exists() {
 
             // Error if character json doesnt exist
-            let error_msg ="Missing '".to_owned() + &character_json + "' file.\nPlease execute the '/update' command.";
+            let error_msg ="Error: Missing '".to_owned() + &character_json + "' file.\nPlease execute the '/update' command.";
 
             if init_check {
                 // Printing the error message in the console
@@ -119,7 +119,7 @@ pub fn character_images_exist(init_check: bool) -> Option<String> {
         if !Path::new(&images_json).exists() {
 
             // Error if images json doesnt exist
-            let error_msg ="Missing '".to_owned() + &images_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
+            let error_msg ="Error: Missing '".to_owned() + &images_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken-bot.";
             
             if init_check {
                 // Printing the error message in the console
