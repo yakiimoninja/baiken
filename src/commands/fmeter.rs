@@ -25,15 +25,15 @@ pub async fn fmeter(
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
         ctx.say(&error_msg).await?;
-        println!();
-        panic!("{}", error_msg);
+        println!("\nError: {}", error_msg);
+        return Ok(());
     }
 
     // Checking if move user argument is correct
     if let Some(error_msg) = check::correct_character_move_arg(&character_move_arg){
         ctx.say(&error_msg).await?;
-        println!();
-        panic!("{}", error_msg);
+        println!("\nError: {}", error_msg);
+        return Ok(());
     }
 
     // Checking if data folder exists
@@ -106,8 +106,8 @@ pub async fn fmeter(
     if !character_found {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         ctx.say(error_msg).await?;
-        println!();
-        panic!("{}", error_msg.replace('`', "'"));
+        println!("\nError: {}", error_msg.replace('`', "'"));
+        return Ok(())
     }
 
     // Reading the character json
@@ -398,9 +398,7 @@ pub async fn fmeter(
         let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!" + "\nView moves of a character by executing `/moves`.\nView aliases of a character by executing `/aliases`.");
         ctx.say(error_msg).await?;
         // Console error print 
-        let error_msg= &("Move `".to_owned() + &character_move_arg + "` was not found!");
-        println!();
-        panic!("{}", error_msg.replace('`', "'"));
+        println!("{}", "\nError: Move '".to_owned() + &character_move_arg + "' was not found!");
     }
 
     Ok(())

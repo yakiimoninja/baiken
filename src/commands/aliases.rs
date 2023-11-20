@@ -18,8 +18,8 @@ pub async fn aliases(
     // Checking if character user argument is correct
     if let Some(error_msg) = check::correct_character_arg(&character_arg){
         ctx.say(&error_msg).await?;
-        println!();
-        panic!("{}", error_msg);
+        println!("\nError: {}", error_msg);
+        return Ok(());
     }
 
     // Checking if data folder exists
@@ -75,8 +75,8 @@ pub async fn aliases(
                 // To the new variable 'character_arg_altered'
                 if y_nicknames.to_lowercase() == character_arg.to_lowercase().trim() {
     
-                    character_found = true;
                     character_arg_altered = x_nicknames.character.to_owned();
+                    character_found = true;
                     break 'outer;
                 }   
             }
@@ -93,8 +93,8 @@ pub async fn aliases(
             if x_nicknames.character.to_lowercase().replace('-', "").contains(&character_arg.to_lowercase()) ||
             x_nicknames.character.to_lowercase().contains(&character_arg.to_lowercase()) {
                 
-                character_found = true;
                 character_arg_altered = x_nicknames.character.to_owned();
+                character_found = true;
                 break;
             }
         }
@@ -105,8 +105,8 @@ pub async fn aliases(
     if !character_found {
         let error_msg= &("Character `".to_owned() + &character_arg + "` was not found!");
         ctx.say(error_msg).await?;
-        println!();
-        panic!("{}", error_msg.replace('`', "'"));
+        println!("\nError: {}", error_msg.replace('`', "'"));
+        return Ok(())
     }    
 
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character_arg);
