@@ -115,10 +115,9 @@
 ### Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
 <details open>
     <summary>Show example.</summary>
-        Empty:
-        <p><img src="https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png"/></p>
-        With arguments:
-        <p><img src="https://user-images.githubusercontent.com/80072600/213776547-22e78fc1-d5da-4525-9830-35753cd6a88b.png"/></p>
+    <p>
+        <img src="data/images/help.png"/>
+    </p>
 </details>
 
 # Usage notes.
