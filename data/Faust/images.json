@@ -231,7 +231,7 @@
 },
 	{
   "input": "236P Mini Faust",
-  "move_img": "https://www.dustloop.com/wiki/images/1/17/GGST_Faust_Small_Faust.png",
+  "move_img": "https://www.dustloop.com/wiki/images/e/ec/GGST_Faust_Small_Faust_Walk.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/6/6c/GGST_Faust_Small_Faust_Walk_Hitbox.png",
     "https://www.dustloop.com/wiki/images/2/2f/GGST_Faust_Small_Faust_Attack_Hitbox.png"
@@ -349,7 +349,8 @@
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/0/0d/GGST_Faust_41236K_4_H_Hitbox_1.png",
     "https://www.dustloop.com/wiki/images/a/a6/GGST_Faust_41236K_4_H_Hitbox_2.png",
-    "https://www.dustloop.com/wiki/images/9/96/GGST_Faust_41236K_4_H_Hitbox_3.png"
+    "https://www.dustloop.com/wiki/images/9/96/GGST_Faust_41236K_4_H_Hitbox_3.png",
+    "https://www.dustloop.com/wiki/images/d/d4/"
   ]
 },
 	{
