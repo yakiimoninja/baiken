@@ -16,13 +16,24 @@ async fn autocomplete_character<'a>(
         .map(|name| name.to_string())
 }
 
+// Autocompletes the character name
+async fn autocomplete_option<'a>(
+    _ctx: Context<'_>,
+    partial: &'a str,
+) -> impl Stream<Item = String> + 'a {
+    futures::stream::iter(&(["all","frames","images"]))
+        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+        .map(|name| name.to_string())
+}
+
 /// Updates the frame data according to dustloop. Owners only!
 #[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
 pub async fn update (
     ctx: Context<'_>,
     #[description = r#"Character name, nickname or "all"."#]
     #[autocomplete = "autocomplete_character"] character: String,
-    #[description = r#"Select "frames", "images" or "all"."#] option: String,
+    #[description = r#"Select "frames", "images" or "all"."#]
+    #[autocomplete = "autocomplete_option"] option: String,
 ) -> Result<(), Error> {
 
     // This will store the full character name in case user input was an alias
