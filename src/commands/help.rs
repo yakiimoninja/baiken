@@ -7,6 +7,7 @@ async fn autocomplete_help<'a>(
 ) -> impl Stream<Item = String> + 'a {
     futures::stream::iter(&[
         "aliases",
+        "feedback",
         "fmeter",
         "frames",
         "general",
@@ -16,7 +17,6 @@ async fn autocomplete_help<'a>(
         "nicknames",
         "notes",
         "register",
-        "request",
         "specifics",
         "update"])
         .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
@@ -34,6 +34,7 @@ pub async fn help(ctx: Context<'_>,
 
     match option.trim() {
                 "aliases" => help_message = help_aliases().await,
+                "feedback" => help_message = help_feedback().await,
                 "fmeter" => help_message = help_fmeter().await,
                 "frames" => help_message = help_frames().await,
                 "general" => help_message = help_default().await,
@@ -43,7 +44,6 @@ pub async fn help(ctx: Context<'_>,
                 "nicknames" => help_message = help_nicknames().await,
                 "notes" => help_message = help_notes().await,
                 "register" => help_message = help_register().await,
-                "request" => help_message = help_request().await,
                 "specifics" => help_message = help_specifics().await,
                 "update" => help_message = help_update().await,
                 _ => {
@@ -208,13 +208,13 @@ Registers or removes all slash commands in the current server or every server th
     help_msg.to_string()
 }
 
-async fn help_request() -> String {
+async fn help_feedback() -> String {
     let help_msg = r#"
-__**Command**__: `/request`.
+__**Command**__: `/feedback`.
 
 __**text**__: Any text. Cannot be empty.
 
-Sends a request or feedback to the dev."#;
+Sends feedback or a request to the dev."#;
     
     help_msg.to_string()
 }
