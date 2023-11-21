@@ -1,7 +1,5 @@
 # Version 0.15.0 Patch Notes.
 
-###### TODO cleanup help command and readme.
-
 ### General
 - Added autocompletion of character names and options in commands.
 - Renamed the `/request` command to `/feedback`.
