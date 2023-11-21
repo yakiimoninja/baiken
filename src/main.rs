@@ -123,7 +123,7 @@ async fn main() {
             nicknames::nicknames(),
             moves::moves(),
             register::register(),
-            request::request(),
+            feedback::feedback(),
             update::update(),        
         ],
         prefix_options: poise::PrefixFrameworkOptions {

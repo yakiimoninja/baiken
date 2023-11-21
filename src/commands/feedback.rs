@@ -4,7 +4,7 @@ use crate::{Context, Error};
 
 /// Gives feedback or requests something from the dev.
 #[poise::command(prefix_command, slash_command, aliases("r"))]
-pub async fn request(
+pub async fn feedback(
     ctx: Context<'_>,
     #[description = "Message for the dev."] text: String,
 ) -> Result<(), Error> {
