@@ -1,3 +1,19 @@
+# Version 0.15.0 Patch Notes.
+
+### General
+- Added autocompletion of character names and options in commands.
+- Renamed the `/request` command to `/feedback`.
+- Renamed command arguments.
+- Reworked `/help` command.
+- Major codebase cleanup.
+- Updated framedata.
+
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.14.0 Patch Notes.
 
 ### General

@@ -46,7 +46,7 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
         }
         else{
             // Skips finish blow for sol
-            if imagedata.cargoquery[x].title.input.as_ref().unwrap().to_string() == "j.XX during Homing Jump" {
+            if *imagedata.cargoquery[x].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
                 continue;
             }
         }
@@ -74,17 +74,17 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
             else {
                 // Multiple image names
                 // Removing any subsequent image names from field
-                if imagedata.cargoquery[x].title.images.as_mut().unwrap().contains(";") == true {
+                if imagedata.cargoquery[x].title.images.as_mut().unwrap().contains(';') {
     
                     let split_image: Vec<&str> = imagedata.cargoquery[x].title.images
                         .as_mut()
                         .unwrap()
-                        .split(";")
+                        .split(';')
                         .collect();
                         
                     imagedata.cargoquery[x].title.images = Some(split_image[0]
                         .to_string()
-                        .replace(" ", "_"));
+                        .replace(' ', "_"));
     
                     // Sending image name to make_link to become a link
                     image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string()).await;
@@ -95,7 +95,7 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
                         .as_ref()
                         .unwrap()
                         .to_string()
-                        .replace(" ", "_"));
+                        .replace(' ', "_"));
                     // Sending image name to make_link to become a link
                     image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string()).await;
                 }
@@ -112,19 +112,19 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
             //     hitboxes_link.push("".to_string());
             // }
             // Remove any hitbox images for throws cause they dont exist
-            if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") == true {
+            if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
                 hitboxes_link.push("".to_string());
             }
             else{
                 // Splitting the hitboxes names into a vector
-                let hitbox_str: Vec<&str> = imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().split(";").collect();
+                let hitbox_str: Vec<&str> = imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().split(';').collect();
                 
-                for y in 0..hitbox_str.len(){
+                for hitbox_string in &hitbox_str{
                     // Sending hitbox names to make_link to become a vector of links
-                    hitboxes_link.push(make_link(hitbox_str[y]
+                    hitboxes_link.push(make_link(hitbox_string
                         .to_string()
                         .trim()
-                        .replace(" ", "_")).await);
+                        .replace(' ', "_")).await);
                 }
             }
         }
@@ -142,12 +142,14 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
         // Skip writting comma/tab if next and last iteration 
         // contains 'finish blow' in last the input field
         if x == imagedata.cargoquery.len() -2 &&
-        imagedata.cargoquery[x+1].title.input.as_ref().unwrap().to_string() == "j.XX during Homing Jump"{
+        *imagedata.cargoquery[x+1].title.input.as_ref().unwrap() == "j.XX during Homing Jump"{
             continue;
         }
         else if x != imagedata.cargoquery.len() - 1 {         
             // Adding comma/tab
-            file.write(b",\n\t")
+            //file.write(b",\n\t")
+            //    .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
+            (&mut file).write_all(b",\n\t")
                 .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
         } 
     }
@@ -163,7 +165,8 @@ async fn make_link(image_name: String) -> String {
     // Converting hex to string
     let result = format!("{:x}", hasher.finalize());
     // Getting the first two hex digits from the md5sum
-    let char1 = result.chars().nth(0).unwrap();
+    // let char1 = result.chars().nth(0).unwrap();
+    let char1 = result.chars().next().unwrap();
     let char2 = result.chars().nth(1).unwrap();
     // Making final link by concating 
     // https://www.dustloop.com/wiki/images/first hex digit/first hex second hex/image names with underscores instead of spaces
@@ -186,5 +189,5 @@ async fn make_link(image_name: String) -> String {
     //     Err(_) => {}
     // }
     
-    return image_link;
+    image_link
 }

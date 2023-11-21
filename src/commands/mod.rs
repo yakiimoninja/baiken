@@ -1,5 +1,6 @@
 pub mod aliases;
 pub mod easter;
+pub mod feedback;
 pub mod frames;
 pub mod fmeter;
 pub mod help;
@@ -7,5 +8,4 @@ pub mod hitboxes;
 pub mod nicknames;
 pub mod moves;
 pub mod register;
-pub mod request;
 pub mod update;

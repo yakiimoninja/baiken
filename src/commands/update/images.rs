@@ -17,17 +17,17 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
     // For timing the updates
     let now = Instant::now();
     
-    print!("\n");
+    println!();
 
     if specific_char == "all"{
 
-        for x in 0..chars_ids.len() {
+        for (x, char_id) in chars_ids.iter().enumerate() {
     
-            println!("Creating {} 'images.json' file.", chars_ids[x]);
+            println!("Creating {} 'images.json' file.", char_id);
             
-            let images_json_path = "data/".to_owned() + &chars_ids[x] +"/images.json";
+            let images_json_path = "data/".to_owned() + char_id +"/images.json";
     
-            if Path::new(&images_json_path).exists() == true {
+            if Path::new(&images_json_path).exists() {
                 remove_file(&images_json_path).await.unwrap();
             }
     
@@ -36,10 +36,10 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
                 .create(true)
                 .append(true)
                 .open(images_json_path)
-                .expect(&("\nFailed to open ".to_owned() + &chars_ids[x] + " 'images.json' file."));
+                .expect(&("\nFailed to open ".to_owned() + char_id + " 'images.json' file."));
     
             // Creating images request link 
-            let character_images_link = SITE_LINK.to_owned() + &chars_ids[x].replace("_", " ") +  SITE_HALF;
+            let character_images_link = SITE_LINK.to_owned() + &char_id.replace('_', " ") +  SITE_HALF;
     
             // Dusloop site request
             let mut char_images_response_json = ureq::get(&character_images_link)
@@ -59,7 +59,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             // More character json file stuff
             let mut char_json_schema = "[\n\t";
             write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + &chars_ids[x] + " 'images.json'."));
+                .expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + chars_ids[x] + " 'images.json'."));
             
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
@@ -77,7 +77,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         let images_json_path = "data/".to_owned() + specific_char +"/images.json";
 
-        if Path::new(&images_json_path).exists() == true {
+        if Path::new(&images_json_path).exists() {
             remove_file(&images_json_path).await.unwrap();
         }
 
@@ -89,7 +89,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             .expect(&("\nFailed to open ".to_owned() + specific_char + " 'images.json' file."));
 
         // Creating request link
-        let character_link = SITE_LINK.to_owned() + &specific_char.replace("_", " ") + SITE_HALF;
+        let character_link = SITE_LINK.to_owned() + &specific_char.replace('_', " ") + SITE_HALF;
 
         // Dusloop site request
         let mut char_images_response_json = ureq::get(&character_link)

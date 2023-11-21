@@ -1,66 +1,85 @@
 use crate::{Context, Error};
+use crate::serenity::futures::{Stream, StreamExt, self};
+
+async fn autocomplete_help<'a>(
+    _ctx: Context<'_>,
+    partial: &'a str,
+) -> impl Stream<Item = String> + 'a {
+    futures::stream::iter(&[
+        "general",
+        "frames",
+        "hitboxes",
+        "fmeter",
+        "aliases",
+        "moves",
+        "nicknames",
+        "notes",
+        "specifics",
+        "register",
+        "update",
+        "feedback"])
+        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+        .map(|name| name.to_string())
+}
 
 /// Prints a help message.
 #[poise::command(prefix_command, slash_command, aliases("?"))]
 pub async fn help(ctx: Context<'_>,
-    #[description = "Pick a command to display help for or leave empty for generic message."] mut cmd_arg: Option<String>
+    #[description = "Pick a command to display help for."] 
+    #[autocomplete = "autocomplete_help"] option: String
     ) -> Result<(), Error> {
+    
+    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &option);
 
     let help_message;
 
-    match &cmd_arg {
-        Some(cmd) => {
-            match cmd.trim() {
-                "aliases" => help_message = help_aliases().await,
-                "fmeter" => help_message = help_fmeter().await,
-                "frames" => help_message = help_frames().await,
-                "help" => help_message = help_help().await,
-                "hitboxes" => help_message = help_hitboxes().await,
-                "moves" => help_message = help_moves().await,
-                "nicknames" => help_message = help_nicknames().await,
-                "notes" => help_message = help_notes().await,
-                "register" => help_message = help_register().await,
-                "request" => help_message = help_request().await,
-                "specifics" => help_message = help_specifics().await,
-                "update" => help_message = help_update().await,
-                _ => {
-                    help_message = "Command `".to_owned().to_string() + &cmd + "` not found!";
-                    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg.expect("null"));
-                    ctx.say(&help_message).await?;
-                    panic!("{}", &help_message);
-                }
-            }
-        },
-        None => {
-            help_message = help_default().await;
-            cmd_arg = Some("empty".to_string());
+    match option.trim() {
+        "aliases" => help_aliases(ctx).await,
+        "feedback" => help_feedback(ctx).await,
+        "fmeter" => help_fmeter(ctx).await,
+        "frames" => help_frames(ctx).await,
+        "general" => help_general(ctx).await,
+        "hitboxes" => help_hitboxes(ctx).await,
+        "moves" => help_moves(ctx).await,
+        "nicknames" => help_nicknames(ctx).await,
+        "notes" => help_notes(ctx).await,
+        "register" => help_register(ctx).await,
+        "specifics" => help_specifics(ctx).await,
+        "update" => help_update(ctx).await,
+        _ => {
+            help_message = "Help for `".to_owned().to_string() + &option + "` not found!";
+            ctx.say(&help_message).await?;
+            println!("\nError: {}", &help_message);
+            return Ok(());
         }
     }
 
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &cmd_arg.unwrap());
-    ctx.say(help_message).await?;
     Ok(())
 }
 
-async fn help_default() -> String {
+async fn help_general(ctx: Context<'_>) {
     let help_msg = r#"
+__**List of commands**__
+```frames``````
+hitboxes``````
+fmeter``````
+aliases``````
+moves``````
+nicknames``````
+feedback``````
+help```
+
 __**Patch notes:**__
 __<https://github.com/yakiimoninja/baiken/releases>__
 
-__**Commands:**__
-__<https://github.com/yakiimoninja/baiken#commands>__
-
 __**Support the project:**__
 __<https://github.com/sponsors/yakiimoninja>__
-
-__**Artwork:**__
-__<https://twitter.com/gogalking/status/1307199393607553024>__
 "#;
 
-    return help_msg.to_string();
+    let _ = ctx.say(help_msg).await;
 }
 
-async fn help_aliases() -> String {
+async fn help_aliases(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/aliases`.
 __**Example**__: `/aliases leo`.
@@ -68,10 +87,24 @@ __**Example**__: `/aliases leo`.
 __**character_arg**__: Character name or nickname. Cannot be empty.
 
 Displays all the aliases for each normal/special/super move of a character."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/aliases.png").await;
 }
 
-async fn help_fmeter() -> String {
+async fn help_feedback(ctx: Context<'_>) {
+    let help_msg = r#"
+__**Command**__: `/feedback`.
+
+__**text**__: Any text. Cannot be empty.
+
+Sends feedback or a request to the dev."#;
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/feedback.png").await;
+}
+
+async fn help_fmeter(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/fmeter`.
 __**Example**__: `/fmeter cz super`.
@@ -80,10 +113,12 @@ __**character_arg**__: Character name or nickname. Cannot be empty.
 __**character_move_arg**__: Character move name, input or alias. Cannot be empty.
 
 Displays visually the startup, active and recovery frames of a character's move."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/fmeter.png").await;
 }
 
-async fn help_frames() -> String {
+async fn help_frames(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/frames`.
 __**Example**__: `/frames baiken 236K`.
@@ -92,21 +127,12 @@ __**character_arg**__: Character name or nickname. Cannot be empty.
 __**character_move_arg**__: Character move name, input or alias. Cannot be empty.
 
 Displays the frame data of a move along with an image."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/frames.png").await;
 }
 
-async fn help_help() -> String {
-    let help_msg = r#"
-__**Command**__: `/help`. 
-__**Example**__: `/help` or `/help fmeter`.
-
-__**cmd_arg**__: Any command name, `notes` or specific. Can be empty.
-
-Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed."#;
-    return help_msg.to_string();
-}
-
-async fn help_hitboxes() -> String {
+async fn help_hitboxes(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/hitboxes`. 
 __**Example**__: `/hitboxes goldlewis 426H`.
@@ -115,10 +141,12 @@ __**character_arg**__: Character name or nickname. Cannot be empty.
 __**character_move_arg**__: Character move name, input or alias. Cannot be empty.
 
 Displays the hitbox images of a character's move."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/hitboxes.png").await;
 }
 
-async fn help_moves() -> String {
+async fn help_moves(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/moves`.
 __**Example**__: `/moves sol`.
@@ -126,18 +154,22 @@ __**Example**__: `/moves sol`.
 __**character_arg**__: Character name or nickname. Cannot be empty.
 
 Displays all the moves and inputs of a character."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/moves.png").await;
 }
 
-async fn help_nicknames() -> String {
+async fn help_nicknames(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/nicknames`.
 
 Displays all the nicknames for each character."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/nicknames.png").await;
 }
 
-async fn help_notes() -> String {
+async fn help_notes(ctx: Context<'_>) {
     let help_msg = r#"
 __**Usage notes.**__
 
@@ -163,29 +195,22 @@ __**Usage notes.**__
         - Example `/frames may 46S` = `/frames may [4]6S`.
     - For a fully charged dust attack the alias `5D!` can be used instead.
         - Example: `/frames chipp 5D!`."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
 }
 
-async fn help_register() -> String {
+async fn help_register(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/register`.
 
 **This command only works for owners.**
 Registers or removes all slash commands in the current server or every server the bot is in."#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/register.png").await;
 }
 
-async fn help_request() -> String {
-    let help_msg = r#"
-__**Command**__: `/request`.
-
-__**text**__: Any text. Cannot be empty.
-
-Sends a request or feedback to the dev."#;
-    return help_msg.to_string();
-}
-
-async fn help_specifics() -> String {
+async fn help_specifics(ctx: Context<'_>) {
     let help_msg = r#"
 __**Character specifics.**__
 
@@ -212,10 +237,11 @@ __**Character specifics.**__
   - Partially charged version: `/frames testament 236S!`.
   - Fully charged version: `/frames testament 236S!!`.
 "#;
-    return help_msg.to_string();
+    
+    let _ = ctx.say(help_msg).await;
 }
 
-async fn help_update() -> String {
+async fn help_update(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**: `/update`.
 __**Example**__: `/update frames all`.
@@ -226,5 +252,7 @@ __**character_arg**__: Character name or nickname. Cannot be empty.
 **This command only works for owners.**
 Meaning that it requires an instance of the source code to use it.
 Updates the frame data and or image links for all or a specific character according to dustloop."#;
-    return help_msg.to_string();
+
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/update.png").await;
 }

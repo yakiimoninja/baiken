@@ -347,7 +347,9 @@
   "input": "41236K 4 H",
   "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Faust_41236K_4_H.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/0/0d/GGST_Faust_41236K_4_H_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/a/a6/GGST_Faust_41236K_4_H_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/9/96/GGST_Faust_41236K_4_H_Hitbox_3.png"
   ]
 },
 	{

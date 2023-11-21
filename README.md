@@ -5,123 +5,123 @@
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
 [![GitHub tag](https://img.shields.io/github/tag/yakiimoninja/baiken.svg)](https://github.com/yakiimoninja/baiken/releases/latest)
 
-### Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data and hitboxes.
-#
+## Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data and hitboxes.
 
-## Table of contents.
+# Table of contents.
 - [Patch notes](https://github.com/yakiimoninja/baiken/releases).
 - [Inviting Baiken to a server](#inviting-the-bot-to-a-server).
+- [Support](#support).
 - [Commands](#commands).
     - [Usage notes](#usage-notes).
     - [Nicknames](data/nicknames.json).
     - [Character specifics](#character-specifics).
 
-## Patch notes.
+# Patch notes.
 - You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
 
-## Inviting the bot to a server.
+# Inviting the bot to a server.
 - Baiken can be **invited** to a server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with a Camera or Discord application.
 
 <img src="data/images/baiken_qr.png" width="250" height="250" />
 
-## Commands.
+# Commands.
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
-- **Command**: `/frames`. \
-Displays the frame data of a move along with an image.
-    <details open>
-        <summary>Show example.</summary>
-            <p>
-                <img src="https://user-images.githubusercontent.com/80072600/213763206-277c7615-66f2-4815-8e66-8da6f5fb70a9.png" />
-            </p>
-    </details>
-
-- **Command**: `/fmeter`.\
-Displays visually the startup, active and recovery frames of a character's move.
-    <details open>
-        <summary>Show example.</summary>
+## **Command**: `/frames`.
+### Displays the frame data of a move along with an image.
+<details open>
+    <summary>Show example.</summary>
         <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763165-e7499889-9aba-4a98-9e3e-6bd12399e40e.png"/>
+            <img src="data/images/frames.png" />
         </p>
-    </details>
+</details>
 
-- **Command**: `/hitboxes`. \
-Displays the hitbox images of a character's move.
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763221-f648e100-be22-4669-9d89-ad01dd0c2736.png"/>
-        </p>
-    </details>
+# **Command**: `/fmeter.`
+### Displays visually the startup, active and recovery frames of a character's move.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/fmeter.png"/>
+    </p>
+</details>
+
+## **Command**: `/hitboxes`.
+### Displays the hitbox images of a character's move.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/hitboxes.png"/>
+    </p>
+</details>
   
-- **Command**: `/moves`.\
-Displays all the moves and inputs of a character.
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763223-bd3785a8-2070-44ce-93ab-9c8bd2abbc31.png"/>
-        </p>
-    </details>
+## **Command**: `/moves`.
+### Displays all the moves and inputs of a character.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/moves.png"/>
+    </p>
+</details>
 
-- **Command**: `/aliases`.\
-Displays all the aliases for each normal/special/super move of a character.
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213761709-c08bda5a-4b0b-4d66-85b3-7bb6ef4b814d.png"/>
-        </p>
-    </details>
+## **Command**: `/aliases`.
+### Displays all the aliases for each normal/special/super move of a character.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/aliases.png"/>
+    </p>
+</details>
 
-- **Command**: `/nicknames`.\
-Displays all the nicknames for each character.
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763225-608c9a50-f8bb-4c6b-bbba-72b24082a6d3.png"/>
-        </p>
-    </details>
+## **Command**: `/nicknames`.
+### Displays all the nicknames for each character.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/nicknames.png"/>
+    </p>
+</details>
 
-- **Command**: `/update`.\
-**This command only works for owners.** \
-Meaning that it requires an instance of the source code to use it. \
-Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763235-1305c8cd-e58f-4200-a008-744f65df32d7.png"/>
-        </p>
-    </details>
+## **Command**: `/update`.
+### **This command only works for owners.**
+### Meaning that it requires an instance of the source code to use it.
+### Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/update.png"/>
+    </p>
+</details>
 
-- **Command**: `/register`.\
-**This command only works for owners.** \
-Registers or removes all slash commands in the current server or every server the bot is in.
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763229-8e7bc940-ac37-462c-b755-2c6ebd063221.png"/>
-        </p>
-    </details>
+## **Command**: `/register`.
+### **This command only works for owners.**
+### Registers or removes all slash commands in the current server or every server the bot is in.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/register.png"/>
+    </p>
+</details>
 
-- **Command**: `/request`.\
-Sends a request or feedback to the dev.
-    <details open>
-        <summary>Show example.</summary>
-        <p>
-            <img src="https://user-images.githubusercontent.com/80072600/213763233-b40acb55-53d6-4916-a145-6b7d95c1e15d.png"/>
-        </p>
-    </details>
+## **Command**: `/feedback`.
+### Sends feedback or a request to the dev.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/feedback.png"/>
+    </p>
+</details>
 
-- **Command**: `/help`.\
-Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
-    <details open>
-        <summary>Show example.</summary>
-            Empty:
-            <p><img src="https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png"/></p>
-            With arguments:
-            <p><img src="https://user-images.githubusercontent.com/80072600/213776547-22e78fc1-d5da-4525-9830-35753cd6a88b.png"/></p>
-    </details>
+## **Command**: `/help`.
+### Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
+<details open>
+    <summary>Show example.</summary>
+        Empty:
+        <p><img src="https://user-images.githubusercontent.com/80072600/213763210-50dce454-5195-467a-8284-cdd6acdf9da5.png"/></p>
+        With arguments:
+        <p><img src="https://user-images.githubusercontent.com/80072600/213776547-22e78fc1-d5da-4525-9830-35753cd6a88b.png"/></p>
+</details>
 
-## Usage notes.
+# Usage notes.
 
 - **`/` commands can be substituted with direct mentions if preferred.**
     - Doing so will enable the use of shorthand commands.
@@ -146,7 +146,7 @@ Displays a help message. If used in conjunction with a command name, `notes` or 
    - For a fully charged dust attack the alias `5D!` can be used instead.
       - Example: `/frames chipp 5D!`.
 
-## Character specifics.
+# Character specifics.
 - **For normals that have levels like Nagoriyuki.**
   - Add the level number next to the normal.
   - For Level 1 `fS`: `/frames nago fs`. 
@@ -170,6 +170,10 @@ Displays a help message. If used in conjunction with a command name, `notes` or 
   - Partially charged version: `/frames testament 236S!`.
   - Fully charged version: `/frames testament 236S!!`.
 #
-### Support the project.
+# Support.
+Support the project by donating here.
+
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
+
+#
 ### Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
