@@ -137,6 +137,7 @@ pub fn character_images_exist(init_check: bool) -> Option<String> {
 }
 
 pub fn correct_character_arg(character_arg: &String) -> Option<String>{
+    
     // Checking for correct character argument
     if character_arg.len() < 2 {
         let error_msg = "Character name: `".to_owned() + &character_arg + "` is invalid!";
