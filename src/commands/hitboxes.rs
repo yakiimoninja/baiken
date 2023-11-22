@@ -221,7 +221,7 @@ pub async fn hitboxes(
     }
     // Error message cause given move wasnt found in the json
     else {
-        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/request` command.");
+        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/feedback` command.");
         ctx.say(error_msg).await?;
         // Console error print
         println!("{}", "\nError: Move '".to_owned() + &character_move + "' was not found!");

@@ -407,7 +407,7 @@ pub async fn fmeter(
     }
     // Error message cause given move wasnt found in the json
     else {
-        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nView moves of a character by executing `/moves`.\nView aliases of a character by executing `/aliases`.");
+        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nView moves of a character by executing `/moves`.");
         ctx.say(error_msg).await?;
         // Console error print 
         println!("{}", "\nError: Move '".to_owned() + &character_move + "' was not found!");
