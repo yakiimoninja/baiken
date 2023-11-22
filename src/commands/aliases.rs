@@ -10,6 +10,6 @@ pub async fn aliases(
 
     println!("\nCommand: '{} {}'", ctx.command().qualified_name, character);
 
-    ctx.say("The `/aliases` command has been intergrated to `/moves`.\nTry using that one instead.").await?;
+    ctx.say("The `/aliases` command has been integrated to `/moves`.\nTry using that one instead.").await?;
     Ok(())
 }
