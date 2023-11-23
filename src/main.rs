@@ -1,10 +1,8 @@
 mod commands;
 mod check;
-
 use commands::*;
 use poise::serenity_prelude as serenity;
 use serde::{Serialize, Deserialize};
-use std::time::Duration;
 
 // Types used by all command functions
 type Error = Box<dyn std::error::Error + Send + Sync>;
