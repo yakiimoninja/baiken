@@ -126,14 +126,14 @@ async fn main() {
             feedback::feedback(),
             update::update(),        
         ],
-        prefix_options: poise::PrefixFrameworkOptions {
-            //prefix: Some("!".into()),
-            edit_tracker: Some(poise::EditTracker::for_timespan(Duration::from_secs(3600))),
-            //additional_prefixes: vec![
-            //    poise::Prefix::Literal("b."),
-            //],
-            ..Default::default()
-        },
+        // prefix_options: poise::PrefixFrameworkOptions {
+        //     //prefix: Some("!".into()),
+        //     edit_tracker: Some(poise::EditTracker::for_timespan(Duration::from_secs(3600))),
+        //     //additional_prefixes: vec![
+        //     //    poise::Prefix::Literal("b."),
+        //     //],
+        //     ..Default::default()
+        // },
         
         // The global error handler for all error cases that may occur
         on_error: |error| Box::pin(on_error(error)),
