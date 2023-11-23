@@ -8,11 +8,17 @@ pub async fn nicknames(
     ctx: Context<'_>,
 ) -> Result<(), Error> {
 
-    // Checking if nicknames.json exist
-    if let Some(error_msg) = check::nicknames_json_exists(false).await {
-        ctx.say(&error_msg.replace('\'', "`")).await?;
-        println!();
-        panic!("{}", error_msg.replace('\n', " "));
+    if let Err(_) = check::adaptive_check(
+        ctx,
+        (false, &String::new()),
+        (false, &String::new()),
+        true,
+        true,
+        false,
+        false,
+        false).await {
+        
+        return Ok(());
     }
 
     // Reading the nicknames json

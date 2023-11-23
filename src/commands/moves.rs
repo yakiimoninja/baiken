@@ -27,32 +27,17 @@ pub async fn moves(
     // Flag that will be used for logic to determine output
     let mut character_found = false;
 
-    // Checking if character user argument is correct
-    if let Some(error_msg) = check::correct_character_arg(&character).await {
-        ctx.say(&error_msg).await?;
-        println!("\nError: {}", error_msg);
+    if let Err(_) = check::adaptive_check(
+        ctx,
+        (true, &character),
+        (false, &String::new()),
+        true,
+        true,
+        true,
+        true,
+        false).await {
+        
         return Ok(());
-    }
-
-    // Checking if data folder exists
-    if let Some(error_msg) = check::data_folder_exists(false).await {
-        ctx.say(&error_msg.replace('\'', "`")).await?;
-        println!();
-        panic!("{}", error_msg.replace('\n', " "));
-    }
-
-    // Checking if character folders exist
-    if let Some(error_msg) = check::character_folders_exist(false).await {
-        ctx.say(&error_msg.replace('\'', "`")).await?;
-        println!();
-        panic!("{}", error_msg.replace('\n', " "));
-    }
-    
-    // Checking if character jsons exist
-    if let Some(error_msg) = check::character_jsons_exist(false).await {
-        ctx.say(&error_msg.replace('\'', "`")).await?;
-        println!();
-        panic!("{}", error_msg.replace('\n', " "));
     }
 
     for char in CHARS {
