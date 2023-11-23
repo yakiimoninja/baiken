@@ -9,7 +9,6 @@ pub async fn feedback(
     #[description = "Message for the dev."] text: String,
 ) -> Result<(), Error> {
 
-    
     // Creating character json file
     let mut file = OpenOptions::new()
         .create(true)
