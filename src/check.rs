@@ -11,7 +11,7 @@ pub async fn data_folder_exists(init_check: bool) -> Option<String> {
     }
     else {
         // Error message cause data folder does not exist
-        let error_msg = "Error: The 'data' folder does not exist.\nDownload and import the 'data' folder from:\nhttps://github.com/yakiimoninja/baiken-bot.".to_string();
+        let error_msg = "Error: The 'data' folder does not exist.\nDownload and import the 'data' folder from:\nhttps://github.com/yakiimoninja/baiken.".to_string();
 
         if init_check {
             // Printing the error message in the console
