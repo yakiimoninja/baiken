@@ -3,7 +3,7 @@ use std::{fs, path::Path};
 
 // Collection of functions that check for stuff
 
-pub fn data_folder_exists(init_check: bool) -> Option<String> {
+pub async fn data_folder_exists(init_check: bool) -> Option<String> {
 
     // Checking if data folder exists
     if Path::new("data").exists() {
@@ -26,7 +26,7 @@ pub fn data_folder_exists(init_check: bool) -> Option<String> {
     }
 }
 
-pub fn nicknames_json_exists(init_check: bool) -> Option<String> {
+pub async fn nicknames_json_exists(init_check: bool) -> Option<String> {
 
     // Reading nicknames.json file
     let data_from_file = fs::read_to_string("data/nicknames.json")
@@ -55,7 +55,7 @@ pub fn nicknames_json_exists(init_check: bool) -> Option<String> {
     }
 }
 
-pub fn character_folders_exist(init_check: bool) -> Option<String> {
+pub async fn character_folders_exist(init_check: bool) -> Option<String> {
 
     // Checking if character folders exist
     for char in CHARS {
@@ -82,7 +82,7 @@ pub fn character_folders_exist(init_check: bool) -> Option<String> {
     None
 }
 
-pub fn character_jsons_exist(init_check: bool) -> Option<String> {
+pub async fn character_jsons_exist(init_check: bool) -> Option<String> {
 
     // Checking if character jsons exist in their respective folders
     for char in CHARS {
@@ -110,7 +110,7 @@ pub fn character_jsons_exist(init_check: bool) -> Option<String> {
     None
 }
 
-pub fn character_images_exist(init_check: bool) -> Option<String> {
+pub async fn character_images_exist(init_check: bool) -> Option<String> {
 
     // Checking if character images.jsons exist in their respective folders
     for char in CHARS {
@@ -136,7 +136,7 @@ pub fn character_images_exist(init_check: bool) -> Option<String> {
     None
 }
 
-pub fn correct_character_arg(character_arg: &String) -> Option<String>{
+pub async fn correct_character_arg(character_arg: &String) -> Option<String>{
     
     // Checking for correct character argument
     if character_arg.len() < 2 {
@@ -148,7 +148,7 @@ pub fn correct_character_arg(character_arg: &String) -> Option<String>{
     }
 }
   
-pub fn correct_character_move_arg(character_move_arg: &String) -> Option<String>{
+pub async fn correct_character_move_arg(character_move_arg: &String) -> Option<String>{
 
     // Checking for correct move argument
     if character_move_arg.len() < 2 {

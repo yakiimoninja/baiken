@@ -9,7 +9,7 @@ pub async fn nicknames(
 ) -> Result<(), Error> {
 
     // Checking if nicknames.json exist
-    if let Some(error_msg) = check::nicknames_json_exists(false) {
+    if let Some(error_msg) = check::nicknames_json_exists(false).await {
         ctx.say(&error_msg.replace('\'', "`")).await?;
         println!();
         panic!("{}", error_msg.replace('\n', " "));
