@@ -151,8 +151,8 @@ pub async fn frames(
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                if x_aliases.to_lowercase().trim().replace('.', "") 
-                == character_move.to_lowercase().trim().replace('.', "") {
+                if x_aliases.to_lowercase().trim().replace(['.', ' '], "")
+                == character_move.to_lowercase().trim().replace(['.', ' '], "") {
                     character_move = alias_data.input.to_string();
                     break 'outer;
                 }
