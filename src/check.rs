@@ -1,4 +1,4 @@
-use crate::{CHARS, Nicknames};
+use crate::{CHARS, Nicknames, Context, Error};
 use std::{fs, path::Path};
 
 // Collection of functions that check for stuff
@@ -157,5 +157,88 @@ pub async fn correct_character_move_arg(character_move_arg: &String) -> Option<S
     }
     else{
         None
+    }
+}
+
+/// Runs checks depening on the arguments given
+/// Takes multiple tuples as input with the first item of the tuple
+/// being a bool to see if a check::function to will execute
+/// and the second being if its the initial check or not.
+#[allow(clippy::too_many_arguments)]
+pub async fn adaptive_check(
+    ctx: Context<'_>,
+    correct_character_check: (bool, &String),
+    correct_character_move_check: (bool, &String),
+    data_folder_check: bool,
+    nicknames_json_check: bool,
+    character_folders_check: bool,
+    character_jsons_check: bool,
+    character_images_check: bool,
+) -> Result<(), Error> {
+    
+    let mut checks_passed = true;
+
+    if correct_character_check.0 {
+        // Checking if character user argument is correct
+        if let Some(error_msg) = correct_character_arg(correct_character_check.1).await {
+            ctx.say(&error_msg).await?;
+            println!("\nError: {}", error_msg);
+            checks_passed = false;
+        }
+    }
+    if correct_character_move_check.0 {
+        // Checking if move user argument is correct
+        if let Some(error_msg) = correct_character_move_arg(correct_character_move_check.1).await {
+            ctx.say(&error_msg).await?;
+            println!("\nError: {}", error_msg);
+            checks_passed = false;
+        }
+    }
+    if data_folder_check {
+        // Checking if data folder exists
+        if let Some(error_msg) = data_folder_exists(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " "));
+        }
+    }
+    if nicknames_json_check {        
+        // Checking if nicknames.json exists
+        if let Some(error_msg) = nicknames_json_exists(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " "));
+        }
+    }
+    if character_folders_check {       
+        // Checking if character folders exist
+        if let Some(error_msg) = character_folders_exist(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " "));
+        }
+    }
+    if character_jsons_check {        
+        // Checking if character jsons exist
+        if let Some(error_msg) = character_jsons_exist(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " "));
+        }
+    }
+    if character_images_check {        
+        // Checking if image jsons exist
+        if let Some(error_msg) = data_folder_exists(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " "));
+        }
+    }
+    
+    if checks_passed {
+        Ok(())
+    }
+    else {
+        Err("Failed check".into())
     }
 }
