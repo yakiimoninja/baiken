@@ -104,11 +104,11 @@ async fn on_error(error: poise::FrameworkError<'_, Data, Error>) {
 async fn main() {
 
     // Running initial checks
-    check::data_folder_exists(true);
-    check::character_folders_exist(true);
-    check::character_images_exist(true);
-    check::nicknames_json_exists(true);
-    check::character_jsons_exist(true);
+    check::data_folder_exists(true).await;
+    check::character_folders_exist(true).await;
+    check::character_images_exist(true).await;
+    check::nicknames_json_exists(true).await;
+    check::character_jsons_exist(true).await;
 
     let options = poise::FrameworkOptions {
         commands: vec![
