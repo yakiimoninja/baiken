@@ -36,7 +36,7 @@
         </p>
 </details>
 
-# **Command**: `/fmeter.`
+# **Command**: `/fmeter`.
 ### Displays visually the startup, active and recovery frames of a character's move.
 <details open>
     <summary>Show example.</summary>
@@ -55,20 +55,11 @@
 </details>
   
 ## **Command**: `/moves`.
-### Displays all the moves and inputs of a character.
+### Displays all the moves, inputs and aliases of a character.
 <details open>
     <summary>Show example.</summary>
     <p>
         <img src="data/images/moves.png"/>
-    </p>
-</details>
-
-## **Command**: `/aliases`.
-### Displays all the aliases for each normal/special/super move of a character.
-<details open>
-    <summary>Show example.</summary>
-    <p>
-        <img src="data/images/aliases.png"/>
     </p>
 </details>
 
@@ -78,6 +69,24 @@
     <summary>Show example.</summary>
     <p>
         <img src="data/images/nicknames.png"/>
+    </p>
+</details>
+
+## **Command**: `/help`.
+### Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/help.png"/>
+    </p>
+</details>
+
+## **Command**: `/feedback`.
+### Sends feedback or a request to the dev.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/feedback.png"/>
     </p>
 </details>
 
@@ -99,24 +108,6 @@
     <summary>Show example.</summary>
     <p>
         <img src="data/images/register.png"/>
-    </p>
-</details>
-
-## **Command**: `/feedback`.
-### Sends feedback or a request to the dev.
-<details open>
-    <summary>Show example.</summary>
-    <p>
-        <img src="data/images/feedback.png"/>
-    </p>
-</details>
-
-## **Command**: `/help`.
-### Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
-<details open>
-    <summary>Show example.</summary>
-    <p>
-        <img src="data/images/help.png"/>
     </p>
 </details>
 
