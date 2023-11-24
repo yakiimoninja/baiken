@@ -1,8 +1,7 @@
-use std::fs::{self} ;
-use std::path::Path;
-use std::string::String;
+use std::{fs, string::String};
 use crate::serenity::futures::{Stream, StreamExt, self};
-use crate::{MoveInfo, check, Nicknames, Context, Error, CHARS, MoveAliases};
+use crate::{Context, Error, MoveInfo, MoveAliases };
+use crate::{CHARS, find, check};
 
 // Autocompletes the character name
 async fn autocomplete_character<'a>(
@@ -24,11 +23,6 @@ pub async fn moves(
 
     println!("Command Args: '{}'", character);
 
-    // This will store the full character name in case user input was an alias
-    let mut character_arg_altered = String::new();
-    // Flag that will be used for logic to determine output
-    let mut character_found = false;
-
     if (check::adaptive_check(
         ctx,
         (true, &character),
@@ -42,90 +36,33 @@ pub async fn moves(
         return Ok(());
     }
 
-    for char in CHARS {
+   // Finding character
+   let character_arg_altered = match find::find_character(&character).await {
+        Ok(character_arg_altered) => character_arg_altered,
+        Err(err) => {
+            ctx.say(err.to_string()).await?;
+            println!("Error: {}", err);
+            return Ok(()) }
+    };
 
-        // Checking if aliases for this characters moves exist
-        let aliases_path = "data/".to_owned() + char + "/aliases.json";
-        if !Path::new(&aliases_path).exists() {
-            // Error message cause a specific file is missing
-            let error_msg = "The `".to_owned() + &aliases_path + "` file was not found.";
-            ctx.say(&error_msg).await?;
-            println!();
-            panic!("{}", error_msg.replace('`', "'"));            
-        }
-    }
-
-    // Reading the nicknames json
-    let data_from_file = fs::read_to_string("data/nicknames.json")
-        .expect("\nFailed to read 'nicknames.json' file.");
-    
-    // Deserializing from nicknames json
-    let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
-
-    // Iterating through the nicknames.json character entries
-    if !character_found {
-        
-        'outer: for x_nicknames in &vec_nicknames {
-        
-            // Iterating through the nicknames.json nickname entries
-            for y_nicknames in &x_nicknames.nicknames {
-    
-                // If user input equals a character nickname then pass the full character name
-                // To the new variable 'character_arg_altered'
-                if y_nicknames.to_lowercase() == character.to_lowercase().trim() {
-    
-                    character_arg_altered = x_nicknames.character.to_owned();
-                    character_found = true;
-                    break 'outer;
-                }   
-            }
-        }
-    }
-
-    if !character_found {
-        
-        // Iterating through the nicknames.json character entries
-        for x_nicknames in &vec_nicknames {
-
-            // If user input is part of a characters full name or the full name itself
-            // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character.to_lowercase()) ||
-            x_nicknames.character.to_lowercase().contains(&character.to_lowercase()) {
-                
-                character_arg_altered = x_nicknames.character.to_owned();
-                character_found = true;
-                break;
-            }
-        }
-    }
-    
-    // If user input isnt the full name, part of a full name or a nickname
-    // Error out cause requested character was not found in the json
-    if !character_found {
-        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
-        ctx.say(error_msg).await?;
-        println!("Error: {}", error_msg.replace('`', "'"));
-        return Ok(());
-    }
-
-    // Reading the character json if found
+    // Reading the character json
     let char_file_path = "data/".to_owned() + &character_arg_altered + "/" + &character_arg_altered + ".json";
     let char_file_data = fs::read_to_string(char_file_path)
-        .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
-    
-    //Deserializing from character json
-    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();
+        .expect(&("\nFailed to read '".to_owned() + &character + ".json" + "' file."));
+
+    // Deserializing from character json
+    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
+
+    println!("Successfully read '{}.json' file.", character_arg_altered);
 
     // Reading the aliases json
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
     let aliases_data = fs::read_to_string(&aliases_path)
         .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
-    
+
     // Deserializing the aliases json
-    let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();         
-    
-    println!("Successfully read '{}.json' and 'aliases.json' file.", &character_arg_altered);
-    
+    let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
+
     // Formatting string for in discord print
     let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace('_', " ") + " Moves / Aliases**__\n```diff";
 

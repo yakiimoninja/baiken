@@ -1,10 +1,9 @@
-use std::fs;
-use crate::{Context, Error, CHARS, check, Nicknames};
-use crate::serenity::futures::{Stream, StreamExt, self};
 mod framedata;
 mod images; 
 mod framedata_json;
 mod images_json;
+use crate::{Context, Error, CHARS, check, find};
+use crate::serenity::futures::{Stream, StreamExt, self};
 
 // Autocompletes the character name
 async fn autocomplete_character<'a>(
@@ -36,11 +35,6 @@ pub async fn update (
     #[autocomplete = "autocomplete_option"] option: String,
 ) -> Result<(), Error> {
 
-    // This will store the full character name in case user input was an alias
-    let mut character_arg_altered = String::new();
-    // Flag that will be used for logic to determine output
-    let mut character_found = false;
-
     let option = option.trim().to_lowercase();
 
     if (check::adaptive_check(
@@ -63,39 +57,14 @@ pub async fn update (
     //     panic!("{}", error_msg.replace('\n', " "));
     // }
 
-    // Reading the nicknames json
-    let data_from_file = fs::read_to_string("data/nicknames.json")
-        .expect("\nFailed to read 'nicknames.json' file.");
-    
-    // Deserializing from nicknames json
-    let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
-
-    // Iterating through the nicknames.json character entries
-    for x_nicknames in vec_nicknames {
-
-        // If user input is part of a characters full name or the full name itself
-        // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-        if x_nicknames.character.to_lowercase().replace('-', "").contains(&character.to_lowercase()) ||
-        x_nicknames.character.to_lowercase().contains(&character.to_lowercase()) {
-            
-            character_found = true;
-            character_arg_altered = x_nicknames.character.to_owned();
-            break;
-        }
-
-        // Iterating through the nicknames.json nickname entries
-        for y_nicknames in x_nicknames.nicknames {
-
-            // If user input equals a character nickname then pass the full character name
-            // To the new variable 'character_arg_altered'
-            if y_nicknames.to_lowercase() == character.to_lowercase().trim() {
-
-                character_found = true;
-                character_arg_altered = x_nicknames.character.to_owned();
-                break;
-            }   
-        }
-    }
+    // Finding character
+    let character_arg_altered = match find::find_character(&character).await {
+        Ok(character_arg_altered) => character_arg_altered,
+        Err(err) => {
+            ctx.say(err.to_string()).await?;
+            println!("Error: {}", err);
+            return Ok(()) }
+    };
 
     // Update frames hand
     if option == "frames" {
@@ -106,22 +75,12 @@ pub async fn update (
             framedata::get_char_data(CHARS, "all").await;
         }
         else {
-            
             // Updates images for specific character
             // If user input isnt the full name, part of a full name or a nickname
-            // Error out cause requested character was not found in the json
-            if !character_found {
-    
-                let error_msg= &("Character `".to_owned() + &character + "` was not found!");
-                ctx.say(error_msg).await?;
-                println!("Error: {}", error_msg.replace('`', "'"));
-                return Ok(());
-            }
-            else {
-                // Update frames for specific character
-                ctx.say("Update started!").await?; 
-                framedata::get_char_data(CHARS, &character_arg_altered).await;
-            }
+            // Update frames for specific character
+            ctx.say("Update started!").await?; 
+            framedata::get_char_data(CHARS, &character_arg_altered).await;
+        
         }
     }
     // Update images hand
@@ -136,19 +95,9 @@ pub async fn update (
             
             // Updates images for specific character
             // If user input isnt the full name, part of a full name or a nickname
-            // Error out cause requested character was not found in the json
-            if !character_found {
-    
-                let error_msg= &("Character `".to_owned() + &character + "` was not found!");
-                ctx.say(error_msg).await?;
-                println!("Error: {}", error_msg.replace('`', "'"));
-                return Ok(());
-            }
-            else {
-                // Update images for specific character
-                ctx.say("Update started!").await?; 
-                images::get_char_data(CHARS, &character_arg_altered).await;
-            }
+            // Update images for specific character
+            ctx.say("Update started!").await?; 
+            images::get_char_data(CHARS, &character_arg_altered).await;
         }
     }
     // Update both frames and images hand
@@ -163,20 +112,10 @@ pub async fn update (
         else {
             
             // If user input isnt the full name, part of a full name or a nickname
-            // Error out cause requested character was not found in the json
-            if !character_found {
-    
-                let error_msg= &("Character `".to_owned() + &character + "` was not found!");
-                ctx.say(error_msg).await?;
-                println!("Error: {}", error_msg.replace('`', "'"));
-                return Ok(());
-            }
-            else {
-                // Update frames and images for specific character
-                ctx.say("Update started!").await?; 
-                framedata::get_char_data(CHARS, &character_arg_altered).await;
-                images::get_char_data(CHARS, &character_arg_altered).await;
-            }
+            // Update frames and images for specific character
+            ctx.say("Update started!").await?; 
+            framedata::get_char_data(CHARS, &character_arg_altered).await;
+            images::get_char_data(CHARS, &character_arg_altered).await;
         }
     }
     // If none

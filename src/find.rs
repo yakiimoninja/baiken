@@ -18,7 +18,7 @@ pub async fn find_character(character: &String) -> Result<String, Error> {
     if !character_found {
             
         for x_nicknames in &vec_nicknames {
-        
+
             // Iterating through the nicknames.json nickname entries
             for y_nicknames in &x_nicknames.nicknames {
 
@@ -46,6 +46,11 @@ pub async fn find_character(character: &String) -> Result<String, Error> {
             }
         }
     }
+    // Edge case for update.rs
+    if !character_found && character.trim().to_lowercase() == "all".to_lowercase() {
+        return Ok("".into());
+    }
+
     if !character_found {
         // If user input isnt the full name, part of a full name or a nickname
         // Error out cause requested character was not found in the json
@@ -112,7 +117,7 @@ pub async fn find_move_index(character_arg_altered: &String, mut character_move:
 
     if !move_found {
         // Error message cause given move wasnt found in the json
-        let error_msg= "Move `".to_owned() + &character_move + "` was not found!" + "\nView moves of a character by executing `/moves`.";
+        let error_msg= "Move `".to_owned() + &character_move + "` was not found!";
         Err(error_msg.into())
     }
     else {

@@ -1,9 +1,7 @@
-use std::fs;
-use std::path::Path;
-use std::string::String;
-use crate::{Context, Error};
+use std::{fs, string::String};
 use crate::serenity::futures::{Stream, StreamExt, self};
-use crate::{MoveInfo, MoveAliases, ImageLinks, Nicknames, IMAGE_DEFAULT, CHARS,check};
+use crate::{Context, Error, ImageLinks , MoveInfo };
+use crate::{IMAGE_DEFAULT, CHARS, find, check};
 
 // Autocompletes the character name
 async fn autocomplete_character<'a>(
@@ -29,11 +27,11 @@ pub async fn frames(
 
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
-    // Flags that will be used for logic to determine output
-    let mut character_found = false;
-    let mut move_found = false;
+    // Initializing variables for the embed
+    // They must not be empty cause then the embed wont be sent
+    let mut image_embed = IMAGE_DEFAULT.to_string();
 
-    if let Err(_) = check::adaptive_check(
+    if (check::adaptive_check(
         ctx,
         (true, &character),
         (true, &character_move),
@@ -41,102 +39,42 @@ pub async fn frames(
         true,
         true,
         true,
-        true).await {
+        true).await).is_err() {
         
         return Ok(());
     }
 
-    // Initializing variables for the embed
-    // They must not be empty cause then the embed wont send
-    let mut image_embed = IMAGE_DEFAULT.to_string();
-
-    // Reading the nicknames json
-    let data_from_file = fs::read_to_string("data/nicknames.json")
-        .expect("\nFailed to read 'nicknames.json' file.");
-    
-    // Deserializing from nicknames json
-    let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
-
-    // Iterating through the nicknames.json character entries
-    if !character_found {
-            
-        'outer: for x_nicknames in &vec_nicknames {
-        
-            // Iterating through the nicknames.json nickname entries
-            for y_nicknames in &x_nicknames.nicknames {
-
-                // If user input equals a character nickname then pass the full character name
-                // To the new variable 'character_arg_altered'
-                if y_nicknames.to_lowercase() == character.to_lowercase().trim() {
-
-                    character_arg_altered = x_nicknames.character.to_owned();
-                    character_found = true;
-                    break 'outer;
-                }   
-            }
-        }
-    }
-
-    if !character_found {
-        
-        // Iterating through the nicknames.json character entries
-        for x_nicknames in &vec_nicknames {
-
-            // If user input is part of a characters full name or the full name itself
-            // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character.to_lowercase()) ||
-            x_nicknames.character.to_lowercase().contains(&character.to_lowercase()) {
-                
-                character_arg_altered = x_nicknames.character.to_owned();
-                character_found = true;
-                break;
-            }
-        }
-    }
-
-    // If user input isnt the full name, part of a full name or a nickname
-    // Error out cause requested character was not found in the json
-    if !character_found {
-        let error_msg= &("Character `".to_owned() + &character + "` was not found!");
-        ctx.say(error_msg).await?;
-        println!("Error: {}", error_msg.replace('`', "'"));
-        return Ok(());
-    }
+    // Finding character
+    character_arg_altered = match find::find_character(&character).await {
+        Ok(character_arg_altered) => character_arg_altered,
+        Err(err) => {
+            ctx.say(err.to_string()).await?;
+            println!("Error: {}", err);
+            return Ok(()) }
+    };
 
     // Reading the character json
     let char_file_path = "data/".to_owned() + &character_arg_altered + "/" + &character_arg_altered + ".json";
     let char_file_data = fs::read_to_string(char_file_path)
-        .expect(&("\nFailed to read '".to_owned() + &character + ".json" + "' file."));
-    
-    // Deserializing from character json
-    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
-    
-    println!("Successfully read '{}.json' file.", character_arg_altered);
-    
-    // Checking if aliases for this characters moves exist
-    let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
-    if Path::new(&aliases_path).exists() {
-        
-        // Reading the aliases json
-        let aliases_data = fs::read_to_string(&aliases_path)
-            .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
-        
-        // Deserializing the aliases json
-        let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
+            .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
 
-        'outer: for alias_data in aliases_data {
-            for x_aliases in alias_data.aliases {
-                
-                // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
-                // Change the given argument (character_move) to the actual move name instead of the alias
-                if x_aliases.to_lowercase().trim().replace(['.', ' '], "")
-                == character_move.to_lowercase().trim().replace(['.', ' '], "") {
-                    character_move = alias_data.input.to_string();
-                    break 'outer;
-                }
-            }
-        }
-    }
+    // Deserializing from character json
+    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();
+           
+    println!("Successfully read '{}.json' file.", character_arg_altered);
+
+    // Finding move struct index 
+    let mframes_index = find::find_move_index(&character_arg_altered, character_move, &moves_info).await;
+    let mframes_index = match mframes_index {
+        Ok(index) => index,
+        Err(err) => {
+            ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
+            println!("Error: {}", err);
+            return Ok(()) }    
+    };
+
+    // TODO find a fix for this
+    character_move = mframes_index.1;
 
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
@@ -144,105 +82,71 @@ pub async fn frames(
 
     // Deserializing images.json for this character
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
+
+    let mframes = &moves_info[mframes_index.0];
     
-    // Default vaule never used
-    let mut mframes = &moves_info[0];
+    println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
+    
+    let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Frame_Data";
+    let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
 
-    for moves in &moves_info {
-        // Iterating through the moves of the json file to find the move requested
-        // Specifically if user arg is exactly move input
-        if moves.input.to_string().to_lowercase().replace('.', "") 
-        == character_move.to_string().to_lowercase().replace('.', "") {
-            mframes = &moves;
-            move_found = true;
+    // Checking if the respective data field in the json file is empty
+    // If they aren't empty, the variables initialized above will be replaced
+    // With the corresponind data from the json file
+    // Otherwise they will remain as '-'
+    for img_links in image_links {
+        // Iterating through the image.json to find the move's image links
+        if mframes.input == img_links.input && !img_links.move_img.is_empty() {
+            image_embed = img_links.move_img.to_string();
             break;
-        }        
-    }
-
-    if !move_found {
-        for moves in &moves_info {
-            // Iterating through the moves of the json file to find the move requested
-            // Specifically if user arg is contained in move name
-            if moves.name.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) {
-                mframes = &moves;
-                move_found = true;
-                break;
-            } 
         }
     }
 
-    if move_found {
-   
-        println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), character_arg_altered);
+    // Debugging prints
+    // println!("{}", content_embed);
+    // println!("{}", image_embed);
+    // println!("{}", title_embed);
+    // println!("{}", damage_embed);
+    // println!("{}", guard_embed);
+    // println!("{}", invin_embed);
+    // println!("{}", startup_embed);
+    // println!("{}", hit_embed);
+    // println!("{}", block_embed);
+    // println!("{}", active_embed);
+    // println!("{}", recovery_embed);
+    // println!("{}", counter_embed);
 
-        let content_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Frame_Data";
-        let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
-
-        // Checking if the respective data field in the json file is empty
-        // If they aren't empty, the variables initialized above will be replaced
-        // With the corresponind data from the json file
-        // Otherwise they will remain as '-'
-        for img_links in image_links {
-            // Iterating through the image.json to find the move's image links
-            if mframes.input == img_links.input && !img_links.move_img.is_empty() {
-                image_embed = img_links.move_img.to_string();
-                break;
-            }
-        }
-
-        // Debugging prints
-        // println!("{}", content_embed);
-        // println!("{}", image_embed);
-        // println!("{}", title_embed);
-        // println!("{}", damage_embed);
-        // println!("{}", guard_embed);
-        // println!("{}", invin_embed);
-        // println!("{}", startup_embed);
-        // println!("{}", hit_embed);
-        // println!("{}", block_embed);
-        // println!("{}", active_embed);
-        // println!("{}", recovery_embed);
-        // println!("{}", counter_embed);
-
-        // New version notification
-        //ctx.say(r"Baiken enters season 2 with a new version 0.5.0!
+    // New version notification
+    //ctx.say(r"Baiken enters season 2 with a new version 0.5.0!
 //As always a link to the patch notes is below.
 //__<https://github.com/yakiimoninja/baiken/releases>__").await?;
 
-        // Sending the data as an embed
-        let _msg = ctx.send(|m| {
-            m.content(&content_embed);
-            m.embed(|e| {
-                e.color((140,75,64));
-                e.title(&title_embed);
-                //e.description("This is a description");
-                e.image(&image_embed);
-                e.fields(vec![
-                    ("Damage", &mframes.damage.to_string(), true),
-                    ("Guard", &mframes.guard.to_string(), true),
-                    ("Invinciblity", &mframes.invincibility.to_string(), true),
-                    ("Startup", &mframes.startup.to_string(), true),
-                    ("Active", &mframes.active.to_string(), true),
-                    ("Recovery", &mframes.recovery.to_string(), true),
-                    ("On Hit", &mframes.hit.to_string(), true),
-                    ("On Block", &mframes.block.to_string(), true),
-                    ("Level", &mframes.level.to_string(), true),
-                    ("Risc Gain", &mframes.riscgain.to_string(), true),
-                    ("Scaling", &mframes.scaling.to_string(), true),
-                    ("Counter", &mframes.counter.to_string(), true)]);
-                //e.field("This is the third field", "This is not an inline field", false);
-                e
-            });
-            m
-        }).await;
-    }
-    // Error message cause given move wasnt found in the json
-    else {
-        let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nView moves of a character by executing `/moves`.");
-        ctx.say(error_msg).await?;
-        // Console error print 
-        println!("{}", "Error: Move '".to_owned() + &character_move + "' was not found!");
-    }
+    // Sending the data as an embed
+    let _msg = ctx.send(|m| {
+        m.content(&content_embed);
+        m.embed(|e| {
+            e.color((140,75,64));
+            e.title(&title_embed);
+            //e.description("This is a description");
+            e.image(&image_embed);
+            e.fields(vec![
+                ("Damage", &mframes.damage.to_string(), true),
+                ("Guard", &mframes.guard.to_string(), true),
+                ("Invinciblity", &mframes.invincibility.to_string(), true),
+                ("Startup", &mframes.startup.to_string(), true),
+                ("Active", &mframes.active.to_string(), true),
+                ("Recovery", &mframes.recovery.to_string(), true),
+                ("On Hit", &mframes.hit.to_string(), true),
+                ("On Block", &mframes.block.to_string(), true),
+                ("Level", &mframes.level.to_string(), true),
+                ("Risc Gain", &mframes.riscgain.to_string(), true),
+                ("Scaling", &mframes.scaling.to_string(), true),
+                ("Counter", &mframes.counter.to_string(), true)]);
+            //e.field("This is the third field", "This is not an inline field", false);
+            e
+        });
+        m
+    }).await;
 
     Ok(())
 }
