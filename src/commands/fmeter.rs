@@ -37,7 +37,7 @@ pub async fn fmeter(
     let mut character_found = false;
     let mut move_found = false;
 
-    if let Err(_) = check::adaptive_check(
+    if (check::adaptive_check(
         ctx,
         (true, &character),
         (true, &character_move),
@@ -45,7 +45,7 @@ pub async fn fmeter(
         true,
         true,
         true,
-        true).await {
+        true).await).is_err() {
         
         return Ok(());
     }
