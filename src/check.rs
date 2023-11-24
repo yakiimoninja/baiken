@@ -1,5 +1,5 @@
-use crate::{CHARS, Nicknames, Context, Error};
 use std::{fs, path::Path};
+use crate::{CHARS, Nicknames, Context, Error};
 
 // Collection of functions that check for stuff
 

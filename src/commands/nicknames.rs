@@ -1,5 +1,4 @@
-use std::fs;
-use std::string::String;
+use std::{fs, string::String};
 use crate::{check, Nicknames, Context, Error};
 
 /// Displays all the nicknames for all characters.

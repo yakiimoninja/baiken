@@ -1,5 +1,4 @@
-use std::fs::OpenOptions;
-use std::io::Write;
+use std::{fs::OpenOptions, io::Write};
 use crate::{Context, Error};
 
 /// Gives feedback or requests something from the dev.
