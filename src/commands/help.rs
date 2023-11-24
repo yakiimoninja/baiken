@@ -29,7 +29,7 @@ pub async fn help(ctx: Context<'_>,
     #[autocomplete = "autocomplete_help"] option: String
     ) -> Result<(), Error> {
     
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, &option);
+    println!("Command Args: '{}'", &option);
 
     let help_message;
 

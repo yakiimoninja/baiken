@@ -8,7 +8,7 @@ pub async fn aliases(
     #[description = "Character name or nickname."] character: String,
 ) -> Result<(), Error> {
 
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, character);
+    println!("Command Args: '{}'", character);
 
     ctx.say("The `/aliases` command has been integrated to `/moves`.\nTry using that one instead.").await?;
     Ok(())

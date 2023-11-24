@@ -25,6 +25,8 @@ pub async fn frames(
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
+    println!("Command Args: '{}, {}'", character, character_move);
+
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
     // Flags that will be used for logic to determine output
@@ -109,10 +111,8 @@ pub async fn frames(
     // Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
-    println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character, character_move);
     println!("Successfully read '{}.json' file.", character_arg_altered);
     
-
     // Checking if aliases for this characters moves exist
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
     if Path::new(&aliases_path).exists() {

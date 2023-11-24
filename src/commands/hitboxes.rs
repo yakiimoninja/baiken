@@ -24,6 +24,8 @@ pub async fn hitboxes(
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
+    println!("Command Args: '{}, {}'", character, character_move);
+
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
     // Flags that will be used for logic to determine output

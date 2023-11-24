@@ -22,6 +22,8 @@ pub async fn moves(
     #[autocomplete = "autocomplete_character"] character: String,
 ) -> Result<(), Error> {
 
+    println!("Command Args: '{}'", character);
+
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
     // Flag that will be used for logic to determine output
@@ -122,7 +124,6 @@ pub async fn moves(
     // Deserializing the aliases json
     let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();         
     
-    println!("\nCommand: '{} {}'", ctx.command().qualified_name, character);
     println!("Successfully read '{}.json' and 'aliases.json' file.", &character_arg_altered);
     
     // Formatting string for in discord print
