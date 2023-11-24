@@ -8,7 +8,7 @@ pub async fn nicknames(
     ctx: Context<'_>,
 ) -> Result<(), Error> {
 
-    if let Err(_) = check::adaptive_check(
+    if (check::adaptive_check(
         ctx,
         (false, &String::new()),
         (false, &String::new()),
@@ -16,7 +16,7 @@ pub async fn nicknames(
         true,
         false,
         false,
-        false).await {
+        false).await).is_err() {
         
         return Ok(());
     }

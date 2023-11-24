@@ -29,7 +29,7 @@ pub async fn moves(
     // Flag that will be used for logic to determine output
     let mut character_found = false;
 
-    if let Err(_) = check::adaptive_check(
+    if (check::adaptive_check(
         ctx,
         (true, &character),
         (false, &String::new()),
@@ -37,7 +37,7 @@ pub async fn moves(
         true,
         true,
         true,
-        false).await {
+        false).await).is_err() {
         
         return Ok(());
     }

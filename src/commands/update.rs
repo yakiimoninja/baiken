@@ -43,7 +43,7 @@ pub async fn update (
 
     let option = option.trim().to_lowercase();
 
-    if let Err(_) = check::adaptive_check(
+    if (check::adaptive_check(
         ctx,
         (true, &character),
         (false, &String::new()),
@@ -51,7 +51,7 @@ pub async fn update (
         true,
         true,
         false,
-        false).await {
+        false).await).is_err() {
         
         return Ok(());
     }
