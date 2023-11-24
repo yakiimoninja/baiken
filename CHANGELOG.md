@@ -1,3 +1,18 @@
+# Version 0.16.0 Patch Notes.
+
+### General
+- Removed `/aliases` and integrated its functionality to `/moves` command. 
+- Fixed prompts that include the old `/request` command instead of the new `/feedback` command.
+- Some more codebase cleanup.
+
+### Fixes
+- Fixed `megafist` not showing anything when used.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.15.0 Patch Notes.
 
 ### General
