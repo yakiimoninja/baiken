@@ -104,6 +104,7 @@ async fn on_error(error: poise::FrameworkError<'_, Data, Error>) {
 async fn main() {
 
     // Running initial checks
+    println!();
     check::data_folder_exists(true).await;
     check::nicknames_json_exists(true).await;
     check::character_folders_exist(true).await;

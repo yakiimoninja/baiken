@@ -94,7 +94,7 @@ pub async fn hitboxes(
     if !character_found {
         let error_msg= &("Character `".to_owned() + &character + "` was not found!");
         ctx.say(error_msg).await?;
-        println!("\nError: {}", error_msg.replace('`', "'"));
+        println!("Error: {}", error_msg.replace('`', "'"));
         return Ok(());
     }
 
@@ -106,7 +106,6 @@ pub async fn hitboxes(
     //Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
     
-    println!("\nCommand: '{} {} {}'", ctx.command().qualified_name, character, character_move);
     println!("Successfully read '{}.json' file.", &character_arg_altered);
     
     character_found = true;
@@ -204,7 +203,7 @@ pub async fn hitboxes(
         let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nYou can request, report broken stuff or leave feedback by executing the `/feedback` command.");
         ctx.say(error_msg).await?;
         // Console error print
-        println!("{}", "\nError: Move '".to_owned() + &character_move + "' was not found!");
+        println!("{}", "Error: Move '".to_owned() + &character_move + "' was not found!");
     }
 
     Ok(())

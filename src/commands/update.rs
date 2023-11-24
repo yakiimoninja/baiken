@@ -114,13 +114,12 @@ pub async fn update (
     
                 let error_msg= &("Character `".to_owned() + &character + "` was not found!");
                 ctx.say(error_msg).await?;
-                println!("\nError: {}", error_msg.replace('`', "'"));
+                println!("Error: {}", error_msg.replace('`', "'"));
                 return Ok(());
             }
             else {
                 // Update frames for specific character
                 ctx.say("Update started!").await?; 
-                println!();
                 framedata::get_char_data(CHARS, &character_arg_altered).await;
             }
         }
@@ -142,13 +141,12 @@ pub async fn update (
     
                 let error_msg= &("Character `".to_owned() + &character + "` was not found!");
                 ctx.say(error_msg).await?;
-                println!("\nError: {}", error_msg.replace('`', "'"));
+                println!("Error: {}", error_msg.replace('`', "'"));
                 return Ok(());
             }
             else {
                 // Update images for specific character
                 ctx.say("Update started!").await?; 
-                println!();
                 images::get_char_data(CHARS, &character_arg_altered).await;
             }
         }
@@ -170,13 +168,12 @@ pub async fn update (
     
                 let error_msg= &("Character `".to_owned() + &character + "` was not found!");
                 ctx.say(error_msg).await?;
-                println!("\nError: {}", error_msg.replace('`', "'"));
+                println!("Error: {}", error_msg.replace('`', "'"));
                 return Ok(());
             }
             else {
                 // Update frames and images for specific character
                 ctx.say("Update started!").await?; 
-                println!();
                 framedata::get_char_data(CHARS, &character_arg_altered).await;
                 images::get_char_data(CHARS, &character_arg_altered).await;
             }
@@ -186,7 +183,7 @@ pub async fn update (
     else {
         let error_msg= &("Selection `".to_owned() + &option + "` is invalid!");
         ctx.say(error_msg).await?;
-        println!("\n{}", "Error: Selection '".to_owned() + &option + "' is invalid!");
+        println!("{}", "Error: Selection '".to_owned() + &option + "' is invalid!");
         return Ok(());
     }
 

@@ -28,8 +28,6 @@ pub async fn nicknames(
     // Deserializing from nicknames json
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
     
-    println!("Successfully read 'nicknames.json' file.");
-    
     // Formatting string for in discord print
     let mut nicks_as_msg = "__**Character Nicknames**__\n```diff".to_string();
 

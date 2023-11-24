@@ -104,7 +104,7 @@ pub async fn moves(
     if !character_found {
         let error_msg= &("Character `".to_owned() + &character + "` was not found!");
         ctx.say(error_msg).await?;
-        println!("\nError: {}", error_msg.replace('`', "'"));
+        println!("Error: {}", error_msg.replace('`', "'"));
         return Ok(());
     }
 

@@ -16,8 +16,6 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     // For timing the updates
     let now = Instant::now();
     
-    println!();
-
     if specific_char == "all"{
     
         for (x, char_id) in chars_ids.iter().enumerate() {
@@ -122,5 +120,5 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     }
     
     let elapsed_time = now.elapsed();
-    println!("\nUpdated in {} seconds.", elapsed_time.as_secs());
+    println!("Updated in {} seconds.", elapsed_time.as_secs());
 }

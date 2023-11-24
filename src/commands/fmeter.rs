@@ -99,7 +99,7 @@ pub async fn fmeter(
     if !character_found {
         let error_msg= &("Character `".to_owned() + &character + "` was not found!");
         ctx.say(error_msg).await?;
-        println!("\nError: {}", error_msg.replace('`', "'"));
+        println!("Error: {}", error_msg.replace('`', "'"));
         return Ok(())
     }
 
@@ -390,7 +390,7 @@ pub async fn fmeter(
         let error_msg= &("Move `".to_owned() + &character_move + "` was not found!" + "\nView moves of a character by executing `/moves`.");
         ctx.say(error_msg).await?;
         // Console error print 
-        println!("{}", "\nError: Move '".to_owned() + &character_move + "' was not found!");
+        println!("{}", "Error: Move '".to_owned() + &character_move + "' was not found!");
     }
 
     Ok(())

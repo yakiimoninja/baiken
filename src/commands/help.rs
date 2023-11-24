@@ -49,7 +49,7 @@ pub async fn help(ctx: Context<'_>,
         _ => {
             help_message = "Help for `".to_owned().to_string() + &option + "` not found!";
             ctx.say(&help_message).await?;
-            println!("\nError: {}", &help_message);
+            println!("Error: {}", &help_message);
             return Ok(());
         }
     }

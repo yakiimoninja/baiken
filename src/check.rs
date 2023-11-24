@@ -34,7 +34,7 @@ pub async fn nicknames_json_exists(init_check: bool) -> Option<String> {
 
     match serde_json::from_str::<Vec<Nicknames>>(&data_from_file) {
         Ok(_) => {
-            println!("\nSuccessfully read 'nicknames.json' file.");
+            println!("Successfully read 'nicknames.json' file.");
             None
         },
         Err(_) => {
@@ -105,7 +105,7 @@ pub async fn character_jsons_exist(init_check: bool) -> Option<String> {
             }
         }
     }
-    println!("\nSuccessfully read {} character.json files.", &CHARS.len());
+    println!("Successfully read {} character.json files.", &CHARS.len());
 
     None
 }
@@ -140,7 +140,7 @@ pub async fn correct_character_arg(character_arg: &String) -> Option<String>{
     
     // Checking for correct character argument
     if character_arg.len() < 2 {
-        let error_msg = "Character name: `".to_owned() + &character_arg + "` is invalid!";
+        let error_msg = "Character name `".to_owned() + &character_arg + "` is invalid!";
         Some(error_msg)
     }
     else{
@@ -152,7 +152,7 @@ pub async fn correct_character_move_arg(character_move_arg: &String) -> Option<S
 
     // Checking for correct move argument
     if character_move_arg.len() < 2 {
-        let error_msg = "Move: `".to_owned() + &character_move_arg + "` is invalid!";
+        let error_msg = "Move `".to_owned() + &character_move_arg + "` is invalid!";
         Some(error_msg)
     }
     else{
@@ -182,7 +182,7 @@ pub async fn adaptive_check(
         // Checking if character user argument is correct
         if let Some(error_msg) = correct_character_arg(correct_character_check.1).await {
             ctx.say(&error_msg).await?;
-            println!("\nError: {}", error_msg);
+            println!("Error: {}", error_msg);
             checks_passed = false;
         }
     }
@@ -190,7 +190,7 @@ pub async fn adaptive_check(
         // Checking if move user argument is correct
         if let Some(error_msg) = correct_character_move_arg(correct_character_move_check.1).await {
             ctx.say(&error_msg).await?;
-            println!("\nError: {}", error_msg);
+            println!("Error: {}", error_msg);
             checks_passed = false;
         }
     }
