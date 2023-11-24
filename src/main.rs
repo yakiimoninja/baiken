@@ -113,8 +113,7 @@ async fn main() {
 
     let options = poise::FrameworkOptions {
         commands: vec![
-            aliases::aliases(),
-            easter::sake(),
+            feedback::feedback(),
             fmeter::fmeter(),
             frames::frames(),
             help::help(),
