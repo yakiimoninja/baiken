@@ -1,5 +1,6 @@
 mod commands;
 mod check;
+mod find;
 use commands::*;
 use poise::serenity_prelude as serenity;
 use serde::{Serialize, Deserialize};
@@ -121,7 +122,6 @@ async fn main() {
             nicknames::nicknames(),
             moves::moves(),
             register::register(),
-            feedback::feedback(),
             update::update(),        
         ],
         // prefix_options: poise::PrefixFrameworkOptions {
