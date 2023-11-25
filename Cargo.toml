@@ -1,6 +1,6 @@
 [package]
 name = "baiken"
-version = "0.16.0"
+version = "0.17.0"
 edition = "2021"
 authors = ["yakiimoninja"]
 repository = "https://github.com/yakiimoninja/baiken"
@@ -17,6 +17,7 @@ serde = "1.0.193"
 dotenv = "0.15"
 ureq = { version = "2.9.0", features = ["charset"] }
 md-5 = "0.10.6"
+rand = "0.8.5"
 
 # Uncomment for debugging
 # tracing = "0.1.29"

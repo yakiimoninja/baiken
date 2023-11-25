@@ -1,3 +1,16 @@
+# Version 0.17.0 Patch Notes.
+
+### General
+- Completely removed `aliases` command.
+- Added new easter egg.
+- Even more code cleanup.
+- Updated framedata.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.16.0 Patch Notes.
 
 ### General
@@ -6,7 +19,7 @@
 - Some more codebase cleanup.
 
 ### Fixes
-- Fixed `megafist` not showing anything when used.
+- Fixed `megafist` not showing anything when used as an alias.
 
 &#x200B;
 &#x200B;
