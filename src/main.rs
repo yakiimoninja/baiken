@@ -1,6 +1,7 @@
 mod commands;
 mod check;
 mod find;
+mod ran;
 use commands::*;
 use poise::serenity_prelude as serenity;
 use serde::{Serialize, Deserialize};
