@@ -12,11 +12,11 @@ pub async fn random_p() -> Option<String>{
 
         if extra {
             let number = rng.gen_range(1..31);
-            return Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/".to_owned() + &number.to_string() + ".png");
+            Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/".to_owned() + &number.to_string() + ".png")
         }
         else{
             let number = rng.gen_range(1..31);
-            return Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/neco/".to_owned() + &number.to_string() + ".png");
+            Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/neco/".to_owned() + &number.to_string() + ".png")
         } 
     }
     else {
