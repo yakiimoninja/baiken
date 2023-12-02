@@ -2,6 +2,7 @@ mod framedata;
 mod images; 
 mod framedata_json;
 mod images_json;
+use colored::Colorize;
 use crate::{Context, Error, CHARS, check, find};
 use crate::serenity::futures::{Stream, StreamExt, self};
 
@@ -62,7 +63,7 @@ pub async fn update (
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
-            println!("Error: {}", err);
+            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }
     };
 
@@ -122,7 +123,7 @@ pub async fn update (
     else {
         let error_msg= &("Selection `".to_owned() + &option + "` is invalid!");
         ctx.say(error_msg).await?;
-        println!("{}", "Error: Selection '".to_owned() + &option + "' is invalid!");
+        println!("{}", ("Error: Selection '".to_owned() + &option + "' is invalid!").red());
         return Ok(());
     }
 

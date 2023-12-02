@@ -1,4 +1,5 @@
 use std::{fs, string::String};
+use colored::Colorize;
 use crate::serenity::futures::{Stream, StreamExt, self};
 use crate::{Context, Error, MoveInfo, MoveAliases };
 use crate::{CHARS, find, check};
@@ -21,7 +22,7 @@ pub async fn moves(
     #[autocomplete = "autocomplete_character"] character: String,
 ) -> Result<(), Error> {
 
-    println!("Command Args: '{}'", character);
+    println!("{}", ("Command Args: '".to_owned() + &character + "'").purple());
 
     if (check::adaptive_check(
         ctx,
@@ -41,7 +42,7 @@ pub async fn moves(
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
-            println!("Error: {}", err);
+            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }
     };
 
@@ -53,7 +54,7 @@ pub async fn moves(
     // Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
 
-    println!("Successfully read '{}.json' file.", character_arg_altered);
+    println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
 
     // Reading the aliases json
     let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";

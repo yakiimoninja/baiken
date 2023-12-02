@@ -1,3 +1,4 @@
+use colored::Colorize;
 use crate::{Context, Error};
 use crate::serenity::futures::{Stream, StreamExt, self};
 
@@ -29,7 +30,7 @@ pub async fn help(ctx: Context<'_>,
     #[autocomplete = "autocomplete_help"] option: String
     ) -> Result<(), Error> {
     
-    println!("Command Args: '{}'", &option);
+        println!("{}", ("Command Args: '".to_owned() + &option + "'").purple());
 
     let help_message;
 
@@ -49,7 +50,8 @@ pub async fn help(ctx: Context<'_>,
         _ => {
             help_message = "Help for `".to_owned().to_string() + &option + "` not found!";
             ctx.say(&help_message).await?;
-            println!("Error: {}", &help_message);
+            println!("{}", ("Error: ".to_owned() + &help_message).red());
+
             return Ok(());
         }
     }
@@ -63,7 +65,6 @@ __**List of commands**__
 ```frames``````
 hitboxes``````
 fmeter``````
-aliases``````
 moves``````
 nicknames``````
 feedback``````

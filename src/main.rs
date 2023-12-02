@@ -2,6 +2,7 @@ mod commands;
 mod check;
 mod find;
 mod ran;
+use colored::Colorize;
 use commands::*;
 use poise::serenity_prelude as serenity;
 use serde::{Serialize, Deserialize};
@@ -90,13 +91,13 @@ async fn on_error(error: poise::FrameworkError<'_, Data, Error>) {
     // They are many errors that can occur, so we only handle the ones we want to customize
     // and forward the rest to the default handler
     match error {
-        poise::FrameworkError::Setup { error, .. } => panic!("Failed to start bot: {:?}.", error),
+        poise::FrameworkError::Setup { error, .. } => panic!("{}", ("Failed to start bot: ".to_owned() + &error.to_string() + ".").red()),
         poise::FrameworkError::Command { error, ctx } => {
-            println!("Error in command `{}`: {:?}.", ctx.command().name, error,);
+            println!("{}", ("Error in command `".to_owned() + &ctx.command().name + "`: " + &error.to_string() + ".").red());
         }
         error => {
             if let Err(e) = poise::builtins::on_error(error).await {
-                println!("Error while handling error: {}.", e)
+                println!("{}", ("Error while handling error: ".to_owned() + &e.to_string() + ".").red())
             }
         }
     }
@@ -140,14 +141,14 @@ async fn main() {
         // This code is run before every command
         pre_command: |ctx| {
             Box::pin(async move {
-                println!("\nExecuting command {}...", ctx.command().qualified_name);
+                println!("{}", ("\nExecuting command ".to_owned() + &ctx.command().qualified_name + "...").cyan());
             })
         },
 
         // This code is run after a command if it was successful (returned Ok)
         post_command: |ctx| {
             Box::pin(async move {
-                println!("Executed command {}!", ctx.command().qualified_name);
+                println!("{}", ("Executed command ".to_owned() + &ctx.command().qualified_name + "!").cyan());
             })
         },
 

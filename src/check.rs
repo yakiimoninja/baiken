@@ -1,4 +1,5 @@
 use std::{fs, path::Path};
+use colored::Colorize;
 use crate::{CHARS, Nicknames, Context, Error};
 
 // Collection of functions that check for stuff
@@ -17,7 +18,7 @@ pub async fn data_folder_exists(init_check: bool) -> Option<String> {
             // Printing the error message in the console
             // If it is the initial check
             println!();
-            panic!("{}", error_msg);
+            panic!("{}", error_msg.red());
         }
         else {
             // Returning the error message for in-discord printing
@@ -34,7 +35,7 @@ pub async fn nicknames_json_exists(init_check: bool) -> Option<String> {
 
     match serde_json::from_str::<Vec<Nicknames>>(&data_from_file) {
         Ok(_) => {
-            println!("Successfully read 'nicknames.json' file.");
+            println!("{}", "Successfully read 'nicknames.json' file.".green());
             None
         },
         Err(_) => {
@@ -44,7 +45,7 @@ pub async fn nicknames_json_exists(init_check: bool) -> Option<String> {
                 // Printing the error message in the console
                 // If it is the initial check
                 println!();
-                panic!("{}", error_msg);
+                panic!("{}", error_msg.red());
             }
             else {
                 // Returning the error message for in-discord printing
@@ -70,7 +71,7 @@ pub async fn character_folders_exist(init_check: bool) -> Option<String> {
                 // Printing the error message in the console
                 // If it is the initial check
                 println!();
-                panic!("{}", error_msg);
+                panic!("{}", error_msg.red());
             }
             else {
                 // Returning the error message for in-discord printing
@@ -97,7 +98,7 @@ pub async fn character_jsons_exist(init_check: bool) -> Option<String> {
                 // Printing the error message in the console
                 // If it is the initial check
                 println!();
-                panic!("{}", error_msg);
+                panic!("{}", error_msg.red());
             }
             else {
                 // Returning the error message for in-discord printing
@@ -105,7 +106,7 @@ pub async fn character_jsons_exist(init_check: bool) -> Option<String> {
             }
         }
     }
-    println!("Successfully read {} character.json files.", &CHARS.len());
+    println!("{}", ("Successfully read ".to_owned() + &CHARS.len().to_string() + " character.json files.").green());
 
     None
 }
@@ -125,7 +126,7 @@ pub async fn character_images_exist(init_check: bool) -> Option<String> {
                 // Printing the error message in the console
                 // If it is the initial check
                 println!();
-                panic!("{}", error_msg);
+                panic!("{}", error_msg.red());
             }
             else {
                 // Returning the error message for in-discord printing
@@ -182,7 +183,7 @@ pub async fn adaptive_check(
         // Checking if character user argument is correct
         if let Some(error_msg) = correct_character_arg(correct_character_check.1).await {
             ctx.say(&error_msg).await?;
-            println!("Error: {}", error_msg);
+            println!("{}", ("Error: ".to_owned() + &error_msg.to_string()).red());
             checks_passed = false;
         }
     }
@@ -190,7 +191,7 @@ pub async fn adaptive_check(
         // Checking if move user argument is correct
         if let Some(error_msg) = correct_character_move_arg(correct_character_move_check.1).await {
             ctx.say(&error_msg).await?;
-            println!("Error: {}", error_msg);
+            println!("{}", ("Error: ".to_owned() + &error_msg.to_string()).red());
             checks_passed = false;
         }
     }
@@ -199,7 +200,7 @@ pub async fn adaptive_check(
         if let Some(error_msg) = data_folder_exists(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
-            panic!("{}", error_msg.replace('\n', " "));
+            panic!("{}", error_msg.replace('\n', " ").red());
         }
     }
     if nicknames_json_check {        
@@ -207,7 +208,7 @@ pub async fn adaptive_check(
         if let Some(error_msg) = nicknames_json_exists(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
-            panic!("{}", error_msg.replace('\n', " "));
+            panic!("{}", error_msg.replace('\n', " ").red());
         }
     }
     if character_folders_check {       
@@ -215,7 +216,7 @@ pub async fn adaptive_check(
         if let Some(error_msg) = character_folders_exist(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
-            panic!("{}", error_msg.replace('\n', " "));
+            panic!("{}", error_msg.replace('\n', " ").red());
         }
     }
     if character_jsons_check {        
@@ -223,7 +224,7 @@ pub async fn adaptive_check(
         if let Some(error_msg) = character_jsons_exist(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
-            panic!("{}", error_msg.replace('\n', " "));
+            panic!("{}", error_msg.replace('\n', " ").red());
         }
     }
     if character_images_check {        
@@ -231,7 +232,7 @@ pub async fn adaptive_check(
         if let Some(error_msg) = data_folder_exists(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
-            panic!("{}", error_msg.replace('\n', " "));
+            panic!("{}", error_msg.replace('\n', " ").red());
         }
     }
     

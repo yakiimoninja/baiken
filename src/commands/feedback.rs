@@ -1,4 +1,5 @@
 use std::{fs::OpenOptions, io::Write};
+use colored::Colorize;
 use crate::{Context, Error};
 
 /// Gives feedback or requests something from the dev.
@@ -20,7 +21,7 @@ pub async fn feedback(
     write!(file, "{}", new_text)
         .expect("\nFailed to write to 'request.txt'");
     
-    println!("Done writting to 'request.txt'");
+    println!("{}", "Done writting to 'request.txt'".yellow());
     ctx.say("Submitted successfully!").await?;
 
     Ok(())

@@ -2,11 +2,10 @@ use std::fs::OpenOptions;
 use std::io::Write;
 use std::path::Path;
 use std::time::Instant;
+use colored::Colorize;
 use tokio::fs::remove_file;
 use crate::CHARS;
 use crate::commands::update::framedata_json::frames_to_json;
-//use crate::Data;
-//use crate::char_json::data_to_json::write_data_to_json;
 extern crate ureq;
 
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=cargoquery&format=json&limit=100&tables=MoveData_GGST&fields=MoveData_GGST.input%2C%20MoveData_GGST.name%2C%20MoveData_GGST.damage%2C%20MoveData_GGST.guard%2C%20MoveData_GGST.invuln%2C%20MoveData_GGST.startup%2C%20MoveData_GGST.active%2C%20MoveData_GGST.recovery%2C%20MoveData_GGST.onHit%2C%20MoveData_GGST.onBlock%2C%20MoveData_GGST.level%2C%20MoveData_GGST.riscGain%2C%20MoveData_GGST.prorate%2C%20MoveData_GGST.counter&where=chara%3D%22";
@@ -20,7 +19,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     
         for (x, char_id) in chars_ids.iter().enumerate() {
     
-            println!("Creating '{}.json' file.", char_id);
+            println!("{}", ("Creating '".to_owned() + &char_id + ".json' file.").green());
             
             let char_json_path = "data/".to_owned() + char_id +"/"+ char_id + ".json";
     
@@ -70,7 +69,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     }
     else {
 
-        println!("Creating '{}.json' file.", specific_char);
+        println!("{}", ("Creating '".to_owned() + specific_char + ".json' file.").green());
 
         let char_json_path = "data/".to_owned() + specific_char +"/"+ specific_char + ".json";
 
@@ -120,5 +119,5 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
     }
     
     let elapsed_time = now.elapsed();
-    println!("Updated in {} seconds.", elapsed_time.as_secs());
+    println!("{}", ("Updated in ".to_owned() + &elapsed_time.as_secs().to_string() + " seconds.").yellow());
 }

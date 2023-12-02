@@ -1,4 +1,5 @@
 use std::{fs, string::String};
+use colored::Colorize;
 use crate::serenity::futures::{Stream, StreamExt, self};
 use crate::{Context, Error, ImageLinks , MoveInfo };
 use crate::{HITBOX_DEFAULT, CHARS, find, check};
@@ -23,7 +24,7 @@ pub async fn hitboxes(
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
-    println!("Command Args: '{}, {}'", character, character_move);
+    println!("{}", ("Command Args: '".to_owned() + &character + ", " + &character_move + "'").purple());
 
     // This will store the full character name in case user input was an alias
     let mut character_arg_altered = String::new();
@@ -46,7 +47,7 @@ pub async fn hitboxes(
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
-            println!("Error: {}", err);
+            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }
     };
 
@@ -58,7 +59,7 @@ pub async fn hitboxes(
     // Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();
            
-    println!("Successfully read '{}.json' file.", character_arg_altered);
+    println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
 
     // Finding move struct index 
     let mframes_index = find::find_move_index(&character_arg_altered, character_move, &moves_info).await;
@@ -66,7 +67,7 @@ pub async fn hitboxes(
         Ok(index) => index,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
-            println!("Error: {}", err);
+            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }    
     };
 
@@ -86,7 +87,7 @@ pub async fn hitboxes(
         // Iterating through the image.json to find the move's hitbox links
         if mframes.input == img_links.input {
 
-            println!("Successfully read move '{}' in '{}.json' file.", &mframes.input.to_string(), &character_arg_altered);
+            println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
             
             if !img_links.hitbox_img[0].is_empty() {
 
