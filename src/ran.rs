@@ -1,3 +1,4 @@
+use colored::Colorize;
 use rand::Rng;
 
 pub async fn random_p() -> Option<String>{
@@ -8,14 +9,16 @@ pub async fn random_p() -> Option<String>{
 
     if chance == 1 {
         
-        let extra = rng.gen_bool(1.0 / 3.0);
+        let neco = true;//rng.gen_bool(1.0 / 3.0);
 
-        if extra {
+        if !neco {
             let number = rng.gen_range(1..31);
+            println!("EG link: {}", ("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/".to_owned() + &number.to_string() + ".png").yellow());
             Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/".to_owned() + &number.to_string() + ".png")
         }
         else{
             let number = rng.gen_range(1..31);
+            println!("EG link: {}", ("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/neco/".to_owned() + &number.to_string() + ".png").yellow());
             Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/neco/".to_owned() + &number.to_string() + ".png")
         } 
     }
