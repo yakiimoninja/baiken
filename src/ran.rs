@@ -7,7 +7,7 @@ pub async fn random_p() -> Option<String>{
 
     let chance = rng.gen_range(1..101);
 
-    if chance >= 1 {
+    if chance == 1 {
         
         let neco = rng.gen_bool(1.0 / 3.0);
 
