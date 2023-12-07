@@ -1,7 +1,6 @@
 mod commands;
 mod check;
 mod find;
-mod ran;
 use colored::Colorize;
 use commands::*;
 use poise::serenity_prelude as serenity;

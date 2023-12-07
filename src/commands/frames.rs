@@ -1,7 +1,7 @@
 use std::{fs, string::String};
 use colored::Colorize;
 use crate::serenity::futures::{Stream, StreamExt, self};
-use crate::{Context, Error, ImageLinks , MoveInfo, ran };
+use crate::{Context, Error, ImageLinks , MoveInfo};
 use crate::{IMAGE_DEFAULT, CHARS, find, check};
 
 // Autocompletes the character name
@@ -121,10 +121,6 @@ pub async fn frames(
     //ctx.say(r"Baiken enters season 2 with a new version 0.5.0!
 //As always a link to the patch notes is below.
 //__<https://github.com/yakiimoninja/baiken/releases>__").await?;
-
-    if let Some(image_path) = ran::random_p().await {
-        image_embed = image_path;
-    }
 
     // Sending the data as an embed
     let _msg = ctx.send(|m| {
