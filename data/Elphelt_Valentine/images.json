@@ -57,7 +57,7 @@
 },
 	{
   "input": "5K",
-  "move_img": "https://www.dustloop.com/wiki/images/c/cc/GGST_Elphelt_Valentineo_5K.png",
+  "move_img": "https://www.dustloop.com/wiki/images/e/e0/GGST_Elphelt_Valentine_5K.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/1/15/GGST_Elphelt_Valentine_5K_Hitbox.png"
   ]
@@ -136,7 +136,8 @@
   "input": "j.S",
   "move_img": "https://www.dustloop.com/wiki/images/6/67/GGST_Elphelt_Valentine_jS.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/9a/GGST_Elphelt_Valentine_jS_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/8/80/GGST_Elphelt_Valentine_jS_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/2/28/GGST_Elphelt_Valentine_jS_Hitbox_2.png"
   ]
 },
 	{
@@ -210,10 +211,19 @@
   ]
 },
 	{
-  "input": "214S~S",
-  "move_img": "https://www.dustloop.com/wiki/images/2/25/GGST_Elphelt_Valentine_214SS.png",
+  "input": "214S~P/K~K",
+  "move_img": "https://www.dustloop.com/wiki/images/d/da/GGST_Elphelt_Valentine_214SKK.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/d1/GGST_Elphelt_Valentine_214SS_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/b/be/GGST_Elphelt_Valentine_214SKK_Hitbox.png"
+  ]
+},
+	{
+  "input": "214S~P/K~P",
+  "move_img": "https://www.dustloop.com/wiki/images/b/b2/GGST_Elphelt_Valentine_214SPP.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/5/51/GGST_Elphelt_Valentine_214SPP_1_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/d/dc/GGST_Elphelt_Valentine_214SPP_2_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/7/7e/GGST_Elphelt_Valentine_214SPP_3_Hitbox.png"
   ]
 },
 	{
@@ -239,9 +249,9 @@
 },
 	{
   "input": "236236K Explosion",
-  "move_img": "https://www.dustloop.com/wiki/images/6/69/GGST_Elphelt_Valentine_236236K.png",
+  "move_img": "https://www.dustloop.com/wiki/images/6/6f/GGST_Elphelt_Valentine_236236K_Explosion.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/02/GGST_Elphelt_Valentine_236236K_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/3/30/GGST_Elphelt_Valentine_236236K_Explosion_Hitbox.png"
   ]
 },
 	{
