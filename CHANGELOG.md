@@ -4,6 +4,11 @@
 - Added Elphelt Valentine.
 - Updated framedata.
 
+### Nicknames
+- `Elphelt Valentine`:
+    - Added nicknames `Elphelt Valentine`, `Die`, `EV`.
+
+
 ### Move Aliases
 - **`Elphelt Valentine`**:
     -`236S` added aliases: `Miss Charlotte`, `Fireball`, `FB`, `MC`.
