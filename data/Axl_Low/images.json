@@ -186,6 +186,13 @@
   ]
 },
 	{
+  "input": "214K",
+  "move_img": "https://www.dustloop.com/wiki/images/f/f1/GGST_Axl_Low_214K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/6/64/GGST_Axl_Low_Whistling_Wind_Hitbox.png"
+  ]
+},
+	{
   "input": "214S",
   "move_img": "https://www.dustloop.com/wiki/images/2/21/GGST_Axl_Low_214S.png",
   "hitbox_img": [

@@ -207,6 +207,13 @@
   ]
 },
 	{
+  "input": "41236H",
+  "move_img": "https://www.dustloop.com/wiki/images/b/bb/GGST_Potemkin_Heat_Tackle.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/dd/GGST_Potemkin_Heat_Tackle_Hitbox.png"
+  ]
+},
+	{
   "input": "623H",
   "move_img": "https://www.dustloop.com/wiki/images/d/d0/GGST_Potemkin_Heat_Knuckle_1.png",
   "hitbox_img": [
