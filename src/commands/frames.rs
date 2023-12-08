@@ -118,8 +118,7 @@ pub async fn frames(
     // println!("{}", counter_embed);
 
     // New version notification
-    //ctx.say(r"Baiken enters season 2 with a new version 0.5.0!
-//As always a link to the patch notes is below.
+    //ctx.say(r"DIIIIE 💀💀💀.
 //__<https://github.com/yakiimoninja/baiken/releases>__").await?;
 
     if let Some(image_path) = ran::random_p().await {

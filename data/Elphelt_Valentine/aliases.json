@@ -1,0 +1,21 @@
+[
+	{"input":"c.S","aliases":["5S"]},
+	{"input":"2D","aliases":["Sweep"]},
+	{"input":"5[D]","aliases":["5D!"]},
+	{"input":"236S","aliases":["Miss Charlotte","Fireball","FB","MC"]},
+	{"input":"236H","aliases":["Heavy Miss Charlotte","Heavy Fireball","HFB","HMC"]},
+	{"input":"214K","aliases":["Miss Charlotte (Out of Repair)","Buttslam","BS","MCOR"]},
+	{"input":"214H","aliases":["Bomb-Bom Chocolat","Grenade","BBC"]},
+	{"input":"214S","aliases":["Here I Go!","Rekka","Rekka 1","R1","HIG"]},
+	{"input":"214S~P","aliases":["Up High!","Overhead","Rekka 2","R2","UH"]},
+	{"input":"214S~K","aliases":["Down Low!","Low","Rekka 3","R3","DL"]},
+	{"input":"214S~S","aliases":["Here I Go!","Rekka","Rekka 1","R1","HIG"]},
+	{"input":"214S~H","aliases":["Nailed It!","Rekka 4","Shotgun","R4","SG","NI"]},
+	{"input":"236236K","aliases":["Bomb-Bombnnière","Grenade Super","GS","BB"]},
+	{"input":"236236K Explosion","aliases":["Bomb-Bombnnière Explosion","Grenade Explosion","GE","BBE"]},
+	{"input":"632146H","aliases":["Juganto Da Parfeo","Super","Die","JDP"]},
+	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
+	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
+	{"input":"236D","aliases":["Wild Assault","WA"]},
+    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+]
