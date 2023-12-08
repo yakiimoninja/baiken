@@ -80,14 +80,17 @@
   "input": "6H",
   "move_img": "https://www.dustloop.com/wiki/images/e/ee/GGST_Elphelt_Valentine_6H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/5/50/GGST_Elphelt_Valentine_6H_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/9/9f/GGST_Elphelt_Valentine_6H_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/f/ff/GGST_Elphelt_Valentine_6H_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/3/3c/GGST_Elphelt_Valentine_6H_Hitbox_3.png"
   ]
 },
 	{
   "input": "6P",
   "move_img": "https://www.dustloop.com/wiki/images/f/f6/GGST_Elphelt_Valentine_6P.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/4/4c/GGST_Elphelt_Valentine_6P_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/f/f3/GGST_Elphelt_Valentine_6P_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/f/f8/GGST_Elphelt_Valentine_6P_Hitbox_2.png"
   ]
 },
 	{
