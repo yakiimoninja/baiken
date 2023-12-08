@@ -1,3 +1,29 @@
+# Version 0.18.0 Patch Notes.
+
+### General
+- Added Elphelt Valentine.
+- Updated framedata.
+
+### Move Aliases
+- **`Elphelt Valentine`**:
+    -`236S` added aliases: `Miss Charlotte`, `Fireball`, `FB`, `MC`.
+	-`236H` added aliases: `Heavy Miss Charlotte`, `Heavy Fireball`, `HFB`, `HMC`.
+	-`214K` added aliases: `Miss Charlotte (Out of Repair)`, `Buttslam`, `BS`, `MCOR`.
+	-`214H` added aliases: `Bomb-Bom Chocolat`, `Grenade`, `BBC` (lol).
+	-`214S` added aliases: `Here I Go!`, `Rekka`, `Rekka 1`, `R1`, `HIG`.
+	-`214S~S` added aliases: `Here I Go!`, `Rekka`, `Rekka 1`, `R1`, `HIG`.
+	-`214S~P` added aliases: `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`.
+	-`214S~K` added aliases: `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`.
+	-`214S~H` added aliases: `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`.
+	-`236236K` added aliases: `Bomb-Bombnnière`, `Grenade Super`, `GS`, `BB`.
+	-`236236K Explosion` added aliases: `Bomb-Bombnnière Explosion`, `Grenade Explosion`, `GE`, `BBE`.
+	-`632146H` added aliases: `Juganto Da Parfeo`, `Super`, `Die`, `JDP`.
+    
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.17.0 Patch Notes.
 
 ### General
