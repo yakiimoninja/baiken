@@ -168,14 +168,16 @@
   "input": "j.6D or j.4D",
   "move_img": "https://www.dustloop.com/wiki/images/2/28/GGST_Elphelt_Valentine_Air_Throw.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b3/GGST_Elphelt_Valentine_Air_Throw_Hitbox.png"
+    ""
   ]
 },
 	{
   "input": "214H",
   "move_img": "https://www.dustloop.com/wiki/images/9/9d/GGST_Elphelt_Valentine_214H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/1/1b/GGST_Elphelt_Valentine_214H_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/4/43/GGST_Elphelt_Valentine_214H_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/7/7d/GGST_Elphelt_Valentine_214H_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/7/72/GGST_Elphelt_Valentine_214H_Hitbox_3.png"
   ]
 },
 	{
@@ -189,7 +191,8 @@
   "input": "214S",
   "move_img": "https://www.dustloop.com/wiki/images/7/73/GGST_Elphelt_Valentine_214S.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/71/GGST_Elphelt_Valentine_214S_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/7/71/GGST_Elphelt_Valentine_214S_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/d/d8/GGST_Elphelt_Valentine_214S~S_Hitbox.png"
   ]
 },
 	{
@@ -210,7 +213,9 @@
   "input": "214S~P",
   "move_img": "https://www.dustloop.com/wiki/images/d/db/GGST_Elphelt_Valentine_214SP.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/be/GGST_Elphelt_Valentine_214SP_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/2/26/GGST_Elphelt_Valentine_214SP_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/d/dd/GGST_Elphelt_Valentine_214SP_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/9/99/GGST_Elphelt_Valentine_214SP_Hitbox_3.png"
   ]
 },
 	{
@@ -233,14 +238,32 @@
   "input": "236H",
   "move_img": "https://www.dustloop.com/wiki/images/b/b0/GGST_Elphelt_Valentine_236H.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/f/f2/GGST_Elphelt_Valentine_236H_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/a/a1/GGST_Elphelt_Valentine_236H_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/a/ae/GGST_Elphelt_Valentine_236H_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/d/d4/"
   ]
 },
 	{
   "input": "236S",
   "move_img": "https://www.dustloop.com/wiki/images/6/61/GGST_Elphelt_Valentine_236S.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/f/fd/GGST_Elphelt_Valentine_236S_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/6/61/GGST_Elphelt_Valentine_236S_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/1/1d/GGST_Elphelt_Valentine_236S_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/d/d4/"
+  ]
+},
+	{
+  "input": "j.236H",
+  "move_img": "https://www.dustloop.com/wiki/images/7/7d/GGST_Elphelt_Valentine_j236H.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/2/2e/GGST_Elphelt_Valentine_j236H_Hitbox.png"
+  ]
+},
+	{
+  "input": "j.236S",
+  "move_img": "https://www.dustloop.com/wiki/images/7/78/GGST_Elphelt_Valentine_j236S.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/b/b5/GGST_Elphelt_Valentine_j236S_Hitbox.png"
   ]
 },
 	{
@@ -259,7 +282,7 @@
 },
 	{
   "input": "632146H",
-  "move_img": "https://www.dustloop.com/wiki/images/f/fc/GGST_Elphelt_Valentine_632146H.png",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a6/GGST_Elphelt_Valentine_632146H_1.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/5/50/GGST_Elphelt_Valentine_632146H_Hitbox.png"
   ]
