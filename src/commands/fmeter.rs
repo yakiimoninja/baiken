@@ -1,22 +1,21 @@
 use std::{fs, string::String};
 use colored::Colorize;
-use crate::serenity::futures::{Stream, StreamExt, self};
 use crate::{Context, Error, ImageLinks , MoveInfo };
-use crate::{IMAGE_DEFAULT, CHARS, find, check};
+use crate::{IMAGE_DEFAULT, find, check};
 
 const GREEN_CIRCLE: &str = "🟢";
 const RED_SQUARE: &str = "🟥";
 const BLUE_DIAMOND: &str = "🔷";
 
 // Autocompletes the character name
-async fn autocomplete_character<'a>(
-    _ctx: Context<'_>,
-    partial: &'a str,
-) -> impl Stream<Item = String> + 'a {
-    futures::stream::iter(&CHARS)
-        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
-        .map(|name| name.to_string())
-}
+// async fn autocomplete_character<'a>(
+//     _ctx: Context<'_>,
+//     partial: &'a str,
+// ) -> impl Stream<Item = String> + 'a {
+//     futures::stream::iter(&CHARS)
+//         .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+//         .map(|name| name.to_string())
+// }
 
 /// Displays the frame meter of a move.
 #[allow(unused_assignments)]
@@ -24,7 +23,8 @@ async fn autocomplete_character<'a>(
 pub async fn fmeter(
     ctx: Context<'_>,
     #[description = "Character name or nickname."]
-    #[autocomplete = "autocomplete_character"] character: String,
+    //#[autocomplete = "autocomplete_character"] 
+    character: String,
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 

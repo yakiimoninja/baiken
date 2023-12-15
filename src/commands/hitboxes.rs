@@ -1,18 +1,17 @@
 use std::{fs, string::String};
 use colored::Colorize;
-use crate::serenity::futures::{Stream, StreamExt, self};
 use crate::{Context, Error, ImageLinks , MoveInfo };
-use crate::{HITBOX_DEFAULT, CHARS, find, check};
+use crate::{HITBOX_DEFAULT, find, check};
 
 // Autocompletes the character name
-async fn autocomplete_character<'a>(
-    _ctx: Context<'_>,
-    partial: &'a str,
-) -> impl Stream<Item = String> + 'a {
-    futures::stream::iter(&CHARS)
-        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
-        .map(|name| name.to_string())
-}
+// async fn autocomplete_character<'a>(
+//     _ctx: Context<'_>,
+//     partial: &'a str,
+// ) -> impl Stream<Item = String> + 'a {
+//     futures::stream::iter(&CHARS)
+//         .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
+//         .map(|name| name.to_string())
+// }
 
 /// Displays the hitbox images of a character's move.
 #[allow(unused_assignments)]
@@ -20,7 +19,8 @@ async fn autocomplete_character<'a>(
 pub async fn hitboxes(
     ctx: Context<'_>,
     #[description = "Character name or nickname."]
-    #[autocomplete = "autocomplete_character"] character: String,
+    //#[autocomplete = "autocomplete_character"] 
+    character: String,
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
