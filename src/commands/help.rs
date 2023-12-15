@@ -11,7 +11,6 @@ async fn autocomplete_help<'a>(
         "frames",
         "hitboxes",
         "fmeter",
-        "aliases",
         "moves",
         "nicknames",
         "notes",
@@ -35,7 +34,6 @@ pub async fn help(ctx: Context<'_>,
     let help_message;
 
     match option.trim() {
-        "aliases" => help_aliases(ctx).await,
         "feedback" => help_feedback(ctx).await,
         "fmeter" => help_fmeter(ctx).await,
         "frames" => help_frames(ctx).await,
@@ -78,19 +76,6 @@ __<https://github.com/sponsors/yakiimoninja>__
 "#;
 
     let _ = ctx.say(help_msg).await;
-}
-
-async fn help_aliases(ctx: Context<'_>) {
-    let help_msg = r#"
-__**Command**__: `/aliases`.
-__**Example**__: `/aliases leo`.
-
-__**character_arg**__: Character name or nickname. Cannot be empty.
-
-Displays all the aliases for each normal/special/super move of a character."#;
-    
-    let _ = ctx.say(help_msg).await;
-    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/aliases.png").await;
 }
 
 async fn help_feedback(ctx: Context<'_>) {
@@ -154,7 +139,7 @@ __**Example**__: `/moves sol`.
 
 __**character_arg**__: Character name or nickname. Cannot be empty.
 
-Displays all the moves and inputs of a character."#;
+Displays all the moves, inputs and move aliases of a character."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/moves.png").await;

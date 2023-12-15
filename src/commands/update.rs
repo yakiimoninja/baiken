@@ -6,17 +6,7 @@ use colored::Colorize;
 use crate::{Context, Error, CHARS, check, find};
 use crate::serenity::futures::{Stream, StreamExt, self};
 
-// Autocompletes the character name
-async fn autocomplete_character<'a>(
-    _ctx: Context<'_>,
-    partial: &'a str,
-) -> impl Stream<Item = String> + 'a {
-    futures::stream::iter(&CHARS)
-        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
-        .map(|name| name.to_string())
-}
-
-// Autocompletes the character name
+// Autocompletes the update option
 async fn autocomplete_option<'a>(
     _ctx: Context<'_>,
     partial: &'a str,
@@ -30,8 +20,7 @@ async fn autocomplete_option<'a>(
 #[poise::command(prefix_command, slash_command, aliases("u"), owners_only)]
 pub async fn update (
     ctx: Context<'_>,
-    #[description = r#"Character name, nickname or "all"."#]
-    #[autocomplete = "autocomplete_character"] character: String,
+    #[description = r#"Character name, nickname or "all"."#] character: String,
     #[description = r#"Select "frames", "images" or "all"."#]
     #[autocomplete = "autocomplete_option"] option: String,
 ) -> Result<(), Error> {

@@ -3,24 +3,12 @@ use colored::Colorize;
 use crate::{Context, Error, ImageLinks , MoveInfo, ran };
 use crate::{IMAGE_DEFAULT, find, check};
 
-// Autocompletes the character name
-// async fn autocomplete_character<'a>(
-//     _ctx: Context<'_>,
-//     partial: &'a str,
-// ) -> impl Stream<Item = String> + 'a {
-//     futures::stream::iter(&CHARS)
-//         .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
-//         .map(|name| name.to_string())
-// }
-
 /// Displays the frame data of a move along with an image.
 #[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command, aliases("f"))]
 pub async fn frames(
     ctx: Context<'_>,
-    #[description = "Character name or nickname."]
-    //#[autocomplete = "autocomplete_character"] 
-    character: String,
+    #[description = "Character name or nickname."] character: String,
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
