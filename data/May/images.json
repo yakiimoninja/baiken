@@ -222,7 +222,11 @@
   "input": "[2]8S",
   "move_img": "https://www.dustloop.com/wiki/images/f/ff/GGST_May_Mr._Dolphin_Vertical.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/a/ad/GGST_May_Mr._Dolphin_Vertical_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/a/ad/GGST_May_Mr._Dolphin_Vertical_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/9/9c/GGST_May_28S_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/0/0d/GGST_May_28S_Hitbox_3.png",
+    "https://www.dustloop.com/wiki/images/e/e2/GGST_May_28S_Hitbox_4.png",
+    "https://www.dustloop.com/wiki/images/f/f0/GGST_May_28S_Hitbox_5.png"
   ]
 },
 	{
