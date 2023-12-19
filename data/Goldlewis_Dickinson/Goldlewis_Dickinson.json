@@ -1,9 +1,9 @@
 [
 	{"input":"2D","name":"2D","damage":"34","guard":"Low","startup":"14","active":"3","recovery":"24","hit":"HKD +43","block":"-10","level":"3","counter":"Large","scaling":"90%","riscgain":"1500","invincibility":"none"},
 	{"input":"2H","name":"2H","damage":"43","guard":"All","startup":"20","active":"4","recovery":"30","hit":"KD +28","block":"-15","level":"4","counter":"Large","scaling":"90%","riscgain":"2500","invincibility":"none"},
-	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"8","active":"3","recovery":"11","hit":"0","block":"-2","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"none"},
+	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"7","active":"3","recovery":"11","hit":"0","block":"-2","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"none"},
 	{"input":"2P","name":"2P","damage":"23","guard":"All","startup":"5","active":"3","recovery":"6","hit":"+6","block":"+3","level":"1","counter":"Small","scaling":"80%","riscgain":"1000","invincibility":"none"},
-	{"input":"2S","name":"2S","damage":"29","guard":"All","startup":"13","active":"5","recovery":"18","hit":"-6","block":"-9","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"none"},
+	{"input":"2S","name":"2S","damage":"29","guard":"All","startup":"13","active":"5","recovery":"13","hit":"-1","block":"-4","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"none"},
 	{"input":"5D","name":"Uncharged","damage":"50","guard":"High","startup":"20","active":"3","recovery":"26","hit":"0","block":"-15","level":"2","counter":"Mid","scaling":"80%","riscgain":"1125","invincibility":"none"},
 	{"input":"5H","name":"5H","damage":"41","guard":"All","startup":"19","active":"6","recovery":"15","hit":"+1","block":"-2","level":"4","counter":"Large","scaling":"90%","riscgain":"2500","invincibility":"none"},
 	{"input":"5K","name":"5K","damage":"33","guard":"Low","startup":"10","active":"9","recovery":"12","hit":"-4","block":"-7","level":"2","counter":"Small","scaling":"70%","riscgain":"1125","invincibility":"none"},
