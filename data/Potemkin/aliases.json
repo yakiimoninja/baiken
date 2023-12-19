@@ -5,6 +5,7 @@
 	{"input":"[4]6H","aliases":["Hammer Fall","HammerFall","HF","46H"]},
 	{"input":"[4]6H P","aliases":["Hammer Fall Break","Hammerfall Break","HFB","46HP"]},
 	{"input":"632146P","aliases":["Potemkin Buster","Pot Buster","Buster","Command Grab","Hug","CG","PB"]},
+	{"input":"41236H","aliases":["Heat Tackle","Jet Thrusters","HT","JT"]},
 	{"input":"623H","aliases":["Heat Knuckle","HK"]},
 	{"input":"236P","aliases":["Mega Fist","F Mega Fist","F Megafist","Forward Mega fist","Forward Megafist","MF","FMF"]},
 	{"input":"214P","aliases":["B Mega Fist","B Megafist","Back Mega Fist","Back Megafist","Backward Megafist","Backward Mega fist","BMF"]},
