@@ -1,3 +1,21 @@
+# Version 0.19.1 Patch Notes.
+
+### General
+- Updated framedata.
+
+### Move Aliases
+- **`Axl Low`**:
+    `214K` added aliases: `Whistling Wind`, `Tornado`, `WW`.
+	`214[K]` added aliases: `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
+
+- **`Potemkin`**:
+	`41236H` added aliases: `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.19.0 Patch Notes.
 
 ### General
@@ -6,11 +24,11 @@
 
 ### Move Aliases
 - **`Elphelt Valentine`**:
-    - `214S~P` added aliases: `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`, `214SP`,
-    - `214S~K` added aliases: `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`, `214SK`,
-    - `214S~P/K~P` added aliases: `Up High! (after Up High! or Down Low!)`, `Overhead Finisher`, `Rekka 22`, `Rekka 32`, `R22`, `R32`, `UHF`, `214SPP`, `214SKP`,
-    - `214S~P/K~K` added aliases: `Down Low! (after Up High! or Down Low!)`, `Low Finisher`, `Rekka 33`, `Rekka 23`, `R23`, `R33`, `DLF`, `214SPK`, `214SKK`,
-    - `214S~H` added aliases: `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`, `214SH`,
+    - `214S~P` added aliases: `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`, `214SP`.
+    - `214S~K` added aliases: `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`, `214SK`.
+    - `214S~P/K~P` added aliases: `Up High! (after Up High! or Down Low!)`, `Overhead Finisher`, `Rekka 22`, `Rekka 32`, `R22`, `R32`, `UHF`, `214SPP`, `214SKP`.
+    - `214S~P/K~K` added aliases: `Down Low! (after Up High! or Down Low!)`, `Low Finisher`, `Rekka 33`, `Rekka 23`, `R23`, `R33`, `DLF`, `214SPK`, `214SKK`.
+    - `214S~H` added aliases: `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`, `214SH`.
 
 &#x200B;
 &#x200B;
