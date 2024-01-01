@@ -8,6 +8,16 @@
     `214K` added aliases: `Whistling Wind`, `Tornado`, `WW`.
 	`214[K]` added aliases: `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
 
+- **`Elphelt`**:
+	`236S` and `236H` merged into `236S/H` therefore all `236H` aliases are removed.
+    `236S/H` added aliases: `Miss Charlotte`, `Fireball`, `FB`, `MC`.
+
+    `j.236S` and `j.236H` merged into `j.236S/H` therefore all `j.236H` aliases are removed.
+    `j.236S/H` added aliases: `Air Miss Charlotte`, `Air Fireball`, `JF`, `AF`, `JMC`, `AMC`.
+
+- **`Johnny`**:
+	`236236S` removed alias: `CS` cause overlap with close slash.
+
 - **`Potemkin`**:
 	`41236H` added aliases: `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
 
