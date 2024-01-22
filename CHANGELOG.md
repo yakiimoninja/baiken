@@ -1,3 +1,22 @@
+# Version 0.19.2 Patch Notes.
+
+### General
+- Updated framedata.
+
+### Fixes
+- Fixed Bridget `Move 236KP was not found!` when using `Brake` as an alias.
+- Fixed Bridget `Move 236KK was not found!` when using `Shoot` as an alias.
+
+### Move Aliases
+- **`Bridget`**:
+    `236K P` added aliases: `236KP`.
+	`236K K` added aliases: `236KK`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.19.1 Patch Notes.
 
 ### General
