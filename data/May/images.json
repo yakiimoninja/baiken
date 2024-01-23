@@ -162,14 +162,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_May_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/0/00/GGST_May_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_May_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/0/00/GGST_May_236D_Hitbox.png"
   ]
 },
 	{

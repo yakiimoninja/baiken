@@ -146,14 +146,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/b/b2/GGST_Johnny_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/a/a6/GGST_Johnny_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/b/b2/GGST_Johnny_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/a/a6/GGST_Johnny_236D_Hitbox.png"
   ]
 },
 	{

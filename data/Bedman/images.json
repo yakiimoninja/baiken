@@ -141,14 +141,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/c/cb/GGST_Bedman_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/a/a1/GGST_Bedman_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/c/cb/GGST_Bedman_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/a/a1/GGST_Bedman_236D_Hitbox.png"
   ]
 },
 	{

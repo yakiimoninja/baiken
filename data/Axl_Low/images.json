@@ -155,14 +155,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/e/ee/GGST_Axl_Low_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/3/31/GGST_Axl_Low_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/e/ee/GGST_Axl_Low_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/3/31/GGST_Axl_Low_236D_Hitbox.png"
   ]
 },
 	{

@@ -160,7 +160,7 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/e/e9/GGST_Faust_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/3/37/GGST_Faust_236D_Hitbox.png"
   ]
 },
 	{
@@ -241,7 +241,7 @@
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/e/e9/GGST_Faust_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/3/37/GGST_Faust_236D_Hitbox.png"
   ]
 },
 	{

@@ -368,14 +368,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/0/03/GGST_Nagoriyuki_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/7/7e/GGST_Nagoriyuki_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/0/03/GGST_Nagoriyuki_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/7/7e/GGST_Nagoriyuki_236D_Hitbox.png"
   ]
 },
 	{

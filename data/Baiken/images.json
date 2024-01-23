@@ -149,14 +149,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/4/45/GGST_Baiken_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/d/d4/GGST_Baiken_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/4/45/GGST_Baiken_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/d/d4/GGST_Baiken_236D_Hitbox.png"
   ]
 },
 	{

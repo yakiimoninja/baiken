@@ -152,14 +152,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/2/2e/GGST_Millia_Rage_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/d/da/GGST_Millia_Rage_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/2/2e/GGST_Millia_Rage_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/d/da/GGST_Millia_Rage_236D_Hitbox.png"
   ]
 },
 	{

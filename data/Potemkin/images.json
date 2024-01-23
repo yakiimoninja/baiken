@@ -147,14 +147,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Potemkin_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/3/38/GGST_Potemkin_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Potemkin_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/3/38/GGST_Potemkin_236D_Hitbox.png"
   ]
 },
 	{
