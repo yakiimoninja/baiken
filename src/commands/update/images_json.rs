@@ -111,22 +111,22 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
             // if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim() == "" {
             //     hitboxes_link.push("".to_string());
             // }
-            // Remove any hitbox images for throws cause they dont exist
-            if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
-                hitboxes_link.push("".to_string());
+            // Remove any hitbox images for throws cause they dont exist !!!!! this breaks wa 
+            //if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
+            //    hitboxes_link.push("".to_string());
+            //}
+            //else{
+            // Splitting the hitboxes names into a vector
+            let hitbox_str: Vec<&str> = imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().split(';').collect();
+            
+            for hitbox_string in &hitbox_str{
+                // Sending hitbox names to make_link to become a vector of links
+                hitboxes_link.push(make_link(hitbox_string
+                    .to_string()
+                    .trim()
+                    .replace(' ', "_")).await);
             }
-            else{
-                // Splitting the hitboxes names into a vector
-                let hitbox_str: Vec<&str> = imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().split(';').collect();
-                
-                for hitbox_string in &hitbox_str{
-                    // Sending hitbox names to make_link to become a vector of links
-                    hitboxes_link.push(make_link(hitbox_string
-                        .to_string()
-                        .trim()
-                        .replace(' ', "_")).await);
-                }
-            }
+            //}
         }
 
         // Serializing image data
