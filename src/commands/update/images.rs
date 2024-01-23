@@ -42,7 +42,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             let mut char_images_response_json = ureq::get(&character_images_link)
                 .call()
                 .unwrap();
-            
+
             // Because dustloop site 500 a lot
             while char_images_response_json.status() == 500 {
                 char_images_response_json = ureq::get(&character_images_link)
