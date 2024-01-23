@@ -1,5 +1,6 @@
 use std::{fs, string::String};
 use colored::Colorize;
+use poise::serenity_prelude::CreateEmbed;
 use crate::{Context, Error, ImageLinks , MoveInfo, ran };
 use crate::{IMAGE_DEFAULT, find, check};
 
@@ -114,31 +115,36 @@ pub async fn frames(
     }
 
     // Sending the data as an embed
-    let _msg = ctx.send(|m| {
-        m.content(&content_embed);
-        m.embed(|e| {
-            e.color((140,75,64));
-            e.title(&title_embed);
-            //e.description("This is a description");
-            e.image(&image_embed);
-            e.fields(vec![
-                ("Damage", &mframes.damage.to_string(), true),
-                ("Guard", &mframes.guard.to_string(), true),
-                ("Invinciblity", &mframes.invincibility.to_string(), true),
-                ("Startup", &mframes.startup.to_string(), true),
-                ("Active", &mframes.active.to_string(), true),
-                ("Recovery", &mframes.recovery.to_string(), true),
-                ("On Hit", &mframes.hit.to_string(), true),
-                ("On Block", &mframes.block.to_string(), true),
-                ("Level", &mframes.level.to_string(), true),
-                ("Risc Gain", &mframes.riscgain.to_string(), true),
-                ("Scaling", &mframes.scaling.to_string(), true),
-                ("Counter", &mframes.counter.to_string(), true)]);
-            //e.field("This is the third field", "This is not an inline field", false);
-            e
-        });
-        m
-    }).await;
+    let embed = CreateEmbed::new()
+        //.description("This is a description") 
+        .color((140,75,64))
+        .title(&title_embed)
+        .image(&image_embed)
+        .fields(vec![
+            ("Damage", &mframes.damage.to_string(), true),
+            ("Guard", &mframes.guard.to_string(), true),
+            ("Invinciblity", &mframes.invincibility.to_string(), true),
+            ("Startup", &mframes.startup.to_string(), true),
+            ("Active", &mframes.active.to_string(), true),
+            ("Recovery", &mframes.recovery.to_string(), true),
+            ("On Hit", &mframes.hit.to_string(), true),
+            ("On Block", &mframes.block.to_string(), true),
+            ("Level", &mframes.level.to_string(), true),
+            ("Risc Gain", &mframes.riscgain.to_string(), true),
+            ("Scaling", &mframes.scaling.to_string(), true),
+            ("Counter", &mframes.counter.to_string(), true)
+        ]);
+        //.field("This is the third field", "This is not an inline field", false)
+        //.footer(footer)
+        // Add a timestamp for the current time
+        // This also accepts a rfc3339 Timestamp
+        //.timestamp(Timestamp::now());
+        
+    ctx.send(poise::CreateReply::default()
+        .content(&content_embed)
+        .embed(embed)
+        //.add_file(CreateAttachment::path("./ferris_eyes.png").await.unwrap());
+    ).await?;
 
     Ok(())
 }
