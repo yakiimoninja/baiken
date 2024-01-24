@@ -181,7 +181,7 @@ async fn main() {
     let token = std::env::var("DISCORD_TOKEN")
         .expect("Missing `DISCORD_TOKEN` env var, see README for more information.");
     let intents =
-        serenity::GatewayIntents::non_privileged() | serenity::GatewayIntents::MESSAGE_CONTENT;
+        serenity::GatewayIntents::non_privileged() /*| serenity::GatewayIntents::MESSAGE_CONTENT */;
 
     let client = serenity::ClientBuilder::new(token, intents)
         .framework(framework)
