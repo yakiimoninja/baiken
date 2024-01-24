@@ -106,10 +106,6 @@ pub async fn frames(
     // println!("{}", recovery_embed);
     // println!("{}", counter_embed);
 
-    // New version notification
-    //ctx.say(r"DIIIIE 💀💀💀.
-//__<https://github.com/yakiimoninja/baiken/releases>__").await?;
-
     if let Some(image_path) = ran::random_p().await {
         image_embed = image_path;
     }
@@ -145,6 +141,10 @@ pub async fn frames(
         .embed(embed)
         //.add_file(CreateAttachment::path("./ferris_eyes.png").await.unwrap());
     ).await?;
+
+    // New version notification
+    //ctx.channel_id().say(ctx, r"DIIIIE 💀💀💀.
+//__<https://github.com/yakiimoninja/baiken/releases>__").await?;
 
     Ok(())
 }
