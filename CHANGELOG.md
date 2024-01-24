@@ -1,3 +1,17 @@
+# Version 0.20.0 Patch Notes.
+
+### General
+- Codebase update (poise 0.6.1).
+- Updated framedata.
+
+### Fixes
+- Fixed the `/update` command not fetching the hitbox images for `Wild Assault` moves.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.19.2 Patch Notes.
 
 ### General
