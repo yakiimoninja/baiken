@@ -60,13 +60,13 @@ pub async fn help(ctx: Context<'_>,
 async fn help_general(ctx: Context<'_>) {
     let help_msg = r#"
 __**List of commands**__
-```frames``````
-hitboxes``````
-fmeter``````
-moves``````
-nicknames``````
-feedback``````
-help```
+1. `frames`
+2. `hitboxes`
+3. `fmeter`
+4. `moves`
+5. `nicknames`
+6. `feedback`
+7. `help`
 
 __**Patch notes:**__
 __<https://github.com/yakiimoninja/baiken/releases>__
@@ -82,9 +82,10 @@ async fn help_feedback(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/feedback`.
 
-__**text**__: Any text. Cannot be empty.
+__**text**__: Any text.
+(Field cannot be empty).
 
-Sends feedback or a request to the dev."#;
+Sends feedback or requests to the dev."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/feedback.png").await;
@@ -95,10 +96,13 @@ async fn help_fmeter(ctx: Context<'_>) {
 __**Command**__: `/fmeter`.
 __**Example**__: `/fmeter cz super`.
 
-__**character_arg**__: Character name or nickname. Cannot be empty.
-__**character_move_arg**__: Character move name, input or alias. Cannot be empty.
+__**character_arg**__: Character name or nickname.
+(Field cannot be empty).
 
-Displays visually the startup, active and recovery frames of a character's move."#;
+__**character_move_arg**__: Character move name, input or alias.
+(Field cannot be empty).
+
+Displays visually the startup, active and recovery frames of a move."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/fmeter.png").await;
@@ -109,10 +113,13 @@ async fn help_frames(ctx: Context<'_>) {
 __**Command**__: `/frames`.
 __**Example**__: `/frames baiken 236K`.
 
-__**character_arg**__: Character name or nickname. Cannot be empty.
-__**character_move_arg**__: Character move name, input or alias. Cannot be empty.
+__**character_arg**__: Character name or nickname.
+(Field cannot be empty).
 
-Displays the frame data of a move along with an image."#;
+__**character_move_arg**__: Character move name, input or alias.
+(Field cannot be empty).
+
+Displays the frame data of a move."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/frames.png").await;
@@ -123,10 +130,13 @@ async fn help_hitboxes(ctx: Context<'_>) {
 __**Command**__: `/hitboxes`. 
 __**Example**__: `/hitboxes goldlewis 426H`.
 
-__**character_arg**__: Character name or nickname. Cannot be empty.
-__**character_move_arg**__: Character move name, input or alias. Cannot be empty.
+__**character_arg**__: Character name or nickname.
+(Field cannot be empty).
 
-Displays the hitbox images of a character's move."#;
+__**character_move_arg**__: Character move name, input or alias.
+(Field cannot be empty).
+
+Displays the hitbox images of a move."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/hitboxes.png").await;
@@ -137,7 +147,8 @@ async fn help_moves(ctx: Context<'_>) {
 __**Command**__: `/moves`.
 __**Example**__: `/moves sol`.
 
-__**character_arg**__: Character name or nickname. Cannot be empty.
+__**character_arg**__: Character name or nickname.
+(Field cannot be empty).
 
 Displays all the moves, inputs and move aliases of a character."#;
     

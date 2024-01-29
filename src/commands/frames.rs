@@ -4,7 +4,7 @@ use poise::serenity_prelude::CreateEmbed;
 use crate::{Context, Error, ImageLinks , MoveInfo, ran };
 use crate::{IMAGE_DEFAULT, find, check};
 
-/// Displays the frame data of a move along with an image.
+/// Displays the frame data of a move.
 #[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command, aliases("f"))]
 pub async fn frames(

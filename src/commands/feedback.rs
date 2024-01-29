@@ -2,7 +2,7 @@ use std::{fs::OpenOptions, io::Write};
 use colored::Colorize;
 use crate::{Context, Error};
 
-/// Gives feedback or requests something from the dev.
+/// Sends feedback or requests to the dev.
 #[poise::command(prefix_command, slash_command, aliases("r"))]
 pub async fn feedback(
     ctx: Context<'_>,
