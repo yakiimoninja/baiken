@@ -28,7 +28,7 @@
 # Commands.
 ### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 ## **Command**: `/frames`.
-### Displays the frame data of a move along with an image.
+### Displays the frame data of a move.
 <details open>
     <summary>Show example.</summary>
         <p>
@@ -37,7 +37,7 @@
 </details>
 
 # **Command**: `/fmeter`.
-### Displays visually the startup, active and recovery frames of a character's move.
+### Displays visually the startup, active and recovery frames of a move.
 <details open>
     <summary>Show example.</summary>
     <p>
@@ -46,7 +46,7 @@
 </details>
 
 ## **Command**: `/hitboxes`.
-### Displays the hitbox images of a character's move.
+### Displays the hitbox images of a move.
 <details open>
     <summary>Show example.</summary>
     <p>
@@ -64,7 +64,7 @@
 </details>
 
 ## **Command**: `/nicknames`.
-### Displays all the nicknames for each character.
+### Displays all the nicknames for all characters.
 <details open>
     <summary>Show example.</summary>
     <p>
@@ -73,7 +73,7 @@
 </details>
 
 ## **Command**: `/help`.
-### Displays a help message. If used in conjunction with a command name, `notes` or `specifics` a different message wil be displayed.
+### Displays a help message. If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.
 <details open>
     <summary>Show example.</summary>
     <p>
@@ -82,7 +82,7 @@
 </details>
 
 ## **Command**: `/feedback`.
-### Sends feedback or a request to the dev.
+### Sends feedback or requests to the dev.
 <details open>
     <summary>Show example.</summary>
     <p>
