@@ -1,3 +1,19 @@
+# Version 0.20.1 Patch Notes.
+
+### General
+- Updated framedata.
+- Updated command descriptions.
+- Updated README.
+
+### Fixes
+
+- Fixed mislabed `j.214k` aliases for all `Air Mist Finers`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.20.0 Patch Notes.
 
 ### General
