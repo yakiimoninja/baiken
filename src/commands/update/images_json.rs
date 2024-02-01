@@ -36,7 +36,7 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
     for x in 0..imagedata.cargoquery.len() {
         
         // Variable that the produced hitbox links will reside
-        let mut hitboxes_link: Vec<String> = Vec::new();
+        let mut hitbox_links: Vec<String> = Vec::new();
         // Variable that the produced image link will reside
         let image_link;
 
@@ -104,16 +104,16 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
         
         // If hitbox empty
         if imagedata.cargoquery[x].title.hitboxes.is_none(){
-            hitboxes_link.push("".to_string());
+            hitbox_links.push("".to_string());
         }
         else{
             // // If image field contains only spaces
             // if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim() == "" {
-            //     hitboxes_link.push("".to_string());
+            //     hitbox_links.push("".to_string());
             // }
             // Remove any hitbox images for throws cause they dont exist !!!!! this breaks wa 
             //if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
-            //    hitboxes_link.push("".to_string());
+            //    hitbox_links.push("".to_string());
             //}
             //else{
             // Splitting the hitboxes names into a vector
@@ -121,7 +121,7 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
             
             for hitbox_string in &hitbox_str{
                 // Sending hitbox names to make_link to become a vector of links
-                hitboxes_link.push(make_link(hitbox_string
+                hitbox_links.push(make_link(hitbox_string
                     .to_string()
                     .trim()
                     .replace(' ', "_")).await);
@@ -133,7 +133,7 @@ pub async fn images_to_json(char_images_response_json: String, mut file: &File, 
         let processed_imagedata = serde_json::to_string_pretty(&ImageLinks {
             input: imagedata.cargoquery[x].title.input.as_ref().unwrap().to_string(),
             move_img: image_link,
-            hitbox_img: hitboxes_link,
+            hitbox_img: hitbox_links,
         }).unwrap();
         
         write!(file, "{}", processed_imagedata)
