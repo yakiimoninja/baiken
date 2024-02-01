@@ -142,6 +142,7 @@ async fn main() {
     check::character_folders_exist(true).await;
     check::character_jsons_exist(true).await;
     check::character_images_exist(true).await;
+    check::character_info_exist(true).await;
 
     // FrameworkOptions contains all of poise's configuration option in one struct
     // Every option can be omitted to use its default value
