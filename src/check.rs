@@ -137,6 +137,32 @@ pub async fn character_images_exist(init_check: bool) -> Option<String> {
     None
 }
 
+pub async fn character_info_exist(init_check: bool) -> Option<String> {
+    
+    // Checking if character images.jsons exist in their respective folders
+    for char in CHARS {
+        
+        let info_json = &("data/".to_owned() + char + "/info.json");
+        if !Path::new(&info_json).exists() {
+
+            // Error if images json doesnt exist
+            let error_msg ="Error: Missing '".to_owned() + &info_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
+            
+            if init_check {
+                // Printing the error message in the console
+                // If it is the initial check
+                println!();
+                panic!("{}", error_msg.red());
+            }
+            else {
+                // Returning the error message for in-discord printing
+                return Some(error_msg);
+            }
+        }
+    }
+    None
+}
+
 pub async fn correct_character_arg(character_arg: &String) -> Option<String>{
     
     // Checking for correct character argument
@@ -175,6 +201,7 @@ pub async fn adaptive_check(
     character_folders_check: bool,
     character_jsons_check: bool,
     character_images_check: bool,
+    character_info_check: bool,
 ) -> Result<(), Error> {
     
     let mut checks_passed = true;
@@ -230,6 +257,14 @@ pub async fn adaptive_check(
     if character_images_check {        
         // Checking if image jsons exist
         if let Some(error_msg) = character_images_exist(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " ").red());
+        }
+    }
+    if character_info_check {        
+        // Checking if info jsons exist
+        if let Some(error_msg) = character_info_exist(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
             panic!("{}", error_msg.replace('\n', " ").red());
