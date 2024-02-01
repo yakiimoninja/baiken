@@ -229,7 +229,7 @@ pub async fn adaptive_check(
     }
     if character_images_check {        
         // Checking if image jsons exist
-        if let Some(error_msg) = data_folder_exists(false).await {
+        if let Some(error_msg) = character_images_exist(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
             panic!("{}", error_msg.replace('\n', " ").red());
