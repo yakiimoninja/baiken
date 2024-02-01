@@ -1,7 +1,9 @@
 mod framedata;
-mod images; 
+mod images;
+mod info;
 mod framedata_json;
 mod images_json;
+mod info_json;
 use colored::Colorize;
 use crate::{Context, Error, CHARS, check, find};
 use crate::serenity::futures::{Stream, StreamExt, self};
@@ -11,7 +13,7 @@ async fn autocomplete_option<'a>(
     _ctx: Context<'_>,
     partial: &'a str,
 ) -> impl Stream<Item = String> + 'a {
-    futures::stream::iter(&(["all","frames","images"]))
+    futures::stream::iter(&(["all","frames","info","images"]))
         .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
         .map(|name| name.to_string())
 }
@@ -21,7 +23,7 @@ async fn autocomplete_option<'a>(
 pub async fn update (
     ctx: Context<'_>,
     #[description = r#"Character name, nickname or "all"."#] character: String,
-    #[description = r#"Select "frames", "images" or "all"."#]
+    #[description = r#"Select "frames", "info", "images" or "all"."#]
     #[autocomplete = "autocomplete_option"] option: String,
 ) -> Result<(), Error> {
 
@@ -90,22 +92,41 @@ pub async fn update (
             images::get_char_data(CHARS, &character_arg_altered).await;
         }
     }
+    // Update info hand
+    else if option == "info" {
+
+        // If character arg is all; update info for all characters
+        if character.trim().to_lowercase() == "all"{
+            ctx.say("Update started!").await?; 
+            info::get_char_info(CHARS, "all").await;
+        }
+        else {
+            
+            // Updates info for specific character
+            // If user input isnt the full name, part of a full name or a nickname
+            // Update info for specific character
+            ctx.say("Update started!").await?; 
+            info::get_char_info(CHARS, &character_arg_altered).await;
+        }
+    }
     // Update both frames and images hand
     else if option == "all"{
 
-        // If character arg is all; update frames and images for all characters
+        // If character arg is all; update frames, images and info for all characters
         if character.trim().to_lowercase() == "all"{
             ctx.say("Update started!").await?;
             framedata::get_char_data(CHARS, "all").await;
             images::get_char_data(CHARS, "all").await;
+            info::get_char_info(CHARS, "all").await;
         }
         else {
             
             // If user input isnt the full name, part of a full name or a nickname
-            // Update frames and images for specific character
+            // Update frames, images and info for specific character
             ctx.say("Update started!").await?; 
             framedata::get_char_data(CHARS, &character_arg_altered).await;
             images::get_char_data(CHARS, &character_arg_altered).await;
+            info::get_char_info(CHARS, &character_arg_altered).await;
         }
     }
     // If none
