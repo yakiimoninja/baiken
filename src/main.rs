@@ -16,7 +16,35 @@ pub struct Data {}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CharInfo {
-    page: String
+    portrait: String,
+    icon: String,
+    name: String,
+    defense: String,
+    guts: String,
+    guardbalance: String,
+    prejump: String,
+    backdash: String,
+    forwarddash: String,
+    umo: String,
+    jump_duration: String,
+    high_jump_duration: String,
+    jump_height: String,
+    high_jump_height: String,
+    earliest_iad: String,
+    ad_duration: String,
+    abd_duration: String,
+    ad_distance: String,
+    abd_distance: String,
+    movement_tension: String,
+    jump_tension: String,
+    airdash_tension: String,
+    walk_speed: String,
+    back_walk_speed: String,
+    dash_initial_speed: String,
+    dash_acceleration: String,
+    dash_friction: String,
+    jump_gravity: String,
+    high_jump_gravity: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
