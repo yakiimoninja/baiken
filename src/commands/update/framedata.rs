@@ -64,7 +64,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             // Finalizing character json
             char_json_schema = "\n]";
             write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'json_schema' to '{".to_owned() + char_id + "}.json'.")); 
+                .expect(&("\nFailed to write 'json_schema' to '".to_owned() + char_id + ".json'.")); 
         }
     }
     else {
