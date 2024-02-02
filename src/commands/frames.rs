@@ -78,7 +78,7 @@ pub async fn frames(
     
     println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
     
-    let content_embed = "[Data provided by Dustloop](https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Data#" + &mframes.input.to_string().replace(' ', "_") + "_Data)";
+    let content_embed = "[Data provided by Dustloop.](https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Data#" + &mframes.input.to_string().replace(' ', "_") + "_Data)";
     let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
 
     // Checking if the respective data field in the json file is empty
