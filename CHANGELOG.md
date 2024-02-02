@@ -2,7 +2,7 @@
 
 # General
 - Added new command `/info` that displays character information like "Backdash", "Guts" etc.
-- Reworked text formatting for `/fmeter` and `/moves` commands.
+- Reworked text formatting for `/fmeter`, `/moves`, `/nicknames` commands.
 - For commands `/frames`, `/fmeter`, `/hitboxes` and `/moves` Dustloop links are now masked. \
 Clicking the provided link redirects to the move in the character page, instead of the top of the page.
 - Updated framedata.
