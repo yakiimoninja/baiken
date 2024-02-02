@@ -29,20 +29,20 @@ pub async fn nicknames(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
     
     // Formatting string for in discord print
-    let mut nicks_as_msg = "__**Character Nicknames**__\n```diff".to_string();
+    let mut nicks_as_msg = "## __**Character Nicknames**__\n".to_string();
 
     for nicknames in vec_nicknames {
         // Character portion
-        nicks_as_msg = nicks_as_msg.to_owned() + "\n* Character: " + &nicknames.character.to_string();
+        nicks_as_msg = nicks_as_msg.to_owned() + "\n- **Character →**" + &nicknames.character.to_string();
         
         // Nickname portion
-        nicks_as_msg += "\n+ Nicknames: ";
+        nicks_as_msg += "\n\t\tNicknames → `";
         
         for x in 0..nicknames.nicknames.len() {
             if x != nicknames.nicknames.len() - 1 {
                 // Taking into account the lack of nicknames for some characters
                 if !nicknames.nicknames[x].is_empty() {
-                    nicks_as_msg = nicks_as_msg + &nicknames.nicknames[x] + ", ";
+                    nicks_as_msg = nicks_as_msg + &nicknames.nicknames[x] + "`, `";
                 }
                 else {
                     nicks_as_msg = nicks_as_msg + &nicknames.nicknames[x];
@@ -52,10 +52,9 @@ pub async fn nicknames(
                 nicks_as_msg = nicks_as_msg + &nicknames.nicknames[x];
             }
         }
-        nicks_as_msg = nicks_as_msg.to_owned() + ".\n";
+        nicks_as_msg = nicks_as_msg.to_owned() + "`";
     }
     
-    nicks_as_msg += "```";
     nicks_as_msg += "";
     ctx.say(&nicks_as_msg).await?;
         
