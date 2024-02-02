@@ -42,7 +42,7 @@ pub async fn info(
     // Deserializing from character json
     let char_info = serde_json::from_str::<Vec<CharInfo>>(&char_file_data).unwrap();  
 
-    let msg = "# __".to_owned() + &character_arg_altered.replace('_', " ") + " Info__" +
+    let msg = "## __**[".to_owned() + &character_arg_altered.replace('_', " ") + " Info](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data>)" + "**__" +
 
     "\n- **Defense** → " + &char_info[0].defense +
     "\n- **Guts** → " + &char_info[0].guts +
