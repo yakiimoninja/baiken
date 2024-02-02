@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Jack-O'_Portrait.png",
-  "icon": "GGST_Jack-O'_Icon.png",
-  "name": "Jack-O",
   "defense": "30",
   "guts": "2",
   "guardbalance": "28",

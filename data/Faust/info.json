@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Faust_Portrait.png",
-  "icon": "GGST_Faust_Icon.png",
-  "name": "Faust",
   "defense": "4",
   "guts": "0",
   "guardbalance": "36",

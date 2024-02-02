@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Happy_Chaos_Portrait.png",
-  "icon": "GGST_Happy_Chaos_Icon.png",
-  "name": "Happy Chaos",
   "defense": "10",
   "guts": "1",
   "guardbalance": "36",

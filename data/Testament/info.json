@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Testament_Portrait.png",
-  "icon": "GGST_Testament_Icon.png",
-  "name": "Testament",
   "defense": "12",
   "guts": "1",
   "guardbalance": "34",

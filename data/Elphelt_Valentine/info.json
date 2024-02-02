@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Elphelt_Valentine_Portrait.png",
-  "icon": "GGST_Elphelt_Valentine_Icon.png",
-  "name": "Elphelt Valentine",
   "defense": "24",
   "guts": "2",
   "guardbalance": "32",

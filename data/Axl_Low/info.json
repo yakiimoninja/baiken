@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Axl_Low_Portrait.png",
-  "icon": "GGST_Axl_Low_Icon.png",
-  "name": "Axl Low",
   "defense": "20",
   "guts": "1",
   "guardbalance": "36",

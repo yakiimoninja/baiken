@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Ramlethal_Valentine_Portrait.png",
-  "icon": "GGST_Ramlethal_Valentine_Icon.png",
-  "name": "Ramlethal Valentine",
   "defense": "16",
   "guts": "1",
   "guardbalance": "32",

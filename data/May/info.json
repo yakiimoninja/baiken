@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_May_Portrait.png",
-  "icon": "GGST_May_Icon.png",
-  "name": "May",
   "defense": "16",
   "guts": "4",
   "guardbalance": "32",

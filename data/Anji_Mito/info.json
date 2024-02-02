@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Anji_Mito_Portrait.png",
-  "icon": "GGST_Anji_Mito_Icon.png",
-  "name": "Anji Mito",
   "defense": "16",
   "guts": "5",
   "guardbalance": "32",

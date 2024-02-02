@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Bridget_Portrait.png",
-  "icon": "GGST_Bridget_Icon.png",
-  "name": "Bridget",
   "defense": "16",
   "guts": "0",
   "guardbalance": "32",

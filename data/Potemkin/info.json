@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Potemkin_Portrait.png",
-  "icon": "GGST_Potemkin_Icon.png",
-  "name": "Potemkin",
   "defense": "-16",
   "guts": "3",
   "guardbalance": "28",

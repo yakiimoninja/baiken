@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Johnny_Portrait.png",
-  "icon": "GGST_Johnny_Icon.png",
-  "name": "Johnny",
   "defense": "-4",
   "guts": "3",
   "guardbalance": "32",

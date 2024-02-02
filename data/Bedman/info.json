@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST Bedman Portrait.png",
-  "icon": "GGST Bedman Icon.png",
-  "name": "Bedman",
   "defense": "-10",
   "guts": "0",
   "guardbalance": "32",

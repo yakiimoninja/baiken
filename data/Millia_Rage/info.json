@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Millia_Rage_Portrait.png",
-  "icon": "GGST_Millia_Rage_Icon.png",
-  "name": "Millia Rage",
   "defense": "48",
   "guts": "2",
   "guardbalance": "40",

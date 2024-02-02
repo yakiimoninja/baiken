@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Nagoriyuki_Portrait.png",
-  "icon": "GGST_Nagoriyuki_Icon.png",
-  "name": "Nagoriyuki",
   "defense": "-8",
   "guts": "4",
   "guardbalance": "30",

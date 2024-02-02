@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Sol_Badguy_Portrait.png",
-  "icon": "GGST_Sol_Badguy_Icon.png",
-  "name": "Sol Badguy",
   "defense": "-4",
   "guts": "2",
   "guardbalance": "32",

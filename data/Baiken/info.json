@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Baiken_Portrait.png",
-  "icon": "GGST_Baiken_Icon.png",
-  "name": "Baiken",
   "defense": "30",
   "guts": "4",
   "guardbalance": "32",

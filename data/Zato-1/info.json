@@ -1,8 +1,5 @@
 [
 	{
-  "portrait": "GGST_Zato-1_Portrait.png",
-  "icon": "GGST_Zato-1_Icon.png",
-  "name": "Zato-1",
   "defense": "20",
   "guts": "0",
   "guardbalance": "36",
