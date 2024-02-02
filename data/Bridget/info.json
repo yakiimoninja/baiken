@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Bridget_Portrait.png",
+  "icon": "GGST_Bridget_Icon.png",
+  "name": "Bridget",
+  "defense": "16",
+  "guts": "0",
+  "guardbalance": "32",
+  "prejump": "4",
+  "backdash": "17/1-4 strike invuln/1-12 airborne",
+  "forwarddash": "-",
+  "umo": "[[GGST/Bridget#Rolling Movement|Rolling Movement]]&lt;br&gt;[[GGST/Bridget#Kick Start My Heart|Kick Start My Heart]]",
+  "jump_duration": "41",
+  "high_jump_duration": "46",
+  "jump_height": "389",
+  "high_jump_height": "485.3",
+  "earliest_iad": "7",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "715",
+  "abd_distance": "228.367",
+  "movement_tension": "8",
+  "jump_tension": "3×20 [3×23]",
+  "airdash_tension": "-",
+  "walk_speed": "7",
+  "back_walk_speed": "5.2",
+  "dash_initial_speed": "14",
+  "dash_acceleration": "0.476",
+  "dash_friction": "100",
+  "jump_gravity": "1.9",
+  "high_jump_gravity": "1.9"
+}
+]

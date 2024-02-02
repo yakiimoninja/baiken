@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST Bedman Portrait.png",
+  "icon": "GGST Bedman Icon.png",
+  "name": "Bedman",
+  "defense": "-10",
+  "guts": "0",
+  "guardbalance": "32",
+  "prejump": "5",
+  "backdash": "24/1-6 strike invuln/1-17 airborne",
+  "forwarddash": "-",
+  "umo": "8-Way Air Dash, No Double Jump",
+  "jump_duration": "38",
+  "high_jump_duration": "40",
+  "jump_height": "-",
+  "high_jump_height": "-",
+  "earliest_iad": "21 [high jump: 20]",
+  "ad_duration": "0/19",
+  "abd_duration": "0/19",
+  "ad_distance": "297.5",
+  "abd_distance": "297.5",
+  "movement_tension": "10",
+  "jump_tension": "4",
+  "airdash_tension": "-",
+  "walk_speed": "5.6",
+  "back_walk_speed": "4.5",
+  "dash_initial_speed": "11",
+  "dash_acceleration": "0.42",
+  "dash_friction": "100",
+  "jump_gravity": "1.9",
+  "high_jump_gravity": "2.3"
+}
+]

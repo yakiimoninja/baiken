@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Anji_Mito_Portrait.png",
+  "icon": "GGST_Anji_Mito_Icon.png",
+  "name": "Anji Mito",
+  "defense": "16",
+  "guts": "5",
+  "guardbalance": "32",
+  "prejump": "4",
+  "backdash": "20/1-5 strike invuln/1-15 airborne",
+  "forwarddash": "-",
+  "umo": "[[GGST/Anji_Mito#Issokutobi|Issokutobi]]",
+  "jump_duration": "42",
+  "high_jump_duration": "49",
+  "jump_height": "462",
+  "high_jump_height": "567.6",
+  "earliest_iad": "7",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "735.625",
+  "abd_distance": "228.367",
+  "movement_tension": "10",
+  "jump_tension": "3",
+  "airdash_tension": "4",
+  "walk_speed": "5.6",
+  "back_walk_speed": "4.9",
+  "dash_initial_speed": "13.5",
+  "dash_acceleration": "0.555",
+  "dash_friction": "100",
+  "jump_gravity": "2.1",
+  "high_jump_gravity": "1.9"
+}
+]

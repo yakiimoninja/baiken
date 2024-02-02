@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Johnny_Portrait.png",
+  "icon": "GGST_Johnny_Icon.png",
+  "name": "Johnny",
+  "defense": "-4",
+  "guts": "3",
+  "guardbalance": "32",
+  "prejump": "4",
+  "backdash": "18/1-5 strike invuln/1-16 airborne",
+  "forwarddash": "18",
+  "umo": "Step-Dash (18F), [[GGST/Johnny#Mist Finer Stance|Mist Finer Dash]], [[GGST/Johnny#Vault|Vault]]",
+  "jump_duration": "43",
+  "high_jump_duration": "56",
+  "jump_height": "-",
+  "high_jump_height": "-",
+  "earliest_iad": "7",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "-",
+  "abd_distance": "-",
+  "movement_tension": "-",
+  "jump_tension": "-",
+  "airdash_tension": "-",
+  "walk_speed": "-",
+  "back_walk_speed": "-",
+  "dash_initial_speed": "-",
+  "dash_acceleration": "-",
+  "dash_friction": "-",
+  "jump_gravity": "-",
+  "high_jump_gravity": "-"
+}
+]

@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Millia_Rage_Portrait.png",
+  "icon": "GGST_Millia_Rage_Icon.png",
+  "name": "Millia Rage",
+  "defense": "48",
+  "guts": "2",
+  "guardbalance": "40",
+  "prejump": "4",
+  "backdash": "16/1-4 strike invuln/1-11 airborne",
+  "forwarddash": "-",
+  "umo": "An Extra Airdash, [[GGST/Millia Rage#Kapel|Kapel]], [[GGST/Millia Rage#Turbo_Fall|Turbo Fall]], [[GGST/Millia Rage#Mirazh|Mirazh]]",
+  "jump_duration": "37",
+  "high_jump_duration": "55",
+  "jump_height": "453.6",
+  "high_jump_height": "702",
+  "earliest_iad": "7",
+  "ad_duration": "13/17",
+  "abd_duration": "13/17",
+  "ad_distance": "378",
+  "abd_distance": "301",
+  "movement_tension": "-",
+  "jump_tension": "-",
+  "airdash_tension": "-",
+  "walk_speed": "7.9",
+  "back_walk_speed": "6.1",
+  "dash_initial_speed": "20.6",
+  "dash_acceleration": "0.623",
+  "dash_friction": "90",
+  "jump_gravity": "2.8",
+  "high_jump_gravity": "1.9"
+}
+]

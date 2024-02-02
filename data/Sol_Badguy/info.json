@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Sol_Badguy_Portrait.png",
+  "icon": "GGST_Sol_Badguy_Icon.png",
+  "name": "Sol Badguy",
+  "defense": "-4",
+  "guts": "2",
+  "guardbalance": "32",
+  "prejump": "4",
+  "backdash": "20/1-5 strike invuln/1-15 airborne",
+  "forwarddash": "-",
+  "umo": "-",
+  "jump_duration": "38",
+  "high_jump_duration": "48",
+  "jump_height": "340.1",
+  "high_jump_height": "524.4",
+  "earliest_iad": "8 [high jump: 7]",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "735.625",
+  "abd_distance": "228.367",
+  "movement_tension": "10",
+  "jump_tension": "4×19 [high jump: 4×23]",
+  "airdash_tension": "5×24",
+  "walk_speed": "7.9",
+  "back_walk_speed": "4.8",
+  "dash_initial_speed": "13.1",
+  "dash_acceleration": "0.555",
+  "dash_friction": "95",
+  "jump_gravity": "1.9",
+  "high_jump_gravity": "1.9"
+}
+]

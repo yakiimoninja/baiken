@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Sin_Kiske_Portrait.png",
+  "icon": "GGST_Sin_Kiske_Icon.png",
+  "name": "Sin Kiske",
+  "defense": "14",
+  "guts": "2",
+  "guardbalance": "32",
+  "prejump": "4",
+  "backdash": "24/1-6 strike invuln/1-20 throw invuln/1-20 &lt;span class=&quot;tooltip&quot; &gt;airborne&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;Sin is considered airborne if he is hit during backdash and grounded otherwise&lt;/span&gt;&lt;/span&gt;",
+  "forwarddash": "-",
+  "umo": "[[GGST/Sin Kiske#Gazelle Step|Gazelle Step]]",
+  "jump_duration": "42",
+  "high_jump_duration": "49",
+  "jump_height": "409.5",
+  "high_jump_height": "567.6",
+  "earliest_iad": "7",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "735.625",
+  "abd_distance": "228.367",
+  "movement_tension": "10",
+  "jump_tension": "3",
+  "airdash_tension": "5",
+  "walk_speed": "6.3",
+  "back_walk_speed": "4.9",
+  "dash_initial_speed": "14",
+  "dash_acceleration": "0.56",
+  "dash_friction": "100",
+  "jump_gravity": "1.9",
+  "high_jump_gravity": "1.9"
+}
+]

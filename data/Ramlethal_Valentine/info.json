@@ -1,0 +1,33 @@
+[
+	{
+  "portrait": "GGST_Ramlethal_Valentine_Portrait.png",
+  "icon": "GGST_Ramlethal_Valentine_Icon.png",
+  "name": "Ramlethal Valentine",
+  "defense": "16",
+  "guts": "1",
+  "guardbalance": "32",
+  "prejump": "4",
+  "backdash": "20/1-5 strike invuln/1-15 airborne",
+  "forwarddash": "-",
+  "umo": "-",
+  "jump_duration": "38",
+  "high_jump_duration": "48",
+  "jump_height": "404.7",
+  "high_jump_height": "656.5",
+  "earliest_iad": "7",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "715",
+  "abd_distance": "190.125",
+  "movement_tension": "-",
+  "jump_tension": "-",
+  "airdash_tension": "-",
+  "walk_speed": "7",
+  "back_walk_speed": "5.2",
+  "dash_initial_speed": "15.7",
+  "dash_acceleration": "0.4",
+  "dash_friction": "100",
+  "jump_gravity": "2.3",
+  "high_jump_gravity": "1.9"
+}
+]
