@@ -55,7 +55,7 @@ pub async fn moves(
 
     // Formatting string for in discord print
     // Masked dustloop link
-    let mut moves_as_msg = "## __**[".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases.](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data>)" + "**__";
+    let mut moves_as_msg = "## __**[".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data>)" + "**__";
 
     // Message split due to discord character limit
     // 1st message builder which is also a reply
@@ -69,12 +69,12 @@ pub async fn moves(
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
 
-                moves_as_msg += "\n\t\tAliases → ";
+                moves_as_msg += "\n\t\tAliases → `";
 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
                     if a != moves_aliases.aliases.len() - 1 {
-                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + ", ";
+                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + "`, `";
                     
                     }
                     else {
@@ -82,6 +82,7 @@ pub async fn moves(
 
                     }
                 }
+                moves_as_msg = moves_as_msg.to_owned() + "`";
             }
             else {
                 continue;
@@ -102,12 +103,12 @@ pub async fn moves(
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
                 
-                moves_as_msg += "\n\t\tAliases → ";
+                moves_as_msg += "\n\t\tAliases → `";
                 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
                     if a != moves_aliases.aliases.len() - 1 {
-                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + ", ";
+                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + "`, `";
 
                     }
                     else {
@@ -115,6 +116,7 @@ pub async fn moves(
                         
                     }
                 }
+                moves_as_msg = moves_as_msg.to_owned() + "`";
             }
             else {
                 continue;
@@ -135,12 +137,12 @@ pub async fn moves(
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
                 
-                moves_as_msg += "\n\t\tAliases → ";
+                moves_as_msg += "\n\t\tAliases → `";
 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
                     if a != moves_aliases.aliases.len() - 1 {
-                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + ", ";
+                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + "`, `";
                     
                     }
                     else {
@@ -148,6 +150,7 @@ pub async fn moves(
 
                     }
                 }
+                moves_as_msg = moves_as_msg.to_owned() + "`";
             }
             else {
                 continue;
@@ -168,12 +171,12 @@ pub async fn moves(
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
                 
-                moves_as_msg += "\n\t\tAliases → ";
+                moves_as_msg += "\n\t\tAliases → `";
 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
                     if a != moves_aliases.aliases.len() - 1 {
-                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + ", ";
+                        moves_as_msg = moves_as_msg.to_owned() + &moves_aliases.aliases[a] + "`, `";
 
                     }
                     else {
@@ -181,6 +184,7 @@ pub async fn moves(
                         
                     }
                 }
+                moves_as_msg = moves_as_msg.to_owned() + "`";
             }
             else {
                 continue;
