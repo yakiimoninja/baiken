@@ -12,6 +12,7 @@ async fn autocomplete_help<'a>(
         "hitboxes",
         "fmeter",
         "moves",
+        "info",
         "nicknames",
         "notes",
         "specifics",
@@ -39,6 +40,7 @@ pub async fn help(ctx: Context<'_>,
         "frames" => help_frames(ctx).await,
         "general" => help_general(ctx).await,
         "hitboxes" => help_hitboxes(ctx).await,
+        "info" => help_info(ctx).await,
         "moves" => help_moves(ctx).await,
         "nicknames" => help_nicknames(ctx).await,
         "notes" => help_notes(ctx).await,
@@ -64,9 +66,10 @@ __**List of commands**__
 2. `hitboxes`
 3. `fmeter`
 4. `moves`
-5. `nicknames`
-6. `feedback`
-7. `help`
+5. `info`
+6. `nicknames`
+7. `feedback`
+8. `help`
 
 __**Patch notes:**__
 __<https://github.com/yakiimoninja/baiken/releases>__
@@ -140,6 +143,20 @@ Displays the hitbox images of a move."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/hitboxes.png").await;
+}
+
+async fn help_info(ctx: Context<'_>) {
+    let help_msg = r#"
+__**Command**__: `/info`. 
+__**Example**__: `/info elphelt`.
+
+__**character_arg**__: Character name or nickname.
+(Field cannot be empty).
+
+Displays general character information."#;
+
+    let _ = ctx.say(help_msg).await;
+    let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/info.png").await;
 }
 
 async fn help_moves(ctx: Context<'_>) {
