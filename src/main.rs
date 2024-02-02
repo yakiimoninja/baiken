@@ -16,9 +16,6 @@ pub struct Data {}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CharInfo {
-    portrait: String,
-    icon: String,
-    name: String,
     defense: String,
     guts: String,
     guardbalance: String,
@@ -153,6 +150,7 @@ async fn main() {
             frames::frames(),
             help::help(),
             hitboxes::hitboxes(),
+            info::info(),
             nicknames::nicknames(),
             moves::moves(),
             register::register(),
