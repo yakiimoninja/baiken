@@ -78,10 +78,12 @@ pub async fn hitboxes(
 
             println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
             
+            // Masked dustloop link
+            let bot_msg = "## __**[Move: ".to_owned() + &img_links.input + "](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data#" + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
+
             if !img_links.hitbox_img[0].is_empty() {
 
                 // Priting hitboxes in discord chat
-                let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                 ctx.say(&bot_msg).await?;
 
                 for htbx_img in img_links.hitbox_img {                        
@@ -90,7 +92,6 @@ pub async fn hitboxes(
             }
             else{
                 // Priting hitboxes in discord chat
-                let bot_msg = "__**Move: ".to_owned() + &img_links.input + "**__";
                 ctx.say(&bot_msg).await?;
                 ctx.channel_id().say(ctx, HITBOX_DEFAULT).await?;
             }
