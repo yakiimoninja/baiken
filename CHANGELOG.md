@@ -1,3 +1,17 @@
+# Version 0.21.0 Patch Notes.
+
+# General
+- Added new command `/info` that displays character information like "Backdash", "Guts" etc.
+- Reworked text formatting for `/fmeter` and `/moves` commands.
+- For commands `/frames`, `/fmeter`, `/hitboxes` and `/moves` Dustloop links are now masked. \
+Clicking the provided link redirects to the move in the character page, instead of the top of the page.
+- Updated framedata.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.20.1 Patch Notes.
 
 ### General
