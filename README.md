@@ -63,6 +63,15 @@
     </p>
 </details>
 
+## **Command**: `/info`.
+### Displays general character information.
+<details open>
+    <summary>Show example.</summary>
+    <p>
+        <img src="data/images/info.png"/>
+    </p>
+</details>
+
 ## **Command**: `/nicknames`.
 ### Displays all the nicknames for all characters.
 <details open>
