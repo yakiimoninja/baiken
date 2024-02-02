@@ -100,7 +100,7 @@ pub async fn fmeter(
         }
     }
     
-    let mut frame_meter_msg = r#"__Startup__: "#.to_owned() + &mframes.startup + " → `";
+    let mut frame_meter_msg = r#"- **Startup**: "#.to_owned() + &mframes.startup + " → `";
 
     // Processing for startup frames
 
@@ -185,7 +185,7 @@ pub async fn fmeter(
         }
     }
 
-    frame_meter_msg = frame_meter_msg + "`\n__Active__: " + &mframes.active + " → `";
+    frame_meter_msg = frame_meter_msg + "`\n- **Active**: " + &mframes.active + " → `";
     
     // Processing for active frames
     let active_vec = sep_frame_vec(&mframes.active).await;
@@ -231,7 +231,7 @@ pub async fn fmeter(
         }
     }
 
-    frame_meter_msg = frame_meter_msg + "`\n__Recovery__: " + &mframes.recovery + " → `";
+    frame_meter_msg = frame_meter_msg + "`\n- **Recovery**: " + &mframes.recovery + " → `";
 
     // Processing for recovery frames
     //println!("Original recovery: {:?}", mframes.recovery);
