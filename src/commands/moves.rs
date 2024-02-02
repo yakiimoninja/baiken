@@ -54,21 +54,22 @@ pub async fn moves(
     let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
     // Formatting string for in discord print
-    let mut moves_as_msg = "__**".to_string() + &character_arg_altered.replace('_', " ") + " Moves / Aliases**__\n```diff";
+    // Masked dustloop link
+    let mut moves_as_msg = "## __**[".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases.](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data>)" + "**__";
 
     // Message split due to discord character limit
     // 1st message builder which is also a reply
     for moves in moves_info.iter().take(moves_info.len() / 4) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name 
-        + " -> Input: " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
+        + " / " + &moves.input;
 
         for moves_aliases in aliases_data.iter() {
 
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
 
-                moves_as_msg += "\n+ Aliases: ";
+                moves_as_msg += "\n\t\tAliases → ";
 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
@@ -86,24 +87,22 @@ pub async fn moves(
                 continue;
             }
         }
-        moves_as_msg = moves_as_msg.to_owned() + ".";
     }
-    moves_as_msg += "\n```";
     ctx.say(&moves_as_msg).await?;
 
     // 2nd message builder
-    moves_as_msg = "```diff".to_string();
+    moves_as_msg = "".to_string();
     for moves in moves_info.iter().take((moves_info.len() / 4) * 2).skip(moves_info.len() / 4) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name 
-        + " -> Input: " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
+        + " / " + &moves.input;
 
         for moves_aliases in aliases_data.iter() {
 
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
                 
-                moves_as_msg += "\n+ Aliases: ";
+                moves_as_msg += "\n\t\tAliases → ";
                 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
@@ -121,24 +120,22 @@ pub async fn moves(
                 continue;
             }
         }
-        moves_as_msg = moves_as_msg.to_owned() + ".";
     }
-    moves_as_msg += "\n```";
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
 
     // 3rd message builder
-    moves_as_msg = "```diff".to_string();
+    moves_as_msg = "".to_string();
     for moves in moves_info.iter().take((moves_info.len() / 4 ) * 3).skip((moves_info.len() / 4) * 2) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name 
-        + " -> Input: " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
+        + " / " + &moves.input;
 
         for moves_aliases in aliases_data.iter() {
 
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
                 
-                moves_as_msg += "\n+ Aliases: ";
+                moves_as_msg += "\n\t\tAliases → ";
 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
@@ -156,24 +153,22 @@ pub async fn moves(
                 continue;
             }
         }
-        moves_as_msg = moves_as_msg.to_owned() + ".";
     }
-    moves_as_msg += "\n```";
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
 
     // 4th message builder
-    moves_as_msg = "```diff".to_string();
+    moves_as_msg = "".to_string();
     for moves in moves_info.iter().skip((moves_info.len() / 4) * 3) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n* Move: "+ &moves.name 
-        + " -> Input: " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
+        + " / " + &moves.input;
 
         for moves_aliases in aliases_data.iter() {
 
             // If move input exists in aliases.json
             if moves.input == moves_aliases.input {
                 
-                moves_as_msg += "\n+ Aliases: ";
+                moves_as_msg += "\n\t\tAliases → ";
 
                 // Format message if there is only one alias or multiple
                 for a in 0..moves_aliases.aliases.len() {
@@ -191,9 +186,7 @@ pub async fn moves(
                 continue;
             }
         }
-        moves_as_msg = moves_as_msg.to_owned() + ".";
     }
-    moves_as_msg += "\n```";
 
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
 
