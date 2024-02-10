@@ -15,7 +15,6 @@ async fn autocomplete_help<'a>(
         "info",
         "nicknames",
         "notes",
-        "specifics",
         "register",
         "update",
         "feedback"])
@@ -45,7 +44,6 @@ pub async fn help(ctx: Context<'_>,
         "nicknames" => help_nicknames(ctx).await,
         "notes" => help_notes(ctx).await,
         "register" => help_register(ctx).await,
-        "specifics" => help_specifics(ctx).await,
         "update" => help_update(ctx).await,
         _ => {
             help_message = "Help for `".to_owned().to_string() + &option + "` not found!";
@@ -61,21 +59,18 @@ pub async fn help(ctx: Context<'_>,
 
 async fn help_general(ctx: Context<'_>) {
     let help_msg = r#"
-__**List of commands**__
+## __**List of commands**__
 1. `frames`
-2. `hitboxes`
-3. `fmeter`
-4. `moves`
-5. `info`
-6. `nicknames`
-7. `feedback`
-8. `help`
+1. `hitboxes`
+1. `fmeter`
+1. `moves`
+1. `info`
+1. `nicknames`
+1. `feedback`
+1. `help`
 
-__**Patch notes:**__
-__<https://github.com/yakiimoninja/baiken/releases>__
-
-__**Support the project:**__
-__<https://github.com/sponsors/yakiimoninja>__
+__**[Patch notes](https://github.com/yakiimoninja/baiken/releases>)**__
+__**[Support the project](<https://github.com/sponsors/yakiimoninja>)**__
 "#;
 
     let _ = ctx.say(help_msg).await;
@@ -83,7 +78,7 @@ __<https://github.com/sponsors/yakiimoninja>__
 
 async fn help_feedback(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/feedback`.
+## __**Command**__: `/feedback`
 
 __**text**__: Any text.
 (Field cannot be empty).
@@ -96,13 +91,12 @@ Sends feedback or requests to the dev."#;
 
 async fn help_fmeter(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/fmeter`.
-__**Example**__: `/fmeter cz super`.
+## __**Command**__: `/fmeter`
 
-__**character_arg**__: Character name or nickname.
+__**character**__: Character name or nickname.
 (Field cannot be empty).
 
-__**character_move_arg**__: Character move name, input or alias.
+__**character_move**__: Character move name, input or alias.
 (Field cannot be empty).
 
 Displays visually the startup, active and recovery frames of a move."#;
@@ -113,13 +107,12 @@ Displays visually the startup, active and recovery frames of a move."#;
 
 async fn help_frames(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/frames`.
-__**Example**__: `/frames baiken 236K`.
+## __**Command**__: `/frames`
 
-__**character_arg**__: Character name or nickname.
+__**character**__: Character name or nickname.
 (Field cannot be empty).
 
-__**character_move_arg**__: Character move name, input or alias.
+__**character_move**__: Character move name, input or alias.
 (Field cannot be empty).
 
 Displays the frame data of a move."#;
@@ -130,13 +123,12 @@ Displays the frame data of a move."#;
 
 async fn help_hitboxes(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/hitboxes`. 
-__**Example**__: `/hitboxes goldlewis 426H`.
+## __**Command**__: `/hitboxes`
 
-__**character_arg**__: Character name or nickname.
+__**character**__: Character name or nickname.
 (Field cannot be empty).
 
-__**character_move_arg**__: Character move name, input or alias.
+__**character_move**__: Character move name, input or alias.
 (Field cannot be empty).
 
 Displays the hitbox images of a move."#;
@@ -147,10 +139,9 @@ Displays the hitbox images of a move."#;
 
 async fn help_info(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/info`. 
-__**Example**__: `/info elphelt`.
+## __**Command**__: `/info`
 
-__**character_arg**__: Character name or nickname.
+__**character**__: Character name or nickname.
 (Field cannot be empty).
 
 Displays general character information."#;
@@ -161,10 +152,9 @@ Displays general character information."#;
 
 async fn help_moves(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/moves`.
-__**Example**__: `/moves sol`.
+## __**Command**__: `/moves`
 
-__**character_arg**__: Character name or nickname.
+__**character**__: Character name or nickname.
 (Field cannot be empty).
 
 Displays all the moves, inputs and move aliases of a character."#;
@@ -175,7 +165,7 @@ Displays all the moves, inputs and move aliases of a character."#;
 
 async fn help_nicknames(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/nicknames`.
+## __Command__: `/nicknames`
 
 Displays all the nicknames for each character."#;
     
@@ -185,37 +175,52 @@ Displays all the nicknames for each character."#;
 
 async fn help_notes(ctx: Context<'_>) {
     let help_msg = r#"
-__**Usage notes.**__
+## __Usage notes__
 
-- **`/` commands can be substituted with direct mentions if preferred.**
-    - Doing so will enable the use of shorthand commands.
-        - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
-        - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
-        - Example: `@Baiken m leo` same as `/moves leo`.
-        - Example: `@Baiken a chipp` same as `/aliases chipp`.
+**•  All searching is case insensitive.**
+    ○  All names, nicknames, moves and aliases are case agnostic.
+            Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
-- **All searching is case insensitive.**
-    - All names, nicknames, moves and aliases are case agnostic.
-    - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
+**•  Character searching.**
+    ○  Characters can be found either using a part of their name, or any of their nicknames.
+            Example: `/moves Happy Chaos` = `/moves happy` = `/moves hc`.
 
-- **Character searching.**
-    - Characters can be found either using a part of their name, or any of their nicknames.
-    - Example: `/frames Happy Chaos cs` = `/frames happy cs` = `/frames hc cs`.
+**•  Move searching.**
+    ○  Moves can be found either using a part of their name, their input, or any of the aliases that exist.
+            Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
+    ○  Charged moves can be found with or without the use of `[]`.
+            Example `/frames may 46S` = `/frames may [4]6S`.
+    ○  All dots in move names are automatically ignored.
+            Example: `/frames leo bts` = `/frames leo bt.S`.
+    ○  For a fully charged dust attack the alias `5D!` can be used instead.
+            Example: `/frames chipp 5D!`.
 
-- **Move searching.**
-    - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
-        - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
-    - Charged moves can be found with or without the use of `[]`.
-        - Example `/frames may 46S` = `/frames may [4]6S`.
-    - For a fully charged dust attack the alias `5D!` can be used instead.
-        - Example: `/frames chipp 5D!`."#;
-    
+**•  Character specifics.**
+    ○  For normals that have levels like Nagoriyuki.
+            Add the level number next to the normal.
+            For Level 1 `fS`: `/frames nago fs`.
+            For Level 2 `fS`: `/frames nago fs2`.
+            For Level 1 normals nothing needs to be added since it's the default state.
+
+    ○  For specials that have levels like Goldlewis.
+            Add the level number next to the special.
+            For Level 1 `Thunderbird`: `/frames gold Drone`.
+            For Level 2 `Thunderbird`: `/frames gold Drone 2`.
+            The above is not always the case depending on the special move and alias used.
+            For Level 1 `Thunderbird`: `/frames gold D1`.
+            See `/moves gold` for more info on his aliases.
+
+    ○  For Testament's different Grave Reaper versions use as shown.
+            Regular version: `/frames testament 236S`.
+            Partially charged version: `/frames testament 236S!`.
+            Fully charged version: `/frames testament 236S!!`."#;
+
     let _ = ctx.say(help_msg).await;
 }
 
 async fn help_register(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**__: `/register`.
+## __**Command**__: `/register`
 
 **This command only works for owners.**
 Registers or removes all slash commands in the current server or every server the bot is in."#;
@@ -224,44 +229,12 @@ Registers or removes all slash commands in the current server or every server th
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/register.png").await;
 }
 
-async fn help_specifics(ctx: Context<'_>) {
-    let help_msg = r#"
-__**Character specifics.**__
-
-- **For normals that have levels like Nagoriyuki.**
-  - Add the level number next to the normal.
-  - For Level 1 `fS`: `/frames nago fs`. 
-  - For Level 2 `fS`: `/frames nago fs2`.
-  - For Level 3 `fS`: `/frames nago fs3`.
-  - If it's a level 1 normal nothing needs to be added since it's the default state.
-
-- **For specials that have levels like Goldlewis.**
-  - Add the level number next to the special.
-  - For Level 1 `Thunderbird`: `/frames gold Drone`.
-  - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
-  - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
-  - The above is not always the case depending on the special move and alias used.
-  - For Level 1 `Thunderbird`: `/frames gold D1`.
-  - For Level 2 `Thunderbird`: `/frames gold D2`.
-  - For Level 3 `Thunderbird`: `/frames gold D3`.
-  - See `/aliases gold` for more info on his aliases.
-
-- **For Testament's different Grave Reaper versions use as shown.**
-  - Regular version: `/frames testament 236S`.
-  - Partially charged version: `/frames testament 236S!`.
-  - Fully charged version: `/frames testament 236S!!`.
-"#;
-    
-    let _ = ctx.say(help_msg).await;
-}
-
 async fn help_update(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**: `/update`.
-__**Example**__: `/update frames all`.
+__**Command**: `/update`
 
-__**frames_or_images**__: `frames`, `images` or `all`. Cannot be empty.
-__**character_arg**__: Character name or nickname. Cannot be empty.
+__**option**__: `frames`, `images` or `all`. Cannot be empty.
+__**character**__: Character name or nickname. Cannot be empty.
 
 **This command only works for owners.**
 Meaning that it requires an instance of the source code to use it.
