@@ -33,10 +33,10 @@ pub async fn nicknames(
 
     for nicknames in vec_nicknames {
         // Character portion
-        nicks_as_msg = nicks_as_msg.to_owned() + "\n- **Character →**" + &nicknames.character.to_string();
+        nicks_as_msg = nicks_as_msg.to_owned() + "\n- **" + &nicknames.character.to_string() + "**";
         
         // Nickname portion
-        nicks_as_msg += "\n\t\tNicknames → `";
+        nicks_as_msg += "\n\t\t→ `";
         
         for x in 0..nicknames.nicknames.len() {
             if x != nicknames.nicknames.len() - 1 {
@@ -57,6 +57,6 @@ pub async fn nicknames(
     
     nicks_as_msg += "";
     ctx.say(&nicks_as_msg).await?;
-        
+    ctx.channel_id().say(ctx, "Try the `/help notes` command for usage notes and specifics.").await?;
     Ok(())
 }

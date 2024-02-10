@@ -61,8 +61,8 @@ pub async fn moves(
     // 1st message builder which is also a reply
     for moves in moves_info.iter().take(moves_info.len() / 4) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
-        + " / " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **"+ &moves.name 
+        + " / " + &moves.input + "**";
 
         for moves_aliases in aliases_data.iter() {
 
@@ -95,8 +95,8 @@ pub async fn moves(
     moves_as_msg = "".to_string();
     for moves in moves_info.iter().take((moves_info.len() / 4) * 2).skip(moves_info.len() / 4) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
-        + " / " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **"+ &moves.name 
+        + " / " + &moves.input + "**";
 
         for moves_aliases in aliases_data.iter() {
 
@@ -129,8 +129,8 @@ pub async fn moves(
     moves_as_msg = "".to_string();
     for moves in moves_info.iter().take((moves_info.len() / 4 ) * 3).skip((moves_info.len() / 4) * 2) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
-        + " / " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **"+ &moves.name 
+        + " / " + &moves.input + "**";
 
         for moves_aliases in aliases_data.iter() {
 
@@ -163,8 +163,8 @@ pub async fn moves(
     moves_as_msg = "".to_string();
     for moves in moves_info.iter().skip((moves_info.len() / 4) * 3) {
         
-        moves_as_msg = moves_as_msg.to_owned() + "\n- **Move →** "+ &moves.name 
-        + " / " + &moves.input;
+        moves_as_msg = moves_as_msg.to_owned() + "\n- **"+ &moves.name 
+        + " / " + &moves.input + "**";
 
         for moves_aliases in aliases_data.iter() {
 
@@ -193,6 +193,7 @@ pub async fn moves(
     }
 
     ctx.channel_id().say(ctx, &moves_as_msg).await?;
+    ctx.channel_id().say(ctx, "Try the `/help notes` command for usage notes and specifics.\nOr `/request` to request a new alias.").await?;
 
     Ok(())
 }
