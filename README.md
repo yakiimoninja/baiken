@@ -5,16 +5,15 @@
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
 [![GitHub tag](https://img.shields.io/github/tag/yakiimoninja/baiken.svg)](https://github.com/yakiimoninja/baiken/releases/latest)
 
-## Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data and hitboxes.
+## Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data, hitboxes and more.
 
 # Table of contents.
-- [Patch notes](https://github.com/yakiimoninja/baiken/releases).
-- [Inviting Baiken to a server](#inviting-the-bot-to-a-server).
-- [Support](#support).
-- [Commands](#commands).
-    - [Usage notes](#usage-notes).
-    - [Nicknames](data/nicknames.json).
-    - [Character specifics](#character-specifics).
+- **[Patch notes](https://github.com/yakiimoninja/baiken/releases)**
+- **[Inviting Baiken to a server](#inviting-the-bot-to-a-server)**
+- **[Support](#support)**
+- **[Commands](#commands)**
+    - **[Usage notes](#usage-notes)**
+    - **[Nicknames](data/nicknames.json)**
 
 # Patch notes.
 - You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
@@ -122,7 +121,7 @@
 
 # Usage notes.
 
-- **`/` commands can be substituted with direct mentions if preferred.**
+- **All commands can be substituted with direct mentions if preferred.**
     - Doing so will enable the use of shorthand commands.
         - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
         - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
@@ -134,40 +133,42 @@
   - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
 - **Character searching.**
-  - Characters can be found either using a part of their name, or any of the [nicknames](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
-  - Example: `/frames Happy Chaos cs` = `/frames happy cs` = `/frames hc cs`.
+    - Characters can be found either using a part of their name, or any of the [nicknames](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
+    - Example: `/moves Happy Chaos` = `/moves happy` = `/moves hc`.
 
 - **Move searching.**
-   - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
-      - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
-   - Charged moves can be found with or without the use of `[]`.
-      - Example `/frames may 46S` = `/frames may [4]6S`.
-   - For a fully charged dust attack the alias `5D!` can be used instead.
-      - Example: `/frames chipp 5D!`.
+    - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
+        - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
+    - Charged moves can be found with or without the use of `[]`.
+        - Example `/frames may 46S` = `/frames may [4]6S`.
+    - All dots in move names are automatically ignored.
+        - Example: `/frames leo bts` = `/frames leo bt.S`.
+    - For a fully charged dust attack the alias `5D!` can be used instead.
+        - Example: `/frames chipp 5D!`.
 
-# Character specifics.
-- **For normals that have levels like Nagoriyuki.**
-  - Add the level number next to the normal.
-  - For Level 1 `fS`: `/frames nago fs`. 
-  - For Level 2 `fS`: `/frames nago fs2`.
-  - For Level 3 `fS`: `/frames nago fs3`.
-  - If it's a level 1 normal nothing needs to be added since it's the default state.
+- **Character specifics.**
+    - **For normals that have levels like Nagoriyuki.**
+        - Add the level number next to the normal.
+        - For Level 1 `fS`: `/frames nago fs`. 
+        - For Level 2 `fS`: `/frames nago fs2`.
+        - For Level 3 `fS`: `/frames nago fs3`.
+        - For Level 1 normals nothing needs to be added since it's the default state.
 
-- **For specials that have levels like Goldlewis.**
-  - Add the level number next to the special.
-  - For Level 1 `Thunderbird`: `/frames gold Drone`.
-  - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
-  - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
-  - The above is not always the case depending on the special move and alias used.
-  - For Level 1 `Thunderbird`: `/frames gold D1`.
-  - For Level 2 `Thunderbird`: `/frames gold D2`.
-  - For Level 3 `Thunderbird`: `/frames gold D3`.
-  - See `/aliases gold` for more info on his aliases.
+    - **For specials that have levels like Goldlewis.**
+        - Add the level number next to the special.
+        - For Level 1 `Thunderbird`: `/frames gold Drone`.
+        - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
+        - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
+        - The above is not always the case depending on the special move and alias used.
+        - For Level 1 `Thunderbird`: `/frames gold D1`.
+        - For Level 2 `Thunderbird`: `/frames gold D2`.
+        - For Level 3 `Thunderbird`: `/frames gold D3`.
+        - See `/moves gold` for more info on his aliases.
 
-- **For Testament's different Grave Reaper versions use as shown.**
-  - Regular version: `/frames testament 236S`.
-  - Partially charged version: `/frames testament 236S!`.
-  - Fully charged version: `/frames testament 236S!!`.
+    - **For Testament's different Grave Reaper versions use as shown.**
+        - Regular version: `/frames testament 236S`.
+        - Partially charged version: `/frames testament 236S!`.
+        - Fully charged version: `/frames testament 236S!!`.
 #
 # Support.
 Support the project by donating here.
