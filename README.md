@@ -35,7 +35,7 @@
         </p>
 </details>
 
-# **Command**: `/fmeter`.
+## **Command**: `/fmeter`.
 ### Displays visually the startup, active and recovery frames of a move.
 <details open>
     <summary>Show example.</summary>

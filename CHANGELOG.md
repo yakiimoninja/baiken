@@ -4,6 +4,11 @@
 - Reworked the text formatting of `/moves`, `/nicknames` and `/help notes` once more.
 - Updated framedata.
 
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.21.0 Patch Notes.
 
 # General
