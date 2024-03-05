@@ -34,5 +34,5 @@
 	{"input":"236S H","name":"Fire","damage":"20 [30]","guard":"All","startup":"1","active":"2","recovery":"-","hit":"+26","block":"+23","level":"1","counter":"Very Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"H","name":"At the Ready","damage":"-","guard":"-","startup":"-","active":"-","recovery":"Total 12","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"214214P","name":"Super Focus","damage":"-","guard":"-","startup":"5","active":"(52 Flash)","recovery":"Total 11","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
-	{"input":"632146S","name":"Deus Ex Machina","damage":"20, 1×17, 100","guard":"All","startup":"13+(193 Flash)+7","active":"-","recovery":"-","hit":"HKD +31","block":"-25","level":"2×18, 4","counter":"Small","scaling":"100%","riscgain":"100×19","invincibility":"-"}
+	{"input":"632146S","name":"Deus Ex Machina","damage":"18, 1×17, 92","guard":"All","startup":"13+(193 Flash)+7","active":"-","recovery":"-","hit":"HKD +31","block":"-25","level":"2×18, 4","counter":"Small","scaling":"100%","riscgain":"100×19","invincibility":"-"}
 ]
