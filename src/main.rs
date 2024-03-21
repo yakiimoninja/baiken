@@ -2,10 +2,13 @@ mod commands;
 mod check;
 mod find;
 mod ran;
+
 use colored::Colorize;
 use commands::*;
 use poise::serenity_prelude as serenity;
+use std::time::Duration;
 use serde::{Serialize, Deserialize};
+use tokio::{task, time};
 
 // Types used by all command functions
 type Error = Box<dyn std::error::Error + Send + Sync>;
@@ -182,15 +185,27 @@ async fn main() {
         // Enforce command checks even for owners (enforced by default)
         // Set to true to bypass checks, which is useful for testing
         skip_checks_for_owners: false,
-        // event_handler: |_ctx, event, _framework, _data| {
-        //     Box::pin(async move {
-        //         println!(
-        //             "Got an event in event handler: {:?}",
-        //             event.snake_case_name()
-        //         );
-        //         Ok(())
-        //     })
-        // },
+        // On ready event start the task of auto updating 
+        // the character data every 24 hours
+        event_handler: |_ctx, event, _framework, _data| {
+            Box::pin(async move {
+                match event {
+                    serenity::FullEvent::Ready { data_about_bot: _ } => {
+                        let forever = task::spawn(async {
+                            let mut interval = time::interval(Duration::from_secs(86400));
+                            loop {
+                                interval.tick().await;
+                                update::auto_update_all().await;
+                            }
+                        });
+                        
+                        let _ = forever.await;
+                        Ok(())
+                    }
+                    _ => Ok(())
+                }
+            })
+        },
         ..Default::default()
     };
 
