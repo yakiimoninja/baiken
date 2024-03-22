@@ -1,3 +1,12 @@
+# Version 0.23.0 Patch Notes.
+- Added the ability to update character data automatically.
+- Updated framedata.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.22.0 Patch Notes.
 
 # General
