@@ -1,0 +1,30 @@
+[
+	{
+  "defense": "-12",
+  "guts": "2",
+  "guardbalance": "-",
+  "prejump": "4",
+  "backdash": "24/1-6 strike invuln",
+  "forwarddash": "-",
+  "umo": "-",
+  "jump_duration": "38",
+  "high_jump_duration": "46",
+  "jump_height": "-",
+  "high_jump_height": "-",
+  "earliest_iad": "8 [high jump: 7]",
+  "ad_duration": "18/24",
+  "abd_duration": "6/11",
+  "ad_distance": "-",
+  "abd_distance": "-",
+  "movement_tension": "-",
+  "jump_tension": "-",
+  "airdash_tension": "-",
+  "walk_speed": "-",
+  "back_walk_speed": "-",
+  "dash_initial_speed": "-",
+  "dash_acceleration": "-",
+  "dash_friction": "-",
+  "jump_gravity": "-",
+  "high_jump_gravity": "-"
+}
+]
