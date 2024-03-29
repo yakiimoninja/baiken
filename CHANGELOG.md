@@ -1,3 +1,49 @@
+# Version 0.24.0 Patch Notes.
+- Added `A.B.A`.
+- Updated framedata.
+
+### Nicknames
+- `A.B.A`:
+    - Added nicknames `AB`, `ABA`, `Paracelsus`.
+
+### Move Aliases
+- **`Millia Rage`**:
+    - `214H` added alias: `Claw`.
+
+- **`A.B.A`**:
+    - `c.S` added aliases: `5S`.
+	- `2D` added aliases: `Sweep`.
+	- `5[D]` added aliases: `5D!`.
+	- `JR c.S` added aliases: `JR5S`.
+	- `JR 5[D]` added aliases: `JR5D!`.    
+    - `214H` added aliases: `Bonding and Dissolving`, `BND`.
+	- `214K` added aliases: `Haul and Heed`, `HNH`.
+    - `214S` added aliases: `Frenzy and Astonishment`, `FNA`.
+	- `236K` added aliases: `Intertwine and Tilt`, `INT`.
+	- `236S` added aliases: `Menace and Groan`, `MNG`.
+	- `236S~6S` added aliases: `Restriction and Constraint`, `236S 6S`, `236S6S`, `RNC`.
+	- `623H` added aliases: `Judgment and Sentiment`, `JNS`.
+	- `63214P` added aliases: `Changing and Swaying`, `CNS`.
+	- `JR 214H` added aliases: `JR Bonding and Dissolving`, `JR214H`, `JRBND`.
+	- `JR 214K` added aliases: `JR Haul and Heed`, `JR214K`, `JRHNH`.
+	- `JR 236K` added aliases: `JR Intertwine and Tilt`, `JR236K`, `JRINT`.
+	- `JR 236S` added aliases: `JR Menace and Groan`, `JR236S`, `JRMNG`.
+	- `JR 236S~6S` added aliases: `JR Restriction and Constraint`, `JR236S6S`, `JR236S 6S`, `JRRNC`.
+	- `JR 63214P` added aliases: `JR Changing and Swaying`, `JR63214P`, `JRCNS`.
+	- `632146H` added aliases: `The Law is Key, Key is King.`, `Super`.
+	- `632146K` added aliases: `Keeper of the Key`, `Door Super`.
+	- `JR 632146H` added aliases: `JR The Law is Key, Key is King.`, `JR Super`, `Install Super`.
+	- `JR 632146K` added aliases: `JR Keeper of the Key`, `JR Door Super`, `Install Door Super`.
+    - `6D or 4D` added aliases: `Throw`, `6D`, `4D`.
+	- `j.6D or j.4D` added aliases: `Air Throw`, `J6D`, `J4D`.
+	- `236D` added aliases: `Wild Assault`, `WA`.
+    - `236[D]` added aliases: `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.23.0 Patch Notes.
 - Added the ability to update character data automatically.
 - Updated framedata.
@@ -73,8 +119,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Move Aliases
 - **`Bridget`**:
-    `236K P` added aliases: `236KP`.
-	`236K K` added aliases: `236KK`.
+    - `236K P` added aliases: `236KP`.
+	- `236K K` added aliases: `236KK`.
 
 &#x200B;
 &#x200B;
@@ -88,21 +134,21 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Move Aliases
 - **`Axl Low`**:
-    `214K` added aliases: `Whistling Wind`, `Tornado`, `WW`.
-	`214[K]` added aliases: `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
+    - `214K` added aliases: `Whistling Wind`, `Tornado`, `WW`.
+	- `214[K]` added aliases: `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
 
 - **`Elphelt`**:
-	`236S` and `236H` merged into `236S/H` therefore all `236H` aliases are removed.
-    `236S/H` added aliases: `Miss Charlotte`, `Fireball`, `FB`, `MC`.
+	- `236S` and `236H` merged into `236S/H` therefore all `236H` aliases are removed.
+    - `236S/H` added aliases: `Miss Charlotte`, `Fireball`, `FB`, `MC`.
 
-    `j.236S` and `j.236H` merged into `j.236S/H` therefore all `j.236H` aliases are removed.
-    `j.236S/H` added aliases: `Air Miss Charlotte`, `Air Fireball`, `JF`, `AF`, `JMC`, `AMC`.
+    - `j.236S` and `j.236H` merged into `j.236S/H` therefore all `j.236H` aliases are removed.
+    - `j.236S/H` added aliases: `Air Miss Charlotte`, `Air Fireball`, `JF`, `AF`, `JMC`, `AMC`.
 
 - **`Johnny`**:
-	`236236S` removed alias: `CS` cause overlap with close slash.
+	- `236236S` removed alias: `CS` cause overlap with close slash.
 
 - **`Potemkin`**:
-	`41236H` added aliases: `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
+	- `41236H` added aliases: `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
 
 &#x200B;
 &#x200B;
