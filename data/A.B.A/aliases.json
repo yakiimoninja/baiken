@@ -20,6 +20,8 @@
 	{"input":"JR 63214P","aliases":["JR Changing and Swaying","JR63214P","JRCNS"]},
 	{"input":"632146H","aliases":["The Law is Key, Key is King.","Super"]},
 	{"input":"632146K","aliases":["Keeper of the Key","Door Super"]},
+	{"input":"JR 632146H","aliases":["JR The Law is Key, Key is King.","JR Super","Install Super"]},
+	{"input":"JR 632146K","aliases":["JR Keeper of the Key","JR Door Super","Install Door Super"]},
     {"input":"6D or 4D","aliases":["Throw","6D","4D"]},
 	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
 	{"input":"236D","aliases":["Wild Assault","WA"]},
