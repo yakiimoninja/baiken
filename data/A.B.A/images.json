@@ -434,5 +434,21 @@
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/7/7c/GGST_A.B.A_632146K_Hitbox.png"
   ]
+},
+	{
+  "input": "JR 632146H",
+  "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_A.B.A_632146H_1.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/8/8b/GGST_A.B.A_632146H_Hitbox_1.png",
+    "https://www.dustloop.com/wiki/images/1/1f/GGST_A.B.A_632146H_Hitbox_2.png",
+    "https://www.dustloop.com/wiki/images/e/ea/GGST_A.B.A_632146H_Hitbox_3.png"
+  ]
+},
+	{
+  "input": "JR 632146K",
+  "move_img": "https://www.dustloop.com/wiki/images/c/cc/GGST_A.B.A_632146K.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/7/7c/GGST_A.B.A_632146K_Hitbox.png"
+  ]
 }
 ]
