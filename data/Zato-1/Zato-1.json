@@ -1,6 +1,6 @@
 [
 	{"input":"2D","name":"2D","damage":"27","guard":"Low","startup":"10","active":"6","recovery":"17","hit":"HKD +47","block":"-9","level":"2","counter":"Large","scaling":"90%","riscgain":"1125","invincibility":"-"},
-	{"input":"2H","name":"2H","damage":"40","guard":"All","startup":"13","active":"7","recovery":"26","hit":"KD +31","block":"-13","level":"4","counter":"Large","scaling":"90%","riscgain":"2500","invincibility":"-"},
+	{"input":"2H","name":"2H","damage":"40","guard":"All","startup":"13","active":"6","recovery":"26","hit":"KD +31","block":"-13","level":"4","counter":"Large","scaling":"90%","riscgain":"2500","invincibility":"-"},
 	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"6","active":"2","recovery":"13","hit":"0","block":"-3","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"-"},
 	{"input":"2P","name":"2P","damage":"18","guard":"All","startup":"6","active":"4","recovery":"9","hit":"0","block":"-3","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
 	{"input":"2S","name":"2S","damage":"35","guard":"All","startup":"11","active":"4","recovery":"20","hit":"-7","block":"-10","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"-"},
@@ -23,8 +23,8 @@
 	{"input":"236[D]","name":"Wild Assault","damage":"50","guard":"-","startup":"32","active":"3","recovery":"20","hit":"HKD +71","block":"+17","level":"4","counter":"Mid","scaling":"100%","riscgain":"2500","invincibility":"-"},
 	{"input":"6D or 4D","name":"Ground Throw","damage":"80","guard":"Ground Throw","startup":"2","active":"3","recovery":"38","hit":"HKD +43","block":"-","level":"-","counter":"-","scaling":"50%","riscgain":"-","invincibility":"-"},
 	{"input":"j.6D or j.4D","name":"Air Throw","damage":"80","guard":"200000 (Air)","startup":"2","active":"3","recovery":"38 or Until Landing + 10","hit":"HKD +45 (IAD)","block":"-","level":"-","counter":"-","scaling":"50%","riscgain":"-","invincibility":"-"},
-	{"input":"214H","name":"Unsummon Eddie","damage":"-","guard":"-","startup":"0","active":"-","recovery":"32","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"214H","name":"Summon Eddie","damage":"-","guard":"-","startup":"20","active":"-","recovery":"8","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
+	{"input":"214H","name":"Unsummon Eddie","damage":"-","guard":"-","startup":"0","active":"-","recovery":"32","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"214K","name":"Break The Law","damage":"-","guard":"-","startup":"13","active":"8~59","recovery":"Total 28~95","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"13-[13~71] Full, 14-[21~77] Strike"},
 	{"input":"214S","name":"Drunkard Shade","damage":"31","guard":"All","startup":"9","active":"10","recovery":"12","hit":"-5","block":"-8","level":"2","counter":"Mid","scaling":"90%","riscgain":"1500","invincibility":"3-18F Projectile Reflect"},
 	{"input":"214S (Dash)","name":"Eddie Dash","damage":"-","guard":"-","startup":"30 Total","active":"-","recovery":"-","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
