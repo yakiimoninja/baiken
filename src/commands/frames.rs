@@ -78,8 +78,13 @@ pub async fn frames(
     
     println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
     
-    let content_embed = "__**[Data provided by Dustloop](<https://dustloop.com/wiki/index.php?title=GGST/".to_owned() + &character_arg_altered + "/Data#" + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
-    let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
+    let content_embed = r#"## __**["#.to_owned()
+        + &character_arg_altered.replace('_', " ") + " " + &mframes.input.to_string()
+        + "](<https://dustloop.com/wiki/index.php?title=GGST/"
+        + &character_arg_altered 
+        + "/Data#" 
+        + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
+    //let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
 
     // Checking if the respective data field in the json file is empty
     // If they aren't empty, the variables initialized above will be replaced
@@ -115,7 +120,7 @@ pub async fn frames(
     let embed = CreateEmbed::new()
         //.description("This is a description") 
         .color((140,75,64))
-        .title(&title_embed)
+        //.title(&title_embed)
         .image(&image_embed)
         .fields(vec![
             ("Damage", &mframes.damage.to_string(), true),

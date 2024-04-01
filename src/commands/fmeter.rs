@@ -84,7 +84,12 @@ pub async fn fmeter(
             println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
             
             // Masked dustloop link
-            let bot_msg = "## __**[Move: ".to_owned() + &img_links.input + "](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data#" + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
+            let bot_msg = "## __**[".to_owned()
+            + &character_arg_altered.replace('_', " ") + " " + &img_links.input
+            + "](<https://dustloop.com/wiki/index.php?title=GGST/" 
+            + &character_arg_altered 
+            + "/Data#" 
+            + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
 
             if !img_links.move_img.is_empty() {
 
