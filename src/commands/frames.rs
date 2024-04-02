@@ -78,12 +78,12 @@ pub async fn frames(
     
     println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
     
-    let content_embed = r#"## __**["#.to_owned()
+    let content_embed = r#"## **[__"#.to_owned()
         + &character_arg_altered.replace('_', " ") + " " + &mframes.input.to_string()
-        + "](<https://dustloop.com/wiki/index.php?title=GGST/"
+        + "__](<https://dustloop.com/wiki/index.php?title=GGST/"
         + &character_arg_altered 
         + "/Data#" 
-        + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
+        + &mframes.input.to_string().replace(' ', "_") + "_Data>)**";
     //let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
 
     // Checking if the respective data field in the json file is empty
@@ -150,7 +150,7 @@ pub async fn frames(
 
     // New version notification
     //ctx.channel_id().say(ctx, r"DIIIIE 💀💀💀.
-//__<https://github.com/yakiimoninja/baiken/releases>__").await?;
+//<__https://github.com/yakiimoninja/baiken/releases__>").await?;
 
     Ok(())
 }

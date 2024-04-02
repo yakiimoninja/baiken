@@ -69,8 +69,8 @@ async fn help_general(ctx: Context<'_>) {
 1. `feedback`
 1. `help`
 
-__**[Patch notes](https://github.com/yakiimoninja/baiken/releases>)**__
-__**[Support the project](<https://github.com/sponsors/yakiimoninja>)**__
+**[__Patch notes__](https://github.com/yakiimoninja/baiken/releases>)**
+**[__Support the project__](<https://github.com/sponsors/yakiimoninja>)**
 "#;
 
     let _ = ctx.say(help_msg).await;

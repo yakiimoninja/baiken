@@ -79,12 +79,12 @@ pub async fn hitboxes(
             println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
             
             // Masked dustloop link
-            let bot_msg = "## __**[".to_owned()
+            let bot_msg = "## **[__".to_owned()
             + &character_arg_altered.replace('_', " ") + " " + &img_links.input 
-            + "](<https://dustloop.com/wiki/index.php?title=GGST/" 
+            + "__](<https://dustloop.com/wiki/index.php?title=GGST/" 
             + &character_arg_altered 
             + "/Data#" 
-            + &mframes.input.to_string().replace(' ', "_") + "_Data>)**__";
+            + &mframes.input.to_string().replace(' ', "_") + "_Data>)**";
 
             if !img_links.hitbox_img[0].is_empty() {
 
