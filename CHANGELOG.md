@@ -1,3 +1,19 @@
+# Version 0.25.0 Patch Notes.
+
+### General
+- Updated framedata.
+- Refactored `/frames`, `/fmeter`, `hitboxes` to show the name and move of the character as a title.
+- Reworked some hyperlink formatting.
+
+### Nicknames
+- `A.B.A`:
+    - Added nickname `A.B.A.`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.24.0 Patch Notes.
 - Added `A.B.A`.
 - Updated framedata.
