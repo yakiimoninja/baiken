@@ -298,7 +298,7 @@ pub async fn fmeter(
 }
 
 /// Splits the string into a vec keeping the separators
-async fn sep_frame_vec(text: &String) -> Vec<String> {
+async fn sep_frame_vec(text: &str) -> Vec<String> {
 
     // Remove whitespace
     let mut result = Vec::new();
