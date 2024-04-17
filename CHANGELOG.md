@@ -1,3 +1,20 @@
+# Version 0.25.1 Patch Notes.
+
+### General
+- Updated framedata.
+
+### Move Aliases
+- **`A.B.A`**:
+    - `63214P` added alias: `624P`.
+
+- **`Leo Whitefang`**:
+    - `[s/h] h/s` added aliases: `s/h`, `h/s`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.25.0 Patch Notes.
 
 ### General
