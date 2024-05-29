@@ -1,3 +1,14 @@
+# Version 0.26.0 Patch Notes.
+
+# General
+- Added `Slayer`.
+- Updated framedata.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.25.1 Patch Notes.
 
 ### General
