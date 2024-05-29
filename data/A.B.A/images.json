@@ -414,7 +414,7 @@
 },
 	{
   "input": "JR Deactivation",
-  "move_img": "https://www.dustloop.com/wiki/images/5/54/GGST_A.B.A_JR_63214P.png",
+  "move_img": "https://www.dustloop.com/wiki/images/d/da/GGST_A.B.A_JR_Deactivation.png",
   "hitbox_img": [
     ""
   ]
@@ -446,9 +446,11 @@
 },
 	{
   "input": "JR 632146K",
-  "move_img": "https://www.dustloop.com/wiki/images/c/cc/GGST_A.B.A_632146K.png",
+  "move_img": "https://www.dustloop.com/wiki/images/6/67/GGST_A.B.A_632146K_JR.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/7c/GGST_A.B.A_632146K_Hitbox.png"
+    "https://www.dustloop.com/wiki/images/7/7c/GGST_A.B.A_632146K_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/f/f5/GGST_A.B.A_632146K_JR_Hitbox2.png",
+    "https://www.dustloop.com/wiki/images/7/79/GGST_A.B.A_632146K_JR_Hitbox3.png"
   ]
 }
 ]

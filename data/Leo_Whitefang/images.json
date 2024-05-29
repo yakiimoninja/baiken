@@ -143,8 +143,16 @@
   ]
 },
 	{
-  "input": "[s/h] h/s",
+  "input": "[s/h]",
   "move_img": "https://www.dustloop.com/wiki/images/7/78/GGST_Leo_Whitefang_parry.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/0/02/GGST_Leo_Whitefang_parry_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/2/25/GGST_Leo_Whitefang_parry2_Hitbox.png"
+  ]
+},
+	{
+  "input": "[s/h] h/s",
+  "move_img": "https://www.dustloop.com/wiki/images/0/09/GGST_Leo_Whitefang_parry_attack.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/9/93/GGST_Leo_S-H_Hitbox.png"
   ]

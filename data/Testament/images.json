@@ -215,28 +215,28 @@
 },
 	{
   "input": "236[H]",
-  "move_img": "",
+  "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236S.png",
   "hitbox_img": [
     ""
   ]
 },
 	{
   "input": "236[S]",
-  "move_img": "",
+  "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236S.png",
   "hitbox_img": [
     ""
   ]
 },
 	{
   "input": "236{H}",
-  "move_img": "",
+  "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236S.png",
   "hitbox_img": [
     ""
   ]
 },
 	{
   "input": "236{S}",
-  "move_img": "",
+  "move_img": "https://www.dustloop.com/wiki/images/2/23/GGST_Testament_236S.png",
   "hitbox_img": [
     ""
   ]

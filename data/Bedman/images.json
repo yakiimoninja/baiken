@@ -240,7 +240,7 @@
 },
 	{
   "input": "13C !S",
-  "move_img": "",
+  "move_img": "https://www.dustloop.com/wiki/images/a/a5/GGST_Bedman_error_6E_S.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/0/01/GGST_Bedman_632146S_error_6E_S.png"
   ]
