@@ -1,5 +1,5 @@
 [
-	{"input":"2D","name":"Sweep","damage":"34","guard":"Low","startup":"14","active":"3","recovery":"24","hit":"HKD +43","block":"-10","level":"3","counter":"Large","scaling":"90%","riscgain":"1500","invincibility":"none"},
+	{"input":"2D","name":"Sweep","damage":"34","guard":"Low","startup":"14","active":"3","recovery":"24","hit":"HKD +43","block":"-10","level":"3","counter":"Large","scaling":"90%","riscgain":"1500","invincibility":"Below Crouch 6-16"},
 	{"input":"2H","name":"2H","damage":"43","guard":"All","startup":"20","active":"4","recovery":"30","hit":"KD +28","block":"-15","level":"4","counter":"Large","scaling":"90%","riscgain":"2500","invincibility":"none"},
 	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"7","active":"3","recovery":"11","hit":"0","block":"-2","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"none"},
 	{"input":"2P","name":"2P","damage":"23","guard":"All","startup":"5","active":"3","recovery":"6","hit":"+6","block":"+3","level":"1","counter":"Small","scaling":"80%","riscgain":"1000","invincibility":"none"},

@@ -3,7 +3,7 @@
 	{"input":"2H","name":"2H","damage":"44","guard":"All","startup":"12","active":"8","recovery":"29","hit":"KD +22","block":"-20","level":"3","counter":"Large","scaling":"90%","riscgain":"2000","invincibility":"-"},
 	{"input":"2K","name":"2K","damage":"26","guard":"Low","startup":"7","active":"6","recovery":"11","hit":"-2","block":"-5","level":"1","counter":"Small","scaling":"70%","riscgain":"750","invincibility":"-"},
 	{"input":"2P","name":"2P","damage":"22","guard":"All","startup":"6","active":"4","recovery":"8","hit":"+1","block":"-2","level":"0","counter":"Small","scaling":"80%","riscgain":"500","invincibility":"-"},
-	{"input":"2S","name":"2S","damage":"26","guard":"Low","startup":"10","active":"3","recovery":"13","hit":"+1","block":"-2","level":"2","counter":"Mid","scaling":"90%","riscgain":"1125","invincibility":"-"},
+	{"input":"2S","name":"2S","damage":"26","guard":"Low","startup":"10","active":"3","recovery":"13","hit":"+1","block":"-2","level":"2","counter":"Mid","scaling":"90%","riscgain":"1125","invincibility":"Below Crouch (Gradual) 3-6, Below Crouch (Lowest) 7-25"},
 	{"input":"5D","name":"Dust Attack","damage":"40","guard":"High","startup":"20","active":"3","recovery":"26","hit":"0","block":"-15","level":"2","counter":"Mid","scaling":"80%","riscgain":"1125","invincibility":"-"},
 	{"input":"5H","name":"5H","damage":"42","guard":"All","startup":"15","active":"5","recovery":"22","hit":"-5","block":"-8","level":"4","counter":"Large","scaling":"90%","riscgain":"2000","invincibility":"-"},
 	{"input":"5K","name":"5K","damage":"32","guard":"All","startup":"9","active":"4","recovery":"13","hit":"0","block":"-3","level":"2","counter":"Small","scaling":"90%","riscgain":"1500","invincibility":"-"},
