@@ -1,6 +1,34 @@
 # Version 0.26.0 Patch Notes.
 
 # General
+- Updated framedata.
+
+# Fixes
+- Fixed message formatting when calling for Negative Edge moves.
+
+# Aliases
+- **`Slayer`**:
+    - `214K` added aliases: `Dandy Step K`, `DSK`.
+	- `214P` added aliases: `Dandy Step P`, `DSP`.
+	- `214P/K~H` added aliases: `Master's Hammer`, `214KH`, `214PH`, `MH`, `Guard Crush`.
+	- `214P/K~K` added aliases: `Bump Ahead`, `214KK`, `214PK`, `BA`, `Low`.
+	- `214P/K~P` added aliases: `Pilebunker`, `214KP`, `214PP`, `PB`.
+	- `214P/K~S` added aliases: `It's Late`, `214KS`, `214PS`, `IL`, `Overhead`.
+	- `236K` added aliases: `Mappa Hunch K`, `MHK`.
+	- `236P` added aliases: `Mappa Hunch P`, `MHP`.
+	- `44~6S` added aliases: `Hand of Doom`, `446S`, `6S`, `Backdash S`, `BDS`, `HOD`.
+	- `63214H` added aliases: `Bloodsucking Universe`, `Suck`, `BU`.
+	- `236236H` added aliases: `Last Horizon`, `LH`, `Suck Super`.
+	- `632146S` added aliases: `Super Mappa Hunch`, `Super`, `Naked`, `SMH`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
+# Version 0.26.0 Patch Notes.
+
+# General
 - Added `Slayer`.
 - Updated framedata.
 
