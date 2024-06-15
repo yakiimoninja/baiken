@@ -79,7 +79,12 @@ pub async fn frames(
     println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
     
     let content_embed = r#"## **[__"#.to_owned()
-        + &character_arg_altered.replace('_', " ") + " " + &mframes.input.to_string()
+        + &character_arg_altered.replace('_', " ") + " "
+        + &mframes.input.to_string()
+            .replace("]P[","|P|")
+            .replace("]K[","|K|")
+            .replace("]S[","|S|")
+            .replace("]H[","|H|")
         + "__](<https://dustloop.com/wiki/index.php?title=GGST/"
         + &character_arg_altered 
         + "/Data#" 

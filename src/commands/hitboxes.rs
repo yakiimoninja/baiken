@@ -80,7 +80,12 @@ pub async fn hitboxes(
             
             // Masked dustloop link
             let bot_msg = "## **[__".to_owned()
-            + &character_arg_altered.replace('_', " ") + " " + &img_links.input 
+            + &character_arg_altered.replace('_', " ") + " "
+            + &img_links.input 
+                .replace("]P[","|P|")
+                .replace("]K[","|K|")
+                .replace("]S[","|S|")
+                .replace("]H[","|H|")
             + "__](<https://dustloop.com/wiki/index.php?title=GGST/" 
             + &character_arg_altered 
             + "/Data#" 
