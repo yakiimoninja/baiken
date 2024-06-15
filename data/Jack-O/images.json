@@ -155,13 +155,6 @@
   ]
 },
 	{
-  "input": "236[D]",
-  "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_Slayer_236D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/06/GGST_Slayer_236D_Hitbox.png"
-  ]
-},
-	{
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/91/GGST_JackO_Ground_Throw.png",
   "hitbox_img": [

@@ -42,7 +42,8 @@
   "input": "5D",
   "move_img": "https://www.dustloop.com/wiki/images/4/44/GGST_Faust_5D.png",
   "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/8/84/GGST_FA_HB_5D.png"
+    "https://www.dustloop.com/wiki/images/8/84/GGST_FA_HB_5D.png",
+    "https://www.dustloop.com/wiki/images/1/14/GGST_Faust_ItemBatRange.png"
   ]
 },
 	{
