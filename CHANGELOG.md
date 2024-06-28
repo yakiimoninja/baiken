@@ -1,3 +1,32 @@
+# Version 0.27.1 Patch Notes.
+
+# General
+- Updated framedata.
+
+# Aliases
+- **`Johnny`**:
+    - `214K` added alias: `KMF`.
+    - `214P` added alias: `PMF`.
+    - `214S` added alias: `SMF`.
+    - `j.214[P/K/S]` added aliases: `j.214K!`, `j.214P!`, `j.214S!`, `JMF`.
+    - `j.214]K[` added aliases: `AKMF`, `JKMF`.
+    - `j.214]P[` added aliases: `APMF`, `JPMF`.
+    - `j.214]S[` added aliases: `ASMF`, `JSMF`.
+    - `Mist Finer 44` added alias: `MF44`.
+    - `Mist Finer 66` added alias: `MF66`.
+    - `632146H` added alias: `TMN`.
+
+# Nicknames
+- `Johnny`:
+    - Added nickname: `Lean`.
+- `Slayer`:
+    - Added nickname: `Dandy`. 
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.27.0 Patch Notes.
 
 # General
