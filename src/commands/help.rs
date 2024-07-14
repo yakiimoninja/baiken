@@ -231,7 +231,7 @@ Registers or removes all slash commands in the current server or every server th
 
 async fn help_update(ctx: Context<'_>) {
     let help_msg = r#"
-__**Command**: `/update`
+__**Command**__: `/update`
 
 __**option**__: `frames`, `images` or `all`. Cannot be empty.
 __**character**__: Character name or nickname. Cannot be empty.
