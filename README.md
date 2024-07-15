@@ -174,7 +174,7 @@
 # Support.
 Support the project by donating here.
 
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
+[![](https://img.shields.io/github/sponsors/yakiimoninja?style=for-the-badge&logoColor=8C4B40&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/sponsors/yakiimoninja)
 
 #
 ### Baiken artwork: [@gogalking](https://twitter.com/gogalking/status/1307199393607553024).
