@@ -29,7 +29,10 @@ struct Imagetitle {
 
 const IMAGE_HALF: &str = "https://www.dustloop.com/wiki/images";
 
-pub async fn images_to_json(char_images_response_json: String, mut file: &File, char_count: usize) {
+pub async fn images_to_json(mut char_images_response_json: String, mut file: &File, char_count: usize) {
+
+    // Replace apostrophe
+    char_images_response_json = char_images_response_json.replace(r#"&#039;"#, "'");
 
     let mut imagedata: Imageresponse = serde_json::from_str(&char_images_response_json).unwrap();
 
