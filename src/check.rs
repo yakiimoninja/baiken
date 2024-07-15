@@ -4,6 +4,23 @@ use crate::{CHARS, Nicknames, Context, Error};
 
 // Collection of functions that check for stuff
 
+// pub async fn server_count(ctx: Context<'_>,) {
+//     let cache = ctx.cache();
+//     let guild_ids = cache.guilds();
+//     let (total_guild_count, total_members) = {
+//         let guilds: Vec<_> = guild_ids.iter().filter_map(|id| cache.guild(*id)).collect();
+//         (
+//             guilds.len().to_string(),
+//             guilds
+//                 .into_iter()
+//                 .map(|g| g.member_count)
+//                 .sum::<u64>()
+//                 .to_string(),
+//         )
+//     };
+//     println!("Server count: {:#?}\nMembers count: {:#?}", total_guild_count, total_members);
+// }
+
 pub async fn data_folder_exists(init_check: bool) -> Option<String> {
 
     // Checking if data folder exists
