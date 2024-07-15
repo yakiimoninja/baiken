@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/80072600/213743131-11012730-7bcd-4ab2-a6b4-e7406fdec419.jpg" />
 
 [![](https://img.shields.io/github/sponsors/yakiimoninja?style=for-the-badge&logoColor=8C4B40&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/sponsors/yakiimoninja)
-[![GitHub tag](https://img.shields.io/github/v/tag/yakiimoninja/baiken?style=for-the-badge&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/yakiimoninja/baiken/releases/latest)
+[![GitHub tag](https://img.shields.io/github/v/tag/yakiimoninja/baiken?style=for-the-badge&label=Version&labelColor=black&color=8C4B40)](https://github.com/yakiimoninja/baiken/releases/latest)
 
 ## Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data, hitboxes and more.
 
