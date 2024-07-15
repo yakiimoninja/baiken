@@ -2,14 +2,14 @@
 
 <img src="https://user-images.githubusercontent.com/80072600/213743131-11012730-7bcd-4ab2-a6b4-e7406fdec419.jpg" />
 
-[![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/yakiimoninja)
-[![GitHub tag](https://img.shields.io/github/tag/yakiimoninja/baiken.svg)](https://github.com/yakiimoninja/baiken/releases/latest)
+[![](https://img.shields.io/github/sponsors/yakiimoninja?style=for-the-badge&logoColor=8C4B40&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/sponsors/yakiimoninja)
+[![GitHub tag](https://img.shields.io/github/v/tag/yakiimoninja/baiken?style=for-the-badge&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/yakiimoninja/baiken/releases/latest)
 
 ## Your favorite one-handed samurai lady helps you learn Guilty Gear Strive by providing you with character moves, frame data, hitboxes and more.
 
 # Table of contents.
 - **[Patch notes](https://github.com/yakiimoninja/baiken/releases)**
-- **[Inviting Baiken to a server](#inviting-the-bot-to-a-server)**
+- **[Inviting Baiken to a server](#inviting-baiken-to-a-server)**
 - **[Support](#support)**
 - **[Commands](#commands)**
     - **[Usage notes](#usage-notes)**
@@ -18,7 +18,8 @@
 # Patch notes.
 - You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
 
-# Inviting the bot to a server.
+# Inviting Baiken to a server.
+### Currently in 600+ servers and 14 official character Discords.
 - Baiken can be **invited** to a server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with a Camera or Discord application.
 
