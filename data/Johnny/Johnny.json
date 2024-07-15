@@ -41,5 +41,5 @@
 	{"input":"Mist Finer 44","name":"Mist Finer Dash (Backward)","damage":"-","guard":"-","startup":"-","active":"-","recovery":"25","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"Mist Finer 66","name":"Mist Finer Dash (Forward)","damage":"-","guard":"-","startup":"-","active":"-","recovery":"25","hit":"-","block":"-","level":"-","counter":"-","scaling":"-","riscgain":"-","invincibility":"-"},
 	{"input":"236236S","name":"Joker Trick","damage":"42, 90","guard":"All","startup":"6+1","active":"Until Hit","recovery":"Total 48","hit":"HKD","block":"-16","level":"4","counter":"Very Small","scaling":"100%","riscgain":"500","invincibility":"-"},
-	{"input":"632146H","name":"That's My Name","damage":"42, 100","guard":"All","startup":"9+2","active":"3","recovery":"60","hit":"HKD","block":"-44","level":"4","counter":"Very Small","scaling":"100%","riscgain":"2500","invincibility":"1-15F Full"}
+	{"input":"632146H","name":"That's My Name","damage":"42, 100","guard":"All","startup":"9+2","active":"3","recovery":"60","hit":"HKD","block":"-44","level":"4","counter":"Very Small","scaling":"100%","riscgain":"2500","invincibility":"1-13F Full"}
 ]
