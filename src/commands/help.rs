@@ -22,7 +22,7 @@ async fn autocomplete_help<'a>(
         .map(|name| name.to_string())
 }
 
-/// Prints a help message.
+/// Displays a help message.
 #[poise::command(prefix_command, slash_command, aliases("?"))]
 pub async fn help(ctx: Context<'_>,
     #[description = "Pick a command to display help for."] 
