@@ -1,3 +1,10 @@
+# Version 0.28.0 Patch Notes.
+
+- Updated framedata.
+- Updated github README to display current server count.
+- Added new command `/stats` to display Baiken's server and member count.
+
+
 # Version 0.27.1 Patch Notes.
 
 # General
