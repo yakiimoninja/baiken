@@ -7,4 +7,5 @@ pub mod info;
 pub mod nicknames;
 pub mod moves;
 pub mod register;
+pub mod stats;
 pub mod update;

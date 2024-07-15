@@ -159,6 +159,7 @@ async fn main() {
             nicknames::nicknames(),
             moves::moves(),
             register::register(),
+            stats::stats(),
             update::update(),    
         ],
         // The global error handler for all error cases that may occur
