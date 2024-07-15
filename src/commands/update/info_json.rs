@@ -65,8 +65,15 @@ struct Title {
     high_jump_gravity: Option<String>,
 }
 
-pub async fn info_to_json(char_info_response_json: String, mut file: &File, char_count: usize){
+pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, char_count: usize){
 
+    char_info_response_json = char_info_response_json.replace(r#"&lt;br&gt;"#, ", ");
+    char_info_response_json = char_info_response_json.replace(r#"&lt;br/&gt;"#, ", ");
+    // Ino low profile
+    char_info_response_json = char_info_response_json.replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "");
+    // Replace apostrophe
+    char_info_response_json = char_info_response_json.replace(r#"&#039;"#, "'");
+    
     let mut char_info: Response = serde_json::from_str(&char_info_response_json).unwrap();
 
     for x in 0..char_info.cargoquery.len() {
