@@ -86,9 +86,7 @@ pub async fn frames(
             .replace("]S[","|S|")
             .replace("]H[","|H|")
         + "__](<https://dustloop.com/wiki/index.php?title=GGST/"
-        + &character_arg_altered 
-        + "/Data#" 
-        + &mframes.input.to_string().replace(' ', "_") + "_Data>)**";
+        + &character_arg_altered + "#Overview>)**";
     //let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
 
     // Checking if the respective data field in the json file is empty

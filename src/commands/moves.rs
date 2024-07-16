@@ -55,7 +55,7 @@ pub async fn moves(
 
     // Formatting string for in discord print
     // Masked dustloop link
-    let mut moves_as_msg = "## **[__".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases__](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "/Data>)" + "**";
+    let mut moves_as_msg = "## **[__".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases__](<https://dustloop.com/wiki/index.php?title=GGST/" + &character_arg_altered + "#Overview>)**";
 
     // Message split due to discord character limit
     // 1st message builder which is also a reply

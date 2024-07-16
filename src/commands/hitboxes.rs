@@ -87,9 +87,7 @@ pub async fn hitboxes(
                 .replace("]S[","|S|")
                 .replace("]H[","|H|")
             + "__](<https://dustloop.com/wiki/index.php?title=GGST/" 
-            + &character_arg_altered 
-            + "/Data#" 
-            + &mframes.input.to_string().replace(' ', "_") + "_Data>)**";
+            + &character_arg_altered + "#Overview>)**";
 
             if !img_links.hitbox_img[0].is_empty() {
 
