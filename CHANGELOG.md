@@ -3,7 +3,16 @@
 - Updated framedata.
 - Updated github README to display current server count.
 - Added new command `/stats` to display Baiken's server and member count.
+- Hyperlink titles for `/frames`, `/fmeter`, `/hitboxes` and `moves` now redirect to character overview pages.
+- Hyperlink titles for `/info` now redirect to corresponding character page.
 
+# Fixes
+- Fixed the parsing of `unique moment options` to not contain "[[GGST/CHAR/UMO|UMO]]" template in info.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
 
 # Version 0.27.1 Patch Notes.
 
