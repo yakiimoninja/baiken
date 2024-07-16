@@ -6,7 +6,7 @@
   "prejump": "4",
   "backdash": "24/1-6 strike invuln/1-20 throw invuln/1-20 &lt;span class=&quot;tooltip&quot; &gt;airborne&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;Sin is considered airborne if he is hit during backdash and grounded otherwise&lt;/span&gt;&lt;/span&gt;",
   "forwarddash": "-",
-  "umo": "[[GGST/Sin Kiske#Gazelle Step|Gazelle Step]]",
+  "umo": "Gazelle Step",
   "jump_duration": "42",
   "high_jump_duration": "49",
   "jump_height": "409.5",
