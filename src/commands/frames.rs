@@ -93,7 +93,7 @@ pub async fn frames(
 
     // Checking if the respective data field in the json file is empty
     // If they aren't empty, the variables initialized above will be replaced
-    // With the corresponind data from the json file
+    // With the corresponding data from the json file
     // Otherwise they will remain as '-'
     for img_links in image_links {
         // Iterating through the image.json to find the move's image links
