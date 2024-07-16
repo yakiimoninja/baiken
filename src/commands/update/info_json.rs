@@ -76,7 +76,6 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     
     let mut char_info: Response = serde_json::from_str(&char_info_response_json).unwrap();
 
-    for x in 0..char_info.cargoquery.len() {
 
         if char_info.cargoquery[x].title.defense.is_none(){
             char_info.cargoquery[x].title.defense = Some("-".to_string());
@@ -189,5 +188,4 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
 
         write!(file, "{}", processed_char_info)
         .expect(&("\nFailed to serialize ".to_owned() + CHARS[char_count]+ " 'info.json'."));
-    }
 }
