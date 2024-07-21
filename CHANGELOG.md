@@ -1,3 +1,16 @@
+# Version 0.28.1 Patch Notes.
+
+# Aliases
+- **`Bridget`**:
+    - `236S/H` added aliases: `236S`,`236H`.
+    - `214S/H` added aliases: `236S`,`236H`.
+    - `63214P` added alias: `624P`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.28.0 Patch Notes.
 
 - Updated framedata.
