@@ -177,8 +177,7 @@ Support the project by donating here.
 
 [![](https://img.shields.io/github/sponsors/yakiimoninja?style=for-the-badge&logoColor=8C4B40&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/sponsors/yakiimoninja)
 
-# 
-### Special thanks.
+# Special thanks.
 
 - To [Dustloop](https://dustloop.com) for providing the technical character data.
 - To [Gogalking](https://x.com/gogalking) for permitting the use of their Baiken artwork.
