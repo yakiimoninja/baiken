@@ -181,4 +181,4 @@ Support the project by donating here.
 ### Special thanks.
 
 - To [Dustloop](https://dustloop.com) for providing the technical character data.
-- To [@gogalking](https://twitter.com/gogalking/status/1307199393607553024) for permitting the use of his Baiken artwork.
+- To [@gogalking](https://x.com/gogalking) for permitting the use of their Baiken artwork.
