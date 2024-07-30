@@ -286,6 +286,20 @@
   ]
 },
 	{
+  "input": "236D",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c6/GGST_A.B.A_236D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f7/GGST_A.B.A_236D_Hitbox.png"
+  ]
+},
+	{
+  "input": "236[D]",
+  "move_img": "https://www.dustloop.com/wiki/images/c/c6/GGST_A.B.A_236D.png",
+  "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/f/f7/GGST_A.B.A_236D_Hitbox.png"
+  ]
+},
+	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/c/c6/GGST_A.B.A_236D.png",
   "hitbox_img": [

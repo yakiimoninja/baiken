@@ -54,6 +54,7 @@
   "input": "5K",
   "move_img": "https://www.dustloop.com/wiki/images/5/54/GGST_Bedman_5K.png",
   "hitbox_img": [
+    "https://www.dustloop.com/wiki/images/d/d1/GGST_Bedman_5K_Hitbox_Startup.png",
     "https://www.dustloop.com/wiki/images/d/db/GGST_Bedman_5K_Hitbox.png"
   ]
 },
