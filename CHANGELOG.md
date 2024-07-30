@@ -1,9 +1,19 @@
+# Version 0.28.2 Patch Notes.
+
+# General
+- Updated framedata.
+- Clippy code clean up.
+
+# Aliases
+- **`Zato-1`**:
+    - `22 During 214K(HOLD)` added aliases: `Eddie Teleport`, `Swap`, `ET`, `TP`.
+
 # Version 0.28.1 Patch Notes.
 
 # Aliases
 - **`Bridget`**:
-    - `236S/H` added aliases: `236S`,`236H`.
-    - `214S/H` added aliases: `236S`,`236H`.
+    - `236S/H` added aliases: `236S`, `236H`.
+    - `214S/H` added aliases: `236S`, `236H`.
     - `63214P` added alias: `624P`.
 
 &#x200B;
