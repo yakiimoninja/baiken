@@ -54,7 +54,7 @@ pub async fn find_character(character: &String) -> Result<String, Error> {
     if !character_found {
         // If user input isnt the full name, part of a full name or a nickname
         // Error out cause requested character was not found in the json
-        let error_msg= "Character `".to_owned() + &character + "` was not found!";
+        let error_msg= "Character `".to_owned() + character + "` was not found!";
         Err(error_msg.into())
     }
     else {
@@ -69,7 +69,7 @@ pub async fn find_move_index(character_arg_altered: &String, mut character_move:
     let move_found = false;
 
     // Checking if aliases for this characters moves exist
-    let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
+    let aliases_path = "data/".to_owned() + character_arg_altered + "/aliases.json";
     if Path::new(&aliases_path).exists() {
         
         // Reading the aliases json

@@ -65,7 +65,7 @@ pub async fn character_folders_exist(init_check: bool) -> Option<String> {
         if !Path::new(&character_path).exists() {
             
             // Error if character folder doesnt exist
-            let error_msg = "Error: Missing '".to_owned() + &character_path +"' folder.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
+            let error_msg = "Error: Missing '".to_owned() + character_path +"' folder.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
             
             if init_check {
                 // Printing the error message in the console
@@ -92,7 +92,7 @@ pub async fn character_jsons_exist(init_check: bool) -> Option<String> {
         if !Path::new(&character_json).exists() {
 
             // Error if character json doesnt exist
-            let error_msg ="Error: Missing '".to_owned() + &character_json + "' file.\nPlease execute the '/update' command.";
+            let error_msg ="Error: Missing '".to_owned() + character_json + "' file.\nPlease execute the '/update' command.";
 
             if init_check {
                 // Printing the error message in the console
@@ -120,7 +120,7 @@ pub async fn character_images_exist(init_check: bool) -> Option<String> {
         if !Path::new(&images_json).exists() {
 
             // Error if images json doesnt exist
-            let error_msg ="Error: Missing '".to_owned() + &images_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
+            let error_msg ="Error: Missing '".to_owned() + images_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
             
             if init_check {
                 // Printing the error message in the console
@@ -146,7 +146,7 @@ pub async fn character_info_exist(init_check: bool) -> Option<String> {
         if !Path::new(&info_json).exists() {
 
             // Error if images json doesnt exist
-            let error_msg ="Error: Missing '".to_owned() + &info_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
+            let error_msg ="Error: Missing '".to_owned() + info_json +"' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.";
             
             if init_check {
                 // Printing the error message in the console
@@ -167,7 +167,7 @@ pub async fn correct_character_arg(character_arg: &String) -> Option<String>{
     
     // Checking for correct character argument
     if character_arg.len() < 2 {
-        let error_msg = "Character name `".to_owned() + &character_arg + "` is invalid!";
+        let error_msg = "Character name `".to_owned() + character_arg + "` is invalid!";
         Some(error_msg)
     }
     else{
@@ -179,7 +179,7 @@ pub async fn correct_character_move_arg(character_move_arg: &String) -> Option<S
 
     // Checking for correct move argument
     if character_move_arg.len() < 2 {
-        let error_msg = "Move `".to_owned() + &character_move_arg + "` is invalid!";
+        let error_msg = "Move `".to_owned() + character_move_arg + "` is invalid!";
         Some(error_msg)
     }
     else{

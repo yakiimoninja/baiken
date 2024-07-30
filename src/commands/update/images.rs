@@ -20,7 +20,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         for (x, char_id) in chars_ids.iter().enumerate() {
     
-            println!("{}", ("Creating ".to_owned() + &char_id + " 'images.json' file.").green());
+            println!("{}", ("Creating ".to_owned() + char_id + " 'images.json' file.").green());
             
             let images_json_path = "data/".to_owned() + char_id +"/images.json";
     

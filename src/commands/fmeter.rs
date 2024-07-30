@@ -228,7 +228,7 @@ pub async fn fmeter(
             }
             // If vec string entry isnt a digit
             else {
-                frame_meter_msg = frame_meter_msg + &active_vec_string;
+                frame_meter_msg = frame_meter_msg + active_vec_string;
 
                 if active_vec_string == "(" {
                     hit_recovery = true;
