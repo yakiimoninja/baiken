@@ -2,7 +2,7 @@ use std::{fs, string::String};
 use colored::Colorize;
 use poise::serenity_prelude::CreateEmbed;
 use crate::{Context, Error, ImageLinks , MoveInfo, ran };
-use crate::{IMAGE_DEFAULT, find, check};
+use crate::{IMAGE_DEFAULT, find, check, Gids};
 
 /// Displays the frame data of a move.
 #[allow(unused_assignments)]
@@ -31,7 +31,7 @@ pub async fn frames(
         true,
         true,
         false,
-        false).await).is_err() {
+        true).await).is_err() {
         
         return Ok(());
     }
@@ -116,9 +116,33 @@ pub async fn frames(
     // println!("{}", recovery_embed);
     // println!("{}", counter_embed);
 
-    if let Some(image_path) = ran::random_p().await {
-        image_embed = image_path;
+
+    // Reading the gids json
+    let data_from_file = fs::read_to_string("data/gids.json")
+        .expect("\nFailed to read 'gids.json' file.");
+
+    // Deserializing from gids json
+    let vec_gids = serde_json::from_str::<Gids>(&data_from_file).unwrap();
+ 
+    // Parse user guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+
+    let mut gid_found = false;
+
+    // Hand to add guild id from exclusion list
+    for x in vec_gids.id.iter() {
+        // Checking if guild is in the exclusion list
+        if guild_id == *x.to_string() {
+            gid_found = true;
+            break;
+        }
     }
+    if gid_found == false {
+        if let Some(image_path) = ran::random_p().await {
+            image_embed = image_path;
+        }
+    }
+
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
