@@ -205,7 +205,7 @@ async fn main() {
                             let mut interval = time::interval(Duration::from_secs(86400));
                             loop {
                                 interval.tick().await;
-                                update::auto_update_all().await;
+                                //update::auto_update_all().await;
                             }
                         });
                         
