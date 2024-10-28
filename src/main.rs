@@ -84,6 +84,11 @@ pub struct Nicknames {
     nicknames: Vec<String>,
 }
 
+#[derive(Serialize, Deserialize, Debug)]
+struct Gids {
+    id: Vec<String>
+}
+
 pub const CHARS: [&str; 27] = [
     "A.B.A",
     "Anji_Mito",
@@ -140,11 +145,12 @@ async fn main() {
     // Running initial checks
     println!();
     check::data_folder_exists(true).await;
-    check::nicknames_json_exists(true).await;
     check::character_folders_exist(true).await;
     check::character_jsons_exist(true).await;
     check::character_images_exist(true).await;
     check::character_info_exist(true).await;
+    check::nicknames_json_exists(true).await;
+    check::gids_json_exists(true).await;
 
     // FrameworkOptions contains all of poise's configuration option in one struct
     // Every option can be omitted to use its default value
@@ -158,6 +164,7 @@ async fn main() {
             info::info(),
             nicknames::nicknames(),
             moves::moves(),
+            ee::ee(),
             register::register(),
             stats::stats(),
             update::update(),    
