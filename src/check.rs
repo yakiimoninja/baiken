@@ -1,6 +1,6 @@
 use std::{fs, path::Path};
 use colored::Colorize;
-use crate::{CHARS, Nicknames, Context, Error};
+use crate::{Context, Error, Gids, Nicknames, CHARS};
 
 // Collection of functions that check for stuff
 
@@ -24,6 +24,32 @@ pub async fn data_folder_exists(init_check: bool) -> Option<String> {
             // Returning the error message for in-discord printing
             Some(error_msg)
         }   
+    }
+}
+
+pub async fn gids_json_exists(init_check: bool) -> Option<String> {
+    let data_from_file = fs::read_to_string("data/gids.json")
+        .expect("Failed to read 'gids.json' file.");
+
+    match serde_json::from_str::<Gids>(&data_from_file) {
+        Ok(_) => {
+            println!("{}", "Successfully read 'gids.json' file.".green());
+            None
+        },
+        Err(_) => {
+            let error_msg = "Error: Failed to deserialize 'gids.json' file.\nDownload and import the `data` folder from:\nhttps://github.com/yakiimoninja/baiken.".to_string();
+
+            if init_check {
+                // Printing the error message in the console
+                // If it is the initial check
+                println!();
+                panic!("{}", error_msg.red());
+            }
+            else {
+                // Returning the error message for in-discord printing
+                Some(error_msg)
+            }
+        },
     }
 }
 
@@ -202,6 +228,7 @@ pub async fn adaptive_check(
     character_jsons_check: bool,
     character_images_check: bool,
     character_info_check: bool,
+    gids_json_check: bool,
 ) -> Result<(), Error> {
     
     let mut checks_passed = true;
@@ -265,6 +292,14 @@ pub async fn adaptive_check(
     if character_info_check {        
         // Checking if info jsons exist
         if let Some(error_msg) = character_info_exist(false).await {
+            ctx.say(&error_msg.replace('\'', "`")).await?;
+            println!();
+            panic!("{}", error_msg.replace('\n', " ").red());
+        }
+    }
+    if gids_json_check {
+        // Checking if gids json exists
+        if let Some(error_msg) = gids_json_exists(false).await {
             ctx.say(&error_msg.replace('\'', "`")).await?;
             println!();
             panic!("{}", error_msg.replace('\n', " ").red());
