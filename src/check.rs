@@ -132,7 +132,7 @@ pub async fn character_jsons_exist(init_check: bool) -> Option<String> {
             }
         }
     }
-    println!("{}", ("Successfully read ".to_owned() + &CHARS.len().to_string() + " character.json files.").green());
+    println!("{}", ("Successfully read ".to_owned() + &(CHARS.len() + 1).to_string() + " character.json files.").green());
 
     None
 }
