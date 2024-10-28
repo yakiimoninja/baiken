@@ -28,7 +28,7 @@ pub async fn ee(
         false,
         false,
         false,
-        false).await).is_err() {
+        true).await).is_err() {
         
         return Ok(());
     }
