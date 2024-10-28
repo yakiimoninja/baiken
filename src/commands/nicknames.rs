@@ -16,6 +16,7 @@ pub async fn nicknames(
         false,
         false,
         false,
+        false,
         false).await).is_err() {
         
         return Ok(());

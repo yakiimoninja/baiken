@@ -26,6 +26,7 @@ pub async fn hitboxes(
         true,
         true,
         true,
+        false,
         false).await).is_err() {
         
         return Ok(());
