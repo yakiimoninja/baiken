@@ -147,14 +147,14 @@
   "input": "236D",
   "move_img": "https://www.dustloop.com/wiki/images/f/fe/GGST_Asuka_R_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Asuka_R_236D_Hitbox.png"
   ]
 },
 	{
   "input": "236[D]",
   "move_img": "https://www.dustloop.com/wiki/images/f/fe/GGST_Asuka_R_236D.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/b/bb/GGST_Asuka_R_236D_Hitbox.png"
   ]
 },
 	{
