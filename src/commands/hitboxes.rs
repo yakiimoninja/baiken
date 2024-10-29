@@ -5,7 +5,7 @@ use crate::{HITBOX_DEFAULT, find, check};
 
 /// Displays the hitbox images of a move.
 #[allow(unused_assignments)]
-#[poise::command(prefix_command, slash_command, aliases("h"))]
+#[poise::command(prefix_command, slash_command)]
 pub async fn hitboxes(
     ctx: Context<'_>,
     #[description = "Character name or nickname."] character: String,

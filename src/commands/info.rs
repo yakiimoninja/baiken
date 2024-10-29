@@ -3,7 +3,7 @@ use colored::Colorize;
 use crate::{check, find, CharInfo, Context, Error};
 
 /// Displays general info for a character.
-#[poise::command(prefix_command, slash_command, aliases("i"))]
+#[poise::command(prefix_command, slash_command)]
 pub async fn info(
     ctx: Context<'_>,
     #[description = "Character name or nickname."] character: String,

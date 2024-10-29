@@ -2,7 +2,7 @@ use std::{fs, string::String};
 use crate::{check, Nicknames, Context, Error};
 
 /// Displays all the nicknames for all characters.
-#[poise::command(prefix_command, slash_command, aliases("n"))]
+#[poise::command(prefix_command, slash_command)]
 pub async fn nicknames(
     ctx: Context<'_>,
 ) -> Result<(), Error> {

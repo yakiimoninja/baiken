@@ -9,7 +9,7 @@ const BLUE_DIAMOND: &str = "🔷";
 
 /// Displays the frame meter of a move.
 #[allow(unused_assignments)]
-#[poise::command(prefix_command, slash_command, aliases("fm"))]
+#[poise::command(prefix_command, slash_command)]
 pub async fn fmeter(
     ctx: Context<'_>,
     #[description = "Character name or nickname."] character: String,

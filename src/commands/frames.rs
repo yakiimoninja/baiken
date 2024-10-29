@@ -6,7 +6,7 @@ use crate::{IMAGE_DEFAULT, find, check, Gids};
 
 /// Displays the frame data of a move.
 #[allow(unused_assignments)]
-#[poise::command(prefix_command, slash_command, aliases("f"))]
+#[poise::command(prefix_command, slash_command)]
 pub async fn frames(
     ctx: Context<'_>,
     #[description = "Character name or nickname."] character: String,

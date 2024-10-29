@@ -4,7 +4,7 @@ use crate::{Context, Error, MoveInfo, MoveAliases };
 use crate::{find, check};
 
 /// Displays all the moves, inputs and aliases of a character.
-#[poise::command(prefix_command, slash_command, aliases("m"))]
+#[poise::command(prefix_command, slash_command)]
 pub async fn moves(
     ctx: Context<'_>,
     #[description = "Character name or nickname."] character: String,
