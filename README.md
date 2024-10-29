@@ -100,9 +100,7 @@
 </details>
 
 ## **Command**: `/update`.
-### **This command only works for owners.**
-### Meaning that it requires an instance of the source code to use it.
-### Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).
+### Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). Owners only.
 <details open>
     <summary>Show example.</summary>
     <p>
@@ -111,8 +109,7 @@
 </details>
 
 ## **Command**: `/register`.
-### **This command only works for owners.**
-### Registers or removes all slash commands in the current server or every server the bot is in.
+### Registers or removes all slash commands in the current server or every server the bot is in. Owners only.
 <details open>
     <summary>Show example.</summary>
     <p>
@@ -121,8 +118,7 @@
 </details>
 
 ## **Command**: `/xx`.
-### **This command only works for admins.**
-### Disables or enables easter eggs in the current server.
+### Disables or enables easter eggs in the current server. Admins only.
 
 
 # Usage notes.
