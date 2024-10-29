@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/80072600/213743131-11012730-7bcd-4ab2-a6b4-e7406fdec419.jpg" />
 
-[![Static Badge](https://img.shields.io/badge/Servers_Joined-600%2B-black?style=for-the-badge&labelColor=black&color=8C4B40)](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands)
+[![Static Badge](https://img.shields.io/badge/Servers_Joined-650%2B-black?style=for-the-badge&labelColor=black&color=8C4B40)](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands)
 [![](https://img.shields.io/github/sponsors/yakiimoninja?style=for-the-badge&logoColor=8C4B40&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/sponsors/yakiimoninja)
 [![GitHub tag](https://img.shields.io/github/v/tag/yakiimoninja/baiken?style=for-the-badge&label=Version&labelColor=black&color=8C4B40)](https://github.com/yakiimoninja/baiken/releases/latest)
 
@@ -27,7 +27,6 @@
 <img src="data/images/baiken_qr.png" width="250" height="250" />
 
 # Commands.
-### Both **`/`** and **`@Baiken`** can be used to invoke commands.
 ## **Command**: `/frames`.
 ### Displays the frame data of a move.
 <details open>
@@ -121,14 +120,12 @@
     </p>
 </details>
 
-# Usage notes.
+## **Command**: `/xx`.
+### **This command only works for admins.**
+### Disbles or enables easter eggs in the current server.
 
-- **All commands can be substituted with direct mentions if preferred.**
-    - Doing so will enable the use of shorthand commands.
-        - Example: `@Baiken f sol 2k` same as `/frames sol 2k`.
-        - Example: `@Baiken h ky 6p` same as `/hitboxes ky 6p`.
-        - Example: `@Baiken m leo` same as `/moves leo`.
-        - Example: `@Baiken a chipp` same as `/aliases chipp`.
+
+# Usage notes.
 
 - **All searching is case insensitive.**
   - All names, nicknames, moves and aliases are case agnostic.
