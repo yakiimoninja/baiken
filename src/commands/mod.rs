@@ -1,4 +1,3 @@
-pub mod ee;
 pub mod feedback;
 pub mod frames;
 pub mod fmeter;
@@ -10,3 +9,4 @@ pub mod moves;
 pub mod register;
 pub mod stats;
 pub mod update;
+pub mod xx;
