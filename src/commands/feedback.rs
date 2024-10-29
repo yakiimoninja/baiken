@@ -3,7 +3,7 @@ use colored::Colorize;
 use crate::{Context, Error};
 
 /// Sends feedback or requests to the dev.
-#[poise::command(prefix_command, slash_command)]
+#[poise::command(prefix_command, slash_command, ephemeral)]
 pub async fn feedback(
     ctx: Context<'_>,
     #[description = "Message for the dev."] text: String,
