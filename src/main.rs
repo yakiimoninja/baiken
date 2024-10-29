@@ -89,10 +89,10 @@ struct Gids {
     id: Vec<String>
 }
 
-pub const CHARS: [&str; 27] = [
 pub const CHARS: [&str; 29] = [
     "A.B.A",
     "Anji_Mito",
+    "Asuka_R",
     "Axl_Low",
     "Baiken",
     "Bedman",
