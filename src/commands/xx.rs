@@ -3,10 +3,14 @@ use colored::Colorize;
 use std::io::Write;
 use std::{fs, fs::OpenOptions};
 
-
-/// Disables or enables easter eggs for current server.
-#[poise::command(prefix_command, slash_command)]
-pub async fn ee(
+/// Disables or enables easter eggs for current server. Admin only.
+#[poise::command(
+    slash_command,
+    ephemeral,
+    hide_in_help,
+    required_permissions = "ADMINISTRATOR", 
+    default_member_permissions = "ADMINISTRATOR")]
+pub async fn xx(
     ctx: Context<'_>,
     #[description = "Disable easter eggs? Default is false."] option: bool
     ) -> Result<(), Error> {
@@ -50,7 +54,7 @@ pub async fn ee(
             // Checking if guild is in the exclusion list
             if guild_id == *x.to_string() {
                 println!("{}", "Guild id already exists.".magenta());
-                ctx.say("Easter eggs for this server are disabled.").await?;
+                ctx.say("Easter eggs for this server are already disabled.").await?;
                 return Ok(());
             }
         }
@@ -98,7 +102,7 @@ pub async fn ee(
         }
         
         println!("{}", "Guild id doesnt exist in exclusion list.".magenta());
-        ctx.say("Easter eggs for this server are enabled.").await?;
+        ctx.say("Easter eggs for this server are already enabled.").await?;
     }
 
     Ok(())
