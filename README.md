@@ -122,7 +122,7 @@
 
 ## **Command**: `/xx`.
 ### **This command only works for admins.**
-### Disbles or enables easter eggs in the current server.
+### Disables or enables easter eggs in the current server.
 
 
 # Usage notes.
