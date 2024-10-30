@@ -17,14 +17,15 @@
     - **[Nicknames](data/nicknames.json)**
 
 # Patch notes.
-- You can view the latest patch notes by pressing [**here**](https://github.com/yakiimoninja/baiken/releases).
+- You can view the latest patch notes by [**pressing here**](https://github.com/yakiimoninja/baiken/releases).
 
 # Inviting Baiken to a server.
 ### Currently in 650+ servers and 14 official character Discords.
-- Baiken can be **invited** to a server by pressing [**here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
+- Baiken can be **invited** to a server by [**pressing here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with a Camera or Discord application.
-
-<img src="data/images/baiken_qr.png" width="250" height="250" />
+<p align="center">
+    <img src="data/images/baiken_qr.png" width="250" height="250" />
+</p>
 
 # Commands.
 ## **Command**: `/frames`.
@@ -82,8 +83,8 @@
 </details>
 
 ## **Command**: `/help`.
-**Displays a help message. \**
-If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.
+**Displays a help message.** \
+**If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
