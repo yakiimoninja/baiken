@@ -1,3 +1,21 @@
+# Version 0.29.0 Patch Notes.
+
+# General
+- Updated framedata.
+- Added `Queen Dizzy`.
+- Removed prefix command aliases.
+- Added `xx` functions and file dependencies.
+- Made `/register` and `/feedback` command resposes, ephemeral.
+- Updated `README`.
+
+# Fixes
+- Fixed `/update` failing to update `Asuka` related data. (Sorry Asuka bros)
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.28.2 Patch Notes.
 
 # General
