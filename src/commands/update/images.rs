@@ -1,9 +1,7 @@
 use std::fs::OpenOptions;
 use std::io::Write;
-use std::path::Path;
 use std::time::Instant;
 use colored::Colorize;
-use tokio::fs::remove_file;
 use crate::CHARS;
 use crate::commands::update::images_json::images_to_json;
 extern crate ureq;
@@ -24,14 +22,12 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             
             let images_json_path = "data/".to_owned() + char_id +"/images.json";
     
-            if Path::new(&images_json_path).exists() {
-                remove_file(&images_json_path).await.unwrap();
-            }
-    
             // Creating character images json file
             let mut file = OpenOptions::new()
                 .create(true)
-                .append(true)
+                .truncate(true)
+                .read(true)
+                .write(true)
                 .open(images_json_path)
                 .expect(&("\nFailed to open ".to_owned() + char_id + " 'images.json' file."));
     
@@ -74,14 +70,12 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         let images_json_path = "data/".to_owned() + specific_char +"/images.json";
 
-        if Path::new(&images_json_path).exists() {
-            remove_file(&images_json_path).await.unwrap();
-        }
-
         // Creating character json file
         let mut file = OpenOptions::new()
             .create(true)
-            .append(true)
+            .truncate(true)
+            .read(true)
+            .write(true)
             .open(images_json_path)
             .expect(&("\nFailed to open ".to_owned() + specific_char + " 'images.json' file."));
 

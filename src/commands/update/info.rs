@@ -1,9 +1,7 @@
 use std::fs::OpenOptions;
 use std::io::Write;
-use std::path::Path;
 use std::time::Instant;
 use colored::Colorize;
-use tokio::fs::remove_file;
 use crate::CHARS;
 use crate::commands::update::info_json::info_to_json;
 extern crate ureq;
@@ -23,14 +21,12 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             
             let char_info_json_path = "data/".to_owned() + char_id +"/info.json";
     
-            if Path::new(&char_info_json_path).exists() {
-                remove_file(&char_info_json_path).await.unwrap();
-            }
-    
             // Creating character info.json file
             let mut file = OpenOptions::new()
                 .create(true)
-                .append(true)
+                .truncate(true)
+                .read(true)
+                .write(true)
                 .open(char_info_json_path)
                 .expect(&("\nFailed to open ".to_owned() + char_id + " 'info.json' file."));
     
@@ -73,14 +69,12 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         let char_info_json_path = "data/".to_owned() + specific_char +"/info.json";
 
-        if Path::new(&char_info_json_path).exists() {
-            remove_file(&char_info_json_path).await.unwrap();
-        }
-
         // Creating character info.json file
         let mut file = OpenOptions::new()
             .create(true)
-            .append(true)
+            .truncate(true)
+            .read(true)
+            .write(true)
             .open(char_info_json_path)
             .expect(&("\nFailed to open ".to_owned() + specific_char + " 'info.json' file."));
 
