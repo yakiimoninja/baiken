@@ -161,14 +161,14 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/98/GGST_Elphelt_Valentine_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/0/01/GGST_Elphelt_Valentine_Ground_Throw_Hitbox.png"
   ]
 },
 	{
   "input": "j.6D or j.4D",
   "move_img": "https://www.dustloop.com/wiki/images/2/28/GGST_Elphelt_Valentine_Air_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/b/b3/GGST_Elphelt_Valentine_Air_Throw_Hitbox.png"
   ]
 },
 	{

@@ -179,7 +179,7 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/a/a6/GGST_Chipp_Zanuff_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/0/0b/GGST_Chipp_Zanuff_Ground_Throw_Hitboxes.png"
   ]
 },
 	{
@@ -229,6 +229,13 @@
   "move_img": "https://www.dustloop.com/wiki/images/9/9b/GGST_Chipp_Zanuff_wfS.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/5/5e/GGST_Chipp_Zanuff_wfS_Hitbox.png"
+  ]
+},
+	{
+  "input": "214H",
+  "move_img": "",
+  "hitbox_img": [
+    ""
   ]
 },
 	{

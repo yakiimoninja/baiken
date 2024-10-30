@@ -97,6 +97,13 @@
   ]
 },
 	{
+  "input": "6[K]",
+  "move_img": "",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
   "input": "c.S",
   "move_img": "https://www.dustloop.com/wiki/images/1/15/GGST_Slayer_cS.png",
   "hitbox_img": [
@@ -164,7 +171,7 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/2/29/GGST_Slayer_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/8/87/GGST_Slayer_Ground_Throw_Hitbox.png"
   ]
 },
 	{

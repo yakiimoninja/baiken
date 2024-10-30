@@ -175,7 +175,8 @@
   "input": "236P Afro",
   "move_img": "https://www.dustloop.com/wiki/images/3/3f/GGST_Faust_Afro.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/8/8a/GGST_Faust_Strategy_AfroHurtboxes_KyCrouchAfroHitbox.png",
+    "https://www.dustloop.com/wiki/images/4/4d/GGST_Faust_Strategy_AfroHurtboxes_Ky6PAfroHitbox.png"
   ]
 },
 	{
@@ -235,6 +236,7 @@
   "move_img": "https://www.dustloop.com/wiki/images/e/ec/GGST_Faust_Small_Faust_Walk.png",
   "hitbox_img": [
     "https://www.dustloop.com/wiki/images/6/6c/GGST_Faust_Small_Faust_Walk_Hitbox.png",
+    "https://www.dustloop.com/wiki/images/2/25/GGST_Faust_Small_Faust_Stomp_Hitbox.png",
     "https://www.dustloop.com/wiki/images/2/2f/GGST_Faust_Small_Faust_Attack_Hitbox.png"
   ]
 },

@@ -175,12 +175,26 @@
   "input": "6D or 4D",
   "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Leo_Whitefang_Ground_Throw.png",
   "hitbox_img": [
-    ""
+    "https://www.dustloop.com/wiki/images/8/81/GGST_Leo_Whitefang_Ground_Throw_Hitbox.png"
   ]
 },
 	{
   "input": "bt.22",
   "move_img": "https://www.dustloop.com/wiki/images/b/b9/GGST_Leo_Whitefang_bt_22.png",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "bt.44",
+  "move_img": "",
+  "hitbox_img": [
+    ""
+  ]
+},
+	{
+  "input": "bt.66",
+  "move_img": "https://www.dustloop.com/wiki/images/8/87/GGST_Leo_Whitefang_Brynhildr_Stance.png",
   "hitbox_img": [
     ""
   ]
