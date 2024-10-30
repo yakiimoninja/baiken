@@ -7,7 +7,7 @@ const GREEN_CIRCLE: &str = "🟢";
 const RED_SQUARE: &str = "🟥";
 const BLUE_DIAMOND: &str = "🔷";
 
-/// Displas a move's frame meter.
+/// Display a move's frame meter.
 #[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command)]
 pub async fn fmeter(

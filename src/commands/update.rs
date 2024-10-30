@@ -18,7 +18,7 @@ async fn autocomplete_option<'a>(
         .map(|name| name.to_string())
 }
 
-/// Updates data according to dustloop. Owners only.
+/// Update data according to dustloop. Owners only.
 #[poise::command(prefix_command, slash_command, owners_only)]
 pub async fn update (
     ctx: Context<'_>,

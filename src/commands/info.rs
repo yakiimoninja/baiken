@@ -2,7 +2,7 @@ use std::{fs, string::String};
 use colored::Colorize;
 use crate::{check, find, CharInfo, Context, Error};
 
-/// Displays a character's general info.
+/// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
 pub async fn info(
     ctx: Context<'_>,

@@ -1,7 +1,7 @@
 use std::{fs, string::String};
 use crate::{check, Nicknames, Context, Error};
 
-/// Displays all character nicknames.
+/// Display all character nicknames.
 #[poise::command(prefix_command, slash_command)]
 pub async fn nicknames(
     ctx: Context<'_>,

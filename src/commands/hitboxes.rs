@@ -3,7 +3,7 @@ use colored::Colorize;
 use crate::{Context, Error, ImageLinks , MoveInfo };
 use crate::{HITBOX_DEFAULT, find, check};
 
-/// Displays a move's hitbox images.
+/// Display a move's hitbox images.
 #[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command)]
 pub async fn hitboxes(
@@ -92,7 +92,7 @@ pub async fn hitboxes(
 
             if !img_links.hitbox_img[0].is_empty() {
 
-                // Priting hitboxes in discord chat
+                // Printing hitboxes in discord chat
                 ctx.say(&bot_msg).await?;
 
                 for htbx_img in img_links.hitbox_img {                        
@@ -100,7 +100,7 @@ pub async fn hitboxes(
                 }
             }
             else{
-                // Priting hitboxes in discord chat
+                // Printing hitboxes in discord chat
                 ctx.say(&bot_msg).await?;
                 ctx.channel_id().say(ctx, HITBOX_DEFAULT).await?;
             }

@@ -3,7 +3,7 @@ use colored::Colorize;
 use std::io::Write;
 use std::{fs, fs::OpenOptions};
 
-/// Disables or enables easter eggs for current server. Admin only.
+/// Disable or enable easter eggs for current server. Admin only.
 #[poise::command(
     slash_command,
     ephemeral,

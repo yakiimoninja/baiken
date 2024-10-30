@@ -22,7 +22,7 @@ async fn autocomplete_help<'a>(
         .map(|name| name.to_string())
 }
 
-/// Displays a help message.
+/// Display a help message.
 #[poise::command(prefix_command, slash_command)]
 pub async fn help(ctx: Context<'_>,
     #[description = "Pick a command to display help for."] 
@@ -83,7 +83,7 @@ async fn help_feedback(ctx: Context<'_>) {
 __**text**__: Any text.
 (Field cannot be empty).
 
-Sends feedback or requests to the dev."#;
+Send feedback or requests to the dev."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/feedback.png").await;
@@ -99,7 +99,7 @@ __**character**__: Character name or nickname.
 __**character_move**__: Character move name, input or alias.
 (Field cannot be empty).
 
-Displays visually, a move's startup, active and recovery frames."#;
+Display visually, a move's startup, active and recovery frames."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/fmeter.png").await;
@@ -115,7 +115,7 @@ __**character**__: Character name or nickname.
 __**character_move**__: Character move name, input or alias.
 (Field cannot be empty).
 
-Displays a move's frame data."#;
+Display a move's frame data."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/frames.png").await;
@@ -131,7 +131,7 @@ __**character**__: Character name or nickname.
 __**character_move**__: Character move name, input or alias.
 (Field cannot be empty).
 
-Displays a move's hitbox images."#;
+Display a move's hitbox images."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/hitboxes.png").await;
@@ -144,7 +144,7 @@ async fn help_info(ctx: Context<'_>) {
 __**character**__: Character name or nickname.
 (Field cannot be empty).
 
-Displays a character's general information."#;
+Display a character's general information."#;
 
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/info.png").await;
@@ -157,7 +157,7 @@ async fn help_moves(ctx: Context<'_>) {
 __**character**__: Character name or nickname.
 (Field cannot be empty).
 
-Displays a character's moves, inputs and move aliases."#;
+Display a character's moves, inputs and move aliases."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/moves.png").await;
@@ -167,7 +167,7 @@ async fn help_nicknames(ctx: Context<'_>) {
     let help_msg = r#"
 ## __Command__: `/nicknames`
 
-Displays all character nicknames."#;
+Display all character nicknames."#;
     
     let _ = ctx.say(help_msg).await;
     let _ = ctx.channel_id().say(ctx, "https://raw.githubusercontent.com/yakiimoninja/baiken/test/data/images/nicknames.png").await;
@@ -222,7 +222,7 @@ async fn help_register(ctx: Context<'_>) {
     let help_msg = r#"
 ## __**Command**__: `/register`
 
-Registers or removes all slash commands in the current or every server the bot is present.
+Register or remove all slash commands in the current or every server the bot is present.
 _**This command only works for owners.**_"#;
     
     let _ = ctx.say(help_msg).await;
@@ -238,7 +238,7 @@ __**option**__: `frames`, `images` or `all`.
 __**character**__: Character name or nickname.
 (Field cannot be empty).
 
-Updates the frame data and, image links or info for all or a specific character according to dustloop.
+Update the frame data and, image links or info for all or a specific character according to dustloop.
 _**This command only works for owners.**_"#;
 
     let _ = ctx.say(help_msg).await;

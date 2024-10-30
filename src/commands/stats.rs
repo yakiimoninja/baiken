@@ -1,7 +1,7 @@
 use colored::Colorize;
 use crate::{Context, Error};
 
-/// Displays Baiken stats.
+/// Display Baiken stats.
 #[poise::command(prefix_command, slash_command)]
 pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
 
