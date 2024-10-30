@@ -233,8 +233,10 @@ async fn help_update(ctx: Context<'_>) {
     let help_msg = r#"
 __**Command**__: `/update`
 
-__**option**__: `frames`, `images` or `all`. Cannot be empty.
-__**character**__: Character name or nickname. Cannot be empty.
+__**option**__: `frames`, `images` or `all`.
+(Field cannot be empty).
+__**character**__: Character name or nickname.
+(Field cannot be empty).
 
 Updates the frame data and, image links or info for all or a specific character according to dustloop.
 _**This command only works for owners.**_"#;
