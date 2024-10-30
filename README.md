@@ -65,7 +65,7 @@
 </details>
 
 ## **Command**: `/info`.
-**Displays general character information.**
+**Displays a character's general information.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -101,7 +101,7 @@
 </details>
 
 ## **Command**: `/update`.
-**Updates the frame data,image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).** \
+**Updates the frame data, image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).** \
 _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
@@ -135,7 +135,7 @@ _**This command works only for admins.**_
     - Example: `/moves Happy Chaos` = `/moves happy` = `/moves hc`.
 
 - **Move searching.**
-    - Moves can be found either using a part of their name, their input, or any of their existing aliases.
+    - Moves can be found either using a part of their name, input, or any of their existing aliases.
         - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
     - Charged moves can be found with or without the use of `[]`.
         - Example `/frames may 46S` = `/frames may [4]6S`.
