@@ -49,18 +49,18 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             let char_info_response_json = char_info_response_json.into_string().unwrap();
             
             // More character info.json file stuff
-            let mut char_json_schema = "[\n\t";
-            write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + char_id + " 'info.json'."));
+            //let mut char_json_schema = "[\n\t";
+            //write!(file, "{}", char_json_schema)
+                //.expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + char_id + " 'info.json'."));
             
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
             info_to_json(char_info_response_json, &file, x).await;
 
             // Finalizing character info.json
-            char_json_schema = "\n]";
-            write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'json_schema' to ".to_owned() + char_id + " 'info.json'.")); 
+            //char_json_schema = "\n]";
+            //write!(file, "{}", char_json_schema)
+                //.expect(&("\nFailed to write 'json_schema' to ".to_owned() + char_id + " 'info.json'.")); 
         }
     }
     else {
@@ -97,18 +97,18 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         let char_info_response_json = char_info_response_json.into_string().unwrap();
         
         // More character info.json file stuff
-        let mut char_json_schema = "[\n\t";
-        write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + specific_char + ".json'."));
+        //let mut char_json_schema = "[\n\t";
+        //write!(file, "{}", char_json_schema)
+            //.expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + specific_char + ".json'."));
 
         // Sending response to get processed and serialized to a json file
         // char_count is a counter to specify which json file fails to update
         info_to_json(char_info_response_json, &file, 0).await;
 
         // Finalizing character info.json
-        char_json_schema = "\n]";
-        write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'json_schema' to '{".to_owned() + specific_char + "}.json'."));
+        //char_json_schema = "\n]";
+        //write!(file, "{}", char_json_schema)
+            //.expect(&("\nFailed to write 'json_schema' to '{".to_owned() + specific_char + "}.json'."));
 
     }
     
