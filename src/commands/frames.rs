@@ -137,7 +137,7 @@ pub async fn frames(
             break;
         }
     }
-    if gid_found == false {
+    if !gid_found {
         if let Some(image_path) = ran::random_p().await {
             image_embed = image_path;
         }
