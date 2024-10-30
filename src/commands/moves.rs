@@ -3,7 +3,7 @@ use colored::Colorize;
 use crate::{Context, Error, MoveInfo, MoveAliases };
 use crate::{find, check};
 
-/// Displays all the moves, inputs and aliases of a character.
+/// Displays a character's moves, inputs and aliases.
 #[poise::command(prefix_command, slash_command)]
 pub async fn moves(
     ctx: Context<'_>,

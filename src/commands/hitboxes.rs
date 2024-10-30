@@ -3,7 +3,7 @@ use colored::Colorize;
 use crate::{Context, Error, ImageLinks , MoveInfo };
 use crate::{HITBOX_DEFAULT, find, check};
 
-/// Displays the hitbox images of a move.
+/// Displays a move's hitbox images.
 #[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command)]
 pub async fn hitboxes(
