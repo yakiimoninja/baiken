@@ -28,98 +28,101 @@
 
 # Commands.
 ## **Command**: `/frames`.
-### Displays the frame data of a move.
+Displays the frame data of a move.
 <details open>
     <summary>Show example.</summary>
-        <p>
+        <p align="center">
             <img src="data/images/frames.png" />
         </p>
 </details>
 
 ## **Command**: `/fmeter`.
-### Displays visually the startup, active and recovery frames of a move.
+Displays visually the startup, active and recovery frames of a move.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/fmeter.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/fmeter.png"/>
+        </p>
 </details>
 
 ## **Command**: `/hitboxes`.
-### Displays the hitbox images of a move.
+Displays the hitbox images of a move.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/hitboxes.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/hitboxes.png"/>
+        </p>
 </details>
   
 ## **Command**: `/moves`.
-### Displays all the moves, inputs and aliases of a character.
+Displays all the moves, inputs and aliases of a character.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/moves.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/moves.png"/>
+        </p>
 </details>
 
 ## **Command**: `/info`.
-### Displays general character information.
+Displays general character information.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/info.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/info.png"/>
+        </p>
 </details>
 
 ## **Command**: `/nicknames`.
-### Displays all the nicknames for all characters.
+Displays all the nicknames for all characters.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/nicknames.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/nicknames.png"/>
+        </p>
 </details>
 
 ## **Command**: `/help`.
-### Displays a help message. If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.
+Displays a help message. \
+If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/help.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/help.png"/>
+        </p>
 </details>
 
 ## **Command**: `/feedback`.
-### Sends feedback or requests to the dev.
+Sends feedback or requests to the dev.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/feedback.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/feedback.png"/>
+        </p>
 </details>
 
 ## **Command**: `/update`.
-### Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com). Owners only.
+**This command works only for owners.** \
+Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/update.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/update.png"/>
+        </p>
 </details>
 
 ## **Command**: `/register`.
-### Registers or removes all slash commands in the current server or every server the bot is in. Owners only.
+**This command works only for owners.** \
+Registers or removes all slash commands in the current server or every server the bot is in.
 <details open>
     <summary>Show example.</summary>
-    <p>
-        <img src="data/images/register.png"/>
-    </p>
+        <p align="center">
+            <img src="data/images/register.png"/>
+        </p>
 </details>
 
 ## **Command**: `/xx`.
-### Disables or enables easter eggs in the current server. Admins only.
-
+**This command works only for admins.** \
+Disables or enables easter eggs in the current server.
 
 # Usage notes.
 
