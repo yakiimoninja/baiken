@@ -177,8 +177,7 @@ pub async fn frames(
     ).await?;
 
     // New version notification
-    //ctx.channel_id().say(ctx, r"DIIIIE 💀💀💀.
-//<__https://github.com/yakiimoninja/baiken/releases__>").await?;
+    ctx.channel_id().say(ctx, r"[Patch.](<https://github.com/yakiimoninja/baiken/releases>)").await?;
 
     Ok(())
 }
