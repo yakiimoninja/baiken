@@ -29,7 +29,7 @@
 
 # Commands.
 ## **Command**: `/frames`.
-**Displays move's frame data.**
+**Displays a move's frame data.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -38,7 +38,7 @@
 </details>
 
 ## **Command**: `/fmeter`.
-**Displays visually, move's startup, active and recovery frames.**
+**Displays visually, a move's startup, active and recovery frames.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -47,7 +47,7 @@
 </details>
 
 ## **Command**: `/hitboxes`.
-**Displays move's hitbox images.**
+**Displays a move's hitbox images.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -56,7 +56,7 @@
 </details>
   
 ## **Command**: `/moves`.
-**Displays character's moves, inputs and aliases.**
+**Displays a character's moves, inputs and aliases.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -83,7 +83,7 @@
 </details>
 
 ## **Command**: `/help`.
-**Displays a relative help message per option selected.** \
+**Displays a relative help message per option selected.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -131,7 +131,7 @@ _**This command works only for admins.**_
   - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
 - **Character searching.**
-    - Characters can be found either using a part of their name, or any of their [nickname's](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
+    - Characters can be found either using a part of their name, or any of their existing [nickname's](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json).
     - Example: `/moves Happy Chaos` = `/moves happy` = `/moves hc`.
 
 - **Move searching.**
