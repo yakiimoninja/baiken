@@ -28,7 +28,7 @@
 
 # Commands.
 ## **Command**: `/frames`.
-Displays the frame data of a move.
+**Displays the frame data of a move.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -37,7 +37,7 @@ Displays the frame data of a move.
 </details>
 
 ## **Command**: `/fmeter`.
-Displays visually the startup, active and recovery frames of a move.
+**Displays visually the startup, active and recovery frames of a move.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -46,7 +46,7 @@ Displays visually the startup, active and recovery frames of a move.
 </details>
 
 ## **Command**: `/hitboxes`.
-Displays the hitbox images of a move.
+**Displays the hitbox images of a move.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -55,7 +55,7 @@ Displays the hitbox images of a move.
 </details>
   
 ## **Command**: `/moves`.
-Displays all the moves, inputs and aliases of a character.
+**Displays all the moves, inputs and aliases of a character.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -64,7 +64,7 @@ Displays all the moves, inputs and aliases of a character.
 </details>
 
 ## **Command**: `/info`.
-Displays general character information.
+**Displays general character information.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -73,7 +73,7 @@ Displays general character information.
 </details>
 
 ## **Command**: `/nicknames`.
-Displays all the nicknames for all characters.
+**Displays all the nicknames for all characters.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -82,7 +82,7 @@ Displays all the nicknames for all characters.
 </details>
 
 ## **Command**: `/help`.
-Displays a help message. \
+**Displays a help message. \**
 If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.
 <details open>
     <summary>Show example.</summary>
@@ -92,7 +92,7 @@ If used in conjunction with a command name, `notes` or `specifics`, a different 
 </details>
 
 ## **Command**: `/feedback`.
-Sends feedback or requests to the dev.
+**Sends feedback or requests to the dev.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -101,8 +101,8 @@ Sends feedback or requests to the dev.
 </details>
 
 ## **Command**: `/update`.
-**This command works only for owners.** \
-Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).
+**Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).** \
+_**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -111,8 +111,8 @@ Updates the frame data and or image links for all or a specific character accord
 </details>
 
 ## **Command**: `/register`.
-**This command works only for owners.** \
-Registers or removes all slash commands in the current server or every server the bot is in.
+**Registers or removes all slash commands in the current server or every server the bot is in.** \
+_**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -121,8 +121,8 @@ Registers or removes all slash commands in the current server or every server th
 </details>
 
 ## **Command**: `/xx`.
-**This command works only for admins.** \
-Disables or enables easter eggs in the current server.
+**Disables or enables easter eggs in the current server.** \
+_**This command works only for admins.**_
 
 # Usage notes.
 
