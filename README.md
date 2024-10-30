@@ -29,7 +29,7 @@
 
 # Commands.
 ## **Command**: `/frames`.
-**Displays the frame data of a move.**
+**Displays move's frame data.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -38,7 +38,7 @@
 </details>
 
 ## **Command**: `/fmeter`.
-**Displays visually the startup, active and recovery frames of a move.**
+**Displays visually, move's startup, active and recovery frames.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -47,7 +47,7 @@
 </details>
 
 ## **Command**: `/hitboxes`.
-**Displays the hitbox images of a move.**
+**Displays move's hitbox images.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -56,7 +56,7 @@
 </details>
   
 ## **Command**: `/moves`.
-**Displays all the moves, inputs and aliases of a character.**
+**Displays character's moves, inputs and aliases.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -74,7 +74,7 @@
 </details>
 
 ## **Command**: `/nicknames`.
-**Displays all the nicknames for all characters.**
+**Displays all character nicknames.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -83,8 +83,7 @@
 </details>
 
 ## **Command**: `/help`.
-**Displays a help message.** \
-**If used in conjunction with a command name, `notes` or `specifics`, a different message wil be displayed.**
+**Displays a relative help message per option selected.** \
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -102,7 +101,7 @@
 </details>
 
 ## **Command**: `/update`.
-**Updates the frame data and or image links for all or a specific character according to [**dustloop**](https://dustloop.com).** \
+**Updates the frame data,image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).** \
 _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
@@ -112,7 +111,7 @@ _**This command works only for owners.**_
 </details>
 
 ## **Command**: `/register`.
-**Registers or removes all slash commands in the current server or every server the bot is in.** \
+**Registers or removes all slash commands in the current or every server the bot is present.** \
 _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
@@ -132,28 +131,28 @@ _**This command works only for admins.**_
   - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
 - **Character searching.**
-    - Characters can be found either using a part of their name, or any of the [nicknames](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
+    - Characters can be found either using a part of their name, or any of their [nickname's](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json) that exist.
     - Example: `/moves Happy Chaos` = `/moves happy` = `/moves hc`.
 
 - **Move searching.**
-    - Moves can be found either using a part of their name, their input, or any of the aliases that exist.
+    - Moves can be found either using a part of their name, their input, or any of their existing aliases.
         - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
     - Charged moves can be found with or without the use of `[]`.
         - Example `/frames may 46S` = `/frames may [4]6S`.
     - All dots in move names are automatically ignored.
         - Example: `/frames leo bts` = `/frames leo bt.S`.
-    - For a fully charged dust attack the alias `5D!` can be used instead.
+    - For a fully charged dust attack, the alias `5D!` can be used instead.
         - Example: `/frames chipp 5D!`.
 
 - **Character specifics.**
-    - **For normals that have levels like Nagoriyuki.**
+    - **For normals that have levels. (e.g. Nagoriyuki).**
         - Add the level number next to the normal.
         - For Level 1 `fS`: `/frames nago fs`. 
         - For Level 2 `fS`: `/frames nago fs2`.
         - For Level 3 `fS`: `/frames nago fs3`.
         - For Level 1 normals nothing needs to be added since it's the default state.
 
-    - **For specials that have levels like Goldlewis.**
+    - **For specials that have levels. (e.g. Goldlewis).**
         - Add the level number next to the special.
         - For Level 1 `Thunderbird`: `/frames gold Drone`.
         - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
@@ -164,7 +163,7 @@ _**This command works only for admins.**_
         - For Level 3 `Thunderbird`: `/frames gold D3`.
         - See `/moves gold` for more info on his aliases.
 
-    - **For Testament's different Grave Reaper versions use as shown.**
+    - **For Testament's different Grave Reaper versions.**
         - Regular version: `/frames testament 236S`.
         - Partially charged version: `/frames testament 236S!`.
         - Fully charged version: `/frames testament 236S!!`.
