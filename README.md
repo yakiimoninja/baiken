@@ -29,7 +29,7 @@
 
 # Commands.
 ## **Command**: `/frames`.
-**Displays a move's frame data.**
+**Display a move's frame data.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -38,7 +38,7 @@
 </details>
 
 ## **Command**: `/fmeter`.
-**Displays visually, a move's startup, active and recovery frames.**
+**Display visually, a move's startup, active and recovery frames.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -47,7 +47,7 @@
 </details>
 
 ## **Command**: `/hitboxes`.
-**Displays a move's hitbox images.**
+**Display a move's hitbox images.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -56,7 +56,7 @@
 </details>
   
 ## **Command**: `/moves`.
-**Displays a character's moves, inputs and aliases.**
+**Display a character's moves, inputs and aliases.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -65,7 +65,7 @@
 </details>
 
 ## **Command**: `/info`.
-**Displays a character's general information.**
+**Display a character's general information.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -74,7 +74,7 @@
 </details>
 
 ## **Command**: `/nicknames`.
-**Displays all character nicknames.**
+**Display all character nicknames.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -83,7 +83,7 @@
 </details>
 
 ## **Command**: `/help`.
-**Displays a relative help message per option selected.**
+**Display a relative help message per option selected.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -92,7 +92,7 @@
 </details>
 
 ## **Command**: `/feedback`.
-**Sends feedback or requests to the dev.**
+**Send feedback or requests to the dev.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -101,7 +101,7 @@
 </details>
 
 ## **Command**: `/update`.
-**Updates the frame data, image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).** \
+**Update the frame data, image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).** \
 _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
@@ -111,7 +111,7 @@ _**This command works only for owners.**_
 </details>
 
 ## **Command**: `/register`.
-**Registers or removes all slash commands in the current or every server the bot is present.** \
+**Register or remove all slash commands in the current or every server the bot is present.** \
 _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
@@ -121,7 +121,7 @@ _**This command works only for owners.**_
 </details>
 
 ## **Command**: `/xx`.
-**Disables or enables easter eggs in the current server.** \
+**Disable or enable easter eggs in the current server.** \
 _**This command works only for admins.**_
 
 # Usage notes.
