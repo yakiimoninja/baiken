@@ -1,3 +1,29 @@
+# Version 0.30.0 Patch Notes.
+
+# General
+- Reworked serialization for `frames`, `images` and `info` data when updating.
+- Replaced file deletion with truncate when updating.
+
+# Aliases
+- **`Queen Dizzy`**:
+    - `214S` added aliases `Michael Sword`, `S Michael Sword`, `Sword`, `S Sword`, `MS`, `SMS`, `SS`.
+    - `214H` added aliases `H Michael Sword`, `H Sword`, `HMS`, `HS`.
+    - `214P/K` added aliases `We talked a lot together`, `Fish`, `WTALT`, `214P`, `214K`.
+    - `22H` added aliases `Wings of Light`, `Wings`, `WOL`.
+    - `236K` added aliases `For roasting chestnuts`, `Fireball`, `Deez nuts`, `FRCN`, `FB`, `DN`.
+    - `236S/H` added aliases `I used this to catch fish`, `Spike`, `Pillar`, `IUTTCF`, `CF`, `SP`, `PI`, `236S`, `236H`.
+    - `236S~6S/236H~6H` added aliases `Ice Field`, `Floor is lava`, `Floor is ice`, `IF`, `FIL`, `FII`, `236S~6S`, `236H~6H`, `236SS`, `236HH`.
+    - `632146S` added aliases `Imperial Ray`, `Super`, `Ice Super`, `IS`, `IR`.
+    - `632146H` added aliases `Gamma Ray`, `Lazer`, `Lazer Super`, `Kamehameha`, `LS`, `GR`.
+
+- **`Chipp Zanuff`**:
+    - `214H` added aliases `Thighrope`, `Rope`, `TR`.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.29.0 Patch Notes.
 
 # General
