@@ -1,245 +1,245 @@
 [
-	{
-  "input": "2D",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f3/GGST_Queen_Dizzy_2D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/a/a0/GGST_Queen_Dizzy_2D_hitbox.png"
-  ]
-},
-	{
-  "input": "2H",
-  "move_img": "https://www.dustloop.com/wiki/images/d/d2/GGST_Queen_Dizzy_2H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/5/57/GGST_Queen_Dizzy_2H_hitbox.png"
-  ]
-},
-	{
-  "input": "2K",
-  "move_img": "https://www.dustloop.com/wiki/images/a/a6/GGST_Queen_Dizzy_2K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_2K_hitbox.png"
-  ]
-},
-	{
-  "input": "2P",
-  "move_img": "https://www.dustloop.com/wiki/images/e/ea/GGST_Queen_Dizzy_2P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/3/34/GGST_Queen_Dizzy_2P_hitbox.png"
-  ]
-},
-	{
-  "input": "2S",
-  "move_img": "https://www.dustloop.com/wiki/images/d/d7/GGST_Queen_Dizzy_2S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/7c/GGST_Queen_Dizzy_2S_hitbox.png"
-  ]
-},
-	{
-  "input": "5D",
-  "move_img": "https://www.dustloop.com/wiki/images/9/97/GGST_Queen_Dizzy_5D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/5/5d/GGST_Queen_Dizzy_5D_hitbox.png"
-  ]
-},
-	{
-  "input": "5H",
-  "move_img": "https://www.dustloop.com/wiki/images/9/92/GGST_Queen_Dizzy_5H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/3/39/GGST_Queen_Dizzy_5H_hitbox.png"
-  ]
-},
-	{
-  "input": "5K",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f9/GGST_Queen_Dizzy_5K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/06/GGST_Queen_Dizzy_5K_hitbox.png"
-  ]
-},
-	{
-  "input": "5P",
-  "move_img": "https://www.dustloop.com/wiki/images/4/4c/GGST_Queen_Dizzy_5P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/1/11/GGST_Queen_Dizzy_5P_hitbox.png"
-  ]
-},
-	{
-  "input": "5[D]",
-  "move_img": "https://www.dustloop.com/wiki/images/9/97/GGST_Queen_Dizzy_5D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/5/5d/GGST_Queen_Dizzy_5D_hitbox.png"
-  ]
-},
-	{
-  "input": "6H",
-  "move_img": "https://www.dustloop.com/wiki/images/7/72/GGST_Queen_Dizzy_6H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/99/GGST_Queen_Dizzy_6H_hitbox.png"
-  ]
-},
-	{
-  "input": "6K",
-  "move_img": "https://www.dustloop.com/wiki/images/5/5c/GGST_Queen_Dizzy_6K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/dd/GGST_Queen_Dizzy_6K_hitbox.png"
-  ]
-},
-	{
-  "input": "6P",
-  "move_img": "https://www.dustloop.com/wiki/images/8/8c/GGST_Queen_Dizzy_6P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/94/GGST_Queen_Dizzy_6P_hitbox.png"
-  ]
-},
-	{
-  "input": "c.S",
-  "move_img": "https://www.dustloop.com/wiki/images/3/3c/GGST_Queen_Dizzy_cS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/77/GGST_Queen_Dizzy_cS_hitbox.png"
-  ]
-},
-	{
-  "input": "f.S",
-  "move_img": "https://www.dustloop.com/wiki/images/f/fe/GGST_Queen_Dizzy_fS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/2/2b/GGST_Queen_Dizzy_f.S_hitbox.png"
-  ]
-},
-	{
-  "input": "j.D",
-  "move_img": "https://www.dustloop.com/wiki/images/8/84/GGST_Queen_Dizzy_jD.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/2/2c/GGST_Queen_Dizzy_j.D_hitbox.png"
-  ]
-},
-	{
-  "input": "j.H",
-  "move_img": "https://www.dustloop.com/wiki/images/b/bb/GGST_Queen_Dizzy_jH.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/f/fe/GGST_Queen_Dizzy_j.H_hitbox.png"
-  ]
-},
-	{
-  "input": "j.K",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f7/GGST_Queen_Dizzy_jK.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/78/GGST_Queen_Dizzy_j.K_hitbox.png"
-  ]
-},
-	{
-  "input": "j.P",
-  "move_img": "https://www.dustloop.com/wiki/images/2/20/GGST_Queen_Dizzy_jP.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/1/19/GGST_Queen_Dizzy_j.P_hitbox.png"
-  ]
-},
-	{
-  "input": "j.S",
-  "move_img": "https://www.dustloop.com/wiki/images/e/eb/GGST_Queen_Dizzy_jS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/a/ae/GGST_Queen_Dizzy_j.S_hitbox.png"
-  ]
-},
-	{
-  "input": "236D",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_236D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/da/GGST_Queen_Dizzy_236D_Hitbox.png"
-  ]
-},
-	{
-  "input": "236[D]",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_236D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/da/GGST_Queen_Dizzy_236D_Hitbox.png"
-  ]
-},
-	{
-  "input": "66",
-  "move_img": "",
-  "hitbox_img": [
-    ""
-  ]
-},
-	{
-  "input": "6D or 4D",
-  "move_img": "https://www.dustloop.com/wiki/images/7/7d/GGST_Queen_Dizzy_Ground_Throw.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/95/GGST_Queen_Dizzy_Ground_Throw_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.6D or j.4D",
-  "move_img": "https://www.dustloop.com/wiki/images/0/09/GGST_Queen_Dizzy_Air_Throw.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/dc/GGST_Queen_Dizzy_Air_Throw_Hitbox.png"
-  ]
-},
-	{
-  "input": "214H",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Queen_Dizzy_214H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/e/e7/GGST_Queen_Dizzy_214H_Hitbox.png"
-  ]
-},
-	{
-  "input": "214P/K",
-  "move_img": "https://www.dustloop.com/wiki/images/3/3b/GGST_Queen_Dizzy_214P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/be/GGST_Queen_Dizzy_214P_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/7/77/GGST_Queen_Dizzy_214K_Hitbox.png"
-  ]
-},
-	{
-  "input": "214S",
-  "move_img": "https://www.dustloop.com/wiki/images/b/b1/GGST_Queen_Dizzy_214S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/0d/GGST_Queen_Dizzy_214S_Hitbox.png"
-  ]
-},
-	{
-  "input": "22H",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Queen_Dizzy_22H_1.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/0d/GGST_Queen_Dizzy_22H_Hitbox_1.png",
-    "https://www.dustloop.com/wiki/images/b/bf/GGST_Queen_Dizzy_22H_Hitbox_2.png"
-  ]
-},
-	{
-  "input": "236K",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e5/GGST_Queen_Dizzy_236K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/6f/GGST_Queen_Dizzy_236K_Hitbox.png"
-  ]
-},
-	{
-  "input": "236S/H",
-  "move_img": "https://www.dustloop.com/wiki/images/0/02/GGST_Queen_Dizzy_236S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/d5/GGST_Queen_Dizzy_236S_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/a/a3/GGST_Queen_Dizzy_236H_Hitbox.png"
-  ]
-},
-	{
-  "input": "236S~6S/236H~6H",
-  "move_img": "https://www.dustloop.com/wiki/images/1/10/GGST_Queen_Dizzy_236S~6S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/da/GGST_Queen_Dizzy_236S~6S_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/8/85/GGST_Queen_Dizzy_236H~6H_Hitbox.png"
-  ]
-},
-	{
-  "input": "632146H",
-  "move_img": "https://www.dustloop.com/wiki/images/e/ea/GGST_Queen_Dizzy_632146H.PNG",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/97/GGST_Queen_Dizzy_632146H_Hitbox.PNG"
-  ]
-},
-	{
-  "input": "632146S",
-  "move_img": "https://www.dustloop.com/wiki/images/5/50/GGST_Queen_Dizzy_632146S_1.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/72/GGST_Queen_Dizzy_632146S_Hitbox_1.png",
-    "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_632146S_Hitbox_2.png"
-  ]
-}
+  {
+    "input": "2D",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f3/GGST_Queen_Dizzy_2D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/a/a0/GGST_Queen_Dizzy_2D_hitbox.png"
+    ]
+  },
+  {
+    "input": "2H",
+    "move_img": "https://www.dustloop.com/wiki/images/d/d2/GGST_Queen_Dizzy_2H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/b/b9/GGST_Queen_Dizzy_2H_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/a/ab/GGST_Queen_Dizzy_2H_Hitbox_2.png",
+      "https://www.dustloop.com/wiki/images/4/49/GGST_Queen_Dizzy_2H_Hitbox_3.png"
+    ]
+  },
+  {
+    "input": "2K",
+    "move_img": "https://www.dustloop.com/wiki/images/a/a6/GGST_Queen_Dizzy_2K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_2K_hitbox.png"
+    ]
+  },
+  {
+    "input": "2P",
+    "move_img": "https://www.dustloop.com/wiki/images/e/ea/GGST_Queen_Dizzy_2P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/3/34/GGST_Queen_Dizzy_2P_hitbox.png"
+    ]
+  },
+  {
+    "input": "2S",
+    "move_img": "https://www.dustloop.com/wiki/images/d/d7/GGST_Queen_Dizzy_2S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/7c/GGST_Queen_Dizzy_2S_hitbox.png"
+    ]
+  },
+  {
+    "input": "5D",
+    "move_img": "https://www.dustloop.com/wiki/images/9/97/GGST_Queen_Dizzy_5D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/5/5d/GGST_Queen_Dizzy_5D_hitbox.png"
+    ]
+  },
+  {
+    "input": "5H",
+    "move_img": "https://www.dustloop.com/wiki/images/9/92/GGST_Queen_Dizzy_5H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/3/39/GGST_Queen_Dizzy_5H_hitbox.png"
+    ]
+  },
+  {
+    "input": "5K",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f9/GGST_Queen_Dizzy_5K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/06/GGST_Queen_Dizzy_5K_hitbox.png"
+    ]
+  },
+  {
+    "input": "5P",
+    "move_img": "https://www.dustloop.com/wiki/images/4/4c/GGST_Queen_Dizzy_5P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/1/11/GGST_Queen_Dizzy_5P_hitbox.png"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "move_img": "https://www.dustloop.com/wiki/images/9/97/GGST_Queen_Dizzy_5D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/5/5d/GGST_Queen_Dizzy_5D_hitbox.png"
+    ]
+  },
+  {
+    "input": "6H",
+    "move_img": "https://www.dustloop.com/wiki/images/7/72/GGST_Queen_Dizzy_6H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/7b/GGST_Queen_Dizzy_6H_hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/8/8c/GGST_Queen_Dizzy_6H_hitbox_2.png"
+    ]
+  },
+  {
+    "input": "6P",
+    "move_img": "https://www.dustloop.com/wiki/images/8/8c/GGST_Queen_Dizzy_6P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/94/GGST_Queen_Dizzy_6P_hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/6/60/GGST_Queen_Dizzy_6P_hitbox_2.png"
+    ]
+  },
+  {
+    "input": "c.S",
+    "move_img": "https://www.dustloop.com/wiki/images/3/3c/GGST_Queen_Dizzy_cS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/77/GGST_Queen_Dizzy_cS_hitbox.png"
+    ]
+  },
+  {
+    "input": "f.S",
+    "move_img": "https://www.dustloop.com/wiki/images/f/fe/GGST_Queen_Dizzy_fS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/2/2b/GGST_Queen_Dizzy_f.S_hitbox.png"
+    ]
+  },
+  {
+    "input": "j.D",
+    "move_img": "https://www.dustloop.com/wiki/images/8/84/GGST_Queen_Dizzy_jD.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/2/2c/GGST_Queen_Dizzy_j.D_hitbox.png"
+    ]
+  },
+  {
+    "input": "j.H",
+    "move_img": "https://www.dustloop.com/wiki/images/b/bb/GGST_Queen_Dizzy_jH.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/f/fe/GGST_Queen_Dizzy_j.H_hitbox.png"
+    ]
+  },
+  {
+    "input": "j.K",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f7/GGST_Queen_Dizzy_jK.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/78/GGST_Queen_Dizzy_j.K_hitbox.png"
+    ]
+  },
+  {
+    "input": "j.P",
+    "move_img": "https://www.dustloop.com/wiki/images/2/20/GGST_Queen_Dizzy_jP.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/1/19/GGST_Queen_Dizzy_j.P_hitbox.png"
+    ]
+  },
+  {
+    "input": "j.S",
+    "move_img": "https://www.dustloop.com/wiki/images/e/eb/GGST_Queen_Dizzy_jS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/a/ae/GGST_Queen_Dizzy_j.S_hitbox.png"
+    ]
+  },
+  {
+    "input": "236D",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_236D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/da/GGST_Queen_Dizzy_236D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_236D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/da/GGST_Queen_Dizzy_236D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "66",
+    "move_img": "",
+    "hitbox_img": [
+      ""
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "move_img": "https://www.dustloop.com/wiki/images/7/7d/GGST_Queen_Dizzy_Ground_Throw.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/95/GGST_Queen_Dizzy_Ground_Throw_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "move_img": "https://www.dustloop.com/wiki/images/0/09/GGST_Queen_Dizzy_Air_Throw.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/dc/GGST_Queen_Dizzy_Air_Throw_Hitbox.png"
+    ]
+  },
+  {
+    "input": "214H",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Queen_Dizzy_214H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/e/e7/GGST_Queen_Dizzy_214H_Hitbox.png"
+    ]
+  },
+  {
+    "input": "214P/K",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f2/GGST_Queen_Dizzy_214PK.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/8/88/GGST_Queen_Dizzy_214PK_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/9/9f/GGST_Queen_Dizzy_214PK_Hitbox_2.png",
+      "https://www.dustloop.com/wiki/images/d/d4/",
+      "https://www.dustloop.com/wiki/images/4/41/GGST_Queen_Dizzy_214PK_Hitbox_3.png"
+    ]
+  },
+  {
+    "input": "214S",
+    "move_img": "https://www.dustloop.com/wiki/images/b/b1/GGST_Queen_Dizzy_214S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0d/GGST_Queen_Dizzy_214S_Hitbox.png"
+    ]
+  },
+  {
+    "input": "22H",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Queen_Dizzy_22H_1.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0d/GGST_Queen_Dizzy_22H_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/b/bf/GGST_Queen_Dizzy_22H_Hitbox_2.png"
+    ]
+  },
+  {
+    "input": "236K",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e5/GGST_Queen_Dizzy_236K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/2/25/GGST_Queen_Dizzy_236K_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/5/5c/GGST_Queen_Dizzy_236K_Hitbox_2.png",
+      "https://www.dustloop.com/wiki/images/9/95/GGST_Queen_Dizzy_236K_Hitbox_3.png"
+    ]
+  },
+  {
+    "input": "236S/H",
+    "move_img": "https://www.dustloop.com/wiki/images/a/ab/GGST_Queen_Dizzy_236S-H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/d5/GGST_Queen_Dizzy_236S_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/a/a3/GGST_Queen_Dizzy_236H_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236S~6S/236H~6H",
+    "move_img": "https://www.dustloop.com/wiki/images/2/2a/GGST_Queen_Dizzy_236S-6S-236H~6H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/07/GGST_Queen_Dizzy_236S-6S-236H~6H_hitbox.png"
+    ]
+  },
+  {
+    "input": "632146H",
+    "move_img": "https://www.dustloop.com/wiki/images/e/ea/GGST_Queen_Dizzy_632146H.PNG",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/97/GGST_Queen_Dizzy_632146H_Hitbox.PNG"
+    ]
+  },
+  {
+    "input": "632146S",
+    "move_img": "https://www.dustloop.com/wiki/images/5/50/GGST_Queen_Dizzy_632146S_1.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/72/GGST_Queen_Dizzy_632146S_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/f/f0/GGST_Queen_Dizzy_632146S_Hitbox_2.png"
+    ]
+  }
 ]

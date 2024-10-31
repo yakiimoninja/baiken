@@ -1,281 +1,281 @@
 [
-	{
-  "input": "2D",
-  "move_img": "https://www.dustloop.com/wiki/images/a/a8/GGST_Sin_Kiske_2D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/5/53/GGST_Sin_Kiske_2D_Hitbox.png"
-  ]
-},
-	{
-  "input": "2H",
-  "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Sin_Kiske_2H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/02/GGST_Sin_Kiske_2H_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/5/5e/GGST_Sin_Kiske_2H_2_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/c/c4/GGST_Sin_Kiske_2H_3_Hitbox.png"
-  ]
-},
-	{
-  "input": "2K",
-  "move_img": "https://www.dustloop.com/wiki/images/6/69/GGST_Sin_Kiske_2K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/df/GGST_Sin_Kiske_2K_Hitbox.png"
-  ]
-},
-	{
-  "input": "2P",
-  "move_img": "https://www.dustloop.com/wiki/images/d/dd/GGST_Sin_Kiske_2P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/6f/GGST_Sin_Kiske_2P_Hitbox.png"
-  ]
-},
-	{
-  "input": "2S",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e7/GGST_Sin_Kiske_2S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/1/13/GGST_Sin_Kiske_2S_Hitbox.png"
-  ]
-},
-	{
-  "input": "5D",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c2/GGST_Sin_Kiske_5D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/0f/GGST_Sin_Kiske_5D_Hitbox.png"
-  ]
-},
-	{
-  "input": "5H",
-  "move_img": "https://www.dustloop.com/wiki/images/3/39/GGST_Sin_Kiske_5H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/a/a5/GGST_Sin_Kiske_5H_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/0/0d/GGST_Sin_Kiske_5H_2_Hitbox.png"
-  ]
-},
-	{
-  "input": "5K",
-  "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Sin_Kiske_5K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/65/GGST_Sin_Kiske_5K_Hitbox.png"
-  ]
-},
-	{
-  "input": "5P",
-  "move_img": "https://www.dustloop.com/wiki/images/d/d4/GGST_Sin_Kiske_5P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/de/GGST_Sin_Kiske_5P_Hitbox.png"
-  ]
-},
-	{
-  "input": "5[D]",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c2/GGST_Sin_Kiske_5D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/0f/GGST_Sin_Kiske_5D_Hitbox.png"
-  ]
-},
-	{
-  "input": "6H",
-  "move_img": "https://www.dustloop.com/wiki/images/2/2f/GGST_Sin_Kiske_6H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/a/ac/GGST_Sin_Kiske_6H_Hitbox.png"
-  ]
-},
-	{
-  "input": "6K",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c7/GGST_Sin_Kiske_6K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/0d/GGST_Sin_Kiske_6K_Hitbox.png"
-  ]
-},
-	{
-  "input": "6P",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c1/GGST_Sin_Kiske_6P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/6c/GGST_Sin_Kiske_6P_Hitbox.png"
-  ]
-},
-	{
-  "input": "c.S",
-  "move_img": "https://www.dustloop.com/wiki/images/f/f2/GGST_Sin_Kiske_cS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/c/cb/GGST_Sin_Kiske_cS_Hitbox.png"
-  ]
-},
-	{
-  "input": "f.S",
-  "move_img": "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_fS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/e/e7/GGST_Sin_Kiske_fS_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.D",
-  "move_img": "https://www.dustloop.com/wiki/images/3/31/GGST_Sin_Kiske_jD.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/4/48/GGST_Sin_Kiske_jD_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.H",
-  "move_img": "https://www.dustloop.com/wiki/images/b/b9/GGST_Sin_Kiske_jH.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/f/f3/GGST_Sin_Kiske_jH_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.K",
-  "move_img": "https://www.dustloop.com/wiki/images/c/cb/GGST_Sin_Kiske_jK.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/2/2d/GGST_Sin_Kiske_jK_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.P",
-  "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_Sin_Kiske_jP.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/8/8a/GGST_Sin_Kiske_jP_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.S",
-  "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_Sin_Kiske_jS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/3/39/GGST_Sin_Kiske_jS_Hitbox.png"
-  ]
-},
-	{
-  "input": "236D",
-  "move_img": "https://www.dustloop.com/wiki/images/1/1f/GGST_Sin_Kiske_236D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/e/eb/GGST_Sin_Kiske_236D_Hitbox.png"
-  ]
-},
-	{
-  "input": "236[D]",
-  "move_img": "https://www.dustloop.com/wiki/images/1/1f/GGST_Sin_Kiske_236D.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/e/eb/GGST_Sin_Kiske_236D_Hitbox.png"
-  ]
-},
-	{
-  "input": "6D or 4D",
-  "move_img": "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_Ground_Throw.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/c/ce/GGST_Sin_Kiske_Ground_Throw_Hitbox.png"
-  ]
-},
-	{
-  "input": "j.6D or j.4D",
-  "move_img": "https://www.dustloop.com/wiki/images/7/71/GGST_Sin_Kiske_Air_Throw.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/9d/GGST_Sin_Kiske_Air_Throw_Hitbox.png"
-  ]
-},
-	{
-  "input": "214S",
-  "move_img": "https://www.dustloop.com/wiki/images/7/7f/GGST_Sin_Kiske_214S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/dd/GGST_Sin_Kiske_214S_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/8/84/GGST_Sin_Kiske_214S_2_Hitbox.png"
-  ]
-},
-	{
-  "input": "214S~S",
-  "move_img": "https://www.dustloop.com/wiki/images/9/9f/GGST_Sin_Kiske_214SS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_214SS_Hitbox.png"
-  ]
-},
-	{
-  "input": "236H",
-  "move_img": "https://www.dustloop.com/wiki/images/c/c1/GGST_Sin_Kiske_236H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/f/ff/GGST_Sin_Kiske_236H_Hitbox.png"
-  ]
-},
-	{
-  "input": "236H~H",
-  "move_img": "https://www.dustloop.com/wiki/images/4/40/GGST_Sin_Kiske_236HH.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/9f/GGST_Sin_Kiske_236HH_Hitbox.png"
-  ]
-},
-	{
-  "input": "236K",
-  "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Sin_Kiske_236K.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/0/0e/GGST_Sin_Kiske_236K_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/f/f1/GGST_Sin_Kiske_236K_2_Hitbox.png"
-  ]
-},
-	{
-  "input": "236K~K",
-  "move_img": "https://www.dustloop.com/wiki/images/4/4e/GGST_Sin_Kiske_236KK.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/d4/GGST_Sin_Kiske_236KK_Hitbox.png"
-  ]
-},
-	{
-  "input": "623S",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e8/GGST_Sin_Kiske_623S.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_623S_1_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/3/35/GGST_Sin_Kiske_623S_2_Hitbox.png"
-  ]
-},
-	{
-  "input": "623S~S",
-  "move_img": "https://www.dustloop.com/wiki/images/5/5c/GGST_Sin_Kiske_623SS.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/6/67/GGST_Sin_Kiske_623SS_Hitbox.png"
-  ]
-},
-	{
-  "input": "63214P",
-  "move_img": "https://www.dustloop.com/wiki/images/1/1d/GGST_Sin_Kiske_63214P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/2/2a/GGST_Sin_Kiske_63214P_Hitbox.png"
-  ]
-},
-	{
-  "input": "66 after special move",
-  "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Sin_Kiske_GazelleStep.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/d/d6/GGST_Sin_Kiske_GazelleStep_Hitbox.png"
-  ]
-},
-	{
-  "input": "236236P",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e2/GGST_Sin_Kiske_236236P.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/3/36/GGST_Sin_Kiske_236236P_Hitbox.png"
-  ]
-},
-	{
-  "input": "236236P~]P[",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e9/GGST_Sin_Kiske_236236PP.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/79/GGST_Sin_Kiske_236236PP_Hitbox.png"
-  ]
-},
-	{
-  "input": "632146H",
-  "move_img": "https://www.dustloop.com/wiki/images/6/67/GGST_Sin_Kiske_632146H.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/7/70/GGST_Sin_Kiske_632146H_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/b/b7/GGST_Sin_Kiske_632146H_9H_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/e/e6/GGST_Sin_Kiske_632146H_8H_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/e/ed/GGST_Sin_Kiske_632146H_3H_Hitbox.png"
-  ]
-},
-	{
-  "input": "632146HH",
-  "move_img": "https://www.dustloop.com/wiki/images/e/e5/GGST_Sin_Kiske_632146HH.png",
-  "hitbox_img": [
-    "https://www.dustloop.com/wiki/images/b/b5/GGST_Sin_Kiske_632146HH_Hitbox.png",
-    "https://www.dustloop.com/wiki/images/7/72/GGST_Sin_Kiske_632146HH_Hitbox_2.png",
-    "https://www.dustloop.com/wiki/images/9/90/GGST_Sin_Kiske_632146HH_Hitbox_3.png",
-    "https://www.dustloop.com/wiki/images/8/87/GGST_Sin_Kiske_632146HH_Hitbox_4.png",
-    "https://www.dustloop.com/wiki/images/d/d4/"
-  ]
-}
+  {
+    "input": "2D",
+    "move_img": "https://www.dustloop.com/wiki/images/a/a8/GGST_Sin_Kiske_2D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/5/53/GGST_Sin_Kiske_2D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "2H",
+    "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Sin_Kiske_2H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/02/GGST_Sin_Kiske_2H_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/5/5e/GGST_Sin_Kiske_2H_2_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/c/c4/GGST_Sin_Kiske_2H_3_Hitbox.png"
+    ]
+  },
+  {
+    "input": "2K",
+    "move_img": "https://www.dustloop.com/wiki/images/6/69/GGST_Sin_Kiske_2K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/df/GGST_Sin_Kiske_2K_Hitbox.png"
+    ]
+  },
+  {
+    "input": "2P",
+    "move_img": "https://www.dustloop.com/wiki/images/d/dd/GGST_Sin_Kiske_2P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/6/6f/GGST_Sin_Kiske_2P_Hitbox.png"
+    ]
+  },
+  {
+    "input": "2S",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e7/GGST_Sin_Kiske_2S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/1/13/GGST_Sin_Kiske_2S_Hitbox.png"
+    ]
+  },
+  {
+    "input": "5D",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c2/GGST_Sin_Kiske_5D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0f/GGST_Sin_Kiske_5D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "5H",
+    "move_img": "https://www.dustloop.com/wiki/images/3/39/GGST_Sin_Kiske_5H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/a/a5/GGST_Sin_Kiske_5H_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/0/0d/GGST_Sin_Kiske_5H_2_Hitbox.png"
+    ]
+  },
+  {
+    "input": "5K",
+    "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Sin_Kiske_5K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/6/65/GGST_Sin_Kiske_5K_Hitbox.png"
+    ]
+  },
+  {
+    "input": "5P",
+    "move_img": "https://www.dustloop.com/wiki/images/d/d4/GGST_Sin_Kiske_5P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/de/GGST_Sin_Kiske_5P_Hitbox.png"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c2/GGST_Sin_Kiske_5D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0f/GGST_Sin_Kiske_5D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "6H",
+    "move_img": "https://www.dustloop.com/wiki/images/2/2f/GGST_Sin_Kiske_6H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/a/ac/GGST_Sin_Kiske_6H_Hitbox.png"
+    ]
+  },
+  {
+    "input": "6K",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c7/GGST_Sin_Kiske_6K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0d/GGST_Sin_Kiske_6K_Hitbox.png"
+    ]
+  },
+  {
+    "input": "6P",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c1/GGST_Sin_Kiske_6P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/6/6c/GGST_Sin_Kiske_6P_Hitbox.png"
+    ]
+  },
+  {
+    "input": "c.S",
+    "move_img": "https://www.dustloop.com/wiki/images/f/f2/GGST_Sin_Kiske_cS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/c/cb/GGST_Sin_Kiske_cS_Hitbox.png"
+    ]
+  },
+  {
+    "input": "f.S",
+    "move_img": "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_fS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/e/e7/GGST_Sin_Kiske_fS_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.D",
+    "move_img": "https://www.dustloop.com/wiki/images/3/31/GGST_Sin_Kiske_jD.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/4/48/GGST_Sin_Kiske_jD_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.H",
+    "move_img": "https://www.dustloop.com/wiki/images/b/b9/GGST_Sin_Kiske_jH.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/f/f3/GGST_Sin_Kiske_jH_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.K",
+    "move_img": "https://www.dustloop.com/wiki/images/c/cb/GGST_Sin_Kiske_jK.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/2/2d/GGST_Sin_Kiske_jK_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.P",
+    "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_Sin_Kiske_jP.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/8/8a/GGST_Sin_Kiske_jP_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.S",
+    "move_img": "https://www.dustloop.com/wiki/images/4/41/GGST_Sin_Kiske_jS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/3/39/GGST_Sin_Kiske_jS_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236D",
+    "move_img": "https://www.dustloop.com/wiki/images/1/1f/GGST_Sin_Kiske_236D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/e/eb/GGST_Sin_Kiske_236D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "move_img": "https://www.dustloop.com/wiki/images/1/1f/GGST_Sin_Kiske_236D.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/e/eb/GGST_Sin_Kiske_236D_Hitbox.png"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "move_img": "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_Ground_Throw.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/c/ce/GGST_Sin_Kiske_Ground_Throw_Hitbox.png"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "move_img": "https://www.dustloop.com/wiki/images/7/71/GGST_Sin_Kiske_Air_Throw.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/9d/GGST_Sin_Kiske_Air_Throw_Hitbox.png"
+    ]
+  },
+  {
+    "input": "214S",
+    "move_img": "https://www.dustloop.com/wiki/images/7/7f/GGST_Sin_Kiske_214S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/dd/GGST_Sin_Kiske_214S_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/8/84/GGST_Sin_Kiske_214S_2_Hitbox.png"
+    ]
+  },
+  {
+    "input": "214S~S",
+    "move_img": "https://www.dustloop.com/wiki/images/9/9f/GGST_Sin_Kiske_214SS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_214SS_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236H",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c1/GGST_Sin_Kiske_236H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/f/ff/GGST_Sin_Kiske_236H_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236H~H",
+    "move_img": "https://www.dustloop.com/wiki/images/4/40/GGST_Sin_Kiske_236HH.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/9f/GGST_Sin_Kiske_236HH_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236K",
+    "move_img": "https://www.dustloop.com/wiki/images/6/6e/GGST_Sin_Kiske_236K.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0e/GGST_Sin_Kiske_236K_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/f/f1/GGST_Sin_Kiske_236K_2_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236K~K",
+    "move_img": "https://www.dustloop.com/wiki/images/4/4e/GGST_Sin_Kiske_236KK.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/d4/GGST_Sin_Kiske_236KK_Hitbox.png"
+    ]
+  },
+  {
+    "input": "623S",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e8/GGST_Sin_Kiske_623S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/99/GGST_Sin_Kiske_623S_1_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/3/35/GGST_Sin_Kiske_623S_2_Hitbox.png"
+    ]
+  },
+  {
+    "input": "623S~S",
+    "move_img": "https://www.dustloop.com/wiki/images/5/5c/GGST_Sin_Kiske_623SS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/6/67/GGST_Sin_Kiske_623SS_Hitbox.png"
+    ]
+  },
+  {
+    "input": "63214P",
+    "move_img": "https://www.dustloop.com/wiki/images/1/1d/GGST_Sin_Kiske_63214P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/2/2a/GGST_Sin_Kiske_63214P_Hitbox.png"
+    ]
+  },
+  {
+    "input": "66 after special move",
+    "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Sin_Kiske_GazelleStep.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/d6/GGST_Sin_Kiske_GazelleStep_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236236P",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e2/GGST_Sin_Kiske_236236P.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/3/36/GGST_Sin_Kiske_236236P_Hitbox.png"
+    ]
+  },
+  {
+    "input": "236236P~]P[",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e9/GGST_Sin_Kiske_236236PP.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/79/GGST_Sin_Kiske_236236PP_Hitbox.png"
+    ]
+  },
+  {
+    "input": "632146H",
+    "move_img": "https://www.dustloop.com/wiki/images/6/67/GGST_Sin_Kiske_632146H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/7/70/GGST_Sin_Kiske_632146H_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/b/b7/GGST_Sin_Kiske_632146H_9H_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/e/e6/GGST_Sin_Kiske_632146H_8H_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/e/ed/GGST_Sin_Kiske_632146H_3H_Hitbox.png"
+    ]
+  },
+  {
+    "input": "632146HH",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e5/GGST_Sin_Kiske_632146HH.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/b/b5/GGST_Sin_Kiske_632146HH_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/7/72/GGST_Sin_Kiske_632146HH_Hitbox_2.png",
+      "https://www.dustloop.com/wiki/images/9/90/GGST_Sin_Kiske_632146HH_Hitbox_3.png",
+      "https://www.dustloop.com/wiki/images/8/87/GGST_Sin_Kiske_632146HH_Hitbox_4.png",
+      "https://www.dustloop.com/wiki/images/d/d4/"
+    ]
+  }
 ]
