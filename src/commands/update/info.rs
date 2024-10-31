@@ -20,7 +20,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             
             let char_info_json_path = "data/".to_owned() + char_id +"/info.json";
     
-            // Creating character info.json file
+            // Creating multiple character info.json files
             let file = OpenOptions::new()
                 .create(true)
                 .truncate(true)
@@ -58,7 +58,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         let char_info_json_path = "data/".to_owned() + specific_char +"/info.json";
 
-        // Creating character info.json file
+        // Creating singular character info.json file
         let file = OpenOptions::new()
             .create(true)
             .truncate(true)
