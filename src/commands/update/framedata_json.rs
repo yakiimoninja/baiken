@@ -45,7 +45,7 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
     char_page_response_json = char_page_response_json.replace(r#"&#039;"#, "'");
 
     let mut moves_info: Response = serde_json::from_str(&char_page_response_json).unwrap();
-    let mut concat_processed_moves_info = Vec::new();
+    let mut vec_processed_moves_info = Vec::new();
 
     for x in 0..moves_info.cargoquery.len() {
         
@@ -127,9 +127,9 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
             counter: moves_info.cargoquery[x].title.counter.as_ref().unwrap().to_string(),
         };
 
-        concat_processed_moves_info.push(processed_moves_info);
+        vec_processed_moves_info.push(processed_moves_info);
     }
 
-    file.write_all(&(serde_json::to_vec_pretty(&concat_processed_moves_info).unwrap()))
-        .expect(&("\nFailed to write, while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
+    file.write_all(&(serde_json::to_vec_pretty(&vec_processed_moves_info).unwrap()))
+        .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count]+ ".json'."));
 }
