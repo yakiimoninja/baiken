@@ -61,6 +61,7 @@ pub async fn xx(
 
         // Creating gids json file
         let mut file = OpenOptions::new()
+            .create(true)
             .truncate(true)
             .read(true)
             .write(true)
@@ -83,6 +84,7 @@ pub async fn xx(
 
                 // Creating gids json file
                 let mut file = OpenOptions::new()
+                    .create(true)
                     .read(true)
                     .write(true)
                     .truncate(true)
