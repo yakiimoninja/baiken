@@ -1,7 +1,6 @@
-[
-	{
-  "defense": "-",
-  "guts": "-",
+{
+  "defense": "24",
+  "guts": "5",
   "guardbalance": "-",
   "prejump": "-",
   "backdash": "-",
@@ -27,4 +26,3 @@
   "jump_gravity": "-",
   "high_jump_gravity": "-"
 }
-]

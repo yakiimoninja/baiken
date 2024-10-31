@@ -1,5 +1,4 @@
-[
-	{
+{
   "defense": "68",
   "guts": "4",
   "guardbalance": "40",
@@ -27,4 +26,3 @@
   "jump_gravity": "2.4",
   "high_jump_gravity": "1.9"
 }
-]

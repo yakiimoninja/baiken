@@ -1,7 +1,6 @@
-[
-	{
-  "defense": "-16",
-  "guts": "3",
+{
+  "defense": "-32",
+  "guts": "4",
   "guardbalance": "28",
   "prejump": "5",
   "backdash": "24/1-6 strike invuln/1-17 airborne",
@@ -27,4 +26,3 @@
   "jump_gravity": "1.9",
   "high_jump_gravity": "1.9"
 }
-]
