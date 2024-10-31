@@ -1,22 +1,170 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236S","aliases":["Stroke the Big Tree","Stroke","STBT","SBT","SS"]},
-	{"input":"236H","aliases":["H Stroke the Big Tree","Heavy Stroke","H Stroke","HSTBT","HSBT","HS"]},
-	{"input":"j.236K","aliases":["Sultry Performance","K Sultry Performance","Dive Kick","Divekick","KDK"]},
-	{"input":"j.236S","aliases":["S Sultry Performance","S Dive Kick","S Divekick","SDK"]},
-	{"input":"j.236H","aliases":["H Sultry Performance","H Dive Kick","H Divekick","HDK"]},
-	{"input":"214P","aliases":["Antidepressant Scale","Note","AS"]},
-	{"input":"j.214P","aliases":["Air Antidepressant Scale","Air Note","JAS","AN","AAS"]},
-	{"input":"214K","aliases":["Chemical Love","CL"]},
-	{"input":"j.214K","aliases":["Air Chemical Love","Air CL","JCL","ACL"]},
-	{"input":"214S","aliases":["Mad Love Agitato","MLA"]},
-	{"input":"632146H","aliases":["Megalomania","Command Grab Super","Grab Super","CGS","GS"]},
-	{"input":"632146S","aliases":["Ultimate Fortissimo","Super","UF"]},
-	{"input":"j.632146S","aliases":["Air Ultimate Fortissimo","Air Super","JUF","AUF","JUS"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Stroke the Big Tree",
+      "Stroke",
+      "STBT",
+      "SBT",
+      "SS"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "H Stroke the Big Tree",
+      "Heavy Stroke",
+      "H Stroke",
+      "HSTBT",
+      "HSBT",
+      "HS"
+    ]
+  },
+  {
+    "input": "j.236K",
+    "aliases": [
+      "Sultry Performance",
+      "K Sultry Performance",
+      "Dive Kick",
+      "Divekick",
+      "KDK"
+    ]
+  },
+  {
+    "input": "j.236S",
+    "aliases": [
+      "S Sultry Performance",
+      "S Dive Kick",
+      "S Divekick",
+      "SDK"
+    ]
+  },
+  {
+    "input": "j.236H",
+    "aliases": [
+      "H Sultry Performance",
+      "H Dive Kick",
+      "H Divekick",
+      "HDK"
+    ]
+  },
+  {
+    "input": "214P",
+    "aliases": [
+      "Antidepressant Scale",
+      "Note",
+      "AS"
+    ]
+  },
+  {
+    "input": "j.214P",
+    "aliases": [
+      "Air Antidepressant Scale",
+      "Air Note",
+      "JAS",
+      "AN",
+      "AAS"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Chemical Love",
+      "CL"
+    ]
+  },
+  {
+    "input": "j.214K",
+    "aliases": [
+      "Air Chemical Love",
+      "Air CL",
+      "JCL",
+      "ACL"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Mad Love Agitato",
+      "MLA"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Megalomania",
+      "Command Grab Super",
+      "Grab Super",
+      "CGS",
+      "GS"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Ultimate Fortissimo",
+      "Super",
+      "UF"
+    ]
+  },
+  {
+    "input": "j.632146S",
+    "aliases": [
+      "Air Ultimate Fortissimo",
+      "Air Super",
+      "JUF",
+      "AUF",
+      "JUS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

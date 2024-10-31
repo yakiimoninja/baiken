@@ -1,20 +1,148 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236S","aliases":["Tandem Top","S Tandem Top","Disk","S Disk","TT"]},
-	{"input":"236H","aliases":["H Tandem Top","Heavy Disk","H Disk","HTT"]},
-	{"input":"214H","aliases":["Artemis","Claw"]},
-	{"input":"214S","aliases":["Lust Shaker","Stab","LS"]},
-	{"input":"214P","aliases":["Iron Savior","Cart","IS","Hair Car","Car"]},
-	{"input":"j.236P","aliases":["Bad Moon","Overhead","BM"]},
-	{"input":"j.236K","aliases":["Turbo Fall","Turbofall","Fast Fall","Fall","FF","TF"]},
-	{"input":"214K","aliases":["Mirazh","Dash"]},
-	{"input":"j.236H","aliases":["Kapel","Rose","Air Dash","AD"]},
-	{"input":"236236S","aliases":["Septem Voices","Wheel Super","SV","WS"]},
-	{"input":"632146H","aliases":["Winger","Wing Super","WS"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Tandem Top",
+      "S Tandem Top",
+      "Disk",
+      "S Disk",
+      "TT"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "H Tandem Top",
+      "Heavy Disk",
+      "H Disk",
+      "HTT"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Artemis",
+      "Claw"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Lust Shaker",
+      "Stab",
+      "LS"
+    ]
+  },
+  {
+    "input": "214P",
+    "aliases": [
+      "Iron Savior",
+      "Cart",
+      "IS",
+      "Hair Car",
+      "Car"
+    ]
+  },
+  {
+    "input": "j.236P",
+    "aliases": [
+      "Bad Moon",
+      "Overhead",
+      "BM"
+    ]
+  },
+  {
+    "input": "j.236K",
+    "aliases": [
+      "Turbo Fall",
+      "Turbofall",
+      "Fast Fall",
+      "Fall",
+      "FF",
+      "TF"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Mirazh",
+      "Dash"
+    ]
+  },
+  {
+    "input": "j.236H",
+    "aliases": [
+      "Kapel",
+      "Rose",
+      "Air Dash",
+      "AD"
+    ]
+  },
+  {
+    "input": "236236S",
+    "aliases": [
+      "Septem Voices",
+      "Wheel Super",
+      "SV",
+      "WS"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Winger",
+      "Wing Super",
+      "WS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

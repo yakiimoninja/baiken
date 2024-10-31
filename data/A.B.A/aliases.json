@@ -1,29 +1,209 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"JR c.S","aliases":["JR5S"]},
-	{"input":"JR 5[D]","aliases":["JR5D!"]},    
-    {"input":"214H","aliases":["Bonding and Dissolving","BND"]},
-	{"input":"214K","aliases":["Haul and Heed","HNH"]},
-    {"input":"214S","aliases":["Frenzy and Astonishment","FNA"]},
-	{"input":"236K","aliases":["Intertwine and Tilt","INT"]},
-	{"input":"236S","aliases":["Menace and Groan","MNG"]},
-	{"input":"236S~6S","aliases":["Restriction and Constraint","236S 6S","236S6S","RNC"]},
-	{"input":"623H","aliases":["Judgment and Sentiment","JNS"]},
-	{"input":"63214P","aliases":["Changing and Swaying","CNS","624P"]},
-	{"input":"JR 214H","aliases":["JR Bonding and Dissolving","JR214H","JRBND"]},
-	{"input":"JR 214K","aliases":["JR Haul and Heed","JR214K","JRHNH"]},
-	{"input":"JR 236K","aliases":["JR Intertwine and Tilt","JR236K","JRINT"]},
-	{"input":"JR 236S","aliases":["JR Menace and Groan","JR236S","JRMNG"]},
-	{"input":"JR 236S~6S","aliases":["JR Restriction and Constraint","JR236S6S","JR236S 6S","JRRNC"]},
-	{"input":"JR 63214P","aliases":["JR Changing and Swaying","JR63214P","JRCNS"]},
-	{"input":"632146H","aliases":["The Law is Key, Key is King.","Super"]},
-	{"input":"632146K","aliases":["Keeper of the Key","Door Super"]},
-	{"input":"JR 632146H","aliases":["JR The Law is Key, Key is King.","JR Super","Install Super"]},
-	{"input":"JR 632146K","aliases":["JR Keeper of the Key","JR Door Super","Install Door Super"]},
-    {"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "JR c.S",
+    "aliases": [
+      "JR5S"
+    ]
+  },
+  {
+    "input": "JR 5[D]",
+    "aliases": [
+      "JR5D!"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Bonding and Dissolving",
+      "BND"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Haul and Heed",
+      "HNH"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Frenzy and Astonishment",
+      "FNA"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Intertwine and Tilt",
+      "INT"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Menace and Groan",
+      "MNG"
+    ]
+  },
+  {
+    "input": "236S~6S",
+    "aliases": [
+      "Restriction and Constraint",
+      "236S 6S",
+      "236S6S",
+      "RNC"
+    ]
+  },
+  {
+    "input": "623H",
+    "aliases": [
+      "Judgment and Sentiment",
+      "JNS"
+    ]
+  },
+  {
+    "input": "63214P",
+    "aliases": [
+      "Changing and Swaying",
+      "CNS",
+      "624P"
+    ]
+  },
+  {
+    "input": "JR 214H",
+    "aliases": [
+      "JR Bonding and Dissolving",
+      "JR214H",
+      "JRBND"
+    ]
+  },
+  {
+    "input": "JR 214K",
+    "aliases": [
+      "JR Haul and Heed",
+      "JR214K",
+      "JRHNH"
+    ]
+  },
+  {
+    "input": "JR 236K",
+    "aliases": [
+      "JR Intertwine and Tilt",
+      "JR236K",
+      "JRINT"
+    ]
+  },
+  {
+    "input": "JR 236S",
+    "aliases": [
+      "JR Menace and Groan",
+      "JR236S",
+      "JRMNG"
+    ]
+  },
+  {
+    "input": "JR 236S~6S",
+    "aliases": [
+      "JR Restriction and Constraint",
+      "JR236S6S",
+      "JR236S 6S",
+      "JRRNC"
+    ]
+  },
+  {
+    "input": "JR 63214P",
+    "aliases": [
+      "JR Changing and Swaying",
+      "JR63214P",
+      "JRCNS"
+    ]
+  },
+  {
+    "input": "JR Deactivation",
+    "aliases": [
+      "Jealous Rage Deactivation",
+      "JRD"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "The Law is Key, Key is King.",
+      "Super"
+    ]
+  },
+  {
+    "input": "632146K",
+    "aliases": [
+      "Keeper of the Key",
+      "Door Super"
+    ]
+  },
+  {
+    "input": "JR 632146H",
+    "aliases": [
+      "JR The Law is Key, Key is King.",
+      "JR Super",
+      "Install Super"
+    ]
+  },
+  {
+    "input": "JR 632146K",
+    "aliases": [
+      "JR Keeper of the Key",
+      "JR Door Super",
+      "Install Door Super"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

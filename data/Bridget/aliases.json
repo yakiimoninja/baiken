@@ -1,23 +1,174 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"SS","aliases":["5SS"]},
-	{"input":"HH","aliases":["5HH"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236S/H","aliases":["Stop and Dash","236S","236H","Fireball","Yoyo Throw","SD","YYT"]},
-	{"input":"214S/H","aliases":["Stop and Dash Return","214S","214H","Return Fireball","Yoyo Return","SDR","YYR"]},
-	{"input":"214K","aliases":["Rolling Movement","Ball","Spin","Sonic","Sonic Spin","RM"]},
-	{"input":"623P","aliases":["Starship","DP"]},
-	{"input":"236K","aliases":["Kick Start My Heart","Slide","KSMH"]},
-	{"input":"236K P","aliases":["Brake","Slide Brake","236KP","SLB"]},
-	{"input":"236K K","aliases":["Shoot","Slide Shoot","236KK","SLS"]},
-	{"input":"j.236K","aliases":["Roger Dive","Dive Kick","RD","DK"]},
-	{"input":"63214P","aliases":["Rock the Baby","624P","Command Grab","Grab","RTB","CG"]},
-	{"input":"632146S","aliases":["Loop the Loop","Teddy Super","Roger Super","TS","RS","LTL"]},
-	{"input":"632146H","aliases":["Return of the Killing Machine","Fire Teddy Super","Fire Roger Super","FRS","FTS","ROTKM"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
-
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "SS",
+    "aliases": [
+      "5SS"
+    ]
+  },
+  {
+    "input": "HH",
+    "aliases": [
+      "5HH"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236S/H",
+    "aliases": [
+      "Stop and Dash",
+      "236S",
+      "236H",
+      "Fireball",
+      "Yoyo Throw",
+      "SD",
+      "YYT"
+    ]
+  },
+  {
+    "input": "214S/H",
+    "aliases": [
+      "Stop and Dash Return",
+      "214S",
+      "214H",
+      "Return Fireball",
+      "Yoyo Return",
+      "SDR",
+      "YYR"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Rolling Movement",
+      "Ball",
+      "Spin",
+      "Sonic",
+      "Sonic Spin",
+      "RM"
+    ]
+  },
+  {
+    "input": "623P",
+    "aliases": [
+      "Starship",
+      "DP"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Kick Start My Heart",
+      "Slide",
+      "KSMH"
+    ]
+  },
+  {
+    "input": "236K P",
+    "aliases": [
+      "Brake",
+      "Slide Brake",
+      "236KP",
+      "SLB"
+    ]
+  },
+  {
+    "input": "236K K",
+    "aliases": [
+      "Shoot",
+      "Slide Shoot",
+      "236KK",
+      "SLS"
+    ]
+  },
+  {
+    "input": "j.236K",
+    "aliases": [
+      "Roger Dive",
+      "Dive Kick",
+      "RD",
+      "DK"
+    ]
+  },
+  {
+    "input": "63214P",
+    "aliases": [
+      "Rock the Baby",
+      "624P",
+      "Command Grab",
+      "Grab",
+      "RTB",
+      "CG"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Loop the Loop",
+      "Teddy Super",
+      "Roger Super",
+      "TS",
+      "RS",
+      "LTL"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Return of the Killing Machine",
+      "Fire Teddy Super",
+      "Fire Roger Super",
+      "FRS",
+      "FTS",
+      "ROTKM"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

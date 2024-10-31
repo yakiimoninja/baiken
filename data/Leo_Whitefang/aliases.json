@@ -1,27 +1,239 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"[s/h] h/s","aliases":["s!h","h!s","s/h","h/s"]},
-	{"input":"[4]6S","aliases":["Graviert Wurde","Fireball","FB","46S"]},
-	{"input":"[4]6H","aliases":["H Graviert Wurde","H Fireball","HFB","46H"]},
-	{"input":"[2]8S","aliases":["Eisen Sturm","DP","28S"]},
-	{"input":"[2]8H","aliases":["H Eisen Sturm","HDP","28H"]},
-	{"input":"236S","aliases":["Kaltes Gestöber Erst","KGE","Run"]},
-	{"input":"236H","aliases":["Kaltes Gestöber Zweit","Run Through","KGZ","RT"]},
-	{"input":"214S","aliases":["Turbulenz","Firewall"]},
-	{"input":"bt.P","aliases":["Back Turn Punch","Backturn Punch","Bt Punch","BP","BTP"]},
-	{"input":"bt.K","aliases":["Back Turn Kick","Backturn Kick","Back Turn Low","Backturn Low","Bt Low","BTK","BK","BTL","BL"]},
-	{"input":"bt.S","aliases":["Back Turn Slash","Backturn Slash","Back Turn Cross","Backturn Cross","Bt Cross","Cross","BTS","BC","BTC"]},
-	{"input":"bt.H","aliases":["Back Turn Heavy","Backturn Heavy","Back Turn Overhead","Backturn Overhead","Overhead","Bt Overhead","BTH","BH","BTO","BO"]},
-	{"input":"bt.D","aliases":["Kahn Schild","Back Turn Dust","Backturn Dust","Back Turn Parry","Backturn Parry","Bt Parry","Parry","Shield","KS","BD","BTD"]},
-	{"input":"bt.22","aliases":["Brynhildr Cancel","Stance Cancel","Bt Cancel","BRC","SC"]},
-	{"input":"bt.214K","aliases":["Gländzendes Dunkel","Command Grab","Bt Command Grab","Bt Grab","Bt Throw","BTCG","BTG","BTT","GD","CG"]},
-	{"input":"bt.214H","aliases":["Blitzschlag","Blitz","Bt Blitz"]},
-	{"input":"632146S","aliases":["Stahl Wirbel","Projectile Super","SW","PS"]},
-	{"input":"632146H","aliases":["Liedenschaft des Dirigenten","LDD","Slashing Super","SS"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "[s/h] h/s",
+    "aliases": [
+      "s!h",
+      "h!s",
+      "s/h",
+      "h/s"
+    ]
+  },
+  {
+    "input": "[4]6S",
+    "aliases": [
+      "Graviert Wurde",
+      "Fireball",
+      "FB",
+      "46S"
+    ]
+  },
+  {
+    "input": "[4]6H",
+    "aliases": [
+      "H Graviert Wurde",
+      "H Fireball",
+      "HFB",
+      "46H"
+    ]
+  },
+  {
+    "input": "[2]8S",
+    "aliases": [
+      "Eisen Sturm",
+      "DP",
+      "28S"
+    ]
+  },
+  {
+    "input": "[2]8H",
+    "aliases": [
+      "H Eisen Sturm",
+      "HDP",
+      "28H"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Kaltes Gestöber Erst",
+      "KGE",
+      "Run"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "Kaltes Gestöber Zweit",
+      "Run Through",
+      "KGZ",
+      "RT"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Turbulenz",
+      "Firewall"
+    ]
+  },
+  {
+    "input": "bt.P",
+    "aliases": [
+      "Back Turn Punch",
+      "Backturn Punch",
+      "Bt Punch",
+      "BP",
+      "BTP"
+    ]
+  },
+  {
+    "input": "bt.K",
+    "aliases": [
+      "Back Turn Kick",
+      "Backturn Kick",
+      "Back Turn Low",
+      "Backturn Low",
+      "Bt Low",
+      "BTK",
+      "BK",
+      "BTL",
+      "BL"
+    ]
+  },
+  {
+    "input": "bt.S",
+    "aliases": [
+      "Back Turn Slash",
+      "Backturn Slash",
+      "Back Turn Cross",
+      "Backturn Cross",
+      "Bt Cross",
+      "Cross",
+      "BTS",
+      "BC",
+      "BTC"
+    ]
+  },
+  {
+    "input": "bt.H",
+    "aliases": [
+      "Back Turn Heavy",
+      "Backturn Heavy",
+      "Back Turn Overhead",
+      "Backturn Overhead",
+      "Overhead",
+      "Bt Overhead",
+      "BTH",
+      "BH",
+      "BTO",
+      "BO"
+    ]
+  },
+  {
+    "input": "bt.D",
+    "aliases": [
+      "Kahn Schild",
+      "Back Turn Dust",
+      "Backturn Dust",
+      "Back Turn Parry",
+      "Backturn Parry",
+      "Bt Parry",
+      "Parry",
+      "Shield",
+      "KS",
+      "BD",
+      "BTD"
+    ]
+  },
+  {
+    "input": "bt.22",
+    "aliases": [
+      "Brynhildr Cancel",
+      "Stance Cancel",
+      "Bt Cancel",
+      "BRC",
+      "SC"
+    ]
+  },
+  {
+    "input": "bt.214K",
+    "aliases": [
+      "Gländzendes Dunkel",
+      "Command Grab",
+      "Bt Command Grab",
+      "Bt Grab",
+      "Bt Throw",
+      "BTCG",
+      "BTG",
+      "BTT",
+      "GD",
+      "CG"
+    ]
+  },
+  {
+    "input": "bt.214H",
+    "aliases": [
+      "Blitzschlag",
+      "Blitz",
+      "Bt Blitz"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Stahl Wirbel",
+      "Projectile Super",
+      "SW",
+      "PS"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Liedenschaft des Dirigenten",
+      "LDD",
+      "Slashing Super",
+      "SS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

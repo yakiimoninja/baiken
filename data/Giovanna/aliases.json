@@ -1,17 +1,128 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236K","aliases":["Trovao","Spiral Arrow","Arrow","SA"]},
-	{"input":"214K","aliases":["Sepultura","Wolf Kick","WK"]},
-	{"input":"623S","aliases":["Sol Nascente","DP","Anti Air","AntiAir","AA","SN"]},
-	{"input":"214S","aliases":["Sol Poente","Overhead","Splits","SP"]},
-	{"input":"214H","aliases":["Chave","Dash"]},
-	{"input":"j.214S","aliases":["Air Sol Poente","Air Overhead","Air Splits","JSP","ASP"]},
-	{"input":"632146H","aliases":["Ventania","Super","Beyblade Super","BBS","BS"]},
-	{"input":"j.236236H","aliases":["Tempestade","Air Super","Divekick Super","DKS","DS","JUS","AS"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Trovao",
+      "Spiral Arrow",
+      "Arrow",
+      "SA"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Sepultura",
+      "Wolf Kick",
+      "WK"
+    ]
+  },
+  {
+    "input": "623S",
+    "aliases": [
+      "Sol Nascente",
+      "DP",
+      "Anti Air",
+      "AntiAir",
+      "AA",
+      "SN"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Sol Poente",
+      "Overhead",
+      "Splits",
+      "SP"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Chave",
+      "Dash"
+    ]
+  },
+  {
+    "input": "j.214S",
+    "aliases": [
+      "Air Sol Poente",
+      "Air Overhead",
+      "Air Splits",
+      "JSP",
+      "ASP"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Ventania",
+      "Super",
+      "Beyblade Super",
+      "BBS",
+      "BS"
+    ]
+  },
+  {
+    "input": "j.236236H",
+    "aliases": [
+      "Tempestade",
+      "Air Super",
+      "Divekick Super",
+      "DKS",
+      "DS",
+      "JUS",
+      "AS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

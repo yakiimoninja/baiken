@@ -1,23 +1,165 @@
 [
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236H","aliases":["Beak Driver","BD"]},
-	{"input":"236H~H","aliases":["236HH","Beak Driver Followup","BDF"]},
-	{"input":"623S","aliases":["Hawk Baker","DP","HB"]},
-	{"input":"623S~S","aliases":["623SS","Hawk Baker Followup","DP Followup","HBF","DPF"]},
-	{"input":"214S","aliases":["Hoof Stomp","HS"]},
-	{"input":"214S~S","aliases":["214SS","Hoof Stomp Followup","HSF"]},
-	{"input":"236K","aliases":["Elk Hunt","EH"]},
-	{"input":"236K~K","aliases":["236KK","Elk Hunt Followup","EHF"]},
-	{"input":"66 after special move","aliases":["66","Gazelle Step","GS"]},
-	{"input":"63214P","aliases":["Still Growing","Eat","Food","SG"]},
-	{"input":"632146H","aliases":["R.T.L.","RTL"]},
-	{"input":"632146HH","aliases":["R.T.L. Followup","RTLF"]},
-	{"input":"236236P","aliases":["Tyrant Barrel","Tyrant Rave","TB","TR"]},
-	{"input":"236236P~]P[","aliases":["236236PP","Tyrant Barrel Followup","Tyrant Rave Followup","TBF","TRF"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "Beak Driver",
+      "BD"
+    ]
+  },
+  {
+    "input": "236H~H",
+    "aliases": [
+      "236HH",
+      "Beak Driver Followup",
+      "BDF"
+    ]
+  },
+  {
+    "input": "623S",
+    "aliases": [
+      "Hawk Baker",
+      "DP",
+      "HB"
+    ]
+  },
+  {
+    "input": "623S~S",
+    "aliases": [
+      "623SS",
+      "Hawk Baker Followup",
+      "DP Followup",
+      "HBF",
+      "DPF"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Hoof Stomp",
+      "HS"
+    ]
+  },
+  {
+    "input": "214S~S",
+    "aliases": [
+      "214SS",
+      "Hoof Stomp Followup",
+      "HSF"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Elk Hunt",
+      "EH"
+    ]
+  },
+  {
+    "input": "236K~K",
+    "aliases": [
+      "236KK",
+      "Elk Hunt Followup",
+      "EHF"
+    ]
+  },
+  {
+    "input": "66 after special move",
+    "aliases": [
+      "66",
+      "Gazelle Step",
+      "GS"
+    ]
+  },
+  {
+    "input": "63214P",
+    "aliases": [
+      "Still Growing",
+      "Eat",
+      "Food",
+      "SG"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "R.T.L.",
+      "RTL"
+    ]
+  },
+  {
+    "input": "632146HH",
+    "aliases": [
+      "R.T.L. Followup",
+      "RTLF"
+    ]
+  },
+  {
+    "input": "236236P",
+    "aliases": [
+      "Tyrant Barrel",
+      "Tyrant Rave",
+      "TB",
+      "TR"
+    ]
+  },
+  {
+    "input": "236236P~]P[",
+    "aliases": [
+      "236236PP",
+      "Tyrant Barrel Followup",
+      "Tyrant Rave Followup",
+      "TBF",
+      "TRF"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

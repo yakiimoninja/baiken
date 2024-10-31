@@ -1,37 +1,350 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"41236H","aliases":["426BT","426H"]},
-	{"input":"j.41236H","aliases":["Air 426BT","Air 426H","A426BT","J426BT","J426H","A426H"]},
-	{"input":"63214H","aliases":["624BT","624H"]},
-	{"input":"j.63214H","aliases":["Air 624BT","Air 624H","A624BT","J624BT","J624H","A624H"]},
-	{"input":"23698H","aliases":["268BT","268H"]},
-	{"input":"j.23698H","aliases":["Air 268BT","Air 268H","A268BT","J268BT","J268H","A268H"]},
-	{"input":"21478H","aliases":["248BT","248H"]},
-	{"input":"j.21478H","aliases":["Air 248BT","Air 248H","A248BT","J248BT","J248H","A248H"]},
-	{"input":"69874H","aliases":["684BT","684H"]},
-	{"input":"j.69874H","aliases":["Air 684BT","Air 684H","A684BT","J684BT","J684H","A684H"]},
-	{"input":"47896H","aliases":["486BT","486H"]},
-	{"input":"j.47896H","aliases":["Air 486BT","Air 486H","A486BT","J486BT","J486H","A486H"]},
-	{"input":"87412H","aliases":["842BT","842H"]},
-	{"input":"j.87412H","aliases":["Air 842BT","Air 842H","A842BT","J842BT","J842H","A842H"]},
-	{"input":"89632H","aliases":["862BT","862H"]},
-	{"input":"j.89632H","aliases":["Air 862BT","Air 862H","A862BT","J862BT","J862H","A862H"]},
-	{"input":"214S Level 1","aliases":["Thunderbird","Thunderbird Level 1","Drone","Drone Level 1","TL1","D1","DL1"]},
-	{"input":"214S Level 2","aliases":["Thunderbird 2","Thunderbird Level 2","Drone 2","Drone Level 2","TL2","D2","DL2"]},
-	{"input":"214S Level 3","aliases":["Thunderbird 3","Thunderbird Level 3","Drone 3","Drone Level 3","TL3","D3","DL2"]},
-	{"input":"236S Level 1","aliases":["Skyfish","Skyfish Level 1","Gun","Gun Level 1","Minigun","SL1","G1","GL1","MG1"]},
-	{"input":"236S Level 2","aliases":["Skyfish 2","Skyfish Level 2","Gun 2","Gun Level 2","Minigun 2","SL2","G2","GL2","MG2"]},
-	{"input":"236S Level 3","aliases":["Skyfish 3","Skyfish Level 3","Gun 3","Gun Level 3","Minigun 3","SL3","G3","GL3","MG3"]},
-	{"input":"632146P","aliases":["Down With The System","Down With The System Level 1","Super","Super Level 1","DWTS1","S1"]},
-	{"input":"720P","aliases":["Down With The System 2","Down With The System Level 2","Super 2","Super Level 2","DWTS2","S2"]},
-	{"input":"1080P","aliases":["Down With The System 3","Down With The System Level 3","Super 3","Super Level 3","DWTS3","S3"]},
-	{"input":"236236K Level 1","aliases":["Burn It Down","Burn It Down Level 1","Laser","Laser Level 1","Laser Super","Laser Super Level 1","BID1","L1","LL1","LS1"]},
-	{"input":"236236K Level 2","aliases":["Burn It Down 2","Laser 2","Laser Level 2","Laser Super 2","Laser Super Level 2","BID2","L2","LL2","LS2"]},
-	{"input":"236236K Level 3","aliases":["Burn It Down 3","Laser 3","Laser Level 3","Laser Super 3","Laser Super Level 3","BID3","L3","LL3","LS3"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "41236H",
+    "aliases": [
+      "426BT",
+      "426H"
+    ]
+  },
+  {
+    "input": "j.41236H",
+    "aliases": [
+      "Air 426BT",
+      "Air 426H",
+      "A426BT",
+      "J426BT",
+      "J426H",
+      "A426H"
+    ]
+  },
+  {
+    "input": "63214H",
+    "aliases": [
+      "624BT",
+      "624H"
+    ]
+  },
+  {
+    "input": "j.63214H",
+    "aliases": [
+      "Air 624BT",
+      "Air 624H",
+      "A624BT",
+      "J624BT",
+      "J624H",
+      "A624H"
+    ]
+  },
+  {
+    "input": "23698H",
+    "aliases": [
+      "268BT",
+      "268H"
+    ]
+  },
+  {
+    "input": "j.23698H",
+    "aliases": [
+      "Air 268BT",
+      "Air 268H",
+      "A268BT",
+      "J268BT",
+      "J268H",
+      "A268H"
+    ]
+  },
+  {
+    "input": "21478H",
+    "aliases": [
+      "248BT",
+      "248H"
+    ]
+  },
+  {
+    "input": "j.21478H",
+    "aliases": [
+      "Air 248BT",
+      "Air 248H",
+      "A248BT",
+      "J248BT",
+      "J248H",
+      "A248H"
+    ]
+  },
+  {
+    "input": "69874H",
+    "aliases": [
+      "684BT",
+      "684H"
+    ]
+  },
+  {
+    "input": "j.69874H",
+    "aliases": [
+      "Air 684BT",
+      "Air 684H",
+      "A684BT",
+      "J684BT",
+      "J684H",
+      "A684H"
+    ]
+  },
+  {
+    "input": "47896H",
+    "aliases": [
+      "486BT",
+      "486H"
+    ]
+  },
+  {
+    "input": "j.47896H",
+    "aliases": [
+      "Air 486BT",
+      "Air 486H",
+      "A486BT",
+      "J486BT",
+      "J486H",
+      "A486H"
+    ]
+  },
+  {
+    "input": "87412H",
+    "aliases": [
+      "842BT",
+      "842H"
+    ]
+  },
+  {
+    "input": "j.87412H",
+    "aliases": [
+      "Air 842BT",
+      "Air 842H",
+      "A842BT",
+      "J842BT",
+      "J842H",
+      "A842H"
+    ]
+  },
+  {
+    "input": "89632H",
+    "aliases": [
+      "862BT",
+      "862H"
+    ]
+  },
+  {
+    "input": "j.89632H",
+    "aliases": [
+      "Air 862BT",
+      "Air 862H",
+      "A862BT",
+      "J862BT",
+      "J862H",
+      "A862H"
+    ]
+  },
+  {
+    "input": "214S Level 1",
+    "aliases": [
+      "Thunderbird",
+      "Thunderbird Level 1",
+      "Drone",
+      "Drone Level 1",
+      "TL1",
+      "D1",
+      "DL1"
+    ]
+  },
+  {
+    "input": "214S Level 2",
+    "aliases": [
+      "Thunderbird 2",
+      "Thunderbird Level 2",
+      "Drone 2",
+      "Drone Level 2",
+      "TL2",
+      "D2",
+      "DL2"
+    ]
+  },
+  {
+    "input": "214S Level 3",
+    "aliases": [
+      "Thunderbird 3",
+      "Thunderbird Level 3",
+      "Drone 3",
+      "Drone Level 3",
+      "TL3",
+      "D3",
+      "DL2"
+    ]
+  },
+  {
+    "input": "236S Level 1",
+    "aliases": [
+      "Skyfish",
+      "Skyfish Level 1",
+      "Gun",
+      "Gun Level 1",
+      "Minigun",
+      "SL1",
+      "G1",
+      "GL1",
+      "MG1"
+    ]
+  },
+  {
+    "input": "236S Level 2",
+    "aliases": [
+      "Skyfish 2",
+      "Skyfish Level 2",
+      "Gun 2",
+      "Gun Level 2",
+      "Minigun 2",
+      "SL2",
+      "G2",
+      "GL2",
+      "MG2"
+    ]
+  },
+  {
+    "input": "236S Level 3",
+    "aliases": [
+      "Skyfish 3",
+      "Skyfish Level 3",
+      "Gun 3",
+      "Gun Level 3",
+      "Minigun 3",
+      "SL3",
+      "G3",
+      "GL3",
+      "MG3"
+    ]
+  },
+  {
+    "input": "632146P",
+    "aliases": [
+      "Down With The System",
+      "Down With The System Level 1",
+      "Super",
+      "Super Level 1",
+      "DWTS1",
+      "S1"
+    ]
+  },
+  {
+    "input": "720P",
+    "aliases": [
+      "Down With The System 2",
+      "Down With The System Level 2",
+      "Super 2",
+      "Super Level 2",
+      "DWTS2",
+      "S2"
+    ]
+  },
+  {
+    "input": "1080P",
+    "aliases": [
+      "Down With The System 3",
+      "Down With The System Level 3",
+      "Super 3",
+      "Super Level 3",
+      "DWTS3",
+      "S3"
+    ]
+  },
+  {
+    "input": "236236K Level 1",
+    "aliases": [
+      "Burn It Down",
+      "Burn It Down Level 1",
+      "Laser",
+      "Laser Level 1",
+      "Laser Super",
+      "Laser Super Level 1",
+      "BID1",
+      "L1",
+      "LL1",
+      "LS1"
+    ]
+  },
+  {
+    "input": "236236K Level 2",
+    "aliases": [
+      "Burn It Down 2",
+      "Laser 2",
+      "Laser Level 2",
+      "Laser Super 2",
+      "Laser Super Level 2",
+      "BID2",
+      "L2",
+      "LL2",
+      "LS2"
+    ]
+  },
+  {
+    "input": "236236K Level 3",
+    "aliases": [
+      "Burn It Down 3",
+      "Laser 3",
+      "Laser Level 3",
+      "Laser Super 3",
+      "Laser Super Level 3",
+      "BID3",
+      "L3",
+      "LL3",
+      "LS3"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

@@ -1,31 +1,211 @@
 [
-    {"character":"A.B.A","nicknames":["A.B.A.","AB","ABA","Paracelsus"]},
-    {"character":"Anji_Mito","nicknames":["AM","Lanji","Anji Mito"]},
-    {"character":"Asuka_R","nicknames":["Asuka","That Man","Oscar"]},
-    {"character":"Axl_Low","nicknames":["AL","Axl Low","Brit","British"]},
-    {"character":"Baiken","nicknames":["Bacon"]},
-    {"character":"Bedman","nicknames":["Bedman?","Bedwoman","Bed","Delilah"]},
-    {"character":"Bridget","nicknames":["Brisket"]},
-    {"character":"Chipp_Zanuff","nicknames":["CZ","Chipp Zanuff"]},
-    {"character":"Elphelt_Valentine","nicknames":["EV","Elphelt Valentine","Die"]},
-    {"character":"Faust","nicknames":["Laust"]},
-    {"character":"Giovanna","nicknames":["Gio"]},
-    {"character":"Goldlewis_Dickinson","nicknames":["GD","GL","Goldick Lewison","Goldlewis Dickinson"]},
-    {"character":"Happy_Chaos","nicknames":["HC","Happy Chaos","Asshole"]},
-    {"character":"I-No","nicknames":["Witch"]},
-    {"character":"Jack-O","nicknames":["Jack-O Valentine"]},
-    {"character":"Johnny","nicknames":["Lean"]},
-    {"character":"Ky_Kiske","nicknames":["KK","Kyle","Ky Kiske"]},
-    {"character":"Leo_Whitefang","nicknames":["LW","Gorilla","Leo Whitefang"]},
-    {"character":"May","nicknames":["Totsugeki"]},
-    {"character":"Millia_Rage","nicknames":["MR","Millia Rage"]},
-    {"character":"Nagoriyuki","nicknames":["Vampire"]},
-    {"character":"Potemkin","nicknames":["Pot"]},
-    {"character":"Queen_Dizzy","nicknames":["QD"]},
-    {"character":"Ramlethal_Valentine","nicknames":["RV","Ramlethal Valentine","Borgar"]},
-    {"character":"Sin_Kiske","nicknames":["Sin Kiske","SK"]},
-    {"character":"Slayer","nicknames":["Dandy"]},
-    {"character":"Sol_Badguy","nicknames":["SB","Frederick","Helios","Sol Badguy","Sol Goodman"]},
-    {"character":"Testament","nicknames":["Testie"]},
-    {"character":"Zato-1","nicknames":["Zato One","Zato 1","Eddie"]}
+  {
+    "character": "A.B.A",
+    "nicknames": [
+      "A.B.A.",
+      "AB",
+      "ABA",
+      "Paracelsus"
+    ]
+  },
+  {
+    "character": "Anji_Mito",
+    "nicknames": [
+      "AM",
+      "Lanji",
+      "Anji Mito"
+    ]
+  },
+  {
+    "character": "Asuka_R",
+    "nicknames": [
+      "Asuka",
+      "That Man",
+      "Oscar"
+    ]
+  },
+  {
+    "character": "Axl_Low",
+    "nicknames": [
+      "AL",
+      "Axl Low",
+      "Brit",
+      "British"
+    ]
+  },
+  {
+    "character": "Baiken",
+    "nicknames": [
+      "Bacon"
+    ]
+  },
+  {
+    "character": "Bedman",
+    "nicknames": [
+      "Bedman?",
+      "Bedwoman",
+      "Bed",
+      "Delilah"
+    ]
+  },
+  {
+    "character": "Bridget",
+    "nicknames": [
+      "Brisket"
+    ]
+  },
+  {
+    "character": "Chipp_Zanuff",
+    "nicknames": [
+      "CZ",
+      "Chipp Zanuff"
+    ]
+  },
+  {
+    "character": "Elphelt_Valentine",
+    "nicknames": [
+      "EV",
+      "Elphelt Valentine",
+      "Die"
+    ]
+  },
+  {
+    "character": "Faust",
+    "nicknames": [
+      "Laust"
+    ]
+  },
+  {
+    "character": "Giovanna",
+    "nicknames": [
+      "Gio"
+    ]
+  },
+  {
+    "character": "Goldlewis_Dickinson",
+    "nicknames": [
+      "GD",
+      "GL",
+      "Goldick Lewison",
+      "Goldlewis Dickinson"
+    ]
+  },
+  {
+    "character": "Happy_Chaos",
+    "nicknames": [
+      "HC",
+      "Happy Chaos",
+      "Asshole"
+    ]
+  },
+  {
+    "character": "I-No",
+    "nicknames": [
+      "Witch"
+    ]
+  },
+  {
+    "character": "Jack-O",
+    "nicknames": [
+      "Jack-O Valentine"
+    ]
+  },
+  {
+    "character": "Johnny",
+    "nicknames": [
+      "Lean"
+    ]
+  },
+  {
+    "character": "Ky_Kiske",
+    "nicknames": [
+      "KK",
+      "Kyle",
+      "Ky Kiske"
+    ]
+  },
+  {
+    "character": "Leo_Whitefang",
+    "nicknames": [
+      "LW",
+      "Gorilla",
+      "Leo Whitefang"
+    ]
+  },
+  {
+    "character": "May",
+    "nicknames": [
+      "Totsugeki"
+    ]
+  },
+  {
+    "character": "Millia_Rage",
+    "nicknames": [
+      "MR",
+      "Millia Rage"
+    ]
+  },
+  {
+    "character": "Nagoriyuki",
+    "nicknames": [
+      "Vampire"
+    ]
+  },
+  {
+    "character": "Potemkin",
+    "nicknames": [
+      "Pot"
+    ]
+  },
+  {
+    "character": "Queen_Dizzy",
+    "nicknames": [
+      "QD"
+    ]
+  },
+  {
+    "character": "Ramlethal_Valentine",
+    "nicknames": [
+      "RV",
+      "Ramlethal Valentine",
+      "Borgar"
+    ]
+  },
+  {
+    "character": "Sin_Kiske",
+    "nicknames": [
+      "Sin Kiske",
+      "SK"
+    ]
+  },
+  {
+    "character": "Slayer",
+    "nicknames": [
+      "Dandy"
+    ]
+  },
+  {
+    "character": "Sol_Badguy",
+    "nicknames": [
+      "SB",
+      "Frederick",
+      "Helios",
+      "Sol Badguy",
+      "Sol Goodman"
+    ]
+  },
+  {
+    "character": "Testament",
+    "nicknames": [
+      "Testie"
+    ]
+  },
+  {
+    "character": "Zato-1",
+    "nicknames": [
+      "Zato One",
+      "Zato 1",
+      "Eddie"
+    ]
+  }
 ]

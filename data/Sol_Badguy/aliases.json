@@ -1,26 +1,212 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"236P","aliases":["Gun Flame","Fireball","Gunflame","GF","FB"]},
-	{"input":"214P","aliases":["Gun Flame Feint","Feint","Feint Fireball","Feint Gunflame","GFF","FF"]},
-	{"input":"623S","aliases":["Volcanic Viper","S Volcanic Viper","DP","VV"]},
-	{"input":"623H","aliases":["H Volcanic Viper","Heavy DP","HDP","HVV"]},
-	{"input":"j.623S","aliases":["Air Volcanic Viper","Air DP","JDP","JVV"]},
-	{"input":"j.623H","aliases":["Air H Volcanic Viper","Air Heavy DP","JHDP","JHVV"]},
-	{"input":"236K","aliases":["Bandit Revolver","Bandit Revolver 1","BR","BR1"]},
-	{"input":"236KK","aliases":["Bandit Revolver Followup","Bandit Revolver 2","BR Followup","BR2","BRF"]},
-	{"input":"j.236K","aliases":["Air Bandit Revolver","Air Bandit Revolver 1","JBR","JBR1","ABR","ABR1"]},
-	{"input":"j.236KK","aliases":["Air Bandit Revolver Followup","Air Bandit Revolver 2","JBR Followup","ABR Followup","JBRF","ABRF","JBR2","ABR2"]},
-	{"input":"214K","aliases":["Bandit Bringer","Dive","BB"]},
-	{"input":"j.214K","aliases":["Air Bandit Bringer","Air Dive","ABB","JBB","AD"]},
-	{"input":"623K","aliases":["Wild Throw","Command Grab","WT","CG"]},
-	{"input":"214S","aliases":["Night Raid Vortex","NRV"]},
-	{"input":"41236H","aliases":["Fafnir","Faf"]},
-	{"input":"632146H","aliases":["Tyrant Rave","Super","TR"]},
-	{"input":"214214H","aliases":["Heavy Mob Cemetery","Dragon Super","Command Grab Super","HMC","DS","CGS"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236P",
+    "aliases": [
+      "Gun Flame",
+      "Fireball",
+      "Gunflame",
+      "GF",
+      "FB"
+    ]
+  },
+  {
+    "input": "214P",
+    "aliases": [
+      "Gun Flame Feint",
+      "Feint",
+      "Feint Fireball",
+      "Feint Gunflame",
+      "GFF",
+      "FF"
+    ]
+  },
+  {
+    "input": "623S",
+    "aliases": [
+      "Volcanic Viper",
+      "S Volcanic Viper",
+      "DP",
+      "VV"
+    ]
+  },
+  {
+    "input": "623H",
+    "aliases": [
+      "H Volcanic Viper",
+      "Heavy DP",
+      "HDP",
+      "HVV"
+    ]
+  },
+  {
+    "input": "j.623S",
+    "aliases": [
+      "Air Volcanic Viper",
+      "Air DP",
+      "JDP",
+      "JVV"
+    ]
+  },
+  {
+    "input": "j.623H",
+    "aliases": [
+      "Air H Volcanic Viper",
+      "Air Heavy DP",
+      "JHDP",
+      "JHVV"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Bandit Revolver",
+      "Bandit Revolver 1",
+      "BR",
+      "BR1"
+    ]
+  },
+  {
+    "input": "236KK",
+    "aliases": [
+      "Bandit Revolver Followup",
+      "Bandit Revolver 2",
+      "BR Followup",
+      "BR2",
+      "BRF"
+    ]
+  },
+  {
+    "input": "j.236K",
+    "aliases": [
+      "Air Bandit Revolver",
+      "Air Bandit Revolver 1",
+      "JBR",
+      "JBR1",
+      "ABR",
+      "ABR1"
+    ]
+  },
+  {
+    "input": "j.236KK",
+    "aliases": [
+      "Air Bandit Revolver Followup",
+      "Air Bandit Revolver 2",
+      "JBR Followup",
+      "ABR Followup",
+      "JBRF",
+      "ABRF",
+      "JBR2",
+      "ABR2"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Bandit Bringer",
+      "Dive",
+      "BB"
+    ]
+  },
+  {
+    "input": "j.214K",
+    "aliases": [
+      "Air Bandit Bringer",
+      "Air Dive",
+      "ABB",
+      "JBB",
+      "AD"
+    ]
+  },
+  {
+    "input": "623K",
+    "aliases": [
+      "Wild Throw",
+      "Command Grab",
+      "WT",
+      "CG"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Night Raid Vortex",
+      "NRV"
+    ]
+  },
+  {
+    "input": "41236H",
+    "aliases": [
+      "Fafnir",
+      "Faf"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Tyrant Rave",
+      "Super",
+      "TR"
+    ]
+  },
+  {
+    "input": "214214H",
+    "aliases": [
+      "Heavy Mob Cemetery",
+      "Dragon Super",
+      "Command Grab Super",
+      "HMC",
+      "DS",
+      "CGS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

@@ -1,42 +1,271 @@
 [
-    {"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-    {"input":"214X","aliases":["Bookmark","Draw"]},
-    {"input":"22H~X","aliases":["Change Test Case","Change Deck","CTC","CD"]},
-    {"input":"22P/K/S","aliases":["Recover Mana","RM"]},
-    {"input":"236X","aliases":["Chant","Cast"]},
-    {"input":"j.214X","aliases":["Bookmark (Air)","Air Draw","AD"]},
-    {"input":"Accipiter Metron","aliases":["Accipiter Metron"]},
-    {"input":"Aquila Metron","aliases":["Aquila Metron"]},
-    {"input":"Bit Shift Metron","aliases":["Bit Shift Metron"]},
-    {"input":"Bookmark (Auto Import)","aliases":["Bookmark (Auto Import)"]},
-    {"input":"Bookmark (Full Import)","aliases":["Bookmark (Full Import)"]},
-    {"input":"Bookmark (Random Import)","aliases":["Bookmark (Random Import)"]},
-    {"input":"Chaotic Option","aliases":["Chaotic Option"]},
-    {"input":"Delayed Howling Metron","aliases":["Delayed Howling Metron"]},
-    {"input":"Delayed Tardus Metron","aliases":["Delayed Tardus Metron"]},
-    {"input":"Go to Marker","aliases":["Go to Marker"]},
-    {"input":"Gravity Rod (Shooting)","aliases":["Gravity Rod (Shooting)"]},
-    {"input":"High-Pass Filter Gravity","aliases":["High-Pass Filter Gravity"]},
-    {"input":"Howling Metron","aliases":["Howling Metron"]},
-    {"input":"Howling Metron MS Processing","aliases":["Howling Metron MS Processing"]},
-    {"input":"Low-Pass Filter Gravity","aliases":["Low-Pass Filter Gravity"]},
-    {"input":"Metron Arpeggio","aliases":["Metron Arpeggio"]},
-    {"input":"Metron Screamer 808","aliases":["Metron Screamer 808"]},
-    {"input":"Recover Mana (Continuous)","aliases":["Recover Mana (Continuous)","Recover Mana Continuous","RMC"]},
-    {"input":"Recover Mana (Instant)","aliases":["Recover Mana (Instant)","Recover Mana Instant","RMI"]},
-    {"input":"Reduce Mana Cost","aliases":["Reduce Mana Cost","MC"]},
-    {"input":"Repulsive Rod (Shooting)","aliases":["Repulsive Rod (Shooting)"]},
-    {"input":"RMS Boost Metron","aliases":["RMS Boost Metron"]},
-    {"input":"Sampler 404","aliases":["Sampler 404"]},
-    {"input":"Shooting Time Stretch (Accelerate)","aliases":["Shooting Time Stretch (Accelerate)"]},
-    {"input":"Shooting Time Stretch (Decelerate)","aliases":["Shooting Time Stretch (Decelerate)"]},
-    {"input":"Terra Metron","aliases":["Terra Metron"]},
-    {"input":"632146P/K","aliases":["Submicron Particle Sphere","High Compression Submicron Particle Sphere","SPS","HCSPS","Super"]},
-    {"input":"632146S","aliases":["Bookmark (Full Order)","Shuffle","Draw Super","BFO","DS"]},
-    {"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-    {"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "214X",
+    "aliases": [
+      "Bookmark",
+      "Draw"
+    ]
+  },
+  {
+    "input": "22H~X",
+    "aliases": [
+      "Change Test Case",
+      "Change Deck",
+      "CTC",
+      "CD"
+    ]
+  },
+  {
+    "input": "22P/K/S",
+    "aliases": [
+      "Recover Mana",
+      "RM"
+    ]
+  },
+  {
+    "input": "236X",
+    "aliases": [
+      "Chant",
+      "Cast"
+    ]
+  },
+  {
+    "input": "j.214X",
+    "aliases": [
+      "Bookmark (Air)",
+      "Air Draw",
+      "AD"
+    ]
+  },
+  {
+    "input": "Accipiter Metron",
+    "aliases": [
+      "Accipiter Metron"
+    ]
+  },
+  {
+    "input": "Aquila Metron",
+    "aliases": [
+      "Aquila Metron"
+    ]
+  },
+  {
+    "input": "Bit Shift Metron",
+    "aliases": [
+      "Bit Shift Metron"
+    ]
+  },
+  {
+    "input": "Bookmark (Auto Import)",
+    "aliases": [
+      "Bookmark (Auto Import)"
+    ]
+  },
+  {
+    "input": "Bookmark (Full Import)",
+    "aliases": [
+      "Bookmark (Full Import)"
+    ]
+  },
+  {
+    "input": "Bookmark (Random Import)",
+    "aliases": [
+      "Bookmark (Random Import)"
+    ]
+  },
+  {
+    "input": "Chaotic Option",
+    "aliases": [
+      "Chaotic Option"
+    ]
+  },
+  {
+    "input": "Delayed Howling Metron",
+    "aliases": [
+      "Delayed Howling Metron"
+    ]
+  },
+  {
+    "input": "Delayed Tardus Metron",
+    "aliases": [
+      "Delayed Tardus Metron"
+    ]
+  },
+  {
+    "input": "Go to Marker",
+    "aliases": [
+      "Go to Marker"
+    ]
+  },
+  {
+    "input": "Gravity Rod (Shooting)",
+    "aliases": [
+      "Gravity Rod (Shooting)"
+    ]
+  },
+  {
+    "input": "High-Pass Filter Gravity",
+    "aliases": [
+      "High-Pass Filter Gravity"
+    ]
+  },
+  {
+    "input": "Howling Metron",
+    "aliases": [
+      "Howling Metron"
+    ]
+  },
+  {
+    "input": "Howling Metron MS Processing",
+    "aliases": [
+      "Howling Metron MS Processing"
+    ]
+  },
+  {
+    "input": "Low-Pass Filter Gravity",
+    "aliases": [
+      "Low-Pass Filter Gravity"
+    ]
+  },
+  {
+    "input": "Metron Arpeggio",
+    "aliases": [
+      "Metron Arpeggio"
+    ]
+  },
+  {
+    "input": "Metron Screamer 808",
+    "aliases": [
+      "Metron Screamer 808"
+    ]
+  },
+  {
+    "input": "Recover Mana (Continuous)",
+    "aliases": [
+      "Recover Mana (Continuous)",
+      "Recover Mana Continuous",
+      "RMC"
+    ]
+  },
+  {
+    "input": "Recover Mana (Instant)",
+    "aliases": [
+      "Recover Mana (Instant)",
+      "Recover Mana Instant",
+      "RMI"
+    ]
+  },
+  {
+    "input": "Reduce Mana Cost",
+    "aliases": [
+      "Reduce Mana Cost",
+      "MC"
+    ]
+  },
+  {
+    "input": "Repulsive Rod (Shooting)",
+    "aliases": [
+      "Repulsive Rod (Shooting)"
+    ]
+  },
+  {
+    "input": "RMS Boost Metron",
+    "aliases": [
+      "RMS Boost Metron"
+    ]
+  },
+  {
+    "input": "Sampler 404",
+    "aliases": [
+      "Sampler 404"
+    ]
+  },
+  {
+    "input": "Shooting Time Stretch (Accelerate)",
+    "aliases": [
+      "Shooting Time Stretch (Accelerate)"
+    ]
+  },
+  {
+    "input": "Shooting Time Stretch (Decelerate)",
+    "aliases": [
+      "Shooting Time Stretch (Decelerate)"
+    ]
+  },
+  {
+    "input": "Terra Metron",
+    "aliases": [
+      "Terra Metron"
+    ]
+  },
+  {
+    "input": "632146P/K",
+    "aliases": [
+      "Submicron Particle Sphere",
+      "High Compression Submicron Particle Sphere",
+      "SPS",
+      "HCSPS",
+      "Super"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Bookmark (Full Order)",
+      "Shuffle",
+      "Draw Super",
+      "BFO",
+      "DS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]

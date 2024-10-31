@@ -1,60 +1,389 @@
-[	
-	{"input":"c.S","aliases":["5S"]},
-	{"input":"2D","aliases":["Sweep"]},
-	{"input":"5[D]","aliases":["5D!"]},
-	{"input":"f.S Level 1","aliases":["f.S"]},
-	{"input":"f.S Level 2","aliases":["f.S2"]},
-	{"input":"f.S Level 3","aliases":["f.S3"]},
-	{"input":"f.S Level BR","aliases":["f.SB"]},
-	{"input":"f.SS Level 1","aliases":["f.SS"]},
-	{"input":"f.SS Level 2","aliases":["f.SS2"]},
-	{"input":"f.SS Level 3","aliases":["f.SS3"]},
-	{"input":"f.SS Level BR","aliases":["f.SSB"]},
-	{"input":"f.SSS Level 1","aliases":["f.SSS"]},
-	{"input":"f.SSS Level 2","aliases":["f.SSS2"]},
-	{"input":"f.SSS Level 3","aliases":["f.SSS3"]},
-	{"input":"f.SSS Level BR","aliases":["f.SSSB"]},
-	{"input":"2S Level 1","aliases":["2S"]},
-	{"input":"2S Level 2","aliases":["2S2"]},
-	{"input":"2S Level 3","aliases":["2S3"]},
-	{"input":"2S Level BR","aliases":["2SB"]},
-	{"input":"5H Level 1","aliases":["5H"]},
-	{"input":"5H Level 2","aliases":["5H2"]},
-	{"input":"5H Level 3","aliases":["5H3"]},
-	{"input":"5H Level BR","aliases":["5HB"]},
-	{"input":"2H Level 1","aliases":["2H"]},
-	{"input":"2H Level 2","aliases":["2H2"]},
-	{"input":"2H Level 3","aliases":["2H3"]},
-	{"input":"2H Level BR","aliases":["2HB"]},
-	{"input":"6H Level 1","aliases":["6H"]},
-	{"input":"6H Level 2","aliases":["6H2"]},
-	{"input":"6H Level 3","aliases":["6H3"]},
-	{"input":"6H Level BR","aliases":["6HB"]},
-	{"input":"j.S Level 1","aliases":["j.S"]},
-	{"input":"j.S Level 2","aliases":["j.S2"]},
-	{"input":"j.S Level 3","aliases":["j.S3"]},
-	{"input":"j.S Level BR","aliases":["j.SB"]},
-	{"input":"j.H Level 1","aliases":["j.H"]},
-	{"input":"j.H Level 2","aliases":["j.H2"]},
-	{"input":"j.H Level 3","aliases":["j.H3"]},
-	{"input":"j.H Level BR","aliases":["j.HB"]},
-	{"input":"j.D Level 1","aliases":["j.D"]},
-	{"input":"j.D Level 2","aliases":["j.D2"]},
-	{"input":"j.D Level 3","aliases":["j.D3"]},
-	{"input":"j.D Level BR","aliases":["j.DB"]},
-	{"input":"236S","aliases":["Zarameyuki","Clone."]},
-	{"input":"236K","aliases":["F Fukyo","Forward Dash","FD"]},
-	{"input":"214K","aliases":["B Fukyo","Back Dash","BD"]},
-	{"input":"214H","aliases":["Kamuriyuki","Beyblade","BB"]},
-	{"input":"623H","aliases":["Shizuriyuki","Shizuriyuki 1","DP","DP1","AntiAir","Anti Air","AA"]},
-	{"input":"623HH","aliases":["Shizuriyuki Followup","Shizuriyuki 2","DP Followup","DP2","AntiAir Followup","Anti Air Followup","AA Followup","DPF","AAF"]},
-	{"input":"623P","aliases":["Bloodsucking Universe","Bite","Command Grab","BU","CG"]},
-	{"input":"632146S","aliases":["Wasureyuki","Super"]},
-	{"input":"632146H","aliases":["Zansetsu","Bat Super"]},
-	{"input":"BR Activation","aliases":["BR Activation","Mask Off","Maskoff"]},
-	{"input":"BR Deactivation","aliases":["BR Deactivation","Mask On","Maskon"]},
-	{"input":"6D or 4D","aliases":["Throw","6D","4D"]},
-	{"input":"j.6D or j.4D","aliases":["Air Throw","J6D","J4D"]},
-	{"input":"236D","aliases":["Wild Assault","WA"]},
-    {"input":"236[D]","aliases":["Wild Assault Hold","WAH","WA!","236D!"]}
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "f.S Level 1",
+    "aliases": [
+      "f.S"
+    ]
+  },
+  {
+    "input": "f.S Level 2",
+    "aliases": [
+      "f.S2"
+    ]
+  },
+  {
+    "input": "f.S Level 3",
+    "aliases": [
+      "f.S3"
+    ]
+  },
+  {
+    "input": "f.S Level BR",
+    "aliases": [
+      "f.SB"
+    ]
+  },
+  {
+    "input": "f.SS Level 1",
+    "aliases": [
+      "f.SS"
+    ]
+  },
+  {
+    "input": "f.SS Level 2",
+    "aliases": [
+      "f.SS2"
+    ]
+  },
+  {
+    "input": "f.SS Level 3",
+    "aliases": [
+      "f.SS3"
+    ]
+  },
+  {
+    "input": "f.SS Level BR",
+    "aliases": [
+      "f.SSB"
+    ]
+  },
+  {
+    "input": "f.SSS Level 1",
+    "aliases": [
+      "f.SSS"
+    ]
+  },
+  {
+    "input": "f.SSS Level 2",
+    "aliases": [
+      "f.SSS2"
+    ]
+  },
+  {
+    "input": "f.SSS Level 3",
+    "aliases": [
+      "f.SSS3"
+    ]
+  },
+  {
+    "input": "f.SSS Level BR",
+    "aliases": [
+      "f.SSSB"
+    ]
+  },
+  {
+    "input": "2S Level 1",
+    "aliases": [
+      "2S"
+    ]
+  },
+  {
+    "input": "2S Level 2",
+    "aliases": [
+      "2S2"
+    ]
+  },
+  {
+    "input": "2S Level 3",
+    "aliases": [
+      "2S3"
+    ]
+  },
+  {
+    "input": "2S Level BR",
+    "aliases": [
+      "2SB"
+    ]
+  },
+  {
+    "input": "5H Level 1",
+    "aliases": [
+      "5H"
+    ]
+  },
+  {
+    "input": "5H Level 2",
+    "aliases": [
+      "5H2"
+    ]
+  },
+  {
+    "input": "5H Level 3",
+    "aliases": [
+      "5H3"
+    ]
+  },
+  {
+    "input": "5H Level BR",
+    "aliases": [
+      "5HB"
+    ]
+  },
+  {
+    "input": "2H Level 1",
+    "aliases": [
+      "2H"
+    ]
+  },
+  {
+    "input": "2H Level 2",
+    "aliases": [
+      "2H2"
+    ]
+  },
+  {
+    "input": "2H Level 3",
+    "aliases": [
+      "2H3"
+    ]
+  },
+  {
+    "input": "2H Level BR",
+    "aliases": [
+      "2HB"
+    ]
+  },
+  {
+    "input": "6H Level 1",
+    "aliases": [
+      "6H"
+    ]
+  },
+  {
+    "input": "6H Level 2",
+    "aliases": [
+      "6H2"
+    ]
+  },
+  {
+    "input": "6H Level 3",
+    "aliases": [
+      "6H3"
+    ]
+  },
+  {
+    "input": "6H Level BR",
+    "aliases": [
+      "6HB"
+    ]
+  },
+  {
+    "input": "j.S Level 1",
+    "aliases": [
+      "j.S"
+    ]
+  },
+  {
+    "input": "j.S Level 2",
+    "aliases": [
+      "j.S2"
+    ]
+  },
+  {
+    "input": "j.S Level 3",
+    "aliases": [
+      "j.S3"
+    ]
+  },
+  {
+    "input": "j.S Level BR",
+    "aliases": [
+      "j.SB"
+    ]
+  },
+  {
+    "input": "j.H Level 1",
+    "aliases": [
+      "j.H"
+    ]
+  },
+  {
+    "input": "j.H Level 2",
+    "aliases": [
+      "j.H2"
+    ]
+  },
+  {
+    "input": "j.H Level 3",
+    "aliases": [
+      "j.H3"
+    ]
+  },
+  {
+    "input": "j.H Level BR",
+    "aliases": [
+      "j.HB"
+    ]
+  },
+  {
+    "input": "j.D Level 1",
+    "aliases": [
+      "j.D"
+    ]
+  },
+  {
+    "input": "j.D Level 2",
+    "aliases": [
+      "j.D2"
+    ]
+  },
+  {
+    "input": "j.D Level 3",
+    "aliases": [
+      "j.D3"
+    ]
+  },
+  {
+    "input": "j.D Level BR",
+    "aliases": [
+      "j.DB"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Zarameyuki",
+      "Clone."
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "F Fukyo",
+      "Forward Dash",
+      "FD"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "B Fukyo",
+      "Back Dash",
+      "BD"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Kamuriyuki",
+      "Beyblade",
+      "BB"
+    ]
+  },
+  {
+    "input": "623H",
+    "aliases": [
+      "Shizuriyuki",
+      "Shizuriyuki 1",
+      "DP",
+      "DP1",
+      "AntiAir",
+      "Anti Air",
+      "AA"
+    ]
+  },
+  {
+    "input": "623HH",
+    "aliases": [
+      "Shizuriyuki Followup",
+      "Shizuriyuki 2",
+      "DP Followup",
+      "DP2",
+      "AntiAir Followup",
+      "Anti Air Followup",
+      "AA Followup",
+      "DPF",
+      "AAF"
+    ]
+  },
+  {
+    "input": "623P",
+    "aliases": [
+      "Bloodsucking Universe",
+      "Bite",
+      "Command Grab",
+      "BU",
+      "CG"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Wasureyuki",
+      "Super"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Zansetsu",
+      "Bat Super"
+    ]
+  },
+  {
+    "input": "BR Activation",
+    "aliases": [
+      "BR Activation",
+      "Mask Off",
+      "Maskoff"
+    ]
+  },
+  {
+    "input": "BR Deactivation",
+    "aliases": [
+      "BR Deactivation",
+      "Mask On",
+      "Maskon"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
 ]
