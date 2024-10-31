@@ -20,7 +20,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             
             let char_json_path = "data/".to_owned() + char_id +"/"+ char_id + ".json";
     
-            // Creating character json file
+            // Creating multiple character json files
             let file = OpenOptions::new()
                 .create(true)
                 .truncate(true)
@@ -58,7 +58,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
 
         let char_json_path = "data/".to_owned() + specific_char +"/"+ specific_char + ".json";
 
-        // Creating character json file
+        // Creating singular character json file
         let file = OpenOptions::new()
             .create(true)
             .truncate(true)
