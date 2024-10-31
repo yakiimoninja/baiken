@@ -1,5 +1,4 @@
 use std::fs::OpenOptions;
-use std::io::Write;
 use std::time::Instant;
 use colored::Colorize;
 use crate::CHARS;
@@ -22,7 +21,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             let char_json_path = "data/".to_owned() + char_id +"/"+ char_id + ".json";
     
             // Creating character json file
-            let mut file = OpenOptions::new()
+            let file = OpenOptions::new()
                 .create(true)
                 .truncate(true)
                 .read(true)
@@ -48,19 +47,9 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
             // Requested website source to file
             let char_page_response_json = char_page_response_json.into_string().unwrap();
             
-            // More character json file stuff
-            let mut char_json_schema = "[\n\t";
-            write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + char_id + ".json'."));
-            
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
             frames_to_json(char_page_response_json, &file, x).await;
-
-            // Finalizing character json
-            char_json_schema = "\n]";
-            write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'json_schema' to '".to_owned() + char_id + ".json'.")); 
         }
     }
     else {
@@ -70,7 +59,7 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
         let char_json_path = "data/".to_owned() + specific_char +"/"+ specific_char + ".json";
 
         // Creating character json file
-        let mut file = OpenOptions::new()
+        let file = OpenOptions::new()
             .create(true)
             .truncate(true)
             .read(true)
@@ -96,20 +85,9 @@ pub async fn get_char_data (chars_ids: [&str; CHARS.len()], specific_char: &str)
         // Requested website source to file
         let char_page_response_json = char_page_response_json.into_string().unwrap();
         
-        // More character json file stuff
-        let mut char_json_schema = "[\n\t";
-        write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + specific_char + ".json'."));
-
         // Sending response to get processed and serialized to a json file
         // char_count is a counter to specify which json file fails to update
         frames_to_json(char_page_response_json, &file, 0).await;
-
-        // Finalizing character json
-        char_json_schema = "\n]";
-        write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'json_schema' to '{".to_owned() + specific_char + "}.json'."));
-
     }
     
     let elapsed_time = now.elapsed();

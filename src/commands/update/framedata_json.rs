@@ -45,6 +45,7 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
     char_page_response_json = char_page_response_json.replace(r#"&#039;"#, "'");
 
     let mut moves_info: Response = serde_json::from_str(&char_page_response_json).unwrap();
+    let mut concat_processed_moves_info = Vec::new();
 
     for x in 0..moves_info.cargoquery.len() {
         
@@ -109,7 +110,7 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
         }
 
         // Serializing frame data
-        let processed_moves_info = serde_json::to_string(&MoveInfo {
+        let processed_moves_info = MoveInfo {
             input: moves_info.cargoquery[x].title.input.as_ref().unwrap().to_string(),
             name: moves_info.cargoquery[x].title.name.as_ref().unwrap().to_string(),
             damage: moves_info.cargoquery[x].title.damage.as_ref().unwrap().to_string(),
@@ -124,23 +125,11 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
             riscgain: moves_info.cargoquery[x].title.riscgain.as_ref().unwrap().to_string(),
             scaling: moves_info.cargoquery[x].title.prorate.as_ref().unwrap().to_string(),
             counter: moves_info.cargoquery[x].title.counter.as_ref().unwrap().to_string(),
-        }).unwrap();
-        
-        write!(file, "{}", processed_moves_info)
-        .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count]+ ".json'."));
-        
-        // Skip writting comma/tab if next and last iteration 
-        // contains 'finish blow' in last the input field
-        if x == moves_info.cargoquery.len() -2 &&
-        *moves_info.cargoquery[x+1].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
-            continue;
-        }
-        else if x != moves_info.cargoquery.len() - 1 {         
-            // Adding comma/tab
-            // file.write(b",\n\t")
-            //     .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
-            (&mut file).write_all(b",\n\t")
-                .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
-        } 
+        };
+
+        concat_processed_moves_info.push(processed_moves_info);
     }
+
+    file.write_all(&(serde_json::to_vec_pretty(&concat_processed_moves_info).unwrap()))
+        .expect(&("\nFailed to write, while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
 }
