@@ -1,8 +1,8 @@
 use std::io::Write;
+use std::fs::File;
 use serde::Deserialize;
 use crate::{CHARS, ImageLinks};
 use md5::{Digest, Md5};
-use std::fs::File;
 extern crate ureq;
 //use ureq::Error;
 //use std::fs::OpenOptions;
@@ -35,6 +35,7 @@ pub async fn images_to_json(mut char_images_response_json: String, mut file: &Fi
     char_images_response_json = char_images_response_json.replace(r#"&#039;"#, "'");
 
     let mut imagedata: Imageresponse = serde_json::from_str(&char_images_response_json).unwrap();
+    let mut vec_processed_imagedata = Vec::new();
 
     for x in 0..imagedata.cargoquery.len() {
         
@@ -133,29 +134,17 @@ pub async fn images_to_json(mut char_images_response_json: String, mut file: &Fi
         }
 
         // Serializing image data
-        let processed_imagedata = serde_json::to_string_pretty(&ImageLinks {
+        let processed_imagedata = ImageLinks {
             input: imagedata.cargoquery[x].title.input.as_ref().unwrap().to_string(),
             move_img: image_link,
             hitbox_img: hitbox_links,
-        }).unwrap();
-        
-        write!(file, "{}", processed_imagedata)
-        .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count]+ ".json'."));
-        
-        // Skip writting comma/tab if next and last iteration 
-        // contains 'finish blow' in last the input field
-        if x == imagedata.cargoquery.len() -2 &&
-        *imagedata.cargoquery[x+1].title.input.as_ref().unwrap() == "j.XX during Homing Jump"{
-            continue;
-        }
-        else if x != imagedata.cargoquery.len() - 1 {         
-            // Adding comma/tab
-            //file.write(b",\n\t")
-            //    .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
-            (&mut file).write_all(b",\n\t")
-                .expect(&("\nFailed to write ',\\n\\t' while serializing '".to_owned() + CHARS[char_count]+ ".json'."));
-        } 
+        };
+
+        vec_processed_imagedata.push(processed_imagedata);
     }
+
+    file.write_all(&(serde_json::to_vec_pretty(&vec_processed_imagedata).unwrap()))
+        .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count]+ ".json'."));
 }
 
 async fn make_link(image_name: String) -> String {

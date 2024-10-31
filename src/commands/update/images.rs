@@ -1,5 +1,4 @@
 use std::fs::OpenOptions;
-use std::io::Write;
 use std::time::Instant;
 use colored::Colorize;
 use crate::CHARS;
@@ -22,8 +21,8 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             
             let images_json_path = "data/".to_owned() + char_id +"/images.json";
     
-            // Creating character images json file
-            let mut file = OpenOptions::new()
+            // Creating multiple character images.json files
+            let file = OpenOptions::new()
                 .create(true)
                 .truncate(true)
                 .read(true)
@@ -49,19 +48,9 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             // Requested website source to file
             let char_images_response_json = char_images_response_json.into_string().unwrap();
             
-            // More character json file stuff
-            let mut char_json_schema = "[\n\t";
-            write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + chars_ids[x] + " 'images.json'."));
-            
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
             images_to_json(char_images_response_json, &file, x).await;
-
-            // Finalizing character images json
-            char_json_schema = "\n]";
-            write!(file, "{}", char_json_schema)
-                .expect(&("\nFailed to write 'json_schema' to ".to_owned() + chars_ids[x] + " 'images.json'."));
         }
     }
     else {
@@ -70,8 +59,8 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         let images_json_path = "data/".to_owned() + specific_char +"/images.json";
 
-        // Creating character json file
-        let mut file = OpenOptions::new()
+        // Creating singular character images.json file
+        let file = OpenOptions::new()
             .create(true)
             .truncate(true)
             .read(true)
@@ -97,20 +86,9 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         // Requested website source to file
         let char_images_response_json = char_images_response_json.into_string().unwrap();
  
-        // More character json file stuff
-        let mut char_json_schema = "[\n\t";
-        write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + specific_char + " 'images.json'."));
-
         // Sending response to get processed and serialized to a json file
         // char_count is a counter to specify which json file fails to update
         images_to_json(char_images_response_json, &file, 0).await;
-
-        // Finalizing character images json
-        char_json_schema = "\n]";
-        write!(file, "{}", char_json_schema)
-            .expect(&("\nFailed to write 'json_schema' to ".to_owned() + specific_char + " 'images.json'."));
-
     }
     
     let elapsed_time = now.elapsed();
