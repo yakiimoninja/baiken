@@ -1,5 +1,4 @@
 use std::fs::OpenOptions;
-use std::io::Write;
 use std::time::Instant;
 use colored::Colorize;
 use crate::CHARS;
@@ -22,7 +21,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             let char_info_json_path = "data/".to_owned() + char_id +"/info.json";
     
             // Creating character info.json file
-            let mut file = OpenOptions::new()
+            let file = OpenOptions::new()
                 .create(true)
                 .truncate(true)
                 .read(true)
@@ -48,19 +47,9 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             // Requested website source to file
             let char_info_response_json = char_info_response_json.into_string().unwrap();
             
-            // More character info.json file stuff
-            //let mut char_json_schema = "[\n\t";
-            //write!(file, "{}", char_json_schema)
-                //.expect(&("\nFailed to write 'char_json_schema' to ".to_owned() + char_id + " 'info.json'."));
-            
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
             info_to_json(char_info_response_json, &file, x).await;
-
-            // Finalizing character info.json
-            //char_json_schema = "\n]";
-            //write!(file, "{}", char_json_schema)
-                //.expect(&("\nFailed to write 'json_schema' to ".to_owned() + char_id + " 'info.json'.")); 
         }
     }
     else {
@@ -70,7 +59,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         let char_info_json_path = "data/".to_owned() + specific_char +"/info.json";
 
         // Creating character info.json file
-        let mut file = OpenOptions::new()
+        let file = OpenOptions::new()
             .create(true)
             .truncate(true)
             .read(true)
@@ -96,20 +85,9 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         // Requested website source to file
         let char_info_response_json = char_info_response_json.into_string().unwrap();
         
-        // More character info.json file stuff
-        //let mut char_json_schema = "[\n\t";
-        //write!(file, "{}", char_json_schema)
-            //.expect(&("\nFailed to write 'char_json_schema' to '".to_owned() + specific_char + ".json'."));
-
         // Sending response to get processed and serialized to a json file
         // char_count is a counter to specify which json file fails to update
         info_to_json(char_info_response_json, &file, 0).await;
-
-        // Finalizing character info.json
-        //char_json_schema = "\n]";
-        //write!(file, "{}", char_json_schema)
-            //.expect(&("\nFailed to write 'json_schema' to '{".to_owned() + specific_char + "}.json'."));
-
     }
     
     let elapsed_time = now.elapsed();
