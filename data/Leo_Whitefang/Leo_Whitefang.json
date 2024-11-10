@@ -429,14 +429,14 @@
     "counter": "-",
     "scaling": "-",
     "riscgain": "-",
-    "invincibility": "-"
+    "invincibility": "Full 1-6"
   },
   {
     "input": "bt.66",
     "name": "bt.66",
     "damage": "-",
     "guard": "-",
-    "startup": "-",
+    "startup": "6",
     "active": "-",
     "recovery": "Total 17F",
     "hit": "-",
