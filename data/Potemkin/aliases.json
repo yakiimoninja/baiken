@@ -48,7 +48,7 @@
     ]
   },
   {
-    "input": "41236H",
+    "input": "623K",
     "aliases": [
       "Heat Tackle",
       "Jet Thrusters",
@@ -88,17 +88,6 @@
     ]
   },
   {
-    "input": "2146K~P",
-    "aliases": [
-      "Mega Fist",
-      "Kara Mega Fist",
-      "Kara Megafist",
-      "KBMF",
-      "KM",
-      "2146KP"
-    ]
-  },
-  {
     "input": "236S",
     "aliases": [
       "Slide Head",
@@ -107,10 +96,20 @@
     ]
   },
   {
-    "input": "63214S",
+    "input": "214K",
     "aliases": [
       "F.D.B.",
+      "Flick",
       "FDB"
+    ]
+  },
+  {
+    "input": "214[K]",
+    "aliases": [
+      "F.D.B. (Charged)",
+      "Flick!",
+      "FDB!",
+      "214K!"
     ]
   },
   {
@@ -118,7 +117,6 @@
     "aliases": [
       "Reflect Projectile",
       "Reflect",
-      "Flick",
       "RP"
     ]
   },
@@ -130,7 +128,7 @@
     ]
   },
   {
-    "input": "236236S",
+    "input": "632146S",
     "aliases": [
       "Heavenly Potemkin Buster",
       "Command Grab Super",
@@ -150,7 +148,7 @@
   {
     "input": "Mirror",
     "aliases": [
-      "Giganter Kai Barrier",
+      "Giganter Kai (Barrier)",
       "Mirror",
       "GKB"
     ]
