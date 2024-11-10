@@ -1,27 +1,20 @@
-# Version 0.30.1 Patch Notes.
 
-# General
 - Updated framedata
 - Updated `Potemkin` inputs.
 
-# Aliases
 - **`Potemkin`**:
     - `214K` added alias `Flick`.
     - `214[K]` added aliases `F.D.B. (Charged)`, `Flick!`, `FDB!`, `214K!`
     - Removed `Kara Mega Fist` and aliases.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.30.0 Patch Notes.
+## [0.30.0] - 2024-10-31
 
-# General
+### General
 - Reworked serialization for `frames`, `images` and `info` data when updating.
 - Replaced file deletion with truncate when updating.
 
-# Aliases
+### Aliases
 - **`Queen Dizzy`**:
     - `214S` added aliases `Michael Sword`, `S Michael Sword`, `Sword`, `S Sword`, `MS`, `SMS`, `SS`.
     - `214H` added aliases `H Michael Sword`, `H Sword`, `HMS`, `HS`.
@@ -36,14 +29,10 @@
 - **`Chipp Zanuff`**:
     - `214H` added aliases `Tiighrope`, `Rope`, `TR`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.29.0 Patch Notes.
+## [0.29.0] - 2024-10-30
 
-# General
+### General
 - Updated framedata.
 - Added `Queen Dizzy`.
 - Removed prefix command aliases.
@@ -56,35 +45,27 @@
 # Fixes
 - Fixed `/update` failing to update `Asuka` related data. (Sorry Asuka bros)
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.28.2 Patch Notes.
+## [0.28.2] - 2024-07-30
 
-# General
+### General
 - Updated framedata.
 - Clippy code clean up.
 
-# Aliases
+### Aliases
 - **`Zato-1`**:
     - `22 During 214K(HOLD)` added aliases: `Eddie Teleport`, `Swap`, `ET`, `TP`.
 
-# Version 0.28.1 Patch Notes.
+## [0.28.1] - 2024-07-24
 
-# Aliases
+### Aliases
 - **`Bridget`**:
     - `236S/H` added aliases: `236S`, `236H`.
     - `214S/H` added aliases: `236S`, `236H`.
     - `63214P` added alias: `624P`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.28.0 Patch Notes.
+## [0.28.0] - 2024-07-24
 
 - Updated framedata.
 - Updated github README to display current server count.
@@ -95,17 +76,13 @@
 # Fixes
 - Fixed the parsing of `unique moment options` to not contain "[[GGST/CHAR/UMO|UMO]]" template in info.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.27.1 Patch Notes.
+## [0.27.1] - 2024-07-05
 
-# General
+### General
 - Updated framedata.
 
-# Aliases
+### Aliases
 - **`Johnny`**:
     - `214K` added alias: `KMF`.
     - `214P` added alias: `PMF`.
@@ -118,26 +95,22 @@
     - `Mist Finer 66` added alias: `MF66`.
     - `632146H` added alias: `TMN`.
 
-# Nicknames
+### Nicknames
 - `Johnny`:
     - Added nickname: `Lean`.
 - `Slayer`:
     - Added nickname: `Dandy`. 
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.27.0 Patch Notes.
+## [0.27.0] - 2024-06-15
 
-# General
+### General
 - Updated framedata.
 
 # Fixes
 - Fixed message formatting when calling for Negative Edge moves.
 
-# Aliases
+### Aliases
 - **`Slayer`**:
     - `214K` added aliases: `Dandy Step K`, `DSK`.
 	- `214P` added aliases: `Dandy Step P`, `DSP`.
@@ -152,40 +125,28 @@
 	- `236236H` added aliases: `Last Horizon`, `LH`, `Suck Super`.
 	- `632146S` added aliases: `Super Mappa Hunch`, `Super`, `Naked`, `SMH`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.26.0 Patch Notes.
+## [0.26.0] - 2024-05-29
 
-# General
+### General
 - Added `Slayer`.
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.25.1 Patch Notes.
+## [0.25.1] - 2024-04-17
 
 ### General
 - Updated framedata.
 
-### Move Aliases
+### Aliases
 - **`A.B.A`**:
     - `63214P` added alias: `624P`.
 
 - **`Leo Whitefang`**:
     - `[s/h] h/s` added aliases: `s/h`, `h/s`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.25.0 Patch Notes.
+## [0.25.0] - 2024-04-02
 
 ### General
 - Updated framedata.
@@ -196,12 +157,8 @@
 - `A.B.A`:
     - Added nickname `A.B.A.`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.24.0 Patch Notes.
+## [0.24.0] - 2024-03-29
 - Added `A.B.A`.
 - Updated framedata.
 
@@ -209,7 +166,7 @@
 - `A.B.A`:
     - Added nicknames `AB`, `ABA`, `Paracelsus`.
 
-### Move Aliases
+### Aliases
 - **`Millia Rage`**:
     - `214H` added alias: `Claw`.
 
@@ -242,46 +199,30 @@
 	- `236D` added aliases: `Wild Assault`, `WA`.
     - `236[D]` added aliases: `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.23.0 Patch Notes.
+## [0.23.0] - 2024-03-22
 - Added the ability to update character data automatically.
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.22.0 Patch Notes.
+## [0.22.0] - 2024-02-10
 
-# General
+### General
 - Reworked the text formatting of `/moves`, `/nicknames` and `/help notes` once more.
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.21.0 Patch Notes.
+## [0.21.0] - 2024-02-2
 
-# General
+### General
 - Added new command `/info` that displays character information like "Backdash", "Guts" etc.
 - Reworked text formatting for `/fmeter`, `/moves`, `/nicknames` commands.
 - For commands `/frames`, `/fmeter`, `/hitboxes` and `/moves` Dustloop links are now masked. \
 Clicking the provided link redirects to the move in the character page, instead of the top of the page.
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.20.1 Patch Notes.
+## [0.20.1] - 2024-01-29
 
 ### General
 - Updated framedata.
@@ -292,12 +233,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 - Fixed mislabed `j.214k` aliases for all `Air Mist Finers`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.20.0 Patch Notes.
+## [0.20.0] - 2024-01-24
 
 ### General
 - Codebase update (poise 0.6.1).
@@ -306,12 +243,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixes
 - Fixed the `/update` command not fetching the hitbox images for `Wild Assault` moves.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.19.2 Patch Notes.
+## [0.19.2] - 2024-01-22
 
 ### General
 - Updated framedata.
@@ -320,22 +253,18 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fixed Bridget `Move 236KP was not found!` when using `Brake` as an alias.
 - Fixed Bridget `Move 236KK was not found!` when using `Shoot` as an alias.
 
-### Move Aliases
+### Aliases
 - **`Bridget`**:
     - `236K P` added aliases: `236KP`.
 	- `236K K` added aliases: `236KK`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.19.1 Patch Notes.
+## [0.19.1] - 2024-01-01
 
 ### General
 - Updated framedata.
 
-### Move Aliases
+### Aliases
 - **`Axl Low`**:
     - `214K` added aliases: `Whistling Wind`, `Tornado`, `WW`.
 	- `214[K]` added aliases: `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
@@ -353,18 +282,14 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Potemkin`**:
 	- `41236H` added aliases: `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.19.0 Patch Notes.
+## [0.19.0] - 2023-12-19
 
 ### General
 - Unfortunately autocomplete had to be removed in most commands because it caused images to not load properly.
 - Updated framedata.
 
-### Move Aliases
+### Aliases
 - **`Elphelt Valentine`**:
     - `214S~P` added aliases: `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`, `214SP`.
     - `214S~K` added aliases: `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`, `214SK`.
@@ -372,12 +297,8 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `214S~P/K~K` added aliases: `Down Low! (after Up High! or Down Low!)`, `Low Finisher`, `Rekka 33`, `Rekka 23`, `R23`, `R33`, `DLF`, `214SPK`, `214SKK`.
     - `214S~H` added aliases: `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`, `214SH`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.18.0 Patch Notes.
+## [0.18.0] - 2023-12-08
 
 ### General
 - Added Elphelt Valentine.
@@ -387,8 +308,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - `Elphelt Valentine`:
     - Added nicknames `Elphelt Valentine`, `Die`, `EV`.
 
-
-### Move Aliases
+### Aliases
 - **`Elphelt Valentine`**:
     -`236S` added aliases: `Miss Charlotte`, `Fireball`, `FB`, `MC`.
 	-`236H` added aliases: `Heavy Miss Charlotte`, `Heavy Fireball`, `HFB`, `HMC`.
@@ -403,12 +323,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 	-`236236K Explosion` added aliases: `Bomb-Bombnnière Explosion`, `Grenade Explosion`, `GE`, `BBE`.
 	-`632146H` added aliases: `Juganto Da Parfeo`, `Super`, `Die`, `JDP`.
     
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.17.0 Patch Notes.
+## [0.17.0] - 2023-11-25
 
 ### General
 - Completely removed `aliases` command.
@@ -416,12 +332,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Even more code cleanup.
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.16.0 Patch Notes.
+## [0.16.0] - 2023-11-24
 
 ### General
 - Removed `/aliases` and integrated its functionality to `/moves` command. 
@@ -431,12 +343,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixes
 - Fixed `megafist` not showing anything when used as an alias.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.15.0 Patch Notes.
+## [0.15.0] - 2023-11-21
 
 ### General
 - Added autocompletion of character names and options in commands.
@@ -447,18 +355,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Updated framedata.
 
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
-
-# Version 0.14.0 Patch Notes.
+## [0.14.0] - 2023-09-15
 
 ### General
 - Added Johnny.
 - Updated framedata.
 
-### Move Aliases
+### Aliases
 
 - **`All Characters`**:
     -`236D` added aliases `Wild Assault`, `WA`.
@@ -504,12 +407,8 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `236236S` added aliases `Joker Trick`, `Card Super`, `JT`, `CS`.
     - `632146H` added aliases `That's My Name`, `Super`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.13.0 Patch Notes.
+## [0.13.0] - 2023-05-25
 
 ### General
 - Updated framedata.
@@ -521,12 +420,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixes
 - Fixed and issue where using `/aliases` for Jacko wouldn't display anything.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.12.0 Patch Notes.
+## [0.12.0] - 2023-05-21
 
 ### General
 - Optimized alias searching loops to break when alias is found (i had forgor 💀).
@@ -538,12 +433,8 @@ Clicking the provided link redirects to the move in the character page, instead 
     - From: `13C (214P) 236P` to: `13C (236P) 236P`.
     - From: `13C (214S) 236P` to: `13C (236S) 236P`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.11.0 Patch Notes.
+## [0.11.0] - 2023-05-18
 
 ### General
 - Updated framedata.
@@ -555,7 +446,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 - Fixed and issue where `/fmeter` wasn't displaying the right amount of startup frames inside `[ brackets ]`.
 
-### Move Aliases
+### Aliases
 - **`Bedman?`**:
     - `!H` added aliases `error 6E H`, `6EH`, `EH`.
     - `!{H}` added aliases `Partial error 6E {H}`, `6E!H`, `P6EH`, `E!H`, `PEH`.
@@ -585,12 +476,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 	- `j.S Level 3` added alias`j.S3`.
 	- `j.S Level BR` added alias`j.SB`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.10.6 Patch Notes.
+## [0.10.6] - 2023-05-07
 
 ### General
 - Updated framedata.
@@ -599,7 +486,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fixed dots in `nicknames` command.
 - Fixed some typos.
 
-### Move Aliases
+### Aliases
 - **`Anji`**:
     - `236P` added alias `Bird`.
 
@@ -609,22 +496,14 @@ Clicking the provided link redirects to the move in the character page, instead 
 - `Bedman?`:
     - Added nickname `Delilah`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.10.5 Patch Notes.
+## [0.10.5] - 2023-04-11
 
 ### Fixes
 - Fixed `Bedman` not displaying stuff properly.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.10.4 Patch Notes.
+## [0.10.4] - 2023-04-06
 
 ### General
 - Updated framedata.
@@ -634,7 +513,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Bedman?`**:
     - Added nicknames `Bedwoman`, `Bed`.
 
-### Move Aliases
+### Aliases
 - **`Bedman?`**:
     - `(236H) 214P`added alias `214PH`.
     - `(236P) 214P` added alias `214PP`.
@@ -656,30 +535,21 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `632146S` replaced aliases `Fan Super` and `FS` with `Projectile Super` and `PS`. \
     Due to overlap couldn't access data for `fS` before this change.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.10.3 Patch Notes.
+## [0.10.3] - 2023-04-01
 
 ### General
 - Updated framedata. 
 
-### Move Aliases
+### Aliases
 - **`Chipp Zanuff`**:
     - `236S` added alias `Rekka`.
 
 - **`Ramlethal Valentine`**:
     - `236236S` added alias `Motorboat`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-
-# Version 0.10.2 Patch Notes.
+## [0.10.2] - 2023-02-25
 
 ### Fixes
 - Fixed `the application did not respond` error when using the `/moves` command for Nagoriyuki.
@@ -688,12 +558,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Refactored code to exhaustively search through the character nicknames first.
 - Updated framedata. 
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.10.1 Patch Notes.
+## [0.10.1] - 2023-01-25
 
 ### Fixes
 - Fixed missing moves for `Nagoriyuki` and `Ky`.
@@ -701,12 +567,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### General
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.10.0 Patch Notes.
+## [0.10.0] - 2023-01-20
 
 ### General
 - Added new command `fmeter` that displays visually the startup, active and recovery frames of a character's move.
@@ -714,12 +576,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Updated the github README. Now has pictures to help explain each command.
 - Updated framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.9.0 Patch Notes.
+## [0.9.0] - 2022-12-25
 
 ### General
 - Added new `Attack Level`, `Scaling` and `Risc Gain` information fields for the `frames` commands.
@@ -736,7 +594,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Happy Chaos`**:
     - Added nicknames `Asshole`.
 
-### Move Aliases
+### Aliases
 - **`Potemkin`**:
     - `632146P` added alias `Hug`.
 
@@ -746,17 +604,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Happy Chaos`**:
     - `632146P` added alias `Balls`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.8.5 Patch Notes.
+## [0.8.5] - 2022-12-20
 
 ### General
 - Updated frame data.
 
-### Move Aliases
+### Aliases
 - **`All Characters`**:
     - `2D` added alias `Sweep`.
  
@@ -764,37 +618,25 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `632S` added alias `DP`.
     - `632SS` added aliases `DP Followup`, `DPF`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.8.4 Patch Notes.
+## [0.8.4] - 2022-12-09
 
 ### Fixes
 - Fixed `aliases` command spitting `The application did not respond` error.
 - Fixed `moves` command not showing anything for `Goldlewis`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.8.3 Patch Notes.
+## [0.8.3] - 2022-12-09
 
 ### General
 - Updated frame data.
 
-### Move Aliases
+### Aliases
 - **`Nagoriyuki`**:
     - `f.S Level 1` added alias `fs`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.8.2 Patch Notes.
+## [0.8.2] - 2022-12-02
 
 ### General
 - Updated frame data.
@@ -807,17 +649,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Zato-1`**:
     - Added nickname `Eddie`.
 
-### Move Aliases
+### Aliases
 - **`Zato-1`**:
     - `236K` added alias `Clap`.
     - `]K[` added aliases `NE Clap`, `NEC`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.8.1 Patch Notes.
+## [0.8.1] - 2022-11-25
 
 ### General
 - Added `Sin Kiske` along with his framedata, hitboxes, aliases.
@@ -826,7 +664,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Sin_Kiske`**:
     - Added nickname `SK`.
 
-### Move Aliases
+### Aliases
 - **`Sol Badguy`**:
     - `236P` added alias `Gunflame`.
     - `214P` added alias `Feint Gunflame`.
@@ -849,12 +687,8 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `236236P` added alias `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
     - `236236PP` added alias `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.8.0 Patch Notes.
+## [0.8.0] - 2022-11-11
 
 ### General
 - Added new command `nicknames` to print all existing nicknames for characters.
@@ -865,23 +699,15 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Zato-1`**:
     - Added nickname `Zato One`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.6 Patch Notes.
+## [0.7.6] - 2022-11-05
  
 ### Fixes 
 - Fixed `Faust 5K` broken hitbox image link.
 - Fixed `Nagoriyuki` aliases command not displaying anything.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.5 Patch Notes.
+## [0.7.5] - 2022-10-21
 
 ### General
 - Code clean up. Removed the use of the `init.json` file.
@@ -891,7 +717,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Sol Badguy`**:
     - Added nickname `Sol Goodman`.
    
-### Move Aliases
+### Aliases
 
 - **`All Characters`**:
     - `c.S` added alias `5S`.
@@ -911,12 +737,8 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `j.623S` added alias `Air Beta`, `AB`.
     - `236H` added alias `Gamma`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.4 Patch Notes.
+## [0.7.4] - 2022-10-14
 
 ### General
 - Updated frame data.
@@ -926,7 +748,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fixed `invincibility` and `counter` showing `RISC` and `Proration` values.
 - Fixed `Sol` `Air Volcanic Viper` alias displaying framedata for `H Volcanic Viper` and vice versa.
 
-### Move Aliases
+### Aliases
 - **`Axl Low`**:
     - `j.236H` Added alias: `TKB`.
 
@@ -986,12 +808,8 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `j.236K` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
     - `j.236KK` Added alias: `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.3 Patch Notes.
+## [0.7.3] - 2022-10-04
 
 ### General
 - Cleaned up bot message formatting.
@@ -1003,52 +821,40 @@ Say less my guy.
 
 - `May` Added nickname: `Totsugeki`.
 
-### Move Aliases
+### Aliases
 - **`Nagoriyuki`**:
     - `j.D Level 1` Added alias: `j.D`.
     - `j.D Level 2` Added alias: `j.D2`.
     - `j.D Level 3` Added alias: `j.D3`.
     - `j.D Level BR` Added alias: `j.DB`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.2 Patch Notes.
+## [0.7.2] - 2022-09-26
 
 ### General
 - Cleaned up some code.
 - Reworked error messages when moves are not found.
 
-### Move Aliases
+### Aliases
 - **`Millia Rage`**:
     - `j.236K` Added alias: `Turbofall`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.1 Patch Notes.
+## [0.7.1] - 2022-09-21
 
 ### General
 - Changed move not found case for `/frames` command.
 - Changed follow up message for `/aliases` command.
  
-### Move Aliases
+### Aliases
 - **`Chipp Zanuff`**:
     - `63214S` Added alias: `Leaf Grab`.
 
 ### Nicknames
 - `Goldlewis` Added nickname: `GL`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.7.0 Patch Notes.
+## [0.7.0] - 2022-09-17
 
 ### General
 - Prefix commands will be replaced with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes in Discord's API.
@@ -1062,7 +868,7 @@ Say less my guy.
 - `Baiken` Added nickname: `Bacon`.
 - `Bridget` Added nickname: `Brisket`.
  
-### Move Aliases
+### Aliases
 - **`Bridget`**:
     - `236S/H` Added aliases: `Stop and Dash`, `Fireball`, `Yoyo Throw`, `SD`, `YYT`.
     - `214S/H` Added aliases: `Stop and Dash Return`, `Return Fireball`, `Yoyo Return`, `SDR`, `YYR`.
@@ -1080,23 +886,15 @@ Say less my guy.
 - Fixed `Bridget` missing images.
 - Fixed `Faust` `c.S` displaying super instead of `c.S` due to overlap of aliases.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
- # Version 0.6.4 Patch Notes.
+ ## [0.6.4]
 
 ### General
 - Added Bridgets framedata/hitboxes.
 - Updated some existing framedata.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
- # Version 0.6.3 Patch Notes.
+ ## [0.6.3]
 
 ### General
 - Updated some of the frame data.
@@ -1104,22 +902,14 @@ Say less my guy.
 ### Fixes
 - Fixed Chipp `Banki Messai` not displaying cause of changed input.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.6.2 Patch Notes.
+## [0.6.2]
 
 ### General
 - Updated some of the frame data.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.6.1 Patch Notes.
+## [0.6.1]
 
 ### Fixes
 - Fixes Testament's `Greave Reapers` not displaying anything cause of dustloop updating them. 
@@ -1131,12 +921,8 @@ Say less my guy.
     - `Chipp Wall Run H`.
     - `Chipp Wall Run 6H`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.6.0 Patch Notes.
+## [0.6.0]
 
 ### General
 - Cleaned up some of the code regarding `init.json`.
@@ -1145,7 +931,7 @@ Say less my guy.
 - Added some special interactions when `b.f` is used while other frame data bots are present on the same server.
 - Updated [README.md](https://github.com/yakiimoninja/baiken#readme) with character specific stuff and minor adjustments.
 
-### Move aliases
+### Aliases
 
 - **`Nagoriyuki`**:
     - `f.S Level 1`: Added alias `f.S`.
@@ -1188,12 +974,8 @@ Say less my guy.
     - `nago 2S Level 3`.
     - `nago 2S Level BR`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.5.0 Patch Notes.
+## [0.5.0]
 
 ### General
 - Season 2 is out but the new frame data will have to be updated gradually. \
@@ -1206,7 +988,7 @@ Say less my guy.
 - Removed the command aliases `hit` and `hitbox` from `b.h`. \
  Although `b.h` and `b.hitboxes` still work.
 
-### Move Aliases
+### Aliases
 - `Happy Chaos`:
     - `Focus 214S H`: Removed alias `Fire` as it's a duplicate of the `Regular 236S H`. \
     `Focus Fire` can be used instead.
@@ -1259,12 +1041,8 @@ Say less my guy.
     - `nago 623H`.
     - `nago 623HH`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.4.5 Patch Notes.
+## [0.4.5]
 
 ### Added the option to invite Baiken to your server using the following QR Code. 
 
@@ -1277,14 +1055,10 @@ Say less my guy.
 ### Fixes
 - Fixed broken image links after the `images` folder move.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.4.4 Patch Notes.
+## [0.4.4]
 
-### Move Aliases
+### Aliases
 
 - `Leo Whitefang`:
     - Autoguard attack `[s/h] h/s`: Added aliases `s!h` and `h!s`.
@@ -1315,12 +1089,8 @@ Say less my guy.
     - `millia 6P`
     - `potemkin cS`
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.4.3 Patch Notes.
+## [0.4.3]
 
 ### Fixes
 - Fixed `b.a` not printing anything for Ky.
@@ -1333,18 +1103,10 @@ Say less my guy.
 ### Sidenote:
 - Refrain from requesting aliases that already exist or are similar to what already exists.
 - Read the instructions on how to request before doing so.
-
-&#x200B;
-&#x200B;
-
 TL;DR Stop being lazy pierrots and read instructions.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.4.2 Patch Notes.
+## [0.4.2]
 
 
 ### Nicknames
@@ -1352,7 +1114,7 @@ TL;DR Stop being lazy pierrots and read instructions.
 - `Sol Badguy`: 
     - Added nickname `Helios` (you can finally stop requesting it lol). 
 
-### Move Aliases
+### Aliases
 
 - `I-no`:
     - `236H`: Added alias `H Stroke`.
@@ -1361,17 +1123,13 @@ TL;DR Stop being lazy pierrots and read instructions.
 
 - Renamed `patch_notes` folder to `patch-notes`.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.4.1 Patch Notes.
+## [0.4.1]
 
 ### Changes
 - Changed `b.?` / `b.help` message.
 
-### Move Aliases
+### Aliases
 - Universal `throw`: Added aliases `6D` and `4D`.
 - May `214P`: Added alias `Beachball`.
 - May `214K`: Added alias `K Beachball`.
@@ -1390,14 +1148,8 @@ TL;DR Stop being lazy pierrots and read instructions.
 ### Miscellaneous
 - Removed some unnecessary data from all the characters' json files.
 
-&#x200B;
-&#x200B;
-&#x200B;
-&#x200B;
 
-# Version 0.4.0 Patch Notes.
-
-&#x200B;
+## [0.4.0]
 
 ### Added support for nickname searching.
 
@@ -1411,13 +1163,9 @@ With this update you can _**also**_ use some predefined nicknames to achieve the
 
 List of nicknames can be viewed [here](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json).
 
-&#x200B;
-
 ### Added a variety of new aliases for various moves.
 
 Unfortunately I wasn't organizing them so keeping track was difficult. However that leads me to the third feature.
-
-&#x200B;
 
 ### Added a patch notes page.
 
