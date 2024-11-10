@@ -43,7 +43,7 @@
     "move_img": "https://www.dustloop.com/wiki/images/4/44/GGST_Faust_5D.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/8/84/GGST_FA_HB_5D.png",
-      "https://www.dustloop.com/wiki/images/1/14/GGST_Faust_ItemBatRange.png"
+      "https://www.dustloop.com/wiki/images/d/d4/"
     ]
   },
   {
@@ -273,6 +273,15 @@
     "move_img": "https://www.dustloop.com/wiki/images/0/0b/GGST_Faust_Crawl.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/c/c9/GGST_FA_HB_Crawl.png"
+    ]
+  },
+  {
+    "input": "214H",
+    "move_img": "https://www.dustloop.com/wiki/images/7/79/GGST_Faust_41236K_4_H.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/4/4b/GGST_Faust_214H_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/d/d6/GGST_Faust_214H_Hitbox_2.png",
+      "https://www.dustloop.com/wiki/images/3/3a/GGST_Faust_214H_Hitbox_3.png"
     ]
   },
   {

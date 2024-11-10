@@ -192,17 +192,19 @@
     ]
   },
   {
-    "input": "214P 214P",
+    "input": "214P 4P",
     "move_img": "https://www.dustloop.com/wiki/images/d/da/GGST_Ramlethal_Valentine_Erarlumo_2.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/3/34/GGST_Ramlethal_Valentine_Erarlumo_2_Hitbox.png"
+      "https://www.dustloop.com/wiki/images/3/34/GGST_Ramlethal_Valentine_Erarlumo_2_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/c/ce/GGST_Ramlethal_Valentine_Erarlumo_2_Hitbox2.png"
     ]
   },
   {
-    "input": "214P 214P 214P",
+    "input": "214P 4P 4P",
     "move_img": "https://www.dustloop.com/wiki/images/9/9c/GGST_Ramlethal_Valentine_Erarlumo_3.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/6/6b/GGST_Ramlethal_Valentine_Erarlumo_3_Hitbox.png"
+      "https://www.dustloop.com/wiki/images/6/6b/GGST_Ramlethal_Valentine_Erarlumo_3_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/0/02/GGST_Ramlethal_Valentine_Erarlumo_3_Hitbox_2.png"
     ]
   },
   {
@@ -239,7 +241,7 @@
     "input": "j.214K",
     "move_img": "https://www.dustloop.com/wiki/images/9/90/GGST_Ramlethal_Valentine_Sildo_Detruo.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/9/9f/GGST_Ramlethal_Valentine_Sildo_Detruo_Air_Hitbox.png"
+      "https://www.dustloop.com/wiki/images/4/40/GGST_Ramlethal_Valentine_Sildo_Detruo_Hitbox.png"
     ]
   },
   {
