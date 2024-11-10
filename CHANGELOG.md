@@ -1,3 +1,20 @@
+# Version 0.30.1 Patch Notes.
+
+# General
+- Updated framedata
+- Updated `Potemkin` inputs.
+
+# Aliases
+- **`Potemkin`**:
+    - `214K` added alias `Flick`.
+    - `214[K]` added aliases `F.D.B. (Charged)`, `Flick!`, `FDB!`, `214K!`
+    - Removed `Kara Mega Fist` and aliases.
+
+&#x200B;
+&#x200B;
+&#x200B;
+&#x200B;
+
 # Version 0.30.0 Patch Notes.
 
 # General
