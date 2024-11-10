@@ -421,15 +421,15 @@
     "damage": "100",
     "guard": "-",
     "startup": "1",
-    "active": "7",
+    "active": "10",
     "recovery": "32",
-    "hit": "HKD +25 [+11]",
+    "hit": "HKD +25 [+15/+13-+22 (DC)]",
     "block": "-",
     "level": "-",
     "counter": "-",
     "scaling": "50% [100%]",
     "riscgain": "-",
-    "invincibility": "1-7 Strike"
+    "invincibility": "1-10 Strike"
   },
   {
     "input": "41236H",
@@ -510,6 +510,22 @@
     "scaling": "80%",
     "riscgain": "1125",
     "invincibility": "-"
+  },
+  {
+    "input": "While Guarding: 236P",
+    "name": "Guard Cancel Hiiragi",
+    "damage": "0",
+    "guard": "Forced Guard Crush",
+    "startup": "1",
+    "active": "7",
+    "recovery": "32",
+    "hit": "+15[+13-+22]",
+    "block": "-",
+    "level": "-",
+    "counter": "-",
+    "scaling": "100%",
+    "riscgain": "-",
+    "invincibility": "1-7 Strike"
   },
   {
     "input": "214214P",

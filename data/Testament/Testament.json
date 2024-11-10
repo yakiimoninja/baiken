@@ -162,7 +162,7 @@
   {
     "input": "6H",
     "name": "6H",
-    "damage": "61",
+    "damage": "71",
     "guard": "All",
     "startup": "23",
     "active": "6",
@@ -182,9 +182,9 @@
     "guard": "All",
     "startup": "11",
     "active": "6",
-    "recovery": "15",
-    "hit": "KD +28",
-    "block": "-7",
+    "recovery": "23",
+    "hit": "KD +20",
+    "block": "-15",
     "level": "2",
     "counter": "Mid",
     "scaling": "90%",
@@ -466,7 +466,7 @@
   {
     "input": "236[H]",
     "name": "H Grave Reaper",
-    "damage": "53, 41",
+    "damage": "63, 41",
     "guard": "All",
     "startup": "27~33",
     "active": "4, (5), 110",
@@ -482,7 +482,7 @@
   {
     "input": "236[S]",
     "name": "S Grave Reaper",
-    "damage": "53, 41",
+    "damage": "63, 41",
     "guard": "All",
     "startup": "30~36",
     "active": "4, (5), 110",
@@ -498,7 +498,7 @@
   {
     "input": "236{H}",
     "name": "H Grave Reaper",
-    "damage": "48, 36",
+    "damage": "58, 36",
     "guard": "All",
     "startup": "20~26",
     "active": "4, (5), 70",
@@ -514,7 +514,7 @@
   {
     "input": "236{S}",
     "name": "S Grave Reaper",
-    "damage": "48, 36",
+    "damage": "58, 36",
     "guard": "All",
     "startup": "23~29",
     "active": "4, (5), 70",

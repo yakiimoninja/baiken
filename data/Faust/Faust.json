@@ -246,7 +246,7 @@
     "guard": "All",
     "startup": "10",
     "active": "Until Landing",
-    "recovery": "9",
+    "recovery": "12",
     "hit": "-",
     "block": "-",
     "level": "2",
@@ -354,7 +354,7 @@
   {
     "input": "236P 100T Weight",
     "name": "100T Weight",
-    "damage": "25",
+    "damage": "50 [80]",
     "guard": "All (Guard Crush)",
     "startup": "1",
     "active": "63",
@@ -391,7 +391,7 @@
     "startup": "51 to Land",
     "active": "200",
     "recovery": "-",
-    "hit": "-",
+    "hit": "HKD +85",
     "block": "-",
     "level": "0",
     "counter": "Very Small",
@@ -402,7 +402,7 @@
   {
     "input": "236P Bomb",
     "name": "Bomb",
-    "damage": "70",
+    "damage": "80",
     "guard": "All",
     "startup": "68 to Land, 143 After Landing",
     "active": "9",
@@ -450,7 +450,7 @@
   {
     "input": "236P Hammer",
     "name": "Hammer",
-    "damage": "50",
+    "damage": "50 [80]",
     "guard": "All",
     "startup": "1",
     "active": "98",
@@ -546,7 +546,7 @@
   {
     "input": "Afro Explosion",
     "name": "Afro",
-    "damage": "40",
+    "damage": "60",
     "guard": "All (Guard Crush)",
     "startup": "120 [15]",
     "active": "6",
@@ -590,6 +590,22 @@
     "scaling": "-",
     "riscgain": "-",
     "invincibility": "Low Profile"
+  },
+  {
+    "input": "214H",
+    "name": "Hole In One",
+    "damage": "43",
+    "guard": "All",
+    "startup": "13",
+    "active": "8",
+    "recovery": "28",
+    "hit": "+29 [+23]",
+    "block": "-17 [-19]",
+    "level": "-",
+    "counter": "-",
+    "scaling": "-",
+    "riscgain": "-",
+    "invincibility": "-"
   },
   {
     "input": "214K",
@@ -754,7 +770,7 @@
   {
     "input": "41236K 4 H",
     "name": "Hole in One!",
-    "damage": "80/100/120",
+    "damage": "93/106/140",
     "guard": "All",
     "startup": "8",
     "active": "8",
