@@ -1,7 +1,25 @@
+# Changelog
 
+All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+
+## [0.30.1] - 2024-11-10
+
+### General
 - Updated framedata
 - Updated `Potemkin` inputs.
 
+### Added
+- Added github actions to check compilation errors.
+- Added github action to create new releases.
+- Added github action to creat release notes according to CHANGELOG.md.
+
+### Changed
+- Rewrote CHANGELOG.md
+
+### Aliases
 - **`Potemkin`**:
     - `214K` added alias `Flick`.
     - `214[K]` added aliases `F.D.B. (Charged)`, `Flick!`, `FDB!`, `214K!`
