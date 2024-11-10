@@ -60,7 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `/help` help messages.
 - Updated `README`.
 
-# Fixes
+### Fixes
 - Fixed `/update` failing to update `Asuka` related data. (Sorry Asuka bros)
 
 
@@ -91,7 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hyperlink titles for `/frames`, `/fmeter`, `/hitboxes` and `moves` now redirect to character overview pages.
 - Hyperlink titles for `/info` now redirect to corresponding character page.
 
-# Fixes
+### Fixes
 - Fixed the parsing of `unique moment options` to not contain "[[GGST/CHAR/UMO|UMO]]" template in info.
 
 
@@ -125,7 +125,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### General
 - Updated framedata.
 
-# Fixes
+### Fixes
 - Fixed message formatting when calling for Negative Edge moves.
 
 ### Aliases
