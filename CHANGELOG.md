@@ -34,7 +34,7 @@
     - `632146H` added aliases `Gamma Ray`, `Lazer`, `Lazer Super`, `Kamehameha`, `LS`, `GR`.
 
 - **`Chipp Zanuff`**:
-    - `214H` added aliases `Thighrope`, `Rope`, `TR`.
+    - `214H` added aliases `Tiighrope`, `Rope`, `TR`.
 
 &#x200B;
 &#x200B;
