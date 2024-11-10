@@ -24,8 +24,7 @@
     "input": "2P",
     "move_img": "https://www.dustloop.com/wiki/images/8/8b/GGST_Potemkin_2P.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/5/59/GGST_Potemkin_2P_1_Hitbox.png",
-      "https://www.dustloop.com/wiki/images/3/38/GGST_Potemkin_2P_2_Hitbox.png.png"
+      "https://www.dustloop.com/wiki/images/e/ec/GGST_Potemkin_2P_Hitbox.png"
     ]
   },
   {
@@ -182,8 +181,7 @@
     "input": "214K",
     "move_img": "https://www.dustloop.com/wiki/images/c/cf/GGST_Potemkin_FDB.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/1/1d/GGST_Potemkin_62134S_hitbox.png",
-      "https://www.dustloop.com/wiki/images/5/5b/GGST_Potemkin_FDB_Hitbox.png"
+      "https://www.dustloop.com/wiki/images/0/07/GGST_Potemkin_214K_hitbox.png"
     ]
   },
   {
@@ -197,7 +195,7 @@
     "input": "214[K]",
     "move_img": "https://www.dustloop.com/wiki/images/c/cf/GGST_Potemkin_FDB.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/5/5b/GGST_Potemkin_FDB_Hitbox.png"
+      "https://www.dustloop.com/wiki/images/0/07/GGST_Potemkin_214K_hitbox.png"
     ]
   },
   {
@@ -233,8 +231,6 @@
     "move_img": "https://www.dustloop.com/wiki/images/6/6f/GGST_Potemkin_Potemkin_Buster_Startup.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/3/32/GGST_Potemkin_Potemkin_Buster_1_Hitbox.png",
-      "https://www.dustloop.com/wiki/images/a/aa/GGST_Potemkin_Potemkin_Buster_2_Hitbox.png",
-      "https://www.dustloop.com/wiki/images/3/38/GGST_Potemkin_Potemkin_Buster_3_Hitbox.png",
       "https://www.dustloop.com/wiki/images/0/08/GGST_Potemkin_Potemkin_Buster_4_Hitbox.png"
     ]
   },

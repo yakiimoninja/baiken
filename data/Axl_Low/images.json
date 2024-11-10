@@ -212,6 +212,35 @@
     ]
   },
   {
+    "input": "236S",
+    "move_img": "https://www.dustloop.com/wiki/images/2/2f/GGST_Axl_Low_46S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/1/10/GGST_Axl_Low_Sickle_Flash_hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/9/9c/GGST_Axl_Low_Sickle_Flash_hitbox.png"
+    ]
+  },
+  {
+    "input": "236S 2",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c9/GGST_Axl_Low_46S2.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/3/30/GGST_Axl_Low_Spinning_Chain_Strike_hitbox.png"
+    ]
+  },
+  {
+    "input": "236S 8",
+    "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Axl_Low_46S8.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/d/de/GGST_Axl_Low_Soaring_Chain_Strike_hitbox.png"
+    ]
+  },
+  {
+    "input": "236S S",
+    "move_img": "https://www.dustloop.com/wiki/images/9/90/GGST_Axl_Low_46SS_1.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/9/91/GGST_Axl_Low_Winter_Cherry_hitbox.png"
+    ]
+  },
+  {
     "input": "41236H",
     "move_img": "https://www.dustloop.com/wiki/images/d/d6/GGST_Axl_Low_41236H_1.png",
     "hitbox_img": [
@@ -231,35 +260,6 @@
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/0/0a/GGST_Axl_Low_Axl_Bomber_hitbox.png",
       "https://www.dustloop.com/wiki/images/7/71/GGST_Axl_Low_Axl_Bomber_hitbox2.png"
-    ]
-  },
-  {
-    "input": "[4]6S",
-    "move_img": "https://www.dustloop.com/wiki/images/2/2f/GGST_Axl_Low_46S.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/1/10/GGST_Axl_Low_Sickle_Flash_hitbox_1.png",
-      "https://www.dustloop.com/wiki/images/9/9c/GGST_Axl_Low_Sickle_Flash_hitbox.png"
-    ]
-  },
-  {
-    "input": "[4]6S 2",
-    "move_img": "https://www.dustloop.com/wiki/images/c/c9/GGST_Axl_Low_46S2.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/3/30/GGST_Axl_Low_Spinning_Chain_Strike_hitbox.png"
-    ]
-  },
-  {
-    "input": "[4]6S 8",
-    "move_img": "https://www.dustloop.com/wiki/images/3/37/GGST_Axl_Low_46S8.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/d/de/GGST_Axl_Low_Soaring_Chain_Strike_hitbox.png"
-    ]
-  },
-  {
-    "input": "[4]6S S",
-    "move_img": "https://www.dustloop.com/wiki/images/9/90/GGST_Axl_Low_46SS_1.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/9/91/GGST_Axl_Low_Winter_Cherry_hitbox.png"
     ]
   },
   {

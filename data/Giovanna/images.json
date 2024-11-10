@@ -189,10 +189,18 @@
     ]
   },
   {
+    "input": "214H~6K",
+    "move_img": "https://www.dustloop.com/wiki/images/8/81/GGST_Giovanna_Trovao.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/3/3b/GGST_Giovanna_Trovao_hitbox.png"
+    ]
+  },
+  {
     "input": "214K",
     "move_img": "https://www.dustloop.com/wiki/images/8/8d/GGST_Giovanna_Sepultura.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/5/57/GGST_Giovanna_Sepultura_hitbox.png"
+      "https://www.dustloop.com/wiki/images/5/57/GGST_Giovanna_Sepultura_hitbox.png",
+      "https://www.dustloop.com/wiki/images/2/24/GGST_Giovanna_214H-4K_hitbox.png"
     ]
   },
   {
