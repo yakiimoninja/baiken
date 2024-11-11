@@ -1116,8 +1116,7 @@ Say less my guy.
 - New aliases for various moves.
 - New patch notes page.
 
-[0.30.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
-
+[5.2.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
 [5.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
 [5.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.29.0
 [4.18.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.2
