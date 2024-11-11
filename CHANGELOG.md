@@ -905,14 +905,14 @@ Say less my guy.
 - Fixed `Faust` `c.S` displaying super instead of `c.S` due to overlap of aliases.
 
 
- ## [0.6.4]
+## [0.6.4]
 
 ### General
 - Added Bridgets framedata/hitboxes.
 - Updated some existing framedata.
 
 
- ## [0.6.3]
+## [0.6.3]
 
 ### General
 - Updated some of the frame data.
@@ -1194,3 +1194,65 @@ To solve that issue I created a folder inside the github project that will hold 
 The patch notes will include what's new, what's been removed and any new addition of nicknames or aliases.
 
 List of patch notes can be found [here](https://github.com/yakiimoninja/baiken/blob/main/patch_notes/).
+
+[0.30.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
+[0.30.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
+[0.29.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.29.0
+[0.28.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.2
+[0.28.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.1
+[0.28.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.0
+[0.27.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.27.1
+[0.27.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.27.0
+[0.26.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.26.0
+[0.25.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.25.1
+[0.25.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.25.0
+[0.24.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.24.0
+[0.23.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.23.0
+[0.22.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.22.0
+[0.21.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.21.0
+[0.20.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.20.1
+[0.20.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.20.0
+[0.19.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.2
+[0.19.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.1
+[0.19.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.0
+[0.18.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.18.0
+[0.17.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.17.0
+[0.16.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.16.0
+[0.15.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.15.0
+[0.14.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.14.0
+[0.13.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.13.0
+[0.12.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.12.0
+[0.11.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.11.0
+[0.10.6]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.6
+[0.10.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.5
+[0.10.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.4
+[0.10.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.3
+[0.10.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.2
+[0.10.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.1
+[0.10.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.0
+[0.9.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.9.0
+[0.8.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.5
+[0.8.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.4
+[0.8.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.3
+[0.8.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.2
+[0.8.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.1
+[0.8.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.0
+[0.7.6]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.6
+[0.7.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.5
+[0.7.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.4
+[0.7.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.3
+[0.7.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.2
+[0.7.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.1
+[0.7.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.0
+[0.6.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.4
+[0.6.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.3
+[0.6.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.2
+[0.6.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.1
+[0.6.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.0
+[0.5.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.5.0
+[0.4.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.5
+[0.4.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.4
+[0.4.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.3
+[0.4.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.2
+[0.4.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.1
+[0.4.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.0
