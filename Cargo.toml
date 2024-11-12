@@ -4,7 +4,7 @@ version = "0.30.1"
 edition = "2021"
 authors = ["yakiimoninja"]
 repository = "https://github.com/yakiimoninja/baiken"
-description = "A Discord bot that displays Guilty Gear Strive frame data."
+description = "A Discord bot that displays Guilty Gear Strive framedata and more."
 license = "GPL-3.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
