@@ -7,10 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.2.1] - 2024-11-10
+
 ### Fixed
-- Rewrite CHANGELOG to better follow semver.
-- Rewrite commit messages regarding versions.
-- Edit release tags to updated versions
+- Rewrite CHANGELOG to better follow semantic versioning.
+- Bump `Cargo.toml` to recalcuted version.
 
 ## [5.2.0] - 2024-11-10
 
@@ -1116,6 +1117,8 @@ Say less my guy.
 - New aliases for various moves.
 - New patch notes page.
 
+
+[5.2.1]: https://github.com/yakiimoninja/baiken/releases/tag/5.2.1
 [5.2.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
 [5.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
 [5.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.29.0
@@ -1141,8 +1144,6 @@ Say less my guy.
 [3.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.16.0
 [3.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.15.0
 [2.19.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.14.0
-Fix this 0.13.0 tag doesnt exist
-
 [2.18.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.13.0
 [2.17.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.12.0
 [2.17.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.11.0
