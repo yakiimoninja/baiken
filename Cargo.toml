@@ -1,6 +1,6 @@
 [package]
 name = "baiken"
-version = "5.2.1"
+version = "1.0.0"
 edition = "2021"
 authors = ["yakiimoninja"]
 repository = "https://github.com/yakiimoninja/baiken"
