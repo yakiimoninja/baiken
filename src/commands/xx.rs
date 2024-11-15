@@ -67,7 +67,6 @@ pub async fn xx(
 
         if let ComponentInteractionDataKind::StringSelect { ref values } = mci.data.kind {
             user_option = &values[0];
-            println!("{:#?}", values);
         
             // Reading the gids json
             let data_from_file = fs::read_to_string("data/gids.json")
@@ -85,7 +84,7 @@ pub async fn xx(
                 for x in vec_gids.id.iter() {
                     // Checking if guild is in the exclusion list
                     if guild_id == *x.to_string() {
-                        println!("{}", "Guild id already exists.".magenta());
+                        println!("{}", "Easter eggs are already disabled.".magenta());
                         // Keeps modal from continuously loading
                         mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
                         ctx.say("Easter eggs for this server are already disabled.").await?;
@@ -107,7 +106,7 @@ pub async fn xx(
                 let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
                 file.write_all(&gid_to_json).unwrap();
 
-                println!("{}", "Added new guild id in exclusion list.".magenta());
+                println!("{}", "Easter eggs disabled.".magenta());
                 // Keeps modal from continuously loading
                 mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
                 ctx.say("Easter eggs for this server have been disabled.").await?;
@@ -133,7 +132,7 @@ pub async fn xx(
                         let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
                         file.write_all(&gid_to_json).unwrap();
 
-                        println!("{}", "Removed guild id from exclusion list.".magenta());
+                        println!("{}", "Easter eggs enabled.".magenta());
                         // Keeps modal from continuously loading
                         mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
                         ctx.say("Easter eggs for this server have been enabled.").await?;
@@ -142,7 +141,7 @@ pub async fn xx(
                     }
                 }
       
-                println!("{}", "Guild id doesnt exist in exclusion list.".magenta());
+                println!("{}", "Easter eggs are already enabled.".magenta());
                 // Keeps modal from continuously loading
                 mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
                 ctx.say("Easter eggs for this server are already enabled.").await?;
