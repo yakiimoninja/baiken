@@ -1,15 +1,18 @@
-use std::{fs::OpenOptions, io::Write, time::Duration};
 use colored::Colorize;
+use std::{
+    fs::OpenOptions,
+    io::Write,
+    time::Duration,
+};
 use poise::execute_modal;
 use crate::{Context, Error};
 
 #[derive(Debug, poise::Modal)]
-#[allow(dead_code)] // fields only used for Debug print
 #[name = "Feedback/Request Submission"]
 struct Submission{
     #[min_length = 3 ]
     #[max_length = 20 ]
-    #[placeholder = r#""Select "feature", "bug" or "other""#]
+    #[placeholder = r#"Select "feature", "bug" or "other""#]
     subject: String,
     #[paragraph]
     #[min_length = 10 ]
@@ -29,7 +32,7 @@ pub async fn feedback(
     };
 
     // Write to file only if modal isnt empty
-    if let Some(data) = execute_modal::<_,_, Submission>(ctx, None, Some(Duration::from_secs(60 * 2))).await? {
+    if let Some(data) = execute_modal::<_,_, Submission>(ctx, None, Some(Duration::from_secs(60*2))).await? {
         // Creating character json file
         let mut file = OpenOptions::new()
             .create(true)
@@ -46,12 +49,11 @@ pub async fn feedback(
         
         println!("{}", "Done writting to 'request.txt'".yellow());
         ctx.say("Submitted successfully!").await?;
+        return Ok(());
     }
     else {
-
         println!("{}", "Feedback modal timed out.".red());
         ctx.say("Form timed out.").await?;
+        return Ok(());
     }
-
-    Ok(())
 }
