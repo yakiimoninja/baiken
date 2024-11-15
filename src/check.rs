@@ -1,6 +1,12 @@
 use std::{fs, path::Path};
 use colored::Colorize;
-use crate::{Context, Error, Gids, Nicknames, CHARS};
+use crate::{
+    CHARS,
+    Nicknames,
+    Gids,
+    Context,
+    Error,
+};
 
 // Collection of functions that check for stuff
 

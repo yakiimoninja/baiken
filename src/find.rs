@@ -1,5 +1,10 @@
 use std::{fs, path::Path};
-use crate::{Nicknames, Error, MoveInfo, MoveAliases};
+use crate::{
+    MoveAliases,
+    Nicknames,
+    MoveInfo,
+    Error,
+};
 
 
 pub async fn find_character(character: &String) -> Result<String, Error> {

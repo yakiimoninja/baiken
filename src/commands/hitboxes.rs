@@ -1,7 +1,14 @@
-use std::{fs, string::String};
 use colored::Colorize;
-use crate::{Context, Error, ImageLinks , MoveInfo };
-use crate::{HITBOX_DEFAULT, find, check};
+use std::{fs, string::String};
+use crate::{
+    HITBOX_DEFAULT,
+    MoveInfo,
+    ImageLinks,
+    Context,
+    Error,
+    check,
+    find,
+};
 
 /// Display a move's hitbox images.
 #[allow(unused_assignments)]

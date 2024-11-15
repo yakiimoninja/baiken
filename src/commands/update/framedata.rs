@@ -1,9 +1,10 @@
-use std::fs::OpenOptions;
-use std::time::Instant;
-use colored::Colorize;
-use crate::CHARS;
-use crate::commands::update::framedata_json::frames_to_json;
 extern crate ureq;
+use std::{fs::OpenOptions, time::Instant};
+use colored::Colorize;
+use crate::{
+    CHARS,
+    commands::update::framedata_json::frames_to_json,
+};
 
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=cargoquery&format=json&limit=100&tables=MoveData_GGST&fields=MoveData_GGST.input%2C%20MoveData_GGST.name%2C%20MoveData_GGST.damage%2C%20MoveData_GGST.guard%2C%20MoveData_GGST.invuln%2C%20MoveData_GGST.startup%2C%20MoveData_GGST.active%2C%20MoveData_GGST.recovery%2C%20MoveData_GGST.onHit%2C%20MoveData_GGST.onBlock%2C%20MoveData_GGST.level%2C%20MoveData_GGST.riscGain%2C%20MoveData_GGST.prorate%2C%20MoveData_GGST.counter&where=chara%3D%22";
 const SITE_HALF: &str = "%22&order_by=MoveData_GGST.type%20ASC%2C%20MoveData_GGST.input%20ASC&utf8=1";

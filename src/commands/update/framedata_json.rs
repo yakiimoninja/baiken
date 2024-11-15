@@ -1,8 +1,10 @@
-use std::io::Write;
+extern crate ureq;
 use serde::Deserialize;
 use crate::{CHARS, MoveInfo};
-use std::fs::File;
-extern crate ureq;
+use std::{
+    fs::File,
+    io::Write,
+};
 
 #[derive(Deserialize, Debug)]
 struct Response {

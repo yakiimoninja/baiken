@@ -1,7 +1,14 @@
 use std::{fs, string::String};
 use colored::Colorize;
-use crate::{Context, Error, ImageLinks , MoveInfo };
-use crate::{IMAGE_DEFAULT, find, check};
+use crate::{
+    IMAGE_DEFAULT,
+    MoveInfo,
+    ImageLinks,
+    Context,
+    Error,
+    check,
+    find,
+};
 
 const GREEN_CIRCLE: &str = "🟢";
 const RED_SQUARE: &str = "🟥";

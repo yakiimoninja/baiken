@@ -1,13 +1,13 @@
 use crate::{check, Context, Error, Gids};
 use colored::Colorize;
-use poise::serenity_prelude::ComponentInteractionDataKind;
 use std::io::Write;
 use std::{fs, fs::OpenOptions};
 use poise::{
     serenity_prelude as serenity,
     serenity_prelude::CreateSelectMenuKind,
     serenity_prelude::CreateSelectMenuOption,
-    };
+    serenity_prelude::ComponentInteractionDataKind,
+};
 
 /// Disable or enable easter eggs for current server. Admin only.
 #[poise::command(

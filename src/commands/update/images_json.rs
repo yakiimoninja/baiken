@@ -1,9 +1,11 @@
-use std::io::Write;
-use std::fs::File;
+extern crate ureq;
+use md5::{Digest, Md5};
 use serde::Deserialize;
 use crate::{CHARS, ImageLinks};
-use md5::{Digest, Md5};
-extern crate ureq;
+use std::{
+    fs::File,
+    io::Write,
+};
 //use ureq::Error;
 //use std::fs::OpenOptions;
 

@@ -5,8 +5,18 @@ mod framedata_json;
 mod images_json;
 mod info_json;
 use colored::Colorize;
-use crate::{Context, Error, CHARS, check, find};
-use crate::serenity::futures::{Stream, StreamExt, self};
+use crate::{
+    CHARS,
+    Context,
+    Error,
+    check,
+    find,
+    serenity::futures::{
+        Stream,
+        StreamExt,
+        self,
+    }
+};
 
 // Autocompletes the update option
 async fn autocomplete_option<'a>(

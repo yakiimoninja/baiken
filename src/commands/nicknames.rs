@@ -1,5 +1,10 @@
 use std::{fs, string::String};
-use crate::{check, Nicknames, Context, Error};
+use crate::{
+    Nicknames,
+    Context,
+    Error,
+    check,
+};
 
 /// Display all character nicknames.
 #[poise::command(prefix_command, slash_command)]

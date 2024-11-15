@@ -1,6 +1,13 @@
 use colored::Colorize;
-use crate::{Context, Error};
-use crate::serenity::futures::{Stream, StreamExt, self};
+use crate::{
+    Context,
+    Error,
+    serenity::futures::{
+        Stream,
+        StreamExt,
+        self
+    }
+};
 
 async fn autocomplete_help<'a>(
     _ctx: Context<'_>,
