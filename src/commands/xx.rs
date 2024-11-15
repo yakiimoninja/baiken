@@ -1,7 +1,13 @@
 use crate::{check, Context, Error, Gids};
 use colored::Colorize;
+use poise::serenity_prelude::ComponentInteractionDataKind;
 use std::io::Write;
 use std::{fs, fs::OpenOptions};
+use poise::{
+    serenity_prelude as serenity,
+    serenity_prelude::CreateSelectMenuKind,
+    serenity_prelude::CreateSelectMenuOption,
+    };
 
 /// Disable or enable easter eggs for current server. Admin only.
 #[poise::command(
@@ -12,7 +18,6 @@ use std::{fs, fs::OpenOptions};
     default_member_permissions = "ADMINISTRATOR")]
 pub async fn xx(
     ctx: Context<'_>,
-    #[description = "Disable easter eggs? Default is false."] option: bool
     ) -> Result<(), Error> {
 
     // Check to see if users guild id exists
@@ -37,75 +42,119 @@ pub async fn xx(
         return Ok(());
     }
 
-    // Reading the gids json
-    let data_from_file = fs::read_to_string("data/gids.json")
-        .expect("\nFailed to read 'gids.json' file.");
+    let user_option;
 
-    // Deserializing from gids json
-    let mut vec_gids = serde_json::from_str::<Gids>(&data_from_file).unwrap();
- 
-    // Parse user guild id to string
-    let guild_id = ctx.guild_id().unwrap().to_string();
+    let reply = {
+        let components = vec![
+            serenity::CreateActionRow::SelectMenu(serenity::CreateSelectMenu::new("dropdown",
+                CreateSelectMenuKind::String { options: vec![
+                    CreateSelectMenuOption::new("Disable", "true"),
+                    CreateSelectMenuOption::new("Enable", "false")
+            ].into()}))
+        ];
+        poise::CreateReply::default()
+            .content(r#"**Disable easter eggs?**"#)
+            .components(components)
+    };
+
+    ctx.send(reply).await?;
+
+    while let Some(mci) = serenity::ComponentInteractionCollector::new(ctx.serenity_context())
+        .timeout(std::time::Duration::from_secs(30))
+        .filter(move |mci| mci.data.custom_id == "dropdown")
+        .await
+    {
+
+        if let ComponentInteractionDataKind::StringSelect { ref values } = mci.data.kind {
+            user_option = &values[0];
+            println!("{:#?}", values);
+        
+            // Reading the gids json
+            let data_from_file = fs::read_to_string("data/gids.json")
+                .expect("\nFailed to read 'gids.json' file.");
+
+            // Deserializing from gids json
+            let mut vec_gids = serde_json::from_str::<Gids>(&data_from_file).unwrap();
+
+            // Parse user guild id to string
+            let guild_id = ctx.guild_id().unwrap().to_string();
 
 
-    if option {
-        // Hand to add guild id from exclusion list
-        for x in vec_gids.id.iter() {
-            // Checking if guild is in the exclusion list
-            if guild_id == *x.to_string() {
-                println!("{}", "Guild id already exists.".magenta());
-                ctx.say("Easter eggs for this server are already disabled.").await?;
-                return Ok(());
-            }
-        }
-
-        // Creating gids json file
-        let mut file = OpenOptions::new()
-            .create(true)
-            .truncate(true)
-            .read(true)
-            .write(true)
-            .open("data/gids.json")
-            .expect("\nFailed to open 'gids.json' file.");
-    
-        // Adding guild id to exclusion list
-        vec_gids.id.push(guild_id);
-        let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
-        file.write_all(&gid_to_json).unwrap();
-
-        println!("{}", "Added new guild id in exclusion list.".magenta());
-        ctx.say("Easter eggs for this server have been disabled.").await?;
-    }
-    else {
-        // Hand to remove guild id from exclusion list
-        for x in 0..vec_gids.id.len() {
-            // Checking if guild is in the ee exclusion list
-            if guild_id == vec_gids.id[x] {
+            if user_option == "true"{
+                // Hand to add guild id to exclusion list
+                for x in vec_gids.id.iter() {
+                    // Checking if guild is in the exclusion list
+                    if guild_id == *x.to_string() {
+                        println!("{}", "Guild id already exists.".magenta());
+                        // Keeps modal from continuously loading
+                        mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
+                        ctx.say("Easter eggs for this server are already disabled.").await?;
+                        return Ok(());
+                    }
+                }
 
                 // Creating gids json file
                 let mut file = OpenOptions::new()
                     .create(true)
+                    .truncate(true)
                     .read(true)
                     .write(true)
-                    .truncate(true)
                     .open("data/gids.json")
                     .expect("\nFailed to open 'gids.json' file.");
-            
-                // Removing guild id from exclusion list
-                let _ = vec_gids.id.swap_remove(x);
+
+                // Adding guild id to exclusion list
+                vec_gids.id.push(guild_id);
                 let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
                 file.write_all(&gid_to_json).unwrap();
 
-                println!("{}", "Removed guild id from exclusion list.".magenta());
-                ctx.say("Easter eggs for this server have been enabled.").await?;
+                println!("{}", "Added new guild id in exclusion list.".magenta());
+                // Keeps modal from continuously loading
+                mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
+                ctx.say("Easter eggs for this server have been disabled.").await?;
+                return Ok(());
+            }
+            else if user_option == "false" {
+                // Hand to remove guild id from exclusion list
+                for x in 0..vec_gids.id.len() {
+                    // Checking if guild is in the ee exclusion list
+                    if guild_id == vec_gids.id[x] {
 
+                        // Creating gids json file
+                        let mut file = OpenOptions::new()
+                            .create(true)
+                            .read(true)
+                            .write(true)
+                            .truncate(true)
+                            .open("data/gids.json")
+                            .expect("\nFailed to open 'gids.json' file.");
+                  
+                        // Removing guild id from exclusion list
+                        let _ = vec_gids.id.swap_remove(x);
+                        let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
+                        file.write_all(&gid_to_json).unwrap();
+
+                        println!("{}", "Removed guild id from exclusion list.".magenta());
+                        // Keeps modal from continuously loading
+                        mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
+                        ctx.say("Easter eggs for this server have been enabled.").await?;
+
+                        return Ok(());
+                    }
+                }
+      
+                println!("{}", "Guild id doesnt exist in exclusion list.".magenta());
+                // Keeps modal from continuously loading
+                mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
+                ctx.say("Easter eggs for this server are already enabled.").await?;
+                return Ok(());
+            }
+            else {
+                println!("{}", "Mega weird interaction with xx modal.".red());
+                // Keeps modal from continuously loading
+                mci.create_response(ctx, serenity::CreateInteractionResponse::Acknowledge).await?;
                 return Ok(());
             }
         }
-        
-        println!("{}", "Guild id doesnt exist in exclusion list.".magenta());
-        ctx.say("Easter eggs for this server are already enabled.").await?;
     }
-
     Ok(())
 }
