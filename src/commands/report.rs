@@ -8,22 +8,22 @@ use poise::execute_modal;
 use crate::{Context, Error};
 
 #[derive(Debug, poise::Modal)]
-#[name = "Feedback/Request Submission"]
+#[name = "Report / Feedback"]
 struct Submission{
     #[min_length = 3 ]
     #[max_length = 20 ]
-    #[placeholder = r#"Select "feature", "bug" or "other""#]
+    #[placeholder = r#"Select "feature", "bug" or "other"."#]
     subject: String,
     #[paragraph]
     #[min_length = 10 ]
     #[max_length = 200 ]
-    #[placeholder = "Explain in detail"]
+    #[placeholder = "Explain in detail."]
     text: String,
 }
 
-/// Send feedback or requests.
+/// Send a report or feedback.
 #[poise::command(prefix_command, slash_command, ephemeral)]
-pub async fn feedback(
+pub async fn report(
     ctx: Context<'_>,
 ) -> Result<(), Error> {
 
@@ -37,22 +37,22 @@ pub async fn feedback(
         let mut file = OpenOptions::new()
             .create(true)
             .append(true)
-            .open("request.txt")
-            .expect("\nFailed to open 'request.txt' file.");
+            .open("report.txt")
+            .expect("\nFailed to open 'report.txt' file.");
         
         let new_text = "".to_owned()
             + "\n[Subject: " + &data.subject
             + "]\n" + &data.text + "\n\n";
 
         write!(file, "{}", new_text)
-            .expect("\nFailed to write to 'request.txt'");
+            .expect("\nFailed to write to 'report.txt'");
         
-        println!("{}", "Done writting to 'request.txt'".yellow());
+        println!("{}", "Done writting to 'report.txt'".yellow());
         ctx.say("Submitted successfully!").await?;
         return Ok(());
     }
     else {
-        println!("{}", "Feedback modal timed out.".red());
+        println!("{}", "Report modal timed out.".red());
         ctx.say("Form timed out.").await?;
         return Ok(());
     }

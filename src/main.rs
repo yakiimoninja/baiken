@@ -174,7 +174,6 @@ async fn main() {
     // Every option can be omitted to use its default value
     let options = poise::FrameworkOptions {
         commands: vec![
-            feedback::feedback(),
             fmeter::fmeter(),
             frames::frames(),
             help::help(),
@@ -183,6 +182,7 @@ async fn main() {
             nicknames::nicknames(),
             moves::moves(),
             register::register(),
+            report::report(),
             stats::stats(),
             update::update(),    
             xx::xx(),
