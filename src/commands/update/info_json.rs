@@ -23,25 +23,33 @@ struct Title {
     #[serde(rename = "guardBalance")]
     guardbalance: Option<String>,
     prejump: Option<String>,
-    backdash: Option<String>,
-    forwarddash: Option<String>,
     umo: Option<String>,
+    forwarddash: Option<String>,
+    backdash: Option<String>,
+    #[serde(rename = "backdashDuration")]
+    backdash_duration: Option<String>,
+    #[serde(rename = "backdashInvuln")]
+    backdash_invincibility: Option<String>,
+    #[serde(rename = "backdashAirborne")]
+    backdash_airborne: Option<String>,
+    #[serde(rename = "backdashDistance")]
+    backdash_distance: Option<String>,
     #[serde(rename = "jump duration")]
     jump_duration: Option<String>,
-    #[serde(rename = "high jump duration")]
-    high_jump_duration: Option<String>,
     #[serde(rename = "jump height")]
     jump_height: Option<String>,
+    #[serde(rename = "high jump duration")]
+    high_jump_duration: Option<String>,
     #[serde(rename = "high jump height")]
     high_jump_height: Option<String>,
     #[serde(rename = "earliest iad")]
     earliest_iad: Option<String>,
     #[serde(rename = "ad duration")]
     ad_duration: Option<String>,
-    #[serde(rename = "abd duration")]
-    abd_duration: Option<String>,
     #[serde(rename = "ad distance")]
     ad_distance: Option<String>,
+    #[serde(rename = "abd duration")]
+    abd_duration: Option<String>,
     #[serde(rename = "abd distance")]
     abd_distance: Option<String>,
     #[serde(rename = "movement tension")]
@@ -76,7 +84,6 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     char_info_response_json = char_info_response_json.replace(r#"&#039;"#, "'");
 
     let mut char_info: Response = serde_json::from_str(&char_info_response_json).unwrap();
-
 
     if char_info.cargoquery[0].title.defense.is_none(){
         char_info.cargoquery[0].title.defense = Some("-".to_string());
@@ -130,14 +137,44 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
         _umo_processed_string = char_info.cargoquery[0].title.umo.as_ref().unwrap().to_string();
     }
 
+    if char_info.cargoquery[0].title.defense.is_none(){
+        char_info.cargoquery[0].title.defense = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.guts.is_none(){
+        char_info.cargoquery[0].title.guts = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.guardbalance.is_none(){
+        char_info.cargoquery[0].title.guardbalance = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.prejump.is_none(){
+        char_info.cargoquery[0].title.prejump = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.forwarddash.is_none(){
+        char_info.cargoquery[0].title.forwarddash= Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.backdash.is_none(){
+        char_info.cargoquery[0].title.backdash = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.backdash_duration.is_none(){
+        char_info.cargoquery[0].title.backdash_duration = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.backdash_invincibility.is_none(){
+        char_info.cargoquery[0].title.backdash_invincibility = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.backdash_airborne.is_none(){
+        char_info.cargoquery[0].title.backdash_airborne = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.backdash_distance.is_none(){
+        char_info.cargoquery[0].title.backdash_distance = Some("-".to_string());
+    }
     if char_info.cargoquery[0].title.jump_duration.is_none(){
         char_info.cargoquery[0].title.jump_duration = Some("-".to_string());
     }
-    if char_info.cargoquery[0].title.high_jump_duration.is_none(){
-        char_info.cargoquery[0].title.high_jump_duration = Some("-".to_string());
-    }
     if char_info.cargoquery[0].title.jump_height.is_none(){
         char_info.cargoquery[0].title.jump_height = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.high_jump_duration.is_none(){
+        char_info.cargoquery[0].title.high_jump_duration = Some("-".to_string());
     }
     if char_info.cargoquery[0].title.high_jump_height.is_none(){
         char_info.cargoquery[0].title.high_jump_height = Some("-".to_string());
@@ -148,11 +185,11 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     if char_info.cargoquery[0].title.ad_duration.is_none(){
         char_info.cargoquery[0].title.ad_duration = Some("-".to_string());
     }
-    if char_info.cargoquery[0].title.abd_duration.is_none(){
-        char_info.cargoquery[0].title.abd_duration = Some("-".to_string());
-    }
     if char_info.cargoquery[0].title.ad_distance.is_none(){
         char_info.cargoquery[0].title.ad_distance = Some("-".to_string());
+    }
+    if char_info.cargoquery[0].title.abd_duration.is_none(){
+        char_info.cargoquery[0].title.abd_duration = Some("-".to_string());
     }
     if char_info.cargoquery[0].title.abd_distance.is_none(){
         char_info.cargoquery[0].title.abd_distance = Some("-".to_string());
@@ -194,17 +231,21 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
         guts: char_info.cargoquery[0].title.guts.as_ref().unwrap().to_string(),
         guardbalance: char_info.cargoquery[0].title.guardbalance.as_ref().unwrap().to_string(),
         prejump: char_info.cargoquery[0].title.prejump.as_ref().unwrap().to_string(),
-        backdash: char_info.cargoquery[0].title.backdash.as_ref().unwrap().to_string(),
-        forwarddash: char_info.cargoquery[0].title.forwarddash.as_ref().unwrap().to_string(),
         umo: _umo_processed_string,
+        forwarddash: char_info.cargoquery[0].title.forwarddash.as_ref().unwrap().to_string(),
+        backdash: char_info.cargoquery[0].title.backdash.as_ref().unwrap().to_string(),
+        backdash_duration: char_info.cargoquery[0].title.backdash_duration.as_ref().unwrap().to_string(),
+        backdash_invincibility: char_info.cargoquery[0].title.backdash_invincibility.as_ref().unwrap().to_string(),
+        backdash_airborne: char_info.cargoquery[0].title.backdash_airborne.as_ref().unwrap().to_string(),
+        backdash_distance: char_info.cargoquery[0].title.backdash_distance.as_ref().unwrap().to_string(),
         jump_duration: char_info.cargoquery[0].title.jump_duration.as_ref().unwrap().to_string(),
-        high_jump_duration: char_info.cargoquery[0].title.high_jump_duration.as_ref().unwrap().to_string(),
         jump_height: char_info.cargoquery[0].title.jump_height.as_ref().unwrap().to_string(),
+        high_jump_duration: char_info.cargoquery[0].title.high_jump_duration.as_ref().unwrap().to_string(),
         high_jump_height: char_info.cargoquery[0].title.high_jump_height.as_ref().unwrap().to_string(),
         earliest_iad: char_info.cargoquery[0].title.earliest_iad.as_ref().unwrap().to_string(),
         ad_duration: char_info.cargoquery[0].title.ad_duration.as_ref().unwrap().to_string(),
-        abd_duration: char_info.cargoquery[0].title.abd_duration.as_ref().unwrap().to_string(),
         ad_distance: char_info.cargoquery[0].title.ad_distance.as_ref().unwrap().to_string(),
+        abd_duration: char_info.cargoquery[0].title.abd_duration.as_ref().unwrap().to_string(),
         abd_distance: char_info.cargoquery[0].title.abd_distance.as_ref().unwrap().to_string(),
         movement_tension: char_info.cargoquery[0].title.movement_tension.as_ref().unwrap().to_string(),
         jump_tension: char_info.cargoquery[0].title.jump_tension.as_ref().unwrap().to_string(),
