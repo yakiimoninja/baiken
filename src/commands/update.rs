@@ -147,7 +147,7 @@ pub async fn update (
         return Ok(());
     }
 
-    ctx.channel_id().say(ctx, "Update succesful!").await?;
+    ctx.say("Update succesful!").await?;
 
     Ok(())
 }
