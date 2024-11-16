@@ -152,7 +152,7 @@ pub async fn update (
     Ok(())
 }
 
-pub async fn auto_update_all(){
+pub async fn update_all_char_data(){
     // 24 hour character data auto update function
     framedata::get_char_data(CHARS, "all").await;
     images::get_char_data(CHARS, "all").await;
