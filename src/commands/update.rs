@@ -127,9 +127,7 @@ pub async fn update (
         // If character arg is all; update frames, images and info for all characters
         if character.trim().to_lowercase() == "all"{
             ctx.say("Update started!").await?;
-            framedata::get_char_data(CHARS, "all").await;
-            images::get_char_data(CHARS, "all").await;
-            info::get_char_info(CHARS, "all").await;
+            update_all_char_data().await;
         }
         else {
             
