@@ -29,7 +29,7 @@ async fn autocomplete_option<'a>(
 }
 
 /// Update data according to dustloop. Owners only.
-#[poise::command(prefix_command, slash_command, owners_only)]
+#[poise::command(prefix_command, slash_command, owners_only, ephemeral)]
 pub async fn update (
     ctx: Context<'_>,
     #[description = r#"Character name, nickname or "all"."#] character: String,
