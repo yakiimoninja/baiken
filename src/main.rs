@@ -21,10 +21,10 @@ pub struct Data {}
 pub struct CharInfo {
     defense: String,
     guts: String,
-    guardbalance: String,
+    guard_balance: String,
     prejump: String,
     umo: String,
-    forwarddash: String,
+    forward_dash: String,
     backdash: String,
     backdash_duration: String,
     backdash_invincibility: String,

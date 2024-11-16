@@ -21,10 +21,11 @@ struct Title {
     defense: Option<String>,
     guts: Option<String>,
     #[serde(rename = "guardBalance")]
-    guardbalance: Option<String>,
+    guard_balance: Option<String>,
     prejump: Option<String>,
     umo: Option<String>,
-    forwarddash: Option<String>,
+    #[serde(rename = "forwarddash")]
+    forward_dash: Option<String>,
     backdash: Option<String>,
     #[serde(rename = "backdashDuration")]
     backdash_duration: Option<String>,
@@ -91,19 +92,16 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     if char_info.cargoquery[0].title.guts.is_none(){
     char_info.cargoquery[0].title.guts = Some("-".to_string());
     }
-    if char_info.cargoquery[0].title.guardbalance.is_none(){
-        char_info.cargoquery[0].title.guardbalance = Some("-".to_string());
+    if char_info.cargoquery[0].title.guard_balance.is_none(){
+        char_info.cargoquery[0].title.guard_balance = Some("-".to_string());
     }
     if char_info.cargoquery[0].title.prejump.is_none(){
         char_info.cargoquery[0].title.prejump = Some("-".to_string());
     }
-    if char_info.cargoquery[0].title.backdash.is_none(){
-        char_info.cargoquery[0].title.backdash = Some("-".to_string());
+    if char_info.cargoquery[0].title.forward_dash.is_none(){
+        char_info.cargoquery[0].title.forward_dash = Some("-".to_string());
     }
-    if char_info.cargoquery[0].title.forwarddash.is_none(){
-        char_info.cargoquery[0].title.forwarddash = Some("-".to_string());
-    }
-
+ 
     let mut umo_processed_vec: Vec<String> = Vec::new();
     let mut _umo_processed_string: String = String::new();
     
@@ -135,22 +133,6 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     // Logic for case of [[GGST/Character/UMO|UMO]] not existing
     else {
         _umo_processed_string = char_info.cargoquery[0].title.umo.as_ref().unwrap().to_string();
-    }
-
-    if char_info.cargoquery[0].title.defense.is_none(){
-        char_info.cargoquery[0].title.defense = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.guts.is_none(){
-        char_info.cargoquery[0].title.guts = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.guardbalance.is_none(){
-        char_info.cargoquery[0].title.guardbalance = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.prejump.is_none(){
-        char_info.cargoquery[0].title.prejump = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.forwarddash.is_none(){
-        char_info.cargoquery[0].title.forwarddash= Some("-".to_string());
     }
     if char_info.cargoquery[0].title.backdash.is_none(){
         char_info.cargoquery[0].title.backdash = Some("-".to_string());
@@ -229,10 +211,10 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     let processed_char_info = serde_json::to_string_pretty(&CharInfo {
         defense: char_info.cargoquery[0].title.defense.as_ref().unwrap().to_string(),
         guts: char_info.cargoquery[0].title.guts.as_ref().unwrap().to_string(),
-        guardbalance: char_info.cargoquery[0].title.guardbalance.as_ref().unwrap().to_string(),
+        guard_balance: char_info.cargoquery[0].title.guard_balance.as_ref().unwrap().to_string(),
         prejump: char_info.cargoquery[0].title.prejump.as_ref().unwrap().to_string(),
         umo: _umo_processed_string,
-        forwarddash: char_info.cargoquery[0].title.forwarddash.as_ref().unwrap().to_string(),
+        forward_dash: char_info.cargoquery[0].title.forward_dash.as_ref().unwrap().to_string(),
         backdash: char_info.cargoquery[0].title.backdash.as_ref().unwrap().to_string(),
         backdash_duration: char_info.cargoquery[0].title.backdash_duration.as_ref().unwrap().to_string(),
         backdash_invincibility: char_info.cargoquery[0].title.backdash_invincibility.as_ref().unwrap().to_string(),

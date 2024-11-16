@@ -1,6 +1,7 @@
 use std::{fs, string::String};
 use colored::Colorize;
 use crate::{check, find, CharInfo, Context, Error};
+use poise::{reply, serenity_prelude::{CreateEmbed, CreateEmbedAuthor}};
 
 /// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
@@ -43,15 +44,15 @@ pub async fn info(
     // Deserializing from character json
     let char_info = serde_json::from_str::<CharInfo>(&char_file_data).unwrap();  
 
-    let msg = "## **[__".to_owned()
+    let msg = "# **[__".to_owned()
         + &character_arg_altered.replace('_', " ")
         + " Info__](<https://dustloop.com/wiki/index.php?title=GGST/"
         + &character_arg_altered + "/Data#Infobox_Data>)**" +
-        "\n- **Defense →** " + &char_info.defense +
+        "\n- **Defense** → " + &char_info.defense +
         "\n- **Guts →** " + &char_info.guts +
-        "\n- **Risc Gain Modifier →** " + &char_info.guardbalance +
+        "\n- **Risc Gain Modifier →** " + &char_info.guard_balance +
         "\n- **Prejump →** " + &char_info.prejump +
-        "\n- **Dash →** " + &char_info.forwarddash +
+        "\n- **Dash →** " + &char_info.forward_dash +
         "\n- **Backdash →** " + &char_info.backdash +
         "\n- **Unique Movement →** " + &char_info.umo +
         "\n- **Jump Duration →** " + &char_info.jump_duration +
@@ -74,6 +75,40 @@ pub async fn info(
         "\n- **Jump Gravity →** " + &char_info.jump_gravity +
         "\n- **Super Jump Gravity →** " + &char_info.high_jump_gravity;
 
-    ctx.say(&msg).await?;
+    // Sending the data as an embed
+    let embed = CreateEmbed::new()
+        .description(&msg)
+        //.author(CreateEmbedAuthor::new("dustloop"))
+        .color((140,75,64))
+        //.title(&title_embed)
+        //.image(&image_embed)
+        //.field("", &msg, false)
+        .field("**Guts**:", &char_info.defense, false)
+        //.fields(vec![("Damage", &mframes.damage.to_string(), true)])
+        ;
+        //.field("This is the third field", "This is not an inline field", false)
+        //.footer(footer)
+        // Add a timestamp for the current time
+        // This also accepts a rfc3339 Timestamp
+        //.timestamp(Timestamp::now());
+    let embed2 = CreateEmbed::new()
+        //.description("This is a description")
+        //.author(CreateEmbedAuthor::new("dustloop"))
+        .color((140,75,64))
+        //.title(&title_embed)
+        //.image(&image_embed)
+        .field("", &msg, false)
+        .field("**Guts**:", &char_info.defense, false)
+        //.fields(vec![("Damage", &mframes.damage.to_string(), true)])
+        ;
+    let vec_embeds = vec![embed, embed2];
+
+    let mut reply = poise::CreateReply::default();
+    reply.embeds.extend(vec_embeds);
+        //.content(&msg)
+
+
+    ctx.send(reply).await?;
+        //.add_file(CreateAttachment::path("./ferris_eyes.png").await.unwrap());
     Ok(())
 }
