@@ -210,8 +210,9 @@ async fn main() {
                         let forever = task::spawn(async {
                             let mut interval = time::interval(Duration::from_secs(86400));
                             loop {
+                                // Runs update_all_char_data every 24h
                                 interval.tick().await;
-                                update::auto_update_all().await;
+                                update::update_all_char_data().await;
                             }
                         });
                         
