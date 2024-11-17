@@ -40,10 +40,15 @@ pub async fn nicknames(
 
     for nicknames in vec_nicknames {
         // Character portion
-        nicks_as_msg = nicks_as_msg.to_owned() + "\n- **" + &nicknames.character.to_string() + "**";
+        nicks_as_msg = nicks_as_msg.to_owned() + "\n**" + &nicknames.character.to_string() + "**";
         
         // Nickname portion
-        nicks_as_msg += "\n\t\t→ `";
+        // THE SPACE BEFORE THE ARROW
+        // IS A SPECIAL CHARACTER
+        // U+2000 	&#8192 	En Quad
+        // DISCORD WONT RENDER EMPTY PRECEEDING SPACE
+        // SO THE EMBED ISNT FORMATTED PROPERLY
+        nicks_as_msg += "\n    → `";
         
         for x in 0..nicknames.nicknames.len() {
             if x != nicknames.nicknames.len() - 1 {
@@ -61,7 +66,6 @@ pub async fn nicknames(
         }
         nicks_as_msg = nicks_as_msg.to_owned() + "`";
     }
-    nicks_as_msg += "";
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
