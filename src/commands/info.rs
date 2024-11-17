@@ -1,7 +1,13 @@
 use std::{fs, string::String};
 use colored::Colorize;
-use crate::{check, find, CharInfo, Context, Error};
-use poise::{reply, serenity_prelude::{CreateEmbed, CreateEmbedAuthor}};
+use poise::serenity_prelude::CreateEmbed;
+use crate::{
+    CharInfo,
+    Context,
+    Error,
+    check,
+    find,
+};
 
 /// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
@@ -44,71 +50,55 @@ pub async fn info(
     // Deserializing from character json
     let char_info = serde_json::from_str::<CharInfo>(&char_file_data).unwrap();  
 
-    let msg = "# **[__".to_owned()
-        + &character_arg_altered.replace('_', " ")
-        + " Info__](<https://dustloop.com/wiki/index.php?title=GGST/"
-        + &character_arg_altered + "/Data#Infobox_Data>)**" +
-        "\n- **Defense** → " + &char_info.defense +
-        "\n- **Guts →** " + &char_info.guts +
-        "\n- **Risc Gain Modifier →** " + &char_info.guard_balance +
-        "\n- **Prejump →** " + &char_info.prejump +
-        "\n- **Dash →** " + &char_info.forward_dash +
-        "\n- **Backdash →** " + &char_info.backdash +
-        "\n- **Unique Movement →** " + &char_info.umo +
-        "\n- **Jump Duration →** " + &char_info.jump_duration +
-        "\n- **Super Jump Duration →** " + &char_info.high_jump_duration +
-        "\n- **Jump Height →** " + &char_info.jump_height +
-        "\n- **Super Jump Height →** " + &char_info.high_jump_height +
-        "\n- **Earliest IAD →** " + &char_info.earliest_iad +
-        "\n- **AD Duration →** " + &char_info.ad_duration +
-        "\n- **ABD Duration →** " + &char_info.abd_duration +
-        "\n- **AD Distance →** " + &char_info.ad_distance +
-        "\n- **ABD Distance →** " + &char_info.abd_distance +
-        "\n- **Movement Tension →** " + &char_info.movement_tension +
-        "\n- **Jump Tension →** " + &char_info.jump_tension +
-        "\n- **AD Tension →** " + &char_info.airdash_tension +
-        "\n- **Walk Speed →** " + &char_info.walk_speed +
-        "\n- **Back Walk Speed →** " + &char_info.back_walk_speed +
-        "\n- **Dash Initial Speed →** " + &char_info.dash_initial_speed +
-        "\n- **Dash Acceleration →** " + &char_info.dash_acceleration +
-        "\n- **Dash Friction →** " + &char_info.dash_friction +
-        "\n- **Jump Gravity →** " + &char_info.jump_gravity +
-        "\n- **Super Jump Gravity →** " + &char_info.high_jump_gravity;
+    let title = "__".to_owned() + &character_arg_altered.replace('_', " ") + " Info__";
+    let url = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned()
+        + &character_arg_altered + "/Data#Infobox_Data";
+
+    let msg =
+        "- **Defense →**  ".to_owned() + &char_info.defense +
+        "\n- **Guts →**  " + &char_info.guts +
+        "\n- **Risc Gain Modifier →**  " + &char_info.guard_balance +
+        "\n- **Prejump →**  " + &char_info.prejump +
+        "\n- **Unique Movement →**  " + &char_info.umo +
+        "\n- **Forward Dash →**  " + &char_info.forward_dash +
+        "\n- **Backdash →**  " + &char_info.backdash +
+        "\n- **Backdash Duration →**  " + &char_info.backdash_duration +
+        "\n- **Backdash Invincibility →**  " + &char_info.backdash_invincibility +
+        "\n- **Backdash Airborne →**  " + &char_info.backdash_airborne +
+        "\n- **Backdash Distance →**  " + &char_info.backdash_distance +
+        "\n- **Jump Duration →**  " + &char_info.jump_duration +
+        "\n- **Jump Height →**  " + &char_info.jump_height +
+        "\n- **Super Jump Duration →**  " + &char_info.high_jump_duration +
+        "\n- **Super Jump Height →**  " + &char_info.high_jump_height +
+        "\n- **Earliest Instant Airdash →**  " + &char_info.earliest_iad +
+        "\n- **Air Dash duration →**  " + &char_info.ad_duration +
+        "\n- **Air Dash Distance →**  " + &char_info.ad_distance +
+        "\n- **Air Backdash Duration →**  " + &char_info.abd_duration +
+        "\n- **Air Backdash Distance →**  " + &char_info.abd_distance +
+        "\n- **Movement Tension →**  " + &char_info.movement_tension +
+        "\n- **Jump Tension →**  " + &char_info.jump_tension +
+        "\n- **Airdash Tension →**  " + &char_info.airdash_tension +
+        "\n- **Walk Speed →**  " + &char_info.walk_speed +
+        "\n- **Back Walk Speed →**  " + &char_info.back_walk_speed +
+        "\n- **Dash Initial Speed →**  " + &char_info.dash_initial_speed +
+        "\n- **Dash Acceleration →**  " + &char_info.dash_acceleration +
+        "\n- **Dash Friction →**  " + &char_info.dash_friction +
+        "\n- **Jump Gravity →**  " + &char_info.jump_gravity +
+        "\n- **Super Jump Gravity →**  " + &char_info.high_jump_gravity;
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
-        .description(&msg)
-        //.author(CreateEmbedAuthor::new("dustloop"))
-        .color((140,75,64))
-        //.title(&title_embed)
-        //.image(&image_embed)
-        //.field("", &msg, false)
-        .field("**Guts**:", &char_info.defense, false)
-        //.fields(vec![("Damage", &mframes.damage.to_string(), true)])
-        ;
-        //.field("This is the third field", "This is not an inline field", false)
-        //.footer(footer)
-        // Add a timestamp for the current time
-        // This also accepts a rfc3339 Timestamp
-        //.timestamp(Timestamp::now());
-    let embed2 = CreateEmbed::new()
-        //.description("This is a description")
-        //.author(CreateEmbedAuthor::new("dustloop"))
-        .color((140,75,64))
-        //.title(&title_embed)
-        //.image(&image_embed)
-        .field("", &msg, false)
-        .field("**Guts**:", &char_info.defense, false)
-        //.fields(vec![("Damage", &mframes.damage.to_string(), true)])
-        ;
-    let vec_embeds = vec![embed, embed2];
+        .title(title)
+        .url(url)
+        .description(msg)
+        .color((140,75,64));
 
-    let mut reply = poise::CreateReply::default();
-    reply.embeds.extend(vec_embeds);
+    //let vec_embeds = vec![embed];
+    //let mut reply = poise::CreateReply::default();
+    //reply.embeds.extend(vec_embeds);
         //.content(&msg)
 
+    ctx.send(poise::CreateReply::default().embed(embed)).await?;
 
-    ctx.send(reply).await?;
-        //.add_file(CreateAttachment::path("./ferris_eyes.png").await.unwrap());
     Ok(())
 }
