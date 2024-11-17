@@ -8,12 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Fix `/fmeter` error when invoking **`Queen Dizzy`** `Wings of Light`.
 - Make every bot reply an embed unless ephemeral(?).
+- Make `/help` reply embed.
 - Make `/frames` paginated and add all data fields along with notes(?) maybe framemeter.
 - Make `/hitboxes`paginated with a footer that shows current image number out of total image number.
+- Make a folder for command pictures inside data/images.
 
 ### Changed
-- Change `/stats` command to an embed.
+- Change `/nicknames` command response to an embed.
+- Change `/info` command response to an embed.
+- Change `/stats` command response to an embed.
 - Change `/update` command responses to ephemeral.
+- Improve codebase when getting character data.
 - Change `/xx` command to an ephemeral inline modal select menu.
 - Change `/feedback` command to a modal pop-up window.
 - Rename `/feedback` command to `/report`.
