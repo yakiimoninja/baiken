@@ -166,10 +166,10 @@ pub async fn frames(
             ("Startup", &mframes.startup.to_string(), true),
             ("Active", &mframes.active.to_string(), true),
             ("Recovery", &mframes.recovery.to_string(), true),
-            ("On Hit", &mframes.hit.to_string(), true),
-            ("On Block", &mframes.block.to_string(), true),
+            ("On Hit", &mframes.on_hit.to_string(), true),
+            ("On Block", &mframes.on_hit.to_string(), true),
             ("Level", &mframes.level.to_string(), true),
-            ("Risc Gain", &mframes.riscgain.to_string(), true),
+            ("Risc Gain", &mframes.risc_gain.to_string(), true),
             ("Scaling", &mframes.scaling.to_string(), true),
             ("Counter", &mframes.counter.to_string(), true)
         ]);
