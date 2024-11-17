@@ -6,14 +6,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+- Fix `/fmeter` error when invoking **`Queen Dizzy`** `Wings of Light`.
+- Make every bot reply an embed unless ephemeral(?).
+- Make `/frames` paginated and add all data fields along with notes(?) maybe framemeter.
+- Make `/hitboxes`paginated with a footer that shows current image number out of total image number.
 
-## [5.2.1] - 2024-11-10
+### Changed
+- Change `/stats` command to an embed.
+- Change `/update` command responses to ephemeral.
+- Change `/xx` command to an ephemeral inline modal select menu.
+- Change `/feedback` command to a modal pop-up window.
+- Rename `/feedback` command to `/report`.
+- Revert recalculation of previous version releases and start from 1.0.0.
+
+### Added
+- Add more data fields for `/frames` command.
+- Add more data fields for `/info` command.
 
 ### Fixed
-- Rewrite CHANGELOG to better follow semantic versioning.
+- Fix [0.30.2] tag.
+- Update framedata.
+
+## [0.30.2] - 2024-11-12
+
+### Fixed
+- Rewrite CHANGELOG to better follow keepachangelog and semantic versioning.
 - Bump `Cargo.toml` to recalcuted version.
 
-## [5.2.0] - 2024-11-10
+## [0.30.1] - 2024-11-10
 
 ### Removed
 - **`Potemkin`**:
@@ -35,7 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated framedata
 - Updated `Potemkin` inputs.
 
-## [5.1.0] - 2024-10-31
+## [0.30.0] - 2024-10-31
 
 ### Changed
 - Rework serialization for `frames`, `images` and `info` data when updating.
@@ -56,7 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **`Chipp Zanuff`**:
     - `214H` new aliases `Tiighrope`, `Rope`, `TR`.
 
-## [5.0.0] - 2024-10-30
+## [0.29.0] - 2024-10-30
 
 ### Removed
 - Remove aliases for prefix commands.
@@ -75,7 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix `/update` failing to update **`Asuka`** data. (Sorry Asuka bros)
 - Update framedata.
 
-## [4.18.0] - 2024-07-30
+## [0.28.2] - 2024-07-30
 
 ### Changed
 - Clippy code clean up.
@@ -87,7 +107,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.17.0] - 2024-07-24
+## [0.28.1] - 2024-07-24
 
 ### Added
 - **`Bridget`**:
@@ -95,7 +115,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `214S/H` new aliases `236S`, `236H`.
     - `63214P` new alias `624P`.
 
-## [4.16.0] - 2024-07-24
+## [0.28.0] - 2024-07-24
 
 ### Changed
 - Update github README to display current server count.
@@ -109,7 +129,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix the parsing of `unique moment options` to not contain `[[GGST/CHAR/UMO|UMO]]` template in info.
 - Update framedata.
 
-## [4.15.0] - 2024-07-05
+## [0.27.1] - 2024-07-05
 
 ### Added
 - **`Slayer`**:
@@ -133,7 +153,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.14.0] - 2024-06-15
+## [0.27.0] - 2024-06-15
 
 ### Added
 - **`Slayer`**:
@@ -154,7 +174,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix message formatting when calling for Negative Edge moves.
 - Update framedata.
 
-## [4.13.0] - 2024-05-29
+## [0.26.0] - 2024-05-29
 
 ### Added
 - New character **`Slayer`**.
@@ -162,7 +182,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.12.0] - 2024-04-17
+## [0.25.1] - 2024-04-17
 
 ### Added
 - **`A.B.A`**:
@@ -174,7 +194,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Updated framedata.
 
-## [4.11.0] - 2024-04-02
+## [0.25.0] - 2024-04-02
 
 ### Changed
 - Refactor `/frames`, `/fmeter`, `hitboxes` to show the name and move of the character as a title.
@@ -187,7 +207,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.10.0] - 2024-03-29
+## [0.24.0] - 2024-03-29
 
 ### Added
 - New character **`A.B.A`**.
@@ -230,7 +250,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.9.0] - 2024-03-22
+## [0.23.0] - 2024-03-22
 
 ### Added
 - Add the ability to update data automatically at set intervals.
@@ -238,7 +258,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.8.0] - 2024-02-10
+## [0.22.0] - 2024-02-10
 
 ### Changed
 - Rework the text formatting of `/moves`, `/nicknames` and `/help notes` once more.
@@ -246,7 +266,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Update framedata.
 
-## [4.7.0] - 2024-02-2
+## [0.21.0] - 2024-02-2
 
 ### Changed
 - Rework text formatting of `/fmeter`, `/moves`, `/nicknames` commands.
@@ -259,7 +279,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [4.6.0] - 2024-01-29
+## [0.20.1] - 2024-01-29
 
 ### Changed
 - Update command descriptions.
@@ -269,7 +289,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix mislabed `j.214k` aliases for all `Air Mist Finers`.
 - Update framedata.
 
-## [4.5.0] - 2024-01-24
+## [0.20.0] - 2024-01-24
 
 ### Changed
 - Codebase and dependency update (poise 0.6.1).
@@ -278,7 +298,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix the `/update` command not fetching the hitbox images for `Wild Assault` moves.
 - Update framedata.
 
-## [4.4.0] - 2024-01-22
+## [0.19.2] - 2024-01-22
 
 ### Added
 - **`Bridget`**:
@@ -290,7 +310,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix **`Bridget`** `Move 236KK was not found!` when using `Shoot` as an alias.
 - Update framedata.
 
-## [4.3.0] - 2024-01-01
+## [0.19.1] - 2024-01-01
 
 ### Added
 - **`Axl Low`**:
@@ -314,7 +334,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 - Update framedata.
 
-## [4.2.0] - 2023-12-19
+## [0.19.0] - 2023-12-19
 
 ### Removed
 - Remove autocomplete in most commands because it caused images to not load properly.
@@ -330,7 +350,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [4.1.0] - 2023-12-08
+## [0.18.0] - 2023-12-08
 
 ### Added
 - New character **`Elphelt Valentine`**.
@@ -355,7 +375,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [4.0.0] - 2023-11-25
+## [0.17.0] - 2023-11-25
 
 ### Removed
 - Remove `/aliases` command.
@@ -369,7 +389,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [3.1.0] - 2023-11-24
+## [0.16.0] - 2023-11-24
 
 ### Deprecated
 - Deprecate `/aliases` and integrate its functionality to `/moves` command. 
@@ -381,7 +401,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix `megafist` not showing anything when used as an alias.
 - Fix prompts that include the old `/request` command instead of the new `/feedback` command.
 
-## [3.0.0] - 2023-11-21
+## [0.15.0] - 2023-11-21
 
 ### Removed
 - Remove `/request` and replace with `/feedback`.
@@ -398,7 +418,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.19.0] - 2023-09-15
+## [0.14.0] - 2023-09-15
 
 ### Added
 - New character **`Johnny`**.
@@ -450,7 +470,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.18.0] - 2023-05-25
+## [0.13.0] - 2023-05-25
 
 ### Added
 - `Asuka R`:
@@ -460,7 +480,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix and issue where using `/aliases` command for **`Jacko`** wouldn't display anything.
 - Update framedata.
 
-## [2.17.1] - 2023-05-21
+## [0.12.0] - 2023-05-21
 
 ### Fixed
 - Fix alias searching loops to break when alias is found (i had forgor 💀).
@@ -470,7 +490,7 @@ Clicking the provided link redirects to the move in the character page, instead 
     - From `13C (214P) 236P` to `13C (236P) 236P`.
     - From `13C (214S) 236P` to `13C (236S) 236P`.
 
-## [2.17.0] - 2023-05-18
+## [0.11.0] - 2023-05-18
 
 ### Added
 - **`Bedman`**:
@@ -510,7 +530,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fixed and issue where `/fmeter` command wasn't displaying the right amount of startup frames inside `[ brackets ]`.
 - Updated framedata.
 
-## [2.16.0] - 2023-05-07
+## [0.10.6] - 2023-05-07
 
 ### Added
 - **`Jack-O`**:
@@ -527,12 +547,12 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix some typos.
 - Update framedata.
 
-## [2.15.1] - 2023-04-11
+## [0.10.5] - 2023-04-11
 
 ### Fixed
 - Fix **`Bedman`** not displaying stuff properly.
 
-## [2.15.0] - 2023-04-06
+## [0.10.4] - 2023-04-06
 
 ### Added
 - New character **`Bedman`**.
@@ -562,7 +582,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 - Update framedata.
 
-## [2.14.0] - 2023-04-01
+## [0.10.3] - 2023-04-01
 
 ### Added
 - **`Chipp Zanuff`**:
@@ -574,7 +594,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata. 
 
-## [2.13.0] - 2023-02-25
+## [0.10.2] - 2023-02-25
 
 ### Changed
 - Refactor code to exhaustively search through the character nicknames first.
@@ -583,13 +603,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix `the application did not respond` error when using the `/moves` command for **`Nagoriyuki`**.
 - Update framedata. 
 
-## [2.12.1] - 2023-01-25
+## [0.10.1] - 2023-01-25
 
 ### Fixed
 - Fix missing moves for **`Nagoriyuki`** and **`Ky`**.
 - Update framedata.
 
-## [2.12.0] - 2023-01-20
+## [0.10.0] - 2023-01-20
 
 ### Changed
 - Update the github README. Now has pictures to help explain each command.
@@ -601,7 +621,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.11.0] - 2022-12-25
+## [0.9.0] - 2022-12-25
 
 ### Changed
 - Improve data parsing from dustloop which cut the `/update` command time to less than half.
@@ -630,7 +650,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.10.0] - 2022-12-20
+## [0.8.5] - 2022-12-20
 
 ### Added
 - **`All Characters`**:
@@ -643,13 +663,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.9.1] - 2022-12-09
+## [0.8.4] - 2022-12-09
 
 ### Fixed
 - Fix `/aliases` command spitting `The application did not respond` error.
 - Fix `/moves` command not showing anything for **`Goldlewis`**.
 
-## [2.9.0] - 2022-12-09
+## [0.8.3] - 2022-12-09
 
 ### Added
 - **`Nagoriyuki`**:
@@ -658,7 +678,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.8.0] - 2022-12-02
+## [0.8.2] - 2022-12-02
 
 ### Changed
 - Update command usage instructions.
@@ -677,7 +697,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 ### Fixed
 - Update framedata.
 
-## [2.7.0] - 2022-11-25
+## [0.8.1] - 2022-11-25
 
 ### Added
 - New character **`Sin Kiske`**.
@@ -707,7 +727,7 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `236236P` new aliases `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
     - `236236PP` new aliases `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
 
-## [2.6.0] - 2022-11-11
+## [0.8.0] - 2022-11-11
 
 ### Removed
 - Remove all 2 letter nicknames for characters without 2 part names, as redundant. Bot can find characters as is.
@@ -718,13 +738,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 - **`Zato-1`**:
     - New nickname `Zato One`.
 
-## [2.5.1] - 2022-11-05
+## [0.7.6] - 2022-11-05
  
 ### Fixed 
 - Fix **`Faust 5K`** broken hitbox image link.
 - Fix **`Nagoriyuki`** aliases command not displaying anything.
 
-## [2.5.0] - 2022-10-21
+## [0.7.5] - 2022-10-21
 
 ### Changed
 - Code clean up. Remove the use of the `init.json` file.
@@ -753,7 +773,7 @@ Clicking the provided link redirects to the move in the character page, instead 
     - `j.623S` new aliases `Air Beta`, `AB`.
     - `236H` new alias `Gamma`.
 
-## [2.4.0] - 2022-10-14
+## [0.7.4] - 2022-10-14
 
 ### Removed
 - **`Leo Whitefang`**:
@@ -823,7 +843,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Fix `invincibility` and `counter` showing `RISC` and `Proration` values.
 - Fix **`Sol`** `Air Volcanic Viper` alias displaying framedata for `H Volcanic Viper` and vice versa.
 
-## [2.3.0] - 2022-10-04
+## [0.7.3] - 2022-10-04
 
 ### Added
 >add a nickname for may called "totsugeki" so we can search up totsugeki totsugeki
@@ -841,7 +861,7 @@ Say less my guy.
 ### Fixed
 - Fix bot message formatting.
 
-## [2.2.0] - 2022-09-26
+## [0.7.2] - 2022-09-26
 
 ### Changed
 - Clean up code.
@@ -851,7 +871,7 @@ Say less my guy.
 - **`Millia Rage`**:
     - `j.236K` new alias `Turbofall`.
 
-## [2.1.0] - 2022-09-21
+## [0.7.1] - 2022-09-21
 
 ### Changed
 - Change move not found case for `/frames` command.
@@ -863,7 +883,7 @@ Say less my guy.
 - **`Chipp Zanuff`**:
     - `63214S` new alias `Leaf Grab`.
 
-## [2.0.0] - 2022-09-17
+## [0.7.0] - 2022-09-17
 
 ### Removed
 - Replace prefix commands with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes to Discord's API.
@@ -899,7 +919,7 @@ Say less my guy.
 - Fix **`Faust`** `c.S` displaying super instead of `c.S` due to overlap of aliases.
 
 
-## [1.12.0]
+## [0.6.4]
 
 ### Added
 - Add Bridgets framedata/hitboxes.
@@ -907,18 +927,18 @@ Say less my guy.
 ### Fixed
 - Update framedata.
 
-## [1.11.3]
+## [0.6.3]
 
 ### Fixed
 - Fix **`Chipp`** `Banki Messai` not displaying cause of changed input.
 - Update framedata.
 
-## [1.11.2]
+## [0.6.2]
 
 ### Fixed
 - Update framedata.
 
-## [1.11.1]
+## [0.6.1]
 
 ### Fixed
 - Fix **`Testament`** `Greave Reapers` not displaying anything. 
@@ -931,7 +951,7 @@ Say less my guy.
         - `Wall Run H`.
         - `Wall Run 6H`.
 
-## [1.11.0]
+## [0.6.0]
 
 ### Changed
 - Improve code regarding `init.json`.
@@ -980,7 +1000,7 @@ Say less my guy.
         - `2S Level 3`.
         - `2S Level BR`.
 
-## [1.10.0]
+## [0.5.0]
 
 ### Removed
 - Remove patch notes folder and moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
@@ -1029,7 +1049,7 @@ Say less my guy.
 - Fix `b.f` broken move image links for:
     - **`Nagoriyuki`**: `623H`, `623HH`.
 
-## [1.9.0]
+## [0.4.5]
 
 ### Changed
 - Change the embed line's color to match Baiken's profile picture. 
@@ -1042,7 +1062,7 @@ Say less my guy.
 ### Fixed
 - Fixed broken image links after the `images` folder move.
 
-## [1.8.0]
+## [0.4.4]
 
 ### Added
 - `Leo Whitefang`:
@@ -1064,7 +1084,7 @@ Say less my guy.
     - **`Millia`**: `6P`.
     - **`Potemkin`**: `cS`.
 
-## [1.7.0]
+## [0.4.3]
 
 ### Changed
 - Change `b.f` message when move input is incorrect.
@@ -1073,7 +1093,7 @@ Say less my guy.
 - Fix `b.a` not printing anything for Ky.
 - Fix `b.a` command not coloring properly.
 
-## [1.6.0]
+## [0.4.2]
 
 ### Changed
 - Rename `patch_notes` folder to `patch-notes`.
@@ -1085,7 +1105,7 @@ Say less my guy.
 - **`I-no`**:
     - `236H`: new alias `H Stroke`.
 
-## [1.5.0]
+## [0.4.1]
 
 ### Removed
 - Unnecessary data from characters' json files.
@@ -1109,7 +1129,7 @@ Say less my guy.
 ### Fixed
 - Fix issue that did not allow to use `6D` or `4D`.
 
-## [1.4.0]
+## [0.4.0]
 
 ### Added 
 
@@ -1118,65 +1138,65 @@ Say less my guy.
 - New patch notes page.
 
 
-[5.2.1]: https://github.com/yakiimoninja/baiken/releases/tag/5.2.1
-[5.2.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
-[5.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
-[5.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.29.0
-[4.18.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.2
-[4.17.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.1
-[4.16.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.0
-[4.15.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.27.1
-[4.14.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.27.0
-[4.13.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.26.0
-[4.12.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.25.1
-[4.11.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.25.0
-[4.10.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.24.0
-[4.9.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.23.0
-[4.8.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.22.0
-[4.7.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.21.0
-[4.6.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.20.1
-[4.5.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.20.0
-[4.4.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.2
-[4.3.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.1
-[4.2.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.0
-[4.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.18.0
-[4.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.17.0
-[3.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.16.0
-[3.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.15.0
-[2.19.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.14.0
-[2.18.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.13.0
-[2.17.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.12.0
-[2.17.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.11.0
-[2.16.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.6
-[2.15.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.5
-[2.15.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.4
-[2.14.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.3
-[2.13.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.2
-[2.12.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.1
-[2.12.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.0
-[2.11.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.9.0
-[2.10.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.5
-[2.9.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.4
-[2.9.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.3
-[2.8.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.2
-[2.7.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.1
-[2.6.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.0
-[2.5.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.6
-[2.5.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.5
-[2.4.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.4
-[2.3.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.3
-[2.2.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.2
-[2.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.1
-[2.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.0
-[1.12.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.4
-[1.11.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.3
-[1.11.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.2
-[1.11.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.1
-[1.11.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.0
-[1.10.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.5.0
-[1.9.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.5
-[1.8.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.4
-[1.7.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.3
-[1.6.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.2
-[1.5.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.1
-[1.4.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.0
+[0.30.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.2
+[0.30.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
+[0.30.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
+[0.29.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.29.0
+[0.28.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.2
+[0.28.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.1
+[0.28.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.28.0
+[0.27.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.27.1
+[0.27.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.27.0
+[0.26.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.26.0
+[0.25.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.25.1
+[0.25.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.25.0
+[0.24.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.24.0
+[0.23.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.23.0
+[0.22.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.22.0
+[0.21.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.21.0
+[0.20.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.20.1
+[0.20.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.20.0
+[0.19.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.2
+[0.19.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.1
+[0.19.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.19.0
+[0.18.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.18.0
+[0.17.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.17.0
+[0.16.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.16.0
+[0.15.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.15.0
+[0.14.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.14.0
+[0.13.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.13.0
+[0.12.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.12.0
+[0.11.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.11.0
+[0.10.6]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.6
+[0.10.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.5
+[0.10.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.4
+[0.10.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.3
+[0.10.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.2
+[0.10.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.1
+[0.10.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.10.0
+[0.9.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.9.0
+[0.8.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.5
+[0.8.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.4
+[0.8.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.3
+[0.8.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.2
+[0.8.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.1
+[0.8.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.8.0
+[0.7.6]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.6
+[0.7.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.5
+[0.7.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.4
+[0.7.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.3
+[0.7.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.2
+[0.7.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.1
+[0.7.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.7.0
+[0.6.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.4
+[0.6.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.3
+[0.6.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.2
+[0.6.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.1
+[0.6.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.6.0
+[0.5.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.5.0
+[0.4.5]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.5
+[0.4.4]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.4
+[0.4.3]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.3
+[0.4.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.2
+[0.4.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.1
+[0.4.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.4.0
