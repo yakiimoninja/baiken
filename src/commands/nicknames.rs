@@ -1,4 +1,5 @@
 use std::{fs, string::String};
+use poise::serenity_prelude::CreateEmbed;
 use crate::{
     Nicknames,
     Context,
@@ -35,7 +36,7 @@ pub async fn nicknames(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
     
     // Formatting string for in discord print
-    let mut nicks_as_msg = "## __**Character Nicknames**__\n".to_string();
+    let mut nicks_as_msg = "".to_string();
 
     for nicknames in vec_nicknames {
         // Character portion
@@ -60,9 +61,15 @@ pub async fn nicknames(
         }
         nicks_as_msg = nicks_as_msg.to_owned() + "`";
     }
-    
     nicks_as_msg += "";
-    ctx.say(&nicks_as_msg).await?;
-    ctx.channel_id().say(ctx, "Try the `/help notes` command for usage notes and specifics.").await?;
+
+    // Sending the data as an embed
+    let embed = CreateEmbed::new()
+        .title("## __**Character Nicknames**__")
+        .description(nicks_as_msg)
+        .color((140,75,64));
+
+    ctx.send(poise::CreateReply::default().embed(embed)).await?;
+
     Ok(())
 }
