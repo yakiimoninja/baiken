@@ -45,10 +45,10 @@ pub async fn nicknames(
         // Nickname portion
         // THE SPACE BEFORE THE ARROW
         // IS A SPECIAL CHARACTER
-        // U+2000 	&#8192 	En Quad
         // DISCORD WONT RENDER EMPTY PRECEEDING SPACE
         // SO THE EMBED ISNT FORMATTED PROPERLY
-        nicks_as_msg += "\n    → `";
+        // 3x U+2000 &#8192 En Quad
+        nicks_as_msg += "\n   → `";
         
         for x in 0..nicknames.nicknames.len() {
             if x != nicknames.nicknames.len() - 1 {
