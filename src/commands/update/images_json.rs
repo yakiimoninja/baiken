@@ -10,19 +10,19 @@ use std::{
 //use std::fs::OpenOptions;
 
 #[derive(Deserialize, Debug)]
-struct Imageresponse {
+struct ImageResponse {
     #[serde(rename = "cargoquery")]
-    cargoquery: Vec<Imagedata>
+    cargoquery: Vec<ImageData>
 }
 
 #[derive(Deserialize, Debug)]
-struct Imagedata {
+struct ImageData {
     #[serde(rename = "title")]
-    title: Imagetitle
+    title: ImageTitle
 }
 
 #[derive(Deserialize, Debug)]
-struct Imagetitle {
+struct ImageTitle {
     input: Option<String>,
     name: Option<String>,
     images: Option<String>,
@@ -36,10 +36,11 @@ pub async fn images_to_json(mut char_images_response_json: String, mut file: &Fi
     // Replace apostrophe
     char_images_response_json = char_images_response_json.replace(r#"&#039;"#, "'");
 
-    let mut imagedata: Imageresponse = serde_json::from_str(&char_images_response_json).unwrap();
+    let mut image_data_response: ImageResponse = serde_json::from_str(&char_images_response_json).unwrap();
+    let char_image_data = &mut image_data_response.cargoquery;
     let mut vec_processed_imagedata = Vec::new();
 
-    for x in 0..imagedata.cargoquery.len() {
+    for x in 0..char_image_data.len() {
         
         // Variable that the produced hitbox links will reside
         let mut hitbox_links: Vec<String> = Vec::new();
@@ -47,83 +48,83 @@ pub async fn images_to_json(mut char_images_response_json: String, mut file: &Fi
         let image_link;
 
         // Replacing None values with a generic '-'
-        if imagedata.cargoquery[x].title.input.is_none(){
-            imagedata.cargoquery[x].title.input = Some("".to_string());
+        if char_image_data[x].title.input.is_none(){
+            char_image_data[x].title.input = Some("".to_string());
         }
         else{
             // Skips finish blow for sol
-            if *imagedata.cargoquery[x].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
+            if *char_image_data[x].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
                 continue;
             }
         }
-        if imagedata.cargoquery[x].title.name.is_none(){
-            imagedata.cargoquery[x].title.name = Some(imagedata.cargoquery[x].title.input.as_ref().unwrap().to_string());
+        if char_image_data[x].title.name.is_none(){
+            char_image_data[x].title.name = Some(char_image_data[x].title.input.as_ref().unwrap().to_string());
         }
         else{
             // Skips dash cancel entry ino hoverdash chipp escape zato flight and finish blow
-            if imagedata.cargoquery[x].title.name.as_ref().unwrap().to_string().trim() == "Dash Cancel" ||
-            imagedata.cargoquery[x].title.name.as_ref().unwrap().to_string().trim() == "Hoverdash" ||
-            imagedata.cargoquery[x].title.name.as_ref().unwrap().to_string().trim() == "Finish Blow" ||
-            imagedata.cargoquery[x].title.name.as_ref().unwrap().to_string().trim() == "Flight" ||
-            imagedata.cargoquery[x].title.name.as_ref().unwrap().to_string().trim() == "Escape" {
+            if char_image_data[x].title.name.as_ref().unwrap().to_string().trim() == "Dash Cancel" ||
+            char_image_data[x].title.name.as_ref().unwrap().to_string().trim() == "Hoverdash" ||
+            char_image_data[x].title.name.as_ref().unwrap().to_string().trim() == "Finish Blow" ||
+            char_image_data[x].title.name.as_ref().unwrap().to_string().trim() == "Flight" ||
+            char_image_data[x].title.name.as_ref().unwrap().to_string().trim() == "Escape" {
                 continue;
             }
         }
-        if imagedata.cargoquery[x].title.images.is_none(){
+        if char_image_data[x].title.images.is_none(){
             image_link = "".to_string();
         }
         else{
             // If image field contains only spaces
-            if imagedata.cargoquery[x].title.images.as_ref().unwrap().trim() == "" {
+            if char_image_data[x].title.images.as_ref().unwrap().trim() == "" {
                 image_link = "".to_string();
             }
             else {
                 // Multiple image names
                 // Removing any subsequent image names from field
-                if imagedata.cargoquery[x].title.images.as_mut().unwrap().contains(';') {
+                if char_image_data[x].title.images.as_mut().unwrap().contains(';') {
     
-                    let split_image: Vec<&str> = imagedata.cargoquery[x].title.images
+                    let split_image: Vec<&str> = char_image_data[x].title.images
                         .as_mut()
                         .unwrap()
                         .split(';')
                         .collect();
                         
-                    imagedata.cargoquery[x].title.images = Some(split_image[0]
+                    char_image_data[x].title.images = Some(split_image[0]
                         .to_string()
                         .replace(' ', "_"));
     
                     // Sending image name to make_link to become a link
-                    image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string()).await;
+                    image_link = make_link(char_image_data[x].title.images.as_ref().unwrap().to_string()).await;
                 }
                 else{
                     // Single image name
-                    imagedata.cargoquery[x].title.images = Some(imagedata.cargoquery[x].title.images
+                    char_image_data[x].title.images = Some(char_image_data[x].title.images
                         .as_ref()
                         .unwrap()
                         .to_string()
                         .replace(' ', "_"));
                     // Sending image name to make_link to become a link
-                    image_link = make_link(imagedata.cargoquery[x].title.images.as_ref().unwrap().to_string()).await;
+                    image_link = make_link(char_image_data[x].title.images.as_ref().unwrap().to_string()).await;
                 }
             }
         }
         
         // If hitbox empty
-        if imagedata.cargoquery[x].title.hitboxes.is_none(){
+        if char_image_data[x].title.hitboxes.is_none(){
             hitbox_links.push("".to_string());
         }
         else{
             // // If image field contains only spaces
-            // if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim() == "" {
+            // if char_image_data[x].title.hitboxes.as_ref().unwrap().trim() == "" {
             //     hitbox_links.push("".to_string());
             // }
             // Remove any hitbox images for throws cause they dont exist !!!!! this breaks wa 
-            //if imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
+            //if char_image_data[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
             //    hitbox_links.push("".to_string());
             //}
             //else{
             // Splitting the hitboxes names into a vector
-            let hitbox_str: Vec<&str> = imagedata.cargoquery[x].title.hitboxes.as_ref().unwrap().split(';').collect();
+            let hitbox_str: Vec<&str> = char_image_data[x].title.hitboxes.as_ref().unwrap().split(';').collect();
             
             for hitbox_string in &hitbox_str{
                 // Sending hitbox names to make_link to become a vector of links
@@ -137,7 +138,7 @@ pub async fn images_to_json(mut char_images_response_json: String, mut file: &Fi
 
         // Serializing image data
         let processed_imagedata = ImageLinks {
-            input: imagedata.cargoquery[x].title.input.as_ref().unwrap().to_string(),
+            input: char_image_data[x].title.input.as_ref().unwrap().to_string(),
             move_img: image_link,
             hitbox_img: hitbox_links,
         };
