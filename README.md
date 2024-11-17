@@ -33,7 +33,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/frames.png" />
+            <img src="data/images/commands/frames.png" />
         </p>
 </details>
 
@@ -42,7 +42,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/fmeter.png"/>
+            <img src="data/images/commands/fmeter.png"/>
         </p>
 </details>
 
@@ -51,7 +51,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/hitboxes.png"/>
+            <img src="data/images/commands/hitboxes.png"/>
         </p>
 </details>
   
@@ -60,7 +60,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/moves.png"/>
+            <img src="data/images/commands/moves.png"/>
         </p>
 </details>
 
@@ -69,7 +69,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/info.png"/>
+            <img src="data/images/commands/info.png"/>
         </p>
 </details>
 
@@ -78,7 +78,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/nicknames.png"/>
+            <img src="data/images/commands/nicknames.png"/>
         </p>
 </details>
 
@@ -87,7 +87,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/help.png"/>
+            <img src="data/images/commands/help.png"/>
         </p>
 </details>
 
@@ -96,7 +96,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/feedback.png"/>
+            <img src="data/images/commands/feedback.png"/>
         </p>
 </details>
 
@@ -106,7 +106,7 @@ _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/update.png"/>
+            <img src="data/images/commands/update.png"/>
         </p>
 </details>
 
@@ -116,7 +116,7 @@ _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/register.png"/>
+            <img src="data/images/commands/register.png"/>
         </p>
 </details>
 
