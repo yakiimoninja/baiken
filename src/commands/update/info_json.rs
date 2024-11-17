@@ -84,42 +84,27 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
     // Replace apostrophe
     char_info_response_json = char_info_response_json.replace(r#"&#039;"#, "'");
 
-    let mut char_info: Response = serde_json::from_str(&char_info_response_json).unwrap();
-
-    if char_info.cargoquery[0].title.defense.is_none(){
-        char_info.cargoquery[0].title.defense = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.guts.is_none(){
-    char_info.cargoquery[0].title.guts = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.guard_balance.is_none(){
-        char_info.cargoquery[0].title.guard_balance = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.prejump.is_none(){
-        char_info.cargoquery[0].title.prejump = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.forward_dash.is_none(){
-        char_info.cargoquery[0].title.forward_dash = Some("-".to_string());
-    }
+    let mut char_info_response: Response = serde_json::from_str(&char_info_response_json).unwrap();
+    let char_info = &mut char_info_response.cargoquery[0].title;
  
     let mut umo_processed_vec: Vec<String> = Vec::new();
     let mut _umo_processed_string: String = String::new();
     
-    if char_info.cargoquery[0].title.umo.is_none(){
+    if char_info.umo.is_none(){
         _umo_processed_string = "-".to_string();
     }
+    else if char_info.umo.as_ref().unwrap().to_string().contains("[[GGST") {
     // Logic for removing [[GGST/Character/UMO|UMO]] padding
-    else if char_info.cargoquery[0].title.umo.as_ref().unwrap().to_string().contains("[[GGST") {
         
         // Split umo entries by comma
-        let split_umo: Vec<&str> = char_info.cargoquery[0].title.umo
+        let split_umo: Vec<&str> = char_info.umo
             .as_mut()
             .unwrap()
             .split(',')
             .collect();
         
-        // Removing [[GGST/Character/UMO|UMO]] and getting umo
         for umo in split_umo {
+        // Removing [[GGST/Character/UMO|UMO]] and getting umo
             if umo.contains("[[GGST") {
                 let split_padding_umo: Vec<&str> =   umo.rsplit('|').collect();  
                 umo_processed_vec.push(split_padding_umo[0].to_string().replace("]]", ""));
@@ -130,115 +115,43 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
         }
         _umo_processed_string = umo_processed_vec.join(", ");
     }
-    // Logic for case of [[GGST/Character/UMO|UMO]] not existing
     else {
-        _umo_processed_string = char_info.cargoquery[0].title.umo.as_ref().unwrap().to_string();
-    }
-    if char_info.cargoquery[0].title.backdash.is_none(){
-        char_info.cargoquery[0].title.backdash = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.backdash_duration.is_none(){
-        char_info.cargoquery[0].title.backdash_duration = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.backdash_invincibility.is_none(){
-        char_info.cargoquery[0].title.backdash_invincibility = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.backdash_airborne.is_none(){
-        char_info.cargoquery[0].title.backdash_airborne = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.backdash_distance.is_none(){
-        char_info.cargoquery[0].title.backdash_distance = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.jump_duration.is_none(){
-        char_info.cargoquery[0].title.jump_duration = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.jump_height.is_none(){
-        char_info.cargoquery[0].title.jump_height = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.high_jump_duration.is_none(){
-        char_info.cargoquery[0].title.high_jump_duration = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.high_jump_height.is_none(){
-        char_info.cargoquery[0].title.high_jump_height = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.earliest_iad.is_none(){
-        char_info.cargoquery[0].title.earliest_iad = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.ad_duration.is_none(){
-        char_info.cargoquery[0].title.ad_duration = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.ad_distance.is_none(){
-        char_info.cargoquery[0].title.ad_distance = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.abd_duration.is_none(){
-        char_info.cargoquery[0].title.abd_duration = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.abd_distance.is_none(){
-        char_info.cargoquery[0].title.abd_distance = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.movement_tension.is_none(){
-        char_info.cargoquery[0].title.movement_tension = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.jump_tension.is_none(){
-        char_info.cargoquery[0].title.jump_tension = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.airdash_tension.is_none(){
-        char_info.cargoquery[0].title.airdash_tension = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.walk_speed.is_none(){
-        char_info.cargoquery[0].title.walk_speed = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.back_walk_speed.is_none(){
-        char_info.cargoquery[0].title.back_walk_speed = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.dash_initial_speed.is_none(){
-        char_info.cargoquery[0].title.dash_initial_speed = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.dash_acceleration.is_none(){
-        char_info.cargoquery[0].title.dash_acceleration = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.dash_friction.is_none(){
-        char_info.cargoquery[0].title.dash_friction = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.jump_gravity.is_none(){
-        char_info.cargoquery[0].title.jump_gravity = Some("-".to_string());
-    }
-    if char_info.cargoquery[0].title.high_jump_gravity.is_none(){
-        char_info.cargoquery[0].title.high_jump_gravity = Some("-".to_string());
+    // Logic for case of [[GGST/Character/UMO|UMO]] not existing
+        _umo_processed_string = char_info.umo.as_ref().unwrap().to_string();
     }
 
     // Serializing character info
     let processed_char_info = serde_json::to_string_pretty(&CharInfo {
-        defense: char_info.cargoquery[0].title.defense.as_ref().unwrap().to_string(),
-        guts: char_info.cargoquery[0].title.guts.as_ref().unwrap().to_string(),
-        guard_balance: char_info.cargoquery[0].title.guard_balance.as_ref().unwrap().to_string(),
-        prejump: char_info.cargoquery[0].title.prejump.as_ref().unwrap().to_string(),
+        defense: char_info.defense.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        guts: char_info.guts.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        guard_balance: char_info.guard_balance.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        prejump: char_info.prejump.as_ref().unwrap_or(&"-".to_string()).to_string(),
         umo: _umo_processed_string,
-        forward_dash: char_info.cargoquery[0].title.forward_dash.as_ref().unwrap().to_string(),
-        backdash: char_info.cargoquery[0].title.backdash.as_ref().unwrap().to_string(),
-        backdash_duration: char_info.cargoquery[0].title.backdash_duration.as_ref().unwrap().to_string(),
-        backdash_invincibility: char_info.cargoquery[0].title.backdash_invincibility.as_ref().unwrap().to_string(),
-        backdash_airborne: char_info.cargoquery[0].title.backdash_airborne.as_ref().unwrap().to_string(),
-        backdash_distance: char_info.cargoquery[0].title.backdash_distance.as_ref().unwrap().to_string(),
-        jump_duration: char_info.cargoquery[0].title.jump_duration.as_ref().unwrap().to_string(),
-        jump_height: char_info.cargoquery[0].title.jump_height.as_ref().unwrap().to_string(),
-        high_jump_duration: char_info.cargoquery[0].title.high_jump_duration.as_ref().unwrap().to_string(),
-        high_jump_height: char_info.cargoquery[0].title.high_jump_height.as_ref().unwrap().to_string(),
-        earliest_iad: char_info.cargoquery[0].title.earliest_iad.as_ref().unwrap().to_string(),
-        ad_duration: char_info.cargoquery[0].title.ad_duration.as_ref().unwrap().to_string(),
-        ad_distance: char_info.cargoquery[0].title.ad_distance.as_ref().unwrap().to_string(),
-        abd_duration: char_info.cargoquery[0].title.abd_duration.as_ref().unwrap().to_string(),
-        abd_distance: char_info.cargoquery[0].title.abd_distance.as_ref().unwrap().to_string(),
-        movement_tension: char_info.cargoquery[0].title.movement_tension.as_ref().unwrap().to_string(),
-        jump_tension: char_info.cargoquery[0].title.jump_tension.as_ref().unwrap().to_string(),
-        airdash_tension: char_info.cargoquery[0].title.airdash_tension.as_ref().unwrap().to_string(),
-        walk_speed: char_info.cargoquery[0].title.walk_speed.as_ref().unwrap().to_string(),
-        back_walk_speed: char_info.cargoquery[0].title.back_walk_speed.as_ref().unwrap().to_string(),
-        dash_initial_speed: char_info.cargoquery[0].title.dash_initial_speed.as_ref().unwrap().to_string(),
-        dash_acceleration: char_info.cargoquery[0].title.dash_acceleration.as_ref().unwrap().to_string(),
-        dash_friction: char_info.cargoquery[0].title.dash_friction.as_ref().unwrap().to_string(),
-        jump_gravity: char_info.cargoquery[0].title.jump_gravity.as_ref().unwrap().to_string(),
-        high_jump_gravity: char_info.cargoquery[0].title.high_jump_gravity.as_ref().unwrap().to_string(),
+        forward_dash: char_info.forward_dash.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        backdash: char_info.backdash.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        backdash_duration: char_info.backdash_duration.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        backdash_invincibility: char_info.backdash_invincibility.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        backdash_airborne: char_info.backdash_airborne.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        backdash_distance: char_info.backdash_distance.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        jump_duration: char_info.jump_duration.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        jump_height: char_info.jump_height.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        high_jump_duration: char_info.high_jump_duration.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        high_jump_height: char_info.high_jump_height.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        earliest_iad: char_info.earliest_iad.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        ad_duration: char_info.ad_duration.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        ad_distance: char_info.ad_distance.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        abd_duration: char_info.abd_duration.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        abd_distance: char_info.abd_distance.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        movement_tension: char_info.movement_tension.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        jump_tension: char_info.jump_tension.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        airdash_tension: char_info.airdash_tension.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        walk_speed: char_info.walk_speed.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        back_walk_speed: char_info.back_walk_speed.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        dash_initial_speed: char_info.dash_initial_speed.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        dash_acceleration: char_info.dash_acceleration.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        dash_friction: char_info.dash_friction.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        jump_gravity: char_info.jump_gravity.as_ref().unwrap_or(&"-".to_string()).to_string(),
+        high_jump_gravity: char_info.high_jump_gravity.as_ref().unwrap_or(&"-".to_string()).to_string(),
     }).unwrap();
 
     write!(file, "{}", processed_char_info)
