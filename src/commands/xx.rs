@@ -75,8 +75,6 @@ pub async fn xx(
 
         println!("{}", "Easter eggs have been disabled.".magenta());
         ctx.say("Easter eggs for this server have been disabled.").await?;
-
-        return Ok(());
     }
     else if option == "Enable" {
         // Hand to remove guild id from exclusion list
@@ -113,4 +111,5 @@ pub async fn xx(
 
         return Ok(());
     }
+    Ok(())
 }
