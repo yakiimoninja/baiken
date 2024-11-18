@@ -7,8 +7,11 @@ use crate::{Context, Error};
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum ReportChoice{
+    #[name = "feature"]
     Feature,
+    #[name = "bug"]
     Bug,
+    #[name = "other"]
     Other,
 }
 

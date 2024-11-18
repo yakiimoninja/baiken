@@ -14,7 +14,7 @@ use std::{fs, fs::OpenOptions};
 pub async fn xx(
     ctx: Context<'_>,
     #[description = "Disable or enable easter eggs."]
-    #[choices("Disable", "Enable")]
+    #[choices("disable", "enable")]
     option: &'static str,
 ) -> Result<(), Error> {
 
@@ -47,7 +47,7 @@ pub async fn xx(
     // Parse user guild id to string
     let guild_id = ctx.guild_id().unwrap().to_string();
 
-    if option == "Disable" {
+    if option == "disable" {
         // Hand to add guild id to exclusion list
         for x in vec_gids.id.iter() {
             // Checking if guild is in the exclusion list
@@ -76,7 +76,7 @@ pub async fn xx(
         println!("{}", "Easter eggs have been disabled.".magenta());
         ctx.say("Easter eggs for this server have been disabled.").await?;
     }
-    else if option == "Enable" {
+    else if option == "enable" {
         // Hand to remove guild id from exclusion list
         for x in 0..vec_gids.id.len() {
             // Checking if guild is in the exclusion list
@@ -108,7 +108,6 @@ pub async fn xx(
     }
     else {
         println!("{}", "Mega weird interaction with xx.".red());
-
         return Ok(());
     }
     Ok(())
