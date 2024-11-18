@@ -11,11 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make `/help` reply embed.
 - Make `/frames` subcommand and add all data fields along with notes(?) maybe framemeter.
 - Make `/hitboxes` subcommand with a footer that shows current image number out of total image number.
-- Make `/moves` display all, normals, supers, other, or a specific move.
 - Try sharding.
 - Rework error handling?
 
 ### Changed
+- Change `/moves` command response to an embed.
 - Change `/nicknames` command response to an embed.
 - Change `/info` command response to an embed.
 - Change `/stats` command response to an embed.
@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Revert recalculation of previous version releases and start from 1.0.0.
 
 ### Added
+- Add the ability to display move types individualy when using `/moves` command.
 - Add more data fields for `/frames` command.
 - Add more data fields for `/info` command.
 
