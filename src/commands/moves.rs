@@ -218,6 +218,9 @@ pub async fn moves(
     //.timestamp(Timestamp::now());
 
     let vec_embeds = vec![embed];
+    let embed_footer = poise::serenity_prelude::CreateEmbedFooter::
+        new("Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new alias.");
+        .footer(embed_footer)
     let mut reply = poise::CreateReply::default();
     reply.embeds.extend(vec_embeds);
         //.content(&msg)
