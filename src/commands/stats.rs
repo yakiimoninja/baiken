@@ -22,8 +22,8 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
     
     println!("{}", ("Server count: ".to_owned() + &total_guild_count + "\nMembers count: " + &total_members).magenta());
 
-    let msg = "**Servers with access to Baiken →**  ".to_owned() + &total_guild_count
-        + "\n**Populace with access to Baiken →**  " + &total_members;
+    let msg = "- **Servers with access to Baiken →** ".to_owned() + &total_guild_count
+        + "\n- **Populace with access to Baiken →** " + &total_members;
 
     // Sending the data as an embed
     let embed = CreateEmbed::new().description(msg).color((140,75,64));

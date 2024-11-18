@@ -40,7 +40,8 @@ pub async fn nicknames(
 
     for nicknames in vec_nicknames {
         // Character portion
-        nicks_as_msg = nicks_as_msg.to_owned() + "\n**" + &nicknames.character.to_string() + "**";
+        nicks_as_msg = nicks_as_msg.to_owned() + "\n- **"
+            + &nicknames.character.to_string().replace("_", " ") + "**";
         
         // Nickname portion
         // THE SPACE BEFORE THE ARROW
@@ -48,7 +49,9 @@ pub async fn nicknames(
         // DISCORD WONT RENDER EMPTY PRECEEDING SPACE
         // SO THE EMBED ISNT FORMATTED PROPERLY
         // 3x U+2000 &#8192 En Quad
-        nicks_as_msg += "\n   → `";
+        // DONT USE TABS OR END OF EMBED
+        // WILL HAVE EMPTY PADDING
+        nicks_as_msg += "\n\t→ `";
         
         for x in 0..nicknames.nicknames.len() {
             if x != nicknames.nicknames.len() - 1 {
