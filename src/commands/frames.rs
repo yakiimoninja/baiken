@@ -18,7 +18,9 @@ use crate::{
 #[poise::command(prefix_command, slash_command)]
 pub async fn frames(
     ctx: Context<'_>,
+    #[min_length = 2]
     #[description = "Character name or nickname."] character: String,
+    #[min_length = 2]
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
@@ -32,8 +34,6 @@ pub async fn frames(
 
     if (check::adaptive_check(
         ctx,
-        (true, &character),
-        (true, &character_move),
         true,
         true,
         true,

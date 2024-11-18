@@ -13,6 +13,7 @@ use crate::{
 #[poise::command(prefix_command, slash_command)]
 pub async fn info(
     ctx: Context<'_>,
+    #[min_length = 2]
     #[description = "Character name or nickname."] character: String,
 ) -> Result<(), Error> {
 
@@ -20,8 +21,6 @@ pub async fn info(
 
     if (check::adaptive_check(
         ctx,
-        (true, &character),
-        (false, &String::new()),
         true,
         true,
         true,

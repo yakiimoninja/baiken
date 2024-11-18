@@ -195,30 +195,6 @@ pub async fn character_info_exist(init_check: bool) -> Option<String> {
     None
 }
 
-pub async fn correct_character_arg(character_arg: &String) -> Option<String>{
-    
-    // Checking for correct character argument
-    if character_arg.len() < 2 {
-        let error_msg = "Character name `".to_owned() + character_arg + "` is invalid!";
-        Some(error_msg)
-    }
-    else{
-        None
-    }
-}
-  
-pub async fn correct_character_move_arg(character_move_arg: &String) -> Option<String>{
-
-    // Checking for correct move argument
-    if character_move_arg.len() < 2 {
-        let error_msg = "Move `".to_owned() + character_move_arg + "` is invalid!";
-        Some(error_msg)
-    }
-    else{
-        None
-    }
-}
-
 /// Runs checks depening on the arguments given
 /// Takes multiple tuples as input with the first item of the tuple
 /// being a bool to see if a check::function to will execute
@@ -226,8 +202,6 @@ pub async fn correct_character_move_arg(character_move_arg: &String) -> Option<S
 #[allow(clippy::too_many_arguments)]
 pub async fn adaptive_check(
     ctx: Context<'_>,
-    correct_character_check: (bool, &String),
-    correct_character_move_check: (bool, &String),
     data_folder_check: bool,
     nicknames_json_check: bool,
     character_folders_check: bool,
@@ -237,24 +211,6 @@ pub async fn adaptive_check(
     gids_json_check: bool,
 ) -> Result<(), Error> {
     
-    let mut checks_passed = true;
-
-    if correct_character_check.0 {
-        // Checking if character user argument is correct
-        if let Some(error_msg) = correct_character_arg(correct_character_check.1).await {
-            ctx.say(&error_msg).await?;
-            println!("{}", ("Error: ".to_owned() + &error_msg.to_string()).red());
-            checks_passed = false;
-        }
-    }
-    if correct_character_move_check.0 {
-        // Checking if move user argument is correct
-        if let Some(error_msg) = correct_character_move_arg(correct_character_move_check.1).await {
-            ctx.say(&error_msg).await?;
-            println!("{}", ("Error: ".to_owned() + &error_msg.to_string()).red());
-            checks_passed = false;
-        }
-    }
     if data_folder_check {
         // Checking if data folder exists
         if let Some(error_msg) = data_folder_exists(false).await {
@@ -312,10 +268,5 @@ pub async fn adaptive_check(
         }
     }
     
-    if checks_passed {
-        Ok(())
-    }
-    else {
-        Err("Failed adaptive_check".into())
-    }
+    Ok(())
 }

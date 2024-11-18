@@ -15,8 +15,6 @@ pub async fn nicknames(
 
     if (check::adaptive_check(
         ctx,
-        (false, &String::new()),
-        (false, &String::new()),
         true,
         true,
         false,

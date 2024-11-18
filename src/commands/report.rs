@@ -18,6 +18,7 @@ pub enum MyStringChoice {
 pub async fn report(
     ctx: Context<'_>,
     #[description = "Pick a subject."] subject: MyStringChoice,
+    #[min_length = 10]
     #[description = "Text to be sent."] text: String,
 ) -> Result<(), Error> {
 

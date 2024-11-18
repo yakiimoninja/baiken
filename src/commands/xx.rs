@@ -27,8 +27,6 @@ pub async fn xx(
 
     if (check::adaptive_check(
         ctx,
-        (false, &String::new()),
-        (false, &String::new()),
         false,
         false,
         false,

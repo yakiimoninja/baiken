@@ -32,6 +32,7 @@ async fn autocomplete_option<'a>(
 #[poise::command(prefix_command, slash_command, owners_only, ephemeral)]
 pub async fn update (
     ctx: Context<'_>,
+    #[min_length = 2]
     #[description = r#"Character name, nickname or "all"."#] character: String,
     #[description = r#"Select "frames", "info", "images" or "all"."#]
     #[autocomplete = "autocomplete_option"] option: String,
@@ -41,8 +42,6 @@ pub async fn update (
 
     if (check::adaptive_check(
         ctx,
-        (true, &character),
-        (false, &String::new()),
         true,
         true,
         true,
