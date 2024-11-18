@@ -1,6 +1,20 @@
+mod utils;
+use utils::{get_normal_moves, get_special_moves, get_super_moves};
 use crate::{check, find, Context, Error, MoveAliases, MoveInfo};
 use colored::Colorize;
 use std::{fs, string::String};
+
+#[derive(Debug, poise::ChoiceParameter)]
+pub enum TypeChoice{
+    #[name = "all"]
+    All,
+    #[name = "normals"]
+    Normals,
+    #[name = "specials"]
+    Specials,
+    #[name = "supers"]
+    Supers,
+}
 
 /// Display a character's moves, inputs and aliases.
 #[poise::command(prefix_command, slash_command)]
@@ -8,6 +22,8 @@ pub async fn moves(
     ctx: Context<'_>,
     #[min_length = 2]
     #[description = "Character name or nickname."] character: String,
+    #[rename = "type"]
+    #[description = "Move type."] category: TypeChoice,
 ) -> Result<(), Error> {
 
     println!("{}", ("Command Args: '".to_owned() + &character + "'").purple());
@@ -53,119 +69,65 @@ pub async fn moves(
     // Deserializing the aliases json
     let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
-    let mut normal_moves = String::new();
-    let mut move_index: usize = 0;
-    // Message split due to discord character limit
-    for (x, moves) in moves_info.iter().enumerate() {
 
-        // Stopping loop and spiltting message if move isnt a normal
-        if moves.move_type.to_lowercase() != "normal" {
-            move_index = x;
-            break;
-        }
-
-        normal_moves =
-            normal_moves.to_owned() + "\n- **" + &moves.input + " / " + &moves.name + "**";
-
-        for moves_aliases in aliases_data.iter() {
-            // If move input exists in aliases.json
-            if moves.input == moves_aliases.input  {
-                normal_moves += "\n\tAliases → `";
-
-                // Format message if there is only one alias or multiple
-                for a in 0..moves_aliases.aliases.len() {
-                    if a != moves_aliases.aliases.len() - 1 {
-                        normal_moves = normal_moves.to_owned() + &moves_aliases.aliases[a] + "`, `";
-                    }
-                    else {
-                        normal_moves = normal_moves.to_owned() + &moves_aliases.aliases[a];
-                    }
-                }
-                normal_moves = normal_moves.to_owned() + "`\n";
-            }
-            else {
-                continue;
-            }
-        }
-    }
-
-    let mut special_moves = String::new();
-    for (x, moves) in moves_info.iter().enumerate().skip(move_index) {
-        // Stopping loop and spiltting message if move isnt a normal
-        if moves.move_type.to_lowercase() != "other" && moves.move_type.to_lowercase() != "special" {
-            move_index = x;
-            break;
-        }
-        special_moves =
-            special_moves.to_owned() + "\n- **" + &moves.input + " / " + &moves.name + "**";
-
-        for moves_aliases in aliases_data.iter() {
-            // If move input exists in aliases.json
-            if moves.input == moves_aliases.input {
-                special_moves += "\n\tAliases → `";
-
-                // Format message if there is only one alias or multiple
-                for a in 0..moves_aliases.aliases.len() {
-                    if a != moves_aliases.aliases.len() - 1 {
-                        special_moves =
-                            special_moves.to_owned() + &moves_aliases.aliases[a] + "`, `";
-                    }
-                    else {
-                        special_moves = special_moves.to_owned() + &moves_aliases.aliases[a];
-                    }
-                }
-                special_moves = special_moves.to_owned() + "`\n";
-            }
-            else {
-                continue;
-            }
-        }
-    }
-
-    let mut super_moves = String::new();
-    for moves in moves_info.iter().skip(move_index) {
-        super_moves =
-            super_moves.to_owned() + "\n- **" + &moves.input + " / " + &moves.name + "**";
-
-        for moves_aliases in aliases_data.iter() {
-            // If move input exists in aliases.json
-            if moves.input == moves_aliases.input  {
-                super_moves += "\n\tAliases → `";
-
-                // Format message if there is only one alias or multiple
-                for a in 0..moves_aliases.aliases.len() {
-                    if a != moves_aliases.aliases.len() - 1 {
-                        super_moves = super_moves.to_owned() + &moves_aliases.aliases[a] + "`, `";
-                    }
-                    else {
-                        super_moves = super_moves.to_owned() + &moves_aliases.aliases[a];
-                    }
-                }
-                super_moves = super_moves.to_owned() + "`\n";
-            }
-            else {
-                continue;
-            }
-        }
-    }
-
-    let normals_embed = poise::serenity_prelude::CreateEmbed::new()
-        .description(normal_moves)
-        .color((140,75,64));
-
-    let specials_embed = poise::serenity_prelude::CreateEmbed::new()
-        .description(special_moves)
-        .color((140,75,64));
-
+    let mut vec_embeds = Vec::new();
     let embed_footer = poise::serenity_prelude::CreateEmbedFooter::
-        new("Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new alias.");
+        new("Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new aliases.");
     
-    let supers_embed = poise::serenity_prelude::CreateEmbed::new()
-        .description(super_moves)
-        .footer(embed_footer)
-        .color((140,75,64));
+    match category {
+        TypeChoice::All => {
+            let normal_moves = get_normal_moves(&moves_info, &aliases_data).await;
+            let special_moves = get_special_moves(&moves_info, &aliases_data).await;
+            let super_moves = get_super_moves(&moves_info, &aliases_data).await;
 
-    let vec_embeds = vec![normals_embed, specials_embed, supers_embed];
+            let normals_embed = poise::serenity_prelude::CreateEmbed::new()
+                .description(normal_moves)
+                .color((140,75,64));
+
+            let specials_embed = poise::serenity_prelude::CreateEmbed::new()
+                .description(special_moves)
+                .color((140,75,64));
+
+            let supers_embed = poise::serenity_prelude::CreateEmbed::new()
+                .description(super_moves)
+                .footer(embed_footer)
+                .color((140,75,64));
+            
+            vec_embeds.push(normals_embed);
+            vec_embeds.push(specials_embed);
+            vec_embeds.push(supers_embed);
+        },
+        TypeChoice::Normals => {
+            let normal_moves = get_normal_moves(&moves_info, &aliases_data).await;
+            
+            let normals_embed = poise::serenity_prelude::CreateEmbed::new()
+                .description(normal_moves)
+                .footer(embed_footer)
+                .color((140,75,64));
+            
+            vec_embeds.push(normals_embed);
+        },
+        TypeChoice::Specials => {
+            let special_moves = get_special_moves(&moves_info, &aliases_data).await;
+            
+            let specials_embed = poise::serenity_prelude::CreateEmbed::new()
+                .description(special_moves)
+                .footer(embed_footer)
+                .color((140,75,64));
+            
+            vec_embeds.push(specials_embed);
+        },
+        TypeChoice::Supers => {
+            let super_moves = get_super_moves(&moves_info, &aliases_data).await;
+            
+            let supers_embed = poise::serenity_prelude::CreateEmbed::new()
+                .description(super_moves)
+                .footer(embed_footer)
+                .color((140,75,64));
+            
+            vec_embeds.push(supers_embed);
+        },
+    };
 
     let mut reply = poise::CreateReply::default();
     reply.embeds.extend(vec_embeds);
