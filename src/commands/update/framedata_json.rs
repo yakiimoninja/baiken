@@ -68,58 +68,58 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
     let char_move_data = &mut move_data_response.cargoquery;
     let mut vec_processed_moves_info = Vec::new();
 
-    for x in 0..char_move_data.len() {
+    for move_data in char_move_data {
         
         // Replacing None values with a generic '-'
-        if char_move_data[x].title.input.is_none(){
-            char_move_data[x].title.input = Some("-".to_string());
+        if move_data.title.input.is_none(){
+            move_data.title.input = Some("-".to_string());
         }
         else{
             // Skips finish blow for sol
-            if *char_move_data[x].title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
+            if *move_data.title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
                 continue;
             }
         }
-        if char_move_data[x].title.name.is_none(){
-            char_move_data[x].title.name = Some(char_move_data[x].title.input.as_ref().unwrap().to_string());
+        if move_data.title.name.is_none(){
+            move_data.title.name = Some(move_data.title.input.as_ref().unwrap().to_string());
         }
         else {
             // Skips dash cancel entry, ino hoverdash chipp escape zato flight and finish blow 
-            if *char_move_data[x].title.name.as_ref().unwrap() == "Dash Cancel" || 
-            *char_move_data[x].title.name.as_ref().unwrap() == "Hoverdash" ||
-            *char_move_data[x].title.name.as_ref().unwrap() == "Finish Blow" ||
-            *char_move_data[x].title.name.as_ref().unwrap() == "Flight" ||
-            *char_move_data[x].title.name.as_ref().unwrap() == "Escape" {
+            if *move_data.title.name.as_ref().unwrap() == "Dash Cancel" || 
+            *move_data.title.name.as_ref().unwrap() == "Hoverdash" ||
+            *move_data.title.name.as_ref().unwrap() == "Finish Blow" ||
+            *move_data.title.name.as_ref().unwrap() == "Flight" ||
+            *move_data.title.name.as_ref().unwrap() == "Escape" {
                 continue;
             }
         }
 
         // Serializing frame data
         let processed_moves_info = MoveInfo {
-            input: char_move_data[x].title.input.get_or_insert_with(|| String::from("-")).to_string(),
-            name: char_move_data[x].title.name.get_or_insert_with(|| String::from("-")).to_string(),
-            damage: char_move_data[x].title.damage.get_or_insert_with(|| String::from("-")).to_string(),
-            guard: char_move_data[x].title.guard.get_or_insert_with(|| String::from("-")).to_string(),
-            startup: char_move_data[x].title.startup.get_or_insert_with(|| String::from("-")).to_string(),
-            active: char_move_data[x].title.active.get_or_insert_with(|| String::from("-")).to_string(),
-            recovery: char_move_data[x].title.recovery.get_or_insert_with(|| String::from("-")).to_string(),
-            on_hit: char_move_data[x].title.on_hit.get_or_insert_with(|| String::from("-")).to_string(),
-            on_block: char_move_data[x].title.on_block.get_or_insert_with(|| String::from("-")).to_string(),
-            level: char_move_data[x].title.level.get_or_insert_with(|| String::from("-")).to_string(),
-            counter: char_move_data[x].title.counter.get_or_insert_with(|| String::from("-")).to_string(),
-            move_type: char_move_data[x].title.move_type.get_or_insert_with(|| String::from("-")).to_string(),
-            risc_gain: char_move_data[x].title.risc_gain.get_or_insert_with(|| String::from("-")).to_string(),
-            risc_loss: char_move_data[x].title.risc_loss.get_or_insert_with(|| String::from("-")).to_string(),
-            wall_damage: char_move_data[x].title.wall_damage.get_or_insert_with(|| String::from("-")).to_string(),
-            input_tension: char_move_data[x].title.input_tension.get_or_insert_with(|| String::from("-")).to_string(),
-            chip_ratio: char_move_data[x].title.chip_ratio.get_or_insert_with(|| String::from("-")).to_string(),
-            otg_ratio: char_move_data[x].title.otg_ratio.get_or_insert_with(|| String::from("-")).to_string(),
-            scaling: char_move_data[x].title.scaling.get_or_insert_with(|| String::from("-")).to_string(),
-            invincibility: char_move_data[x].title.invincibility.get_or_insert_with(|| String::from("-")).to_string(),
-            cancel: char_move_data[x].title.cancel.get_or_insert_with(|| String::from("-")).to_string(),
-            caption: char_move_data[x].title.caption.get_or_insert_with(|| String::from("-")).to_string(),
-            notes: char_move_data[x].title.notes.get_or_insert_with(|| String::from("-")).to_string(),
-            hitbox_caption: char_move_data[x].title.hitbox_caption.get_or_insert_with(|| String::from("-")).to_string(),
+            input: move_data.title.input.get_or_insert_with(|| String::from("-")).to_string(),
+            name: move_data.title.name.get_or_insert_with(|| String::from("-")).to_string(),
+            damage: move_data.title.damage.get_or_insert_with(|| String::from("-")).to_string(),
+            guard: move_data.title.guard.get_or_insert_with(|| String::from("-")).to_string(),
+            startup: move_data.title.startup.get_or_insert_with(|| String::from("-")).to_string(),
+            active: move_data.title.active.get_or_insert_with(|| String::from("-")).to_string(),
+            recovery: move_data.title.recovery.get_or_insert_with(|| String::from("-")).to_string(),
+            on_hit: move_data.title.on_hit.get_or_insert_with(|| String::from("-")).to_string(),
+            on_block: move_data.title.on_block.get_or_insert_with(|| String::from("-")).to_string(),
+            level: move_data.title.level.get_or_insert_with(|| String::from("-")).to_string(),
+            counter: move_data.title.counter.get_or_insert_with(|| String::from("-")).to_string(),
+            move_type: move_data.title.move_type.get_or_insert_with(|| String::from("-")).to_string(),
+            risc_gain: move_data.title.risc_gain.get_or_insert_with(|| String::from("-")).to_string(),
+            risc_loss: move_data.title.risc_loss.get_or_insert_with(|| String::from("-")).to_string(),
+            wall_damage: move_data.title.wall_damage.get_or_insert_with(|| String::from("-")).to_string(),
+            input_tension: move_data.title.input_tension.get_or_insert_with(|| String::from("-")).to_string(),
+            chip_ratio: move_data.title.chip_ratio.get_or_insert_with(|| String::from("-")).to_string(),
+            otg_ratio: move_data.title.otg_ratio.get_or_insert_with(|| String::from("-")).to_string(),
+            scaling: move_data.title.scaling.get_or_insert_with(|| String::from("-")).to_string(),
+            invincibility: move_data.title.invincibility.get_or_insert_with(|| String::from("-")).to_string(),
+            cancel: move_data.title.cancel.get_or_insert_with(|| String::from("-")).to_string(),
+            caption: move_data.title.caption.get_or_insert_with(|| String::from("-")).to_string(),
+            notes: move_data.title.notes.get_or_insert_with(|| String::from("-")).to_string(),
+            hitbox_caption: move_data.title.hitbox_caption.get_or_insert_with(|| String::from("-")).to_string(),
         };
 
         vec_processed_moves_info.push(processed_moves_info);
