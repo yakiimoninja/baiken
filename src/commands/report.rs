@@ -4,28 +4,27 @@ use std::{
     io::Write,
 };
 use crate::{Context, Error};
- #[derive(Debug, poise::ChoiceParameter)]
-pub enum MyStringChoice {
-    #[name = "Feature"]
-    A,
-    #[name = "Bug"]
-    B,
-    #[name = "Other"]
-    C,
+
+#[derive(Debug, poise::ChoiceParameter)]
+pub enum ReportChoice{
+    Feature,
+    Bug,
+    Other,
 }
+
 /// Send a report or feedback.
 #[poise::command(slash_command, ephemeral)]
 pub async fn report(
     ctx: Context<'_>,
-    #[description = "Pick a subject."] subject: MyStringChoice,
+    #[description = "Pick a subject."] subject: ReportChoice,
     #[min_length = 10]
     #[description = "Text to be sent."] text: String,
 ) -> Result<(), Error> {
 
     let subject =  match subject {
-        MyStringChoice::A => String::from("Feature"),
-        MyStringChoice::B => String::from("Bug"),
-        MyStringChoice::C => String::from("Other"),
+        ReportChoice::Feature => String::from("Feature"),
+        ReportChoice::Bug => String::from("Bug"),
+        ReportChoice::Other => String::from("Other"),
     };
 
     // Creating character json file
@@ -44,5 +43,6 @@ pub async fn report(
     
     println!("{}", "Done writting to 'report.txt'".yellow());
     ctx.say("Submitted successfully!").await?;
-    return Ok(());
+
+    Ok(())
 }
