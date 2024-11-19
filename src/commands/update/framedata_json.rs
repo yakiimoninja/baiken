@@ -55,7 +55,10 @@ struct Title {
     //hitboxes: Option<String>,
 }
 
+
 pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File, char_count: usize) {
+
+    let empty = String::from("-");
 
     char_page_response_json = char_page_response_json.replace(r#"&lt;br&gt;"#, ", ");
     char_page_response_json = char_page_response_json.replace(r#"&lt;br/&gt;"#, ", ");
@@ -96,30 +99,30 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
 
         // Serializing frame data
         let processed_moves_info = MoveInfo {
-            input: move_data.title.input.get_or_insert_with(|| String::from("-")).to_string(),
-            name: move_data.title.name.get_or_insert_with(|| String::from("-")).to_string(),
-            damage: move_data.title.damage.get_or_insert_with(|| String::from("-")).to_string(),
-            guard: move_data.title.guard.get_or_insert_with(|| String::from("-")).to_string(),
-            startup: move_data.title.startup.get_or_insert_with(|| String::from("-")).to_string(),
-            active: move_data.title.active.get_or_insert_with(|| String::from("-")).to_string(),
-            recovery: move_data.title.recovery.get_or_insert_with(|| String::from("-")).to_string(),
-            on_hit: move_data.title.on_hit.get_or_insert_with(|| String::from("-")).to_string(),
-            on_block: move_data.title.on_block.get_or_insert_with(|| String::from("-")).to_string(),
-            level: move_data.title.level.get_or_insert_with(|| String::from("-")).to_string(),
-            counter: move_data.title.counter.get_or_insert_with(|| String::from("-")).to_string(),
-            move_type: move_data.title.move_type.get_or_insert_with(|| String::from("-")).to_string(),
-            risc_gain: move_data.title.risc_gain.get_or_insert_with(|| String::from("-")).to_string(),
-            risc_loss: move_data.title.risc_loss.get_or_insert_with(|| String::from("-")).to_string(),
-            wall_damage: move_data.title.wall_damage.get_or_insert_with(|| String::from("-")).to_string(),
-            input_tension: move_data.title.input_tension.get_or_insert_with(|| String::from("-")).to_string(),
-            chip_ratio: move_data.title.chip_ratio.get_or_insert_with(|| String::from("-")).to_string(),
-            otg_ratio: move_data.title.otg_ratio.get_or_insert_with(|| String::from("-")).to_string(),
-            scaling: move_data.title.scaling.get_or_insert_with(|| String::from("-")).to_string(),
-            invincibility: move_data.title.invincibility.get_or_insert_with(|| String::from("-")).to_string(),
-            cancel: move_data.title.cancel.get_or_insert_with(|| String::from("-")).to_string(),
-            caption: move_data.title.caption.get_or_insert_with(|| String::from("-")).to_string(),
-            notes: move_data.title.notes.get_or_insert_with(|| String::from("-")).to_string(),
-            hitbox_caption: move_data.title.hitbox_caption.get_or_insert_with(|| String::from("-")).to_string(),
+            input: move_data.title.input.as_ref().unwrap_or_else(|| &empty).to_string(),
+            name: move_data.title.name.as_ref().unwrap_or_else(|| &empty).to_string(),
+            damage: move_data.title.damage.as_ref().unwrap_or_else(|| &empty).to_string(),
+            guard: move_data.title.guard.as_ref().unwrap_or_else(|| &empty).to_string(),
+            startup: move_data.title.startup.as_ref().unwrap_or_else(|| &empty).to_string(),
+            active: move_data.title.active.as_ref().unwrap_or_else(|| &empty).to_string(),
+            recovery: move_data.title.recovery.as_ref().unwrap_or_else(|| &empty).to_string(),
+            on_hit: move_data.title.on_hit.as_ref().unwrap_or_else(|| &empty).to_string(),
+            on_block: move_data.title.on_block.as_ref().unwrap_or_else(|| &empty).to_string(),
+            level: move_data.title.level.as_ref().unwrap_or_else(|| &empty).to_string(),
+            counter: move_data.title.counter.as_ref().unwrap_or_else(|| &empty).to_string(),
+            move_type: move_data.title.move_type.as_ref().unwrap_or_else(|| &empty).to_string(),
+            risc_gain: move_data.title.risc_gain.as_ref().unwrap_or_else(|| &empty).to_string(),
+            risc_loss: move_data.title.risc_loss.as_ref().unwrap_or_else(|| &empty).to_string(),
+            wall_damage: move_data.title.wall_damage.as_ref().unwrap_or_else(|| &empty).to_string(),
+            input_tension: move_data.title.input_tension.as_ref().unwrap_or_else(|| &empty).to_string(),
+            chip_ratio: move_data.title.chip_ratio.as_ref().unwrap_or_else(|| &empty).to_string(),
+            otg_ratio: move_data.title.otg_ratio.as_ref().unwrap_or_else(|| &empty).to_string(),
+            scaling: move_data.title.scaling.as_ref().unwrap_or_else(|| &empty).to_string(),
+            invincibility: move_data.title.invincibility.as_ref().unwrap_or_else(|| &empty).to_string(),
+            cancel: move_data.title.cancel.as_ref().unwrap_or_else(|| &empty).to_string(),
+            caption: move_data.title.caption.as_ref().unwrap_or_else(|| &empty).to_string(),
+            notes: move_data.title.notes.as_ref().unwrap_or_else(|| &empty).to_string(),
+            hitbox_caption: move_data.title.hitbox_caption.as_ref().unwrap_or_else(|| &empty).to_string(),
         };
 
         vec_processed_moves_info.push(processed_moves_info);
