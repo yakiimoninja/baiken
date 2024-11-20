@@ -63,7 +63,6 @@ pub async fn xx(
         let mut file = OpenOptions::new()
             .create(true)
             .truncate(true)
-            .read(true)
             .write(true)
             .open("data/gids.json")
             .expect("\nFailed to open 'gids.json' file.");
@@ -84,7 +83,6 @@ pub async fn xx(
                 // Creating gids json file
                 let mut file = OpenOptions::new()
                     .create(true)
-                    .read(true)
                     .write(true)
                     .truncate(true)
                     .open("data/gids.json")
