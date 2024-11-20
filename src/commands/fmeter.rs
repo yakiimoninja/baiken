@@ -15,7 +15,6 @@ const RED_SQUARE: &str = "🟥";
 const BLUE_DIAMOND: &str = "🔷";
 
 /// Display a move's frame meter.
-#[allow(unused_assignments)]
 #[poise::command(prefix_command, slash_command)]
 pub async fn fmeter(
     ctx: Context<'_>,
@@ -23,13 +22,11 @@ pub async fn fmeter(
     #[description = "Character name or nickname."] character: String,
     #[min_length = 2]
     #[rename = "move"]
-    #[description = "Move name, input or alias."] mut character_move: String,
+    #[description = "Move name, input or alias."] character_move: String,
 ) -> Result<(), Error> {
 
     println!("{}", ("Command Args: '".to_owned() + &character + ", " + &character_move + "'").purple());
 
-    // This will store the full character name in case user input was an alias
-    let mut character_arg_altered = String::new();
 
     if (check::adaptive_check(
         ctx,
@@ -45,7 +42,8 @@ pub async fn fmeter(
     }
 
     // Finding character
-    character_arg_altered = match find::find_character(&character).await {
+    // This will store the full character name in case user input was an alias
+    let character_arg_altered = match find::find_character(&character).await {
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
@@ -73,7 +71,7 @@ pub async fn fmeter(
     };
 
     // TODO find a fix for this
-    character_move = index_and_move.1;
+    // character_move = index_and_move.1;
 
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
