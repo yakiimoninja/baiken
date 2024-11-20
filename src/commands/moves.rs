@@ -71,8 +71,8 @@ pub async fn moves(
 
 
     let mut vec_embeds = Vec::new();
-    let embed_footer = poise::serenity_prelude::CreateEmbedFooter::
-        new("Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new aliases.");
+    let embed_footer = poise::serenity_prelude::CreateEmbedFooter::new(
+        "Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new aliases.");
     
     match category {
         TypeChoice::All => {

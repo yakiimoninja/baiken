@@ -82,7 +82,7 @@ pub async fn frames(
         .expect(&("\nFailed to read 'data/".to_owned() + &character_arg_altered + "'/images.json' file."));
 
     // Deserializing images.json for this character
-    let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
+    let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
     let move_info = &moves_info[index_and_move.0];
     
