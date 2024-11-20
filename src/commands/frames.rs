@@ -126,29 +126,31 @@ pub async fn frames(
     // println!("{}", counter_embed);
 
 
-    // Reading the gids json
-    let data_from_file = fs::read_to_string("data/gids.json")
-        .expect("\nFailed to read 'gids.json' file.");
+    {
+        // Reading the gids json
+        let data_from_file = fs::read_to_string("data/gids.json")
+            .expect("\nFailed to read 'gids.json' file.");
 
-    // Deserializing from gids json
-    let vec_gids = serde_json::from_str::<Gids>(&data_from_file).unwrap();
- 
-    // Parse user guild id to string
-    let guild_id = ctx.guild_id().unwrap().to_string();
+        // Deserializing from gids json
+        let vec_gids = serde_json::from_str::<Gids>(&data_from_file).unwrap();
 
-    let mut gid_found = false;
+        // Parse user guild id to string
+        let guild_id = ctx.guild_id().unwrap().to_string();
 
-    // Hand to add guild id from exclusion list
-    for x in vec_gids.id.iter() {
-        // Checking if guild is in the exclusion list
-        if guild_id == *x.to_string() {
-            gid_found = true;
-            break;
+        let mut gid_found = false;
+
+        // Hand to add guild id from exclusion list
+        for x in vec_gids.id.iter() {
+            // Checking if guild is in the exclusion list
+            if guild_id == *x.to_string() {
+                gid_found = true;
+                break;
+            }
         }
-    }
-    if !gid_found {
-        if let Some(image_path) = ran::random_p().await {
-            image_embed = image_path;
+        if !gid_found {
+            if let Some(image_path) = ran::random_p().await {
+                image_embed = image_path;
+            }
         }
     }
 

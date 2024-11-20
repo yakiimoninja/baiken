@@ -79,7 +79,8 @@ pub async fn hitboxes(
     let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
     let move_info = &moves_info[index_and_move.0];
-        
+    let mut vec_embeds = Vec::new();
+
     for img_links in image_links {
         // Iterating through the image.json to find the move's hitbox links
         if move_info.input == img_links.input {
@@ -89,13 +90,8 @@ pub async fn hitboxes(
             // Masked dustloop link
             let bot_msg = "## **[__".to_owned()
             + &character_arg_altered.replace('_', " ") + " "
-            + &img_links.input 
-                .replace("]P[","|P|")
-                .replace("]K[","|K|")
-                .replace("]S[","|S|")
-                .replace("]H[","|H|")
-            + "__](<https://dustloop.com/wiki/index.php?title=GGST/" 
-            + &character_arg_altered + "#Overview>)**";
+            + "https://dustloop.com/wiki/index.php?title=GGST/"
+            + &character_arg_altered + "#Overview";
 
             if !img_links.hitbox_img[0].is_empty() {
 
@@ -107,7 +103,7 @@ pub async fn hitboxes(
                 }
             }
             else{
-                // Printing hitboxes in discord chat
+                // Printing HITBOX_DEFAULT image in discord chat
                 ctx.say(&bot_msg).await?;
                 ctx.channel_id().say(ctx, HITBOX_DEFAULT).await?;
             }
