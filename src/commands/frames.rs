@@ -72,9 +72,6 @@ pub async fn frames(
             return Ok(()) }    
     };
 
-    // TODO find a fix for this
-    //character_move = index_and_move.1;
-
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
         .expect(&("\nFailed to read 'data/".to_owned() + &character_arg_altered + "'/images.json' file."));
