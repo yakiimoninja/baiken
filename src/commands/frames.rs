@@ -75,7 +75,7 @@ pub async fn frames(
     };
 
     // TODO find a fix for this
-    character_move = mframes_index.1;
+    character_move = index_and_move.1;
 
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
@@ -84,20 +84,20 @@ pub async fn frames(
     // Deserializing images.json for this character
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
-    let mframes = &moves_info[mframes_index.0];
+    let move_info = &moves_info[index_and_move.0];
     
-    println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
+    println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
     
     let content_embed = r#"## **[__"#.to_owned()
         + &character_arg_altered.replace('_', " ") + " "
-        + &mframes.input.to_string()
+        + &move_info.input.to_string()
             .replace("]P[","|P|")
             .replace("]K[","|K|")
             .replace("]S[","|S|")
             .replace("]H[","|H|")
         + "__](<https://dustloop.com/wiki/index.php?title=GGST/"
         + &character_arg_altered + "#Overview>)**";
-    //let title_embed = "Move: ".to_owned() + &mframes.input.to_string();
+    //let title_embed = "Move: ".to_owned() + &move_info.input.to_string();
 
     // Checking if the respective data field in the json file is empty
     // If they aren't empty, the variables initialized above will be replaced
@@ -105,7 +105,7 @@ pub async fn frames(
     // Otherwise they will remain as '-'
     for img_links in image_links {
         // Iterating through the image.json to find the move's image links
-        if mframes.input == img_links.input && !img_links.move_img.is_empty() {
+        if move_info.input == img_links.input && !img_links.move_img.is_empty() {
             image_embed = img_links.move_img.to_string();
             break;
         }
@@ -160,18 +160,18 @@ pub async fn frames(
         //.title(&title_embed)
         .image(&image_embed)
         .fields(vec![
-            ("Damage", &mframes.damage.to_string(), true),
-            ("Guard", &mframes.guard.to_string(), true),
-            ("Invinciblity", &mframes.invincibility.to_string(), true),
-            ("Startup", &mframes.startup.to_string(), true),
-            ("Active", &mframes.active.to_string(), true),
-            ("Recovery", &mframes.recovery.to_string(), true),
-            ("On Hit", &mframes.on_hit.to_string(), true),
-            ("On Block", &mframes.on_hit.to_string(), true),
-            ("Level", &mframes.level.to_string(), true),
-            ("Risc Gain", &mframes.risc_gain.to_string(), true),
-            ("Scaling", &mframes.scaling.to_string(), true),
-            ("Counter", &mframes.counter.to_string(), true)
+            ("Damage", &move_info.damage.to_string(), true),
+            ("Guard", &move_info.guard.to_string(), true),
+            ("Invinciblity", &move_info.invincibility.to_string(), true),
+            ("Startup", &move_info.startup.to_string(), true),
+            ("Active", &move_info.active.to_string(), true),
+            ("Recovery", &move_info.recovery.to_string(), true),
+            ("On Hit", &move_info.on_hit.to_string(), true),
+            ("On Block", &move_info.on_hit.to_string(), true),
+            ("Level", &move_info.level.to_string(), true),
+            ("Risc Gain", &move_info.risc_gain.to_string(), true),
+            ("Scaling", &move_info.scaling.to_string(), true),
+            ("Counter", &move_info.counter.to_string(), true)
         ]);
         //.field("This is the third field", "This is not an inline field", false)
         //.footer(footer)

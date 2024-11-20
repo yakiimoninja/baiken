@@ -69,7 +69,7 @@ pub async fn hitboxes(
     };
 
     // TODO find a fix for this
-    character_move = mframes_index.1;
+    character_move = index_and_move.1;
 
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
@@ -78,13 +78,13 @@ pub async fn hitboxes(
     // Deserializing images.json for this character
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
-    let mframes = &moves_info[mframes_index.0];
+    let move_info = &moves_info[index_and_move.0];
         
     for img_links in image_links {
         // Iterating through the image.json to find the move's hitbox links
-        if mframes.input == img_links.input {
+        if move_info.input == img_links.input {
 
-            println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
+            println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
             
             // Masked dustloop link
             let bot_msg = "## **[__".to_owned()

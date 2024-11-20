@@ -73,7 +73,7 @@ pub async fn fmeter(
     };
 
     // TODO find a fix for this
-    character_move = mframes_index.1;
+    character_move = index_and_move.1;
 
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
@@ -82,14 +82,14 @@ pub async fn fmeter(
     // Deserializing images.json for this character
     let image_links= serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
-    let mframes = &moves_info[mframes_index.0];
+    let move_info = &moves_info[index_and_move.0];
 
     // Send move image
     for img_links in image_links {
         // Iterating through the image.json to find the move's hitbox links
-        if mframes.input == img_links.input {
+        if move_info.input == img_links.input {
 
-            println!("{}", ("Successfully read move '".to_owned() + &mframes.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
+            println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
             
             // Masked dustloop link
             let bot_msg = "## **[__".to_owned()
@@ -117,11 +117,11 @@ pub async fn fmeter(
         }
     }
     
-    let mut frame_meter_msg = r#"- **Startup**: "#.to_owned() + &mframes.startup + " → `";
+    let mut frame_meter_msg = r#"- **Startup**: "#.to_owned() + &move_info.startup + " → `";
 
     // Processing for startup frames
 
-    let startup_vec = sep_frame_vec(&mframes.startup).await;
+    let startup_vec = sep_frame_vec(&move_info.startup).await;
     //println!("startup_vec: {:?}", startup_vec);
     
     // If vec has only one entry and the entry is empty or -
@@ -202,10 +202,10 @@ pub async fn fmeter(
         }
     }
 
-    frame_meter_msg = frame_meter_msg + "`\n- **Active**: " + &mframes.active + " → `";
+    frame_meter_msg = frame_meter_msg + "`\n- **Active**: " + &move_info.active + " → `";
     
     // Processing for active frames
-    let active_vec = sep_frame_vec(&mframes.active).await;
+    let active_vec = sep_frame_vec(&move_info.active).await;
     //println!("Active vec: {:?}", active_vec);
     
     if active_vec.len() == 1 && active_vec[0] == "-" {
@@ -248,11 +248,11 @@ pub async fn fmeter(
         }
     }
 
-    frame_meter_msg = frame_meter_msg + "`\n- **Recovery**: " + &mframes.recovery + " → `";
+    frame_meter_msg = frame_meter_msg + "`\n- **Recovery**: " + &move_info.recovery + " → `";
 
     // Processing for recovery frames
-    //println!("Original recovery: {:?}", mframes.recovery);
-    let recovery_vec = sep_frame_vec(&mframes.recovery).await;
+    //println!("Original recovery: {:?}", move_info.recovery);
+    let recovery_vec = sep_frame_vec(&move_info.recovery).await;
     
     if recovery_vec.len() == 1 && recovery_vec[0] == "-" {
         frame_meter_msg += "-";
