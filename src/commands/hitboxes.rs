@@ -18,6 +18,7 @@ pub async fn hitboxes(
     #[min_length = 2]
     #[description = "Character name or nickname."] character: String,
     #[min_length = 2]
+    #[rename = "move"]
     #[description = "Move name, input or alias."] mut character_move: String,
 ) -> Result<(), Error> {
 
