@@ -38,7 +38,7 @@ pub async fn hitboxes(
 
     // Finding character
     // This will store the full character name in case user input was an alias
-    let mut character_arg_altered = match find::find_character(&character).await {
+    let character_arg_altered = match find::find_character(&character).await {
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
@@ -56,7 +56,7 @@ pub async fn hitboxes(
            
     println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
 
-    // Finding move struct index 
+    // Finding move index and input
     let index_and_move = match find::find_index_and_move(&character_arg_altered, character_move, &moves_info).await {
         Ok(index_and_input) => index_and_input,
         Err(err) => {
@@ -64,9 +64,6 @@ pub async fn hitboxes(
             println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }    
     };
-
-    // TODO find a fix for this
-    // character_move = index_and_move.1;
 
     // Reading images.json for this character
     let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
@@ -77,36 +74,67 @@ pub async fn hitboxes(
 
     let move_info = &moves_info[index_and_move.0];
     let mut vec_embeds = Vec::new();
+    let embed_title = "__**".to_owned()
+        + &character_arg_altered.replace("_", " ") + " "
+        + &move_info.input + " / "
+        + &move_info.name + "**__";
+
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned()
+        + &character_arg_altered + "#Overview";
 
     for img_links in image_links {
         // Iterating through the image.json to find the move's hitbox links
         if move_info.input == img_links.input {
 
             println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
-            
-            // Masked dustloop link
-            let bot_msg = "## **[__".to_owned()
-            + &character_arg_altered.replace('_', " ") + " "
-            + "https://dustloop.com/wiki/index.php?title=GGST/"
-            + &character_arg_altered + "#Overview";
 
-            if !img_links.hitbox_img[0].is_empty() {
 
-                // Printing hitboxes in discord chat
-                ctx.say(&bot_msg).await?;
+            // No hitbox image
+            if img_links.hitbox_img.len() == 0 {
 
-                for htbx_img in img_links.hitbox_img {                        
-                    ctx.channel_id().say(ctx, &htbx_img).await?;
+                let empty_embed = poise::serenity_prelude::CreateEmbed::new()
+                    .title(&embed_title)
+                    .url(&embed_url)
+                    .image(HITBOX_DEFAULT)
+                    .color((140,75,64));
+
+                vec_embeds.push(empty_embed);
+            }
+            // One hitbox image
+            else if  img_links.hitbox_img.len() == 1 {
+
+                let embed = poise::serenity_prelude::CreateEmbed::new()
+                    .title(&embed_title)
+                    .url(&embed_url)
+                    .image(&img_links.hitbox_img[0])
+                    .color((140,75,64));
+
+                vec_embeds.push(embed);
+            }
+            // More than one hitbox image
+            else {
+                for htbx_img in &img_links.hitbox_img {                        
+
+                    let embed_footer = poise::serenity_prelude::CreateEmbedFooter::new(
+                        "Move has ".to_owned() + &img_links.hitbox_img.len().to_string() + " hitbox images.");
+
+                    let embed = poise::serenity_prelude::CreateEmbed::new()
+                        .title(&embed_title)
+                        .url(&embed_url)
+                        .image(htbx_img)
+                        .footer(embed_footer)
+                        .color((140,75,64));
+
+                    vec_embeds.push(embed);
                 }
             }
-            else{
-                // Printing HITBOX_DEFAULT image in discord chat
-                ctx.say(&bot_msg).await?;
-                ctx.channel_id().say(ctx, HITBOX_DEFAULT).await?;
-            }
-            
         }
     }
+
+    let mut reply = poise::CreateReply::default();
+    reply.embeds.extend(vec_embeds);
+
+    ctx.send(reply).await?;
 
     Ok(())
 }
