@@ -64,10 +64,9 @@ pub async fn frames(
            
     println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
 
-    // Finding move struct index 
-    let mframes_index = find::find_move_index(&character_arg_altered, character_move, &moves_info).await;
-    let mframes_index = match mframes_index {
-        Ok(index) => index,
+    // Finding move index and input
+    let index_and_move = match find::find_move_index(&character_arg_altered, character_move, &moves_info).await {
+        Ok(index_and_input) => index_and_input,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
             println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
