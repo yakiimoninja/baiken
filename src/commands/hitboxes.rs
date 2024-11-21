@@ -49,15 +49,15 @@ pub async fn hitboxes(
     // Reading the character json
     let char_file_path = "data/".to_owned() + &character_arg_altered + "/" + &character_arg_altered + ".json";
     let char_file_data = fs::read_to_string(char_file_path)
-            .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
+        .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
 
     // Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();
            
     println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
 
-    // Finding move index and input
-    let index_and_move = match find::find_index_and_move(&character_arg_altered, character_move, &moves_info).await {
+    // Finding move index
+    let index = match find::find_move_index(&character_arg_altered, character_move, &moves_info).await {
         Ok(index_and_input) => index_and_input,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
@@ -72,7 +72,7 @@ pub async fn hitboxes(
     // Deserializing images.json for this character
     let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
-    let move_info = &moves_info[index_and_move.0];
+    let move_info = &moves_info[index];
     let mut vec_embeds = Vec::new();
     let embed_title = "__**".to_owned()
         + &character_arg_altered.replace("_", " ") + " "
@@ -87,7 +87,6 @@ pub async fn hitboxes(
         if move_info.input == img_links.input {
 
             println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
-
 
             // No hitbox image
             if img_links.hitbox_img.is_empty() {

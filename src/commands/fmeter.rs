@@ -61,8 +61,8 @@ pub async fn fmeter(
     
     println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
     
-    // Finding move index and input
-    let index_and_move = match find::find_index_and_move(&character_arg_altered, character_move, &moves_info).await {
+    // Finding move index
+    let index = match find::find_move_index(&character_arg_altered, character_move, &moves_info).await {
         Ok(index_and_input) => index_and_input,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
@@ -77,7 +77,7 @@ pub async fn fmeter(
     // Deserializing images.json for this character
     let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
 
-    let move_info = &moves_info[index_and_move.0];
+    let move_info = &moves_info[index];
 
     // Send move image
     for img_links in image_links {

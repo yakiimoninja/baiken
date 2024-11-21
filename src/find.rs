@@ -68,7 +68,7 @@ pub async fn find_character(character: &String) -> Result<String, Error> {
 }
 
 /// Function that finds and returns the index and then move from character json.
-pub async fn find_index_and_move(character_arg_altered: &String, mut character_move: String, moves_info: &[MoveInfo]) -> Result<(usize, String), Error> {
+pub async fn find_move_index(character_arg_altered: &String, mut character_move: String, moves_info: &[MoveInfo]) -> Result<usize, Error> {
 
     // Flags that will be used for logic to determine output
     let move_found = false;
@@ -105,7 +105,7 @@ pub async fn find_index_and_move(character_arg_altered: &String, mut character_m
         if moves.input.to_string().to_lowercase().replace('.', "") 
         == character_move.to_string().to_lowercase().replace('.', "") {
 
-            return Ok((x,character_move));
+            return Ok(x);
         }        
     }
 
@@ -115,7 +115,7 @@ pub async fn find_index_and_move(character_arg_altered: &String, mut character_m
             // Specifically if user arg is contained in move name
             if moves.name.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) {
                 
-                return Ok((x, character_move));
+                return Ok(x);
             } 
         }
     }
