@@ -90,7 +90,7 @@ pub async fn hitboxes(
 
 
             // No hitbox image
-            if img_links.hitbox_img.len() == 0 {
+            if img_links.hitbox_img.is_empty() {
 
                 let empty_embed = poise::serenity_prelude::CreateEmbed::new()
                     .title(&embed_title)
