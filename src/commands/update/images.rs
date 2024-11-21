@@ -10,7 +10,7 @@ use crate::{
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=cargoquery&format=json&limit=100&tables=MoveData_GGST&fields=MoveData_GGST.input%2C%20MoveData_GGST.name%2C%20MoveData_GGST.images%2C%20MoveData_GGST.hitboxes&where=chara%3D%22";
 const SITE_HALF: &str = "%22&order_by=MoveData_GGST.type%20ASC%2C%20MoveData_GGST.input%20ASC&utf8=1";
 
-pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) {
+pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str) {
     // For timing the updates
     let now = Instant::now();
     

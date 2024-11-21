@@ -68,7 +68,7 @@ pub async fn update (
                 // Update frames, images and info for specific character
                 ctx.say("Update started!").await?; 
                 framedata::get_char_data(CHARS, &character_arg_altered).await;
-                images::get_char_data(CHARS, &character_arg_altered).await;
+                images::get_char_images(CHARS, &character_arg_altered).await;
                 info::get_char_info(CHARS, &character_arg_altered).await;
             }
         }
@@ -90,14 +90,14 @@ pub async fn update (
             // If character arg is all; update images for all characters
             if character.trim().to_lowercase() == "all"{
                 ctx.say("Update started!").await?; 
-                images::get_char_data(CHARS, "all").await;
+                images::get_char_images(CHARS, "all").await;
             }
             else {
                 // Updates images for specific character
                 // If user input isnt the full name, part of a full name or a nickname
                 // Update images for specific character
                 ctx.say("Update started!").await?; 
-                images::get_char_data(CHARS, &character_arg_altered).await;
+                images::get_char_images(CHARS, &character_arg_altered).await;
             }
         }
         UpdateChoice::Info => {
@@ -124,6 +124,6 @@ pub async fn update (
 pub async fn update_all_char_data(){
     // 24 hour character data auto update function
     framedata::get_char_data(CHARS, "all").await;
-    images::get_char_data(CHARS, "all").await;
+    images::get_char_images(CHARS, "all").await;
     info::get_char_info(CHARS, "all").await;
 }
