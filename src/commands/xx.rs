@@ -52,7 +52,7 @@ pub async fn xx(
         for x in vec_gids.id.iter() {
             // Checking if guild is in the exclusion list
             if guild_id == *x.to_string() {
-                println!("{}", "Easter eggs are disabled.".magenta());
+                println!("{}", "Easter eggs are disabled.".purple());
                 ctx.say("Easter eggs for this server are disabled.").await?;
 
                 return Ok(());
@@ -72,7 +72,7 @@ pub async fn xx(
         let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
         file.write_all(&gid_to_json).unwrap();
 
-        println!("{}", "Easter eggs have been disabled.".magenta());
+        println!("{}", "Easter eggs have been disabled.".purple());
         ctx.say("Easter eggs for this server have been disabled.").await?;
     }
     else if option == "enable" {
@@ -93,14 +93,14 @@ pub async fn xx(
                 let gid_to_json = serde_json::to_vec_pretty(&vec_gids).unwrap();
                 file.write_all(&gid_to_json).unwrap();
 
-                println!("{}", "Easter eggs have been enabled".magenta());
+                println!("{}", "Easter eggs have been enabled".purple());
                 ctx.say("Easter eggs for this server have been enabled.").await?;
 
                 return Ok(());
             }
         }
 
-        println!("{}", "Easter eggs are enabled.".magenta());
+        println!("{}", "Easter eggs are enabled.".purple());
         ctx.say("Easter eggs for this server are already enabled.").await?;
         return Ok(());
     }
