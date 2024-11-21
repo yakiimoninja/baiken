@@ -10,25 +10,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make every bot reply an embed unless ephemeral(?).
 - Make `/help` reply embed.
 - Make `/frames` subcommand and add all data fields along with notes(?) maybe framemeter.
-- Make `/hitboxes` subcommand with a footer that shows current image number out of total image number.
 - Try sharding.
 - Rework error handling?
 
 ### Changed
+- Change `/hitboxes` response to a single embed with all images attached.
 - Change `/moves` command response to an embed.
 - Change `/nicknames` command response to an embed.
 - Change `/info` command response to an embed.
 - Change `/stats` command response to an embed.
 - Change `/update` command responses to ephemeral.
-- Improve codebase when getting character data.
 - Change `/xx` command to an ephemeral.
 - Change `/feedback` command to have and extra `subject` field.
 - Rename `/feedback` command to `/report`.
-- Make folder for command help pictures inside data/images.
-- Revert recalculation of previous version releases and start from 1.0.0.
+- Improve codebase when getting character data.
+- Move command help pictures inside `data/images/commands`.
+- Revert recalculation of previous version releases and start from [1.0.0].
 
 ### Added
-- Add the ability to display move types individualy when using `/moves` command.
+- Add the ability to display moves by catergory when using `/moves` command.
 - Add more data fields for `/frames` command.
 - Add more data fields for `/info` command.
 
