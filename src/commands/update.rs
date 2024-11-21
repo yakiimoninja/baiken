@@ -11,21 +11,18 @@ use crate::{
     Error,
     check,
     find,
-    serenity::futures::{
-        Stream,
-        StreamExt,
-        self,
-    }
 };
 
-// Autocompletes the update option
-async fn autocomplete_option<'a>(
-    _ctx: Context<'_>,
-    partial: &'a str,
-) -> impl Stream<Item = String> + 'a {
-    futures::stream::iter(&(["all","frames","info","images"]))
-        .filter(move |name| futures::future::ready(name.to_lowercase().contains(&partial.to_lowercase())))
-        .map(|name| name.to_string())
+#[derive(Debug, poise::ChoiceParameter)]
+pub enum UpdateChoice{
+    #[name = "all"]
+    All,
+    #[name = "frames"]
+    Frames,
+    #[name = "images"]
+    Images,
+    #[name = "info"]
+    Info,
 }
 
 /// Update data according to dustloop. Owners only.
@@ -34,11 +31,8 @@ pub async fn update (
     ctx: Context<'_>,
     #[min_length = 2]
     #[description = r#"Character name, nickname or "all"."#] character: String,
-    #[description = r#"Select "frames", "info", "images" or "all"."#]
-    #[autocomplete = "autocomplete_option"] option: String,
+    #[description = r#"Select "frames", "info", "images" or "all"."#] option: UpdateChoice,
 ) -> Result<(), Error> {
-
-    let option = option.trim().to_lowercase();
 
     if (check::adaptive_check(
         ctx,
@@ -53,13 +47,6 @@ pub async fn update (
         return Ok(());
     }
 
-    // // Checking if images jsons exist
-    // if let Some(error_msg) = check::character_images_exist(false).await {
-    //     ctx.say(&error_msg.replace('\'', "`")).await?;
-    //     println!();
-    //     panic!("{}", error_msg.replace('\n', " "));
-    // }
-
     // Finding character
     let character_arg_altered = match find::find_character(&character).await {
         Ok(character_arg_altered) => character_arg_altered,
@@ -69,81 +56,64 @@ pub async fn update (
             return Ok(()) }
     };
 
-    // Update frames hand
-    if option == "frames" {
-
-        // If character arg is all; update frames for all characters
-        if character.trim().to_lowercase() == "all"{
-            ctx.say("Update started!").await?; 
-            framedata::get_char_data(CHARS, "all").await;
+    match option {
+        UpdateChoice::All => {
+            // If character arg is all; update frames, images and info for all characters
+            if character.trim().to_lowercase() == "all"{
+                ctx.say("Update started!").await?;
+                update_all_char_data().await;
+            }
+            else {
+                // If user input isnt the full name, part of a full name or a nickname
+                // Update frames, images and info for specific character
+                ctx.say("Update started!").await?; 
+                framedata::get_char_data(CHARS, &character_arg_altered).await;
+                images::get_char_data(CHARS, &character_arg_altered).await;
+                info::get_char_info(CHARS, &character_arg_altered).await;
+            }
         }
-        else {
-            // Updates images for specific character
-            // If user input isnt the full name, part of a full name or a nickname
-            // Update frames for specific character
-            ctx.say("Update started!").await?; 
-            framedata::get_char_data(CHARS, &character_arg_altered).await;
-        
+        UpdateChoice::Frames => {
+            // If character arg is all; update frames for all characters
+            if character.trim().to_lowercase() == "all"{
+                ctx.say("Update started!").await?; 
+                framedata::get_char_data(CHARS, "all").await;
+            }
+            else {
+                // Updates images for specific character
+                // If user input isnt the full name, part of a full name or a nickname
+                // Update frames for specific character
+                ctx.say("Update started!").await?; 
+                framedata::get_char_data(CHARS, &character_arg_altered).await;
+            }
         }
-    }
-    // Update images hand
-    else if option == "images"{
-        
-        // If character arg is all; update images for all characters
-        if character.trim().to_lowercase() == "all"{
-            ctx.say("Update started!").await?; 
-            images::get_char_data(CHARS, "all").await;
+        UpdateChoice::Images => {
+            // If character arg is all; update images for all characters
+            if character.trim().to_lowercase() == "all"{
+                ctx.say("Update started!").await?; 
+                images::get_char_data(CHARS, "all").await;
+            }
+            else {
+                // Updates images for specific character
+                // If user input isnt the full name, part of a full name or a nickname
+                // Update images for specific character
+                ctx.say("Update started!").await?; 
+                images::get_char_data(CHARS, &character_arg_altered).await;
+            }
         }
-        else {
-            
-            // Updates images for specific character
-            // If user input isnt the full name, part of a full name or a nickname
-            // Update images for specific character
-            ctx.say("Update started!").await?; 
-            images::get_char_data(CHARS, &character_arg_altered).await;
+        UpdateChoice::Info => {
+            // If character arg is all; update info for all characters
+            if character.trim().to_lowercase() == "all"{
+                ctx.say("Update started!").await?; 
+                info::get_char_info(CHARS, "all").await;
+            }
+            else {
+                // Updates info for specific character
+                // If user input isnt the full name, part of a full name or a nickname
+                // Update info for specific character
+                ctx.say("Update started!").await?; 
+                info::get_char_info(CHARS, &character_arg_altered).await;
+            }
         }
-    }
-    // Update info hand
-    else if option == "info" {
-
-        // If character arg is all; update info for all characters
-        if character.trim().to_lowercase() == "all"{
-            ctx.say("Update started!").await?; 
-            info::get_char_info(CHARS, "all").await;
-        }
-        else {
-            
-            // Updates info for specific character
-            // If user input isnt the full name, part of a full name or a nickname
-            // Update info for specific character
-            ctx.say("Update started!").await?; 
-            info::get_char_info(CHARS, &character_arg_altered).await;
-        }
-    }
-    // Update both frames and images hand
-    else if option == "all"{
-
-        // If character arg is all; update frames, images and info for all characters
-        if character.trim().to_lowercase() == "all"{
-            ctx.say("Update started!").await?;
-            update_all_char_data().await;
-        }
-        else {
-            
-            // If user input isnt the full name, part of a full name or a nickname
-            // Update frames, images and info for specific character
-            ctx.say("Update started!").await?; 
-            framedata::get_char_data(CHARS, &character_arg_altered).await;
-            images::get_char_data(CHARS, &character_arg_altered).await;
-            info::get_char_info(CHARS, &character_arg_altered).await;
-        }
-    }
-    // If none
-    else {
-        let error_msg= &("Selection `".to_owned() + &option + "` is invalid!");
-        ctx.say(error_msg).await?;
-        println!("{}", ("Error: Selection '".to_owned() + &option + "' is invalid!").red());
-        return Ok(());
     }
 
     ctx.say("Update succesful!").await?;
