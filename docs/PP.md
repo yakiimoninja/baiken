@@ -2,14 +2,14 @@
 This Privacy Policy governs the collection, use, and sharing of personal information by [Baiken], a Discord bot developed by [yakiimoninja].
 By using [Baiken], you agree to the terms of this Privacy Policy.
 
-## Information We Collect
+## Information Collected
 We collect information that you provide to us through your use of the bot, such as your server ID and feedback queries.
 
-## How We Use Your Information
+## How Information Is Used
 We use your information to operate and improve [Baiken], including to provide support and respond to your requests.
 We may also use your information to develop new features or services, to conduct research and analytics, and to comply with legal obligations.
 
-## Sharing Your Information
+## Sharing Information
 We do **NOT** sell or share your personal information with third parties.
 However, we may disclose your information in response to legal process or a request from a law enforcement agency or regulatory authority.
 
