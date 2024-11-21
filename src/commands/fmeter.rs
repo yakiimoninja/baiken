@@ -27,7 +27,6 @@ pub async fn fmeter(
 
     println!("{}", ("Command Args: '".to_owned() + &character + ", " + &character_move + "'").purple());
 
-
     if (check::adaptive_check(
         ctx,
         true,
@@ -63,7 +62,7 @@ pub async fn fmeter(
     
     // Finding move index
     let index = match find::find_move_index(&character_arg_altered, character_move, &moves_info).await {
-        Ok(index_and_input) => index_and_input,
+        Ok(index) => index,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
             println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
