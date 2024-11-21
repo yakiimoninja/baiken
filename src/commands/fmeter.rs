@@ -107,7 +107,6 @@ pub async fn fmeter(
                 ctx.say(&bot_msg).await?;
                 ctx.channel_id().say(ctx, IMAGE_DEFAULT).await?;
             }
-            
         }
     }
     
@@ -121,7 +120,7 @@ pub async fn fmeter(
     // If vec has only one entry and the entry is empty or -
     // If vec has only one entry and the move has only 1 frame of startup
     if (startup_vec.len() == 1 && startup_vec[0] == "-") ||
-    (startup_vec.len() == 1 && startup_vec[0].parse::<i8>().unwrap() == 1) {
+    (startup_vec.len() == 1 && startup_vec[0].parse::<u16>().unwrap() == 1) {
         frame_meter_msg += "-";
     }
     // Otherwise execute logic
@@ -134,7 +133,7 @@ pub async fn fmeter(
         for x in 0..startup_vec.len() {
 
             // If vec string entry is a digit
-            if let Ok(num) = startup_vec[x].parse::<i8>() {
+            if let Ok(num) = startup_vec[x].parse::<u16>() {
 
                 // Iterate up to its numerical value -1
                 for _ in 0..num-1 {
@@ -150,7 +149,7 @@ pub async fn fmeter(
                         // The difference between the first possible frame a move can connect
                         // and the latest frame -1 is the times a GREEN_CIRCLE is going to be 
                         // put inside the msg and inside brackets
-                        for _ in 0..( (startup_vec[x].parse::<i8>().unwrap()) - (startup_vec[x-2].parse::<i8>()).unwrap()) {
+                        for _ in 0..( (startup_vec[x].parse::<u16>().unwrap()) - (startup_vec[x-2].parse::<u16>()).unwrap()) {
                             frame_meter_msg += GREEN_CIRCLE;
                         }
                         break;
@@ -163,7 +162,7 @@ pub async fn fmeter(
                 if x == startup_vec.len()-2 && startup_vec[x] == "+" {
 
                     // If entry after + is a digit assert its value
-                    if let Ok(num) = startup_vec[x+1].parse::<i8>() {
+                    if let Ok(num) = startup_vec[x+1].parse::<u16>() {
 
                         // If value is 1 then print GREEN_CIRCLE instead of "+" 
                         if num == 1 {
@@ -213,7 +212,7 @@ pub async fn fmeter(
         for active_vec_string in &active_vec {
 
             // If vec string entry is a digit
-            if let Ok(num) = active_vec_string.parse::<i8>() {
+            if let Ok(num) = active_vec_string.parse::<u16>() {
 
                 // Iterate up to its numerical value
                 for _ in 0..num {
@@ -259,7 +258,7 @@ pub async fn fmeter(
         for x in 0..recovery_vec.len() {
 
             // If vec string entry is a digit
-            if let Ok(num) = recovery_vec[x].parse::<i8>() {
+            if let Ok(num) = recovery_vec[x].parse::<u16>() {
 
                 // Iterate up to its numerical value
                 for _ in 0..num {
@@ -275,7 +274,7 @@ pub async fn fmeter(
                         // The difference between the first possible frame a move can connect
                         // and the latest frame -1 is the times a BLUE_DIAMOND is going to be 
                         // put inside the msg
-                        for _ in 0..( (recovery_vec[x].parse::<i8>().unwrap()) - (recovery_vec[x-2].parse::<i8>()).unwrap()) {
+                        for _ in 0..( (recovery_vec[x].parse::<u16>().unwrap()) - (recovery_vec[x-2].parse::<u16>()).unwrap()) {
                             frame_meter_msg += BLUE_DIAMOND;
                         }
                         break;
