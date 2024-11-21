@@ -8,13 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Fix `/fmeter` error when invoking **`Queen Dizzy`** `Wings of Light`.
 - Make every bot reply an embed unless ephemeral(?).
-- Make `/help` reply embed.
 - Make `/frames` subcommand and add all data fields along with notes(?) maybe framemeter.
 - Try sharding.
 - Rework error handling?
 
 ### Changed
-- Change `/hitboxes` response to a single embed with all images attached.
+- Change `/help` command response to an embed.
+- Change `/hitboxes` command response to a single embed with all images attached.
 - Change `/moves` command response to an embed.
 - Change `/nicknames` command response to an embed.
 - Change `/info` command response to an embed.
@@ -91,7 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove aliases for prefix commands.
 
 ### Changed
-- Make `/register` and `/feedback` command resposes, ephemeral.
+- Make `/register` and `/feedback` command responses, ephemeral.
 - Update command descriptions.
 - Update `/help` help messages.
 - Update `README`.
