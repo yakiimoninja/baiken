@@ -248,14 +248,9 @@ async fn main() {
         .build();
 
     dotenv::dotenv().expect("Failed to load .env file.");
-    let token = std::env::var("DISCORD_TOKEN")
-        .expect("Missing `DISCORD_TOKEN` env var, see README for more information.");
-    let intents =
-        serenity::GatewayIntents::non_privileged() /*| serenity::GatewayIntents::MESSAGE_CONTENT */;
-
-    let client = serenity::ClientBuilder::new(token, intents)
-        .framework(framework)
-        .await;
+    let token = std::env::var("DISCORD_TOKEN").expect("Failed to load `DISCORD_TOKEN` env var.");
+    let intents = serenity::GatewayIntents::non_privileged() /*| serenity::GatewayIntents::MESSAGE_CONTENT */;
+    let client = serenity::ClientBuilder::new(token, intents).framework(framework).await;
 
     client.unwrap().start().await.unwrap()
 }
