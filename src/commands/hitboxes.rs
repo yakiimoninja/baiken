@@ -66,13 +66,13 @@ pub async fn hitboxes(
 
     let move_info = &moves_info[index];
     let mut vec_embeds = Vec::new();
+
     let embed_title = "__**".to_owned()
         + &character_arg_altered.replace("_", " ") + " "
         + &move_info.input + " / "
         + &move_info.name + "**__";
 
-    let embed_url = "https://dustloop.com/w/GGST/".to_owned()
-        + &character_arg_altered + "#Overview";
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
 
     for img_links in image_links {
         // Iterating through the image.json to find the move's hitbox links

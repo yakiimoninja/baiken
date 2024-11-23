@@ -73,11 +73,11 @@ pub async fn advanced(
     
     println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
     
-    let title_embed = character_arg_altered.replace('_', " ").to_owned() + " "
-        + &move_info.input + " / " + &move_info.name;
-    //let title_embed = "Move: ".to_owned() + &move_info.input.to_string();
-    let url_embed = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned() 
-        + &character_arg_altered + "#Overview";
+    let title_embed = "__**".to_owned()
+        + &character_arg_altered.replace('_', " ") + " "
+        + &move_info.input + " / " + &move_info.name + "**__";
+
+    let url_embed = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
 
     // Checking if the respective data field in the json file is empty
     // If they aren't empty, the variables initialized above will be replaced

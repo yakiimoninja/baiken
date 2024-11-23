@@ -43,9 +43,8 @@ pub async fn info(
     // Deserializing from character json
     let char_info = serde_json::from_str::<CharInfo>(&char_file_data).unwrap();  
 
-    let title = "__".to_owned() + &character_arg_altered.replace('_', " ") + " Info__";
-    let url = "https://dustloop.com/wiki/index.php?title=GGST/".to_owned()
-        + &character_arg_altered + "/Data#Infobox_Data";
+    let title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Info**__";
+    let url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "/Data#Infobox_Data";
 
     let msg =
         "- **Defense →**  ".to_owned() + &char_info.defense +
