@@ -1,10 +1,7 @@
 extern crate ureq;
 use std::{fs::OpenOptions, time::Instant};
 use colored::Colorize;
-use crate::{
-    CHARS,
-    commands::update::images_json::images_to_json,
-};
+use crate::{CHARS, commands::update::images_json::images_to_json};
 
 
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=cargoquery&format=json&limit=100&tables=MoveData_GGST&fields=MoveData_GGST.input%2C%20MoveData_GGST.name%2C%20MoveData_GGST.images%2C%20MoveData_GGST.hitboxes&where=chara%3D%22";

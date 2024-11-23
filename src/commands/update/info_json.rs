@@ -1,10 +1,7 @@
 extern crate ureq;
 use serde::Deserialize;
 use crate::{CHARS, CharInfo};
-use std::{
-    fs::File,
-    io::Write,
-};
+use std::{fs::File, io::Write};
 
 #[derive(Deserialize, Debug)]
 struct Response {
