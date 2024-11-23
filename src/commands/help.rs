@@ -1,8 +1,5 @@
 use colored::Colorize;
-use crate::{
-    Context,
-    Error,
-};
+use crate::{Context, Error, EMBED_COLOR};
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum HelpChoice{
@@ -86,7 +83,7 @@ pub async fn help(ctx: Context<'_>,
     // Sending the data as an embed
     let embed = poise::serenity_prelude::CreateEmbed::new()
         .description(description_embed) 
-        .color((140,75,64))
+        .color(EMBED_COLOR)
         //.title(&title_embed)
         .image(&image_embed);
 

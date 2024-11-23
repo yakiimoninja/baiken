@@ -1,5 +1,5 @@
 use colored::Colorize;
-use crate::{Context, Error};
+use crate::{Context, Error, EMBED_COLOR};
 use poise::serenity_prelude::CreateEmbed;
 
 /// Display Baiken stats.
@@ -26,7 +26,7 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
         + "\n- **Populace with access to Baiken →** " + &total_members;
 
     // Sending the data as an embed
-    let embed = CreateEmbed::new().description(msg).color((140,75,64));
+    let embed = CreateEmbed::new().description(msg).color(EMBED_COLOR);
     ctx.send(poise::CreateReply::default().embed(embed)).await?;
 
     Ok(())

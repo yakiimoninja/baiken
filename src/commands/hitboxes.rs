@@ -1,14 +1,6 @@
 use colored::Colorize;
 use std::{fs, string::String};
-use crate::{
-    HITBOX_DEFAULT,
-    MoveInfo,
-    ImageLinks,
-    Context,
-    Error,
-    check,
-    find,
-};
+use crate::{check, find, Context, Error, ImageLinks, MoveInfo, EMBED_COLOR, HITBOX_DEFAULT};
 
 /// Display a move's hitbox images.
 #[poise::command(prefix_command, slash_command)]
@@ -95,7 +87,7 @@ pub async fn hitboxes(
                     .title(&embed_title)
                     .url(&embed_url)
                     .image(HITBOX_DEFAULT)
-                    .color((140,75,64));
+                    .color(EMBED_COLOR);
 
                 vec_embeds.push(empty_embed);
             }
@@ -106,7 +98,7 @@ pub async fn hitboxes(
                     .title(&embed_title)
                     .url(&embed_url)
                     .image(&img_links.hitbox_img[0])
-                    .color((140,75,64));
+                    .color(EMBED_COLOR);
 
                 vec_embeds.push(embed);
             }
@@ -122,7 +114,7 @@ pub async fn hitboxes(
                         .url(&embed_url)
                         .image(htbx_img)
                         .footer(embed_footer)
-                        .color((140,75,64));
+                        .color(EMBED_COLOR);
 
                     vec_embeds.push(embed);
                 }

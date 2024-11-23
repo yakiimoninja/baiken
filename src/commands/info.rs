@@ -1,13 +1,7 @@
 use std::{fs, string::String};
 use colored::Colorize;
 use poise::serenity_prelude::CreateEmbed;
-use crate::{
-    CharInfo,
-    Context,
-    Error,
-    check,
-    find,
-};
+use crate::{check, find, CharInfo, Context, Error, EMBED_COLOR};
 
 /// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
@@ -90,7 +84,7 @@ pub async fn info(
         .title(title)
         .url(url)
         .description(msg)
-        .color((140,75,64));
+        .color(EMBED_COLOR);
 
     //let vec_embeds = vec![embed];
     //let mut reply = poise::CreateReply::default();

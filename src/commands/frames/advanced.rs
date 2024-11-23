@@ -1,17 +1,7 @@
 use std::{fs, string::String};
 use colored::Colorize;
 use poise::serenity_prelude::CreateEmbed;
-use crate::{
-    IMAGE_DEFAULT,
-    MoveInfo,
-    ImageLinks,
-    Gids,
-    Context,
-    Error,
-    check,
-    find,
-    ran,
-};
+use crate::{check, find, ran, Context, Error, Gids, ImageLinks, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
 
 /// Display a move's frame data.
 #[poise::command(prefix_command, slash_command)]
@@ -147,7 +137,7 @@ pub async fn advanced(
     // Sending the data as an embed
     let embed = CreateEmbed::new()
         //.description("This is a description") 
-        .color((140,75,64))
+        .color(EMBED_COLOR)
         .title(&title_embed)
         .url(&url_embed)
         .image(&image_embed)

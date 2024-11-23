@@ -1,11 +1,6 @@
 use std::{fs, string::String};
 use poise::serenity_prelude::CreateEmbed;
-use crate::{
-    Nicknames,
-    Context,
-    Error,
-    check,
-};
+use crate::{check, Context, Error, Nicknames, EMBED_COLOR};
 
 /// Display all character nicknames.
 #[poise::command(prefix_command, slash_command)]
@@ -73,7 +68,7 @@ pub async fn nicknames(
         .title("__**Character Nicknames**__")
         .url("https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json")
         .description(nicks_as_msg)
-        .color((140,75,64));
+        .color(EMBED_COLOR);
 
     ctx.send(poise::CreateReply::default().embed(embed)).await?;
 

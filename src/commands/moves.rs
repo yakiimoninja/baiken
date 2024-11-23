@@ -1,6 +1,6 @@
 mod utils;
 use utils::{get_normal_moves, get_special_moves, get_super_moves};
-use crate::{check, find, Context, Error, MoveAliases, MoveInfo};
+use crate::{check, find, Context, Error, MoveAliases, MoveInfo, EMBED_COLOR};
 use colored::Colorize;
 use std::{fs, string::String};
 
@@ -81,16 +81,16 @@ pub async fn moves(
 
             let normals_embed = poise::serenity_prelude::CreateEmbed::new()
                 .description(normal_moves)
-                .color((140,75,64));
+                .color(EMBED_COLOR);
 
             let specials_embed = poise::serenity_prelude::CreateEmbed::new()
                 .description(special_moves)
-                .color((140,75,64));
+                .color(EMBED_COLOR);
 
             let supers_embed = poise::serenity_prelude::CreateEmbed::new()
                 .description(super_moves)
                 .footer(embed_footer)
-                .color((140,75,64));
+                .color(EMBED_COLOR);
             
             vec_embeds.push(normals_embed);
             vec_embeds.push(specials_embed);
@@ -102,7 +102,7 @@ pub async fn moves(
             let normals_embed = poise::serenity_prelude::CreateEmbed::new()
                 .description(normal_moves)
                 .footer(embed_footer)
-                .color((140,75,64));
+                .color(EMBED_COLOR);
             
             vec_embeds.push(normals_embed);
         },
@@ -112,7 +112,7 @@ pub async fn moves(
             let specials_embed = poise::serenity_prelude::CreateEmbed::new()
                 .description(special_moves)
                 .footer(embed_footer)
-                .color((140,75,64));
+                .color(EMBED_COLOR);
             
             vec_embeds.push(specials_embed);
         },
@@ -122,7 +122,7 @@ pub async fn moves(
             let supers_embed = poise::serenity_prelude::CreateEmbed::new()
                 .description(super_moves)
                 .footer(embed_footer)
-                .color((140,75,64));
+                .color(EMBED_COLOR);
             
             vec_embeds.push(supers_embed);
         },
