@@ -70,6 +70,9 @@ pub async fn moves(
     let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
 
     let mut vec_embeds = Vec::new();
+
+    let embed_title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases**__";
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
     let embed_footer = poise::serenity_prelude::CreateEmbedFooter::new(
         "Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new aliases.");
     
@@ -80,6 +83,8 @@ pub async fn moves(
             let super_moves = get_super_moves(&moves_info, &aliases_data).await;
 
             let normals_embed = poise::serenity_prelude::CreateEmbed::new()
+                .title(embed_title)
+                .url(embed_url)
                 .description(normal_moves)
                 .color(EMBED_COLOR);
 
@@ -100,6 +105,8 @@ pub async fn moves(
             let normal_moves = get_normal_moves(&moves_info, &aliases_data).await;
             
             let normals_embed = poise::serenity_prelude::CreateEmbed::new()
+                .title(embed_title)
+                .url(embed_url)
                 .description(normal_moves)
                 .footer(embed_footer)
                 .color(EMBED_COLOR);
@@ -110,6 +117,8 @@ pub async fn moves(
             let special_moves = get_special_moves(&moves_info, &aliases_data).await;
             
             let specials_embed = poise::serenity_prelude::CreateEmbed::new()
+                .title(embed_title)
+                .url(embed_url)
                 .description(special_moves)
                 .footer(embed_footer)
                 .color(EMBED_COLOR);
@@ -120,6 +129,8 @@ pub async fn moves(
             let super_moves = get_super_moves(&moves_info, &aliases_data).await;
             
             let supers_embed = poise::serenity_prelude::CreateEmbed::new()
+                .title(embed_title)
+                .url(embed_url)
                 .description(super_moves)
                 .footer(embed_footer)
                 .color(EMBED_COLOR);
