@@ -80,10 +80,10 @@ pub async fn info(
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
+        .color(EMBED_COLOR)
         .title(embed_title)
         .url(embed_url)
-        .description(msg)
-        .color(EMBED_COLOR);
+        .description(msg);
 
     //let vec_embeds = vec![embed];
     //let mut reply = poise::CreateReply::default();

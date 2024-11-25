@@ -1,5 +1,6 @@
 use colored::Colorize;
 use std::{fs, string::String};
+use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
 use crate::{check, find, Context, Error, ImageLinks, MoveInfo, EMBED_COLOR, HITBOX_DEFAULT};
 
 /// Display a move's hitbox images.
@@ -83,22 +84,22 @@ pub async fn hitboxes(
             // No hitbox image
             if img_links.hitbox_img.is_empty() {
 
-                let empty_embed = poise::serenity_prelude::CreateEmbed::new()
+                let empty_embed = CreateEmbed::new()
+                    .color(EMBED_COLOR)
                     .title(&embed_title)
                     .url(&embed_url)
-                    .image(HITBOX_DEFAULT)
-                    .color(EMBED_COLOR);
+                    .image(HITBOX_DEFAULT);
 
                 vec_embeds.push(empty_embed);
             }
             // One hitbox image
             else if  img_links.hitbox_img.len() == 1 {
 
-                let embed = poise::serenity_prelude::CreateEmbed::new()
+                let embed = CreateEmbed::new()
+                    .color(EMBED_COLOR)
                     .title(&embed_title)
                     .url(&embed_url)
-                    .image(&img_links.hitbox_img[0])
-                    .color(EMBED_COLOR);
+                    .image(&img_links.hitbox_img[0]);
 
                 vec_embeds.push(embed);
             }
@@ -106,15 +107,15 @@ pub async fn hitboxes(
             else {
                 for htbx_img in &img_links.hitbox_img {                        
 
-                    let embed_footer = poise::serenity_prelude::CreateEmbedFooter::new(
+                    let embed_footer = CreateEmbedFooter::new(
                         "Move has ".to_owned() + &img_links.hitbox_img.len().to_string() + " hitbox images.");
 
-                    let embed = poise::serenity_prelude::CreateEmbed::new()
+                    let embed = CreateEmbed::new()
+                        .color(EMBED_COLOR)
                         .title(&embed_title)
                         .url(&embed_url)
                         .image(htbx_img)
-                        .footer(embed_footer)
-                        .color(EMBED_COLOR);
+                        .footer(embed_footer);
 
                     vec_embeds.push(embed);
                 }

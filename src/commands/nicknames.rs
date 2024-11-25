@@ -65,10 +65,10 @@ pub async fn nicknames(
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
+        .color(EMBED_COLOR)
         .title("__**Character Nicknames**__")
         .url("https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json")
-        .description(nicks_as_msg)
-        .color(EMBED_COLOR);
+        .description(nicks_as_msg);
 
     ctx.send(poise::CreateReply::default().embed(embed)).await?;
 

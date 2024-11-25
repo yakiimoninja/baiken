@@ -27,8 +27,9 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
-        .description(msg)
-        .color(EMBED_COLOR);
+        .color(EMBED_COLOR)
+        .description(msg);
+
     ctx.send(poise::CreateReply::default().embed(embed)).await?;
 
     Ok(())

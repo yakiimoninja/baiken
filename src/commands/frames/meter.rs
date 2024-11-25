@@ -333,14 +333,14 @@ pub async fn meter(
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
 
     let embed = CreateEmbed::new()
+        .color(EMBED_COLOR)
         .title(embed_title)
         .url(embed_url)
         .fields(vec![
             ("Startup", &move_info.startup.to_string(), true),
             ("Active", &move_info.active.to_string(), true),
             ("Recovery", &move_info.recovery.to_string(), true)])
-        .image(embed_image)
-        .color(EMBED_COLOR);
+        .image(embed_image);
 
     let embed2 = CreateEmbed::new()
         .color(EMBED_COLOR)

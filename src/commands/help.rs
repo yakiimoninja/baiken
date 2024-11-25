@@ -82,8 +82,8 @@ pub async fn help(ctx: Context<'_>,
 
     // Sending the data as an embed
     let embed = poise::serenity_prelude::CreateEmbed::new()
-        .description(description_embed) 
         .color(EMBED_COLOR)
+        .description(description_embed)
         //.title(&title_embed)
         .image(&image_embed);
 

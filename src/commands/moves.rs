@@ -1,6 +1,7 @@
 mod utils;
 use utils::{get_normal_moves, get_special_moves, get_super_moves};
 use crate::{check, find, Context, Error, MoveAliases, MoveInfo, EMBED_COLOR};
+use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
 use colored::Colorize;
 use std::{fs, string::String};
 
@@ -73,7 +74,7 @@ pub async fn moves(
 
     let embed_title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases**__";
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
-    let embed_footer = poise::serenity_prelude::CreateEmbedFooter::new(
+    let embed_footer = CreateEmbedFooter::new(
         "Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new aliases.");
     
     match category {
@@ -82,20 +83,20 @@ pub async fn moves(
             let special_moves = get_special_moves(&moves_info, &aliases_data).await;
             let super_moves = get_super_moves(&moves_info, &aliases_data).await;
 
-            let normals_embed = poise::serenity_prelude::CreateEmbed::new()
+            let normals_embed = CreateEmbed::new()
+                .color(EMBED_COLOR)
                 .title(embed_title)
                 .url(embed_url)
-                .description(normal_moves)
-                .color(EMBED_COLOR);
+                .description(normal_moves);
 
-            let specials_embed = poise::serenity_prelude::CreateEmbed::new()
-                .description(special_moves)
-                .color(EMBED_COLOR);
+            let specials_embed = CreateEmbed::new()
+                .color(EMBED_COLOR)
+                .description(special_moves);
 
-            let supers_embed = poise::serenity_prelude::CreateEmbed::new()
+            let supers_embed = CreateEmbed::new()
+                .color(EMBED_COLOR)
                 .description(super_moves)
-                .footer(embed_footer)
-                .color(EMBED_COLOR);
+                .footer(embed_footer);
             
             vec_embeds.push(normals_embed);
             vec_embeds.push(specials_embed);
@@ -104,36 +105,36 @@ pub async fn moves(
         TypeChoice::Normals => {
             let normal_moves = get_normal_moves(&moves_info, &aliases_data).await;
             
-            let normals_embed = poise::serenity_prelude::CreateEmbed::new()
+            let normals_embed = CreateEmbed::new()
+                .color(EMBED_COLOR)
                 .title(embed_title)
                 .url(embed_url)
                 .description(normal_moves)
-                .footer(embed_footer)
-                .color(EMBED_COLOR);
+                .footer(embed_footer);
             
             vec_embeds.push(normals_embed);
         },
         TypeChoice::Specials => {
             let special_moves = get_special_moves(&moves_info, &aliases_data).await;
             
-            let specials_embed = poise::serenity_prelude::CreateEmbed::new()
+            let specials_embed = CreateEmbed::new()
+                .color(EMBED_COLOR)
                 .title(embed_title)
                 .url(embed_url)
                 .description(special_moves)
-                .footer(embed_footer)
-                .color(EMBED_COLOR);
+                .footer(embed_footer);
             
             vec_embeds.push(specials_embed);
         },
         TypeChoice::Supers => {
             let super_moves = get_super_moves(&moves_info, &aliases_data).await;
             
-            let supers_embed = poise::serenity_prelude::CreateEmbed::new()
+            let supers_embed = CreateEmbed::new()
+                .color(EMBED_COLOR)
                 .title(embed_title)
                 .url(embed_url)
                 .description(super_moves)
-                .footer(embed_footer)
-                .color(EMBED_COLOR);
+                .footer(embed_footer);
             
             vec_embeds.push(supers_embed);
         },
