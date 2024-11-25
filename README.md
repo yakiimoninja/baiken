@@ -28,21 +28,30 @@
 </p>
 
 # Commands.
-## **Command**: `/frames`.
-**Display a move's frame data.**
+## **Command**: `/frames simple`.
+**Display a move's frame data in a simplified view.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/commands/frames.png" />
+            <img src="data/images/commands/frames_simple.png" />
         </p>
 </details>
 
-## **Command**: `/fmeter`.
+## **Command**: `/frames advanced`.
+**Display a move's frame data in an advanced view.**
+<details open>
+    <summary>Show example.</summary>
+        <p align="center">
+            <img src="data/images/commands/frames_advanced.png" />
+        </p>
+</details>
+
+## **Command**: `/frames meter`.
 **Display visually, a move's startup, active and recovery frames.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/commands/fmeter.png"/>
+            <img src="data/images/commands/frames_meter.png"/>
         </p>
 </details>
 
@@ -91,12 +100,12 @@
         </p>
 </details>
 
-## **Command**: `/feedback`.
+## **Command**: `/report`.
 **Send feedback or requests to the dev.**
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/commands/feedback.png"/>
+            <img src="data/images/commands/report.png"/>
         </p>
 </details>
 
@@ -123,6 +132,12 @@ _**This command works only for owners.**_
 ## **Command**: `/xx`.
 **Disable or enable easter eggs in the current server.** \
 _**This command works only for admins.**_
+<details open>
+    <summary>Show example.</summary>
+        <p align="center">
+            <img src="data/images/commands/xx.png"/>
+        </p>
+</details>
 
 # Usage notes.
 
