@@ -187,16 +187,17 @@
   },
   {
     "input": "bt.44",
-    "move_img": "",
+    "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Leo_Whitefang_bt.44.png",
     "hitbox_img": [
-      ""
+      "https://www.dustloop.com/wiki/images/7/7d/GGST_Leo_Whitefang_bt.44_Hitbox.png"
     ]
   },
   {
     "input": "bt.66",
     "move_img": "https://www.dustloop.com/wiki/images/8/87/GGST_Leo_Whitefang_Brynhildr_Stance.png",
     "hitbox_img": [
-      ""
+      "https://www.dustloop.com/wiki/images/d/d9/GGST_Leo_WhiteFang_Brynhildr_Stance_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/b/b9/GGST_Leo_Whitefang_bt.66_Hitbox.png"
     ]
   },
   {

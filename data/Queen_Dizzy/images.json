@@ -180,6 +180,14 @@
     ]
   },
   {
+    "input": "!H",
+    "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Queen_Dizzy_22H_1.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/0/0d/GGST_Queen_Dizzy_22H_Hitbox_1.png",
+      "https://www.dustloop.com/wiki/images/b/bf/GGST_Queen_Dizzy_22H_Hitbox_2.png"
+    ]
+  },
+  {
     "input": "214H",
     "move_img": "https://www.dustloop.com/wiki/images/c/c5/GGST_Queen_Dizzy_214H.png",
     "hitbox_img": [
