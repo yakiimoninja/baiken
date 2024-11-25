@@ -238,7 +238,7 @@ async fn sep_frame_vec(text: &str) -> Vec<String> {
 }
 
 
-/// Display a move's frame meter.
+/// Display visually, a move's frame meter.
 #[poise::command(prefix_command, slash_command)]
 pub async fn meter(
     ctx: Context<'_>,
@@ -352,4 +352,3 @@ pub async fn meter(
     ctx.send(reply).await?;
     Ok(())
 }
-

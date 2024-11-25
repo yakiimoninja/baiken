@@ -3,7 +3,7 @@ use colored::Colorize;
 use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
 use crate::{check, find, ran, Context, Error, Gids, ImageLinks, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
 
-/// Display a move's basic frame data.
+/// Display a move's frame data in a simplified view.
 #[poise::command(prefix_command, slash_command)]
 pub async fn simple(
     ctx: Context<'_>,
