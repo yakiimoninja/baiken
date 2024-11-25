@@ -116,9 +116,11 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
             }
         }
 
-        //if move_data.title.caption.is_some() && move_data.title.hitbox_caption.as_ref().unwrap().contains(r#"&lt;"#) {
-        //    move_data.title.hitbox_caption = Some(String::from(""));
-        //}
+        if move_data.title.caption.is_some()
+        && (move_data.title.caption.as_ref().unwrap() == "Ground"
+        || move_data.title.caption.as_ref().unwrap() == "Air") {
+            move_data.title.caption = Some(String::from(""));
+        }
 
         // Serializing frame data
         let processed_moves_info = MoveInfo {
