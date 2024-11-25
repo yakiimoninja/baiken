@@ -26,7 +26,9 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
         + "\n- **Populace with access to Baiken →** " + &total_members;
 
     // Sending the data as an embed
-    let embed = CreateEmbed::new().description(msg).color(EMBED_COLOR);
+    let embed = CreateEmbed::new()
+        .description(msg)
+        .color(EMBED_COLOR);
     ctx.send(poise::CreateReply::default().embed(embed)).await?;
 
     Ok(())
