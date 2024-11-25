@@ -131,6 +131,7 @@ pub async fn character_info_exist() -> Result<(), Error> {
 
 /// Runs checks depening on the arguments given
 /// bool to see if a check::function to will execute
+#[allow(clippy::too_many_arguments)]
 pub async fn adaptive_check(
     ctx: Context<'_>,
     data_folder_check: bool,
@@ -146,7 +147,7 @@ pub async fn adaptive_check(
         // Checking if data folder exists
         if let Err(error_msg) = data_folder_exists().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
@@ -157,7 +158,7 @@ pub async fn adaptive_check(
         // Checking if nicknames.json exists
         if let Err(error_msg) = nicknames_json_exists().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
@@ -168,7 +169,7 @@ pub async fn adaptive_check(
         // Checking if character folders exist
         if let Err(error_msg) = character_folders_exist().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
@@ -179,7 +180,7 @@ pub async fn adaptive_check(
         // Checking if character jsons exist
         if let Err(error_msg) = character_jsons_exist().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
@@ -190,7 +191,7 @@ pub async fn adaptive_check(
         // Checking if image jsons exist
         if let Err(error_msg) = character_images_exist().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
@@ -201,7 +202,7 @@ pub async fn adaptive_check(
         // Checking if info jsons exist
         if let Err(error_msg) = character_info_exist().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
@@ -212,7 +213,7 @@ pub async fn adaptive_check(
         // Checking if gids json exists
         if let Err(error_msg) = gids_json_exists().await {
             ctx.send(CreateReply::default()
-                .content(&error_msg.to_string().replace('\'', "`"))
+                .content(error_msg.to_string().replace('\'', "`"))
                 .ephemeral(true))
             .await?;
             println!("{}", error_msg.to_string().replace('\n', " ").red());
