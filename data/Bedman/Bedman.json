@@ -1171,7 +1171,7 @@
     "scaling": "-",
     "invincibility": "-",
     "cancel": "-",
-    "caption": "Air",
+    "caption": "",
     "notes": "Activates a 150 frame Error 6E timer on frame 16 (first active frame).\nHitstop:0F\nStanding Hitstun:22F\nCrouching Hitstun:23F\nGround Block:19F\nProjectile will continue if Purple Roman Canceled on frame 17 at the earliest.\nClash Level: -\nClash Hits: -\nMoves backwards during initial movement on frames 20 up to 29 (max height) \nDecreases Tension Balance during the initial movement, for a total of -3734 Tension Balance.\nIncreases Negative value during the initial movement, for a total  200~1690 Negative value (amount varies and increases with distance to the opponent)."
   },
   {
@@ -1196,7 +1196,7 @@
     "scaling": "80%",
     "invincibility": "-",
     "cancel": "-",
-    "caption": "Air",
+    "caption": "",
     "notes": "Activates a 180 frame Error 6E timer on frame 15 (first active frame).\n"
   },
   {

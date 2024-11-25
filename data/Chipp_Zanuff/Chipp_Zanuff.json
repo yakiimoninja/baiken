@@ -1046,7 +1046,7 @@
     "scaling": "80%",
     "invincibility": "Pass-through 10-46",
     "cancel": "-",
-    "caption": "Ground",
+    "caption": "",
     "notes": "Horizontal Activation Range: 300 (From hit's position). Only applies to first hit. Functionally prevents hitting unless crossing up, except in the corner.\nCentre positioned +50 units horizontally and +150 units vertically from Chipp's position 10F before startup, and does not move for the duration of the attack."
   },
   {
@@ -1071,7 +1071,7 @@
     "scaling": "80%",
     "invincibility": "Pass-through 7-27, Below Crouch 3-50",
     "cancel": "-",
-    "caption": "Ground",
+    "caption": "",
     "notes": "Has no Activation Range unlike other Alpha Blade variants."
   },
   {
@@ -1246,7 +1246,7 @@
     "scaling": "80%",
     "invincibility": "Pass-through 9-[20~33]",
     "cancel": "-",
-    "caption": "Air",
+    "caption": "",
     "notes": "Horizontal Activation Range: 300 (From hit's position). Only applies to first hit. Functionally prevents hitting unless crossing up, except in the corner..\nChipp visually disappears on frame 7 and reappears upon landing\nCollision is removed on frame 9 until the fourth frame spent on the ground\nChipp hangs in the air for 20F before moving diagonally downwards at a fixed speed\nCentre positioned -250 units horizontally from Chipp's position 10F before startup, and does not move for the duration of the attack."
   },
   {
@@ -1271,7 +1271,7 @@
     "scaling": "80%",
     "invincibility": "Pass-through 7-27",
     "cancel": "-",
-    "caption": "Air",
+    "caption": "",
     "notes": "Horizontal Activation Range: 800 (Distance from original input position)\n"
   },
   {
