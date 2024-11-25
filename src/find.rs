@@ -1,4 +1,5 @@
 use std::{fs, path::Path};
+use colored::Colorize;
 use crate::{
     MoveAliases,
     Nicknames,
@@ -6,7 +7,7 @@ use crate::{
     Error,
 };
 
-/// Function that finds and returns the character name inside from nicknames.json file.
+/// Function that finds and returns the character name from nicknames.json file.
 pub async fn find_character(character: &String) -> Result<String, Error> {
 
     // Flags that will be used for logic to determine output
@@ -60,9 +61,11 @@ pub async fn find_character(character: &String) -> Result<String, Error> {
         // If user input isnt the full name, part of a full name or a nickname
         // Error out cause requested character was not found in the json
         let error_msg= "Character `".to_owned() + character + "` was not found!";
+        println!("{}", error_msg.red());
         Err(error_msg.into())
     }
     else {
+        println!("{}", "Weird logic error in find_character".red());
         Err("Weird logic error in find_character".into())
     }
 }
@@ -123,9 +126,11 @@ pub async fn find_move_index(character_arg_altered: &String, mut character_move:
     if !move_found {
         // Error message cause given move wasnt found in the json
         let error_msg= "Move `".to_owned() + &character_move + "` was not found!";
+        println!("{}", error_msg.red());
         Err(error_msg.into())
     }
     else {
+        println!("{}", "Weird logic error in find_move".red());
         Err("Weird logic error in find_move".into())
     }
 

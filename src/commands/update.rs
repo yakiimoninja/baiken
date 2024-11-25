@@ -4,7 +4,6 @@ mod info;
 mod framedata_json;
 mod images_json;
 mod info_json;
-use colored::Colorize;
 use crate::{
     CHARS,
     Context,
@@ -52,7 +51,6 @@ pub async fn update (
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
-            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }
     };
 

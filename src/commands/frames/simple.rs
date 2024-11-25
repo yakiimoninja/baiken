@@ -39,7 +39,6 @@ pub async fn simple(
         Ok(character_arg_altered) => character_arg_altered,
         Err(err) => {
             ctx.say(err.to_string()).await?;
-            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }
     };
 
@@ -58,7 +57,6 @@ pub async fn simple(
         Ok(index) => index,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
-            println!("{}", ("Error: ".to_owned() + &err.to_string()).red());
             return Ok(()) }    
     };
 
