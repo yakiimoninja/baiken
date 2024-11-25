@@ -175,5 +175,7 @@ pub async fn advanced(
     reply.embeds.extend(vec_embeds);
     ctx.send(reply).await?;
 
+    // New version notification
+    //ctx.channel_id().say(ctx, r"[__**Patch.**__](<https://github.com/yakiimoninja/baiken/releases>)").await?;
     Ok(())
 }
