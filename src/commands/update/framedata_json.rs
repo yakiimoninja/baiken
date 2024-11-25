@@ -47,22 +47,44 @@ struct Title {
     cancel: Option<String>,
     caption: Option<String>,
     notes: Option<String>,
-    hitbox_caption: Option<String>,
+    //hitbox_caption: Option<String>,
     //images: Option<String>,
     //hitboxes: Option<String>,
 }
 
+async fn remove_tags(mut char_page_response_json: String) -> String {
+
+    char_page_response_json = char_page_response_json
+        // Colorful text RED
+        .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")
+        // Colorful text BLUE
+        .replace(r#"&lt;span class=&quot;colorful-text-2&quot; &gt;"#, "")
+        // Colorful text GREEN
+        .replace(r#"&lt;span class=&quot;colorful-text-3&quot; &gt;"#, "")
+        // Colorful text PURPlE
+        .replace(r#"&lt;span class=&quot;colorful-text-1&quot; &gt;"#, "")
+        // Colorful text tag close
+        .replace(r#"&lt;/span&gt;"#, "")
+        .replace(r#"&lt;br&gt;"#, ", ")
+        .replace(r#"&lt;br/&gt;"#, ", ")
+        // Ino low profile
+        .replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "")
+        // Replace apostrophe
+        .replace(r#"&#039;"#, "'")
+        .replace(r#"&amp;#32;"#, "")
+        .replace(r#"'''"#, "")
+        .replace(r#"; "#, r#"\n"#)
+        .replace(r#";"#, r#"\n"#)
+        .replace(r#"\\"#, "");
+
+    char_page_response_json
+}
 
 pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File, char_count: usize) {
 
     let empty = String::from("-");
-
-    char_page_response_json = char_page_response_json.replace(r#"&lt;br&gt;"#, ", ");
-    char_page_response_json = char_page_response_json.replace(r#"&lt;br/&gt;"#, ", ");
-    // Ino low profile
-    char_page_response_json = char_page_response_json.replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "");
-    // Replace apostrophe
-    char_page_response_json = char_page_response_json.replace(r#"&#039;"#, "'");
+    
+    char_page_response_json = remove_tags(char_page_response_json).await;
 
     let mut move_data_response: Response = serde_json::from_str(&char_page_response_json).unwrap();
     let char_move_data = &mut move_data_response.cargoquery;
@@ -94,6 +116,10 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
             }
         }
 
+        //if move_data.title.caption.is_some() && move_data.title.hitbox_caption.as_ref().unwrap().contains(r#"&lt;"#) {
+        //    move_data.title.hitbox_caption = Some(String::from(""));
+        //}
+
         // Serializing frame data
         let processed_moves_info = MoveInfo {
             input: move_data.title.input.as_ref().unwrap_or(&empty).to_string(),
@@ -117,9 +143,9 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
             scaling: move_data.title.scaling.as_ref().unwrap_or(&empty).to_string(),
             invincibility: move_data.title.invincibility.as_ref().unwrap_or(&empty).to_string(),
             cancel: move_data.title.cancel.as_ref().unwrap_or(&empty).to_string(),
-            caption: move_data.title.caption.as_ref().unwrap_or(&empty).to_string(),
-            notes: move_data.title.notes.as_ref().unwrap_or(&empty).to_string(),
-            hitbox_caption: move_data.title.hitbox_caption.as_ref().unwrap_or(&empty).to_string(),
+            caption: move_data.title.caption.as_ref().unwrap_or(&"".to_string()).to_string(),
+            notes: move_data.title.notes.as_ref().unwrap_or(&"".to_string()).to_string(),
+            //hitbox_caption: move_data.title.hitbox_caption.as_ref().unwrap_or(&"".to_string()).to_string(),
         };
 
         vec_processed_moves_info.push(processed_moves_info);

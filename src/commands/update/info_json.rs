@@ -76,12 +76,13 @@ pub async fn info_to_json(mut char_info_response_json: String, mut file: &File, 
 
     let empty = String::from("-");
 
-    char_info_response_json = char_info_response_json.replace(r#"&lt;br&gt;"#, ", ");
-    char_info_response_json = char_info_response_json.replace(r#"&lt;br/&gt;"#, ", ");
-    // Ino low profile
-    char_info_response_json = char_info_response_json.replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "");
-    // Replace apostrophe
-    char_info_response_json = char_info_response_json.replace(r#"&#039;"#, "'");
+    char_info_response_json = char_info_response_json
+        .replace(r#"&lt;br&gt;"#, ", ")
+        .replace(r#"&lt;br/&gt;"#, ", ")
+        // Ino low profile
+        .replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "")
+        // Replace apostrophe
+        .replace(r#"&#039;"#, "'");
 
     let mut char_info_response: Response = serde_json::from_str(&char_info_response_json).unwrap();
     let char_info = &mut char_info_response.cargoquery[0].title;
