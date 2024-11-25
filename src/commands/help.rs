@@ -5,12 +5,14 @@ use crate::{Context, Error, EMBED_COLOR};
 pub enum HelpChoice{
     #[name = "general"]
     General,
-    #[name = "frames"]
-    Frames,
+    #[name = "frames simple"]
+    FramesSimple,
+    #[name = "frames advanced"]
+    FramesAdvanced,
+    #[name = "frames meter"]
+    FramesMeter,
     #[name = "hitboxes"]
     Hitboxes,
-    #[name = "fmeter"]
-    Fmeter,
     #[name = "moves"]
     Moves,
     #[name = "info"]
@@ -34,13 +36,17 @@ pub async fn help(ctx: Context<'_>,
     
 
     let (description_embed, image_embed) = match option {
-        HelpChoice::Fmeter => {
-            println!("{}", ("Command Args: 'fmeter'").purple());
-            help_fmeter().await
+        HelpChoice::FramesSimple=> {
+            println!("{}", ("Command Args: 'frames simple'").purple());
+            help_frames_simple().await
             },
-        HelpChoice::Frames => {
-            println!("{}", ("Command Args: 'frames'").purple());
-            help_frames().await
+        HelpChoice::FramesAdvanced => {
+            println!("{}", ("Command Args: 'frames advanced'").purple());
+            help_frames_advanced().await
+        },
+        HelpChoice::FramesMeter => {
+            println!("{}", ("Command Args: 'frames meter'").purple());
+            help_frames_meter().await
         },
         HelpChoice::General => {
             println!("{}", ("Command Args: 'general'").purple());
@@ -113,30 +119,44 @@ async fn help_general() -> (String, String){
     (msg, img)
 }
 
-async fn help_fmeter() -> (String, String) {
+async fn help_frames_advanced() -> (String, String){
     let msg = String::from(r#"
-## __**Command**__: `/fmeter`
+## __**Command**__: `/frames advanced`
+
+__**character**__: Character name or nickname.
+__**move**__: Character move name, input or alias.
+
+Display a move's frame data in an advanced view."#);
+    
+    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_advanced.png");
+
+    (msg, img)
+}
+
+async fn help_frames_meter() -> (String, String) {
+    let msg = String::from(r#"
+## __**Command**__: `/frames meter`
 
 __**character**__: Character name or nickname.
 __**move**__: Character move name, input or alias.
 
 Display visually, a move's startup, active and recovery frames."#);
     
-    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/fmeter.png");
+    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_meter.png");
 
     (msg, img)
 }
 
-async fn help_frames() -> (String, String){
+async fn help_frames_simple() -> (String, String){
     let msg = String::from(r#"
-## __**Command**__: `/frames`
+## __**Command**__: `/frames simple`
 
 __**character**__: Character name or nickname.
 __**move**__: Character move name, input or alias.
 
-Display a move's frame data."#);
+Display a move's frame data in a simplified view."#);
     
-    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames.png");
+    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_simple.png");
 
     (msg, img)
 }
