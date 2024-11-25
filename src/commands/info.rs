@@ -43,8 +43,8 @@ pub async fn info(
     // Deserializing from character json
     let char_info = serde_json::from_str::<CharInfo>(&char_file_data).unwrap();  
 
-    let title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Info**__";
-    let url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "/Data#Infobox_Data";
+    let embed_title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Info**__";
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "/Data#Infobox_Data";
 
     let msg =
         "- **Defense →**  ".to_owned() + &char_info.defense +
@@ -80,8 +80,8 @@ pub async fn info(
 
     // Sending the data as an embed
     let embed = CreateEmbed::new()
-        .title(title)
-        .url(url)
+        .title(embed_title)
+        .url(embed_url)
         .description(msg)
         .color(EMBED_COLOR);
 
