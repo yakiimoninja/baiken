@@ -5,14 +5,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
-## [Unreleased]
-- Fix `/fmeter` error when invoking **`Queen Dizzy`** `Wings of Light`.
-- Make every bot reply an embed unless ephemeral(?).
-- Make `/frames` subcommand and add all data fields along with notes(?) maybe framemeter.
-- Try sharding.
-- Rework error handling?
+## [1.0.0] - 2024-11-25
+
+### Removed
+- Remove `/fmeter` command. Its now a `/frames` subcommand.
+- Remove`/feedback` command. Its now renamed to `/report`.
 
 ### Changed
+- Change all embed title to contain name and input for move called.
+- Change `/frames` command to a command group.
 - Change `/help` command response to an embed.
 - Change `/hitboxes` command response to a single embed with all images attached.
 - Change `/moves` command response to an embed.
@@ -20,21 +21,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `/info` command response to an embed.
 - Change `/stats` command response to an embed.
 - Change `/update` command responses to ephemeral.
-- Change `/xx` command to an ephemeral.
-- Change `/feedback` command to have and extra `subject` field.
-- Rename `/feedback` command to `/report`.
+- Change `/xx` command to ephemeral.
+- Change `/report` (previously `/feedback`) command to have and extra `subject` argument field.
 - Improve codebase when getting character data.
-- Move command help pictures inside `data/images/commands`.
+- Move help pictures for commands inside `data/images/commands`.
+- Update README and affected images.
 - Revert recalculation of previous version releases and start from [1.0.0].
 
 ### Added
+- Add `/frames simple`, `/frames advanced` and `/frames meter` as subcommands for `/frames`.
+- Add `/help` entries for new `/frames` subcommands.
 - Add the ability to display moves by catergory when using `/moves` command.
-- Add more data fields for `/frames` command.
 - Add more data fields for `/info` command.
 
 ### Fixed
 - Fix [0.30.2] tag.
-- Update framedata.
+- Update framedata (new fields).
 
 ## [0.30.2] - 2024-11-12
 
@@ -1147,7 +1149,7 @@ Say less my guy.
 - New patch notes page.
 
 
-[0.30.2]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.2
+[1.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/1.0.0
 [0.30.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
 [0.30.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
 [0.29.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.29.0
