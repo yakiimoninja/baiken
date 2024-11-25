@@ -34,7 +34,6 @@ pub async fn help(ctx: Context<'_>,
     #[description = "Pick a command to display help for."] option: HelpChoice
     ) -> Result<(), Error> {
     
-
     let (description_embed, image_embed) = match option {
         HelpChoice::FramesSimple=> {
             println!("{}", ("Command Args: 'frames simple'").purple());
