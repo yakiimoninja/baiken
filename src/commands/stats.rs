@@ -20,6 +20,8 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
         )
     };
     
+    // To view sharding amount allowed by discord
+    //println!("{:#?}", ctx.http().get_bot_gateway().await);
     println!("{}", ("Server count: ".to_owned() + &total_guild_count + "\nMembers count: " + &total_members).purple());
 
     let msg = "- **Servers with access to Baiken →** ".to_owned() + &total_guild_count
