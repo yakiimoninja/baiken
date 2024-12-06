@@ -20,16 +20,7 @@ pub async fn simple(
     // They must not be empty cause then the embed wont be sent
     let mut embed_image = IMAGE_DEFAULT.to_string();
 
-    if (check::adaptive_check(
-        ctx,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        true).await).is_err() {
-        
+    if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
 

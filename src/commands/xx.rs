@@ -25,15 +25,7 @@ pub async fn xx(
         return Ok(());
     }
 
-    if (check::adaptive_check(
-        ctx,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        true,).await).is_err() {
+    if (check::adaptive_check(ctx, false, true).await).is_err() {
         return Ok(());
     }
 

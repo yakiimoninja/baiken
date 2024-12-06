@@ -8,16 +8,7 @@ pub async fn nicknames(
     ctx: Context<'_>,
 ) -> Result<(), Error> {
 
-    if (check::adaptive_check(
-        ctx,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false).await).is_err() {
-        
+    if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
 

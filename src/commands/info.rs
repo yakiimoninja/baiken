@@ -13,16 +13,7 @@ pub async fn info(
 
     println!("{}", ("Command Args: '".to_owned() + &character + "'").purple());
 
-    if (check::adaptive_check(
-        ctx,
-        true,
-        true,
-        true,
-        false,
-        false,
-        true,
-        false).await).is_err() {
-        
+    if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
 

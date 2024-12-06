@@ -251,16 +251,7 @@ pub async fn meter(
 
     println!("{}", ("Command Args: '".to_owned() + &character + ", " + &character_move + "'").purple());
 
-    if (check::adaptive_check(
-        ctx,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false).await).is_err() {
-        
+    if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
 
