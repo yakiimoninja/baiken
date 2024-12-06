@@ -11,7 +11,7 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
     // For timing the updates
     let now = Instant::now();
     
-    if specific_char == "all"{
+    if specific_char == "all" {
 
         for (x, char_id) in chars_ids.iter().enumerate() {
     
