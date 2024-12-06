@@ -4,13 +4,7 @@ mod info;
 mod framedata_json;
 mod images_json;
 mod info_json;
-use crate::{
-    CHARS,
-    Context,
-    Error,
-    check,
-    find,
-};
+use crate::{CHARS, Context, Error, check, find};
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum UpdateChoice{
