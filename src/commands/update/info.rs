@@ -1,5 +1,6 @@
 extern crate ureq;
-use std::{fs::OpenOptions, time::Instant};
+use std::time::Instant;
+use rusqlite::Connection as SqlConnection;
 use colored::Colorize;
 use crate::{CHARS, commands::update::info_json::info_to_json};
 
@@ -9,23 +10,14 @@ const SITE_HALF : &str = "%22";
 pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) {
     // For timing the updates
     let now = Instant::now();
+    let mut db = SqlConnection::open("data/data.db").unwrap();
     
-    if specific_char == "all"{
+    if specific_char == "all" {
     
         for (x, char_id) in chars_ids.iter().enumerate() {
     
-            println!("{}", ("Creating ".to_owned() + char_id + " 'info.json' file.").green());
+            println!("{}", ("Updating ".to_owned() + char_id + " 'info' entry.").green());
             
-            let char_info_json_path = "data/".to_owned() + char_id +"/info.json";
-    
-            // Creating multiple character info.json files
-            let file = OpenOptions::new()
-                .create(true)
-                .truncate(true)
-                .write(true)
-                .open(char_info_json_path)
-                .expect(&("\nFailed to open ".to_owned() + char_id + " 'info.json' file."));
-    
             // Creating request link
             let character_info_link = SITE_LINK.to_owned() + &char_id.replace('_', " ") +  SITE_HALF;
     
@@ -46,22 +38,12 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
-            info_to_json(char_info_response_json, &file, x).await;
+            db = info_to_json(&char_info_response_json, db, x).await;
         }
     }
     else {
 
-        println!("{}", ("Creating ".to_owned() + specific_char + " 'info.json' file.").green());
-
-        let char_info_json_path = "data/".to_owned() + specific_char +"/info.json";
-
-        // Creating singular character info.json file
-        let file = OpenOptions::new()
-            .create(true)
-            .truncate(true)
-            .write(true)
-            .open(char_info_json_path)
-            .expect(&("\nFailed to open ".to_owned() + specific_char + " 'info.json' file."));
+        println!("{}", ("Updating ".to_owned() + specific_char + " 'info' entry.").green());
 
         // Creating request link
         let char_info_link = SITE_LINK.to_owned() + &specific_char.replace('_', " ") + SITE_HALF;
@@ -81,11 +63,17 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         // Requested website source to file
         let char_info_response_json = char_info_response_json.into_string().unwrap();
         
-        // Sending response to get processed and serialized to a json file
-        // char_count is a counter to specify which json file fails to update
-        info_to_json(char_info_response_json, &file, 0).await;
+        for (x, char_id) in chars_ids.iter().enumerate() {
+            if *char_id == specific_char {
+                // Sending response to get processed and serialized to a json file
+                // char_count is a counter to specify which json file fails to update
+                db = info_to_json(&char_info_response_json, db, x).await;
+                break;
+            }
+        }
     }
     
+    db.close().unwrap();
     let elapsed_time = now.elapsed();
     println!("{}", ("Updated in ".to_owned() + &elapsed_time.as_secs().to_string() + " seconds.").yellow());
 }
