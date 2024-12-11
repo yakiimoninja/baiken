@@ -298,8 +298,8 @@ pub async fn meter(
 
             println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
 
-            if !img_links.move_img.is_empty() {
-                embed_image = img_links.move_img;
+            if !img_links.image.is_empty() {
+                embed_image = img_links.image;
             }
             else{
                 embed_image = String::from(IMAGE_DEFAULT);

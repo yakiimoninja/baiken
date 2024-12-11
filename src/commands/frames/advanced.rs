@@ -67,8 +67,8 @@ pub async fn advanced(
     // Otherwise they will remain as '-'
     for img_links in image_links {
         // Iterating through the image.json to find the move's image links
-        if move_info.input == img_links.input && !img_links.move_img.is_empty() {
-            embed_image = img_links.move_img.to_string();
+        if move_info.input == img_links.input && !img_links.image.is_empty() {
+            embed_image = img_links.image.to_string();
             break;
         }
     }

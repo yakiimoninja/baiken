@@ -71,7 +71,7 @@ pub async fn hitboxes(
             println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
 
             // No hitbox image
-            if img_links.hitbox_img.is_empty() {
+            if img_links.hitboxes.is_empty() {
 
                 let empty_embed = CreateEmbed::new()
                     .color(EMBED_COLOR)
@@ -82,22 +82,22 @@ pub async fn hitboxes(
                 vec_embeds.push(empty_embed);
             }
             // One hitbox image
-            else if  img_links.hitbox_img.len() == 1 {
+            else if  img_links.hitboxes.len() == 1 {
 
                 let embed = CreateEmbed::new()
                     .color(EMBED_COLOR)
                     .title(&embed_title)
                     .url(&embed_url)
-                    .image(&img_links.hitbox_img[0]);
+                    .image(&img_links.hitboxes[0]);
 
                 vec_embeds.push(embed);
             }
             // More than one hitbox image
             else {
-                for htbx_img in &img_links.hitbox_img {                        
+                for htbx_img in &img_links.hitboxes {
 
                     let embed_footer = CreateEmbedFooter::new(
-                        "Move has ".to_owned() + &img_links.hitbox_img.len().to_string() + " hitbox images.");
+                        "Move has ".to_owned() + &img_links.hitboxes.len().to_string() + " hitbox images.");
 
                     let embed = CreateEmbed::new()
                         .color(EMBED_COLOR)

@@ -123,8 +123,8 @@ pub async fn images_to_json(mut char_images_response_json: String, mut file: &Fi
         // Serializing image data
         let processed_imagedata = ImageLinks {
             input: image_data.title.input.as_ref().unwrap().to_string(),
-            move_img: image_link,
-            hitbox_img: hitbox_links,
+            image: image_link,
+            hitboxes: hitbox_links,
         };
 
         vec_processed_imagedata.push(processed_imagedata);
