@@ -47,8 +47,8 @@ struct Title {
     cancel: Option<String>,
     caption: Option<String>,
     notes: Option<String>,
-    //hitbox_caption: Option<String>,
     //images: Option<String>,
+    //hitbox_caption: Option<String>,
     //hitboxes: Option<String>,
 }
 
@@ -67,6 +67,7 @@ async fn remove_tags(mut char_page_response_json: String) -> String {
         .replace(r#"&lt;/span&gt;"#, "")
         .replace(r#"&lt;br&gt;"#, ", ")
         .replace(r#"&lt;br/&gt;"#, ", ")
+        .replace(r#"&quot;"#, "")
         // Ino low profile
         .replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "")
         // Replace apostrophe
