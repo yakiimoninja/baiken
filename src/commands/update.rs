@@ -1,9 +1,9 @@
 mod framedata;
+mod framedata_db;
 mod images;
+mod images_db;
 mod info;
-mod framedata_json;
-mod images_json;
-mod info_json;
+mod info_db;
 use crate::{CHARS, Context, Error, check, find};
 
 #[derive(Debug, poise::ChoiceParameter)]
