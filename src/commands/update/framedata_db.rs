@@ -1,7 +1,6 @@
 extern crate ureq;
 use serde::Deserialize;
-use crate::{CHARS, MoveInfo};
-use std::{fs::File, io::Write};
+use rusqlite::{params, Connection as SqlConnection};
 
 #[derive(Deserialize, Debug)]
 struct Response {
@@ -52,9 +51,11 @@ struct Title {
     //hitboxes: Option<String>,
 }
 
-async fn remove_tags(mut char_page_response_json: String) -> String {
+pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
 
-    char_page_response_json = char_page_response_json
+    let empty = String::from("-");
+
+    let char_page_response_json = &char_page_response_json
         // Colorful text RED
         .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")
         // Colorful text BLUE
@@ -78,32 +79,22 @@ async fn remove_tags(mut char_page_response_json: String) -> String {
         .replace(r#";"#, r#"\n"#)
         .replace(r#"\\"#, "");
 
-    char_page_response_json
-}
-
-pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File, char_count: usize) {
-
-    let empty = String::from("-");
-    
-    char_page_response_json = remove_tags(char_page_response_json).await;
-
     let mut move_data_response: Response = serde_json::from_str(&char_page_response_json).unwrap();
     let char_move_data = &mut move_data_response.cargoquery;
-    let mut vec_processed_moves_info = Vec::new();
 
     for move_data in char_move_data {
         
         // Replacing None values with a generic '-'
-        if move_data.title.input.is_none(){
+        if move_data.title.input.is_none() {
             move_data.title.input = Some("-".to_string());
         }
-        else{
+        else {
             // Skips finish blow for sol
             if *move_data.title.input.as_ref().unwrap() == "j.XX during Homing Jump" {
                 continue;
             }
         }
-        if move_data.title.name.is_none(){
+        if move_data.title.name.is_none() {
             move_data.title.name = Some(move_data.title.input.as_ref().unwrap().to_string());
         }
         else {
@@ -122,38 +113,43 @@ pub async fn frames_to_json(mut char_page_response_json: String, mut file: &File
         || move_data.title.caption.as_ref().unwrap() == "Air") {
             move_data.title.caption = Some(String::from(""));
         }
+        
+        db.execute("
+INSERT INTO Move_Data
+(character_id, input, name, damage, guard, startup, active, recovery, on_hit, on_block, level, counter, move_type, risc_gain, risc_loss, wall_damage, input_tension, chip_ratio, otg_ratio, scaling, invincibility, cancel, caption, notes)
+VALUES
+(?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24)
 
-        // Serializing frame data
-        let processed_moves_info = MoveInfo {
-            input: move_data.title.input.as_ref().unwrap_or(&empty).to_string(),
-            name: move_data.title.name.as_ref().unwrap_or(&empty).to_string(),
-            damage: move_data.title.damage.as_ref().unwrap_or(&empty).to_string(),
-            guard: move_data.title.guard.as_ref().unwrap_or(&empty).to_string(),
-            startup: move_data.title.startup.as_ref().unwrap_or(&empty).to_string(),
-            active: move_data.title.active.as_ref().unwrap_or(&empty).to_string(),
-            recovery: move_data.title.recovery.as_ref().unwrap_or(&empty).to_string(),
-            on_hit: move_data.title.on_hit.as_ref().unwrap_or(&empty).to_string(),
-            on_block: move_data.title.on_block.as_ref().unwrap_or(&empty).to_string(),
-            level: move_data.title.level.as_ref().unwrap_or(&empty).to_string(),
-            counter: move_data.title.counter.as_ref().unwrap_or(&empty).to_string(),
-            move_type: move_data.title.move_type.as_ref().unwrap_or(&empty).to_string(),
-            risc_gain: move_data.title.risc_gain.as_ref().unwrap_or(&empty).to_string(),
-            risc_loss: move_data.title.risc_loss.as_ref().unwrap_or(&empty).to_string(),
-            wall_damage: move_data.title.wall_damage.as_ref().unwrap_or(&empty).to_string(),
-            input_tension: move_data.title.input_tension.as_ref().unwrap_or(&empty).to_string(),
-            chip_ratio: move_data.title.chip_ratio.as_ref().unwrap_or(&empty).to_string(),
-            otg_ratio: move_data.title.otg_ratio.as_ref().unwrap_or(&empty).to_string(),
-            scaling: move_data.title.scaling.as_ref().unwrap_or(&empty).to_string(),
-            invincibility: move_data.title.invincibility.as_ref().unwrap_or(&empty).to_string(),
-            cancel: move_data.title.cancel.as_ref().unwrap_or(&empty).to_string(),
-            caption: move_data.title.caption.as_ref().unwrap_or(&"".to_string()).to_string(),
-            notes: move_data.title.notes.as_ref().unwrap_or(&"".to_string()).to_string(),
-            //hitbox_caption: move_data.title.hitbox_caption.as_ref().unwrap_or(&"".to_string()).to_string(),
-        };
-
-        vec_processed_moves_info.push(processed_moves_info);
+ON CONFLICT(character_id, input)
+DO UPDATE SET 
+character_id = ?1, input = ?2, name = ?3, damage = ?4, guard = ?5, startup = ?6, active = ?7, recovery = ?8, on_hit = ?9, on_block = ?10, level = ?11, counter = ?12, move_type = ?13, risc_gain = ?14, risc_loss = ?15, wall_damage = ?16, input_tension = ?17, chip_ratio = ?18, otg_ratio = ?19, scaling = ?20, invincibility = ?21, cancel = ?22, caption = ?23, notes = ?24",
+        params![
+            char_count + 1,
+            move_data.title.input.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.name.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.damage.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.guard.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.startup.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.active.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.recovery.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.on_hit.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.on_block.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.level.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.counter.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.move_type.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.risc_gain.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.risc_loss.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.wall_damage.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.input_tension.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.chip_ratio.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.otg_ratio.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.scaling.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.invincibility.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.cancel.as_ref().unwrap_or(&empty).to_string(),
+            move_data.title.caption.as_ref().unwrap_or(&"".to_string()).to_string(),
+            move_data.title.notes.as_ref().unwrap_or(&"".to_string()).to_string(),
+        ]).unwrap();
     }
 
-    file.write_all(&(serde_json::to_vec_pretty(&vec_processed_moves_info).unwrap()))
-        .expect(&("\nFailed to serialize '".to_owned() + CHARS[char_count]+ ".json'."));
+    db
 }

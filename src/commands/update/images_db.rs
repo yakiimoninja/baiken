@@ -1,8 +1,7 @@
 extern crate ureq;
-use rusqlite::Connection as SqlConnection;
+use rusqlite::{params, Connection as SqlConnection};
 use md5::{Digest, Md5};
 use serde::Deserialize;
-use crate::{CHARS, ImageLinks};
 //use ureq::Error;
 //use std::fs::OpenOptions;
 
@@ -65,19 +64,44 @@ async fn make_link(image_name: String) -> String {
     image_link
 }
 
-pub async fn images_to_json(char_images_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
+/// Pushes move hitbox image links into Hitboxes table
+pub async fn push_hitboxes_to_db(db: SqlConnection, char_count: usize, move_input: String, hitbox: String) -> SqlConnection {
+
+    db.execute("
+INSERT INTO Hitboxes (character_id, input, hitbox, hitbox_caption)
+VALUES (?1, ?2, ?3, ?4)
+
+ON CONFLICT(character_id, input)
+DO UPDATE SET 
+hitbox = ?3, hitbox_caption = ?4", params![char_count + 1, move_input, hitbox, "TODO"]).unwrap();
+
+    db
+}
+
+/// Pushes a move image link into Move_Data table
+pub async fn push_images_to_db(db: SqlConnection, char_count: usize, move_input: String, image: String) -> SqlConnection {
+
+    db.execute("
+INSERT INTO Move_Data (character_id, input)
+VALUES (?1, ?2)
+
+ON CONFLICT(character_id, input)
+DO UPDATE SET 
+image = ?3", params![char_count + 1, move_input, image]).unwrap();
+
+    db
+}
+
+pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection, char_count: usize) -> SqlConnection {
 
     // Replace apostrophe
     let char_images_response_json = &char_images_response_json.replace(r#"&#039;"#, "'");
 
-    let mut image_data_response: ImageResponse = serde_json::from_str(&char_images_response_json).unwrap();
+    let mut image_data_response: ImageResponse = serde_json::from_str(char_images_response_json).unwrap();
     let char_image_data = &mut image_data_response.cargoquery;
-    let mut vec_processed_imagedata = Vec::new();
 
     for image_data in char_image_data {
         
-        // Variable that the produced hitbox links will reside
-        let mut hitbox_links: Vec<String> = Vec::new();
         // Variable that the produced image link will reside
         let image_link;
 
@@ -135,36 +159,26 @@ pub async fn images_to_json(char_images_response_json: &str, db: SqlConnection, 
         
         // If hitbox empty
         if image_data.title.hitboxes.is_none() {
-            hitbox_links.push("".to_string());
+            // Push image link in db here
+            db = push_hitboxes_to_db(db, char_count, image_data.title.input.as_ref().unwrap().to_string(), String::from("")).await;
         }
         else {
-            // // If image field contains only spaces
-            // if char_image_data[x].title.hitboxes.as_ref().unwrap().trim() == "" {
-            //     hitbox_links.push("".to_string());
-            // }
-            // Remove any hitbox images for throws cause they dont exist !!!!! this breaks wa 
-            //if char_image_data[x].title.hitboxes.as_ref().unwrap().trim().to_lowercase().contains("6d") {
-            //    hitbox_links.push("".to_string());
-            //}
-            //else{
             // Splitting the hitboxes names into a vector
             let hitbox_str: Vec<&str> = image_data.title.hitboxes.as_ref().unwrap().split(';').collect();
             
             for hitbox_string in &hitbox_str {
-                // Sending hitbox names to make_link to become a vector of links
-                hitbox_links.push(make_link(hitbox_string.to_string().trim().replace(' ', "_")).await);
+                // Push hitbox and or here
+                db = push_hitboxes_to_db(
+                    db, 
+                    char_count,
+                    image_data.title.input.as_ref().unwrap().to_string(),
+                    make_link(hitbox_string.to_string().trim().replace(' ', "_")).await
+                ).await;
             }
-            //}
         }
 
-        // Serializing image data
-        let processed_imagedata = ImageLinks {
-            input: image_data.title.input.as_ref().unwrap().to_string(),
-            image: image_link,
-            hitboxes: hitbox_links,
-        };
-
-        vec_processed_imagedata.push(processed_imagedata);
+        // Push image link into Move_Data table
+        db = push_images_to_db(db, char_count, image_data.title.input.as_ref().unwrap().to_string(), image_link).await;
     }
 
     db
