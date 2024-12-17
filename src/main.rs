@@ -76,9 +76,9 @@ pub struct MoveInfo {
     cancel: String,
     caption: String,
     notes: String,
-    //hitbox_caption: String,
     //images: String,
     //hitboxes: String,
+    //hitbox_caption: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
