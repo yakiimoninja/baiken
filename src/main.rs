@@ -84,8 +84,9 @@ pub struct MoveInfo {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ImageLinks {
     input: String,
-    move_img: String,
-    hitbox_img: Vec<String>,
+    image: String,
+    hitboxes: Vec<String>,
+    //hitbox_caption: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
