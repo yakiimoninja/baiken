@@ -79,7 +79,7 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
         .replace(r#";"#, r#"\n"#)
         .replace(r#"\\"#, "");
 
-    let mut move_data_response: Response = serde_json::from_str(&char_page_response_json).unwrap();
+    let mut move_data_response: Response = serde_json::from_str(char_page_response_json).unwrap();
     let char_move_data = &mut move_data_response.cargoquery;
 
     for move_data in char_move_data {

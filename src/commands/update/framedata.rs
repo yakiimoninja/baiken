@@ -43,7 +43,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
     }
     else {
 
-        println!("{}", ("Updating '".to_owned() + &specific_char + "' data.").green());
+        println!("{}", ("Updating '".to_owned() + specific_char + "' data.").green());
 
         // Creating request link
         let character_link = SITE_LINK.to_owned() + &specific_char.replace('_', " ") + SITE_HALF;
