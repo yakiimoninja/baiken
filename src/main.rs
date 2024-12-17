@@ -164,13 +164,8 @@ async fn main() {
 
     // Running initial checks
     println!();
-    check::data_folder_exists().await.expect("data_folder_exists");
-    check::character_folders_exist().await.expect("character_folders_exist");
-    check::character_jsons_exist().await.expect("character_jsons_exist");
-    check::character_images_exist().await.expect("character_images_exist");
-    check::character_info_exist().await.expect("character_info_exist");
-    check::nicknames_json_exists().await.expect("nicknames_json_exists");
-    check::gids_json_exists().await.expect("gids_json_exists");
+    check::data_db_exists().await.expect("data_db_exists");
+    check::gids_db_exists().await.expect("gids_db_exists");
 
     // FrameworkOptions contains all of poise's configuration option in one struct
     // Every option can be omitted to use its default value
