@@ -332,7 +332,7 @@
     "startup": "7",
     "active": "6",
     "recovery": "10",
-    "on_hit": "+13",
+    "on_hit": "+3",
     "on_block": "+3",
     "level": "4",
     "counter": "Mid",

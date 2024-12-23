@@ -135,7 +135,7 @@ pub async fn info_to_json(char_info_response_json: &str, db: SqlConnection, char
           _umo_processed_string = char_info.umo.as_ref().unwrap().to_string();
       }
 
-    db.execute("INSERT INTO Info 
+    db.execute("INSERT INTO info 
 (character_id, defense, guts, guard_balance, prejump, umo, forward_dash, backdash, backdash_duration, backdash_invincibility, backdash_airborne, backdash_distance, jump_duration, jump_height, high_jump_duration, high_jump_height, earliest_iad, ad_duration, ad_distance, abd_duration, abd_distance, movement_tension, jump_tension, airdash_tension, walk_speed, back_walk_speed, dash_initial_speed, dash_acceleration, dash_friction, jump_gravity, high_jump_gravity)
 VALUES
 (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24, ?25, ?26, ?27, ?28, ?29, ?30, ?31)

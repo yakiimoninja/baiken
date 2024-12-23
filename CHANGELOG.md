@@ -6,10 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-- Add sharding?
+- Create fn that auto makes the db if it doesnt exist.
+- Find a way to add aliases easily. json helper to update into db?
+- Find a non blocking way to update the db.
+- Fix this: &lt;span class=&quot;tooltip&quot; &gt;airborne&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;Sin is considered airborne if he is hit during backdash and grounded otherwise&lt;/span&gt;&lt;/span&gt;|24|1-6F|12|13|42|409.5|49|567.6|7|18/24|735.625|6/11|228.367|10|3|5|6.3|4.9|14|29|100|1.9|1.9
+
+### Fixed
+- Fix **`Millia Rage`** `Iron Savior` embed footer caption containing weird characters.
 
 ### Changed
-- Rework error handling. Now ephemeral.
+- Rework data storage to use a sqlite database insted of json files.
+- Rework error handling. Errors responses are now ephemeral.
 
 ## [1.0.0] - 2024-11-25
 

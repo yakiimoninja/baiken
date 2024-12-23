@@ -68,7 +68,7 @@ async fn make_link(image_name: String) -> String {
 pub async fn push_hitboxes_to_db(db: SqlConnection, char_count: usize, move_input: String, hitbox: String) -> SqlConnection {
 
     db.execute("
-INSERT INTO Hitboxes (character_id, input, hitbox, hitbox_caption)
+INSERT INTO hitboxes (character_id, input, hitbox, hitbox_caption)
 VALUES (?1, ?2, ?3, ?4)
 
 ON CONFLICT(character_id, input)
@@ -82,7 +82,7 @@ hitbox = ?3, hitbox_caption = ?4", params![char_count + 1, move_input, hitbox, "
 pub async fn push_images_to_db(db: SqlConnection, char_count: usize, move_input: String, image: String) -> SqlConnection {
 
     db.execute("
-INSERT INTO Move_Data (character_id, input)
+INSERT INTO moves (character_id, input)
 VALUES (?1, ?2)
 
 ON CONFLICT(character_id, input)

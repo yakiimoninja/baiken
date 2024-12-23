@@ -1,14 +1,11 @@
 use std::{fs, path::Path};
 use colored::Colorize;
-use crate::{
-    MoveAliases,
-    Nicknames,
-    MoveInfo,
-    Error,
-};
+use poise::serenity_prelude::json::to_string;
+use rusqlite::{params, Connection as SqlConnection};
+use crate::{ Error, MoveAliases, MoveInfo, Nicknames, CHARS};
 
 /// Function that finds and returns the character name from nicknames.json file.
-pub async fn find_character(character: &String) -> Result<String, Error> {
+pub async fn find_character(character: &str ) -> Result<String, Error> {
 
     // Flags that will be used for logic to determine output
     let character_found = false;
@@ -71,7 +68,7 @@ pub async fn find_character(character: &String) -> Result<String, Error> {
 }
 
 /// Function that finds and returns the index and then move from character json.
-pub async fn find_move_index(character_arg_altered: &String, mut character_move: String, moves_info: &[MoveInfo]) -> Result<usize, Error> {
+pub async fn find_move_index(character_arg_altered: &str, mut character_move: String, moves_info: &[MoveInfo]) -> Result<usize, Error> {
 
     // Flags that will be used for logic to determine output
     let move_found = false;
@@ -133,5 +130,37 @@ pub async fn find_move_index(character_arg_altered: &String, mut character_move:
         println!("{}", "Weird logic error in find_move".red());
         Err("Weird logic error in find_move".into())
     }
+}
 
+pub async fn make_aliases(){
+    let db = SqlConnection::open("data/data.db").unwrap();
+
+    for (x, character_arg_altered) in CHARS.iter().enumerate() {
+        // Checking if aliases for this characters moves exist
+        let aliases_path = "data/".to_owned() + character_arg_altered + "/aliases.json";
+        if Path::new(&aliases_path).exists() {
+            
+            // Reading the aliases json
+            let aliases_data = fs::read_to_string(&aliases_path)
+                .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
+            
+            // Deserializing the aliases json
+            let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
+
+            for alias_data in aliases_data {
+                for x_aliases in alias_data.aliases {
+                    
+                    // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
+                    // Change the given argument (character_move) to the actual move name instead of the alias
+                    println!("{}, {}, {}", x+1, alias_data.input, x_aliases.to_lowercase().trim().replace('.', ""));
+                    db.execute("
+INSERT INTO aliases (character_id, input, alias)
+VALUES (?1, ?2, ?3)
+",params![x+1, alias_data.input, x_aliases.to_lowercase().trim().replace('.', "").replace("-", "") ]).unwrap();
+                }
+            }
+        }
+    }
+
+    db.close();
 }

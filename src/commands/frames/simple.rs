@@ -1,7 +1,7 @@
 use std::{fs, string::String};
 use colored::Colorize;
 use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
-use crate::{check, find, ran, Context, Error, Gids, ImageLinks, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
+use crate::{check, find::{self, make_aliases}, ran, Context, Error, Gids, ImageLinks, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
 
 /// Display a move's frame data in a simplified view.
 #[poise::command(prefix_command, slash_command)]
@@ -20,6 +20,7 @@ pub async fn simple(
     // They must not be empty cause then the embed wont be sent
     let mut embed_image = IMAGE_DEFAULT.to_string();
 
+    make_aliases().await;
     if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
