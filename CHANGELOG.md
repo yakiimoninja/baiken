@@ -47,6 +47,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add the ability to display moves by catergory when using `/moves` command.
 - Add more data fields for `/info` command.
 
+### Removed
+- Remove `/fmeter` command. Its now a `/frames` subcommand.
+- Remove`/feedback` command. Its now renamed to `/report`.
+
 ### Fixed
 - Fix [0.30.2] tag.
 - Update framedata (new fields).
@@ -59,21 +63,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.30.1] - 2024-11-10
 
-### Removed
-- **`Potemkin`**:
-    - Removed `Kara Mega Fist` and aliases.
-
 ### Changed
 - Rewrite CHANGELOG.md
 
 ### Added
-- New github actions to check compilation errors.
-- New github action to create new releases.
-- New github action to creat release notes according to CHANGELOG.md.
+- Add new github actions to check compilation errors.
+- Add new github action to create new releases.
+- Add new github action to creat release notes according to CHANGELOG.md.
+
+### Removed
+- **`Potemkin`**:
+    - Remove `Kara Mega Fist` and aliases.
 
 - **`Potemkin`**:
-    - `214K` new alias `Flick`.
-    - `214[K]` new aliases `F.D.B. (Charged)`, `Flick!`, `FDB!`, `214K!`
+    - `214K` add new alias `Flick`.
+    - `214[K]` add new aliases `F.D.B. (Charged)`, `Flick!`, `FDB!`, `214K!`
 
 ### Fixed
 - Updated framedata
@@ -87,23 +91,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`Queen Dizzy`**:
-    - `214S` new aliases `Michael Sword`, `S Michael Sword`, `Sword`, `S Sword`, `MS`, `SMS`, `SS`.
-    - `214H` new aliases `H Michael Sword`, `H Sword`, `HMS`, `HS`.
-    - `214P/K` new aliases `We talked a lot together`, `Fish`, `WTALT`, `214P`, `214K`.
-    - `22H` new aliases `Wings of Light`, `Wings`, `WOL`.
-    - `236K` new aliases `For roasting chestnuts`, `Fireball`, `Deez nuts`, `FRCN`, `FB`, `DN`.
-    - `236S/H` new aliases `I used this to catch fish`, `Spike`, `Pillar`, `IUTTCF`, `CF`, `SP`, `PI`, `236S`, `236H`.
-    - `236S~6S/236H~6H` new aliases `Ice Field`, `Floor is lava`, `Floor is ice`, `IF`, `FIL`, `FII`, `236S~6S`, `236H~6H`, `236SS`, `236HH`.
-    - `632146S` new aliases `Imperial Ray`, `Super`, `Ice Super`, `IS`, `IR`.
-    - `632146H` new aliases `Gamma Ray`, `Lazer`, `Lazer Super`, `Kamehameha`, `LS`, `GR`.
+    - `214S` add new aliases `Michael Sword`, `S Michael Sword`, `Sword`, `S Sword`, `MS`, `SMS`, `SS`.
+    - `214H` add new aliases `H Michael Sword`, `H Sword`, `HMS`, `HS`.
+    - `214P/K` add new aliases `We talked a lot together`, `Fish`, `WTALT`, `214P`, `214K`.
+    - `22H` add new aliases `Wings of Light`, `Wings`, `WOL`.
+    - `236K` add new aliases `For roasting chestnuts`, `Fireball`, `Deez nuts`, `FRCN`, `FB`, `DN`.
+    - `236S/H` add new aliases `I used this to catch fish`, `Spike`, `Pillar`, `IUTTCF`, `CF`, `SP`, `PI`, `236S`, `236H`.
+    - `236S~6S/236H~6H` add new aliases `Ice Field`, `Floor is lava`, `Floor is ice`, `IF`, `FIL`, `FII`, `236S~6S`, `236H~6H`, `236SS`, `236HH`.
+    - `632146S` add new aliases `Imperial Ray`, `Super`, `Ice Super`, `IS`, `IR`.
+    - `632146H` add new aliases `Gamma Ray`, `Lazer`, `Lazer Super`, `Kamehameha`, `LS`, `GR`.
 
 - **`Chipp Zanuff`**:
-    - `214H` new aliases `Tiighrope`, `Rope`, `TR`.
+    - `214H` add new aliases `Tiighrope`, `Rope`, `TR`.
 
 ## [0.29.0] - 2024-10-30
-
-### Removed
-- Remove aliases for prefix commands.
 
 ### Changed
 - Make `/register` and `/feedback` command responses, ephemeral.
@@ -112,8 +113,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `README`.
 
 ### Added
-- New command `/xx` that disables easter eggs in current server. (Admin only)
-- New character **`Queen Dizzy`**.
+- Add new command `/xx` that disables easter eggs in current server. (Admin only)
+- Add new character **`Queen Dizzy`**.
+
+### Removed
+- Remove aliases for prefix commands.
 
 ### Fixed
 - Fix `/update` failing to update **`Asuka`** data. (Sorry Asuka bros)
@@ -126,7 +130,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`Zato-1`**:
-    - `22 During 214K(HOLD)` new aliases `Eddie Teleport`, `Swap`, `ET`, `TP`.
+    - `22 During 214K(HOLD)` add new aliases `Eddie Teleport`, `Swap`, `ET`, `TP`.
 
 ### Fixed
 - Update framedata.
@@ -135,9 +139,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`Bridget`**:
-    - `236S/H` new aliases `236S`, `236H`.
-    - `214S/H` new aliases `236S`, `236H`.
-    - `63214P` new alias `624P`.
+    - `236S/H` add new aliases `236S`, `236H`.
+    - `214S/H` add new aliases `236S`, `236H`.
+    - `63214P` add new alias `624P`.
 
 ## [0.28.0] - 2024-07-24
 
@@ -147,7 +151,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hyperlink titles for `/info` now redirect to corresponding character page.
 
 ### Added
-- New command `/stats` that displays Baiken's server and member count.
+- Add new command `/stats` that displays Baiken's server and member count.
 
 ### Fixed
 - Fix the parsing of `unique moment options` to not contain `[[GGST/CHAR/UMO|UMO]]` template in info.
@@ -157,22 +161,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`Slayer`**:
-    - New nickname `Dandy`. 
+    - Add new nickname `Dandy`. 
 
 - **`Johnny`**:
-    - New nickname `Lean`.
+    - Add new nickname `Lean`.
 
 - **`Johnny`**:
-    - `214K` new alias `KMF`.
-    - `214P` new alias `PMF`.
-    - `214S` new alias `SMF`.
-    - `j.214[P/K/S]` new aliases `j.214K!`, `j.214P!`, `j.214S!`, `JMF`.
-    - `j.214]K[` new aliases `AKMF`, `JKMF`.
-    - `j.214]P[` new aliases `APMF`, `JPMF`.
-    - `j.214]S[` new aliases `ASMF`, `JSMF`.
-    - `Mist Finer 44` new alias `MF44`.
-    - `Mist Finer 66` new alias `MF66`.
-    - `632146H` new alias `TMN`.
+    - `214K` add new alias `KMF`.
+    - `214P` add new alias `PMF`.
+    - `214S` add new alias `SMF`.
+    - `j.214[P/K/S]` add new aliases `j.214K!`, `j.214P!`, `j.214S!`, `JMF`.
+    - `j.214]K[` add new aliases `AKMF`, `JKMF`.
+    - `j.214]P[` add new aliases `APMF`, `JPMF`.
+    - `j.214]S[` add new aliases `ASMF`, `JSMF`.
+    - `Mist Finer 44` add new alias `MF44`.
+    - `Mist Finer 66` add new alias `MF66`.
+    - `632146H` add new alias `TMN`.
 
 ### Fixed
 - Update framedata.
@@ -181,18 +185,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`Slayer`**:
-    - `214K` new aliases `Dandy Step K`, `DSK`.
-	- `214P` new aliases `Dandy Step P`, `DSP`.
-	- `214P/K~H` new aliases `Master's Hammer`, `214KH`, `214PH`, `MH`, `Guard Crush`.
-	- `214P/K~K` new aliases `Bump Ahead`, `214KK`, `214PK`, `BA`, `Low`.
-	- `214P/K~P` new aliases `Pilebunker`, `214KP`, `214PP`, `PB`.
-	- `214P/K~S` new aliases `It's Late`, `214KS`, `214PS`, `IL`, `Overhead`.
-	- `236K` new aliases `Mappa Hunch K`, `MHK`.
-	- `236P` new aliases `Mappa Hunch P`, `MHP`.
-	- `44~6S` new aliases `Hand of Doom`, `446S`, `6S`, `Backdash S`, `BDS`, `HOD`.
-	- `63214H` new aliases `Bloodsucking Universe`, `Suck`, `BU`.
-	- `236236H` new aliases `Last Horizon`, `LH`, `Suck Super`.
-	- `632146S` new aliases `Super Mappa Hunch`, `Super`, `Naked`, `SMH`.
+    - `214K` add new aliases `Dandy Step K`, `DSK`.
+	- `214P` add new aliases `Dandy Step P`, `DSP`.
+	- `214P/K~H` add new aliases `Master's Hammer`, `214KH`, `214PH`, `MH`, `Guard Crush`.
+	- `214P/K~K` add new aliases `Bump Ahead`, `214KK`, `214PK`, `BA`, `Low`.
+	- `214P/K~P` add new aliases `Pilebunker`, `214KP`, `214PP`, `PB`.
+	- `214P/K~S` add new aliases `It's Late`, `214KS`, `214PS`, `IL`, `Overhead`.
+	- `236K` add new aliases `Mappa Hunch K`, `MHK`.
+	- `236P` add new aliases `Mappa Hunch P`, `MHP`.
+	- `44~6S` add new aliases `Hand of Doom`, `446S`, `6S`, `Backdash S`, `BDS`, `HOD`.
+	- `63214H` add new aliases `Bloodsucking Universe`, `Suck`, `BU`.
+	- `236236H` add new aliases `Last Horizon`, `LH`, `Suck Super`.
+	- `632146S` add new aliases `Super Mappa Hunch`, `Super`, `Naked`, `SMH`.
 
 ### Fixed
 - Fix message formatting when calling for Negative Edge moves.
@@ -201,7 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.26.0] - 2024-05-29
 
 ### Added
-- New character **`Slayer`**.
+- Add new character **`Slayer`**.
 
 ### Fixed
 - Update framedata.
@@ -210,10 +214,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`A.B.A`**:
-    - `63214P` new alias `624P`.
+    - `63214P` add new alias `624P`.
 
 - **`Leo Whitefang`**:
-    - `[s/h] h/s` new aliases `s/h`, `h/s`.
+    - `[s/h] h/s` add new aliases `s/h`, `h/s`.
 
 ### Fixed
 - Updated framedata.
@@ -226,7 +230,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **`A.B.A`**:
-    - New nickname `A.B.A.`.
+    - Add new nickname `A.B.A.`.
 
 ### Fixed
 - Update framedata.
@@ -234,42 +238,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.24.0] - 2024-03-29
 
 ### Added
-- New character **`A.B.A`**.
+- Add new character **`A.B.A`**.
 
 - **`A.B.A`**:
-    - New nicknames `AB`, `ABA`, `Paracelsus`.
+    - Add new nicknames `AB`, `ABA`, `Paracelsus`.
 
 - **`A.B.A`**:
-    - `c.S` new alias `5S`.
-	- `2D` new alias `Sweep`.
-	- `5[D]` new alias `5D!`.
-	- `JR c.S` new alias `JR5S`.
-	- `JR 5[D]` new alias `JR5D!`.    
-    - `214H` new aliases `Bonding and Dissolving`, `BND`.
-	- `214K` new aliases `Haul and Heed`, `HNH`.
-    - `214S` new aliases `Frenzy and Astonishment`, `FNA`.
-	- `236K` new aliases `Intertwine and Tilt`, `INT`.
-	- `236S` new aliases `Menace and Groan`, `MNG`.
-	- `236S~6S` new aliases `Restriction and Constraint`, `236S 6S`, `236S6S`, `RNC`.
-	- `623H` new aliases `Judgment and Sentiment`, `JNS`.
-	- `63214P` new aliases `Changing and Swaying`, `CNS`.
-	- `JR 214H` new aliases `JR Bonding and Dissolving`, `JR214H`, `JRBND`.
-	- `JR 214K` new aliases `JR Haul and Heed`, `JR214K`, `JRHNH`.
-	- `JR 236K` new aliases `JR Intertwine and Tilt`, `JR236K`, `JRINT`.
-	- `JR 236S` new aliases `JR Menace and Groan`, `JR236S`, `JRMNG`.
-	- `JR 236S~6S` new aliases `JR Restriction and Constraint`, `JR236S6S`, `JR236S 6S`, `JRRNC`.
-	- `JR 63214P` new aliases `JR Changing and Swaying`, `JR63214P`, `JRCNS`.
-	- `632146H` new aliases `The Law is Key, Key is King.`, `Super`.
-	- `632146K` new aliases `Keeper of the Key`, `Door Super`.
-	- `JR 632146H` new aliases `JR The Law is Key, Key is King.`, `JR Super`, `Install Super`.
-	- `JR 632146K` new aliases `JR Keeper of the Key`, `JR Door Super`, `Install Door Super`.
-    - `6D or 4D` new aliases `Throw`, `6D`, `4D`.
-	- `j.6D or j.4D` new aliases `Air Throw`, `J6D`, `J4D`.
-	- `236D` new aliases `Wild Assault`, `WA`.
-    - `236[D]` new aliases `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
+    - `c.S` add new alias `5S`.
+	- `2D` add new alias `Sweep`.
+	- `5[D]` add new alias `5D!`.
+	- `JR c.S` add new alias `JR5S`.
+	- `JR 5[D]` add new alias `JR5D!`.    
+    - `214H` add new aliases `Bonding and Dissolving`, `BND`.
+	- `214K` add new aliases `Haul and Heed`, `HNH`.
+    - `214S` add new aliases `Frenzy and Astonishment`, `FNA`.
+	- `236K` add new aliases `Intertwine and Tilt`, `INT`.
+	- `236S` add new aliases `Menace and Groan`, `MNG`.
+	- `236S~6S` add new aliases `Restriction and Constraint`, `236S 6S`, `236S6S`, `RNC`.
+	- `623H` add new aliases `Judgment and Sentiment`, `JNS`.
+	- `63214P` add new aliases `Changing and Swaying`, `CNS`.
+	- `JR 214H` add new aliases `JR Bonding and Dissolving`, `JR214H`, `JRBND`.
+	- `JR 214K` add new aliases `JR Haul and Heed`, `JR214K`, `JRHNH`.
+	- `JR 236K` add new aliases `JR Intertwine and Tilt`, `JR236K`, `JRINT`.
+	- `JR 236S` add new aliases `JR Menace and Groan`, `JR236S`, `JRMNG`.
+	- `JR 236S~6S` add new aliases `JR Restriction and Constraint`, `JR236S6S`, `JR236S 6S`, `JRRNC`.
+	- `JR 63214P` add new aliases `JR Changing and Swaying`, `JR63214P`, `JRCNS`.
+	- `632146H` add new aliases `The Law is Key, Key is King.`, `Super`.
+	- `632146K` add new aliases `Keeper of the Key`, `Door Super`.
+	- `JR 632146H` add new aliases `JR The Law is Key, Key is King.`, `JR Super`, `Install Super`.
+	- `JR 632146K` add new aliases `JR Keeper of the Key`, `JR Door Super`, `Install Door Super`.
+    - `6D or 4D` add new aliases `Throw`, `6D`, `4D`.
+	- `j.6D or j.4D` add new aliases `Air Throw`, `J6D`, `J4D`.
+	- `236D` add new aliases `Wild Assault`, `WA`.
+    - `236[D]` add new aliases `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
 
 - **`Millia Rage`**:
-    - `214H` new alias `Claw`.
+    - `214H` add new alias `Claw`.
 
 ### Fixed
 - Update framedata.
@@ -298,7 +302,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Clicking the provided link redirects to the move in the character page, instead of the top of the page.
 
 ### Added
-- New command `/info` that displays character information like `Backdash`, `Guts` etc.
+- Add new command `/info` that displays character information like `Backdash`, `Guts` etc.
 
 ### Fixed
 - Update framedata.
@@ -326,8 +330,8 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Bridget`**:
-    - `236K P` new aliases `236KP`.
-	- `236K K` new aliases `236KK`.
+    - `236K P` add new aliases `236KP`.
+	- `236K K` add new aliases `236KK`.
 
 ### Fixed
 - Fix **`Bridget`** `Move 236KP was not found!` when using `Brake` as an alias.
@@ -338,15 +342,15 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Axl Low`**:
-    - `214K` new aliases `Whistling Wind`, `Tornado`, `WW`.
-	- `214[K]` new aliases `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
+    - `214K` add new aliases `Whistling Wind`, `Tornado`, `WW`.
+	- `214[K]` add new aliases `Whistling Wind (Charged)`, `Charged Tornado`, `CWW`, `WWC`.
 
 - **`Elphelt`**:
-    - `236S/H` new aliases `Miss Charlotte`, `Fireball`, `FB`, `MC`.
-    - `j.236S/H` new aliases `Air Miss Charlotte`, `Air Fireball`, `JF`, `AF`, `JMC`, `AMC`.
+    - `236S/H` add new aliases `Miss Charlotte`, `Fireball`, `FB`, `MC`.
+    - `j.236S/H` add new aliases `Air Miss Charlotte`, `Air Fireball`, `JF`, `AF`, `JMC`, `AMC`.
 
 - **`Potemkin`**:
-	- `41236H` new aliases `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
+	- `41236H` add new aliases `Heat Tackle`, `Jet Thrusters`, `HT`, `JT`.
 
 ### Fixed
 - **`Johnny`**:
@@ -360,16 +364,16 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ## [0.19.0] - 2023-12-19
 
-### Removed
-- Remove autocomplete in most commands because it caused images to not load properly.
-
 ### Added
 - **`Elphelt Valentine`**:
-    - `214S~P` new aliases `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`, `214SP`.
-    - `214S~K` new aliases `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`, `214SK`.
-    - `214S~P/K~P` new aliases `Up High! (after Up High! or Down Low!)`, `Overhead Finisher`, `Rekka 22`, `Rekka 32`, `R22`, `R32`, `UHF`, `214SPP`, `214SKP`.
-    - `214S~P/K~K` new aliases `Down Low! (after Up High! or Down Low!)`, `Low Finisher`, `Rekka 33`, `Rekka 23`, `R23`, `R33`, `DLF`, `214SPK`, `214SKK`.
-    - `214S~H` new aliases `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`, `214SH`.
+    - `214S~P` add new aliases `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`, `214SP`.
+    - `214S~K` add new aliases `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`, `214SK`.
+    - `214S~P/K~P` add new aliases `Up High! (after Up High! or Down Low!)`, `Overhead Finisher`, `Rekka 22`, `Rekka 32`, `R22`, `R32`, `UHF`, `214SPP`, `214SKP`.
+    - `214S~P/K~K` add new aliases `Down Low! (after Up High! or Down Low!)`, `Low Finisher`, `Rekka 33`, `Rekka 23`, `R23`, `R33`, `DLF`, `214SPK`, `214SKK`.
+    - `214S~H` add new aliases `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`, `214SH`.
+
+### Removed
+- Remove autocomplete in most commands because it caused images to not load properly.
 
 ### Fixed
 - Update framedata.
@@ -377,35 +381,35 @@ Clicking the provided link redirects to the move in the character page, instead 
 ## [0.18.0] - 2023-12-08
 
 ### Added
-- New character **`Elphelt Valentine`**.
+- Add new character **`Elphelt Valentine`**.
 
 - **`Elphelt Valentine`**:
-    - New nicknames `Elphelt Valentine`, `Die`, `EV`.
+    - Add new nicknames `Elphelt Valentine`, `Die`, `EV`.
 
 - **`Elphelt Valentine`**:
-    -`236S` new aliases `Miss Charlotte`, `Fireball`, `FB`, `MC`.
-	-`236H` new aliases `Heavy Miss Charlotte`, `Heavy Fireball`, `HFB`, `HMC`.
-	-`214K` new aliases `Miss Charlotte (Out of Repair)`, `Buttslam`, `BS`, `MCOR`.
-	-`214H` new aliases `Bomb-Bom Chocolat`, `Grenade`, `BBC` (lol).
-	-`214S` new aliases `Here I Go!`, `Rekka`, `Rekka 1`, `R1`, `HIG`.
-	-`214S~S` new aliases `Here I Go!`, `Rekka`, `Rekka 1`, `R1`, `HIG`.
-	-`214S~P` new aliases `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`.
-	-`214S~K` new aliases `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`.
-	-`214S~H` new aliases `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`.
-	-`236236K` new aliases `Bomb-Bombnnière`, `Grenade Super`, `GS`, `BB`.
-	-`236236K Explosion` new aliases `Bomb-Bombnnière Explosion`, `Grenade Explosion`, `GE`, `BBE`.
-	-`632146H` new aliases `Juganto Da Parfeo`, `Super`, `Die`, `JDP`.
+    -`236S` add new aliases `Miss Charlotte`, `Fireball`, `FB`, `MC`.
+	-`236H` add new aliases `Heavy Miss Charlotte`, `Heavy Fireball`, `HFB`, `HMC`.
+	-`214K` add new aliases `Miss Charlotte (Out of Repair)`, `Buttslam`, `BS`, `MCOR`.
+	-`214H` add new aliases `Bomb-Bom Chocolat`, `Grenade`, `BBC` (lol).
+	-`214S` add new aliases `Here I Go!`, `Rekka`, `Rekka 1`, `R1`, `HIG`.
+	-`214S~S` add new aliases `Here I Go!`, `Rekka`, `Rekka 1`, `R1`, `HIG`.
+	-`214S~P` add new aliases `Up High!`, `Overhead`, `Rekka 2`, `R2`, `UH`.
+	-`214S~K` add new aliases `Down Low!`, `Low`, `Rekka 3`, `R3`, `DL`.
+	-`214S~H` add new aliases `Nailed It!`, `Rekka 4`, `Shotgun`, `R4`, `SG`, `NI`.
+	-`236236K` add new aliases `Bomb-Bombnnière`, `Grenade Super`, `GS`, `BB`.
+	-`236236K Explosion` add new aliases `Bomb-Bombnnière Explosion`, `Grenade Explosion`, `GE`, `BBE`.
+	-`632146H` add new aliases `Juganto Da Parfeo`, `Super`, `Die`, `JDP`.
     
 ### Fixed
 - Update framedata.
 
 ## [0.17.0] - 2023-11-25
 
+### Added
+- Add new easter egg.
+
 ### Removed
 - Remove `/aliases` command.
-
-### Added
-- New easter egg.
 
 ### Changed
 - Even more code cleanup.
@@ -427,17 +431,17 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ## [0.15.0] - 2023-11-21
 
-### Removed
-- Remove `/request` and replace with `/feedback`.
-
 ### Changed
 - Rename command arguments.
 - Rework `/help` command.
 - Major codebase cleanup.
 
 ### Added
-- New command `/feedback` replacement of `/request`.
+- Add new command `/feedback` replacement of `/request`.
 - Autocompletion of character names and options in commands.
+
+### Removed
+- Remove `/request` and replace with `/feedback`.
 
 ### Fixed
 - Update framedata.
@@ -445,51 +449,51 @@ Clicking the provided link redirects to the move in the character page, instead 
 ## [0.14.0] - 2023-09-15
 
 ### Added
-- New character **`Johnny`**.
+- Add new character **`Johnny`**.
 
 - **`All Characters`**:
-    -`236D` new aliases `Wild Assault`, `WA`.
-    -`236[D]` new aliases `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
+    -`236D` add new aliases `Wild Assault`, `WA`.
+    -`236[D]` add new aliases `Wild Assault Hold`, `WAH`, `WA!`, `236D!`.
 
 - **`Anji Mito`**:
-    - `236K~214P` new aliases `Midare`, `Fish`.
+    - `236K~214P` add new aliases `Midare`, `Fish`.
 
 - **`Faust`**:
-    - `236P` new aliases `22P`, `Spit`.
-    - `236[P]` new aliases `What Could This Be?`,`Item Eat`,`Eat`,`IE`,`236P!`
+    - `236P` add new aliases `22P`, `Spit`.
+    - `236[P]` add new aliases `What Could This Be?`,`Item Eat`,`Eat`,`IE`,`236P!`
 
 - **`Giovanna`**:
-    - `214H` new aliases `Chave`, `Dash`.
+    - `214H` add new aliases `Chave`, `Dash`.
 
 - **`I-No`**:
-    - `214S` new aliases `Mad Love Agitato`, `MLA`.
+    - `214S` add new aliases `Mad Love Agitato`, `MLA`.
 
 - **`Ramlethal Valentine`**:
-    - `236K` new aliases `Ondo`, `Rock`.
+    - `236K` add new aliases `Ondo`, `Rock`.
 
 - **`Zato-1`**:
-    -`22 During 214K(HOLD)` new aliases `Eddie Swap`, `ES`.
+    -`22 During 214K(HOLD)` add new aliases `Eddie Swap`, `ES`.
 
 - **`Johnny`**:
-    - `214H` new alias `Ensenga`.
-    - `214[P/K/S]` new aliases `Mist Finer Stance`, `214K!`, `214P!`, `214S!`, `MF`.
-    - `214]K[` new aliases `Mist Finer (Horizontal)`, `214K`, `Mist Finer`, `MFH`, `MFK`.
-    - `214]P[` new aliases `Mist Finer (Upward)`, `214P`, `Mist Finer Up`, `MFU`, `MFP`.
-    - `214]S[` new aliases `Mist Finer (Downward)`, `214S`, `Mist Finer Down`, `MFD`, `MFS`.
-    - `236H` new alias `Vault`.
-    - `236HH` new aliases `Vault Deal`, `Flip Card`, `VD`, `FC`.
-    - `236P/K/S` new aliases `Deal`, `Card`, `236P`, `236K`, `236S`.
-    - `Card hit by Mist Finer` new aliases `Turn Up`, `Card Cut, `, `TU`, `CC`.
-    - `H or D` new aliases `Mist Finer Cancel`, `MFC`.
-    - `j.214[P/K/S]` new aliases `Mist Finer Stance`, `Air Mist Finer Stance`, `AMF`.
-    - `j.214]K[` new aliases `Air Mist Finer (Horizontal)`, `j.214K`, `AMFH`, `AMFK`.
-    - `j.214]P[` new aliases `Air Mist Finer (Upward)`, `j.214k`, `AMFU`, `AMFP`.
-    - `j.214]S[` new aliases `Air Mist Finer (Downward)`, `j.214k`, `AMFD`, `AMFK`, `Overhead`.
-    - `j.236H` new aliases `Air Deal`, `AD`, `Air Card`, `AC`.
-    - `Mist Finer 44` new aliases `Mist Finer Dash (Backward)`, `MFBD`.
-    - `Mist Finer 66` new aliases `Mist Finer Dash (Forward)`, `MFFD`.
-    - `236236S` new aliases `Joker Trick`, `Card Super`, `JT`, `CS`.
-    - `632146H` new aliases `That's My Name`, `Super`.
+    - `214H` add new alias `Ensenga`.
+    - `214[P/K/S]` add new aliases `Mist Finer Stance`, `214K!`, `214P!`, `214S!`, `MF`.
+    - `214]K[` add new aliases `Mist Finer (Horizontal)`, `214K`, `Mist Finer`, `MFH`, `MFK`.
+    - `214]P[` add new aliases `Mist Finer (Upward)`, `214P`, `Mist Finer Up`, `MFU`, `MFP`.
+    - `214]S[` add new aliases `Mist Finer (Downward)`, `214S`, `Mist Finer Down`, `MFD`, `MFS`.
+    - `236H` add new alias `Vault`.
+    - `236HH` add new aliases `Vault Deal`, `Flip Card`, `VD`, `FC`.
+    - `236P/K/S` add new aliases `Deal`, `Card`, `236P`, `236K`, `236S`.
+    - `Card hit by Mist Finer` add new aliases `Turn Up`, `Card Cut, `, `TU`, `CC`.
+    - `H or D` add new aliases `Mist Finer Cancel`, `MFC`.
+    - `j.214[P/K/S]` add new aliases `Mist Finer Stance`, `Air Mist Finer Stance`, `AMF`.
+    - `j.214]K[` add new aliases `Air Mist Finer (Horizontal)`, `j.214K`, `AMFH`, `AMFK`.
+    - `j.214]P[` add new aliases `Air Mist Finer (Upward)`, `j.214k`, `AMFU`, `AMFP`.
+    - `j.214]S[` add new aliases `Air Mist Finer (Downward)`, `j.214k`, `AMFD`, `AMFK`, `Overhead`.
+    - `j.236H` add new aliases `Air Deal`, `AD`, `Air Card`, `AC`.
+    - `Mist Finer 44` add new aliases `Mist Finer Dash (Backward)`, `MFBD`.
+    - `Mist Finer 66` add new aliases `Mist Finer Dash (Forward)`, `MFFD`.
+    - `236236S` add new aliases `Joker Trick`, `Card Super`, `JT`, `CS`.
+    - `632146H` add new aliases `That's My Name`, `Super`.
 
 ### Fixed
 - Update framedata.
@@ -498,7 +502,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - `Asuka R`:
-    - New nicknames `Asuka`, `That Man`, `Oscar`.
+    - Add new nicknames `Asuka`, `That Man`, `Oscar`.
 
 ### Fixed
 - Fix and issue where using `/aliases` command for **`Jacko`** wouldn't display anything.
@@ -518,33 +522,33 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Bedman`**:
-    - `!H` new aliases `error 6E H`, `6EH`, `EH`.
-    - `!{H}` new aliases `Partial error 6E {H}`, `6E!H`, `P6EH`, `E!H`, `PEH`.
-    - `![H]` new aliases `Charged error 6E [H]`, `6E!!H`, `C6EH`, `E!!H`, `CEH`.
-    - `!P` new aliases `error 6E P`, `6EP`, `EP`.
-    - `!S` new aliases `error 6E S`, `6ES`, `ES`.
-    - `(236H) 214P` new aliases `call 0x$0.20 236H`, `Instant H`, `IH`, `C2H`.
-    - `(236P) 214P` new aliases `call 0x$0.20 236P`, `Instant P`, `IP`, `C2P`.
-    - `(236S) 214P` new aliases `call 0x$0.20 236S`, `Instant S`, `IS`, `C2S`.
-    - `13C !H` new aliases `13C error 6E H`, `13C6EH`, `13CEH`.
-    - `13C !P` new aliases `13C error 6E P`, `13C6EP`, `13CEP`.
-    - `13C !S` new aliases `13C error 6E S`, `13C6ES`, `13CES`.
-    - `13C (214H) 236P` new aliases `13C call 0x$0.20 H`, `13CC2H`.
-    - `13C (214P) 236P` new aliases `13C call 0x$0.20 P`, `13CC2P`.
-    - `13C (214S) 236P` new aliases `13C call 0x$0.20 S`, `13CC2S`.
-    - `214K` new aliases `call 0x$1.00`, `C1`, `Delay`.
-    - `214P` new aliases `call 0x$0.20`, `C2`, `Instant`.
-    - `236P` new aliases `call 4BA`, `4BA`, `Fireball`, `FB`.
-    - `236S` new aliases `call 4B3`, `4B3`, `Beyblade`, `BB`.
-    - `236H` new aliases `call 4B9 (Malfunction)`, `4B9`, `Arm Swing`, `Swing`, `AS`, `236H`.
-    - `236{H}` new aliases `Partial call 4B9 (Malfunction)`, `P4B9`, `Partial Arm Swing`, `Partial Swing`, `PAS`, `236!H`
-    - `236[H]` new aliases `Charged call 4B9 (Malfunction)`, `C4B9`, `Charged Arm Swing`, `Charged Swing`, `CAS`, `236!!H`.
+    - `!H` add new aliases `error 6E H`, `6EH`, `EH`.
+    - `!{H}` add new aliases `Partial error 6E {H}`, `6E!H`, `P6EH`, `E!H`, `PEH`.
+    - `![H]` add new aliases `Charged error 6E [H]`, `6E!!H`, `C6EH`, `E!!H`, `CEH`.
+    - `!P` add new aliases `error 6E P`, `6EP`, `EP`.
+    - `!S` add new aliases `error 6E S`, `6ES`, `ES`.
+    - `(236H) 214P` add new aliases `call 0x$0.20 236H`, `Instant H`, `IH`, `C2H`.
+    - `(236P) 214P` add new aliases `call 0x$0.20 236P`, `Instant P`, `IP`, `C2P`.
+    - `(236S) 214P` add new aliases `call 0x$0.20 236S`, `Instant S`, `IS`, `C2S`.
+    - `13C !H` add new aliases `13C error 6E H`, `13C6EH`, `13CEH`.
+    - `13C !P` add new aliases `13C error 6E P`, `13C6EP`, `13CEP`.
+    - `13C !S` add new aliases `13C error 6E S`, `13C6ES`, `13CES`.
+    - `13C (214H) 236P` add new aliases `13C call 0x$0.20 H`, `13CC2H`.
+    - `13C (214P) 236P` add new aliases `13C call 0x$0.20 P`, `13CC2P`.
+    - `13C (214S) 236P` add new aliases `13C call 0x$0.20 S`, `13CC2S`.
+    - `214K` add new aliases `call 0x$1.00`, `C1`, `Delay`.
+    - `214P` add new aliases `call 0x$0.20`, `C2`, `Instant`.
+    - `236P` add new aliases `call 4BA`, `4BA`, `Fireball`, `FB`.
+    - `236S` add new aliases `call 4B3`, `4B3`, `Beyblade`, `BB`.
+    - `236H` add new aliases `call 4B9 (Malfunction)`, `4B9`, `Arm Swing`, `Swing`, `AS`, `236H`.
+    - `236{H}` add new aliases `Partial call 4B9 (Malfunction)`, `P4B9`, `Partial Arm Swing`, `Partial Swing`, `PAS`, `236!H`
+    - `236[H]` add new aliases `Charged call 4B9 (Malfunction)`, `C4B9`, `Charged Arm Swing`, `Charged Swing`, `CAS`, `236!!H`.
 
 - **`Nagoriyuki`**:
-	- `j.S Level 1` new alias `j.S`.
-	- `j.S Level 2` new alias`j.S2`.
-	- `j.S Level 3` new alias`j.S3`.
-	- `j.S Level BR` new alias`j.SB`.
+	- `j.S Level 1` add new alias `j.S`.
+	- `j.S Level 2` add new alias`j.S2`.
+	- `j.S Level 3` add new alias`j.S3`.
+	- `j.S Level BR` add new alias`j.SB`.
 
 ### Fixed
 - Fix issue where **`Bedman`** was displaying different moves than what requested. \
@@ -558,13 +562,13 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Jack-O`**:
-    - New nickname `Jack-O Valentine`.
+    - Add new nickname `Jack-O Valentine`.
 
 - **`Bedman?`**:
-    - New nickname `Delilah`.
+    - Add new nickname `Delilah`.
 
 - **`Anji`**:
-    - `236P` new alias `Bird`.
+    - `236P` add new alias `Bird`.
 
 ### Fixed
 - Fix dots in `nicknames` command.
@@ -579,26 +583,26 @@ Clicking the provided link redirects to the move in the character page, instead 
 ## [0.10.4] - 2023-04-06
 
 ### Added
-- New character **`Bedman`**.
+- Add new character **`Bedman`**.
 
 - **`Bedman`**:
-    - New nicknames `Bedwoman`, `Bed`.
+    - Add new nicknames `Bedwoman`, `Bed`.
 
 - **`Bedman`**:
-    - `(236H) 214P`new alias `214PH`.
-    - `(236P) 214P` new alias `214PP`.
-    - `(236S) 214P` new alias `214PS`.
-    - `214K` new aliases `call 0x$1.00`, `C1`, `Delay`.
-    - `214P` new aliases `call 0x$0.20`, `C2`, `Instant`.
-    - `236H` new aliases `call 4B9 (Malfunction)`,`4B9`,`Arm Swing`,`Swing`,`AS`.
-    - `236P` new aliases `call 4BA`,`4BA`,`Fireball`,`FB`.
-    - `236S` new aliases `call 4B3`,`4B3`,`Beyblade`,`BB`.
-    - `j.214K`new aliases `Air call 0x$1.00`, `Air C1`, `Air Delay`, `AC1`, `AD`.
-    - `j.214P`new aliases `Air call 0x$0.20`, `Air C2`, `Air Instant`, `AC2`, `AI`.
-    - `j.236P` new aliases `Air call 4BA`,`Air 4BA`,`A4BA`,`Air Fireball`,`Air FB`,`AFB`.
-    - `j.236S` new aliases `Air call 4B3`,`Air 4B3`,`A4B3`,`Air Beyblade`,`Air BB`,`ABB`.
-    - `632146H` new aliases `call 4CC`,`4CC`,`Super`.
-    - `632146S` new aliases `call 13C`,`13C`,`Install`.
+    - `(236H) 214P` add new alias `214PH`.
+    - `(236P) 214P` add new alias `214PP`.
+    - `(236S) 214P` add new alias `214PS`.
+    - `214K` add new aliases `call 0x$1.00`, `C1`, `Delay`.
+    - `214P` add new aliases `call 0x$0.20`, `C2`, `Instant`.
+    - `236H` add new aliases `call 4B9 (Malfunction)`,`4B9`,`Arm Swing`,`Swing`,`AS`.
+    - `236P` add new aliases `call 4BA`,`4BA`,`Fireball`,`FB`.
+    - `236S` add new aliases `call 4B3`,`4B3`,`Beyblade`,`BB`.
+    - `j.214K` add new aliases `Air call 0x$1.00`, `Air C1`, `Air Delay`, `AC1`, `AD`.
+    - `j.214P` add new aliases `Air call 0x$0.20`, `Air C2`, `Air Instant`, `AC2`, `AI`.
+    - `j.236P` add new aliases `Air call 4BA`,`Air 4BA`,`A4BA`,`Air Fireball`,`Air FB`,`AFB`.
+    - `j.236S` add new aliases `Air call 4B3`,`Air 4B3`,`A4B3`,`Air Beyblade`,`Air BB`,`ABB`.
+    - `632146H` add new aliases `call 4CC`,`4CC`,`Super`.
+    - `632146S` add new aliases `call 13C`,`13C`,`Install`.
 
 ### Fixed
 - **`Leo Whitefang`**:
@@ -610,10 +614,10 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Chipp Zanuff`**:
-    - `236S` new alias `Rekka`.
+    - `236S` add new alias `Rekka`.
 
 - **`Ramlethal Valentine`**:
-    - `236236S` new alias `Motorboat`.
+    - `236236S` add new alias `Motorboat`.
 
 ### Fixed
 - Update framedata. 
@@ -639,7 +643,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Update the github README. Now has pictures to help explain each command.
 
 ### Added
-- New command `/fmeter` that displays visually the startup, active and recovery frames of a character's move.
+- Add new command `/fmeter` that displays visually the startup, active and recovery frames of a character's move.
 - Rework the command `/help` to display specific help messages if a command name, `notes` or `specifics` is given as an option.
 
 ### Fixed
@@ -652,24 +656,24 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Rework the `/update` command to update frames and or data for all or specific characters.
 
 ### Added
-- New `Attack Level`, `Scaling` and `Risc Gain` information fields for the `/frames` command.
-- New `Attack Level`, `Scaling` and `Risc Gain` information fields for the character json files.
+- Add new `Attack Level`, `Scaling` and `Risc Gain` information fields for the `/frames` command.
+- Add new `Attack Level`, `Scaling` and `Risc Gain` information fields for the character json files.
 - Auto parsing of images and hitboxes instead of having to grab them manually.
 
 - **`Ramlethal Valentine`**:
-    - New nickname `Borgar`.
+    - Add new nickname `Borgar`.
   
 - **`Happy Chaos`**:
-    - New nickname `Asshole`.
+    - Add new nickname `Asshole`.
 
 - **`Potemkin`**:
-    - `632146P` new alias `Hug`.
+    - `632146P` add new alias `Hug`.
 
 - **`Potemkin`**:
-    - `632146P` new alias `Super Hug`.
+    - `632146P` add new alias `Super Hug`.
   
 - **`Happy Chaos`**:
-    - `632146P` new alias `Balls`.
+    - `632146P` add new alias `Balls`.
 
 ### Fixed
 - Update framedata.
@@ -678,11 +682,11 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`All Characters`**:
-    - `2D` new alias `Sweep`.
+    - `2D` add new alias `Sweep`.
  
 - **`Sin Kiske`**:
-    - `632S` new alias `DP`.
-    - `632SS` new aliases `DP Followup`, `DPF`.
+    - `632S` add new alias `DP`.
+    - `632SS` add new aliases `DP Followup`, `DPF`.
 
 ### Fixed
 - Update framedata.
@@ -697,7 +701,7 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Nagoriyuki`**:
-    - `f.S Level 1` new alias `fs`.
+    - `f.S Level 1` add new alias `fs`.
 
 ### Fixed
 - Update framedata.
@@ -709,14 +713,14 @@ Clicking the provided link redirects to the move in the character page, instead 
 
 ### Added
 - **`Axl Low`**:
-    - New nicknames `Brit`,`British`.
+    - Add new nicknames `Brit`,`British`.
  
 - **`Zato-1`**:
-    - New nickname `Eddie`.
+    - Add new nickname `Eddie`.
 
 - **`Zato-1`**:
-    - `236K` new alias `Clap`.
-    - `]K[` new aliases `NE Clap`, `NEC`.
+    - `236K` add new alias `Clap`.
+    - `]K[` add new aliases `NE Clap`, `NEC`.
 
 ### Fixed
 - Update framedata.
@@ -724,43 +728,43 @@ Clicking the provided link redirects to the move in the character page, instead 
 ## [0.8.1] - 2022-11-25
 
 ### Added
-- New character **`Sin Kiske`**.
+- Add new character **`Sin Kiske`**.
 
 - **`Sin_Kiske`**:
-    - New nickname `SK`.
+    - Add new nickname `SK`.
 
 - **`Sol Badguy`**:
-    - `236P` new alias `Gunflame`.
-    - `214P` new alias `Feint Gunflame`.
+    - `236P` add new alias `Gunflame`.
+    - `214P` add new alias `Feint Gunflame`.
 
 - **`Sin Kiske`**:
-    - `c.S` new alias `5S`.
-    - `5[D]` new alias `5D!`.
-    - `236H` new aliases `Beak Driver`, `BD`.
-    - `236HH` new aliases `Beak Driver Followup`, `BDF`.
-    - `623S` new aliases `Hawk Baker`, `HB`.
-    - `623SS` new aliases `Hawk Baker Followup`, `HBF`.
-    - `214S` new aliases `Hoof Stomp`, `HS`.
-    - `214SS` new aliases `Hoof Stomp Followup`, `HSF`.
-    - `236K` new aliases `Elk Hunt`, `EH`.
-    - `236KK` new aliases `Elk Hunt Followup`, `EHF`.
-    - `66` new aliases `Gazelle Step`, `GS`.
-    - `63214P` new aliases `Still Growing`, `Eat`, `Food`, `SG`.
-    - `632146H` new aliases `R.T.L.`, `RTL`.
-    - `632146HH` new aliases `R.T.L. Followup`, `RTLF`.
-    - `236236P` new aliases `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
-    - `236236PP` new aliases `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
+    - `c.S` add new alias `5S`.
+    - `5[D]` add new alias `5D!`.
+    - `236H` add new aliases `Beak Driver`, `BD`.
+    - `236HH` add new aliases `Beak Driver Followup`, `BDF`.
+    - `623S` add new aliases `Hawk Baker`, `HB`.
+    - `623SS` add new aliases `Hawk Baker Followup`, `HBF`.
+    - `214S` add new aliases `Hoof Stomp`, `HS`.
+    - `214SS` add new aliases `Hoof Stomp Followup`, `HSF`.
+    - `236K` add new aliases `Elk Hunt`, `EH`.
+    - `236KK` add new aliases `Elk Hunt Followup`, `EHF`.
+    - `66` add new aliases `Gazelle Step`, `GS`.
+    - `63214P` add new aliases `Still Growing`, `Eat`, `Food`, `SG`.
+    - `632146H` add new aliases `R.T.L.`, `RTL`.
+    - `632146HH` add new aliases `R.T.L. Followup`, `RTLF`.
+    - `236236P` add new aliases `Tyrant Barrel`, `Tyrant Rave`, `TB`, `TR`.
+    - `236236PP` add new aliases `Tyrant Barrel Followup`, `Tyrant Rave Followup`, `TBF`, `TRF`.
 
 ## [0.8.0] - 2022-11-11
 
-### Removed
-- Remove all 2 letter nicknames for characters without 2 part names, as redundant. Bot can find characters as is.
-
 ### Added
-- New command `/nicknames` to print all existing nicknames for characters.
+- Add new command `/nicknames` to print all existing nicknames for characters.
 
 - **`Zato-1`**:
-    - New nickname `Zato One`.
+    - Add new nickname `Zato One`.
+
+### Removed
+- Remove all 2 letter nicknames for characters without 2 part names, as redundant. Bot can find characters as is.
 
 ## [0.7.6] - 2022-11-05
  
@@ -777,89 +781,89 @@ Clicking the provided link redirects to the move in the character page, instead 
 - Add the full name as a nickname for all characters applicable.
 
 - **`Sol Badguy`**:
-    - New nickname `Sol Goodman`.
+    - Add new nickname `Sol Goodman`.
 
 - **`All Characters`**:
-    - `c.S` new alias `5S`.
+    - `c.S` add new alias `5S`.
 
 - **`Bridget`**:
-    - `SS` new alias `5SS`.
-    - `HH` new alias `5HH`.
+    - `SS` add new alias `5SS`.
+    - `HH` add new alias `5HH`.
     - `236KP` modified alias from `SB` to `SLB` due to alias overlap.
     - `236KK` modified alias from `SS` to `SLS` due to alias overlap.
 
 - **`Chipp Zanuff`**
-    - `236P` new aliases `P Alpha`, `PA`.
-    - `j.236P` new aliases `Air P Alpha`, `APA`.
-    - `236K` new aliases `K Alpha`, `KA`.
-    - `j.236K` new aliases `Air K Alpha`, `AKA`.
-    - `623S` new alias `Beta`.
-    - `j.623S` new aliases `Air Beta`, `AB`.
-    - `236H` new alias `Gamma`.
+    - `236P` add new aliases `P Alpha`, `PA`.
+    - `j.236P` add new aliases `Air P Alpha`, `APA`.
+    - `236K` add new aliases `K Alpha`, `KA`.
+    - `j.236K` add new aliases `Air K Alpha`, `AKA`.
+    - `623S` add new alias `Beta`.
+    - `j.623S` add new aliases `Air Beta`, `AB`.
+    - `236H` add new alias `Gamma`.
 
 ## [0.7.4] - 2022-10-14
+
+### Added
+- **`Axl Low`**:
+    - `j.236H` add new alias `TKB`.
+
+- **`Baiken`**:
+    - `j.214214P` add new alias `Air Kenjyu`.
+
+- **`Faust`**:
+    - `214P` add new alias `P Scarecrow`.
+    - `214K` add new alias `K Scarecrow`.
+    - `214S` add new alias `S Scarecrow`.
+
+- **`I-no`**:
+    - `j.236K` add new alias `K Sultry Performance`.
+    - `236H` add new alias `H Stroke The Big Tree`.
+
+- **`Ky Kiske`**:
+    - `DI 236K` add new alias `DI Stun Dipper`.
+    - `DI 214K` add new alias `DI Foudre Arc`.
+    - `DI 214S` add new alias `DI Dire Eclat`.
+    - `DI 236236P` add new alias `DI Sacred Edge`.
+
+- **`Leo Whitefang`**:
+    - `bt.P` add new aliases `Bt Punch`,`BTP`.
+    - `bt.K` add new aliases `Bt Low`, `BTK`, `BK`.
+    - `bt.S` add new aliases `Bt Cross`, `BTS`.
+    - `bt.H` add new aliases `Bt Overhead`, `BTH`, `BH`.
+    - `bt.D` add new aliases `Back Turn Dust`, `Backturn Dust`, `Back Turn Parry`, `Bt Parry`.
+    - `bt.22` add new alias `Bt Cancel`.
+    - `bt.214K` add new aliases `Bt Command Grab`,`Bt Grab`,`Bt Throw`,`BTCG`,`BTG`,`BTT`. 
+    - `bt.214H` add new alias `Bt Blitz`.
+
+- **`May`**:
+    - `[4]6S` add new alias `S Dolphin`.
+    - `[2]8S` add new alias `S Up Dolphin`.
+
+- **`Millia Rage`**:
+    - `236S` add new alias `S Disk`.
+    - `236H` add new alias `H Disk`.
+
+- **`Nagoriyuki`**:
+    - `623H` add new aliases `Shizuriyuki 1`, `DP1`.
+    - `623HH` add new aliases `Shizuriyuki 2`, `DP2`.
+
+- **`Potemkin`**:
+    - `Reflect Projectile` add new alias `RP`.
+
+- **`Ramlethal Valentine`**:
+    - `236S` add new alias `S Sword Throw`.
+
+- **`Sol Badguy`**:
+    - `214P` add new alias `Feint Fireball`.
+    - `623S` add new alias `S Volcanic Viper`.
+    - `236K` add new aliases `Bandit Revolver 1`, `BR1`.
+    - `236KK` add new aliases `Bandit Revolver 2`, `BR2`.
+    - `j.236K` add new aliases `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
+    - `j.236KK` add new aliases `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
 
 ### Removed
 - **`Leo Whitefang`**:
     - `bt.214K` remove alias `BTP` as duplicate.
-
-### Added
-- **`Axl Low`**:
-    - `j.236H` new alias `TKB`.
-
-- **`Baiken`**:
-    - `j.214214P` new alias `Air Kenjyu`.
-
-- **`Faust`**:
-    - `214P` new alias `P Scarecrow`.
-    - `214K` new alias `K Scarecrow`.
-    - `214S` new alias `S Scarecrow`.
-
-- **`I-no`**:
-    - `j.236K` new alias `K Sultry Performance`.
-    - `236H` new alias `H Stroke The Big Tree`.
-
-- **`Ky Kiske`**:
-    - `DI 236K` new alias `DI Stun Dipper`.
-    - `DI 214K` new alias `DI Foudre Arc`.
-    - `DI 214S` new alias `DI Dire Eclat`.
-    - `DI 236236P` new alias `DI Sacred Edge`.
-
-- **`Leo Whitefang`**:
-    - `bt.P` new aliases `Bt Punch`,`BTP`.
-    - `bt.K` new aliases `Bt Low`, `BTK`, `BK`.
-    - `bt.S` new aliases `Bt Cross`, `BTS`.
-    - `bt.H` new aliases `Bt Overhead`, `BTH`, `BH`.
-    - `bt.D` new aliases `Back Turn Dust`, `Backturn Dust`, `Back Turn Parry`, `Bt Parry`.
-    - `bt.22` new alias `Bt Cancel`.
-    - `bt.214K` new aliases `Bt Command Grab`,`Bt Grab`,`Bt Throw`,`BTCG`,`BTG`,`BTT`. 
-    - `bt.214H` new alias `Bt Blitz`.
-
-- **`May`**:
-    - `[4]6S` new alias `S Dolphin`.
-    - `[2]8S` new alias `S Up Dolphin`.
-
-- **`Millia Rage`**:
-    - `236S` new alias `S Disk`.
-    - `236H` new alias `H Disk`.
-
-- **`Nagoriyuki`**:
-    - `623H` new aliases `Shizuriyuki 1`, `DP1`.
-    - `623HH` new aliases `Shizuriyuki 2`, `DP2`.
-
-- **`Potemkin`**:
-    - `Reflect Projectile` new alias `RP`.
-
-- **`Ramlethal Valentine`**:
-    - `236S` new alias `S Sword Throw`.
-
-- **`Sol Badguy`**:
-    - `214P` new alias `Feint Fireball`.
-    - `623S` new alias `S Volcanic Viper`.
-    - `236K` new aliases `Bandit Revolver 1`, `BR1`.
-    - `236KK` new aliases `Bandit Revolver 2`, `BR2`.
-    - `j.236K` new aliases `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
-    - `j.236KK` new aliases `Air Bandit Revolver`, `Air Bandit Revolver 1`, `JBR1`, `ABR`, `ABR1`.
 
 ### Fixed 
 - Update framedata.
@@ -877,10 +881,10 @@ Say less my guy.
 - **`May`**: new nickname `Totsugeki`.
 
 - **`Nagoriyuki`**:
-    - `j.D Level 1` new alias `j.D`.
-    - `j.D Level 2` new alias `j.D2`.
-    - `j.D Level 3` new alias `j.D3`.
-    - `j.D Level BR` new alias `j.DB`.
+    - `j.D Level 1` add new alias `j.D`.
+    - `j.D Level 2` add new alias `j.D2`.
+    - `j.D Level 3` add new alias `j.D3`.
+    - `j.D Level BR` add new alias `j.DB`.
 
 ### Fixed
 - Fix bot message formatting.
@@ -893,7 +897,7 @@ Say less my guy.
 
 ### Added
 - **`Millia Rage`**:
-    - `j.236K` new alias `Turbofall`.
+    - `j.236K` add new alias `Turbofall`.
 
 ## [0.7.1] - 2022-09-21
 
@@ -905,13 +909,9 @@ Say less my guy.
 - **`Goldlewis`**: new nickname `GL`.
 
 - **`Chipp Zanuff`**:
-    - `63214S` new alias `Leaf Grab`.
+    - `63214S` add new alias `Leaf Grab`.
 
 ## [0.7.0] - 2022-09-17
-
-### Removed
-- Replace prefix commands with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes to Discord's API.
-- Remove the current easter egg.
 
 ### Changed
 - Rework how the `request` command works.
@@ -920,23 +920,27 @@ Say less my guy.
 ### Added
 - Refactor code to support slash commands and the new gateway intents.
 - Slash commands have context menus to help with command execution.
-- New easter egg.
+- Add new easter egg.
+
+### Removed
+- Replace prefix commands with [slash commands](https://github.com/yakiimoninja/baiken#commands) from `19/September/2022` due to changes to Discord's API.
+- Remove the current easter egg.
 
 - **`Baiken`** new nickname `Bacon`.
 - **`Bridget`** new nickname `Brisket`.
  
 - **`Bridget`**:
-    - `236S/H` new aliases `Stop and Dash`, `Fireball`, `Yoyo Throw`, `SD`, `YYT`.
-    - `214S/H` new aliases `Stop and Dash Return`, `Return Fireball`, `Yoyo Return`, `SDR`, `YYR`.
-    - `214K` new aliases `Rolling Movement`, `Ball`, `Spin`, `Sonic`, `Sonic Spin`, `RM`.
-    - `623P` new aliases `Starship`, `DP`.
-    - `236K` new aliases `Kick Start My Heart`, `Slide`, `KSMH`.
-    - `236K P` new aliases `Brake`, `Slide Brake`, `SB`.
-    - `236K K` new aliases `Shoot`, `Slide Shoot`, `SS`.
+    - `236S/H` add new aliases `Stop and Dash`, `Fireball`, `Yoyo Throw`, `SD`, `YYT`.
+    - `214S/H` add new aliases `Stop and Dash Return`, `Return Fireball`, `Yoyo Return`, `SDR`, `YYR`.
+    - `214K` add new aliases `Rolling Movement`, `Ball`, `Spin`, `Sonic`, `Sonic Spin`, `RM`.
+    - `623P` add new aliases `Starship`, `DP`.
+    - `236K` add new aliases `Kick Start My Heart`, `Slide`, `KSMH`.
+    - `236K P` add new aliases `Brake`, `Slide Brake`, `SB`.
+    - `236K K` add new aliases `Shoot`, `Slide Shoot`, `SS`.
     - `j.236K`  new aliases `Roger Dive`, `Dive Kick`, `RD`, `DK`.
-    - `63214P` new aliases `Rock the Baby`, `Command Grab`, `Grab`, `RTB`, `CG`.
-    - `632146S` new aliases `Loop the Loop`, `Teddy Super`, `Roger Super`, `TS`, `RS`, `LTL`.
-    - `632146H` new aliases `Return of the Killing Machine`, `Fire Teddy Super`, `Fire Roger Super`, `FRS`, `FTS`, `ROTKM`.
+    - `63214P` add new aliases `Rock the Baby`, `Command Grab`, `Grab`, `RTB`, `CG`.
+    - `632146S` add new aliases `Loop the Loop`, `Teddy Super`, `Roger Super`, `TS`, `RS`, `LTL`.
+    - `632146H` add new aliases `Return of the Killing Machine`, `Fire Teddy Super`, `Fire Roger Super`, `FRS`, `FTS`, `ROTKM`.
 
 ### Fixed
 - Fix **`Bridget`** missing images.
@@ -987,22 +991,22 @@ Say less my guy.
 - Add easter egg interaction when `b.f` is used while other frame data bots are present on the same server.
 
 - **`Nagoriyuki`**:
-    - `f.S Level 1` new alias `f.S`.
-    - `f.S Level 2` new alias `f.S2`.
-    - `f.S Level 3` new alias `f.S3`.
-    - `f.S Level BR` new alias `f.SB`.
-    - `f.SS Level 1` new alias `f.SS`.
-    - `f.SS Level 2` new alias `f.SS2`.
-    - `f.SS Level 3` new alias `f.SS3`.
-    - `f.SS Level BR` new alias `f.SSB`.
-    - `f.SSS Level 1` new alias `f.SSS`.
-    - `f.SSS Level 2` new alias `f.SSS2`.
-    - `f.SSS Level 3` new alias `f.SSS3`.
-    - `f.SSS Level BR` new alias `f.SSSB`.
-    - `2S Level 1` new alias `2S`.
-    - `2S Level 2` new alias `2S2`.
-    - `2S Level 3` new alias `2S3`.
-    - `2S Level BR` new alias `2SB`.
+    - `f.S Level 1` add new alias `f.S`.
+    - `f.S Level 2` add new alias `f.S2`.
+    - `f.S Level 3` add new alias `f.S3`.
+    - `f.S Level BR` add new alias `f.SB`.
+    - `f.SS Level 1` add new alias `f.SS`.
+    - `f.SS Level 2` add new alias `f.SS2`.
+    - `f.SS Level 3` add new alias `f.SS3`.
+    - `f.SS Level BR` add new alias `f.SSB`.
+    - `f.SSS Level 1` add new alias `f.SSS`.
+    - `f.SSS Level 2` add new alias `f.SSS2`.
+    - `f.SSS Level 3` add new alias `f.SSS3`.
+    - `f.SSS Level BR` add new alias `f.SSSB`.
+    - `2S Level 1` add new alias `2S`.
+    - `2S Level 2` add new alias `2S2`.
+    - `2S Level 3` add new alias `2S3`.
+    - `2S Level BR` add new alias `2SB`.
 
 ### Fixed
 - Fix missing move image and hitboxes for:
@@ -1026,10 +1030,6 @@ Say less my guy.
 
 ## [0.5.0]
 
-### Removed
-- Remove patch notes folder and moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
-- Remove the command aliases `hit` and `hitbox` from `b.h`.
-
 ### Changed
 - **`Happy Chaos`**:
     - `Focus 214S H` change alias `Fire` to `Focus Fire`.
@@ -1039,35 +1039,39 @@ Say less my guy.
 
 ### Added
 - **`Nagoriyuki`**:
-    - `5H Level 1` new alias `5H`.
-    - `5H Level 2` new alias `5H2`.
-    - `5H Level 3` new alias `5H3`.
-    - `5H Level BR` new alias `5HB`.
-    - `2H Level 1` new alias `2H`.
-    - `2H Level 2` new alias `2H2`.
-    - `2H Level 3` new alias `2H3`.
-    - `2H Level BR` new alias `2HB`.
-    - `6H Level 1` new alias `6H`.
-    - `6H Level 2` new alias `6H2`.
-    - `6H Level 3` new alias `6H3`.
-    - `6H Level BR` new alias `6HB`.
-    - `j.H Level 1` new alias `jH`.
-    - `j.H Level 2` new alias `jH2`.
-    - `j.H Level 3` new alias `jH3`.
-    - `j.H Level BR` new alias `jHB`.
+    - `5H Level 1` add new alias `5H`.
+    - `5H Level 2` add new alias `5H2`.
+    - `5H Level 3` add new alias `5H3`.
+    - `5H Level BR` add new alias `5HB`.
+    - `2H Level 1` add new alias `2H`.
+    - `2H Level 2` add new alias `2H2`.
+    - `2H Level 3` add new alias `2H3`.
+    - `2H Level BR` add new alias `2HB`.
+    - `6H Level 1` add new alias `6H`.
+    - `6H Level 2` add new alias `6H2`.
+    - `6H Level 3` add new alias `6H3`.
+    - `6H Level BR` add new alias `6HB`.
+    - `j.H Level 1` add new alias `jH`.
+    - `j.H Level 2` add new alias `jH2`.
+    - `j.H Level 3` add new alias `jH3`.
+    - `j.H Level BR` add new alias `jHB`.
 
 - **`Goldlewis Dickinson`**:
-    - `214S Level 1` new alias `D1`.
-    - `214S Level 2` new aliases `Thunderbird 2`, `Drone 2`,`D2`. 
-    - `214S Level 3` new aliases `Thunderbird 3`, `Drone 3`,`D3`.
-    - `236S Level 1` new aliases `Minigun`, `MG1`, `G1`.
-    - `236S Level 2` new aliases `Skyfish 2`, `Minigun 2`, `MG2`, `Gun 2`, `G2`.
-    - `236S Level 3` new aliases `Skyfish 3`, `Minigun 3`, `MG3`, `Gun 3`, `G3`.
-    - `720P` new aliases `Down With The System 2`, `Super 2`.
-    - `1080P` new aliases `Down With The System 3`, `Super 3`.
-    - `236236K Level 1` new alias `L1`.
-    - `236236K Level 2` new aliases `Burn It Down 2`, `Laser 2`, `Laser Super 2`, `L2`.
-    - `236236K Level 3` new aliases `Burn It Down 3`, `Laser 3`, `Laser Super 3`, `L3`.
+    - `214S Level 1` add new alias `D1`.
+    - `214S Level 2` add new aliases `Thunderbird 2`, `Drone 2`,`D2`. 
+    - `214S Level 3` add new aliases `Thunderbird 3`, `Drone 3`,`D3`.
+    - `236S Level 1` add new aliases `Minigun`, `MG1`, `G1`.
+    - `236S Level 2` add new aliases `Skyfish 2`, `Minigun 2`, `MG2`, `Gun 2`, `G2`.
+    - `236S Level 3` add new aliases `Skyfish 3`, `Minigun 3`, `MG3`, `Gun 3`, `G3`.
+    - `720P` add new aliases `Down With The System 2`, `Super 2`.
+    - `1080P` add new aliases `Down With The System 3`, `Super 3`.
+    - `236236K Level 1` add new alias `L1`.
+    - `236236K Level 2` add new aliases `Burn It Down 2`, `Laser 2`, `Laser Super 2`, `L2`.
+    - `236236K Level 3` add new aliases `Burn It Down 3`, `Laser 3`, `Laser Super 3`, `L3`.
+
+### Removed
+- Remove patch notes folder and moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
+- Remove the command aliases `hit` and `hitbox` from `b.h`.
 
 ### Fixed 
 - Fix `b.f` broken move image links for:
@@ -1090,11 +1094,11 @@ Say less my guy.
 
 ### Added
 - `Leo Whitefang`:
-    - Autoguard attack `[s/h] h/s` new aliases `s!h` and `h!s`.
+    - Autoguard attack `[s/h] h/s` add new aliases `s!h` and `h!s`.
 
 - `Faust`:
-    - `236S` new alias `MMM`.
-    - `j236S` new aliases `AMMM`, `JMMM`.
+    - `236S` add new alias `MMM`.
+    - `j236S` add new aliases `AMMM`, `JMMM`.
 
 ### Fixed
 - Fix `b.h` missing hitbox images for:
@@ -1124,26 +1128,26 @@ Say less my guy.
 
 ### Added
 - **`Sol Badguy`**: 
-    - New nickname `Helios` (you can finally stop requesting it lol). 
+    - Add new nickname `Helios` (you can finally stop requesting it lol). 
 
 - **`I-no`**:
     - `236H`: new alias `H Stroke`.
 
 ## [0.4.1]
 
-### Removed
-- Unnecessary data from characters' json files.
-
 ### Changed
-- New `b.?` / `b.help` message.
+- Add new `b.?` / `b.help` message.
 
 ### Added
 - Universal `throw`: new aliases `6D` and `4D`.
 
+### Removed
+- Unnecessary data from characters' json files.
+
 - **`May`**:
-    - `214P` new alias `Beachball`.
-    - `214K` new alias `K Beachball`.
-    - `623K` new alias `OHK`.
+    - `214P` add new alias `Beachball`.
+    - `214K` add new alias `K Beachball`.
+    - `623K` add new alias `OHK`.
 
 - **`Testament`**:
     - `236*` : Change version indicator in aliases.
@@ -1158,8 +1162,8 @@ Say less my guy.
 ### Added 
 
 - Support for [nicknames.](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json).
-- New aliases for various moves.
-- New patch notes page.
+- Add new aliases for various moves.
+- Add new patch notes page.
 
 
 [1.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/1.0.0
