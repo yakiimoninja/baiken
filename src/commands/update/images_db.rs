@@ -1,5 +1,5 @@
 extern crate ureq;
-use rusqlite::{params, Connection as SqlConnection};
+use rusqlite::{named_params, params, Connection as SqlConnection};
 use md5::{Digest, Md5};
 use serde::Deserialize;
 //use ureq::Error;
@@ -68,12 +68,19 @@ async fn make_link(image_name: String) -> String {
 pub async fn push_hitboxes_to_db(db: SqlConnection, char_count: usize, move_input: String, hitbox: String) -> SqlConnection {
 
     db.execute("
-INSERT INTO hitboxes (character_id, input, hitbox, hitbox_caption)
-VALUES (?1, ?2, ?3, ?4)
+INSERT INTO hitboxes (move_id, hitbox, hitbox_caption)
+VALUES
+((SELECT id FROM moves WHERE (character_id = :character_id AND input = :input)), :hitbox, :hitbox_caption)
 
-ON CONFLICT(character_id, input)
+ON CONFLICT(move_id, hitbox)
 DO UPDATE SET 
-hitbox = ?3, hitbox_caption = ?4", params![char_count + 1, move_input, hitbox, "TODO"]).unwrap();
+hitbox = :hitbox, hitbox_caption = :hitbox_caption",
+        named_params!{
+            ":character_id": char_count + 1,
+            ":input": move_input, 
+            ":hitbox": hitbox, 
+            ":hitbox_caption": "TODO"
+        }).unwrap();
 
     db
 }
@@ -83,11 +90,16 @@ pub async fn push_images_to_db(db: SqlConnection, char_count: usize, move_input:
 
     db.execute("
 INSERT INTO moves (character_id, input)
-VALUES (?1, ?2)
+VALUES (:character_id, :input)
 
 ON CONFLICT(character_id, input)
 DO UPDATE SET 
-image = ?3", params![char_count + 1, move_input, image]).unwrap();
+image = :image",
+        named_params!{
+            ":character_id": char_count + 1,
+            ":input": move_input, 
+            ":image": image
+        }).unwrap();
 
     db
 }

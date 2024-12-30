@@ -1,5 +1,5 @@
 extern crate ureq;
-use rusqlite::{params, Connection as SqlConnection};
+use rusqlite::{named_params, Connection as SqlConnection};
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
@@ -135,47 +135,49 @@ pub async fn info_to_json(char_info_response_json: &str, db: SqlConnection, char
           _umo_processed_string = char_info.umo.as_ref().unwrap().to_string();
       }
 
-    db.execute("INSERT INTO info 
+    db.execute("
+INSERT INTO info
 (character_id, defense, guts, guard_balance, prejump, umo, forward_dash, backdash, backdash_duration, backdash_invincibility, backdash_airborne, backdash_distance, jump_duration, jump_height, high_jump_duration, high_jump_height, earliest_iad, ad_duration, ad_distance, abd_duration, abd_distance, movement_tension, jump_tension, airdash_tension, walk_speed, back_walk_speed, dash_initial_speed, dash_acceleration, dash_friction, jump_gravity, high_jump_gravity)
-VALUES
-(?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15, ?16, ?17, ?18, ?19, ?20, ?21, ?22, ?23, ?24, ?25, ?26, ?27, ?28, ?29, ?30, ?31)
 
-ON CONFLICT(character_id)
-DO UPDATE SET 
-character_id = ?1, defense = ?2, guts = ?3, guard_balance = ?4, prejump = ?5, umo = ?6, forward_dash = ?7, backdash = ?8, backdash_duration = ?9, backdash_invincibility = ?10, backdash_airborne = ?11, backdash_distance = ?12, jump_duration = ?13, jump_height = ?14, high_jump_duration = ?15, high_jump_height = ?16, earliest_iad = ?17, ad_duration = ?18, ad_distance = ?19, abd_duration = ?20, abd_distance = ?21, movement_tension = ?22, jump_tension = ?23, airdash_tension = ?24, walk_speed = ?25, back_walk_speed = ?26, dash_initial_speed = ?27, dash_acceleration = ?28, dash_friction = ?29, jump_gravity = ?30, high_jump_gravity = ?31",
-    params![
-        char_count + 1,
-        char_info.defense.as_ref().unwrap_or(&empty).to_string(),
-        char_info.guts.as_ref().unwrap_or(&empty).to_string(),
-        char_info.guard_balance.as_ref().unwrap_or(&empty).to_string(),
-        char_info.prejump.as_ref().unwrap_or(&empty).to_string(),
-        _umo_processed_string,
-        char_info.forward_dash.as_ref().unwrap_or(&empty).to_string(),
-        char_info.backdash.as_ref().unwrap_or(&empty).to_string(),
-        char_info.backdash_duration.as_ref().unwrap_or(&empty).to_string(),
-        char_info.backdash_invincibility.as_ref().unwrap_or(&empty).to_string(),
-        char_info.backdash_airborne.as_ref().unwrap_or(&empty).to_string(),
-        char_info.backdash_distance.as_ref().unwrap_or(&empty).to_string(),
-        char_info.jump_duration.as_ref().unwrap_or(&empty).to_string(),
-        char_info.jump_height.as_ref().unwrap_or(&empty).to_string(),
-        char_info.high_jump_duration.as_ref().unwrap_or(&empty).to_string(),
-        char_info.high_jump_height.as_ref().unwrap_or(&empty).to_string(),
-        char_info.earliest_iad.as_ref().unwrap_or(&empty).to_string(),
-        char_info.ad_duration.as_ref().unwrap_or(&empty).to_string(),
-        char_info.ad_distance.as_ref().unwrap_or(&empty).to_string(),
-        char_info.abd_duration.as_ref().unwrap_or(&empty).to_string(),
-        char_info.abd_distance.as_ref().unwrap_or(&empty).to_string(),
-        char_info.movement_tension.as_ref().unwrap_or(&empty).to_string(),
-        char_info.jump_tension.as_ref().unwrap_or(&empty).to_string(),
-        char_info.airdash_tension.as_ref().unwrap_or(&empty).to_string(),
-        char_info.walk_speed.as_ref().unwrap_or(&empty).to_string(),
-        char_info.back_walk_speed.as_ref().unwrap_or(&empty).to_string(),
-        char_info.dash_initial_speed.as_ref().unwrap_or(&empty).to_string(),
-        char_info.dash_acceleration.as_ref().unwrap_or(&empty).to_string(),
-        char_info.dash_friction.as_ref().unwrap_or(&empty).to_string(),
-        char_info.jump_gravity.as_ref().unwrap_or(&empty).to_string(),
-        char_info.high_jump_gravity.as_ref().unwrap_or(&empty).to_string(),
-    ]).unwrap();
+VALUES
+(:character_id, :defense, :guts, :guard_balance, :prejump, :umo, :forward_dash, :backdash, :backdash_duration, :backdash_invincibility, :backdash_airborne, :backdash_distance, :jump_duration, :jump_height, :high_jump_duration, :high_jump_height, :earliest_iad, :ad_duration, :ad_distance, :abd_duration, :abd_distance, :movement_tension, :jump_tension, :airdash_tension, :walk_speed, :back_walk_speed, :dash_initial_speed, :dash_acceleration, :dash_friction, :jump_gravity, :high_jump_gravity)
+
+ON CONFLICT (character_id)
+DO UPDATE SET
+character_id = :character_id, defense=:defense, guts = :guts, guard_balance = :guard_balance, prejump = :prejump, umo= :umo, forward_dash = :forward_dash, backdash = :backdash, backdash_duration = :backdash_duration, backdash_invincibility = :backdash_invincibility, backdash_airborne = :backdash_airborne, backdash_distance = :backdash_distance, jump_duration = :jump_duration, jump_height = :jump_height, high_jump_duration = :high_jump_duration, high_jump_height = :high_jump_height, earliest_iad = :earliest_iad, ad_duration = :ad_duration, ad_distance = :ad_distance, abd_duration = :abd_duration, abd_distance = :abd_distance, movement_tension = :movement_tension, jump_tension = :jump_tension, airdash_tension = :airdash_tension, walk_speed = :walk_speed, back_walk_speed = :back_walk_speed, dash_initial_speed = :dash_initial_speed, dash_acceleration = :dash_acceleration, dash_friction = :dash_friction, jump_gravity = :jump_gravity, high_jump_gravity = :high_jump_gravity",
+    named_params! {
+     ":character_id":             char_count + 1,
+     ":defense":                  char_info.defense.as_ref().unwrap_or(&empty).to_string(),
+     ":guts":                     char_info.guts.as_ref().unwrap_or(&empty).to_string(),
+     ":guard_balance":            char_info.guard_balance.as_ref().unwrap_or(&empty).to_string(),
+     ":prejump":                  char_info.prejump.as_ref().unwrap_or(&empty).to_string(),
+     ":umo":                      _umo_processed_string,
+     ":forward_dash":             char_info.forward_dash.as_ref().unwrap_or(&empty).to_string(),
+     ":backdash":                 char_info.backdash.as_ref().unwrap_or(&empty).to_string(),
+     ":backdash_duration":        char_info.backdash_duration.as_ref().unwrap_or(&empty).to_string(),
+     ":backdash_invincibility":   char_info.backdash_invincibility.as_ref().unwrap_or(&empty).to_string(),
+     ":backdash_airborne":        char_info.backdash_airborne.as_ref().unwrap_or(&empty).to_string(),
+     ":backdash_distance":        char_info.backdash_distance.as_ref().unwrap_or(&empty).to_string(),
+     ":jump_duration":            char_info.jump_duration.as_ref().unwrap_or(&empty).to_string(),
+     ":jump_height":              char_info.jump_height.as_ref().unwrap_or(&empty).to_string(),
+     ":high_jump_duration":       char_info.high_jump_duration.as_ref().unwrap_or(&empty).to_string(),
+     ":high_jump_height":         char_info.high_jump_height.as_ref().unwrap_or(&empty).to_string(),
+     ":earliest_iad":             char_info.earliest_iad.as_ref().unwrap_or(&empty).to_string(),
+     ":ad_duration":              char_info.ad_duration.as_ref().unwrap_or(&empty).to_string(),
+     ":ad_distance":              char_info.ad_distance.as_ref().unwrap_or(&empty).to_string(),
+     ":abd_duration":             char_info.abd_duration.as_ref().unwrap_or(&empty).to_string(),
+     ":abd_distance":             char_info.abd_distance.as_ref().unwrap_or(&empty).to_string(),
+     ":movement_tension":         char_info.movement_tension.as_ref().unwrap_or(&empty).to_string(),
+     ":jump_tension":             char_info.jump_tension.as_ref().unwrap_or(&empty).to_string(),
+     ":airdash_tension":          char_info.airdash_tension.as_ref().unwrap_or(&empty).to_string(),
+     ":walk_speed":               char_info.walk_speed.as_ref().unwrap_or(&empty).to_string(),
+     ":back_walk_speed":          char_info.back_walk_speed.as_ref().unwrap_or(&empty).to_string(),
+     ":dash_initial_speed":       char_info.dash_initial_speed.as_ref().unwrap_or(&empty).to_string(),
+     ":dash_acceleration":        char_info.dash_acceleration.as_ref().unwrap_or(&empty).to_string(),
+     ":dash_friction":            char_info.dash_friction.as_ref().unwrap_or(&empty).to_string(),
+     ":jump_gravity":             char_info.jump_gravity.as_ref().unwrap_or(&empty).to_string(),
+     ":high_jump_gravity":        char_info.high_jump_gravity.as_ref().unwrap_or(&empty).to_string(),
+    }).unwrap();
 
     db
 }
