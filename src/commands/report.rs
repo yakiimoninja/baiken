@@ -1,8 +1,5 @@
 use colored::Colorize;
-use std::{
-    fs::OpenOptions,
-    io::Write,
-};
+use std::{fs::OpenOptions, io::Write};
 use crate::{Context, Error};
 
 #[derive(Debug, poise::ChoiceParameter)]
