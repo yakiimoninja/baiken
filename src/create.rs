@@ -108,9 +108,9 @@ pub async fn create_gid_db() -> Result<(), Error> {
 
     let db = SqlConnection::open("data/gids.db").unwrap();
     db.execute(r#"
-CREATE TABLE IF NOT EXISTS "characters" (
+CREATE TABLE IF NOT EXISTS "gids" (
 	"id" INTEGER NOT NULL UNIQUE,
-	"character" TEXT NOT NULL UNIQUE,
+	"gid" TEXT NOT NULL UNIQUE,
 	PRIMARY KEY ("id")
 )"#, ()).unwrap();
 
