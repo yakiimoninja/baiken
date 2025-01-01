@@ -42,7 +42,7 @@ pub async fn update (
     match option {
         UpdateChoice::All => {
             // If character arg is all; update frames, images and info for all characters
-            if character.trim().to_lowercase() == "all"{
+            if character.trim().to_lowercase() == "all" {
                 ctx.say("Update started!").await?;
                 update_all_char_data().await;
             }
