@@ -1,0 +1,172 @@
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "Stain",
+    "aliases": [
+      "SS",
+      "Pop"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Grave Reaper",
+      "Beast",
+      "GR",
+      "B"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "Heavy Grave Reaper",
+      "H Grave Reaper",
+      "Heavy Beast",
+      "H Beast",
+      "HGR",
+      "HB"
+    ]
+  },
+  {
+    "input": "236{S}",
+    "aliases": [
+      "236S!",
+      "Partial Grave Reaper",
+      "Partial Beast",
+      "Beast!",
+      "GR!",
+      "B!"
+    ]
+  },
+  {
+    "input": "236{H}",
+    "aliases": [
+      "236H!",
+      "Partial Heavy Grave Reaper",
+      "Partial Heavy Beast",
+      "H Beast!",
+      "HGR!",
+      "HB!"
+    ]
+  },
+  {
+    "input": "236[S]",
+    "aliases": [
+      "236S!!",
+      "Charged Grave Reaper",
+      "Charged Beast",
+      "Beast!!",
+      "GR!!",
+      "B!!"
+    ]
+  },
+  {
+    "input": "236[H]",
+    "aliases": [
+      "236H!!",
+      "Charged Heavy Grave Reaper",
+      "Charged Heavy Beast",
+      "H Beast!!",
+      "HGR!!",
+      "HB!!"
+    ]
+  },
+  {
+    "input": "214P",
+    "aliases": [
+      "Unholy Diver",
+      "Crow",
+      "Bird"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Possession",
+      "Teleport",
+      "TP"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Arbiter Sign",
+      "Low Beast",
+      "AS",
+      "LB"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Heavy Arbiter Sign",
+      "Overehad Beast",
+      "HAS",
+      "OB"
+    ]
+  },
+  {
+    "input": "236236P",
+    "aliases": [
+      "Nostrovia",
+      "Succubus Super"
+    ]
+  },
+  {
+    "input": "236236K",
+    "aliases": [
+      "Calamity One",
+      "Beast Super",
+      "CO"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
+]

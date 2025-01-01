@@ -1,0 +1,161 @@
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Tatami Gaeshi",
+      "Mat",
+      "TG"
+    ]
+  },
+  {
+    "input": "j.236K",
+    "aliases": [
+      "Air Tatami Gaeshi",
+      "Air Mat",
+      "AM",
+      "JTG"
+    ]
+  },
+  {
+    "input": "41236S",
+    "aliases": [
+      "Kabari",
+      "S Kabari",
+      "Tether",
+      "Kabari Tether",
+      "KT"
+    ]
+  },
+  {
+    "input": "41236H",
+    "aliases": [
+      "H Kabari",
+      "Claw",
+      "Kabari Claw",
+      "KC",
+      "426H"
+    ]
+  },
+  {
+    "input": "41236H~H",
+    "aliases": [
+      "41236HH",
+      "Kabari Followup",
+      "Claw Followup",
+      "Kabari Claw Followup",
+      "KF",
+      "CF",
+      "KCF",
+      "426HH"
+    ]
+  },
+  {
+    "input": "j.236S",
+    "aliases": [
+      "Youzansen",
+      "Fan",
+      "Overhead"
+    ]
+  },
+  {
+    "input": "236P",
+    "aliases": [
+      "Hiiragi",
+      "Parry",
+      "Deflect"
+    ]
+  },
+  {
+    "input": "236236S",
+    "aliases": [
+      "Tsurane Sanzu-watashi",
+      "Super"
+    ]
+  },
+  {
+    "input": "214214P",
+    "aliases": [
+      "Kenjyu",
+      "Gun",
+      "Pistol",
+      "Gun Super",
+      "Pistol Super"
+    ]
+  },
+  {
+    "input": "j.214214P",
+    "aliases": [
+      "Air Kenjyu",
+      "Air Super",
+      "Air Gun",
+      "Air Pistol",
+      "AK",
+      "AS",
+      "AP",
+      "AG",
+      "JUS",
+      "JUK",
+      "JG",
+      "JUP"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "Tether Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "6[D] or 4[D]",
+    "aliases": [
+      "Regular Throw",
+      "6D!",
+      "4D!"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
+]

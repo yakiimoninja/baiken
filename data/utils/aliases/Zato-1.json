@@ -1,0 +1,232 @@
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "22H",
+    "aliases": [
+      "Invite Hell",
+      "Spike",
+      "Drill"
+    ]
+  },
+  {
+    "input": "]P[",
+    "aliases": [
+      "Negative Edge Pierce",
+      "Negative Edge Slap",
+      "NE Pierce",
+      "NE Slap",
+      "NEP",
+      "NESL"
+    ]
+  },
+  {
+    "input": "236P",
+    "aliases": [
+      "Pierce",
+      "Slap"
+    ]
+  },
+  {
+    "input": "]K[",
+    "aliases": [
+      "Negative Edge That's a lot",
+      "Negative Edge Spikes",
+      "Negative Edge Drills",
+      "NE That's a lot",
+      "NE Spikes",
+      "NE Drills",
+      "NE Clap",
+      "NESP",
+      "NEDS",
+      "NEK",
+      "NEC"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "That's a lot",
+      "Spikes",
+      "Drills",
+      "Clap"
+    ]
+  },
+  {
+    "input": "]S[",
+    "aliases": [
+      "Negative Edge Leap",
+      "Negative Edge Frog",
+      "NE Leap",
+      "NE Frog",
+      "NEL",
+      "NEF",
+      "NES"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Leap",
+      "Frog"
+    ]
+  },
+  {
+    "input": "]H[",
+    "aliases": [
+      "Negative Edge Oppose",
+      "Negative Edge Tickle Monster",
+      "Negative Edge Shield",
+      "NE Oppose",
+      "NE Tickle Monster",
+      "NE Shield",
+      "NEO",
+      "NETM",
+      "NESH",
+      "NEH"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "Oppose",
+      "Tickle Monster",
+      "Shield",
+      "TM"
+    ]
+  },
+  {
+    "input": "623S",
+    "aliases": [
+      "Damned Fang",
+      "Command Grab",
+      "DF",
+      "CG"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Break The Law",
+      "Pool",
+      "BTL"
+    ]
+  },
+  {
+    "input": "22 During 214K(HOLD)",
+    "aliases": [
+      "Eddie Swap",
+      "Eddie Teleport",
+      "Swap",
+      "ES",
+      "ET",
+      "TP"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Drunkard Shade",
+      "Reflect",
+      "DS"
+    ]
+  },
+  {
+    "input": "214S (Dash)",
+    "aliases": [
+      "Eddie Dash",
+      "ED"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Summon Eddie",
+      "Summon",
+      "SE"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Unsummon Eddie",
+      "Unsummon",
+      "UE"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Amorphous",
+      "Bite",
+      "Bite Super",
+      "BS"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Sun Void",
+      "Sword",
+      "Sword Super",
+      "SS"
+    ]
+  },
+  {
+    "input": "j.632146S",
+    "aliases": [
+      "Sun Void",
+      "Air Sword",
+      "Air Sword Super",
+      "JSS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
+]

@@ -1,0 +1,159 @@
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "[4]6S",
+    "aliases": [
+      "S Mr. Dolphin Horizontal",
+      "Dolphin",
+      "S Dolphin",
+      "Totsugeki",
+      "ST",
+      "SD",
+      "46S"
+    ]
+  },
+  {
+    "input": "[4]6H",
+    "aliases": [
+      "H Mr. Dolphin Horizontal",
+      "H Dolphin",
+      "H Totsugeki",
+      "HT",
+      "HD",
+      "46H"
+    ]
+  },
+  {
+    "input": "[2]8S",
+    "aliases": [
+      "S Mr. Dolphin Vertical",
+      "Up Dolphin",
+      "S Up Dolphin",
+      "Iruka san",
+      "SUD",
+      "SI",
+      "28S"
+    ]
+  },
+  {
+    "input": "[2]8H",
+    "aliases": [
+      "H Mr. Dolphin Vertical",
+      "H Up Dolphin",
+      "H Iruka san",
+      "HUD",
+      "HI",
+      "28H"
+    ]
+  },
+  {
+    "input": "623K",
+    "aliases": [
+      "Overhead Kiss",
+      "Command Grab",
+      "OHK",
+      "OK",
+      "CG"
+    ]
+  },
+  {
+    "input": "214P",
+    "aliases": [
+      "P Arisugawa Sparkle",
+      "Beachball",
+      "Ball",
+      "PAS"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "K Arisugawa Sparkle",
+      "K Beachball",
+      "K Ball",
+      "KAS"
+    ]
+  },
+  {
+    "input": "236236S",
+    "aliases": [
+      "Great Yamada Attack",
+      "Whale",
+      "Whale Super",
+      "WS",
+      "GYA"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "The Wonderful and Dynamic Goshogawara",
+      "Orca",
+      "Orca Super",
+      "OS",
+      "WDG"
+    ]
+  },
+  {
+    "input": "j.632146H",
+    "aliases": [
+      "Air The Wonderful and Dynamic Goshogawara",
+      "Air Orca",
+      "Air Orca Super",
+      "AO",
+      "AOS",
+      "JOS",
+      "JUS",
+      "AS"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  }
+]
