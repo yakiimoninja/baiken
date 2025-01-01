@@ -1,6 +1,6 @@
 extern crate ureq;
 use serde::Deserialize;
-use rusqlite::{named_params, params, Connection as SqlConnection};
+use rusqlite::{named_params, Connection as SqlConnection};
 
 #[derive(Deserialize, Debug)]
 struct Response {
