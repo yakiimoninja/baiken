@@ -1,42 +1,41 @@
 [
   {
-    "character": "A.B.A",
+    "character": "ABA",
     "nicknames": [
-      "A.B.A.",
-      "AB",
-      "ABA",
-      "Paracelsus"
+      "A.B.A",
+      "Paracelsus",
+      "AB"
     ]
   },
   {
-    "character": "Anji_Mito",
+    "character": "Anji Mito",
     "nicknames": [
-      "AM",
       "Lanji",
-      "Anji Mito"
+      "AM"
     ]
   },
   {
-    "character": "Asuka_R",
+    "character": "Asuka R",
     "nicknames": [
       "Asuka",
       "That Man",
-      "Oscar"
+      "Oscar",
+      "AR"
     ]
   },
   {
-    "character": "Axl_Low",
+    "character": "Axl Low",
     "nicknames": [
-      "AL",
-      "Axl Low",
       "Brit",
-      "British"
+      "British",
+      "AL"
     ]
   },
   {
     "character": "Baiken",
     "nicknames": [
-      "Bacon"
+      "Bacon",
+      "BA"
     ]
   },
   {
@@ -45,167 +44,173 @@
       "Bedman?",
       "Bedwoman",
       "Bed",
-      "Delilah"
+      "Delilah",
+      "BE"
     ]
   },
   {
     "character": "Bridget",
     "nicknames": [
-      "Brisket"
+      "Brisket",
+      "BR"
     ]
   },
   {
-    "character": "Chipp_Zanuff",
+    "character": "Chipp Zanuff",
     "nicknames": [
-      "CZ",
-      "Chipp Zanuff"
+      "Ninja",
+      "CZ"
     ]
   },
   {
-    "character": "Elphelt_Valentine",
+    "character": "Elphelt Valentine",
     "nicknames": [
-      "EV",
-      "Elphelt Valentine",
-      "Die"
+      "Die",
+      "EV"
     ]
   },
   {
     "character": "Faust",
     "nicknames": [
-      "Laust"
+      "Laust",
+      "FA"
     ]
   },
   {
     "character": "Giovanna",
     "nicknames": [
-      "Gio"
+      "GI"
     ]
   },
   {
-    "character": "Goldlewis_Dickinson",
+    "character": "Goldlewis Dickinson",
     "nicknames": [
-      "GD",
-      "GL",
       "Goldick Lewison",
-      "Goldlewis Dickinson"
+      "GD",
+      "GL"
     ]
   },
   {
-    "character": "Happy_Chaos",
+    "character": "Happy Chaos",
     "nicknames": [
-      "HC",
-      "Happy Chaos",
-      "Asshole"
+      "Asshole",
+      "HC"
     ]
   },
   {
-    "character": "I-No",
+    "character": "Ino",
     "nicknames": [
-      "Witch"
+      "I-No",
+      "Witch",
+      "IN"
     ]
   },
   {
-    "character": "Jack-O",
+    "character": "Jacko",
     "nicknames": [
-      "Jack-O Valentine"
+      "Jack-O",
+      "Jack-O Valentine",
+      "JV"
     ]
   },
   {
     "character": "Johnny",
     "nicknames": [
-      "Lean"
+      "Lean",
+      "JO"
     ]
   },
   {
-    "character": "Ky_Kiske",
+    "character": "Ky Kiske",
     "nicknames": [
-      "KK",
       "Kyle",
-      "Ky Kiske"
+      "KK"
     ]
   },
   {
-    "character": "Leo_Whitefang",
+    "character": "Leo Whitefang",
     "nicknames": [
-      "LW",
       "Gorilla",
-      "Leo Whitefang"
+      "LW"
     ]
   },
   {
     "character": "May",
     "nicknames": [
-      "Totsugeki"
+      "Totsugeki",
+      "MA"
     ]
   },
   {
-    "character": "Millia_Rage",
+    "character": "Millia Rage",
     "nicknames": [
-      "MR",
-      "Millia Rage"
+      "MR"
     ]
   },
   {
     "character": "Nagoriyuki",
     "nicknames": [
-      "Vampire"
+      "Vampire",
+      "NA"
     ]
   },
   {
     "character": "Potemkin",
     "nicknames": [
-      "Pot"
+      "PO"
     ]
   },
   {
-    "character": "Queen_Dizzy",
+    "character": "Queen Dizzy",
     "nicknames": [
+      "Queef Dizzy",
       "QD"
     ]
   },
   {
-    "character": "Ramlethal_Valentine",
+    "character": "Ramlethal Valentine",
     "nicknames": [
-      "RV",
-      "Ramlethal Valentine",
-      "Borgar"
+      "Borgar",
+      "RV"
     ]
   },
   {
-    "character": "Sin_Kiske",
+    "character": "Sin Kiske",
     "nicknames": [
-      "Sin Kiske",
       "SK"
     ]
   },
   {
     "character": "Slayer",
     "nicknames": [
-      "Dandy"
+      "Dandy",
+      "SL"
     ]
   },
   {
-    "character": "Sol_Badguy",
+    "character": "Sol Badguy",
     "nicknames": [
-      "SB",
       "Frederick",
+      "Sol Goodman",
       "Helios",
-      "Sol Badguy",
-      "Sol Goodman"
+      "SB"
     ]
   },
   {
     "character": "Testament",
     "nicknames": [
-      "Testie"
+      "Testie",
+      "TE"
     ]
   },
   {
-    "character": "Zato-1",
+    "character": "Zato1",
     "nicknames": [
-      "Zato One",
+      "Zato-1",
       "Zato 1",
-      "Eddie"
+      "Zato One",
+      "Eddie",
+      "ZA"
     ]
   }
 ]
