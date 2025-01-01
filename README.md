@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/80072600/213743131-11012730-7bcd-4ab2-a6b4-e7406fdec419.jpg" />
 
-[![Static Badge](https://img.shields.io/badge/Servers_Joined-650%2B-black?style=for-the-badge&labelColor=black&color=8C4B40)](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands)
+[![Static Badge](https://img.shields.io/badge/Servers_Joined-700%2B-black?style=for-the-badge&labelColor=black&color=8C4B40)](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands)
 [![](https://img.shields.io/github/sponsors/yakiimoninja?style=for-the-badge&logoColor=8C4B40&logoSize=auto&labelColor=black&color=8C4B40)](https://github.com/sponsors/yakiimoninja)
 [![GitHub tag](https://img.shields.io/github/v/tag/yakiimoninja/baiken?style=for-the-badge&label=Version&labelColor=black&color=8C4B40)](https://github.com/yakiimoninja/baiken/releases/latest)
 
@@ -20,7 +20,7 @@
 - You can view the latest patch notes by [**pressing here**](https://github.com/yakiimoninja/baiken/releases).
 
 # Inviting Baiken to a server.
-### Currently in 650+ servers and 14 official character Discords.
+### Currently in 700+ servers and 14 official character Discords.
 - Baiken can be **invited** to a server by [**pressing here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with a Camera or Discord application.
 <p align="center">
