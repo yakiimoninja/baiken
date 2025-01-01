@@ -1,5 +1,5 @@
 use std::{fs, path::Path};
-use rusqlite::{named_params, params, Connection as SqlConnection};
+use rusqlite::{named_params, Connection as SqlConnection};
 use crate::{update::update_all_char_data, Error, MoveAliases, Nicknames, CHARS};
 
 pub async fn create_db() -> Result<(), Error> {
