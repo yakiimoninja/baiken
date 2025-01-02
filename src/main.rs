@@ -7,7 +7,7 @@ mod ran;
 use colored::Colorize;
 use commands::*;
 use poise::serenity_prelude as serenity;
-use std::time::Duration;
+use std::{io::Write, time::{Duration, Instant}};
 use serde::{Serialize, Deserialize};
 use tokio::{task, time};
 
@@ -194,13 +194,17 @@ async fn main() {
         // This code is run before every command
         pre_command: |ctx| {
             Box::pin(async move {
-                println!("{}", ("\nExecuting command ".to_owned() + &ctx.command().qualified_name + "...").cyan());
+                println!("{}", ("\nExecuting command ".to_owned() + &ctx.command().qualified_name + ".").cyan());
             })
         },
         // This code is run after a command if it was successful (returned Ok)
         post_command: |ctx| {
             Box::pin(async move {
-                println!("{}", ("Executed command ".to_owned() + &ctx.command().qualified_name + "!").cyan());
+                let elapsed_time = ctx.invocation_data::<Instant>().await.as_deref().unwrap().elapsed();
+                print!("{}", ("Executed command ".to_owned() + &ctx.command().qualified_name + " in ").cyan()); 
+                print!("{}", (elapsed_time.as_millis().to_string() + "ms").yellow()); 
+                print!("{}\n", ".".cyan());
+                std::io::stdout().flush().unwrap();
             })
         },
         // Every command invocation must pass this check to continue execution
@@ -209,6 +213,7 @@ async fn main() {
                 if ctx.author().id == 123456789 {
                     return Ok(false);
                 }
+                ctx.set_invocation_data(Instant::now()).await;
                 Ok(true)
             })
         }),
