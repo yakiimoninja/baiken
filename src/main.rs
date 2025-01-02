@@ -1,4 +1,5 @@
 mod commands;
+mod create;
 mod check;
 mod find;
 mod ran;
@@ -164,8 +165,13 @@ async fn main() {
 
     // Running initial checks
     println!();
-    check::data_db_exists().await.expect("data_db_exists");
-    check::gids_db_exists().await.expect("gids_db_exists");
+    if check::data_db_exists().await.is_err() {
+        create::create_db().await.unwrap();
+    }
+    if check::gids_db_exists().await.is_err() {
+        create::create_gid_db().await.unwrap();
+    }
+    println!("{}", "Baiken is running!".green());
 
     // FrameworkOptions contains all of poise's configuration option in one struct
     // Every option can be omitted to use its default value
