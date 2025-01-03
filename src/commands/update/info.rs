@@ -1,6 +1,6 @@
 extern crate ureq;
 use std::time::Instant;
-use rusqlite::Connection as SqlConnection;
+use rusqlite::{Connection as SqlConnection, OpenFlags};
 use colored::Colorize;
 use crate::{CHARS, commands::update::info_db::info_to_json};
 
@@ -10,32 +10,32 @@ const SITE_HALF : &str = "%22";
 pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) {
     // For timing the updates
     let now = Instant::now();
-    let mut db = SqlConnection::open("data/data.db").unwrap();
-    
+    let mut db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_WRITE).unwrap();
+
     if specific_char == "all" {
-    
+
         for (x, char_id) in chars_ids.iter().enumerate() {
-    
+
             println!("{}", ("Updating '".to_owned() + char_id + "' info.").green());
             
             // Creating request link
             let character_info_link = SITE_LINK.to_owned() + &char_id.replace('_', " ") +  SITE_HALF;
-    
+
             // Dusloop site request
             let mut char_info_response_json = ureq::get(&character_info_link)
                 .call()
                 .unwrap();
-            
+
             // Because dustloop site 500 a lot
             while char_info_response_json.status() == 500 {
                 char_info_response_json = ureq::get(&character_info_link)
                     .call()
                     .unwrap();
             }
-    
+
             // Requested website source to file
             let char_info_response_json = char_info_response_json.into_string().unwrap();
-            
+
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
             db = info_to_json(&char_info_response_json, db, x).await;
@@ -52,7 +52,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         let mut char_info_response_json = ureq::get(&char_info_link)
             .call()
             .unwrap();
-        
+
         // Because dustloop site 500 a lot
         while char_info_response_json.status() == 500 {
             char_info_response_json = ureq::get(&char_info_link)
@@ -62,7 +62,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
 
         // Requested website source to file
         let char_info_response_json = char_info_response_json.into_string().unwrap();
-        
+
         for (x, char_id) in chars_ids.iter().enumerate() {
             if *char_id == specific_char {
                 // Sending response to get processed and serialized to a json file
@@ -72,7 +72,7 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             }
         }
     }
-    
+
     db.close().unwrap();
     let elapsed_time = now.elapsed();
     println!("{}", ("Updated in ".to_owned() + &elapsed_time.as_secs().to_string() + " seconds.").yellow());
