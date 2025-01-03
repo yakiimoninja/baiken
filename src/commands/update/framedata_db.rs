@@ -83,7 +83,7 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
     let char_move_data = &mut move_data_response.cargoquery;
 
     for move_data in char_move_data {
-        
+
         // Replacing None values with a generic '-'
         if move_data.title.input.is_none() {
             move_data.title.input = Some("-".to_string());
@@ -113,7 +113,7 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
         || move_data.title.caption.as_ref().unwrap() == "Air") {
             move_data.title.caption = Some(String::from(""));
         }
-        
+
         db.execute("
 INSERT INTO moves
 (
@@ -172,7 +172,7 @@ VALUES
 )
 
 ON CONFLICT (character_id, input)
-DO UPDATE SET 
+DO UPDATE SET
 
 character_id = :character_id,
 input = :input, 
@@ -224,7 +224,7 @@ notes = :notes
         ":caption":        move_data.title.caption.as_ref().unwrap_or(&"".to_string()).to_string(),
         ":notes":          move_data.title.notes.as_ref().unwrap_or(&"".to_string()).to_string(),
         }).unwrap();
-    
+
 //         db.execute("
 // INSERT OR IGNORE INTO moves 
 // (character_id, input, name, damage, guard, startup, active, recovery, on_hit, on_block, level, counter, move_type, risc_gain, risc_loss, wall_damage, input_tension, chip_ratio, otg_ratio, scaling, invincibility, cancel, caption, notes)

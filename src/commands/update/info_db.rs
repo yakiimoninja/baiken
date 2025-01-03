@@ -104,7 +104,7 @@ pub async fn info_to_json(char_info_response_json: &str, db: SqlConnection, char
 
     let mut umo_processed_vec: Vec<String> = Vec::new();
     let mut _umo_processed_string: String = String::new();
-  
+
     if char_info.umo.is_none(){
         _umo_processed_string = "-".to_string();
     }

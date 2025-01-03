@@ -60,7 +60,6 @@ async fn make_link(image_name: String) -> String {
     //     }
     //     Err(_) => {}
     // }
-    
     image_link
 }
 
@@ -73,7 +72,7 @@ VALUES
 ((SELECT id FROM moves WHERE (character_id = :character_id AND input = :input)), :hitbox, :hitbox_caption)
 
 ON CONFLICT(move_id, hitbox)
-DO UPDATE SET 
+DO UPDATE SET
 hitbox = :hitbox, hitbox_caption = :hitbox_caption",
         named_params!{
             ":character_id": char_count + 1,
@@ -93,7 +92,7 @@ INSERT INTO moves (character_id, input)
 VALUES (:character_id, :input)
 
 ON CONFLICT(character_id, input)
-DO UPDATE SET 
+DO UPDATE SET
 image = :image",
         named_params!{
             ":character_id": char_count + 1,
@@ -113,7 +112,7 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
     let char_image_data = &mut image_data_response.cargoquery;
 
     for image_data in char_image_data {
-        
+
         // Variable that the produced image link will reside
         let image_link;
 
@@ -152,11 +151,11 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
                 // Multiple image names
                 // Removing any subsequent image names from field
                 if image_data.title.images.as_mut().unwrap().contains(';') {
-    
+
                     let split_image: Vec<&str> = image_data.title.images.as_mut().unwrap().split(';').collect();
                         
                     image_data.title.images = Some(split_image[0].to_string().replace(' ', "_"));
-    
+
                     // Sending image name to make_link to become a link
                     image_link = make_link(image_data.title.images.as_ref().unwrap().to_string()).await;
                 }
@@ -168,7 +167,7 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
                 }
             }
         }
-        
+
         // If hitbox empty
         if image_data.title.hitboxes.is_none() {
             // Push image link in db here
@@ -177,7 +176,7 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
         else {
             // Splitting the hitboxes names into a vector
             let hitbox_str: Vec<&str> = image_data.title.hitboxes.as_ref().unwrap().split(';').collect();
-            
+
             for hitbox_string in &hitbox_str {
                 // Push hitbox and or here
                 db = push_hitboxes_to_db(
