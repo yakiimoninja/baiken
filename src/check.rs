@@ -5,10 +5,7 @@ use crate::{Context, Error};
 
 // Collection of functions that check for stuff
 
-/// Returns `Ok()` if database exists.
-/// Returns `Err()` if database doesn't exist.
-///
-/// Function checks if `data` database exists.
+/// Checks if `data` database exists.
 pub async fn data_db_exists() -> Result<(), Error> {
 
     // Checking if data db exists
@@ -22,10 +19,7 @@ pub async fn data_db_exists() -> Result<(), Error> {
     }
 }
 
-/// Returns `Ok()` if database exists.
-/// Returns `Err()` if database doesn't exist.
-///
-/// Function checks if `gids` database exists.
+/// Checks if `gids` database exists.
 pub async fn gids_db_exists() -> Result<(), Error> {
 
     // Checking if gids db exists
@@ -39,10 +33,7 @@ pub async fn gids_db_exists() -> Result<(), Error> {
     }
 }
 
-/// Returns `Ok()` when successful.
-/// Returns `Err()` when failed.
-///
-/// Function checks if `data` and `gids` databases exist.
+/// Checks if `data` and or `gids` databases exist.
 pub async fn adaptive_check(
     ctx: Context<'_>,
     check_for_db: bool,

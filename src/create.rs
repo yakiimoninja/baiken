@@ -2,6 +2,7 @@ use std::{fs, path::Path};
 use rusqlite::{named_params, Connection as SqlConnection};
 use crate::{update::update_all_char_data, Error, MoveAliases, Nicknames, CHARS};
 
+/// Creates `data.db` database.
 pub async fn create_db() -> Result<(), Error> {
 
     let schema_path = "data/schema.sql";
@@ -104,6 +105,7 @@ VALUES
     Ok(())
 }
 
+/// Creates the `gid.db` database.
 pub async fn create_gid_db() -> Result<(), Error> {
 
     let db = SqlConnection::open("data/gids.db").unwrap();

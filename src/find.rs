@@ -4,7 +4,9 @@ use poise::serenity_prelude::json::to_string;
 use rusqlite::{params, Connection as SqlConnection};
 use crate::{ Error, MoveAliases, MoveInfo, Nicknames, CHARS};
 
-/// Function that finds and returns the character name from nicknames.json file.
+/// Searches inside `data.db` database for character name from user input.
+///
+/// Returns `Ok(CHARS[x])` when successful.
 pub async fn find_character(character: &str ) -> Result<String, Error> {
 
     // Flags that will be used for logic to determine output
@@ -67,8 +69,8 @@ pub async fn find_character(character: &str ) -> Result<String, Error> {
     }
 }
 
-/// Function that finds and returns the index and then move from character json.
 pub async fn find_move_index(character_arg_altered: &str, mut character_move: String, moves_info: &[MoveInfo]) -> Result<usize, Error> {
+/// Searches inside `data.db` database for character move from user input.
 
     // Flags that will be used for logic to determine output
     let move_found = false;
@@ -161,6 +163,8 @@ VALUES (?1, ?2, ?3)
             }
         }
     }
+/// Adds regex functionality to sql queries
 
     db.close();
+/// Returns a `MoveInfo` struct given a `move_id` from a SQL query.
 }
