@@ -33,7 +33,7 @@ pub async fn xx(
     // Open gids.db
     let db = SqlConnection::open_with_flags("data/gids.db", OpenFlags::SQLITE_OPEN_READ_WRITE).unwrap();
     // Check if gid is in db
-    let guild_id_exists = db.prepare("SELECT (gid) FROM gids WHERE gid = :gid").unwrap()
+    let guild_id_exists = db.prepare("SELECT 0 FROM gids WHERE gid = :gid").unwrap()
         .exists(named_params! {":gid": guild_id}).unwrap();
 
     if option == "disable" {
