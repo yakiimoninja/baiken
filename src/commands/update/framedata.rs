@@ -19,7 +19,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             println!("{}", ("Updating '".to_owned() + char_id + "' data.").green());
 
             // Creating request link 
-            let character_link = SITE_LINK.to_owned() + &char_id.replace('_', " ") +  SITE_HALF;
+            let character_link = SITE_LINK.to_owned() + char_id +  SITE_HALF;
 
             // Dusloop site request
             let mut char_page_response_json = ureq::get(&character_link)
@@ -46,7 +46,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         println!("{}", ("Updating '".to_owned() + specific_char + "' data.").green());
 
         // Creating request link
-        let character_link = SITE_LINK.to_owned() + &specific_char.replace('_', " ") + SITE_HALF;
+        let character_link = SITE_LINK.to_owned() + specific_char + SITE_HALF;
 
         // Dusloop site request
         let mut char_page_response_json = ureq::get(&character_link)
