@@ -77,7 +77,7 @@ pub struct MoveInfo {
     cancel: String,
     caption: String,
     notes: String,
-    //images: String,
+    image: String,
     //hitboxes: String,
     //hitbox_caption: String,
 }
