@@ -71,7 +71,7 @@ struct Title {
     high_jump_gravity: Option<String>,
 }
 
-pub async fn info_to_json(char_info_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
+pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
 
     let empty = String::from("-");
 
