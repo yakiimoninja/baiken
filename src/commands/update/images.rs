@@ -75,6 +75,6 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
 
     db.close().unwrap();
     let elapsed_time = now.elapsed();
-    println!("{}", ("Updated in ".to_owned() + &elapsed_time.as_secs().to_string() + " seconds.").yellow());
+    println!("{}", ("Updated in ".to_owned() + &elapsed_time.as_millis().to_string() + "ms.").yellow());
 
 }
