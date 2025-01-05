@@ -13,7 +13,7 @@ pub async fn nicknames(
     }
 
     // Reading the nicknames json
-    let data_from_file = fs::read_to_string("data/nicknames.json")
+    let data_from_file = fs::read_to_string("data/utils/nicknames.json")
         .expect("\nFailed to read 'nicknames.json' file.");
 
     // Deserializing from nicknames json

@@ -1,7 +1,7 @@
 use colored::Colorize;
 use rand::Rng;
 
-pub async fn random_p() -> Option<String>{
+pub async fn ran_p() -> Option<String>{
 
     let mut rng = rand::thread_rng();
 

@@ -1,4 +1,3 @@
-use colored::Colorize;
 use crate::{Context, Error, EMBED_COLOR};
 
 #[derive(Debug, poise::ChoiceParameter)]
