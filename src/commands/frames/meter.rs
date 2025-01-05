@@ -249,7 +249,6 @@ pub async fn meter(
     #[description = "Move name, input or alias."] character_move: String,
 ) -> Result<(), Error> {
 
-    println!("{}", ("Command Args: '".to_owned() + &character + ", " + &character_move + "'").purple());
 
     if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());

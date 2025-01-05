@@ -195,6 +195,7 @@ async fn main() {
         pre_command: |ctx| {
             Box::pin(async move {
                 println!("{}", ("\nExecuting command ".to_owned() + &ctx.command().qualified_name + ".").cyan());
+                println!("{}", ctx.invocation_string().purple());
             })
         },
         // This code is run after a command if it was successful (returned Ok)

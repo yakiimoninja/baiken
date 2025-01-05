@@ -14,7 +14,6 @@ pub async fn advanced(
     #[description = "Move name, input or alias."] character_move: String,
 ) -> Result<(), Error> {
 
-    println!("{}", ("Command Args: '".to_owned() + &character + ", " + &character_move + "'").purple());
 
     // Initializing variables for the embed
     // They must not be empty cause then the embed wont be sent

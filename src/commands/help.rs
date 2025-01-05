@@ -36,51 +36,39 @@ pub async fn help(ctx: Context<'_>,
     
     let (description_embed, image_embed) = match option {
         HelpChoice::FramesSimple=> {
-            println!("{}", ("Command Args: 'frames simple'").purple());
             help_frames_simple().await
             },
         HelpChoice::FramesAdvanced => {
-            println!("{}", ("Command Args: 'frames advanced'").purple());
             help_frames_advanced().await
         },
         HelpChoice::FramesMeter => {
-            println!("{}", ("Command Args: 'frames meter'").purple());
             help_frames_meter().await
         },
         HelpChoice::General => {
-            println!("{}", ("Command Args: 'general'").purple());
             help_general().await
         },
         HelpChoice::Hitboxes => {
-            println!("{}", ("Command Args: 'hitboxes'").purple());
             help_hitboxes().await
         },
         HelpChoice::Info => {
-            println!("{}", ("Command Args: 'info'").purple());
             help_info().await
         },
         HelpChoice::Moves => {
-            println!("{}", ("Command Args: 'moves'").purple());
             help_moves().await
         },
         HelpChoice::Nicknames => {
-            println!("{}", ("Command Args: 'nicknames'").purple());
             help_nicknames().await
         },
         HelpChoice::Notes => {
-            println!("{}", ("Command Args: 'notes'").purple());
             help_notes().await
         },
         HelpChoice::Register => {
-            println!("{}", ("Command Args: 'register'").purple());
             help_register().await
         },
         HelpChoice::Report => {
-            println!("{}", ("Command Args: 'report'").purple());
             help_report().await
         },
         HelpChoice::Update => {
-            println!("{}", ("Command Args: 'update'").purple());
             help_update().await
         },
     };

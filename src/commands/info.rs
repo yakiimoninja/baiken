@@ -11,8 +11,6 @@ pub async fn info(
     #[description = "Character name or nickname."] character: String,
 ) -> Result<(), Error> {
 
-    println!("{}", ("Command Args: '".to_owned() + &character + "'").purple());
-
     if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }

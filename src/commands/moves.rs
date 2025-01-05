@@ -27,8 +27,6 @@ pub async fn moves(
     #[description = "Move type."] category: TypeChoice,
 ) -> Result<(), Error> {
 
-    println!("{}", ("Command Args: '".to_owned() + &character + "'").purple());
-
     if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
