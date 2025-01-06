@@ -9,7 +9,7 @@ use std::sync::Arc;
 type BoxError = Box<dyn std::error::Error + Send + Sync + 'static>;
 
 
-/// Searches inside `data.db` database for character name from user input.
+/// Searches database for character name from user input.
 ///
 /// Returns `Ok(CHARS[x])` when successful.
 pub async fn find_character(character: &str ) -> Result<(String, usize), Error> {
@@ -64,7 +64,7 @@ pub async fn find_character(character: &str ) -> Result<(String, usize), Error> 
 }
 
 
-/// Searches inside `data.db` database for character move from user input.
+/// Searches database for a character move from user input.
 pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usize), Error> {
 
     let move_regex = char_move.to_lowercase().trim()
@@ -92,7 +92,6 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
             |row| row.get(0)
         ).unwrap();
 
-        println!("Move found in aliases.alias");
         return Ok((send_move(move_id), move_id));
     }
     // Checking if user input is move input
@@ -103,7 +102,6 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
             |row| row.get(0)
         ).unwrap();
 
-        println!("Move found in moves.input");
         return Ok((send_move(move_id), move_id));
     }
     // Checking if user input is move name
@@ -114,7 +112,6 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
             |row| row.get(0)
         ).unwrap();
 
-        println!("Move found in moves.name");
         return Ok((send_move(move_id), move_id));
     }
 
@@ -125,6 +122,7 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
 }
 
 
+/// Searches database for a moves hitbox images and caption
 pub async fn find_hitboxes(move_id: usize) -> Option<Vec<HitboxLinks>> {
 
     let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
@@ -153,7 +151,7 @@ pub async fn find_hitboxes(move_id: usize) -> Option<Vec<HitboxLinks>> {
 } 
 
 
-/// Searches for the given character info.
+/// Searches database for the given character info.
 pub async fn find_info(char_id: usize) -> CharInfo {
 
     let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
@@ -192,7 +190,6 @@ pub async fn find_info(char_id: usize) -> CharInfo {
             high_jump_gravity: row.get(31).unwrap()
         })).unwrap();
 
-    println!("{:#?}", char_info);
     char_info
 }
 
