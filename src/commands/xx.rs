@@ -33,8 +33,7 @@ pub async fn xx(
     // Open gids.db
     let db = SqlConnection::open_with_flags("data/gids.db", OpenFlags::SQLITE_OPEN_READ_WRITE).unwrap();
     // Check if gid is in db
-    let guild_id_exists = db.prepare("SELECT 0 FROM gids WHERE gid = :gid").unwrap()
-        .exists(named_params! {":gid": guild_id}).unwrap();
+    let guild_id_exists = check::gid_exists(&guild_id).await;
 
     if option == "disable" {
         // Gid already exists
@@ -52,8 +51,8 @@ pub async fn xx(
     else if option == "enable" {
         // Gid already exists
         if guild_id_exists {
+
             // Removing guild id from exclusion list
-            
             db.execute("DELETE FROM gids WHERE gid = :gid", named_params! {":gid": guild_id}).unwrap();
 
             println!("{}", "Easter eggs have been enabled".purple());

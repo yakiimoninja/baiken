@@ -78,16 +78,12 @@ pub struct MoveInfo {
     caption: String,
     notes: String,
     image: String,
-    //hitboxes: String,
-    //hitbox_caption: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct ImageLinks {
-    input: String,
-    image: String,
-    hitboxes: Vec<String>,
-    //hitbox_caption: String,
+pub struct HitboxLinks {
+    hitbox: String,
+    hitbox_caption: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -102,39 +98,34 @@ pub struct Nicknames {
     nicknames: Vec<String>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Gids {
-    id: Vec<String>
-}
-
 pub const CHARS: [&str; 29] = [
     "A.B.A",
-    "Anji_Mito",
-    "Asuka_R",
-    "Axl_Low",
+    "Anji Mito",
+    "Asuka R",
+    "Axl Low",
     "Baiken",
     "Bedman",
     "Bridget",
-    "Chipp_Zanuff",
-    "Elphelt_Valentine",
+    "Chipp Zanuff",
+    "Elphelt Valentine",
     "Faust",
     "Giovanna",
-    "Goldlewis_Dickinson",
-    "Happy_Chaos",
+    "Goldlewis Dickinson",
+    "Happy Chaos",
     "I-No",
     "Jack-O",
     "Johnny",
-    "Ky_Kiske",
-    "Leo_Whitefang",
+    "Ky Kiske",
+    "Leo Whitefang",
     "May",
-    "Millia_Rage",
+    "Millia Rage",
     "Nagoriyuki",
     "Potemkin",
-    "Queen_Dizzy",
-    "Ramlethal_Valentine",
-    "Sin_Kiske",
+    "Queen Dizzy",
+    "Ramlethal Valentine",
+    "Sin Kiske",
     "Slayer",
-    "Sol_Badguy",
+    "Sol Badguy",
     "Testament",
     "Zato-1"
 ];
@@ -204,7 +195,7 @@ async fn main() {
                 let elapsed_time = ctx.invocation_data::<Instant>().await.as_deref().unwrap().elapsed();
                 print!("{}", ("Executed command ".to_owned() + &ctx.command().qualified_name + " in ").cyan()); 
                 print!("{}", (elapsed_time.as_millis().to_string() + "ms").yellow()); 
-                print!("{}\n", ".".cyan());
+                println!("{}", ".".cyan());
                 std::io::stdout().flush().unwrap();
             })
         },

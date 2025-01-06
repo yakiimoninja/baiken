@@ -1,15 +1,14 @@
-use std::{fs, string::String};
-use colored::Colorize;
+use std::string::String;
 use poise::serenity_prelude::CreateEmbed;
-use crate::{check, find, Context, Error, ImageLinks, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
+use crate::{check, find, Context, Error, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
 
 const GREEN_CIRCLE: &str = "🟢\u{200b}";
 const RED_SQUARE: &str = "🟥\u{200b}";
 const BLUE_DIAMOND: &str = "🔷\u{200b}";
 
 // Returns a String of symbols representing startup frames
-async fn startup_frames(move_info: &MoveInfo) -> String {
-    let startup_vec = sep_frame_vec(&move_info.startup).await;
+async fn startup_frames(move_data: &MoveInfo) -> String {
+    let startup_vec = sep_frame_vec(&move_data.startup).await;
     let mut meter_msg = String::new();
     //println!("startup_vec: {:?}", startup_vec);
     
@@ -95,9 +94,9 @@ async fn startup_frames(move_info: &MoveInfo) -> String {
 
 
 // Returns a String of symbols representing active frames
-async fn active_frames(move_info: &MoveInfo) -> String {
+async fn active_frames(move_data: &MoveInfo) -> String {
     // Processing for active frames
-    let active_vec = sep_frame_vec(&move_info.active).await;
+    let active_vec = sep_frame_vec(&move_data.active).await;
     let mut meter_msg = String::new();
     //println!("Active vec: {:?}", active_vec);
     
@@ -143,9 +142,9 @@ async fn active_frames(move_info: &MoveInfo) -> String {
 
 
 // Returns a String of symbols representing recovery frames
-async fn recovery_frames(move_info: &MoveInfo) -> String {
+async fn recovery_frames(move_data: &MoveInfo) -> String {
     // Processing for recovery frames
-    let recovery_vec = sep_frame_vec(&move_info.recovery).await;
+    let recovery_vec = sep_frame_vec(&move_data.recovery).await;
     let mut meter_msg = String::new();
     
     if recovery_vec.len() == 1 && recovery_vec[0] == "-" {
@@ -249,94 +248,65 @@ pub async fn meter(
     #[description = "Move name, input or alias."] character_move: String,
 ) -> Result<(), Error> {
 
+    // Initializing variables for the embed
+    // They must not be empty cause then the embed wont be sent
+    let mut embed_image = IMAGE_DEFAULT.to_string();
 
     if (check::adaptive_check(ctx, true, false).await).is_err() {
         return Ok(());
     }
 
-    // Finding character
-    // This will store the full character name in case user input was an alias
-    let character_arg_altered = match find::find_character(&character).await {
-        Ok(character_arg_altered) => character_arg_altered,
+    let (character, char_id) = match find::find_character(&character).await {
+        Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;
             return Ok(()) }
     };
 
-    // Reading the character json
-    let char_file_path = "data/".to_owned() + &character_arg_altered + "/" + &character_arg_altered + ".json";
-    let char_file_data = fs::read_to_string(char_file_path)
-        .expect(&("\nFailed to read '".to_owned() + &character + ".json" + "' file."));
-    
-    // Deserializing from character json
-    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();            
-    
-    println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
-    
-    // Finding move index
-    let index = match find::find_move_index(&character_arg_altered, character_move, &moves_info).await {
-        Ok(index) => index,
+    // Finding move and move id
+    let (move_data, _) = match find::find_move(char_id, &character_move).await {
+        Ok(move_data) => move_data,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
             return Ok(()) }
     };
 
-    // Reading images.json for this character
-    let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
-        .expect(&("\nFailed to read 'data/".to_owned() + &character_arg_altered + "'/images.json' file."));
-
-    // Deserializing images.json for this character
-    let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
-    let move_info = &moves_info[index];
-    let mut embed_image = String::new();
-
-    // Send move image
-    for img_links in image_links {
-        // Iterating through the image.json to find the move's hitbox links
-        if move_info.input == img_links.input {
-
-            println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
-
-            if !img_links.image.is_empty() {
-                embed_image = img_links.image;
-            }
-            else{
-                embed_image = String::from(IMAGE_DEFAULT);
-            }
-        }
+    if !move_data.image.is_empty() {
+        embed_image = move_data.image.to_string();
     }
-    
+
     // Processing for startup frames
     let mut meter_msg = String::from("`");
     //let mut meter_msg = String::new();
-    meter_msg += &startup_frames(move_info).await;
-    meter_msg += &active_frames(move_info).await;
-    meter_msg += &recovery_frames(move_info).await;
+    meter_msg += &startup_frames(&move_data).await;
+    meter_msg += &active_frames(&move_data).await;
+    meter_msg += &recovery_frames(&move_data).await;
     meter_msg += "`";
 
     let embed_title = "__**".to_owned()
-        + &character_arg_altered.replace('_', " ") + " "
-        + &move_info.input + " / " + &move_info.name + "**__";
+        + &character.replace('_', " ") + " "
+        + &move_data.input + " / " + &move_data.name + "**__";
 
-    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
 
     let embed = CreateEmbed::new()
         .color(EMBED_COLOR)
         .title(embed_title)
         .url(embed_url)
         .fields(vec![
-            ("Startup", &move_info.startup.to_string(), true),
-            ("Active", &move_info.active.to_string(), true),
-            ("Recovery", &move_info.recovery.to_string(), true)])
+            ("Startup", &move_data.startup.to_string(), true),
+            ("Active", &move_data.active.to_string(), true),
+            ("Recovery", &move_data.recovery.to_string(), true)])
         .image(embed_image);
 
     let embed2 = CreateEmbed::new()
         .color(EMBED_COLOR)
         .description(&meter_msg);
-    
+
     let vec_embeds = vec![embed, embed2];
     let mut reply = poise::CreateReply::default();
     reply.embeds.extend(vec_embeds);
     ctx.send(reply).await?;
+
     Ok(())
 }

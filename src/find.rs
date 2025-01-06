@@ -1,170 +1,261 @@
-use std::{fs, path::Path};
 use colored::Colorize;
-use poise::serenity_prelude::json::to_string;
-use rusqlite::{params, Connection as SqlConnection};
-use crate::{ Error, MoveAliases, MoveInfo, Nicknames, CHARS};
+use rusqlite::{named_params, Connection as SqlConnection, OpenFlags};
+use crate::{ CharInfo, Error, HitboxLinks, MoveInfo, CHARS};
+// Regex related imports
+use regex::Regex;
+use rusqlite::functions::FunctionFlags;
+use rusqlite::{Error as SqlError, Result as SqlResult};
+use std::sync::Arc;
+type BoxError = Box<dyn std::error::Error + Send + Sync + 'static>;
+
 
 /// Searches inside `data.db` database for character name from user input.
 ///
 /// Returns `Ok(CHARS[x])` when successful.
-pub async fn find_character(character: &str ) -> Result<String, Error> {
+pub async fn find_character(character: &str ) -> Result<(String, usize), Error> {
 
-    // Flags that will be used for logic to determine output
-    let character_found = false;
+    let char_regex = character.to_lowercase().trim()
+        // Replace '.' with regex (may contain any number of '.')
+        .replace(".", "[\\.]*")
+        // Replace '-' with regex (may contain any number of '-')
+        .replace("-", "[-]*")
+        // Replace any horizontal whitespace char with regex (may contain any number of)
+        .replace(" ", "[\\s|\\t]*")
+        .replace("\t", "[\\s|\\t]*");
 
-    // Reading the nicknames json
-    let data_from_file = fs::read_to_string("data/nicknames.json")
-        .expect("\nFailed to read 'nicknames.json' file.");
-    
-    // Deserializing from nicknames json
-    let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
+    let contains_char_regex = ".*".to_owned() + &char_regex + ".*";
 
-    // Iterating through the nicknames.json character entries
-    if !character_found {
-            
-        for x_nicknames in &vec_nicknames {
+    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    add_regexp_function(&db).unwrap();
 
-            // Iterating through the nicknames.json nickname entries
-            for y_nicknames in &x_nicknames.nicknames {
+    let mut nickname_query = db.prepare("SELECT character_id FROM nicknames WHERE REPLACE(LOWER(nickname), '.', '') REGEXP :char_regex").unwrap();
+    let mut name_query = db.prepare("SELECT id FROM characters WHERE REPLACE(LOWER(character), '.', '') REGEXP :contains_char_regex").unwrap();
 
-                // If user input equals a character nickname then pass the full character name
-                // To the new variable 'character_arg_altered'
-                if y_nicknames.to_lowercase() == character.to_lowercase().trim() {
+    // Iterating through the nicknames table entries
+    // If user input equals a character nickname then pass the full character name
+    if nickname_query.exists(named_params! {":char_regex": char_regex}).unwrap() {
 
-                    return Ok(x_nicknames.character.to_owned());
-                }
-            }
-        }
+        let char_id: usize = nickname_query.query_row(
+            named_params! {":char_regex": char_regex},
+            |row| row.get(0)
+        ).unwrap();
+
+        return Ok((CHARS[char_id-1].to_string(), char_id));
     }
-
-    if !character_found {
+    // Iterating through the nicknames.json character entries
+    else if name_query.exists(named_params! {":contains_char_regex": contains_char_regex}).unwrap(){
         
-        // Iterating through the nicknames.json character entries
-        for x_nicknames in &vec_nicknames {
+        let char_id: usize = name_query.query_row(
+            named_params! {":contains_char_regex": contains_char_regex},
+            |row| row.get(0)
+        ).unwrap();
 
-            // If user input is part of a characters full name or the full name itself
-            // Then pass the full and correct charactet name to the new var 'character_arg_altered'
-            if x_nicknames.character.to_lowercase().replace('-', "").contains(&character.to_lowercase()) ||
-            x_nicknames.character.to_lowercase().contains(&character.to_lowercase()) {
-                
-                return Ok(x_nicknames.character.to_owned());
-            }
-        }
+        return Ok((CHARS[char_id-1].to_string(), char_id));
     }
     // Edge case for update.rs
-    if !character_found && character.trim().to_lowercase() == "all".to_lowercase() {
-        return Ok("".into());
+    else if character.trim().to_lowercase() == "all" {
+        return Ok((String::from("all"), 0));
     }
 
-    if !character_found {
-        // If user input isnt the full name, part of a full name or a nickname
-        // Error out cause requested character was not found in the json
-        let error_msg= "Character `".to_owned() + character + "` was not found!";
-        println!("{}", error_msg.red());
-        Err(error_msg.into())
-    }
-    else {
-        println!("{}", "Weird logic error in find_character".red());
-        Err("Weird logic error in find_character".into())
-    }
+    // Error message cause character was not found
+    let error_msg= "Character `".to_owned() + character + "` was not found!";
+    println!("{}", error_msg.red());
+    Err(error_msg.into())
 }
 
-pub async fn find_move_index(character_arg_altered: &str, mut character_move: String, moves_info: &[MoveInfo]) -> Result<usize, Error> {
+
 /// Searches inside `data.db` database for character move from user input.
+pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usize), Error> {
 
-    // Flags that will be used for logic to determine output
-    let move_found = false;
+    let move_regex = char_move.to_lowercase().trim()
+        // Replace '.' with regex (may contain any number of '.')
+        .replace(".", "[\\.]*")
+        // Replace '-' with regex (may contain any number of '-')
+        .replace("-", "[-]*")
+        // Replace any horizontal whitespace char with regex (may contain any number of)
+        .replace(" ", "[\\s|\\t]*")
+        .replace("\t", "[\\s|\\t]*");
 
-    // Checking if aliases for this characters moves exist
-    let aliases_path = "data/".to_owned() + character_arg_altered + "/aliases.json";
-    if Path::new(&aliases_path).exists() {
-        
-        // Reading the aliases json
-        let aliases_data = fs::read_to_string(&aliases_path)
-            .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
-        
-        // Deserializing the aliases json
-        let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
+    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    add_regexp_function(&db).unwrap();
 
-        'outer: for alias_data in aliases_data {
-            for x_aliases in alias_data.aliases {
-                
-                // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
-                // Change the given argument (character_move) to the actual move name instead of the alias
-                if x_aliases.to_lowercase().trim().replace(['.', ' '], "")
-                == character_move.to_lowercase().trim().replace(['.', ' '], "") {
+    let mut alias_query = db.prepare("SELECT move_id FROM aliases WHERE move_id IN (SELECT id FROM moves WHERE character_id = :char_id) AND REPLACE(LOWER(alias), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
+    let mut input_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(input), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
+    let mut name_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(name), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
 
-                    character_move = alias_data.input.to_string();
-                    break 'outer;
-                }
-            }
-        }
+    // Checking if user input is alias
+    if alias_query.exists(named_params! {":char_id": char_id, ":move_regex": move_regex}).unwrap() {
+        // Semi join
+        // https://media.datacamp.com/legacy/v1714587799/Marketing/Blog/Joining_Data_in_SQL_2.pdf
+        let move_id: usize = alias_query.query_row(
+            named_params! {":char_id": char_id, ":move_regex": move_regex},
+            |row| row.get(0)
+        ).unwrap();
+
+        println!("Move found in aliases.alias");
+        return Ok((send_move(move_id), move_id));
+    }
+    // Checking if user input is move input
+    else if input_query.exists(named_params! {":char_id": char_id, ":move_regex": move_regex}).unwrap() {
+
+        let move_id: usize = input_query.query_row(
+            named_params! {":char_id": char_id, ":move_regex": move_regex},
+            |row| row.get(0)
+        ).unwrap();
+
+        println!("Move found in moves.input");
+        return Ok((send_move(move_id), move_id));
+    }
+    // Checking if user input is move name
+    else if name_query.exists(named_params! {":char_id": char_id, ":move_regex": move_regex}).unwrap() {
+
+        let move_id: usize = name_query.query_row(
+            named_params! {":char_id": char_id, ":move_regex": move_regex},
+            |row| row.get(0)
+        ).unwrap();
+
+        println!("Move found in moves.name");
+        return Ok((send_move(move_id), move_id));
     }
 
-    for (x, moves) in moves_info.iter().enumerate() {
-        // Iterating through the moves of the json file to find the move requested
-        // Specifically if user arg is exactly move input
-        if moves.input.to_string().to_lowercase().replace('.', "") 
-        == character_move.to_string().to_lowercase().replace('.', "") {
-
-            return Ok(x);
-        }        
-    }
-
-    if !move_found {
-        for (x, moves) in moves_info.iter().enumerate() {
-            // Iterating through the moves of the json file to find the move requested
-            // Specifically if user arg is contained in move name
-            if moves.name.to_string().to_lowercase().contains(&character_move.to_string().to_lowercase()) {
-                
-                return Ok(x);
-            } 
-        }
-    }
-
-    if !move_found {
-        // Error message cause given move wasnt found in the json
-        let error_msg= "Move `".to_owned() + &character_move + "` was not found!";
-        println!("{}", error_msg.red());
-        Err(error_msg.into())
-    }
-    else {
-        println!("{}", "Weird logic error in find_move".red());
-        Err("Weird logic error in find_move".into())
-    }
+    // Error message cause given move wasnt found
+    let error_msg= "Move `".to_owned() + char_move + "` was not found!";
+    println!("{}", error_msg.red());
+    Err(error_msg.into())
 }
 
-pub async fn make_aliases(){
-    let db = SqlConnection::open("data/data.db").unwrap();
 
-    for (x, character_arg_altered) in CHARS.iter().enumerate() {
-        // Checking if aliases for this characters moves exist
-        let aliases_path = "data/".to_owned() + character_arg_altered + "/aliases.json";
-        if Path::new(&aliases_path).exists() {
-            
-            // Reading the aliases json
-            let aliases_data = fs::read_to_string(&aliases_path)
-                .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
-            
-            // Deserializing the aliases json
-            let aliases_data = serde_json::from_str::<Vec<MoveAliases>>(&aliases_data).unwrap();
+pub async fn find_hitboxes(move_id: usize) -> Option<Vec<HitboxLinks>> {
 
-            for alias_data in aliases_data {
-                for x_aliases in alias_data.aliases {
-                    
-                    // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
-                    // Change the given argument (character_move) to the actual move name instead of the alias
-                    println!("{}, {}, {}", x+1, alias_data.input, x_aliases.to_lowercase().trim().replace('.', ""));
-                    db.execute("
-INSERT INTO aliases (character_id, input, alias)
-VALUES (?1, ?2, ?3)
-",params![x+1, alias_data.input, x_aliases.to_lowercase().trim().replace('.', "").replace("-", "") ]).unwrap();
-                }
-            }
+    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+
+    let mut hitbox_query = db.prepare("SELECT hitbox, hitbox_caption FROM hitboxes WHERE move_id = :move_id ORDER BY id").unwrap();
+    
+    if hitbox_query.exists(named_params! {":move_id": move_id}).unwrap() {
+
+        let hitbox_iter = hitbox_query.query_map(named_params! {":move_id": move_id}, |row| {
+            Ok( HitboxLinks {
+                hitbox: row.get(0).unwrap(),
+                hitbox_caption: row.get(1).unwrap()
+            })
+        }).unwrap();
+        
+        let mut struct_vec: Vec<HitboxLinks> = Vec::new();
+
+        for hitbox in hitbox_iter {
+            struct_vec.push(hitbox.unwrap());
         }
-    }
-/// Adds regex functionality to sql queries
 
-    db.close();
+        return Some(struct_vec);
+    }
+    
+    None
+} 
+
+
+/// Searches for the given character info.
+pub async fn find_info(char_id: usize) -> CharInfo {
+
+    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    let mut info_query = db.prepare("SELECT * FROM info WHERE character_id = :character_id").unwrap();
+    let char_info = info_query.query_row(named_params! {":character_id": &char_id},
+        |row| Ok( CharInfo {
+            defense: row.get(2).unwrap(),
+            guts: row.get(3).unwrap(),
+            guard_balance: row.get(4).unwrap(),
+            prejump: row.get(5).unwrap(),
+            umo: row.get(6).unwrap(),
+            forward_dash: row.get(7).unwrap(),
+            backdash: row.get(8).unwrap(),
+            backdash_duration: row.get(9).unwrap(),
+            backdash_invincibility: row.get(10).unwrap(),
+            backdash_airborne: row.get(11).unwrap(),
+            backdash_distance: row.get(12).unwrap(),
+            jump_duration: row.get(13).unwrap(),
+            jump_height: row.get(14).unwrap(),
+            high_jump_duration: row.get(15).unwrap(),
+            high_jump_height: row.get(16).unwrap(),
+            earliest_iad: row.get(17).unwrap(),
+            ad_duration: row.get(18).unwrap(),
+            ad_distance: row.get(19).unwrap(),
+            abd_duration: row.get(20).unwrap(),
+            abd_distance: row.get(21).unwrap(),
+            movement_tension: row.get(22).unwrap(),
+            jump_tension: row.get(23).unwrap(),
+            airdash_tension: row.get(24).unwrap(),
+            walk_speed: row.get(25).unwrap(),
+            back_walk_speed: row.get(26).unwrap(),
+            dash_initial_speed: row.get(27).unwrap(),
+            dash_acceleration: row.get(28).unwrap(),
+            dash_friction: row.get(29).unwrap(),
+            jump_gravity: row.get(30).unwrap(),
+            high_jump_gravity: row.get(31).unwrap()
+        })).unwrap();
+
+    println!("{:#?}", char_info);
+    char_info
+}
+
+
 /// Returns a `MoveInfo` struct given a `move_id` from a SQL query.
+fn send_move(move_id: usize) -> MoveInfo {
+
+    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    
+    db.query_row("SELECT input, name, damage, guard, startup, active, recovery, on_hit, on_block, level, counter, move_type, risc_gain, risc_loss, wall_damage, input_tension, chip_ratio, otg_ratio, scaling, invincibility, cancel, caption, notes, image FROM moves WHERE id = :move_id",
+        named_params! {":move_id": move_id},
+        |row| Ok( MoveInfo {
+            input: row.get(0).unwrap(),
+            name: row.get(1).unwrap(),
+            damage: row.get(2).unwrap(),
+            guard: row.get(3).unwrap(),
+            startup: row.get(4).unwrap(),
+            active: row.get(5).unwrap(),
+            recovery: row.get(6).unwrap(),
+            on_hit: row.get(7).unwrap(),
+            on_block: row.get(8).unwrap(),
+            level: row.get(9).unwrap(),
+            counter: row.get(10).unwrap(),
+            move_type: row.get(11).unwrap(),
+            risc_gain: row.get(12).unwrap(),
+            risc_loss: row.get(13).unwrap(),
+            wall_damage: row.get(14).unwrap(),
+            input_tension: row.get(15).unwrap(),
+            chip_ratio: row.get(16).unwrap(),
+            otg_ratio: row.get(17).unwrap(),
+            scaling: row.get(18).unwrap(),
+            invincibility: row.get(19).unwrap(),
+            cancel: row.get(20).unwrap(),
+            caption: row.get(21).unwrap(),
+            notes: row.get(22).unwrap(),
+            image: row.get(23).unwrap(),
+        })
+    ).unwrap()
+
+}
+
+
+/// Adds regex functionality to sql queries
+fn add_regexp_function(db: &SqlConnection) -> SqlResult<()> {
+    db.create_scalar_function(
+        "regexp",
+        2,
+        FunctionFlags::SQLITE_UTF8 | FunctionFlags::SQLITE_DETERMINISTIC,
+        move |ctx| {
+            assert_eq!(ctx.len(), 2, "called with unexpected number of arguments");
+            let regexp: Arc<Regex> = ctx.get_or_create_aux(0, |vr| -> SqlResult<_, BoxError> {
+                Ok(Regex::new(vr.as_str()?)?)
+            })?;
+            let is_match = {
+                let text = ctx
+                    .get_raw(1)
+                    .as_str()
+                    .map_err(|e| SqlError::UserFunctionError(e.into()))?;
+
+                regexp.is_match(text)
+            };
+
+            Ok(is_match)
+        },
+    )
 }

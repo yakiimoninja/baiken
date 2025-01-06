@@ -1,7 +1,6 @@
-use std::{fs, string::String};
-use colored::Colorize;
+use std::string::String;
 use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
-use crate::{check, find, ran, Context, Error, Gids, ImageLinks, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
+use crate::{check, find, ran, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
 
 /// Display a move's frame data in an advanced view.
 #[poise::command(prefix_command, slash_command)]
@@ -14,101 +13,38 @@ pub async fn advanced(
     #[description = "Move name, input or alias."] character_move: String,
 ) -> Result<(), Error> {
 
-
     // Initializing variables for the embed
     // They must not be empty cause then the embed wont be sent
     let mut embed_image = IMAGE_DEFAULT.to_string();
 
-    if (check::adaptive_check(ctx, true, false).await).is_err() {
+    if (check::adaptive_check(ctx, true, true).await).is_err() {
         return Ok(());
     }
 
-    // Finding character
-    // This will store the full character name in case user input was an alias
-    let character_arg_altered = match find::find_character(&character).await {
-        Ok(character_arg_altered) => character_arg_altered,
+    let (character, char_id) = match find::find_character(&character).await {
+        Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;
             return Ok(()) }
     };
 
-    // Reading the character json
-    let char_file_path = "data/".to_owned() + &character_arg_altered + "/" + &character_arg_altered + ".json";
-    let char_file_data = fs::read_to_string(char_file_path)
-            .expect(&("\nFailed to read '".to_owned() + &character_arg_altered + ".json" + "' file."));
-
-    // Deserializing from character json
-    let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();
-           
-    println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
-
-    // Finding move index
-    let index = match find::find_move_index(&character_arg_altered, character_move, &moves_info).await {
-        Ok(index) => index,
+    // Finding move and move id
+    let (move_data, _) = match find::find_move(char_id, &character_move).await {
+        Ok(move_data) => move_data,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
             return Ok(()) }    
     };
 
-    // Reading images.json for this character
-    let image_links = fs::read_to_string("data/".to_owned() + &character_arg_altered + "/images.json")
-        .expect(&("\nFailed to read 'data/".to_owned() + &character_arg_altered + "'/images.json' file."));
-
-    // Deserializing images.json for this character
-    let image_links = serde_json::from_str::<Vec<ImageLinks>>(&image_links).unwrap();
-    let move_info = &moves_info[index];
-    
-    println!("{}", ("Successfully read move '".to_owned() + &move_info.input.to_string() + "' in '" + &character_arg_altered + ".json' file.").green());
-
-    // Checking if the respective data field in the json file is empty
-    // If they aren't empty, the variables initialized above will be replaced
-    // With the corresponding data from the json file
-    // Otherwise they will remain as '-'
-    for img_links in image_links {
-        // Iterating through the image.json to find the move's image links
-        if move_info.input == img_links.input && !img_links.image.is_empty() {
-            embed_image = img_links.image.to_string();
-            break;
-        }
+    if !move_data.image.is_empty() {
+        embed_image = move_data.image.to_string();
     }
 
-    // Debugging prints
-    // println!("{}", content_embed);
-    // println!("{}", embed_image);
-    // println!("{}", embed_title);
-    // println!("{}", damage_embed);
-    // println!("{}", guard_embed);
-    // println!("{}", invin_embed);
-    // println!("{}", startup_embed);
-    // println!("{}", hit_embed);
-    // println!("{}", block_embed);
-    // println!("{}", active_embed);
-    // println!("{}", recovery_embed);
-    // println!("{}", counter_embed);
-
     {
-        // Reading the gids json
-        let data_from_file = fs::read_to_string("data/gids.json")
-            .expect("\nFailed to read 'gids.json' file.");
-
-        // Deserializing from gids json
-        let vec_gids = serde_json::from_str::<Gids>(&data_from_file).unwrap();
-
-        // Parse user guild id to string
+        // Parse guild id to string
         let guild_id = ctx.guild_id().unwrap().to_string();
-
-        let mut gid_found = false;
-
-        // Hand to add guild id from exclusion list
-        for x in vec_gids.id.iter() {
-            // Checking if guild is in the exclusion list
-            if guild_id == *x.to_string() {
-                gid_found = true;
-                break;
-            }
-        }
-        if !gid_found {
-            if let Some(image_path) = ran::random_p().await {
+        if !check::gid_exists(&guild_id).await {
+            if let Some(image_path) = ran::ran_p().await {
                 embed_image = image_path;
             }
         }
@@ -116,11 +52,11 @@ pub async fn advanced(
 
     let mut vec_embeds = Vec::new();
     let embed_title = "__**".to_owned()
-        + &character_arg_altered.replace('_', " ") + " "
-        + &move_info.input + " / " + &move_info.name + "**__";
+        + &character.replace('_', " ") + " "
+        + &move_data.input + " / " + &move_data.name + "**__";
 
-    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
-    let embed_footer = CreateEmbedFooter::new(&move_info.caption);
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
+    let embed_footer = CreateEmbedFooter::new(&move_data.caption);
 
     let embed = CreateEmbed::new()
         .color(EMBED_COLOR)
@@ -128,33 +64,33 @@ pub async fn advanced(
         .url(&embed_url)
         .image(&embed_image)
         .fields(vec![
-            ("Damage", &move_info.damage.to_string(), true),
-            ("Guard", &move_info.guard.to_string(), true),
-            ("Invinciblity", &move_info.invincibility.to_string(), true),
-            ("Startup", &move_info.startup.to_string(), true),
-            ("Active", &move_info.active.to_string(), true),
-            ("Recovery", &move_info.recovery.to_string(), true),
-            ("On Hit", &move_info.on_hit.to_string(), true),
-            ("On Block", &move_info.on_block.to_string(), true),
-            ("Counter", &move_info.counter.to_string(), true),
-            ("Level", &move_info.level.to_string(), true),
-            ("Risc Gain", &move_info.risc_gain.to_string(), true),
-            ("Risc Loss", &move_info.risc_loss.to_string(), true),
-            ("Scaling", &move_info.scaling.to_string(), true),
-            ("Wall Damage", &move_info.wall_damage.to_string(), true),
-            ("Input Tension", &move_info.input_tension.to_string(), true),
-            ("Chip Ratio", &move_info.chip_ratio.to_string(), true),
-            ("OTG Ratio", &move_info.otg_ratio.to_string(), true),
-            ("Cancel", &move_info.cancel.to_string(), true),
+            ("Damage", &move_data.damage.to_string(), true),
+            ("Guard", &move_data.guard.to_string(), true),
+            ("Invinciblity", &move_data.invincibility.to_string(), true),
+            ("Startup", &move_data.startup.to_string(), true),
+            ("Active", &move_data.active.to_string(), true),
+            ("Recovery", &move_data.recovery.to_string(), true),
+            ("On Hit", &move_data.on_hit.to_string(), true),
+            ("On Block", &move_data.on_block.to_string(), true),
+            ("Counter", &move_data.counter.to_string(), true),
+            ("Level", &move_data.level.to_string(), true),
+            ("Risc Gain", &move_data.risc_gain.to_string(), true),
+            ("Risc Loss", &move_data.risc_loss.to_string(), true),
+            ("Scaling", &move_data.scaling.to_string(), true),
+            ("Wall Damage", &move_data.wall_damage.to_string(), true),
+            ("Input Tension", &move_data.input_tension.to_string(), true),
+            ("Chip Ratio", &move_data.chip_ratio.to_string(), true),
+            ("OTG Ratio", &move_data.otg_ratio.to_string(), true),
+            ("Cancel", &move_data.cancel.to_string(), true),
         ])
         .footer(embed_footer);
 
     vec_embeds.push(embed);
 
-    if !&move_info.notes.is_empty() {
+    if !&move_data.notes.is_empty() {
         let embed2 = CreateEmbed::new()
             .color(EMBED_COLOR)
-            .description(&move_info.notes);
+            .description(&move_data.notes);
 
         vec_embeds.push(embed2);
     }
@@ -165,5 +101,6 @@ pub async fn advanced(
 
     // New version notification
     //ctx.channel_id().say(ctx, r"[__**Patch.**__](<https://github.com/yakiimoninja/baiken/releases>)").await?;
+
     Ok(())
 }

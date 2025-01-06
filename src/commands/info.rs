@@ -1,7 +1,6 @@
-use std::{fs, string::String};
-use colored::Colorize;
+use std::string::String;
 use poise::serenity_prelude::CreateEmbed;
-use crate::{check, find, CharInfo, Context, Error, EMBED_COLOR};
+use crate::{check, find, Context, Error, EMBED_COLOR};
 
 /// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
@@ -16,23 +15,18 @@ pub async fn info(
     }
 
     // Finding character
-    let character_arg_altered = match find::find_character(&character).await {
-    Ok(character_arg_altered) => character_arg_altered,
+    let (character, char_id) = match find::find_character(&character).await {
+    Ok(character) => character,
     Err(err) => {
         ctx.say(err.to_string()).await?;
         return Ok(()) }
     };
 
-    // Reading the character info json
-    let char_file_path = "data/".to_owned() + &character_arg_altered + "/info.json";
-    let char_file_data = fs::read_to_string(char_file_path)
-        .expect(&("\nFailed to read ".to_owned() + &character + " 'info.json' file."));
+    // Finding character
+    let char_info = find::find_info(char_id).await;
 
-    // Deserializing from character json
-    let char_info = serde_json::from_str::<CharInfo>(&char_file_data).unwrap();  
-
-    let embed_title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Info**__";
-    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "/Data#Infobox_Data";
+    let embed_title = "__**".to_owned() + &character.replace('_', " ") + " Info**__";
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "/Data#Infobox_Data";
 
     let msg =
         "- **Defense →**  ".to_owned() + &char_info.defense +

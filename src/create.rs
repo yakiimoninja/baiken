@@ -32,7 +32,7 @@ pub async fn create_db() -> Result<(), Error> {
     }
     // aliases json
     for character in CHARS {
-        let aliases_path = "data/utils/aliases/".to_owned() + character + ".json";
+        let aliases_path = "data/utils/aliases/".to_owned() + &character.replace(" ", "_") + ".json";
         if !Path::new(&aliases_path).exists() {
             println!("{}", aliases_path);
             let error_msg = "Failed to open '".to_owned() + character + ".json' file.";
@@ -43,7 +43,7 @@ pub async fn create_db() -> Result<(), Error> {
     let db = SqlConnection::open("data/data.db").unwrap();
 
     // execute schema
-    let schema = fs::read_to_string(&schema_path).unwrap();
+    let schema = fs::read_to_string(schema_path).unwrap();
     db.execute_batch(&schema).unwrap();
 
     // insert characters
@@ -75,9 +75,9 @@ VALUES ((SELECT characters.id FROM characters WHERE characters.character = :char
     update_all_char_data().await;
 
     // insert aliases
-    for x in 0..CHARS.len() {
+    for (x, char) in CHARS.iter().enumerate() {
         // Reading the aliases json
-        let aliases_path = "data/utils/aliases/".to_owned() + CHARS[x] + ".json";
+        let aliases_path = "data/utils/aliases/".to_owned() + &char.replace(" ", "_") + ".json";
         let aliases_data = fs::read_to_string(&aliases_path).unwrap();
         
         // Deserializing the aliases json

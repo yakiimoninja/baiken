@@ -32,13 +32,15 @@ pub async fn update (
     }
 
     // Finding character
-    let character_arg_altered = match find::find_character(&character).await {
-        Ok(character_arg_altered) => character_arg_altered,
+    let (character, _) = match find::find_character(&character).await {
+        Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;
             return Ok(()) }
     };
 
+    ctx.defer_ephemeral().await.unwrap();
+    println!("{}", character);
     match option {
         UpdateChoice::All => {
             // If character arg is all; update frames, images and info for all characters
@@ -50,9 +52,9 @@ pub async fn update (
                 // If user input isnt the full name, part of a full name or a nickname
                 // Update frames, images and info for specific character
                 ctx.say("Update started!").await?; 
-                framedata::get_char_data(CHARS, &character_arg_altered).await;
-                images::get_char_images(CHARS, &character_arg_altered).await;
-                info::get_char_info(CHARS, &character_arg_altered).await;
+                framedata::get_char_data(CHARS, &character).await;
+                images::get_char_images(CHARS, &character).await;
+                info::get_char_info(CHARS, &character).await;
             }
         }
         UpdateChoice::Frames => {
@@ -66,7 +68,7 @@ pub async fn update (
                 // If user input isnt the full name, part of a full name or a nickname
                 // Update frames for specific character
                 ctx.say("Update started!").await?; 
-                framedata::get_char_data(CHARS, &character_arg_altered).await;
+                framedata::get_char_data(CHARS, &character).await;
             }
         }
         UpdateChoice::Images => {
@@ -80,7 +82,7 @@ pub async fn update (
                 // If user input isnt the full name, part of a full name or a nickname
                 // Update images for specific character
                 ctx.say("Update started!").await?; 
-                images::get_char_images(CHARS, &character_arg_altered).await;
+                images::get_char_images(CHARS, &character).await;
             }
         }
         UpdateChoice::Info => {
@@ -94,7 +96,7 @@ pub async fn update (
                 // If user input isnt the full name, part of a full name or a nickname
                 // Update info for specific character
                 ctx.say("Update started!").await?; 
-                info::get_char_info(CHARS, &character_arg_altered).await;
+                info::get_char_info(CHARS, &character).await;
             }
         }
     }

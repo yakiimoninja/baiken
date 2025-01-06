@@ -2,6 +2,7 @@ use std::path::Path;
 use colored::Colorize;
 use poise::reply::CreateReply;
 use crate::{Context, Error};
+use rusqlite::{named_params, Connection as SqlConnection, OpenFlags};
 
 // Collection of functions that check for stuff
 
@@ -65,3 +66,14 @@ pub async fn adaptive_check(
     Ok(())
 }
 
+/// Checks if given guild id exists in database.
+pub async fn gid_exists(guild_id: &String) -> bool {
+
+    // Open gids.db
+    let db = SqlConnection::open_with_flags("data/gids.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    // Check if gid is in db
+    let guild_id_exists = db.prepare("SELECT 0 FROM gids WHERE gid = :gid").unwrap()
+        .exists(named_params! {":gid": guild_id}).unwrap();
+
+    guild_id_exists
+}

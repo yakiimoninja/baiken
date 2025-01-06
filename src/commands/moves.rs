@@ -32,8 +32,8 @@ pub async fn moves(
     }
 
     // Finding character
-    let character_arg_altered = match find::find_character(&character).await {
-        Ok(character_arg_altered) => character_arg_altered,
+    let (character, _) = match find::find_character(&character).await {
+        Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;
             return Ok(());
@@ -42,17 +42,17 @@ pub async fn moves(
 
     // Reading the character json
     let char_file_path =
-        "data/".to_owned() + &character_arg_altered + "/" + &character_arg_altered + ".json";
+        "data/".to_owned() + &character + "/" + &character + ".json";
     let char_file_data = fs::read_to_string(char_file_path)
         .expect(&("\nFailed to read '".to_owned() + &character + ".json" + "' file."));
 
     // Deserializing from character json
     let moves_info = serde_json::from_str::<Vec<MoveInfo>>(&char_file_data).unwrap();
 
-    println!("{}", ("Successfully read '".to_owned() + &character_arg_altered + ".json' file.").green());
+    println!("{}", ("Successfully read '".to_owned() + &character + ".json' file.").green());
 
     // Reading the aliases json
-    let aliases_path = "data/".to_owned() + &character_arg_altered + "/aliases.json";
+    let aliases_path = "data/".to_owned() + &character + "/aliases.json";
     let aliases_data = fs::read_to_string(&aliases_path)
         .expect(&("\nFailed to read '".to_owned() + &aliases_path + "' file."));
 
@@ -61,8 +61,8 @@ pub async fn moves(
 
     let mut vec_embeds = Vec::new();
 
-    let embed_title = "__**".to_owned() + &character_arg_altered.replace('_', " ") + " Moves / Aliases**__";
-    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character_arg_altered + "#Overview";
+    let embed_title = "__**".to_owned() + &character.replace('_', " ") + " Moves / Aliases**__";
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
     let embed_footer = CreateEmbedFooter::new(
         "Try the \"/help notes\" command for usage notes and specifics.\nOr \"/report\" to request a new aliases.");
     
