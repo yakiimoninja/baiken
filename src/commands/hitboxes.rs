@@ -86,6 +86,7 @@ pub async fn hitboxes(
         }
     };
 
+    vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR).description(&hitbox_data[0].hitbox_caption));
     let mut reply = poise::CreateReply::default();
     reply.embeds.extend(vec_embeds);
 
