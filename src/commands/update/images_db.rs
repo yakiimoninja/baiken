@@ -23,6 +23,8 @@ struct ImageTitle {
     name: Option<String>,
     images: Option<String>,
     hitboxes: Option<String>,
+    #[serde(rename = "hitboxCaption")]
+    hitbox_caption: Option<String>
 }
 
 const IMAGE_HALF: &str = "https://www.dustloop.com/wiki/images";
@@ -64,7 +66,12 @@ async fn make_link(image_name: String) -> String {
 }
 
 /// Pushes move hitbox image links into Hitboxes table
-pub async fn push_hitboxes_to_db(db: SqlConnection, char_count: usize, move_input: String, hitbox: String) -> SqlConnection {
+pub async fn push_hitboxes_to_db(
+    db: SqlConnection,
+    char_count: usize,
+    move_input: String,
+    hitbox: String,
+    hitbox_caption: String) -> SqlConnection {
 
     db.execute("
 INSERT INTO hitboxes (move_id, hitbox, hitbox_caption)
@@ -78,7 +85,7 @@ hitbox = :hitbox, hitbox_caption = :hitbox_caption",
             ":character_id": char_count + 1,
             ":input": move_input, 
             ":hitbox": hitbox, 
-            ":hitbox_caption": "TODO"
+            ":hitbox_caption": hitbox_caption
         }).unwrap();
 
     db
@@ -118,7 +125,7 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
 
         // Replacing None values with a generic '-'
         if image_data.title.input.is_none() {
-            image_data.title.input = Some("".to_string());
+            image_data.title.input = Some(String::from(""));
         }
         else {
             // Skips finish blow for sol
@@ -140,12 +147,12 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
             }
         }
         if image_data.title.images.is_none() {
-            image_link = "".to_string();
+            image_link = String::from("");
         }
         else {
             // If image field contains only spaces
             if image_data.title.images.as_ref().unwrap().trim() == "" {
-                image_link = "".to_string();
+                image_link = String::from("");
             }
             else {
                 // Multiple image names
@@ -168,10 +175,20 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
             }
         }
 
+        if image_data.title.hitbox_caption.is_none() {
+            image_data.title.hitbox_caption = Some(String::from(""));
+        }
+
         // If hitbox empty
         if image_data.title.hitboxes.is_none() {
             // Push image link in db here
-            db = push_hitboxes_to_db(db, char_count, image_data.title.input.as_ref().unwrap().to_string(), String::from("")).await;
+            db = push_hitboxes_to_db(
+                db,
+                char_count,
+                image_data.title.input.as_ref().unwrap().to_string(),
+                String::from(""),
+                image_data.title.hitbox_caption.as_ref().unwrap().to_string()
+            ).await;
         }
         else {
             // Splitting the hitboxes names into a vector
@@ -183,7 +200,8 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
                     db, 
                     char_count,
                     image_data.title.input.as_ref().unwrap().to_string(),
-                    make_link(hitbox_string.to_string().trim().replace(' ', "_")).await
+                    make_link(hitbox_string.to_string().trim().replace(' ', "_")).await,
+                    image_data.title.hitbox_caption.as_ref().unwrap().to_string()
                 ).await;
             }
         }
