@@ -106,7 +106,7 @@ pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_c
     let mut _umo_processed_string: String = String::new();
 
     if char_info.umo.is_none(){
-        _umo_processed_string = "-".to_string();
+        _umo_processed_string = String::from("-");
     }
     else if char_info.umo.as_ref().unwrap().to_string().contains("[[GGST") {
     // Logic for removing [[GGST/Character/UMO|UMO]] padding

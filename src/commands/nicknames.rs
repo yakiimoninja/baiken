@@ -20,7 +20,7 @@ pub async fn nicknames(
     let vec_nicknames = serde_json::from_str::<Vec<Nicknames>>(&data_from_file).unwrap();
     
     // Formatting string for in discord print
-    let mut nicks_as_msg = "".to_string();
+    let mut nicks_as_msg = String::from("");
 
     for nicknames in vec_nicknames {
         // Character portion

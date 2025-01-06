@@ -86,7 +86,7 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
 
         // Replacing None values with a generic '-'
         if move_data.title.input.is_none() {
-            move_data.title.input = Some("-".to_string());
+            move_data.title.input = Some(String::from("-"));
         }
         else {
             // Skips finish blow for sol
@@ -221,66 +221,9 @@ notes = :notes
         ":scaling":        move_data.title.scaling.as_ref().unwrap_or(&empty).to_string(),
         ":invincibility":  move_data.title.invincibility.as_ref().unwrap_or(&empty).to_string(),
         ":cancel":         move_data.title.cancel.as_ref().unwrap_or(&empty).to_string(),
-        ":caption":        move_data.title.caption.as_ref().unwrap_or(&"".to_string()).to_string(),
-        ":notes":          move_data.title.notes.as_ref().unwrap_or(&"".to_string()).to_string(),
+        ":caption":        move_data.title.caption.as_ref().unwrap_or(&String::from("")).to_string(),
+        ":notes":          move_data.title.notes.as_ref().unwrap_or(&String::from("")).to_string(),
         }).unwrap();
-
-//         db.execute("
-// INSERT OR IGNORE INTO moves 
-// (character_id, input, name, damage, guard, startup, active, recovery, on_hit, on_block, level, counter, move_type, risc_gain, risc_loss, wall_damage, input_tension, chip_ratio, otg_ratio, scaling, invincibility, cancel, caption, notes)
-//
-// VALUES 
-// (
-// :character_id,
-// :input,
-// :name,
-// :damage,
-// :guard,
-// :startup,
-// :active,
-// :recovery,
-// :on_hit,
-// :on_block,
-// :level,
-// :counter,
-// :move_type,
-// :risc_gain,
-// :risc_loss,
-// :wall_damage,
-// :input_tension,
-// :chip_ratio,
-// :otg_ratio,
-// :scaling,
-// :invincibility,
-// :cancel,
-// :caption,
-// :notes
-// )", named_params! {
-//         ":character_id":   char_count + 1,
-//         ":input":          move_data.title.input.as_ref().unwrap_or(&empty).to_string(),
-//         ":name":           move_data.title.name.as_ref().unwrap_or(&empty).to_string(),
-//         ":damage":         move_data.title.damage.as_ref().unwrap_or(&empty).to_string(),
-//         ":guard":          move_data.title.guard.as_ref().unwrap_or(&empty).to_string(),
-//         ":startup":        move_data.title.startup.as_ref().unwrap_or(&empty).to_string(),
-//         ":active":         move_data.title.active.as_ref().unwrap_or(&empty).to_string(),
-//         ":recovery":       move_data.title.recovery.as_ref().unwrap_or(&empty).to_string(),
-//         ":on_hit":         move_data.title.on_hit.as_ref().unwrap_or(&empty).to_string(),
-//         ":on_block":       move_data.title.on_block.as_ref().unwrap_or(&empty).to_string(),
-//         ":level":          move_data.title.level.as_ref().unwrap_or(&empty).to_string(),
-//         ":counter":        move_data.title.counter.as_ref().unwrap_or(&empty).to_string(),
-//         ":move_type":      move_data.title.move_type.as_ref().unwrap_or(&empty).to_string(),
-//         ":risc_gain":      move_data.title.risc_gain.as_ref().unwrap_or(&empty).to_string(),
-//         ":risc_loss":      move_data.title.risc_loss.as_ref().unwrap_or(&empty).to_string(),
-//         ":wall_damage":    move_data.title.wall_damage.as_ref().unwrap_or(&empty).to_string(),
-//         ":input_tension":  move_data.title.input_tension.as_ref().unwrap_or(&empty).to_string(),
-//         ":chip_ratio":     move_data.title.chip_ratio.as_ref().unwrap_or(&empty).to_string(),
-//         ":otg_ratio":      move_data.title.otg_ratio.as_ref().unwrap_or(&empty).to_string(),
-//         ":scaling":        move_data.title.scaling.as_ref().unwrap_or(&empty).to_string(),
-//         ":invincibility":  move_data.title.invincibility.as_ref().unwrap_or(&empty).to_string(),
-//         ":cancel":         move_data.title.cancel.as_ref().unwrap_or(&empty).to_string(),
-//         ":caption":        move_data.title.caption.as_ref().unwrap_or(&"".to_string()).to_string(),
-//         ":notes":          move_data.title.notes.as_ref().unwrap_or(&"".to_string()).to_string(),
-//         }).unwrap();
     }
 
     db
