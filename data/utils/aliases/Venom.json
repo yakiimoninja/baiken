@@ -48,5 +48,54 @@
       "WA!",
       "236D!"
     ]
+  },
+  {
+    "input": "214X",
+    "aliases": ["Ball Set","Ball","214P","214K","214S","214H"]
+  },
+  {
+    "input": "41236K",
+    "aliases": ["Ball Set (Multiple)","Balls","BSM","426K"]
+  },
+  {
+    "input": "623X",
+    "aliases": ["QV","Q5","623P","623K","623S","623H"]
+  },
+  {
+    "input": "[4]6S",
+    "aliases": ["Stinger Aim S","Stinger Aim","SA","SAS","46S","46S!"]
+  },
+  {
+    "input": "[4]6H",
+    "aliases": ["Stinger Aim H","SAH","46H","46H!"]
+  },
+  {
+    "input": "[2]8S",
+    "aliases": ["Carcass Raid S","Carcass Raid","CRS","CR","28S","28S!"]
+  },
+  {
+    "input": "[2]8H",
+    "aliases": ["Carcass Raid H","CRH","28H","28H!"]
+  },
+  {
+    "input": "j.236S",
+    "aliases": ["Carcass Raid (mid-air) S","Air Carcass Raid S","Air Carcass Raid","ACR","ACRS","ACR!","ACRS!","j.236S!"]
+  },
+  {
+    "input": "j.236H",
+    "aliases": ["Carcass Raid (mid-air) H","Air Carcass Raid H","ACRH","ACRH!","j.236H!"]
+  },
+  {
+    "input": "632146K",
+    "aliases": ["Tryambaka","Command Grab","Ball Grab","BG","TB","CG","6246K"]
+  },
+  {
+    "input": "632146S",
+    "aliases": ["Dark Angel","Big Ball","Ball Super","DA","BB","BS","6246S"]
+  },
+  {
+    "input": "632146H",
+    "aliases": ["Navaratna Runout","Black Hole","Super","BH","NR","6246H"]
   }
 ]
+
