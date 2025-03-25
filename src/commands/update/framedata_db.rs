@@ -1,5 +1,4 @@
 extern crate ureq;
-
 use serde::Deserialize;
 use rusqlite::{named_params, Connection as SqlConnection};
 
@@ -56,48 +55,29 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
 
     let empty = String::from("-");
 
-    println!("{}", char_page_response_json);
-    // let char_page_response_json = &char_page_response_json
-    //     // Colorful text RED
-    //     .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")
-    //     // Colorful text BLUE
-    //     .replace(r#"&lt;span class=&quot;colorful-text-2&quot; &gt;"#, "")
-    //     // Colorful text GREEN
-    //     .replace(r#"&lt;span class=&quot;colorful-text-3&quot; &gt;"#, "")
-    //     // Colorful text PURPlE
-    //     .replace(r#"&lt;span class=&quot;colorful-text-1&quot; &gt;"#, "")
-    //     // Colorful text tag close
-    //     .replace(r#"&lt;/span&gt;"#, "")
-    //     .replace(r#"&lt;br&gt;"#, ", ")
-    //     .replace(r#"&lt;br/&gt;"#, ", ")
-    //     .replace(r#"&quot;"#, "")
-    //     // Ino low profile
-    //     .replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "")
-    //     // Replace apostrophe
-    //     .replace(r#"&#039;"#, "'")
-    //     .replace(r#"&amp;#32;"#, "") Ok
-    //     .replace(r#"'''"#, "")
-    //     .replace(r#"; "#, r#"\n"#)
-    //     .replace(r#";"#, r#"\n"#)
-    //     .replace(r#"\\"#, "");
-    //
-    //     Go from biggest string to smallest
-    //     replace double "\\" with "/n bullet point"
-    //     replace "; " with "\n"
-    //     replace ";" with "\n"
-    //     replace "&#039;" with "'"
-    //     replace "&quot;" with double quote '"'
-    //     replace &lt;small&gt;SOME_WORD&lt;/small&gt;
-    //     replace italic text "&#039;&#039;SOME_WORD&#039;&#039;" becomes italic
-    //     replace purple text "&lt;span class=&quot;colorful-text-1&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
-    //     replace blue text "&lt;span class=&quot;colorful-text-2&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
-    //     replace green text "&lt;span class=&quot;colorful-text-3&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
-    //     replace red text "&lt;span class=&quot;colorful-text-4&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
-    //     replace orange text "&lt;span class=&quot;colorful-text-5&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
-    //     replace "&lt;br&gt;" (<br>) with "\n"???
-    //     replace "&lt;br/&gt;" (<br/>) "&lt;small&gt;" (<small>) SOME_WORD "&lt;/small&gt;" (</small>) "&lt;small&gt;" (<small>) "&lt;/small&gt;" (</small>)
-    //     replace "&#039;&#039;&#039;SOME_WORD&#039;&#039;&#039;" becomes bold
-    //     replace asuka icons "[[File:GGST Asuka R Accipiter Metron_Icon.png|50px]];" with ""
+    let char_page_response_json = &char_page_response_json
+        // Colorful text RED
+        .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")
+        // Colorful text BLUE
+        .replace(r#"&lt;span class=&quot;colorful-text-2&quot; &gt;"#, "")
+        // Colorful text GREEN
+        .replace(r#"&lt;span class=&quot;colorful-text-3&quot; &gt;"#, "")
+        // Colorful text PURPlE
+        .replace(r#"&lt;span class=&quot;colorful-text-1&quot; &gt;"#, "")
+        // Colorful text tag close
+        .replace(r#"&lt;/span&gt;"#, "")
+        .replace(r#"&lt;br&gt;"#, ", ")
+        .replace(r#"&lt;br/&gt;"#, ", ")
+        .replace(r#"&quot;"#, "")
+        // Ino low profile
+        .replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "")
+        // Replace apostrophe
+        .replace(r#"&#039;"#, "'")
+        .replace(r#"&amp;#32;"#, "")
+        .replace(r#"'''"#, "")
+        .replace(r#"; "#, r#"\n"#)
+        .replace(r#";"#, r#"\n"#)
+        .replace(r#"\\"#, "");
 
     let mut move_data_response: Response = serde_json::from_str(char_page_response_json).unwrap();
     let char_move_data = &mut move_data_response.cargoquery;
