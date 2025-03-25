@@ -39,7 +39,6 @@ pub async fn update (
             return Ok(()) }
     };
 
-    ctx.defer_ephemeral().await.unwrap();
     println!("{}", character);
     match option {
         UpdateChoice::All => {
