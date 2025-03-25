@@ -6,23 +6,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-- Create fn that auto makes the db if it doesnt exist.
-- Find a way to add aliases easily. json helper to update into db?
 - Find a non blocking way to update the db.
+- Fix with regex?
 - Fix this: &lt;span class=&quot;tooltip&quot; &gt;airborne&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;Sin is considered airborne if he is hit during backdash and grounded otherwise&lt;/span&gt;&lt;/span&gt;|24|1-6F|12|13|42|409.5|49|567.6|7|18/24|735.625|6/11|228.367|10|3|5|6.3|4.9|14|29|100|1.9|1.9
 
-### Fixed
-- Fix **`Millia Rage`** `Iron Savior` embed footer caption containing weird characters.
-
 ### Changed
-- Rework data storage to use a sqlite database insted of json files.
-- Rework error handling. Errors responses are now ephemeral.
+- Rework data storage to use a sqlite database instead of json files.
+- Rework error handling. Error responses are now ephemeral.
+- Rework CHANGELOG.
 
-## [1.0.0] - 2024-11-25
+- **`Goldlewis Dickinson`**:
+    - `236S Level 1` change to `236S`.
+    - `236S` change alias from `MG1` to `MG`.
+
+### Added
+- Added new character **`Venom`**.
+
+- **`Asuka R`**:
+    - `214X (Discard)` add new alias `Discard`.
+    - `214X (Draw)` add new aliases `Draw`.
+    - `j.214X (Discard)` add new alias `Air Discard`, `ADI`.
+    - `j.214X (Draw)` add new aliases `Air Draw`, `ADR`.
+
+- **`Queen Dizzy`**:
+    - Add new nickname `Queef Dizzy`.
+
+- **`Ramlethal Valentine`**:
+    - `214P` add new alias `Rekka`.
+    - `214P 4P` add new alias `214P4P`.
+    - `214P 4P 4P` add new alias `214P4P4P`.
 
 ### Removed
-- Remove `/fmeter` command. Its now a `/frames` subcommand.
-- Remove`/feedback` command. Its now renamed to `/report`.
+- **`Asuka R`**:
+    - `j.214X (Discard)` remove alias `Air Discard`, `ADI`.
+    - `j.214X (Draw)` remove aliases `Air Draw`, `ADR`.
+
+- **`Goldlewis Dickinson`**:
+    - Remove `236S Level 2` and aliases.
+    - Remove `236S Level 3` and aliases.
+
+### Fixed
+- Fix **`Ramlethal Valentine`** alias typo `Sabrobato`.
+- Fix **`Millia Rage`** `Iron Savior` embed footer caption containing weird characters.
+- Fix **`Faust`** all aliases for items not working.
+- Fix **`Ramlethal Valentine`** `Erarlumo 2` and `Erarlumo 3` aliases not working cause of new input.
+- Fix **`Goldlewis Dickinson`** `236S` aliases not working cause of new input.
+
+## [1.0.0] - 2024-11-25
 
 ### Changed
 - Change all embed title to contain name and input for move called.
@@ -1070,7 +1100,7 @@ Say less my guy.
     - `236236K Level 3` add new aliases `Burn It Down 3`, `Laser 3`, `Laser Super 3`, `L3`.
 
 ### Removed
-- Remove patch notes folder and moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
+- Remove patch notes directory and moved all the patch notes to the [releases](https://github.com/yakiimoninja/baiken/releases).
 - Remove the command aliases `hit` and `hitbox` from `b.h`.
 
 ### Fixed 
@@ -1081,14 +1111,14 @@ Say less my guy.
 
 ### Changed
 - Change the embed line's color to match Baiken's profile picture. 
-- Move `images` folder out of `src` and to `data`.
+- Move `images` directory out of `src` and to `data`.
 
 ### Added 
 - Option to invite Baiken to your server using the following QR Code. 
 <img src="../data/images/baiken_qr.png" width="200" height="200"/>
 
 ### Fixed
-- Fixed broken image links after the `images` folder move.
+- Fixed broken image links after the `images` directory move.
 
 ## [0.4.4]
 
@@ -1124,7 +1154,7 @@ Say less my guy.
 ## [0.4.2]
 
 ### Changed
-- Rename `patch_notes` folder to `patch-notes`.
+- Rename `patch_notes` directory to `patch-notes`.
 
 ### Added
 - **`Sol Badguy`**: 
