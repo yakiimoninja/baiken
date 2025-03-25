@@ -105,7 +105,7 @@ struct Gids {
     id: Vec<String>
 }
 
-pub const CHARS: [&str; 29] = [
+pub const CHARS: [&str; 30] = [
     "A.B.A",
     "Anji_Mito",
     "Asuka_R",
@@ -134,6 +134,7 @@ pub const CHARS: [&str; 29] = [
     "Slayer",
     "Sol_Badguy",
     "Testament",
+    "Venom",
     "Zato-1"
 ];
 
