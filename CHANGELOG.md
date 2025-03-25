@@ -46,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Remove `236S Level 3` and aliases.
 
 ### Fixed
+- Fix **`Bridget`** changed input for `S` to `f.SS`.
 - Fix **`Ramlethal Valentine`** alias typo `Sabrobato`.
 - Fix **`Millia Rage`** `Iron Savior` embed footer caption containing weird characters.
 - Fix **`Faust`** all aliases for items not working.
