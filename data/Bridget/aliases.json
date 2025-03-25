@@ -12,9 +12,10 @@
     ]
   },
   {
-    "input": "SS",
+    "input": "f.SS",
     "aliases": [
-      "5SS"
+      "5SS",
+      "SS"
     ]
   },
   {
