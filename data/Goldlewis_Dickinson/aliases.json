@@ -18,6 +18,38 @@
     ]
   },
   {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  },
+  {
     "input": "41236H",
     "aliases": [
       "426BT",
@@ -198,45 +230,13 @@
     ]
   },
   {
-    "input": "236S Level 1",
+    "input": "236S",
     "aliases": [
       "Skyfish",
-      "Skyfish Level 1",
       "Gun",
-      "Gun Level 1",
       "Minigun",
-      "SL1",
-      "G1",
-      "GL1",
-      "MG1"
-    ]
-  },
-  {
-    "input": "236S Level 2",
-    "aliases": [
-      "Skyfish 2",
-      "Skyfish Level 2",
-      "Gun 2",
-      "Gun Level 2",
-      "Minigun 2",
-      "SL2",
-      "G2",
-      "GL2",
-      "MG2"
-    ]
-  },
-  {
-    "input": "236S Level 3",
-    "aliases": [
-      "Skyfish 3",
-      "Skyfish Level 3",
-      "Gun 3",
-      "Gun Level 3",
-      "Minigun 3",
-      "SL3",
-      "G3",
-      "GL3",
-      "MG3"
+      "SF",
+      "MG"
     ]
   },
   {
@@ -313,38 +313,6 @@
       "L3",
       "LL3",
       "LS3"
-    ]
-  },
-  {
-    "input": "6D or 4D",
-    "aliases": [
-      "Throw",
-      "6D",
-      "4D"
-    ]
-  },
-  {
-    "input": "j.6D or j.4D",
-    "aliases": [
-      "Air Throw",
-      "J6D",
-      "J4D"
-    ]
-  },
-  {
-    "input": "236D",
-    "aliases": [
-      "Wild Assault",
-      "WA"
-    ]
-  },
-  {
-    "input": "236[D]",
-    "aliases": [
-      "Wild Assault Hold",
-      "WAH",
-      "WA!",
-      "236D!"
     ]
   }
 ]
