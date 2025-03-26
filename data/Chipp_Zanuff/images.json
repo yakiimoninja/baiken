@@ -182,7 +182,21 @@
     ]
   },
   {
-    "input": "br.6H",
+    "input": "j.6D or j.4D",
+    "move_img": "https://www.dustloop.com/wiki/images/1/11/GGST_Chipp_Zanuff_Air_Throw.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/1/16/GGST_Chipp_Zanuff_Air_Throw_Hitbox.png"
+    ]
+  },
+  {
+    "input": "r.2",
+    "move_img": "",
+    "hitbox_img": [
+      ""
+    ]
+  },
+  {
+    "input": "r.6H",
     "move_img": "https://www.dustloop.com/wiki/images/6/61/GGST_Chipp_Zanuff_br6H.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/1/11/GGST_Chipp_Zanuff_br6H_Hitbox-1.png",
@@ -190,45 +204,59 @@
     ]
   },
   {
-    "input": "br.cS",
-    "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Chipp_Zanuff_brCs.png",
+    "input": "r.D or r.4D",
+    "move_img": "https://www.dustloop.com/wiki/images/1/1b/GGST_Chipp_Zanuff_rD.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/8/8b/GGST_Chipp_Zanuff_brCs_Hitbox.png"
+      ""
     ]
   },
   {
-    "input": "br.fS",
-    "move_img": "https://www.dustloop.com/wiki/images/8/8b/GGST_Chipp_Zanuff_brfS.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/b/b5/GGST_Chipp_Zanuff_brfS_Hitbox.png"
-    ]
-  },
-  {
-    "input": "br.H",
+    "input": "r.H",
     "move_img": "https://www.dustloop.com/wiki/images/a/ad/GGST_Chipp_Zanuff_brH.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/9/98/GGST_Chipp_Zanuff_brH_Hitbox.png"
     ]
   },
   {
-    "input": "br.K",
+    "input": "r.K",
     "move_img": "https://www.dustloop.com/wiki/images/8/8c/GGST_Chipp_Zanuff_brK.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/d/d2/GGST_Chipp_Zanuff_brK_Hitbox.png"
     ]
   },
   {
-    "input": "br.P",
+    "input": "r.P",
     "move_img": "https://www.dustloop.com/wiki/images/1/1b/GGST_Chipp_Zanuff_brP.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/1/1d/GGST_Chipp_Zanuff_brP_Hitbox.png"
     ]
   },
   {
-    "input": "j.6D or j.4D",
-    "move_img": "https://www.dustloop.com/wiki/images/1/11/GGST_Chipp_Zanuff_Air_Throw.png",
+    "input": "rc.S",
+    "move_img": "https://www.dustloop.com/wiki/images/5/51/GGST_Chipp_Zanuff_brCs.png",
     "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/1/16/GGST_Chipp_Zanuff_Air_Throw_Hitbox.png"
+      "https://www.dustloop.com/wiki/images/8/8b/GGST_Chipp_Zanuff_brCs_Hitbox.png"
+    ]
+  },
+  {
+    "input": "rf.S",
+    "move_img": "https://www.dustloop.com/wiki/images/8/8b/GGST_Chipp_Zanuff_brfS.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/b/b5/GGST_Chipp_Zanuff_brfS_Hitbox.png"
+    ]
+  },
+  {
+    "input": "w.2",
+    "move_img": "",
+    "hitbox_img": [
+      ""
+    ]
+  },
+  {
+    "input": "w.4",
+    "move_img": "",
+    "hitbox_img": [
+      ""
     ]
   },
   {

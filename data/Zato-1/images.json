@@ -189,13 +189,6 @@
     ]
   },
   {
-    "input": "214H",
-    "move_img": "https://www.dustloop.com/wiki/images/b/bd/GGST_Zato-1_Summon_Eddie.png",
-    "hitbox_img": [
-      ""
-    ]
-  },
-  {
     "input": "214K",
     "move_img": "https://www.dustloop.com/wiki/images/a/aa/GGST_Zato-1_Break_The_Law.png",
     "hitbox_img": [
@@ -273,6 +266,13 @@
     "move_img": "https://www.dustloop.com/wiki/images/6/68/GGST_Zato-1_Damned_Fang.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/9/90/GGST_Zato-1_Damned_Fang_hitbox.png"
+    ]
+  },
+  {
+    "input": "Summon 214H",
+    "move_img": "https://www.dustloop.com/wiki/images/b/bd/GGST_Zato-1_Summon_Eddie.png",
+    "hitbox_img": [
+      ""
     ]
   },
   {

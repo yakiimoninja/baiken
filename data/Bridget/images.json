@@ -113,6 +113,14 @@
     ]
   },
   {
+    "input": "f.SS",
+    "move_img": "https://www.dustloop.com/wiki/images/e/e3/GGST_Bridget_S.png",
+    "hitbox_img": [
+      "https://www.dustloop.com/wiki/images/c/cc/GGST_Bridget_S_1_Hitbox.png",
+      "https://www.dustloop.com/wiki/images/b/bc/GGST_Bridget_S_2_Hitbox.png"
+    ]
+  },
+  {
     "input": "H",
     "move_img": "https://www.dustloop.com/wiki/images/b/bc/GGST_Bridget_H.png",
     "hitbox_img": [
@@ -155,14 +163,6 @@
       "https://www.dustloop.com/wiki/images/9/9e/GGST_Bridget_jS_Hitbox-1.png",
       "https://www.dustloop.com/wiki/images/5/51/GGST_Bridget_jS_Hitbox-2.png",
       "https://www.dustloop.com/wiki/images/c/c9/GGST_Bridget_jS_Hitbox-3.png"
-    ]
-  },
-  {
-    "input": "S",
-    "move_img": "https://www.dustloop.com/wiki/images/e/e3/GGST_Bridget_S.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/c/cc/GGST_Bridget_S_1_Hitbox.png",
-      "https://www.dustloop.com/wiki/images/b/bc/GGST_Bridget_S_2_Hitbox.png"
     ]
   },
   {

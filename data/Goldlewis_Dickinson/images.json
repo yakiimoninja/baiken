@@ -203,21 +203,7 @@
     ]
   },
   {
-    "input": "236S Level 1",
-    "move_img": "https://www.dustloop.com/wiki/images/5/5e/GGST_Goldlewis_Dickinson_Skyfish.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/7/75/GGST_Goldlewis_Dickinson_Skyfish_Hitbox.png"
-    ]
-  },
-  {
-    "input": "236S Level 2",
-    "move_img": "https://www.dustloop.com/wiki/images/5/5e/GGST_Goldlewis_Dickinson_Skyfish.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/7/75/GGST_Goldlewis_Dickinson_Skyfish_Hitbox.png"
-    ]
-  },
-  {
-    "input": "236S Level 3",
+    "input": "236S",
     "move_img": "https://www.dustloop.com/wiki/images/5/5e/GGST_Goldlewis_Dickinson_Skyfish.png",
     "hitbox_img": [
       "https://www.dustloop.com/wiki/images/7/75/GGST_Goldlewis_Dickinson_Skyfish_Hitbox.png"

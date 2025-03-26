@@ -178,13 +178,6 @@
     ]
   },
   {
-    "input": "214K, 66 after special move",
-    "move_img": "https://www.dustloop.com/wiki/images/9/9a/GGST_Sin_Kiske_GazelleStep.png",
-    "hitbox_img": [
-      "https://www.dustloop.com/wiki/images/d/d6/GGST_Sin_Kiske_GazelleStep_Hitbox.png"
-    ]
-  },
-  {
     "input": "214S",
     "move_img": "https://www.dustloop.com/wiki/images/7/7f/GGST_Sin_Kiske_214S.png",
     "hitbox_img": [
