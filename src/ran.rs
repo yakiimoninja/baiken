@@ -1,23 +1,27 @@
 use colored::Colorize;
-use rand::Rng;
+use nanorand::{Rng, WyRand};
 
 pub async fn ran_p() -> Option<String>{
 
-    let mut rng = rand::rng();
+    let mut rng = WyRand::new();
 
-    let chance = rng.random_range(1..101);
+    let chance = rng.generate_range(1_u8..=100);
+    println!("chance {}", chance);
 
     if chance == 1 {
         
-        let neco = rng.random_bool(1.0 / 3.0);
+        let neco = rng.generate_range(1_u8..=2);
+        println!("neco chance {}", neco);
 
-        if !neco {
-            let number = rng.random_range(1..31);
+        if neco == 1 {
+            let number = rng.generate_range(1_u8..=30);
+            println!("number {}", number);
             println!("EG link: {}", ("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/".to_owned() + &number.to_string() + ".png").yellow());
             Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/".to_owned() + &number.to_string() + ".png")
         }
-        else{
-            let number = rng.random_range(1..31);
+        else {
+            let number = rng.generate_range(1_u8..=30);
+            println!("number {}", number);
             println!("EG link: {}", ("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/neco/".to_owned() + &number.to_string() + ".png").yellow());
             Some("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/f/neco/".to_owned() + &number.to_string() + ".png")
         } 
