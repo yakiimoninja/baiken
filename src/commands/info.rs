@@ -22,7 +22,7 @@ pub async fn info(
         return Ok(()) }
     };
 
-    // Finding character
+    // Finding character info
     let char_info = find::find_info(char_id).await;
 
     let embed_title = "__**".to_owned() + &character.replace('_', " ") + " Info**__";
