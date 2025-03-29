@@ -283,9 +283,15 @@ pub async fn meter(
     meter_msg += &recovery_frames(&move_data).await;
     meter_msg += "`";
 
-    let embed_title = "__**".to_owned()
+    let mut embed_title = "__**".to_owned()
         + &character.replace('_', " ") + " "
         + &move_data.input + " / " + &move_data.name + "**__";
+
+    if &move_data.input == &move_data.name {
+        embed_title = "__**".to_owned()
+            + &character.replace('_', " ") + " "
+            + &move_data.input + "**__";
+    }
 
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
 
