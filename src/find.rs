@@ -1,3 +1,4 @@
+use aho_corasick::AhoCorasick;
 use colored::Colorize;
 use rusqlite::{named_params, Connection as SqlConnection, OpenFlags};
 use crate::{ CharInfo, Error, HitboxLinks, MoveInfo, CHARS};
@@ -14,15 +15,18 @@ type BoxError = Box<dyn std::error::Error + Send + Sync + 'static>;
 /// Returns `Ok(CHARS[x])` when successful.
 pub async fn find_character(character: &str ) -> Result<(String, usize), Error> {
 
-    let char_regex = character.to_lowercase().trim()
-        // Replace '.' with regex (may contain any number of '.')
-        .replace(".", "[\\.]*")
-        // Replace '-' with regex (may contain any number of '-')
-        .replace("-", "[-]*")
-        // Replace any horizontal whitespace char with regex (may contain any number of)
-        .replace(" ", "[\\s|\\t]*")
-        .replace("\t", "[\\s|\\t]*");
+    // Replace '.' with regex (may contain any number of '.')
+    // Replace '-' with regex (may contain any number of '-')
+    // Replace any horizontal whitespace char with regex (may contain any number of)
+    let patterns = &[" ",".","-","\t"];
+    let replace_with = &["[\\s]*","[\\.|\\s]*","[-|\\s]*","[\\s]*"];
 
+    let mut char_regex = Vec::new();
+
+    let ac = AhoCorasick::new(patterns).unwrap();
+    ac.try_stream_replace_all(character.trim().to_lowercase().as_bytes(), &mut char_regex, replace_with).unwrap();
+
+    let char_regex = String::from_utf8(char_regex).unwrap();
     let contains_char_regex = ".*".to_owned() + &char_regex + ".*";
 
     let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
@@ -33,7 +37,7 @@ pub async fn find_character(character: &str ) -> Result<(String, usize), Error> 
 
     // Iterating through the nicknames table entries
     // If user input equals a character nickname then pass the full character name
-    if nickname_query.exists(named_params! {":char_regex": char_regex}).unwrap() {
+    if nickname_query.exists(named_params! {":char_regex": &char_regex}).unwrap() {
 
         let char_id: usize = nickname_query.query_row(
             named_params! {":char_regex": char_regex},
@@ -67,14 +71,17 @@ pub async fn find_character(character: &str ) -> Result<(String, usize), Error> 
 /// Searches database for a character move from user input.
 pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usize), Error> {
 
-    let move_regex = char_move.to_lowercase().trim()
-        // Replace '.' with regex (may contain any number of '.')
-        .replace(".", "[\\.]*")
-        // Replace '-' with regex (may contain any number of '-')
-        .replace("-", "[-]*")
-        // Replace any horizontal whitespace char with regex (may contain any number of)
-        .replace(" ", "[\\s|\\t]*")
-        .replace("\t", "[\\s|\\t]*");
+    // Replace '.' with regex (may contain any number of '.')
+    // Replace '-' with regex (may contain any number of '-')
+    // Replace any horizontal whitespace char with regex (may contain any number of)
+    let patterns = &[" ",".","-","\t"];
+    let replace_with = &["[\\s]*","[\\.|\\s]*","[-|\\s]*","[\\s]*"];
+
+    let mut move_regex = Vec::new();
+
+    let ac = AhoCorasick::new(patterns).unwrap();
+    ac.try_stream_replace_all(char_move.trim().to_lowercase().as_bytes(), &mut  move_regex, replace_with).unwrap();
+    let move_regex = String::from_utf8(move_regex).unwrap();
 
     let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
     add_regexp_function(&db).unwrap();
@@ -121,6 +128,13 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
     Err(error_msg.into())
 }
 
+
+// Searches database for a characters full move list
+pub async fn find_all_moves(move_id: usize, move_type: String) {
+
+    // select name, input, type from Moves;
+    // select alias, from aliases for move_id.Moves;
+}
 
 /// Searches database for a moves hitbox images and caption
 pub async fn find_hitboxes(move_id: usize) -> Option<Vec<HitboxLinks>> {
