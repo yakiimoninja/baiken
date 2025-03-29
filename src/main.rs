@@ -163,7 +163,6 @@ async fn main() {
     if check::gids_db_exists().await.is_err() {
         create::create_gid_db().await.unwrap();
     }
-    println!("{}", "Baiken is running!".green());
 
     // FrameworkOptions contains all of poise's configuration option in one struct
     // Every option can be omitted to use its default value
@@ -253,5 +252,6 @@ async fn main() {
     let intents = serenity::GatewayIntents::non_privileged() /*| serenity::GatewayIntents::MESSAGE_CONTENT */;
     let client = serenity::ClientBuilder::new(token, intents).framework(framework).await;
 
+    println!("{}", "Baiken is running!".green());
     client.unwrap().start().await.unwrap()
 }
