@@ -1,6 +1,6 @@
 use std::string::String;
 use poise::serenity_prelude::CreateEmbed;
-use crate::{check, find, Context, Error, EMBED_COLOR};
+use crate::{check, find::{self}, Context, Error, EMBED_COLOR};
 
 /// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
@@ -15,7 +15,7 @@ pub async fn info(
     }
 
     // Finding character
-    let (character, char_id) = match find::find_character(&character).await {
+    let (character, char_id) = match find::find_character(&character, ctx.data().db.clone()).await {
     Ok(character) => character,
     Err(err) => {
         ctx.say(err.to_string()).await?;
@@ -23,7 +23,7 @@ pub async fn info(
     };
 
     // Finding character info
-    let char_info = find::find_info(char_id).await;
+    let char_info = find::find_info(char_id, ctx.data().db.clone()).await;
 
     let embed_title = "__**".to_owned() + &character.replace('_', " ") + " Info**__";
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "/Data#Infobox_Data";

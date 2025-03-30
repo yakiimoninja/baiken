@@ -32,7 +32,7 @@ pub async fn moves(
     }
 
     // Finding character
-    let (character, _) = match find::find_character(&character).await {
+    let (character, _) = match find::find_character(&character, ctx.data().db.clone()).await {
         Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;

@@ -19,7 +19,7 @@ pub async fn hitboxes(
 
     // Finding character
     // This will store the full character name in case user input was an alias
-    let (character, char_id) = match find::find_character(&character).await {
+    let (character, char_id) = match find::find_character(&character, ctx.data().db.clone()).await {
         Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;
@@ -27,7 +27,7 @@ pub async fn hitboxes(
     };
 
     // Finding move and move id
-    let (move_data, move_id) = match find::find_move(char_id, &character_move).await {
+    let (move_data, move_id) = match find::find_move(char_id, &character_move, ctx.data().db.clone()).await {
         Ok(move_data) => move_data,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;
@@ -35,7 +35,7 @@ pub async fn hitboxes(
     };
 
     // Finding hitboxes
-    let hitbox_data = (find::find_hitboxes(move_id).await).unwrap();
+    let hitbox_data = (find::find_hitboxes(move_id, ctx.data().db.clone()).await).unwrap();
 
     let mut vec_embeds = Vec::new();
 

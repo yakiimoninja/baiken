@@ -23,7 +23,7 @@ pub async fn simple(
     }
 
     // Finding character
-    let (character, char_id) = match find::find_character(&character).await {
+    let (character, char_id) = match find::find_character(&character, ctx.data().db.clone()).await {
         Ok(character) => character,
         Err(err) => {
             ctx.say(err.to_string()).await?;
@@ -31,7 +31,7 @@ pub async fn simple(
     };
 
     // Finding move and move id
-    let (move_data, _) = match find::find_move(char_id, &character_move).await {
+    let (move_data, _) = match find::find_move(char_id, &character_move, ctx.data().db.clone()).await {
         Ok(move_data) => move_data,
         Err(err) => {
             ctx.say(err.to_string() + "\nView the moves of a character by executing `/moves`.").await?;

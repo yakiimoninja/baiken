@@ -6,14 +6,14 @@ use crate::{ CharInfo, Error, HitboxLinks, MoveInfo, CHARS};
 use regex::Regex;
 use rusqlite::functions::FunctionFlags;
 use rusqlite::{Error as SqlError, Result as SqlResult};
-use std::sync::Arc;
+use std::sync::{Arc, Mutex};
 type BoxError = Box<dyn std::error::Error + Send + Sync + 'static>;
 
 
 /// Searches database for character name from user input.
 ///
 /// Returns `Ok(CHARS[x])` when successful.
-pub async fn find_character(character: &str ) -> Result<(String, usize), Error> {
+pub async fn find_character(character: &str, db: Arc<Mutex<SqlConnection>>) -> Result<(String, usize), Error> {
 
     // Replace '.' with regex (may contain any number of '.')
     // Replace '-' with regex (may contain any number of '-')
@@ -29,7 +29,7 @@ pub async fn find_character(character: &str ) -> Result<(String, usize), Error> 
     let char_regex = String::from_utf8(char_regex).unwrap();
     let contains_char_regex = ".*".to_owned() + &char_regex + ".*";
 
-    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    let db = db.lock().unwrap();
     add_regexp_function(&db).unwrap();
 
     let mut nickname_query = db.prepare("SELECT character_id FROM nicknames WHERE REPLACE(LOWER(nickname), '.', '') REGEXP :char_regex").unwrap();
@@ -69,7 +69,7 @@ pub async fn find_character(character: &str ) -> Result<(String, usize), Error> 
 
 
 /// Searches database for a character move from user input.
-pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usize), Error> {
+pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnection>>) -> Result<(MoveInfo, usize), Error> {
 
     // Replace '.' with regex (may contain any number of '.')
     // Replace '-' with regex (may contain any number of '-')
@@ -83,7 +83,7 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
     ac.try_stream_replace_all(char_move.trim().to_lowercase().as_bytes(), &mut  move_regex, replace_with).unwrap();
     let move_regex = String::from_utf8(move_regex).unwrap();
 
-    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    let db = db.lock().unwrap();
     add_regexp_function(&db).unwrap();
 
     let mut alias_query = db.prepare("SELECT move_id FROM aliases WHERE move_id IN (SELECT id FROM moves WHERE character_id = :char_id) AND REPLACE(LOWER(alias), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
@@ -130,43 +130,55 @@ pub async fn find_move(char_id: usize, char_move: &str) -> Result<(MoveInfo, usi
 
 
 // Searches database for a characters full move list
-pub async fn find_all_moves(move_id: usize, move_type: String) {
+pub fn find_all_moves(db: Arc<Mutex<SqlConnection>>) {
 
     // select name, input, type from Moves;
     // select alias, from aliases for move_id.Moves;
+    //let db = SqlConnection::open_with_flags("/data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+
+    // prototype query SELECT  moves.id, name, input, move_type, alias from moves left join aliases on aliases.move_id = moves.id where moves.character_id = '' order by moves.id;
+    // get move_ids, inputs and names where char_id = 'aba' and movetype = 'whatever'
+    // get aliases where move_id = 'moves.move_id'
+
+    let db = db.lock().unwrap();
+    let mut q = db.prepare("SELECT input from moves where id = :id").unwrap();
+    let move_id: String = q.query_row(
+        named_params! {":id": "1"},
+        |row| row.get(0)
+    ).unwrap();
+
+    println!("P {}", move_id);
 }
 
 /// Searches database for a moves hitbox images and caption
-pub async fn find_hitboxes(move_id: usize) -> Option<Vec<HitboxLinks>> {
+pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Option<Vec<HitboxLinks>> {
 
-    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
-
+    let db = db.lock().unwrap();
     let mut hitbox_query = db.prepare("SELECT hitbox, hitbox_caption FROM hitboxes WHERE move_id = :move_id ORDER BY id").unwrap();
     
-    if hitbox_query.exists(named_params! {":move_id": move_id}).unwrap() {
+    match hitbox_query.query_map(named_params! {":move_id": move_id}, |row| {
+        Ok( HitboxLinks {
+            hitbox: row.get(0).unwrap(),
+            hitbox_caption: row.get(1).unwrap()
+        })
+    })
+        {
+        Ok(iter) => {
+            let mut struct_vec: Vec<HitboxLinks> = Vec::new();
 
-        let hitbox_iter = hitbox_query.query_map(named_params! {":move_id": move_id}, |row| {
-            Ok( HitboxLinks {
-                hitbox: row.get(0).unwrap(),
-                hitbox_caption: row.get(1).unwrap()
-            })
-        }).unwrap();
-        
-        let mut struct_vec: Vec<HitboxLinks> = Vec::new();
+            for hitbox in iter {
+                struct_vec.push(hitbox.unwrap());
+            }
 
-        for hitbox in hitbox_iter {
-            struct_vec.push(hitbox.unwrap());
-        }
-
-        return Some(struct_vec);
-    }
-    
-    None
+            return Some(struct_vec);
+        },
+        Err(_) => return None
+    };
 } 
 
 
 /// Searches database for the given character info.
-pub async fn find_info(char_id: usize) -> CharInfo {
+pub async fn find_info(char_id: usize, db: Arc<Mutex<SqlConnection>>) -> CharInfo {
 
     let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
     let mut info_query = db.prepare("SELECT * FROM info WHERE character_id = :character_id").unwrap();
