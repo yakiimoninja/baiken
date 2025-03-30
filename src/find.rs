@@ -156,12 +156,10 @@ pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Opt
     let db = db.lock().unwrap();
     let mut hitbox_query = db.prepare("SELECT hitbox, hitbox_caption FROM hitboxes WHERE move_id = :move_id ORDER BY id").unwrap();
     
-    match hitbox_query.query_map(named_params! {":move_id": move_id}, |row| {
+    let hitbox_vec = match hitbox_query.query_map(named_params! {":move_id": move_id}, |row| {
         Ok( HitboxLinks {
             hitbox: row.get(0).unwrap(),
-            hitbox_caption: row.get(1).unwrap()
-        })
-    })
+            hitbox_caption: row.get(1).unwrap() })})
         {
         Ok(iter) => {
             let mut struct_vec: Vec<HitboxLinks> = Vec::new();
@@ -170,19 +168,22 @@ pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Opt
                 struct_vec.push(hitbox.unwrap());
             }
 
-            return Some(struct_vec);
+            Some(struct_vec)
         },
-        Err(_) => return None
+        Err(_) => None
     };
+
+    hitbox_vec
 } 
 
 
 /// Searches database for the given character info.
 pub async fn find_info(char_id: usize, db: Arc<Mutex<SqlConnection>>) -> CharInfo {
 
-    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    let db = db.lock().unwrap();
     let mut info_query = db.prepare("SELECT * FROM info WHERE character_id = :character_id").unwrap();
-    let char_info = info_query.query_row(named_params! {":character_id": &char_id},
+ 
+    info_query.query_row(named_params! {":character_id": &char_id},
         |row| Ok( CharInfo {
             defense: row.get(2).unwrap(),
             guts: row.get(3).unwrap(),
@@ -214,9 +215,7 @@ pub async fn find_info(char_id: usize, db: Arc<Mutex<SqlConnection>>) -> CharInf
             dash_friction: row.get(29).unwrap(),
             jump_gravity: row.get(30).unwrap(),
             high_jump_gravity: row.get(31).unwrap()
-        })).unwrap();
-
-    char_info
+        })).unwrap()
 }
 
 

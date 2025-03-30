@@ -44,7 +44,7 @@ pub async fn hitboxes(
         + &move_data.input + " / "
         + &move_data.name + "**__";
 
-    if &move_data.input == &move_data.name {
+    if move_data.input == move_data.name {
         embed_title = "__**".to_owned()
             + &character.replace('_', " ") + " "
             + &move_data.input + "**__";

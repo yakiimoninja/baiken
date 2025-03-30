@@ -9,10 +9,8 @@ pub async fn get_normal_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAlias
         normal_moves =
             normal_moves.to_owned() + "\n- **" + &moves.input + " / " + &moves.name + "**";
 
-        if &moves.input == &moves.name {
-            normal_moves =
-                normal_moves.to_owned() + "\n- **" + &moves.input + "**";
-
+        if moves.input == moves.name {
+            normal_moves = normal_moves.to_owned() + "\n- **" + &moves.input + "**";
         }
 
         for moves_aliases in aliases_data.iter() {
@@ -50,10 +48,8 @@ pub async fn get_special_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAlia
         special_moves = special_moves.to_owned() + "\n- **"
             + &moves.input + " / " + &moves.name + "**";
 
-        if &moves.input == &moves.name {
-            special_moves =
-                special_moves.to_owned() + "\n- **" + &moves.input + "**";
-
+        if moves.input == moves.name {
+            special_moves = special_moves.to_owned() + "\n- **" + &moves.input + "**";
         }
 
         for moves_aliases in aliases_data.iter() {
@@ -89,10 +85,8 @@ pub async fn get_super_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAliase
         super_moves = super_moves.to_owned() + "\n- **"
             + &moves.input + " / " + &moves.name + "**";
         
-        if &moves.input == &moves.name {
-            super_moves =
-                super_moves.to_owned() + "\n- **" + &moves.input + "**";
-
+        if moves.input == moves.name {
+            super_moves = super_moves.to_owned() + "\n- **" + &moves.input + "**";
         }
 
         for moves_aliases in aliases_data.iter() {
