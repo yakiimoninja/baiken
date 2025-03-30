@@ -7,16 +7,19 @@ mod ran;
 use colored::Colorize;
 use commands::*;
 use poise::serenity_prelude as serenity;
-use std::{io::Write, time::{Duration, Instant}};
+use std::{io::Write, sync::{Arc, Mutex}, time::{Duration, Instant}};
 use serde::{Serialize, Deserialize};
 use tokio::{task, time};
+use rusqlite::{Connection as SqlConnection, OpenFlags};
 
 // Types used by all command functions
 type Error = Box<dyn std::error::Error + Send + Sync>;
 type Context<'a> = poise::Context<'a, Data, Error>;
 
 // Custom user data passed to all command functions
-pub struct Data {}
+pub struct Data {
+    db: Arc<Mutex<SqlConnection>>
+}
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct CharInfo {
@@ -241,7 +244,9 @@ async fn main() {
         .setup(move |ctx, _ready, framework| {
             Box::pin(async move {
                 poise::builtins::register_globally(ctx, &framework.options().commands).await?;
-                Ok(Data {})
+                Ok(Data {
+                    db: Arc::new(Mutex::new(SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap()))
+                })
             })
         })
         .options(options)
@@ -253,5 +258,6 @@ async fn main() {
     let client = serenity::ClientBuilder::new(token, intents).framework(framework).await;
 
     println!("{}", "Baiken is running!".green());
+
     client.unwrap().start().await.unwrap()
 }
