@@ -1,12 +1,12 @@
 use aho_corasick::AhoCorasick;
 use colored::Colorize;
-use rusqlite::{named_params, Connection as SqlConnection, OpenFlags};
+use rusqlite::{named_params, Connection as SqlConnection};
 use crate::{ CharInfo, Error, HitboxLinks, MoveInfo, CHARS};
 // Regex related imports
 use regex::Regex;
 use rusqlite::functions::FunctionFlags;
 use rusqlite::{Error as SqlError, Result as SqlResult};
-use std::sync::{Arc, Mutex};
+use std::sync::{Arc, Mutex, MutexGuard};
 type BoxError = Box<dyn std::error::Error + Send + Sync + 'static>;
 
 
@@ -37,27 +37,25 @@ pub async fn find_character(character: &str, db: Arc<Mutex<SqlConnection>>) -> R
 
     // Iterating through the nicknames table entries
     // If user input equals a character nickname then pass the full character name
-    if nickname_query.exists(named_params! {":char_regex": &char_regex}).unwrap() {
-
-        let char_id: usize = nickname_query.query_row(
-            named_params! {":char_regex": char_regex},
-            |row| row.get(0)
-        ).unwrap();
-
-        return Ok((CHARS[char_id-1].to_string(), char_id));
+    match nickname_query.query_row(
+        named_params! {":char_regex": char_regex},
+        |row| row.get(0)
+    ) {
+        Ok(char_id) => return Ok((String::from(CHARS[char_id-1]), char_id)),
+        Err(_) => {}
     }
+
     // Iterating through the nicknames.json character entries
-    else if name_query.exists(named_params! {":contains_char_regex": contains_char_regex}).unwrap(){
-        
-        let char_id: usize = name_query.query_row(
-            named_params! {":contains_char_regex": contains_char_regex},
-            |row| row.get(0)
-        ).unwrap();
-
-        return Ok((CHARS[char_id-1].to_string(), char_id));
+    match name_query.query_row(
+        named_params! {":contains_char_regex": contains_char_regex},
+        |row| row.get(0)
+    ) {
+        Ok(char_id) => return Ok((String::from(CHARS[char_id-1]), char_id)),
+        Err(_) => {}
     }
+
     // Edge case for update.rs
-    else if character.trim().to_lowercase() == "all" {
+    if character.trim().to_lowercase() == "all" {
         return Ok((String::from("all"), 0));
     }
 
@@ -91,35 +89,32 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     let mut name_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(name), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
 
     // Checking if user input is alias
-    if alias_query.exists(named_params! {":char_id": char_id, ":move_regex": move_regex}).unwrap() {
-        // Semi join
-        // https://media.datacamp.com/legacy/v1714587799/Marketing/Blog/Joining_Data_in_SQL_2.pdf
-        let move_id: usize = alias_query.query_row(
-            named_params! {":char_id": char_id, ":move_regex": move_regex},
-            |row| row.get(0)
-        ).unwrap();
-
-        return Ok((send_move(move_id), move_id));
+    // Semi join
+    // https://media.datacamp.com/legacy/v1714587799/Marketing/Blog/Joining_Data_in_SQL_2.pdf
+    match alias_query.query_row(
+        named_params! {":char_id": char_id, ":move_regex": move_regex},
+        |row| row.get(0)
+    ) {
+        Ok(move_id) => return Ok((send_move(move_id, &db), move_id)),
+        Err(_) => {}
     }
+
     // Checking if user input is move input
-    else if input_query.exists(named_params! {":char_id": char_id, ":move_regex": move_regex}).unwrap() {
-
-        let move_id: usize = input_query.query_row(
-            named_params! {":char_id": char_id, ":move_regex": move_regex},
-            |row| row.get(0)
-        ).unwrap();
-
-        return Ok((send_move(move_id), move_id));
+    match input_query.query_row(
+        named_params! {":char_id": char_id, ":move_regex": move_regex},
+        |row| row.get(0)
+    ) {
+        Ok(move_id) => return Ok((send_move(move_id, &db), move_id)),
+        Err(_) => {}
     }
+
     // Checking if user input is move name
-    else if name_query.exists(named_params! {":char_id": char_id, ":move_regex": move_regex}).unwrap() {
-
-        let move_id: usize = name_query.query_row(
-            named_params! {":char_id": char_id, ":move_regex": move_regex},
-            |row| row.get(0)
-        ).unwrap();
-
-        return Ok((send_move(move_id), move_id));
+    match name_query.query_row(
+        named_params! {":char_id": char_id, ":move_regex": move_regex},
+        |row| row.get(0)
+    ) {
+        Ok(move_id) => return Ok((send_move(move_id, &db), move_id)),
+        Err(_) => {}
     }
 
     // Error message cause given move wasnt found
