@@ -37,22 +37,16 @@ pub async fn find_character(character: &str, db: Arc<Mutex<SqlConnection>>) -> R
 
     // Iterating through the nicknames table entries
     // If user input equals a character nickname then pass the full character name
-    match nickname_query.query_row(
+    if let Ok(char_id) = nickname_query.query_row(
         named_params! {":char_regex": char_regex},
         |row| row.get(0)
-    ) {
-        Ok(char_id) => return Ok((String::from(CHARS[char_id-1]), char_id)),
-        Err(_) => {}
-    }
+    ) { return Ok((String::from(CHARS[char_id-1]), char_id)) }
 
     // Iterating through the nicknames.json character entries
-    match name_query.query_row(
+    if let Ok(char_id) = name_query.query_row(
         named_params! {":contains_char_regex": contains_char_regex},
         |row| row.get(0)
-    ) {
-        Ok(char_id) => return Ok((String::from(CHARS[char_id-1]), char_id)),
-        Err(_) => {}
-    }
+    ) { return Ok((String::from(CHARS[char_id-1]), char_id)) }
 
     // Edge case for update.rs
     if character.trim().to_lowercase() == "all" {
@@ -91,31 +85,22 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     // Checking if user input is alias
     // Semi join
     // https://media.datacamp.com/legacy/v1714587799/Marketing/Blog/Joining_Data_in_SQL_2.pdf
-    match alias_query.query_row(
+    if let Ok(move_id) = alias_query.query_row(
         named_params! {":char_id": char_id, ":move_regex": move_regex},
         |row| row.get(0)
-    ) {
-        Ok(move_id) => return Ok((send_move(move_id, &db), move_id)),
-        Err(_) => {}
-    }
+    ) { return Ok((send_move(move_id, &db), move_id)) }
 
     // Checking if user input is move input
-    match input_query.query_row(
+    if let Ok(move_id) = input_query.query_row(
         named_params! {":char_id": char_id, ":move_regex": move_regex},
         |row| row.get(0)
-    ) {
-        Ok(move_id) => return Ok((send_move(move_id, &db), move_id)),
-        Err(_) => {}
-    }
+    ) { return Ok((send_move(move_id, &db), move_id)) }
 
     // Checking if user input is move name
-    match name_query.query_row(
+    if let Ok(move_id) = name_query.query_row(
         named_params! {":char_id": char_id, ":move_regex": move_regex},
         |row| row.get(0)
-    ) {
-        Ok(move_id) => return Ok((send_move(move_id, &db), move_id)),
-        Err(_) => {}
-    }
+    ) { return Ok((send_move(move_id, &db), move_id)) }
 
     // Error message cause given move wasnt found
     let error_msg= "Move `".to_owned() + char_move + "` was not found!";
@@ -136,14 +121,15 @@ pub fn find_all_moves(db: Arc<Mutex<SqlConnection>>) {
     // get aliases where move_id = 'moves.move_id'
 
     let db = db.lock().unwrap();
-    let mut q = db.prepare("SELECT input from moves where id = :id").unwrap();
-    let move_id: String = q.query_row(
+    let mut moves_query = db.prepare("SELECT  moves.id, name, input, move_type, alias from moves left join aliases on aliases.move_id = moves.id where moves.character_id = '' order by moves.id").unwrap();
+    let move_id: String = moves_query.query_row(
         named_params! {":id": "1"},
         |row| row.get(0)
     ).unwrap();
 
     println!("P {}", move_id);
 }
+
 
 /// Searches database for a moves hitbox images and caption
 pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Option<Vec<HitboxLinks>> {
