@@ -215,10 +215,8 @@ pub async fn find_info(char_id: usize, db: Arc<Mutex<SqlConnection>>) -> CharInf
 
 
 /// Returns a `MoveInfo` struct given a `move_id` from a SQL query.
-fn send_move(move_id: usize) -> MoveInfo {
+fn send_move(move_id: usize, db: &MutexGuard<'_, SqlConnection>) -> MoveInfo {
 
-    let db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
-    
     db.query_row("SELECT input, name, damage, guard, startup, active, recovery, on_hit, on_block, level, counter, move_type, risc_gain, risc_loss, wall_damage, input_tension, chip_ratio, otg_ratio, scaling, invincibility, cancel, caption, notes, image FROM moves WHERE id = :move_id",
         named_params! {":move_id": move_id},
         |row| Ok( MoveInfo {
