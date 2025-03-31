@@ -1,4 +1,5 @@
 extern crate ureq;
+use aho_corasick::AhoCorasick;
 use rusqlite::{named_params, Connection as SqlConnection};
 use serde::Deserialize;
 
@@ -75,31 +76,48 @@ pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_c
 
     let empty = String::from("-");
 
-    let char_info_response_json = &char_info_response_json
-        // Colorful text RED
-        .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")
-        // Colorful text BLUE
-        .replace(r#"&lt;span class=&quot;colorful-text-2&quot; &gt;"#, "")
-        // Colorful text GREEN
-        .replace(r#"&lt;span class=&quot;colorful-text-3&quot; &gt;"#, "")
-        // Colorful text PURPlE
-        .replace(r#"&lt;span class=&quot;colorful-text-1&quot; &gt;"#, "")
-        // Colorful text tag close
-        .replace(r#"&lt;/span&gt;"#, "")
-        .replace(r#"&lt;br&gt;"#, ", ")
-        .replace(r#"&lt;br/&gt;"#, ", ")
-        .replace(r#"&quot;"#, "")
-        // Ino low profile
-        .replace(r#" &lt;span class=&quot;tooltip&quot; &gt;Low Profile&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;When a character's hurtbox is entirely beneath an opponent's attack. This can be caused by crouching, certain moves, and being short.&lt;/span&gt;&lt;/span&gt;"#, "")
-        // Replace apostrophe
-        .replace(r#"&#039;"#, "'")
-        .replace(r#"&amp;#32;"#, "")
-        .replace(r#"'''"#, "")
-        .replace(r#"; "#, r#"\n"#)
-        .replace(r#";"#, r#"\n"#)
-        .replace(r#"\\"#, "");
+    let patterns = &[
+        "&lt;span class=&quot;colorful-text-1&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-2&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-3&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-4&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-5&quot; &gt;",
+        "&#039;&#039;&#039;",
+        "&lt;/small&gt;",
+        "&lt;small&gt;",
+        "&lt;/span&gt;",
+        "&amp;#32;",
+        "&#039;",
+        "&quot;",
+        "\\\\",
+        "; ",
+        ";",
+    ];
 
-    let mut char_info_response: Response = serde_json::from_str(char_info_response_json).unwrap();
+    let replace_with = &[
+        "",
+        "",
+        "",
+        "",
+        "",
+        "*",
+        "",
+        "",
+        "",
+        "",
+        "'",
+        r#"\""#,
+        "\\n-",
+        "\\n",
+        "\\n",
+    ];
+
+
+    let ac = AhoCorasick::builder().match_kind(aho_corasick::MatchKind::LeftmostFirst).build(patterns).unwrap();
+    let char_info_response_json = ac.replace_all(char_info_response_json.trim(), replace_with);
+    println!("{:#?}", char_info_response_json);
+
+    let mut char_info_response: Response = serde_json::from_str(&char_info_response_json).unwrap();
     let char_info = &mut char_info_response.cargoquery[0].title;
 
     let mut umo_processed_vec: Vec<String> = Vec::new();

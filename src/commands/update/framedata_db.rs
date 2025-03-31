@@ -1,7 +1,10 @@
 extern crate ureq;
 
+use std::fs;
+use aho_corasick::AhoCorasick;
 use serde::Deserialize;
 use rusqlite::{named_params, Connection as SqlConnection};
+use crate::CHARS;
 
 #[derive(Deserialize, Debug)]
 struct Response {
@@ -56,8 +59,47 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
 
     let empty = String::from("-");
 
-    println!("{}", char_page_response_json);
-    // let char_page_response_json = &char_page_response_json
+    let patterns = &[
+        "&lt;span class=&quot;colorful-text-1&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-2&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-3&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-4&quot; &gt;",
+        "&lt;span class=&quot;colorful-text-5&quot; &gt;",
+        "&#039;&#039;&#039;",
+        "&lt;/small&gt;",
+        "&lt;small&gt;",
+        "&lt;/span&gt;",
+        "&amp;#32;",
+        "&#039;",
+        "&quot;",
+        "\\\\",
+        "; ",
+        ";",
+    ];
+
+    let replace_with = &[
+        "",
+        "",
+        "",
+        "",
+        "",
+        "*",
+        "",
+        "",
+        "",
+        "",
+        "'",
+        r#"\""#,
+        "\\n-",
+        "\\n",
+        "\\n",
+    ];
+
+
+    let ac = AhoCorasick::builder().match_kind(aho_corasick::MatchKind::LeftmostFirst).build(patterns).unwrap();
+    let char_page_response_json = ac.replace_all(char_page_response_json.trim(), replace_with);
+    println!("{:#?}", char_page_response_json);
+
     //     // Colorful text RED
     //     .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")
     //     // Colorful text BLUE
@@ -87,19 +129,25 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
     //     replace ";" with "\n"
     //     replace "&#039;" with "'"
     //     replace "&quot;" with double quote '"'
-    //     replace &lt;small&gt;SOME_WORD&lt;/small&gt;
-    //     replace italic text "&#039;&#039;SOME_WORD&#039;&#039;" becomes italic
-    //     replace purple text "&lt;span class=&quot;colorful-text-1&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
+    //     replace &lt;small&gt;
+    //     replace &lt;/small&gt;
+    //     replace italic text "&#039;&#039;" first italic
+    //     replace purple text "&lt;span class=&quot;colorful-text-1&quot; &gt;"
+    //     replace "&lt;/span&gt;" with "SOME_WORD"
     //     replace blue text "&lt;span class=&quot;colorful-text-2&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
     //     replace green text "&lt;span class=&quot;colorful-text-3&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
     //     replace red text "&lt;span class=&quot;colorful-text-4&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
     //     replace orange text "&lt;span class=&quot;colorful-text-5&quot; &gt;SOME_WORD&lt;/span&gt;" with "SOME_WORD"
+    //     
     //     replace "&lt;br&gt;" (<br>) with "\n"???
     //     replace "&lt;br/&gt;" (<br/>) "&lt;small&gt;" (<small>) SOME_WORD "&lt;/small&gt;" (</small>) "&lt;small&gt;" (<small>) "&lt;/small&gt;" (</small>)
     //     replace "&#039;&#039;&#039;SOME_WORD&#039;&#039;&#039;" becomes bold
     //     replace asuka icons "[[File:GGST Asuka R Accipiter Metron_Icon.png|50px]];" with ""
 
-    let mut move_data_response: Response = serde_json::from_str(char_page_response_json).unwrap();
+    let file = "x/".to_owned() + CHARS[char_count];
+    fs::write(file , &char_page_response_json).unwrap();
+
+    let mut move_data_response: Response = serde_json::from_str(&char_page_response_json).unwrap();
     let char_move_data = &mut move_data_response.cargoquery;
 
     for move_data in char_move_data {
