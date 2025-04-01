@@ -92,11 +92,20 @@ pub async fn hitboxes(
         }
     };
 
-    vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR).description(&hitbox_data[0].hitbox_caption));
-    let mut reply = poise::CreateReply::default();
-    reply.embeds.extend(vec_embeds);
+    if hitbox_data[0].hitbox_caption.is_empty() {
+        let mut reply = poise::CreateReply::default();
+        reply.embeds.extend(vec_embeds);
 
-    ctx.send(reply).await?;
+        ctx.send(reply).await?;
+    }
+    else {
+        vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR).description(&hitbox_data[0].hitbox_caption));
+        let mut reply = poise::CreateReply::default();
+        reply.embeds.extend(vec_embeds);
+
+        ctx.send(reply).await?;
+    }
+
 
     Ok(())
 }
