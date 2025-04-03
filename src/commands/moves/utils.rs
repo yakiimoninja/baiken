@@ -1,4 +1,4 @@
-use crate::{MoveAliases, MoveInfo};
+use crate::structs::{MoveAliases, MoveInfo};
 
 pub async fn get_normal_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAliases]) -> String {
 

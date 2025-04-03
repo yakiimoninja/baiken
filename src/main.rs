@@ -3,12 +3,12 @@ mod create;
 mod check;
 mod find;
 mod ran;
+mod structs;
 
 use colored::Colorize;
 use commands::*;
 use poise::serenity_prelude as serenity;
 use std::{io::Write, sync::{Arc, Mutex}, time::{Duration, Instant}};
-use serde::{Serialize, Deserialize};
 use tokio::{task, time};
 use rusqlite::{Connection as SqlConnection, OpenFlags};
 
@@ -19,86 +19,6 @@ type Context<'a> = poise::Context<'a, Data, Error>;
 // Custom user data passed to all command functions
 pub struct Data {
     db: Arc<Mutex<SqlConnection>>
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct CharInfo {
-    defense: String,
-    guts: String,
-    guard_balance: String,
-    prejump: String,
-    umo: String,
-    forward_dash: String,
-    backdash: String,
-    backdash_duration: String,
-    backdash_invincibility: String,
-    backdash_airborne: String,
-    backdash_distance: String,
-    jump_duration: String,
-    jump_height: String,
-    high_jump_duration: String,
-    high_jump_height: String,
-    earliest_iad: String,
-    ad_duration: String,
-    ad_distance: String,
-    abd_duration: String,
-    abd_distance: String,
-    movement_tension: String,
-    jump_tension: String,
-    airdash_tension: String,
-    walk_speed: String,
-    back_walk_speed: String,
-    dash_initial_speed: String,
-    dash_acceleration: String,
-    dash_friction: String,
-    jump_gravity: String,
-    high_jump_gravity: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct MoveInfo {
-    input: String,
-    name: String,
-    damage: String,
-    guard: String,
-    startup: String,
-    active: String,
-    recovery: String,
-    on_hit: String,
-    on_block: String,
-    level: String,
-    counter: String,
-    move_type: String,
-    risc_gain: String,
-    risc_loss: String,
-    wall_damage: String,
-    input_tension: String,
-    chip_ratio: String,
-    otg_ratio: String,
-    scaling: String,
-    invincibility: String,
-    cancel: String,
-    caption: String,
-    notes: String,
-    image: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct HitboxLinks {
-    hitbox: String,
-    hitbox_caption: String,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct MoveAliases {
-    input: String,
-    aliases: Vec<String>,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct Nicknames {
-    character: String,
-    nicknames: Vec<String>,
 }
 
 pub const CHARS: [&str; 30] = [

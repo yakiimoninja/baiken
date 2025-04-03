@@ -1,6 +1,7 @@
 use std::string::String;
 use poise::serenity_prelude::CreateEmbed;
-use crate::{check, find, Context, Error, MoveInfo, EMBED_COLOR, IMAGE_DEFAULT};
+use crate::{check, find, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
+use crate::structs::MoveInfo;
 
 const GREEN_CIRCLE: &str = "🟢\u{200b}";
 const RED_SQUARE: &str = "🟥\u{200b}";

@@ -1,7 +1,8 @@
 use aho_corasick::AhoCorasick;
 use colored::Colorize;
 use rusqlite::{named_params, Connection as SqlConnection};
-use crate::{ CharInfo, Error, HitboxLinks, MoveInfo, CHARS};
+use crate::structs::{ CharInfo, CharMoves, MoveInfo, HitboxLinks};
+use crate::{Error, CHARS};
 // Regex related imports
 use regex::Regex;
 use rusqlite::functions::FunctionFlags;

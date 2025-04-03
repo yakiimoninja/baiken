@@ -1,6 +1,7 @@
 use std::{fs, string::String};
 use poise::serenity_prelude::CreateEmbed;
-use crate::{check, Context, Error, Nicknames, EMBED_COLOR};
+use crate::structs::Nicknames;
+use crate::{check, Context, Error, EMBED_COLOR};
 
 /// Display all character nicknames.
 #[poise::command(prefix_command, slash_command)]

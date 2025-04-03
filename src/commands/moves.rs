@@ -1,6 +1,7 @@
 mod utils;
 use utils::{get_normal_moves, get_special_moves, get_super_moves};
-use crate::{check, find, Context, Error, MoveAliases, MoveInfo, EMBED_COLOR};
+use crate::{check, find::{self, find_all_character_moves}, Context, Error, EMBED_COLOR};
+use crate::structs::{MoveAliases, MoveInfo};
 use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
 use colored::Colorize;
 use std::{fs, string::String};
