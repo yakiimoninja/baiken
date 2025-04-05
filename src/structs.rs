@@ -63,7 +63,7 @@ pub struct MoveInfo {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct CharMoves {
+pub struct MoveList {
     pub id: usize,
     pub input: String,
     pub name: String,
