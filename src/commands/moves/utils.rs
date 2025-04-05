@@ -5,7 +5,7 @@ pub async fn get_normal_moves(move_list: &[MoveList]) -> String {
     let mut normal_moves = String::new();
 
     for x in 0..move_list.len() {
-        if move_list[x].move_type == "normal" {
+        if move_list[x].move_type.to_lowercase().trim() == "normal" {
 
             if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
                 if move_list[x].input == move_list[x].name {
@@ -44,7 +44,7 @@ pub async fn get_special_moves(move_list: &[MoveList]) -> String {
     let mut special_moves = String::new();
 
     for x in 0..move_list.len() {
-        if move_list[x].move_type == "special" || move_list[x].move_type == "other" {
+        if move_list[x].move_type.to_lowercase().trim() == "special" || move_list[x].move_type.to_lowercase().trim() == "other" {
 
             if x > 0 && move_list[x-1].id != move_list[x].id {
                 if move_list[x].input == move_list[x].name {
@@ -83,7 +83,7 @@ pub async fn get_super_moves(move_list: &[MoveList]) -> String {
     let mut super_moves = String::new();
 
     for x in 0..move_list.len() {
-        if move_list[x].move_type == "super" {
+        if move_list[x].move_type.to_lowercase().trim() == "super" {
 
             if x > 0 && move_list[x-1].id != move_list[x].id {
                 if move_list[x].input == move_list[x].name {
