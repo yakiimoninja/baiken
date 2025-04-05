@@ -1,112 +1,116 @@
-use crate::structs::{MoveAliases, MoveInfo};
+use crate::structs::MoveList;
 
-pub async fn get_normal_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAliases]) -> String {
+pub async fn get_normal_moves(move_list: &[MoveList]) -> String {
 
     let mut normal_moves = String::new();
-    // Grabs all normal moves
-    for moves in moves_info.iter().take_while(|x| x.move_type.to_lowercase() == "normal") {
 
-        normal_moves =
-            normal_moves.to_owned() + "\n- **" + &moves.input + " / " + &moves.name + "**";
+    for x in 0..move_list.len() {
+        if move_list[x].move_type == "normal" {
 
-        if moves.input == moves.name {
-            normal_moves = normal_moves.to_owned() + "\n- **" + &moves.input + "**";
-        }
-
-        for moves_aliases in aliases_data.iter() {
-            // If move input exists in aliases.json
-            if moves.input == moves_aliases.input  {
-                normal_moves += "\n\tAliases → `";
-
-                // Format message if there is only one alias or multiple
-                for a in 0..moves_aliases.aliases.len() {
-                    if a != moves_aliases.aliases.len() - 1 {
-                        normal_moves = normal_moves.to_owned() + &moves_aliases.aliases[a] + "`, `";
-                    }
-                    else {
-                        normal_moves = normal_moves.to_owned() + &moves_aliases.aliases[a];
-                    }
+            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+                if move_list[x].input == move_list[x].name {
+                    normal_moves = normal_moves.to_owned() + "\n- **" + &move_list[x].input + "**";
                 }
-                normal_moves = normal_moves.to_owned() + "`\n";
+                else {
+                    normal_moves = normal_moves.to_owned() + "\n- **" + &move_list[x].input + " / " + &move_list[x].name + "**";
+                }
+            }
+
+            if move_list[x].alias.is_empty() { continue; }
+
+            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+                normal_moves += "\n\tAliases → `";
+            }
+
+            if x + 1 < move_list.len() {
+                if move_list[x+1].id == move_list[x].id {
+                    normal_moves = normal_moves.to_owned() + &move_list[x].alias + "`, `";
+                }
+                else {
+                    normal_moves = normal_moves.to_owned() + &move_list[x].alias + "`\n";
+
+                }
             }
             else {
-                continue;
+                normal_moves = normal_moves.to_owned() + &move_list[x].alias;
             }
         }
     }
     normal_moves
 }
 
-pub async fn get_special_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAliases]) -> String {
+pub async fn get_special_moves(move_list: &[MoveList]) -> String {
 
     let mut special_moves = String::new();
-    // Grabs all special moves
-    for moves in moves_info.iter()
-        .skip_while(|x| x.move_type.to_lowercase() == "normal")
-        .take_while(|x| x.move_type.to_lowercase() == "special" || x.move_type.to_lowercase() == "other") {
-        
-        special_moves = special_moves.to_owned() + "\n- **"
-            + &moves.input + " / " + &moves.name + "**";
 
-        if moves.input == moves.name {
-            special_moves = special_moves.to_owned() + "\n- **" + &moves.input + "**";
-        }
+    for x in 0..move_list.len() {
+        if move_list[x].move_type == "special" || move_list[x].move_type == "other" {
 
-        for moves_aliases in aliases_data.iter() {
-            // If move input exists in aliases.json
-            if moves.input == moves_aliases.input {
-                special_moves += "\n\tAliases → `";
-
-                // Format message if there is only one alias or multiple
-                for a in 0..moves_aliases.aliases.len() {
-                    if a != moves_aliases.aliases.len() - 1 {
-                        special_moves =
-                            special_moves.to_owned() + &moves_aliases.aliases[a] + "`, `";
-                    }
-                    else {
-                        special_moves = special_moves.to_owned() + &moves_aliases.aliases[a];
-                    }
+            if x > 0 && move_list[x-1].id != move_list[x].id {
+                if move_list[x].input == move_list[x].name {
+                    special_moves = special_moves.to_owned() + "\n- **" + &move_list[x].input + "**";
                 }
-                special_moves = special_moves.to_owned() + "`\n";
+                else {
+                    special_moves = special_moves.to_owned() + "\n- **" + &move_list[x].input + " / " + &move_list[x].name + "**";
+                }
+            }
+
+            if move_list[x].alias.is_empty() { continue; }
+
+            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+                special_moves += "\n\tAliases → `";
+            }
+
+            if x + 1 < move_list.len() {
+                if move_list[x+1].id == move_list[x].id {
+                    special_moves = special_moves.to_owned() + &move_list[x].alias + "`, `";
+                }
+                else {
+                    special_moves = special_moves.to_owned() + &move_list[x].alias + "`\n";
+
+                }
             }
             else {
-                continue;
+                special_moves = special_moves.to_owned() + &move_list[x].alias;
             }
         }
     }
     special_moves
 }
 
-pub async fn get_super_moves(moves_info: &[MoveInfo], aliases_data: &[MoveAliases]) -> String {
+pub async fn get_super_moves(move_list: &[MoveList]) -> String {
 
     let mut super_moves = String::new();
-    for moves in moves_info.iter().skip_while(|x| x.move_type.to_lowercase() != "super") {
 
-        super_moves = super_moves.to_owned() + "\n- **"
-            + &moves.input + " / " + &moves.name + "**";
-        
-        if moves.input == moves.name {
-            super_moves = super_moves.to_owned() + "\n- **" + &moves.input + "**";
-        }
+    for x in 0..move_list.len() {
+        if move_list[x].move_type == "super" {
 
-        for moves_aliases in aliases_data.iter() {
-            // If move input exists in aliases.json
-            if moves.input == moves_aliases.input  {
-                super_moves += "\n\tAliases → `";
-
-                // Format message if there is only one alias or multiple
-                for a in 0..moves_aliases.aliases.len() {
-                    if a != moves_aliases.aliases.len() - 1 {
-                        super_moves = super_moves.to_owned() + &moves_aliases.aliases[a] + "`, `";
-                    }
-                    else {
-                        super_moves = super_moves.to_owned() + &moves_aliases.aliases[a];
-                    }
+            if x > 0 && move_list[x-1].id != move_list[x].id {
+                if move_list[x].input == move_list[x].name {
+                    super_moves = super_moves.to_owned() + "\n- **" + &move_list[x].input + "**";
                 }
-                super_moves = super_moves.to_owned() + "`\n";
+                else {
+                    super_moves = super_moves.to_owned() + "\n- **" + &move_list[x].input + " / " + &move_list[x].name + "**";
+                }
+            }
+
+            if move_list[x].alias.is_empty() { continue; }
+
+            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+                super_moves += "\n\tAliases → `";
+            }
+
+            if x + 1 < move_list.len() {
+                if move_list[x+1].id == move_list[x].id {
+                    super_moves = super_moves.to_owned() + &move_list[x].alias + "`, `";
+                }
+                else {
+                    super_moves = super_moves.to_owned() + &move_list[x].alias + "`\n";
+
+                }
             }
             else {
-                continue;
+                super_moves = super_moves.to_owned() + &move_list[x].alias + "`";
             }
         }
     }

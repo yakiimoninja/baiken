@@ -1,7 +1,7 @@
 use aho_corasick::AhoCorasick;
 use colored::Colorize;
 use rusqlite::{named_params, Connection as SqlConnection};
-use crate::structs::{ CharInfo, CharMoves, MoveInfo, HitboxLinks};
+use crate::structs::{ CharInfo, HitboxLinks, MoveInfo, MoveList};
 use crate::{Error, CHARS};
 // Regex related imports
 use regex::Regex;
@@ -110,25 +110,32 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
 }
 
 
-// Searches database for a characters full move list
-pub fn find_all_moves(db: Arc<Mutex<SqlConnection>>) {
-
-    // select name, input, type from Moves;
-    // select alias, from aliases for move_id.Moves;
-    //let db = SqlConnection::open_with_flags("/data/data.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
-
-    // prototype query SELECT  moves.id, name, input, move_type, alias from moves left join aliases on aliases.move_id = moves.id where moves.character_id = '' order by moves.id;
-    // get move_ids, inputs and names where char_id = 'aba' and movetype = 'whatever'
-    // get aliases where move_id = 'moves.move_id'
+/// Searches database for a characters full move list
+pub fn find_move_list(char_id: usize, db: Arc<Mutex<SqlConnection>>) -> Result<Vec<MoveList>, Error> {
 
     let db = db.lock().unwrap();
-    let mut moves_query = db.prepare("SELECT  moves.id, name, input, move_type, alias from moves left join aliases on aliases.move_id = moves.id where moves.character_id = '' order by moves.id").unwrap();
-    let move_id: String = moves_query.query_row(
-        named_params! {":id": "1"},
-        |row| row.get(0)
-    ).unwrap();
+    let mut moves_query = db.prepare("SELECT moves.id, input, name, alias, move_type FROM Moves LEFT JOIN Aliases ON aliases.move_id = moves.id where moves.character_id = :char_id ORDER BY Moves.id, Aliases.id ").unwrap();
 
-    println!("P {}", move_id);
+    if let Ok(iter) = moves_query.query_map(named_params! {":char_id": char_id}, |row| Ok( MoveList {
+        id: row.get(0).unwrap(),
+        input: row.get(1).unwrap(),
+        name: row.get(2).unwrap(),
+        alias: row.get(3).unwrap_or_default(),
+        move_type: row.get(4).unwrap() }))
+    {
+        let mut struct_vec: Vec<MoveList> = Vec::new();
+
+        for moves in iter {
+            struct_vec.push(moves.unwrap());
+        }
+
+        return Ok(struct_vec);
+    };
+
+    // Error message cause given move wasnt found
+    let error_msg= "Weird error occured in find_move_list()";
+    println!("{}", error_msg.red());
+    Err(error_msg.into())
 }
 
 
