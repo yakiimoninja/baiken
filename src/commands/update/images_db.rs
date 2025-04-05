@@ -47,6 +47,7 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
         "&#039;",
         "&quot;",
         "\\\\",
+        "\n\n",
     //    "; ",
     //    ";",
     ];
@@ -65,6 +66,7 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
         "'",
         r#"\""#,
         "\\n",
+        "\\n",
     //    "\\n",
     //    "\\n",
     ];
@@ -72,7 +74,6 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
 
     let ac = AhoCorasick::builder().match_kind(aho_corasick::MatchKind::LeftmostFirst).build(patterns).unwrap();
     let char_images_response_json  = ac.replace_all(char_images_response_json .trim(), replace_with);
-    println!("{:#?}", char_images_response_json );
 
     let mut image_data_response: ImageResponse = serde_json::from_str(&char_images_response_json).unwrap();
     let char_image_data = &mut image_data_response.cargoquery;

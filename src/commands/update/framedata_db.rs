@@ -98,7 +98,6 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
 
     let ac = AhoCorasick::builder().match_kind(aho_corasick::MatchKind::LeftmostFirst).build(patterns).unwrap();
     let char_page_response_json = ac.replace_all(char_page_response_json.trim(), replace_with);
-    println!("{:#?}", char_page_response_json);
 
     //     // Colorful text RED
     //     .replace(r#"&lt;span class=&quot;colorful-text-4&quot; &gt;"#, "")

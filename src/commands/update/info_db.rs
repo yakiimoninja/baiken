@@ -77,11 +77,13 @@ pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_c
     let empty = String::from("-");
 
     let patterns = &[
+        "&lt;span class=&quot;tooltip&quot; &gt;airborne&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;",
         "&lt;span class=&quot;colorful-text-1&quot; &gt;",
         "&lt;span class=&quot;colorful-text-2&quot; &gt;",
         "&lt;span class=&quot;colorful-text-3&quot; &gt;",
         "&lt;span class=&quot;colorful-text-4&quot; &gt;",
         "&lt;span class=&quot;colorful-text-5&quot; &gt;",
+        "&lt;/span&gt;&lt;/span&gt;",
         "&#039;&#039;&#039;",
         "&lt;/small&gt;",
         "&lt;small&gt;",
@@ -95,6 +97,8 @@ pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_c
     ];
 
     let replace_with = &[
+        "",
+        "",
         "",
         "",
         "",
@@ -115,7 +119,6 @@ pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_c
 
     let ac = AhoCorasick::builder().match_kind(aho_corasick::MatchKind::LeftmostFirst).build(patterns).unwrap();
     let char_info_response_json = ac.replace_all(char_info_response_json.trim(), replace_with);
-    println!("{:#?}", char_info_response_json);
 
     let mut char_info_response: Response = serde_json::from_str(&char_info_response_json).unwrap();
     let char_info = &mut char_info_response.cargoquery[0].title;
