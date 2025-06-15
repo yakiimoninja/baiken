@@ -7,32 +7,32 @@ pub async fn get_normal_moves(move_list: &[MoveList]) -> String {
     for x in 0..move_list.len() {
         if move_list[x].move_type.to_lowercase().trim() == "normal" {
 
-            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+            if x == 0 || (x > 0 && move_list[x].id != move_list[x-1].id) {
                 if move_list[x].input == move_list[x].name {
-                    normal_moves = normal_moves.to_owned() + "\n- **" + &move_list[x].input + "**";
+                    normal_moves += &("\n- **".to_owned() + &move_list[x].input + "**");
                 }
                 else {
-                    normal_moves = normal_moves.to_owned() + "\n- **" + &move_list[x].input + " / " + &move_list[x].name + "**";
+                    normal_moves += &("\n- **".to_owned() + &move_list[x].input + " / " + &move_list[x].name + "**");
                 }
             }
 
             if move_list[x].alias.is_empty() { continue; }
 
-            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+            if x == 0 || (x > 0 && move_list[x].id != move_list[x-1].id) {
                 normal_moves += "\n\tAliases → `";
             }
 
             if x + 1 < move_list.len() {
-                if move_list[x+1].id == move_list[x].id {
-                    normal_moves = normal_moves.to_owned() + &move_list[x].alias + "`, `";
+                if move_list[x].id == move_list[x+1].id {
+                    normal_moves += &(move_list[x].alias.to_owned() + "`, `");
                 }
                 else {
-                    normal_moves = normal_moves.to_owned() + &move_list[x].alias + "`\n";
+                    normal_moves += &(move_list[x].alias.to_owned() + "`\n");
 
                 }
             }
             else {
-                normal_moves = normal_moves.to_owned() + &move_list[x].alias;
+                normal_moves += &move_list[x].alias;
             }
         }
     }
@@ -46,32 +46,32 @@ pub async fn get_special_moves(move_list: &[MoveList]) -> String {
     for x in 0..move_list.len() {
         if move_list[x].move_type.to_lowercase().trim() == "special" || move_list[x].move_type.to_lowercase().trim() == "other" {
 
-            if x > 0 && move_list[x-1].id != move_list[x].id {
+            if x > 0 && move_list[x].id != move_list[x-1].id {
                 if move_list[x].input == move_list[x].name {
-                    special_moves = special_moves.to_owned() + "\n- **" + &move_list[x].input + "**";
+                    special_moves += &("\n- **".to_owned() + &move_list[x].input + "**");
                 }
                 else {
-                    special_moves = special_moves.to_owned() + "\n- **" + &move_list[x].input + " / " + &move_list[x].name + "**";
+                    special_moves += &("\n- **".to_owned() + &move_list[x].input + " / " + &move_list[x].name + "**");
                 }
             }
 
             if move_list[x].alias.is_empty() { continue; }
 
-            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+            if x == 0 || (x > 0 && move_list[x].id != move_list[x-1].id) {
                 special_moves += "\n\tAliases → `";
             }
 
             if x + 1 < move_list.len() {
-                if move_list[x+1].id == move_list[x].id {
-                    special_moves = special_moves.to_owned() + &move_list[x].alias + "`, `";
+                if move_list[x].id == move_list[x+1].id {
+                    special_moves +=  &(move_list[x].alias.to_owned() + "`, `");
                 }
                 else {
-                    special_moves = special_moves.to_owned() + &move_list[x].alias + "`\n";
+                    special_moves += &(move_list[x].alias.to_owned() + "`\n");
 
                 }
             }
             else {
-                special_moves = special_moves.to_owned() + &move_list[x].alias;
+                special_moves += &move_list[x].alias;
             }
         }
     }
@@ -85,32 +85,32 @@ pub async fn get_super_moves(move_list: &[MoveList]) -> String {
     for x in 0..move_list.len() {
         if move_list[x].move_type.to_lowercase().trim() == "super" {
 
-            if x > 0 && move_list[x-1].id != move_list[x].id {
+            if x > 0 && move_list[x].id != move_list[x-1].id {
                 if move_list[x].input == move_list[x].name {
-                    super_moves = super_moves.to_owned() + "\n- **" + &move_list[x].input + "**";
+                    super_moves += &("\n- **".to_owned() + &move_list[x].input + "**");
                 }
                 else {
-                    super_moves = super_moves.to_owned() + "\n- **" + &move_list[x].input + " / " + &move_list[x].name + "**";
+                    super_moves += &("\n- **".to_owned() + &move_list[x].input + " / " + &move_list[x].name + "**");
                 }
             }
 
             if move_list[x].alias.is_empty() { continue; }
 
-            if x == 0 || (x > 0 && move_list[x-1].id != move_list[x].id) {
+            if x == 0 || (x > 0 && move_list[x].id != move_list[x-1].id) {
                 super_moves += "\n\tAliases → `";
             }
 
             if x + 1 < move_list.len() {
-                if move_list[x+1].id == move_list[x].id {
-                    super_moves = super_moves.to_owned() + &move_list[x].alias + "`, `";
+                if move_list[x].id == move_list[x+1].id {
+                    super_moves += &(move_list[x].alias.to_owned() + "`, `");
                 }
                 else {
-                    super_moves = super_moves.to_owned() + &move_list[x].alias + "`\n";
+                    super_moves += &(move_list[x].alias.to_owned() + "`\n");
 
                 }
             }
             else {
-                super_moves = super_moves.to_owned() + &move_list[x].alias + "`";
+                super_moves += &(move_list[x].alias.to_owned() + "`");
             }
         }
     }
