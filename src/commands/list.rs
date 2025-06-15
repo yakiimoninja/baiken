@@ -29,7 +29,7 @@ pub enum FilterBy {
     Onblock
 }
 
-/// Display a filtered list of moves.
+/// Display a list of moves filtered by given criteria.
 #[poise::command(prefix_command, slash_command)]
 pub async fn list(
     ctx: Context<'_>,

@@ -187,7 +187,7 @@ __**type**__: Move type.
 __**filter**__: Filter to apply.
 __**value**__: Filter value.
 
-Display a filtered list of character moves."#);
+Display a list of moves filtered by given criteria."#);
 
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/list.png");
 
