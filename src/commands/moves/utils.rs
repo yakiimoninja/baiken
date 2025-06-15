@@ -63,7 +63,7 @@ pub async fn get_special_moves(move_list: &[MoveList]) -> String {
 
             if x + 1 < move_list.len() {
                 if move_list[x].id == move_list[x+1].id {
-                    special_moves +=  &(move_list[x].alias.to_owned() + "`, `");
+                    special_moves += &(move_list[x].alias.to_owned() + "`, `");
                 }
                 else {
                     special_moves += &(move_list[x].alias.to_owned() + "`\n");
