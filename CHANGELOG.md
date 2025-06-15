@@ -7,10 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - Find a non blocking way to update the db.
-- Fix with regex?
-- Fix this: &lt;span class=&quot;tooltip&quot; &gt;airborne&lt;span class=&quot;tooltiptext&quot; style=&quot;&quot;&gt;Sin is considered airborne if he is hit during backdash and grounded otherwise&lt;/span&gt;&lt;/span&gt;|24|1-6F|12|13|42|409.5|49|567.6|7|18/24|735.625|6/11|228.367|10|3|5|6.3|4.9|14|29|100|1.9|1.9
+
+## [2.0.0] - 2025-06-05
 
 ### Changed
+- Make `/hitboxes` command display an hitbox image caption.
+- Make embed titles display move inputs and or names dynamically to avoid clutter.
+- Replace `rand` dependency with `nanorand`.
+- Update dependencies.
+- Replace `.replace()` with `aho-corasick` for text replacement.
 - Rework data storage to use a sqlite database instead of json files.
 - Rework error handling. Error responses are now ephemeral.
 - Rework CHANGELOG.
@@ -20,7 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `236S` change alias from `MG1` to `MG`.
 
 ### Added
-- Added new character **`Venom`**.
+- Add new command `/list`.
+- Add new character **`Venom`**.
+- Add new character **`Unika`**.
 
 - **`Asuka R`**:
     - `214X (Discard)` add new alias `Discard`.
@@ -36,6 +43,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `214P 4P` add new alias `214P4P`.
     - `214P 4P 4P` add new alias `214P4P4P`.
 
+- **`Venom`**:
+	- `214X` add new aliases `Ball Set`, `Ball`, `214P`, `214K`,`214S`, `214H`.
+	- `41236K` add new aliases `Ball Set (Multiple)`, `Balls`, `BSM`, `426K`.
+	- `623X` add new aliases `QV`, `Q5`, `623P`, `623K`, `623S`, `623H`.
+	- `[4]6S` add new aliases `Stinger Aim S`, `Stinger Aim`, `SA`, `SAS`, `46S`, `46S!`.
+	- `[4]6H` add new aliases `Stinger Aim H`, `SAH`, `46H`, `46H!`.
+	- `[2]8S` add new aliases `Carcass Raid S`, `Carcass Raid`, `CRS`, `CR`, `28S`, `28S!`.
+	- `[2]8H` add new aliases `Carcass Raid H`, `CRH`, `28H`, `28H!`.
+	- `j.236S` add new aliases `Carcass Raid (mid-air) S`, `Air Carcass Raid S`, `Air Carcass Raid`, `ACR`, `ACRS`, `ACR!`, `ACRS!`, `j.236S!`.
+	- `j.236H` add new aliases `Carcass Raid (mid-air) H`, `Air Carcass Raid H`, `ACRH`, `ACRH!`, `j.236H!`.
+	- `632146K` add new aliases `Tryambaka`,`Command Grab`, `Ball Grab`, `BG`, `TB`, `CG`, `6246K`.
+	- `632146S` add new aliases `Dark Angel`, `Big Ball`, `Ball Super`, `DA`, `BB`, `BS`, `6246S`.
+	- `632146H` add new aliases `Navaratna Runout`, `Black Hole`, `Super`, `BH`, `NR`, `6246H`.
+
+- **`Unika`**:
+
 ### Removed
 - **`Asuka R`**:
     - `j.214X (Discard)` remove alias `Air Discard`, `ADI`.
@@ -46,12 +69,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Remove `236S Level 3` and aliases.
 
 ### Fixed
-- Fix **`Bridget`** changed input for `S` to `f.SS`.
+- Fix weird character strings in detailed move information, hitbox captions and character info.
 - Fix **`Ramlethal Valentine`** alias typo `Sabrobato`.
 - Fix **`Millia Rage`** `Iron Savior` embed footer caption containing weird characters.
 - Fix **`Faust`** all aliases for items not working.
-- Fix **`Ramlethal Valentine`** `Erarlumo 2` and `Erarlumo 3` aliases not working cause of new input.
+- Fix **`Bridget`** `f.SS` aliases not working cause of new input.
 - Fix **`Goldlewis Dickinson`** `236S` aliases not working cause of new input.
+- Fix **`Ramlethal Valentine`** `Erarlumo 2` and `Erarlumo 3` aliases not working cause of new input.
 
 ## [1.0.0] - 2024-11-25
 
@@ -111,8 +135,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `214[K]` add new aliases `F.D.B. (Charged)`, `Flick!`, `FDB!`, `214K!`
 
 ### Fixed
-- Updated framedata
-- Updated `Potemkin` inputs.
+- Update framedata
+- Update `Potemkin` inputs.
 
 ## [0.30.0] - 2024-10-31
 

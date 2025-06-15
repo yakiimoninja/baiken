@@ -20,7 +20,7 @@
 - You can view the latest patch notes by [**pressing here**](https://github.com/yakiimoninja/baiken/releases).
 
 # Inviting Baiken to a server.
-### Currently in 700+ servers and 14 official character Discords.
+### Currently in 800+ servers and 18 official character Discords.
 - Baiken can be **invited** to a server by [**pressing here**](https://discord.com/api/oauth2/authorize?client_id=919027797429727272&permissions=2147535872&scope=bot%20applications.commands).
 - Or scanning the **QR Code** with a Camera or Discord application.
 <p align="center">
@@ -70,6 +70,15 @@
     <summary>Show example.</summary>
         <p align="center">
             <img src="data/images/commands/moves.png"/>
+        </p>
+</details>
+
+## **Command**: `/list`.
+**Display a list of moves filtered by given criteria.**
+<details open>
+    <summary>Show example.</summary>
+        <p align="center">
+            <img src="data/images/commands/list.png"/>
         </p>
 </details>
 
