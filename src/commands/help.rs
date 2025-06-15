@@ -14,6 +14,8 @@ pub enum HelpChoice{
     Hitboxes,
     #[name = "moves"]
     Moves,
+    #[name = "list"]
+    List,
     #[name = "info"]
     Info,
     #[name = "nicknames"]
@@ -51,6 +53,9 @@ pub async fn help(ctx: Context<'_>,
         },
         HelpChoice::Info => {
             help_info().await
+        },
+        HelpChoice::List => {
+            help_list().await
         },
         HelpChoice::Moves => {
             help_moves().await
@@ -170,6 +175,21 @@ __**character**__: Character name or nickname.
 Display a character's general information."#);
 
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/info.png");
+
+    (msg, img)
+}
+
+async fn help_list() -> (String, String) {
+    let msg = String::from(r#"
+## __**Command**__: `/list`
+
+__**type**__: Move type.
+__**filter**__: Filter to apply.
+__**value**__: Filter value.
+
+Display a filtered list of character moves."#);
+
+    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/list.png");
 
     (msg, img)
 }

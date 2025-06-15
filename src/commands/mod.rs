@@ -2,6 +2,7 @@ pub mod frames;
 pub mod help;
 pub mod hitboxes;
 pub mod info;
+pub mod list;
 pub mod nicknames;
 pub mod moves;
 pub mod register;

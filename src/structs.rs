@@ -72,6 +72,13 @@ pub struct MoveList {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct FilteredList{
+    pub char_id: usize,
+    pub name: String,
+    pub input: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct HitboxLinks {
     pub hitbox: String,
     pub hitbox_caption: String,

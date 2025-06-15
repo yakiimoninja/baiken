@@ -1,7 +1,7 @@
 use aho_corasick::AhoCorasick;
 use colored::Colorize;
 use rusqlite::{named_params, Connection as SqlConnection};
-use crate::structs::{ CharInfo, HitboxLinks, MoveInfo, MoveList};
+use crate::structs::{ CharInfo, FilteredList, HitboxLinks, MoveInfo, MoveList};
 use crate::{Error, CHARS};
 // Regex related imports
 use regex::Regex;
@@ -164,6 +164,57 @@ pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Opt
 
     hitbox_vec
 } 
+
+
+/// Searches database for list of moves filtered by user given criteria.
+pub async fn find_all(move_type: &String, filter: &str, value: &String, db: Arc<Mutex<SqlConnection>>) -> Result<Vec<FilteredList>, Error>  {
+
+    let db = db.lock().unwrap();
+
+    if move_type.is_empty() {
+        let query_string = "SELECT character_id, name, input FROM moves WHERE filter = :value".replace("filter", filter);
+
+        let mut list_all_query = db.prepare(&query_string).unwrap();
+        
+        if let Ok(iter) = list_all_query.query_map(named_params! {":value": value}, |row| Ok( FilteredList {
+            char_id: row.get(0).unwrap(),
+            name: row.get(1).unwrap(),
+            input: row.get(2).unwrap() }))
+        {
+            let mut struct_vec: Vec<FilteredList> = Vec::new();
+
+            for moves in iter {
+                struct_vec.push(moves.unwrap());
+            }
+
+            return Ok(struct_vec);
+        };
+    }
+    else {
+        let query_string = "SELECT character_id, name, input FROM moves WHERE filter = :value AND move_type = :move_type".replace("filter", filter);
+
+        let mut list_all_query = db.prepare(&query_string).unwrap();
+        
+        if let Ok(iter) = list_all_query.query_map(named_params! {":value": value, ":move_type": move_type}, |row| Ok( FilteredList {
+            char_id: row.get(0).unwrap(),
+            name: row.get(1).unwrap(),
+            input: row.get(2).unwrap() }))
+        {
+            let mut struct_vec: Vec<FilteredList> = Vec::new();
+
+            for moves in iter {
+                struct_vec.push(moves.unwrap());
+            }
+
+            return Ok(struct_vec);
+        };
+    }
+
+    // Error message cause given move wasnt found
+    let error_msg= "Weird error occured in find_all()";
+    println!("{}", error_msg.red());
+    Err(error_msg.into())
+}
 
 
 /// Searches database for the given character info.
