@@ -58,6 +58,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	- `632146H` add new aliases `Navaratna Runout`, `Black Hole`, `Super`, `BH`, `NR`, `6246H`.
 
 - **`Unika`**:
+    - `S~2S` add new aliases `S2S`, `2S2S`, `fS2S`,
+    - `S~5S` add new aliases `SS`, `2SS`, `fSS`,
+    - `H~2H` add new aliases `H2H`, `2H2H`,
+    - `H~5H` add new aliases `HH`, `2HH`,
+    - `j.236H` add new aliases `Blitz`, `Fireball`, `Air Fireball`, `FB`, `AF`,
+    - `en j.236H` add new aliases `MA Blitz`, `MA Fireball`, `MA Air Fireball`, `MAB`, `MAFB`, `MAAF`,
+    - `214K` add new aliases `Top Attack`, `Greed Sever`, `Overhead`, `GS`, `TA`,
+    - `214S` add new aliases `Blaze A Trail`, `Michael Sword`, `Sword`, `BAT`, `MS`,
+    - `236H` add new aliases `Streak`, `Laser`,
+    - `236K` add new aliases `Penetrate`, `Stun Dipper`, `Low`, `SD`,
+    - `623S` add new aliases `Blast Off`, `DP`, `BO`,
+    - `en.214K` add new aliases `MA Top Attack`, `MA Greed Sever`, `MA Overhead`, `MAO`, `MAGS`, `MATA`,
+    - `en.214S` add new aliases `MA Blaze A Trail`, `MA Michael Sword`, `MA Sword`, `MABAT`, `MAMS`,
+    - `en.236H` add new aliases `MA Streak`, `MA Laser`, `MAS`, `MALA`,
+    - `en.236K` add new aliases `MA Penetrate`, `MA Stun Dipper`, `MA Low`, `MAL` ,`MASD`, `MAP`,
+    - `en.623S` add new aliases `MA Blast Off`, `MA DP`, `MABO`, `MADP`,
+    - `632146S` add new aliases `Super`, `Gun`,
+    - `en.632146S` add new aliases `MA Super`, `MA Gun`,
+    - `214214H` add new aliases `Weapons Free`, `WF`, `Install`,
+    - `S+H` add new aliases `Annihilate`, `SH`,
+    - `Weapons Free Deactivation` add new alias `WFDE`,
 
 ### Removed
 - **`Asuka R`**:
