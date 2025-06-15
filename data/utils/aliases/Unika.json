@@ -146,16 +146,6 @@
     ]
   },
   {
-    "input": "en.214S",
-    "aliases": [
-      "MA Blaze A Trail",
-      "MA Michael Sword",
-      "MA Sword",
-      "MABAT",
-      "MAMS"
-    ]
-  },
-  {
     "input": "en.236H",
     "aliases": [
       "MA Streak",
@@ -228,25 +218,5 @@
     "aliases": [
       "WFDE"
     ]
-  },
-  {
-    "input": "wf.D",
-    "aliases": []
-  },
-  {
-    "input": "wf.H",
-    "aliases": []
-  },
-  {
-    "input": "wf.K",
-    "aliases": []
-  },
-  {
-    "input": "wf.P",
-    "aliases": []
-  },
-  {
-    "input": "wf.S",
-    "aliases": []
   }
 ]
