@@ -169,6 +169,16 @@ pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Opt
 /// Searches database for list of moves filtered by user given criteria.
 pub async fn find_all(move_type: &String, filter: &str, value: &String, db: Arc<Mutex<SqlConnection>>) -> Result<Vec<FilteredList>, Error>  {
 
+    let patterns = &[" ",".","-","\t"];
+    let replace_with = &["","","",""];
+
+    let mut value_regex = Vec::new();
+
+    let ac = AhoCorasick::new(patterns).unwrap();
+    ac.try_stream_replace_all(value.trim().to_lowercase().as_bytes(), &mut value_regex, replace_with).unwrap();
+
+    let value = String::from_utf8(value_regex).unwrap();
+    println!("{}", value);
     let db = db.lock().unwrap();
 
     if move_type.is_empty() {
