@@ -26,13 +26,7 @@ pub enum FilterBy {
     #[name = "on hit"]
     Onhit,
     #[name = "on block"]
-    Onblock,
-    #[name = "attack level"]
-    Level,
-    #[name = "counter level"]
-    Counter,
-    #[name = "guard"]
-    Guard,
+    Onblock
 }
 
 /// Display a filtered list of moves.
@@ -58,9 +52,6 @@ pub async fn list(
         FilterBy::Recovery => String::from("recovery"),
         FilterBy::Onhit => String::from("on_hit"),
         FilterBy::Onblock => String::from("on_block"),
-        FilterBy::Level => String::from("level"),
-        FilterBy::Counter => String::from("counter"),
-        FilterBy::Guard => String::from("guard"),
     };
 
     let type_of_move: String = match move_type {
