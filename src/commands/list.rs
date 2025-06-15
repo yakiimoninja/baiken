@@ -91,8 +91,6 @@ pub async fn list(
     let mut msg = String::new();
     for (x, move_struct) in move_list.iter().enumerate() {
 
-        println!("{:#?}", move_struct);
-
         if x == 0 || (x > 0 && move_list[x].char_id != move_list[x-1].char_id) {
             if move_struct.name == move_struct.input {
                 msg += &("- **".to_owned() + CHARS[move_struct.char_id-1] + " →** `" +  &move_struct.input + "`");
