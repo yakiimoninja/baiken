@@ -70,7 +70,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - `236K` add new aliases `Penetrate`, `Stun Dipper`, `Low`, `SD`,
     - `623S` add new aliases `Blast Off`, `DP`, `BO`,
     - `en.214K` add new aliases `MA Top Attack`, `MA Greed Sever`, `MA Overhead`, `MAO`, `MAGS`, `MATA`,
-    - `en.214S` add new aliases `MA Blaze A Trail`, `MA Michael Sword`, `MA Sword`, `MABAT`, `MAMS`,
     - `en.236H` add new aliases `MA Streak`, `MA Laser`, `MAS`, `MALA`,
     - `en.236K` add new aliases `MA Penetrate`, `MA Stun Dipper`, `MA Low`, `MAL` ,`MASD`, `MAP`,
     - `en.623S` add new aliases `MA Blast Off`, `MA DP`, `MABO`, `MADP`,
