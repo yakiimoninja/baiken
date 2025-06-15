@@ -48,5 +48,205 @@
       "WA!",
       "236D!"
     ]
+  },
+  {
+    "input": "S~2S",
+    "aliases": [
+      "S2S",
+      "2S2S",
+      "fS2S"
+    ]
+  },
+  {
+    "input": "S~5S",
+    "aliases": [
+      "SS",
+      "2SS",
+      "fSS"
+    ]
+  },
+  {
+    "input": "H~2H",
+    "aliases": [
+      "H2H",
+      "2H2H"
+    ]
+  },
+  {
+    "input": "H~5H",
+    "aliases": [
+      "HH",
+      "2HH"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Top Attack",
+      "Greed Sever",
+      "Overhead",
+      "GS",
+      "TA"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Blaze A Trail",
+      "Michael Sword",
+      "Sword",
+      "BAT",
+      "MS"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "Streak",
+      "Laser"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Penetrate",
+      "Stun Dipper",
+      "Low",
+      "SD"
+    ]
+  },
+  {
+    "input": "623S",
+    "aliases": [
+      "Blast Off",
+      "DP",
+      "BO"
+    ]
+  },
+  {
+    "input": "en j.236H",
+    "aliases": [
+      "MA Blitz",
+      "MA Fireball",
+      "MA Air Fireball",
+      "MAB",
+      "MAFB",
+      "MAAF"
+    ]
+  },
+  {
+    "input": "en.214K",
+    "aliases": [
+      "MA Top Attack",
+      "MA Greed Sever",
+      "MA Overhead",
+      "MAO",
+      "MAGS",
+      "MATA"
+    ]
+  },
+  {
+    "input": "en.214S",
+    "aliases": [
+      "MA Blaze A Trail",
+      "MA Michael Sword",
+      "MA Sword",
+      "MABAT",
+      "MAMS"
+    ]
+  },
+  {
+    "input": "en.236H",
+    "aliases": [
+      "MA Streak",
+      "MA Laser",
+      "MAS",
+      "MALA"
+    ]
+  },
+  {
+    "input": "en.236K",
+    "aliases": [
+      "MA Penetrate",
+      "MA Stun Dipper",
+      "MA Low",
+      "MAL",
+      "MASD",
+      "MAP"
+    ]
+  },
+  {
+    "input": "en.623S",
+    "aliases": [
+      "MA Blast Off",
+      "MA DP",
+      "MABO",
+      "MADP"
+    ]
+  },
+  {
+    "input": "j.236H",
+    "aliases": [
+      "Blitz",
+      "Fireball",
+      "Air Fireball",
+      "FB",
+      "AF"
+    ]
+  },
+  {
+    "input": "214214H",
+    "aliases": [
+      "Weapons Free",
+      "WF",
+      "Install"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Super",
+      "Gun"
+    ]
+  },
+  {
+    "input": "en.632146S",
+    "aliases": [
+      "MA Super",
+      "MA Gun"
+    ]
+  },
+  {
+    "input": "S+H",
+    "aliases": [
+      "Annihilate",
+      "SH"
+    ]
+  },
+  {
+    "input": "Weapons Free Deactivation",
+    "aliases": [
+      "WFDE"
+    ]
+  },
+  {
+    "input": "wf.D",
+    "aliases": []
+  },
+  {
+    "input": "wf.H",
+    "aliases": []
+  },
+  {
+    "input": "wf.K",
+    "aliases": []
+  },
+  {
+    "input": "wf.P",
+    "aliases": []
+  },
+  {
+    "input": "wf.S",
+    "aliases": []
   }
 ]
