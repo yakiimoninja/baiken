@@ -47,8 +47,6 @@ pub async fn moves(
         }
     };
 
-    println!("{}", ("Successfully read '".to_owned() + &character + ".json' file.").green());
-
     let mut vec_embeds = Vec::new();
 
     let embed_title = "__**".to_owned() + &character.replace('_', " ") + " Moves / Aliases**__";
