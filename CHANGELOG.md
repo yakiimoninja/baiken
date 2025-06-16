@@ -8,7 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
-## [2.0.0] - 2025-06-05
+## [2.0.1] - 2025-06-16
+
+### Changed
+- Update `README`.
+
+### Fixed
+- Remove random print statement in `/moves`.
+
+## [2.0.0] - 2025-06-16
 
 ### Changed
 - Make `/hitboxes` command display an hitbox image caption.
@@ -17,8 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update dependencies.
 - Replace `.replace()` with `aho-corasick` for text replacement.
 - Rework data storage to use a sqlite database instead of json files.
-- Rework error handling. Error responses are now ephemeral.
+- Rework error handling. Some error responses are now ephemeral.
 - Rework CHANGELOG.
+- Update `README`.
 
 - **`Goldlewis Dickinson`**:
     - `236S Level 1` change to `236S`.
