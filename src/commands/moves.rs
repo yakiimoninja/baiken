@@ -2,7 +2,6 @@ mod utils;
 use utils::{get_normal_moves, get_special_moves, get_super_moves};
 use crate::{check, find::{self, find_move_list}, Context, Error, EMBED_COLOR};
 use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
-use colored::Colorize;
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum TypeChoice{
