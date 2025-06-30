@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.0.2] - 2025-06-30
+
+### Fixed
+- Fix `236P` moves showing up when requesting `6P` for `Bedman`, `Faust`, `Johnny` and `Sin`.
+
 ## [2.0.1] - 2025-06-16
 
 ### Changed
