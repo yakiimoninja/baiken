@@ -79,20 +79,20 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     let db = db.lock().unwrap();
     add_regexp_function(&db).unwrap();
 
-    let mut alias_query = db.prepare("SELECT move_id FROM aliases WHERE move_id IN (SELECT id FROM moves WHERE character_id = :char_id) AND REPLACE(LOWER(alias), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
     let mut input_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(input), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
+    let mut alias_query = db.prepare("SELECT move_id FROM aliases WHERE move_id IN (SELECT id FROM moves WHERE character_id = :char_id) AND REPLACE(LOWER(alias), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
     let mut name_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(name), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
 
-    // Checking if user input is alias
     // Semi join
     // https://media.datacamp.com/legacy/v1714587799/Marketing/Blog/Joining_Data_in_SQL_2.pdf
-    if let Ok(move_id) = alias_query.query_row(
+    // Checking if user input is move input
+    if let Ok(move_id) = input_query.query_row(
         named_params! {":char_id": char_id, ":move_regex": move_regex},
         |row| row.get(0)
     ) { return Ok((send_move(move_id, &db), move_id)) }
 
-    // Checking if user input is move input
-    if let Ok(move_id) = input_query.query_row(
+    // Checking if user input is alias
+    if let Ok(move_id) = alias_query.query_row(
         named_params! {":char_id": char_id, ":move_regex": move_regex},
         |row| row.get(0)
     ) { return Ok((send_move(move_id, &db), move_id)) }
