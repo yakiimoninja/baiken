@@ -8,6 +8,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.1.0] - 2025-08-21
+
+### Added
+- Add new character **`Lucy`**.
+
+
+- **`Lucy`**:
+    - Add new nickname `Lucyna Kushinada`.
+    - Add new nickname `LU`.
+    - Add new nickname `LK`.
+
+- **`Lucy`**:
+    - `214H` add new aliases `Monowire`, `214H!`, `MW`.
+    - `214[H]` add new aliases `214H!`, `Monowire Hold`, `MWH`.
+    - `214K` add new aliases `Sprint Attack`, `SA`.
+    - `214K S` add new aliases `Sprint Attack - Sweep`, `Low`, `SAS`, `214KS`.
+    - `214K H` add new aliases `Sprint Attack - Cross Up`, `Flip`, `SAC`, `214KH`.
+    - `236S` add new aliases `Unity`, `Gun`.
+    - `236[S]` add new aliases `Unity Hold`, `Gun Hold`, `236S!`, `UH`, `GH`.
+    - `623H` add new aliases `Monowire - Breakout`, `DP`.
+    - `P or D` add new aliases `Moonwire Cancel`, `MC`.
+    - `632146H` add new aliases `Finisher: Deepdive`, `Super`, `FDD`, `6246H`.
+    - `632146S` add new aliases `Quickhack`, `Hax`, `6246S`.
+
 ## [2.0.2] - 2025-06-30
 
 ### Fixed
@@ -1255,6 +1279,10 @@ Say less my guy.
 - Add new patch notes page.
 
 
+[2.1.0]: https://github.com/yakiimoninja/baiken/releases/tag/2.1.0
+[2.0.2]: https://github.com/yakiimoninja/baiken/releases/tag/2.0.2
+[2.0.1]: https://github.com/yakiimoninja/baiken/releases/tag/2.0.1
+[2.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/2.0.0
 [1.0.0]: https://github.com/yakiimoninja/baiken/releases/tag/1.0.0
 [0.30.1]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.1
 [0.30.0]: https://github.com/yakiimoninja/baiken/releases/tag/0.30.0
