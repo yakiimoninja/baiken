@@ -21,7 +21,7 @@ pub struct Data {
     db: Arc<Mutex<SqlConnection>>
 }
 
-pub const CHARS: [&str; 31] = [
+pub const CHARS: [&str; 32] = [
     "A.B.A",
     "Anji Mito",
     "Asuka R",
@@ -40,6 +40,7 @@ pub const CHARS: [&str; 31] = [
     "Johnny",
     "Ky Kiske",
     "Leo Whitefang",
+    "Lucy",
     "May",
     "Millia Rage",
     "Nagoriyuki",

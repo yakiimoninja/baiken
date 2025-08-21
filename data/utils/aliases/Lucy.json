@@ -1,0 +1,141 @@
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236D",
+    "aliases": [
+      "Wild Assault",
+      "WA"
+    ]
+  },
+  {
+    "input": "236[D]",
+    "aliases": [
+      "Wild Assault Hold",
+      "WAH",
+      "WA!",
+      "236D!"
+    ]
+  },
+  {
+    "input": "214H",
+    "aliases": [
+      "Monowire",
+      "214H!",
+      "MW"
+    ]
+  },
+  {
+    "input": "214[H]",
+    "aliases": [
+      "214H!",
+      "Monowire Hold",
+      "MWH"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Sprint Attack",
+      "SA"
+    ]
+  },
+  {
+    "input": "214K S",
+    "aliases": [
+      "Sprint Attack - Sweep",
+      "Low",
+      "SAS",
+      "214KS"
+    ]
+  },
+  {
+    "input": "214K H",
+    "aliases": [
+      "Sprint Attack - Cross Up",
+      "Flip",
+      "SAC",
+      "214KH"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Unity",
+      "Gun"
+    ]
+  },
+  {
+    "input": "236[S]",
+    "aliases": [
+      "Unity Hold",
+      "Gun Hold",
+      "236S!",
+      "UH",
+      "GH"
+    ]
+  },
+  {
+    "input": "623H",
+    "aliases": [
+      "Monowire - Breakout",
+      "DP"
+    ]
+  },
+  {
+    "input": "P or D",
+    "aliases": [
+      "Moonwire Cancel",
+      "MC"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Finisher: Deepdive",
+      "Super",
+      "FDD",
+      "6246H"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Quickhack",
+      "Hax",
+      "6246S"
+    ]
+  }
+]
