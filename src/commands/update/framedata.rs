@@ -19,7 +19,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             println!("{}", ("Updating '".to_owned() + char_id + "' data.").green());
 
             // Creating request link 
-            let character_link = SITE_LINK.to_owned() + char_id +  SITE_HALF;
+            let character_link = SITE_LINK.to_owned() + &char_id.replace(" ", "%20") +  SITE_HALF;
 
             // Dusloop site request
             let mut char_page_response_json = ureq::get(&character_link)
@@ -34,7 +34,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             }
 
             // Requested website source to file
-            let char_page_response_json = char_page_response_json.into_string().unwrap();
+            let char_page_response_json = char_page_response_json.into_body().read_to_string().unwrap();
             
             // Sending response to get processed and pushed into a db
             // char_count is a counter to specify which json file fails to update
@@ -46,7 +46,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         println!("{}", ("Updating '".to_owned() + specific_char + "' data.").green());
 
         // Creating request link
-        let character_link = SITE_LINK.to_owned() + specific_char + SITE_HALF;
+        let character_link = SITE_LINK.to_owned() + &specific_char.replace(" ", "%20") + SITE_HALF;
 
         // Dusloop site request
         let mut char_page_response_json = ureq::get(&character_link)
@@ -61,7 +61,7 @@ pub async fn get_char_data(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         }
 
         // Requested website source to file
-        let char_page_response_json = char_page_response_json.into_string().unwrap();
+        let char_page_response_json = char_page_response_json.into_body().read_to_string().unwrap();
         
         // Sending response to get processed and pushed into a db
         // char_count is a counter to specify which json file fails to update

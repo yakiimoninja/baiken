@@ -19,7 +19,7 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
             println!("{}", ("Updating '".to_owned() + char_id + "' images.").green());
 
             // Creating images request link 
-            let character_images_link = SITE_LINK.to_owned() + char_id +  SITE_HALF;
+            let character_images_link = SITE_LINK.to_owned() + &char_id.replace(" ", "%20") +  SITE_HALF;
 
             // Dusloop site request
             let mut char_images_response_json = ureq::get(&character_images_link)
@@ -34,7 +34,7 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
             }
 
             // Requested website source to file
-            let char_images_response_json = char_images_response_json.into_string().unwrap();
+            let char_images_response_json = char_images_response_json.into_body().read_to_string().unwrap();
 
             // Sending response to get processed and serialized to a json file
             // char_count is a counter to specify which json file fails to update
@@ -46,7 +46,7 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
         println!("{}", ("Updating '".to_owned() + specific_char + "' images.").green());
 
         // Creating request link
-        let character_link = SITE_LINK.to_owned() + specific_char + SITE_HALF;
+        let character_link = SITE_LINK.to_owned() + &specific_char.replace(" ", "%20") + SITE_HALF;
 
         // Dusloop site request
         let mut char_images_response_json = ureq::get(&character_link)
@@ -61,7 +61,7 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
         }
 
         // Requested website source to file
-        let char_images_response_json = char_images_response_json.into_string().unwrap();
+        let char_images_response_json = char_images_response_json.into_body().read_to_string().unwrap();
 
         for (x, char_id) in chars_ids.iter().enumerate() {
             if *char_id == specific_char {
