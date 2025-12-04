@@ -155,7 +155,7 @@ async fn main() {
                             loop {
                                 // Runs update_all_char_data every 24h
                                 interval.tick().await;
-                                //update::update_all_char_data().await;
+                                update::update_all_char_data(None).await;
                             }
                         });
                         

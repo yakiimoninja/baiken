@@ -73,7 +73,7 @@ VALUES ((SELECT characters.id FROM characters WHERE characters.character = :char
         }
     }
     // do update all
-    update_all_char_data().await;
+    update_all_char_data(None).await;
 
     // insert aliases
     for (x, char) in CHARS.iter().enumerate() {

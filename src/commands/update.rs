@@ -42,7 +42,7 @@ pub async fn update (
             UpdateChoice::All => {
                 // If character arg is all; update frames, images and info for all characters
                 ctx.say("Update started!").await?;
-                update_all_char_data().await;
+                update_all_char_data(Some(&agent)).await;
             }
             UpdateChoice::Frames => {
                 // If character arg is all; update frames for all characters
@@ -108,7 +108,7 @@ pub async fn update (
     Ok(())
 }
 
-pub async fn update_all_char_data(){
+pub async fn update_all_char_data(agent: Option<&ureq::Agent>) {
 
     let con = match agent {
         None => &dustloop_connection().await,
@@ -116,7 +116,7 @@ pub async fn update_all_char_data(){
     };
 
     // 24 hour character data auto update function
-    framedata::get_char_data(CHARS, "all", &agent).await;
-    images::get_char_images(CHARS, "all", &agent).await;
-    info::get_char_info(CHARS, "all", &agent).await;
+    framedata::get_char_data(CHARS, "all", con).await;
+    images::get_char_images(CHARS, "all", con).await;
+    info::get_char_info(CHARS, "all", con).await;
 }
