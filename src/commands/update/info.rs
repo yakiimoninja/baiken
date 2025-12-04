@@ -7,7 +7,7 @@ use crate::{CHARS, commands::update::info_db::info_to_db};
 const SITE_LINK : &str = "https://www.dustloop.com/wiki/api.php?action=cargoquery&format=json&tables=ggstCharacters&fields=ggstCharacters.defense%2C%20ggstCharacters.guts%2C%20ggstCharacters.guardBalance%2C%20ggstCharacters.prejump%2C%20ggstCharacters.umo%2C%20ggstCharacters.forwarddash%2C%20ggstCharacters.backdash%2C%20ggstCharacters.backdashDuration%2C%20ggstCharacters.backdashInvuln%2C%20ggstCharacters.backdashAirborne%2C%20ggstCharacters.backdashDistance%2C%20ggstCharacters.jump_duration%2C%20ggstCharacters.jump_height%2C%20ggstCharacters.high_jump_duration%2C%20ggstCharacters.high_jump_height%2C%20ggstCharacters.earliest_iad%2C%20ggstCharacters.ad_duration%2C%20ggstCharacters.ad_distance%2C%20ggstCharacters.abd_duration%2C%20ggstCharacters.abd_distance%2C%20ggstCharacters.movement_tension%2C%20ggstCharacters.jump_tension%2C%20ggstCharacters.airdash_tension%2C%20ggstCharacters.walk_speed%2C%20ggstCharacters.back_walk_speed%2C%20ggstCharacters.dash_initial_speed%2C%20ggstCharacters.dash_acceleration%2C%20ggstCharacters.dash_friction%2C%20ggstCharacters.jump_gravity%2C%20ggstCharacters.high_jump_gravity%2C&where=ggstCharacters.name%3D%22";
 const SITE_HALF : &str = "%22";
 
-pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) {
+pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str, agent: &ureq::Agent) {
     // For timing the updates
     let now = Instant::now();
     let mut db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_WRITE).unwrap();
@@ -19,16 +19,16 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
             println!("{}", ("Updating '".to_owned() + char_id + "' info.").green());
             
             // Creating request link
-            let character_info_link = SITE_LINK.to_owned() + char_id +  SITE_HALF;
+            let character_info_link = SITE_LINK.to_owned() + &char_id.replace(" ", "%20") +  SITE_HALF;
 
             // Dusloop site request
-            let mut char_info_response_json = ureq::get(&character_info_link)
+            let mut char_info_response_json = agent.get(&character_info_link)
                 .call()
                 .unwrap();
 
             // Because dustloop site 500 a lot
             while char_info_response_json.status() == 500 {
-                char_info_response_json = ureq::get(&character_info_link)
+                char_info_response_json = agent.get(&character_info_link)
                     .call()
                     .unwrap();
             }
@@ -49,13 +49,13 @@ pub async fn get_char_info(chars_ids: [&str; CHARS.len()], specific_char: &str) 
         let character_info_link = SITE_LINK.to_owned() + &specific_char.replace(" ", "%20") + SITE_HALF;
 
         // Dusloop site request
-        let mut char_info_response_json = ureq::get(&character_info_link)
+        let mut char_info_response_json = agent.get(&character_info_link)
             .call()
             .unwrap();
 
         // Because dustloop site 500 a lot
         while char_info_response_json.status() == 500 {
-            char_info_response_json = ureq::get(&character_info_link)
+            char_info_response_json = agent.get(&character_info_link)
                 .call()
                 .unwrap();
         }

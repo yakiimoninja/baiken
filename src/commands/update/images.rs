@@ -7,7 +7,7 @@ use crate::{CHARS, commands::update::images_db::images_to_db};
 const SITE_LINK: &str = "https://dustloop.com/wiki/api.php?action=cargoquery&format=json&limit=100&tables=MoveData_GGST&fields=MoveData_GGST.input%2C%20MoveData_GGST.name%2C%20MoveData_GGST.images%2C%20MoveData_GGST.hitboxes%2C%20MoveData_GGST.hitboxCaption&where=chara%3D%22";
 const SITE_HALF: &str = "%22&order_by=MoveData_GGST.type%20ASC%2C%20MoveData_GGST.input%20ASC&utf8=1";
 
-pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str) {
+pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str, agent: &ureq::Agent) {
     // For timing the updates
     let now = Instant::now();
     let mut db = SqlConnection::open_with_flags("data/data.db", OpenFlags::SQLITE_OPEN_READ_WRITE).unwrap();
@@ -22,13 +22,13 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
             let character_images_link = SITE_LINK.to_owned() + &char_id.replace(" ", "%20") +  SITE_HALF;
 
             // Dusloop site request
-            let mut char_images_response_json = ureq::get(&character_images_link)
+            let mut char_images_response_json = agent.get(&character_images_link)
                 .call()
                 .unwrap();
 
             // Because dustloop site 500 a lot
             while char_images_response_json.status() == 500 {
-                char_images_response_json = ureq::get(&character_images_link)
+                char_images_response_json = agent.get(&character_images_link)
                     .call()
                     .unwrap();
             }
@@ -49,13 +49,13 @@ pub async fn get_char_images(chars_ids: [&str; CHARS.len()], specific_char: &str
         let character_link = SITE_LINK.to_owned() + &specific_char.replace(" ", "%20") + SITE_HALF;
 
         // Dusloop site request
-        let mut char_images_response_json = ureq::get(&character_link)
+        let mut char_images_response_json = agent.get(&character_link)
             .call()
             .unwrap();
 
         // Because dustloop site 500 a lot
         while char_images_response_json.status() == 500 {
-            char_images_response_json = ureq::get(&character_link)
+            char_images_response_json = agent.get(&character_link)
                 .call()
                 .unwrap();
         }

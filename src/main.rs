@@ -82,6 +82,9 @@ async fn main() {
 
     // Running initial checks
     dotenv::dotenv().expect("Failed to load .env file.");
+
+    std::env::var("DUSTLOOP_USERNAME").expect("Failed to load `DUSTLOOP_USERNAME` env var.");
+    std::env::var("DUSTLOOP_PASSWORD").expect("Failed to load `DUSTLOOP_PASSWORD` env var.");
     let token = std::env::var("DISCORD_TOKEN").expect("Failed to load `DISCORD_TOKEN` env var.");
 
     println!();
