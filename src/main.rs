@@ -81,6 +81,9 @@ async fn on_error(error: poise::FrameworkError<'_, Data, Error>) {
 async fn main() {
 
     // Running initial checks
+    dotenv::dotenv().expect("Failed to load .env file.");
+    let token = std::env::var("DISCORD_TOKEN").expect("Failed to load `DISCORD_TOKEN` env var.");
+
     println!();
     if check::data_db_exists().await.is_err() {
         create::create_db().await.unwrap();
@@ -175,8 +178,6 @@ async fn main() {
         .options(options)
         .build();
 
-    dotenv::dotenv().expect("Failed to load .env file.");
-    let token = std::env::var("DISCORD_TOKEN").expect("Failed to load `DISCORD_TOKEN` env var.");
     let intents = serenity::GatewayIntents::non_privileged() /*| serenity::GatewayIntents::MESSAGE_CONTENT */;
     let client = serenity::ClientBuilder::new(token, intents).framework(framework).await;
 
