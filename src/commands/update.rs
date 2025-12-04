@@ -4,23 +4,10 @@ mod images;
 mod images_db;
 mod info;
 mod info_db;
-use crate::{CHARS, Context, Error, check, find};
-use serde::Deserialize;
+mod login;
 
-#[derive(Deserialize, Debug)]
-struct Response {
-    query: Tokens
-}
+use crate::{CHARS, Context, Error, check, commands::update::login::dustloop_connection, find};
 
-#[derive(Deserialize, Debug)]
-struct Tokens {
-    tokens: LoginToken
-}
-
-#[derive(Deserialize, Debug)]
-struct LoginToken {
-    logintoken: String,
-}
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum UpdateChoice{
@@ -47,23 +34,7 @@ pub async fn update (
         return Ok(());
     }
 
-    // Dustloop bot login
-    let agent = ureq::agent();
-    let lg: String = agent.get("https://www.dustloop.com/wiki/api.php?action=query&format=json&meta=tokens&formatversion=2&type=login").call().unwrap().body_mut().read_json::<Response>().unwrap().query.tokens.logintoken;
-    let username: String = std::env::var("DUSTLOOP_USERNAME").unwrap();
-    let pass: String = std::env::var("DUSTLOOP_PASSWORD").unwrap();
-    
-    let body = [
-        ("action", "login"),
-        ("lgname", &username),
-        ("lgpassword", &pass),
-        ("lgtoken", &lg),
-        ("format", "json"),
-        ("formatversion", "2")
-    ];
-
-    let dustloop_api = "https://www.dustloop.com/wiki/api.php?";
-    agent.post(dustloop_api).send_form(body).unwrap().into_body().read_to_string().unwrap();
+    let agent = dustloop_connection().await;
 
     if character.trim().to_lowercase() == "all" {
 
@@ -139,25 +110,10 @@ pub async fn update (
 
 pub async fn update_all_char_data(){
 
-    // Dustloop bot login
-    let agent = ureq::agent();
-    let lg: String = agent.get("https://www.dustloop.com/wiki/api.php?action=query&format=json&meta=tokens&formatversion=2&type=login").call().unwrap().body_mut().read_json::<Response>().unwrap().query.tokens.logintoken;
-    let username: String = std::env::var_os("DUSTLOOP_USERNAME").unwrap().into_string().unwrap();
-    let pass: String = std::env::var_os("DUSTLOOP_PASSWORD").unwrap().into_string().unwrap();
-    // let pass: String = std::env::var("DUSTLOOP_PASSWORD").unwrap();
-
-    let body = [
-        ("action", "login"),
-        ("lgname", &username),
-        ("lgpassword", &pass),
-        ("lgtoken", &lg),
-        ("format", "json"),
-        ("formatversion", "2")
-    ];
-
-    let login_link = "https://www.dustloop.com/wiki/api.php?";
-    let login = agent.post(login_link).send_form(body).unwrap().into_body().read_to_string().unwrap();
-    println!("{}", login);
+    let con = match agent {
+        None => &dustloop_connection().await,
+        Some(agent) => agent
+    };
 
     // 24 hour character data auto update function
     framedata::get_char_data(CHARS, "all", &agent).await;
