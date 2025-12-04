@@ -167,7 +167,7 @@ pub async fn find_hitboxes(move_id: usize, db: Arc<Mutex<SqlConnection>>) -> Opt
 
 
 /// Searches database for list of moves filtered by user given criteria.
-pub async fn find_all(move_type: &String, filter: &str, value: &String, db: Arc<Mutex<SqlConnection>>) -> Result<Vec<FilteredList>, Error>  {
+pub async fn find_all(move_type: &String, filter: &str, value: &str, db: Arc<Mutex<SqlConnection>>) -> Result<Vec<FilteredList>, Error>  {
 
     let patterns = &[" ",".","-","\t"];
     let replace_with = &["","","",""];
