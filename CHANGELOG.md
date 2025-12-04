@@ -8,6 +8,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.2.0] - 2025-12-04
+
+### Changed
+- Change the order of which `/moves` aliases are displayed (smallest in length to largest).
+- Update dependencies.
+
+- **`Bedman`**:
+    - `!{H}` change alias from `6E!H` to `6EH!`.
+    - `!{H}` change alias from `E!H` to `EH!`.
+    - `![H]` change alias from `6E!!H` to `6EH!!`.
+    - `![H]` change alias from `E!!H` to `EH!!`.
+    - `236{H}` change alias from `236!H` to `236H!`.
+    - `236[H]` change alias from `236!!H` to `236H!!`.
+
+### Added
+- **`Bedman`**:
+    - `(236H) 214P` add new aliases `236H 214P`, `HP`.
+    - `(236S) 214P` add new aliases `236S 214P`, `SP`.
+    - `(236P) 214P` add new aliases `236P 214P`, `PP`.
+    - `13C !H` add new aliases `13H`.
+    - `13C !S` add new aliases `13S`.
+    - `13C !P` add new aliases `13P`.
+    - `13C (236H) 214P` add new aliases `13HP`.
+    - `13C (236S) 214P` add new aliases `13SP`.
+    - `13C (236P) 214P` add new aliases `13PP`.
+
+### Fixed
+- Fix #11 by using `order by length(input)`.
+- Fix dustloop requiring account login.
+
 ## [2.1.0] - 2025-08-21
 
 ### Added
