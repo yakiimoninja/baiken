@@ -1,10 +1,7 @@
 extern crate ureq;
-
-use std::fs;
 use aho_corasick::AhoCorasick;
 use serde::Deserialize;
 use rusqlite::{named_params, Connection as SqlConnection};
-use crate::CHARS;
 
 #[derive(Deserialize, Debug)]
 struct Response {
@@ -143,8 +140,8 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
     //     replace "&#039;&#039;&#039;SOME_WORD&#039;&#039;&#039;" becomes bold
     //     replace asuka icons "[[File:GGST Asuka R Accipiter Metron_Icon.png|50px]];" with ""
 
-    let file = "x/".to_owned() + CHARS[char_count];
-    fs::write(file , &char_page_response_json).unwrap();
+    // let file = "x/".to_owned() + CHARS[char_count];
+    // fs::write(file , &char_page_response_json).unwrap();
 
     let mut move_data_response: Response = serde_json::from_str(&char_page_response_json).unwrap();
     let char_move_data = &mut move_data_response.cargoquery;
