@@ -114,7 +114,7 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
 pub fn find_move_list(char_id: usize, db: Arc<Mutex<SqlConnection>>) -> Result<Vec<MoveList>, Error> {
 
     let db = db.lock().unwrap();
-    let mut moves_query = db.prepare("SELECT moves.id, input, name, alias, move_type FROM Moves LEFT JOIN Aliases ON aliases.move_id = moves.id where moves.character_id = :char_id ORDER BY Moves.id, Aliases.id ").unwrap();
+    let mut moves_query = db.prepare("SELECT moves.id, input, name, alias, move_type FROM Moves LEFT JOIN Aliases ON aliases.move_id = moves.id where moves.character_id = :char_id ORDER BY Moves.id, LENGTH(Aliases.alias)").unwrap();
 
     if let Ok(iter) = moves_query.query_map(named_params! {":char_id": char_id}, |row| Ok( MoveList {
         id: row.get(0).unwrap(),
