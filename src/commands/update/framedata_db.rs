@@ -72,6 +72,8 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
         "\\\\",
         "; ",
         ";",
+        r#"&lt\nbr&gt\n"#,
+        r#"&lt\nbr/&gt\n"#,
     ];
 
     let replace_with = &[
@@ -90,6 +92,8 @@ pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char
         "\\n-",
         "\\n",
         "\\n",
+        "",
+        "",
     ];
 
 
