@@ -170,6 +170,12 @@
     ]
   },
   {
+    "input": "btj.X",
+    "aliases": [
+      "Crossup"
+    ]
+  },
+  {
     "input": "bt.22",
     "aliases": [
       "Brynhildr Cancel",
