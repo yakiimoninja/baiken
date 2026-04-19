@@ -21,7 +21,7 @@ pub struct Data {
     db: Arc<Mutex<SqlConnection>>
 }
 
-pub const CHARS: [&str; 32] = [
+pub const CHARS: [&str; 33] = [
     "A.B.A",
     "Anji Mito",
     "Asuka R",
@@ -37,6 +37,7 @@ pub const CHARS: [&str; 32] = [
     "Happy Chaos",
     "I-No",
     "Jack-O",
+    "Jam Kuradoberi",
     "Johnny",
     "Ky Kiske",
     "Leo Whitefang",
@@ -155,7 +156,7 @@ async fn main() {
                             loop {
                                 // Runs update_all_char_data every 24h
                                 interval.tick().await;
-                                update::update_all_char_data(None).await;
+                                // update::update_all_char_data(None).await;
                             }
                         });
                         

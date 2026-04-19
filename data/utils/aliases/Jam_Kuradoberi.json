@@ -1,0 +1,215 @@
+[
+  {
+    "input": "c.S",
+    "aliases": [
+      "5S"
+    ]
+  },
+  {
+    "input": "2D",
+    "aliases": [
+      "Sweep"
+    ]
+  },
+  {
+    "input": "5[D]",
+    "aliases": [
+      "5D!"
+    ]
+  },
+  {
+    "input": "6D or 4D",
+    "aliases": [
+      "Throw",
+      "6D",
+      "4D"
+    ]
+  },
+  {
+    "input": "j.6D or j.4D",
+    "aliases": [
+      "Air Throw",
+      "J6D",
+      "J4D"
+    ]
+  },
+  {
+    "input": "236P",
+    "aliases": [
+      "Hochifu",
+      "Parry"
+    ]
+  },
+  {
+    "input": "236P~6P",
+    "aliases": [
+      "Goushao",
+      "Parry Followup",
+      "PF"
+    ]
+  },
+  {
+    "input": "214S",
+    "aliases": [
+      "Bakushuu",
+      "Dash"
+    ]
+  },
+  {
+    "input": "214S~H",
+    "aliases": [
+      "Hyappo Shinshou",
+      "Jam Blast",
+      "Blast",
+      "214SH",
+      "JB"
+    ]
+  },
+  {
+    "input": "214S~P/K/S/D",
+    "aliases": [
+      "214SP",
+      "214SK",
+      "214SS",
+      "214SD",
+      "Break",
+      "Dash Cancel",
+      "DC"
+    ]
+  },
+  {
+    "input": "214K",
+    "aliases": [
+      "Choujin",
+      "Flip"
+    ]
+  },
+  {
+    "input": "22K/S/H",
+    "aliases": [
+      "Asanagi no Kokyuu",
+      "Stock",
+      "22K",
+      "22S",
+      "22H"
+    ]
+  },
+  {
+    "input": "236K",
+    "aliases": [
+      "Ryuujin",
+      "Kick"
+    ]
+  },
+  {
+    "input": "en236K",
+    "aliases": [
+      "Enhanced Ryuujin",
+      "Blue Kick",
+      "ER",
+      "BK"
+    ]
+  },
+  {
+    "input": "j.236K",
+    "aliases": [
+      "Air Ryuujin",
+      "Air Kick",
+      "AR",
+      "AK"
+    ]
+  },
+  {
+    "input": "en.j.236K",
+    "aliases": [
+      "Enhanced Air Ryuujin",
+      "Blue Air Kick",
+      "EAR",
+      "BAK"
+    ]
+  },
+  {
+    "input": "236S",
+    "aliases": [
+      "Gekirin",
+      "Overhead"
+    ]
+  },
+  {
+    "input": "en236S",
+    "aliases": [
+      "Enhanced Gekirin",
+      "Blue Overhead",
+      "EG",
+      "BO"
+    ]
+  },
+  {
+    "input": "j.236S",
+    "aliases": [
+      "Air Gekirin",
+      "Air Overhead",
+      "AG",
+      "AO"
+    ]
+  },
+  {
+    "input": "en.j.236S",
+    "aliases": [
+      "Enhanced Air Gekirin",
+      "Blue Air Overhead",
+      "EAG",
+      "BAO"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "Ryuutsui",
+      "Low"
+    ]
+  },
+  {
+    "input": "en236H",
+    "aliases": [
+      "Enhanced Ryuutsui",
+      "Blue Low",
+      "ERT",
+      "BL"
+    ]
+  },
+  {
+    "input": "j.236H",
+    "aliases": [
+      "Air Ryuutsui",
+      "Air Low",
+      "ART",
+      "AL"
+    ]
+  },
+  {
+    "input": "en.j.236H",
+    "aliases": [
+      "Enhanced Air Ryuutsui",
+      "Blue Air Low",
+      "EART",
+      "BAL"
+    ]
+  },
+  {
+    "input": "632146P",
+    "aliases": [
+      "Asanagi no Kokyuu: Shinki Kaiten",
+      "Stock Super",
+      "SS"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "Choukyaku Kouryumon",
+      "Super",
+      "CK"
+    ]
+  }
+]
