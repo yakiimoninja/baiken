@@ -53,11 +53,12 @@
       "Change Test Case",
       "Change Deck",
       "CTC",
-      "CD"
+      "CD",
+      "22HX"
     ]
   },
   {
-    "input": "22P/K/S",
+    "input": "22S",
     "aliases": [
       "Recover Mana",
       "RM"
@@ -68,6 +69,14 @@
     "aliases": [
       "Chant",
       "Cast"
+    ]
+  },
+  {
+    "input": "22P/K",
+    "aliases": [
+      "Chant (Synthesize)",
+      "22P",
+      "22K"
     ]
   },
   {

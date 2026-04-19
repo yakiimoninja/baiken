@@ -48,15 +48,25 @@
     ]
   },
   {
-    "input": "236S/H",
+    "input": "236S",
     "aliases": [
       "Stop and Dash",
       "236S",
-      "236H",
       "Fireball",
       "Yoyo Throw",
       "SD",
       "YYT"
+    ]
+  },
+  {
+    "input": "236H",
+    "aliases": [
+      "H Stop and Dash",
+      "236H",
+      "H Fireball",
+      "Yoyo Throw",
+      "HSD",
+      "HYYT"
     ]
   },
   {

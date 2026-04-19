@@ -34,33 +34,20 @@
     ]
   },
   {
-    "input": "H",
+    "input": "5H",
     "aliases": [
       "At the Ready",
       "Aim",
       "Gun",
       "ATR",
-      "AR",
-      "5H"
+      "AR"
     ]
   },
   {
-    "input": "236S",
-    "aliases": [
-      "At the Ready",
-      "S Aim",
-      "S Gun",
-      "SATR",
-      "SAR"
-    ]
-  },
-  {
-    "input": "236S H",
+    "input": "5H H",
     "aliases": [
       "Fire",
-      "S Fire",
-      "SF",
-      "236SH"
+      "5HH"
     ]
   },
   {
@@ -72,11 +59,28 @@
     ]
   },
   {
-    "input": "214S H",
+    "input": "214S ]5H[",
     "aliases": [
       "Focus Fire",
       "FF",
-      "214SH"
+      "214SH",
+      "214S5H"
+    ]
+  },
+  {
+    "input": "214S ]8H[",
+    "aliases": [
+      "Focus Fire Up",
+      "FFU",
+      "214S8H"
+    ]
+  },
+  {
+    "input": "214S ]2H[",
+    "aliases": [
+      "Focus Fire Down",
+      "FFD",
+      "214S2H"
     ]
   },
   {
