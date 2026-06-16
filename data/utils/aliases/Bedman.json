@@ -146,9 +146,9 @@
     ]
   },
   {
-    "input": "(236H) 214P",
+    "input": "en!H",
     "aliases": [
-      "call 0x$0.20 236H",
+      "call 0x$1.00 236H",
       "Instant H",
       "IH",
       "C2H",
@@ -157,9 +157,9 @@
     ]
   },
   {
-    "input": "(236P) 214P",
+    "input": "en!P",
     "aliases": [
-      "call 0x$0.20 236P",
+      "call 0x$1.00 236P",
       "Instant P",
       "IP",
       "C2P",
@@ -168,9 +168,9 @@
     ]
   },
   {
-    "input": "(236S) 214P",
+    "input": "en!S",
     "aliases": [
-      "call 0x$0.20 236S",
+      "call 0x$1.00 236S",
       "Instant S",
       "IS",
       "C2S",
@@ -203,30 +203,6 @@
       "13C6ES",
       "13CES",
       "13S"
-    ]
-  },
-  {
-    "input": "13C (236H) 214P",
-    "aliases": [
-      "13C call 0x$0.20 H",
-      "13CC2H",
-      "13HP"
-    ]
-  },
-  {
-    "input": "13C (236P) 214P",
-    "aliases": [
-      "13C call 0x$0.20 P",
-      "13CC2P",
-      "13PP"
-    ]
-  },
-  {
-    "input": "13C (236S) 214P",
-    "aliases": [
-      "13C call 0x$0.20 S",
-      "13CC2S",
-      "13SP"
     ]
   },
   {
