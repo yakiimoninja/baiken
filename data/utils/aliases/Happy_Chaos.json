@@ -84,18 +84,17 @@
     ]
   },
   {
-    "input": "236S 2H",
+    "input": "5H 2H",
     "aliases": [
       "Cancel Aim",
-      "CAS",
-      "236S2H"
+      "CA"
     ]
   },
   {
-    "input": "214S 214S",
+    "input": "214S 4S",
     "aliases": [
-      "Cancel Aim Focus",
-      "CAF"
+      "Cancel Aim Special",
+      "CAS"
     ]
   },
   {
