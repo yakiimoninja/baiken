@@ -71,7 +71,7 @@
     ]
   },
   {
-    "input": "6P/6K/6S/6H/6D while holding Servant",
+    "input": "hs.6X",
     "aliases": [
       "Throw Servant",
       "Throw Minion",
@@ -80,7 +80,16 @@
     ]
   },
   {
-    "input": "D while holding Servant",
+    "input": "hs.6[X]",
+    "aliases": [
+      "Throw Servant Hold",
+      "Throw Minion Hold",
+      "TSH",
+      "TMH"
+    ]
+  },
+  {
+    "input": "hs.D",
     "aliases": [
       "Release Servant",
       "Release Minion",
