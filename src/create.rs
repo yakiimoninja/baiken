@@ -89,7 +89,7 @@ VALUES ((SELECT characters.id FROM characters WHERE characters.character = :char
                 
                 // If the requested argument (character_move) is an alias for any of the moves listed in aliases.json
                 // Change the given argument (character_move) to the actual move name instead of the alias
-                println!("{}, {}, {}", x+1, alias_data.input, alias.trim());
+                println!("{}, {}, {}", CHARS[x], alias_data.input, alias.trim());
                 db.execute("
 INSERT INTO aliases (move_id, alias)
 VALUES 
