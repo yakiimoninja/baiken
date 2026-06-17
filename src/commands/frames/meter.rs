@@ -284,16 +284,18 @@ pub async fn meter(
     meter_msg += &recovery_frames(&move_data).await;
     meter_msg += "`";
 
-    let mut embed_title = "__**".to_owned()
-        + &character.replace('_', " ") + " "
-        + &move_data.input + " / " + &move_data.name + "**__";
+   let mut embed_title = "__**".to_owned()
+        + &character.replace("_", " ") + " "
+        + &move_data.input;
 
-    if move_data.input == move_data.name {
-        embed_title = "__**".to_owned()
-            + &character.replace('_', " ") + " "
-            + &move_data.input + "**__";
+    // Check if the move has an actual name
+    if move_data.input != move_data.name && !move_data.name.trim().is_empty() {
+        embed_title += " / ";
+        embed_title += &move_data.name;
     }
 
+    embed_title += "**__";
+ 
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
 
     let embed = CreateEmbed::new()
