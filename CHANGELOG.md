@@ -8,6 +8,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.3.0] - 2026-06-17
+
+### Changed
+- Update dependencies.
+- Update data.
+
+### Added
+- Add new character **`Jam Kuradoberi`**.
+- **`Jam Kuradoberi`**:
+    - Add new nickname `JK`.
+    - `236P` add new aliases `Hochifu`,`Parry`.
+    - `236P~6P` add new aliases `Goushao`,`Parry Followup`,`PF`.
+    - `214S` add new aliases `Bakushuu`,`Dash`.
+    - `214S~H` add new aliases `Hyappo Shinshou`,`Jam Blast`,`Blast`,`214SH`,`JB`.
+    - `214S~P/K/S/D` add new aliases `214SP`,`214SK`,`214SS`,`214SD`,`Break`,`Dash Cancel`,`DC`.
+    - `214K` add new aliases `Choujin`,`Flip`.
+    - `22K/S/H` add new aliases `Asanagi no Kokyuu`,`Stock`,`22K`,`22S`,`22H`.
+    - `236K` add new aliases `Ryuujin`,`Kick`.
+    - `en236K` add new aliases `Enhanced Ryuujin`,`Blue Kick`,`ER`,`BK`.
+    - `j.236K` add new aliases `Air Ryuujin`,`Air Kick`,`AR`,`AK`.
+    - `en.j.236K` add new aliases `Enhanced Air Ryuujin`,`Blue Air Kick`,`EAR`,`BAK`.
+    - `236S` add new aliases `Gekirin`,`Overhead`.
+    - `en236S` add new aliases `Enhanced Gekirin`,`Blue Overhead`,`EG`,`BO`.
+    - `j.236S` add new aliases `Air Gekirin`,`Air Overhead`,`AG`,`AO`.
+    - `en.j.236S` add new aliases `Enhanced Air Gekirin`,`Blue Air Overhead`,`EAG`,`BAO`.
+    - `236H` add new aliases `Ryuutsui`,`Low`.
+    - `en236H` add new aliases `Enhanced Ryuutsui`,`Blue Low`,`ERT`,`BL`.
+    - `j.236H` add new aliases `Air Ryuutsui`,`Air Low`,`ART`,`AL`.
+    - `en.j.236H` add new aliases `Enhanced Air Ryuutsui`,`Blue Air Low`,`EART`,`BAL`.
+    - `632146P` add new aliases `Asanagi no Kokyuu: Shinki Kaiten`,`Stock Super`,`SS`.
+    - `632146H` add new aliases `Choukyaku Kouryumon`,`Super`,`CK`.
+
+- **`Ky Kiske`**:
+    - `214P` add aliases `Lighting Strike`, `LS`.
+
+- **`Leo Whitefang`**:
+    - `btj.X` add alias `Crossup`.
+
+- **`Nagoriyuki`**:
+    - `214S` add aliases `Yukimoyoi`,`Splash`.
+
+- **`Sol Badguy`**:
+    - `623H~6H` add aliases `Side Winder Ignited`,`SWI`, `623H6H`.
+
+### Fixed
+- Fix `&#32;` character.
+- Fix embed title when move has no name. #11
+- Fix aliases for **`Asuka`**, **`Bedman`**, **`Bridget`**, **`Happy Chaos`** and **`Jack-O`**
+
 ## [2.2.0] - 2025-12-04
 
 ### Changed
@@ -42,7 +91,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add new character **`Lucy`**.
-
 
 - **`Lucy`**:
     - Add new nickname `Lucyna Kushinada`.
