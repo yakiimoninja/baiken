@@ -39,19 +39,19 @@ pub async fn hitboxes(
 
     let mut vec_embeds = Vec::new();
 
-    let mut embed_title = "__**".to_owned() + &character.replace("_", " ") + " " + &move_data.input;
-    let mut embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#";
+    let mut embed_title = "__**".to_owned()
+        + &character.replace("_", " ") + " "
+        + &move_data.input;
 
     // check if the move has an actual name
     if move_data.input != move_data.name && !move_data.name.trim().is_empty() {
         embed_title += " / ";
         embed_title += &move_data.name;
-        embed_url += &move_data.name.replace(" ", "_");
-    } else {
-        embed_url += &move_data.input;
     }
 
     embed_title += "**__";
+
+    let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
 
     match hitbox_data.len() {
         // One hitbox image
@@ -94,7 +94,8 @@ pub async fn hitboxes(
     };
 
     if !hitbox_data[0].hitbox_caption.trim().is_empty() {
-        vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR).description(&hitbox_data[0].hitbox_caption));
+        vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR)
+            .description(&hitbox_data[0].hitbox_caption));
     }
 
     let mut reply = poise::CreateReply::default();
