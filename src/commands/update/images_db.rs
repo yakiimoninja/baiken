@@ -44,12 +44,11 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
         "&lt;small&gt;",
         "&lt;/span&gt;",
         "&amp;#32;",
+        "&#32;",
         "&#039;",
         "&quot;",
         "\\\\",
         "\n\n",
-    //    "; ",
-    //    ";",
     ];
 
     let replace_with = &[
@@ -63,12 +62,11 @@ pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection
         "",
         "",
         "",
+        "",
         "'",
         r#"\""#,
         "\\n",
         "\\n",
-    //    "\\n",
-    //    "\\n",
     ];
 
 
