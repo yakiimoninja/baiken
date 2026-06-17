@@ -43,7 +43,7 @@ pub async fn hitboxes(
         + &character.replace("_", " ") + " "
         + &move_data.input;
 
-    // check if the move has an actual name
+    // Check if the move has an actual name
     if move_data.input != move_data.name && !move_data.name.trim().is_empty() {
         embed_title += " / ";
         embed_title += &move_data.name;
