@@ -41,14 +41,15 @@ pub async fn hitboxes(
 
     let mut embed_title = "__**".to_owned()
         + &character.replace("_", " ") + " "
-        + &move_data.input + " / "
-        + &move_data.name + "**__";
+        + &move_data.input;
 
-    if move_data.input == move_data.name {
-        embed_title = "__**".to_owned()
-            + &character.replace('_', " ") + " "
-            + &move_data.input + "**__";
+    // check if the move has an actual name
+    if move_data.input != move_data.name && !move_data.name.trim().is_empty() {
+        embed_title += " / ";
+        embed_title += &move_data.name;
     }
+
+    embed_title += "**__";
 
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
 
@@ -92,20 +93,15 @@ pub async fn hitboxes(
         }
     };
 
-    if hitbox_data[0].hitbox_caption.is_empty() {
-        let mut reply = poise::CreateReply::default();
-        reply.embeds.extend(vec_embeds);
-
-        ctx.send(reply).await?;
-    }
-    else {
-        vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR).description(&hitbox_data[0].hitbox_caption));
-        let mut reply = poise::CreateReply::default();
-        reply.embeds.extend(vec_embeds);
-
-        ctx.send(reply).await?;
+    if !hitbox_data[0].hitbox_caption.trim().is_empty() {
+        vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR)
+            .description(&hitbox_data[0].hitbox_caption));
     }
 
+    let mut reply = poise::CreateReply::default();
+    reply.embeds.extend(vec_embeds);
+
+    ctx.send(reply).await?;
 
     Ok(())
 }
