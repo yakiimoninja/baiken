@@ -8,6 +8,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.4.0] - 2026-07-03
+
+### Added
+- Add new character **`Robo-Ky`**.
+- **`Robo-Ky`**:
+    - Add new nicknames `Robert Kyle`, `RK`.
+    - `214H Level 1` add new aliases `Luc-KY Launcher`, `214H`, `LL`.
+    - `214H Level 2` add new aliases `Luc-KY Launcher 2`, `214H2`, `LL2`.
+    - `214H Level 3` add new aliases `Luc-KY Launcher 3`, `214H3`, `LL3`.
+    - `214S Level 1` add new aliases `KY-zen Blitz`, `Segway`, `Scooter`, `214S`, `KB`.
+    - `214S Level 2` add new aliases `KY-zen Blitz 2`, `Segway 2`, `Scooter 2`, `214S2`, `KB2`.
+    - `214S Level 3` add new aliases `KY-zen Blitz 3`, `Segway 3`, `Scooter 3`, `214S3`, `KB3`.
+    - `22H` add new aliases `Gimmic-KY`, `Mat`, `GK`.
+    - `236H Level 1` add new aliases `Beautiful S-KY Today`, `Fly`, `236H`, `BST`.
+    - `236H Level 2` add new aliases `Beautiful S-KY Today 2`, `Fly 2`, `236H2`, `BST2`.
+    - `236H Level 3` add new aliases `Beautiful S-KY Today 3`, `Fly 3`, `236H3`, `BST3`.
+    - `236S Level 1` add new aliases `Jun-KY Bargain`, `Fireball`, `236S`, `JB`, `FB`.
+    - `236S Level 2` add new aliases `Jun-KY Bargain 2`, `Fireball 2`, `236S2`, `JB2`, `FB2`.
+    - `236S Level 3` add new aliases `Jun-KY Bargain 3`, `Fireball 3`, `236S3`, `JB3`, `FB3`.
+    - `63214K` add new aliases `Spar-KY Surprise`, `Command Grab`, `CG`.
+    - `j.236H Level 1` add new aliases `Air Beautiful S-KY Today`, `Air Fly`, `j236H`, `AF`, `ABST`.
+    - `j.236H Level 2` add new aliases `Air Beautiful S-KY Today 2`, `Air Fly 2`, `j236H2`, `AF2`, `ABST2`.
+    - `j.236H Level 3` add new aliases `Air Beautiful S-KY Today 3`, `Air Fly 3`, `j236H3`, `AF3`, `ABST3`.
+    - `j.236S Level 1` add new aliases `Air Jun-KY Bargain`, `Air Fireball`, `j.236S`, `AJB`, `AFB`.
+    - `j.236S Level 2` add new aliases `Air Jun-KY Bargain 2`, `Air Fireball 2`, `j.236S2`, `AJB2`, `AFB2`.
+    - `j.236S Level 3` add new aliases `Air Jun-KY Bargain 3`, `Air Fireball 3`, `j.236S3`, `AJB3`, `AFB3`.
+    - `632146H` add new aliases `What's Useless will Always Be So`, `Super`.
+    - `632146S` add new aliases `Ris-KY Lovers`, `Install`.
+    - `632146S!` add new aliases `Explosion`.
+
 ## [2.3.0] - 2026-06-17
 
 ### Changed
