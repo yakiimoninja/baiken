@@ -32,5 +32,212 @@
       "J6D",
       "J4D"
     ]
+  },
+  {
+    "input": "214H Level 1",
+    "aliases": [
+      "Luc-KY Launcher",
+      "214H",
+      "LL"
+    ]
+  },
+  {
+    "input": "214H Level 2",
+    "aliases": [
+      "Luc-KY Launcher 2",
+      "214H2",
+      "LL2"
+    ]
+  },
+  {
+    "input": "214H Level 3",
+    "aliases": [
+      "Luc-KY Launcher 3",
+      "214H3",
+      "LL3"
+    ]
+  },
+  {
+    "input": "214S Level 1",
+    "aliases": [
+      "KY-zen Blitz",
+      "Segway",
+      "Scooter",
+      "214S",
+      "KB"
+    ]
+  },
+  {
+    "input": "214S Level 2",
+    "aliases": [
+      "KY-zen Blitz 2",
+      "Segway 2",
+      "Scooter 2",
+      "214S2",
+      "KB2"
+    ]
+  },
+  {
+    "input": "214S Level 3",
+    "aliases": [
+      "KY-zen Blitz 3",
+      "Segway 3",
+      "Scooter 3",
+      "214S3",
+      "KB3"
+    ]
+  },
+  {
+    "input": "22H",
+    "aliases": [
+      "Gimmic-KY",
+      "Mat",
+      "GK"
+    ]
+  },
+  {
+    "input": "236H Level 1",
+    "aliases": [
+      "Beautiful S-KY Today",
+      "Fly",
+      "236H",
+      "BST"
+    ]
+  },
+  {
+    "input": "236H Level 2",
+    "aliases": [
+      "Beautiful S-KY Today 2",
+      "Fly 2",
+      "236H2",
+      "BST2"
+    ]
+  },
+  {
+    "input": "236H Level 3",
+    "aliases": [
+      "Beautiful S-KY Today 3",
+      "Fly 3",
+      "236H3",
+      "BST3"
+    ]
+  },
+  {
+    "input": "236S Level 1",
+    "aliases": [
+      "Jun-KY Bargain",
+      "Fireball",
+      "236S",
+      "JB",
+      "FB"
+    ]
+  },
+  {
+    "input": "236S Level 2",
+    "aliases": [
+      "Jun-KY Bargain 2",
+      "Fireball 2",
+      "236S2",
+      "JB2",
+      "FB2"
+    ]
+  },
+  {
+    "input": "236S Level 3",
+    "aliases": [
+      "Jun-KY Bargain 3",
+      "Fireball 3",
+      "236S3",
+      "JB3",
+      "FB3"
+    ]
+  },
+  {
+    "input": "63214K",
+    "aliases": [
+      "Spar-KY Surprise",
+      "Command Grab",
+      "CG"
+    ]
+  },
+  {
+    "input": "j.236H Level 1",
+    "aliases": [
+      "Air Beautiful S-KY Today",
+      "Air Fly",
+      "j236H",
+      "AF",
+      "ABST"
+    ]
+  },
+  {
+    "input": "j.236H Level 2",
+    "aliases": [
+      "Air Beautiful S-KY Today 2",
+      "Air Fly 2",
+      "j236H2",
+      "AF2",
+      "ABST2"
+    ]
+  },
+  {
+    "input": "j.236H Level 3",
+    "aliases": [
+      "Air Beautiful S-KY Today 3",
+      "Air Fly 3",
+      "j236H3",
+      "AF3",
+      "ABST3"
+    ]
+  },
+  {
+    "input": "j.236S Level 1",
+    "aliases": [
+      "Air Jun-KY Bargain",
+      "Air Fireball",
+      "j.236S",
+      "AJB",
+      "AFB"
+    ]
+  },
+  {
+    "input": "j.236S Level 2",
+    "aliases": [
+      "Air Jun-KY Bargain 2",
+      "Air Fireball 2",
+      "j.236S2",
+      "AJB2",
+      "AFB2"
+    ]
+  },
+  {
+    "input": "j.236S Level 3",
+    "aliases": [
+      "Air Jun-KY Bargain 3",
+      "Air Fireball 3",
+      "j.236S3",
+      "AJB3",
+      "AFB3"
+    ]
+  },
+  {
+    "input": "632146H",
+    "aliases": [
+      "What's Useless will Always Be So",
+      "Super"
+    ]
+  },
+  {
+    "input": "632146S",
+    "aliases": [
+      "Ris-KY Lovers",
+      "Install"
+    ]
+  },
+  {
+    "input": "632146S!",
+    "aliases": [
+      "Explosion"
+    ]
   }
 ]
