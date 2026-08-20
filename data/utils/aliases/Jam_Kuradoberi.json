@@ -62,7 +62,8 @@
       "Jam Blast",
       "Blast",
       "214SH",
-      "JB"
+      "JB",
+      "Puffball"
     ]
   },
   {
@@ -81,7 +82,8 @@
     "input": "214K",
     "aliases": [
       "Choujin",
-      "Flip"
+      "Flip",
+      "DemonFlip"
     ]
   },
   {
@@ -91,7 +93,11 @@
       "Stock",
       "22K",
       "22S",
-      "22H"
+      "22H",
+      "Card",
+      "KCard",
+      "SCard",
+      "HCard"
     ]
   },
   {
@@ -132,7 +138,8 @@
     "input": "236S",
     "aliases": [
       "Gekirin",
-      "Overhead"
+      "Overhead",
+      "High"
     ]
   },
   {
@@ -140,6 +147,7 @@
     "aliases": [
       "Enhanced Gekirin",
       "Blue Overhead",
+      "BlueHigh",
       "EG",
       "BO"
     ]
@@ -149,6 +157,7 @@
     "aliases": [
       "Air Gekirin",
       "Air Overhead",
+      "AirHigh",
       "AG",
       "AO"
     ]
@@ -158,6 +167,7 @@
     "aliases": [
       "Enhanced Air Gekirin",
       "Blue Air Overhead",
+      "BlueAirHigh",
       "EAG",
       "BAO"
     ]
@@ -201,6 +211,7 @@
     "aliases": [
       "Asanagi no Kokyuu: Shinki Kaiten",
       "Stock Super",
+      "Card Super",
       "SS"
     ]
   },

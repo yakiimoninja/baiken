@@ -38,6 +38,7 @@
     "aliases": [
       "error 6E H",
       "6EH",
+      "Herror",
       "EH"
     ]
   },
@@ -47,6 +48,7 @@
       "Partial error 6E {H}",
       "6EH!",
       "P6EH",
+      "{H}error",
       "EH!",
       "PEH"
     ]
@@ -57,6 +59,7 @@
       "Charged error 6E [H]",
       "6EH!!",
       "C6EH",
+      "[H]error",
       "EH!!",
       "CEH"
     ]
@@ -66,7 +69,8 @@
     "aliases": [
       "error 6E P",
       "6EP",
-      "EP"
+      "EP",
+      "Perror"
     ]
   },
   {
@@ -74,7 +78,8 @@
     "aliases": [
       "error 6E S",
       "6ES",
-      "ES"
+      "ES",
+      "Serror"
     ]
   },
   {

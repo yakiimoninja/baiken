@@ -115,7 +115,7 @@
   {
     "input": "DI j.236H",
     "aliases": [
-      " Dragon Install Air H Stun Edge",
+      "Dragon Install Air H Stun Edge",
       "DI Air H Stun Edge",
       "DIAHSE",
       "DIJHSE",
@@ -129,8 +129,9 @@
     "input": "623S",
     "aliases": [
       "Vapor Thrust",
-      "DP",
-      "VT"
+      "VT",
+      "SVT",
+      "DP"
     ]
   },
   {
@@ -213,6 +214,7 @@
     "input": "236K",
     "aliases": [
       "Stun Dipper",
+      "Scum Dipper",
       "SD"
     ]
   },

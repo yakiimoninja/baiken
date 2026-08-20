@@ -40,6 +40,7 @@
       "S Tandem Top",
       "Disk",
       "S Disk",
+      "S Disc",
       "TT"
     ]
   },
@@ -49,6 +50,7 @@
       "H Tandem Top",
       "Heavy Disk",
       "H Disk",
+      "H Disc",
       "HTT"
     ]
   },
@@ -73,8 +75,8 @@
       "Iron Savior",
       "Cart",
       "IS",
-      "Hair Car",
-      "Car"
+      "Car",
+      "HairCar"
     ]
   },
   {

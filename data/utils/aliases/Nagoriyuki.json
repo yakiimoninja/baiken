@@ -336,6 +336,7 @@
       "Bloodsucking Universe",
       "Bite",
       "Command Grab",
+      "BSU",
       "BU",
       "CG"
     ]
@@ -344,7 +345,8 @@
     "input": "214S",
     "aliases": [
       "Yukimoyoi",
-      "Splash"
+      "Splash",
+      "CreditCard"
     ]
   },
   {

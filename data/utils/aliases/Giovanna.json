@@ -39,6 +39,7 @@
       "Trovao",
       "Spiral Arrow",
       "Arrow",
+      "DrillKick",
       "SA"
     ]
   },
@@ -46,7 +47,7 @@
     "input": "214K",
     "aliases": [
       "Sepultura",
-      "Wolf Kick",
+      "WolfKick",
       "WK"
     ]
   },
@@ -67,7 +68,8 @@
       "Sol Poente",
       "Overhead",
       "Splits",
-      "SP"
+      "SP",
+      "FlipKick"
     ]
   },
   {
@@ -83,6 +85,7 @@
       "Air Sol Poente",
       "Air Overhead",
       "Air Splits",
+      "AirFlipKick",
       "JSP",
       "ASP"
     ]

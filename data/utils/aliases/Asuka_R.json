@@ -88,7 +88,9 @@
   {
     "input": "Aquila Metron",
     "aliases": [
-      "Aquila Metron"
+      "Aquila Metron",
+      "Ice Spike",
+      "Ice Pillar"
     ]
   },
   {
@@ -124,19 +126,23 @@
   {
     "input": "Delayed Howling Metron",
     "aliases": [
-      "Delayed Howling Metron"
+      "Delayed Howling Metron",
+      "Yellow Cube"
     ]
   },
   {
     "input": "Delayed Tardus Metron",
     "aliases": [
-      "Delayed Tardus Metron"
+      "Delayed Tardus Metron",
+      "Big Cube"
     ]
   },
   {
     "input": "Go to Marker",
     "aliases": [
-      "Go to Marker"
+      "Go to Marker",
+      "Teleport",
+      "tp"
     ]
   },
   {
@@ -154,13 +160,15 @@
   {
     "input": "Howling Metron",
     "aliases": [
-      "Howling Metron"
+      "Howling Metron",
+      "Blue Cube"
     ]
   },
   {
     "input": "Howling Metron MS Processing",
     "aliases": [
-      "Howling Metron MS Processing"
+      "Howling Metron MS Processing",
+      "Green Cube"
     ]
   },
   {
@@ -178,7 +186,8 @@
   {
     "input": "Metron Screamer 808",
     "aliases": [
-      "Metron Screamer 808"
+      "Metron Screamer 808",
+      "Fireball"
     ]
   },
   {
