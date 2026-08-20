@@ -67,19 +67,20 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     // Replace '.' with regex (may contain any number of '.')
     // Replace '-' with regex (may contain any number of '-')
     // Replace any horizontal whitespace char with regex (may contain any number of)
-    let patterns = &[" ",".","-","\t"];
-    let replace_with = &["[\\s]*","[\\.|\\s]*","[-|\\s]*","[\\s]*"];
+    let patterns = &[" ",".","-","\t", "[", "]","{", "}"];
+    let replace_with = &["[\\s]*","[\\.|\\s]*","[-|\\s]*","[\\s]*", "\\[", "\\]","\\{", "\\}"];
 
     let mut move_regex = Vec::new();
 
     let ac = AhoCorasick::new(patterns).unwrap();
     ac.try_stream_replace_all(char_move.trim().to_lowercase().as_bytes(), &mut  move_regex, replace_with).unwrap();
     let move_regex = String::from_utf8(move_regex).unwrap();
+    let move_input_regex = format!("^{}$", move_regex);
 
     let db = db.lock().unwrap();
     add_regexp_function(&db).unwrap();
 
-    let mut input_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(input), '.', '') REGEXP :move_regex ORDER BY LENGTH(input)").unwrap();
+    let mut input_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(input), '.', '') REGEXP :move_input_regex ORDER BY LENGTH(input)").unwrap();
     let mut alias_query = db.prepare("SELECT move_id FROM aliases WHERE move_id IN (SELECT id FROM moves WHERE character_id = :char_id) AND REPLACE(LOWER(alias), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
     let mut name_query = db.prepare("SELECT id FROM moves WHERE character_id = :char_id AND REPLACE(LOWER(name), '.', '') REGEXP :move_regex ORDER BY id").unwrap();
 
@@ -87,7 +88,7 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     // https://media.datacamp.com/legacy/v1714587799/Marketing/Blog/Joining_Data_in_SQL_2.pdf
     // Checking if user input is move input
     if let Ok(move_id) = input_query.query_row(
-        named_params! {":char_id": char_id, ":move_regex": move_regex},
+        named_params! {":char_id": char_id, ":move_input_regex": move_input_regex},
         |row| row.get(0)
     ) { return Ok((send_move(move_id, &db), move_id)) }
 
