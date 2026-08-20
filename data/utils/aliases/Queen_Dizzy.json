@@ -59,6 +59,8 @@
     "aliases": [
       "We talked a lot together",
       "Fish",
+      "P Fish",
+      "K Fish",
       "WTALT",
       "214P",
       "214K"
@@ -89,6 +91,8 @@
       "I used this to catch fish",
       "Spike",
       "Pillar",
+      "Ice Spike",
+      "Ice Pillar",
       "IUTTCF",
       "CF",
       "SP",
@@ -101,6 +105,7 @@
     "input": "236S~6S/236H~6H",
     "aliases": [
       "Ice Field",
+      "Ice Floor",
       "Floor is lava",
       "Floor is ice",
       "IF",

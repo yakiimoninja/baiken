@@ -49,21 +49,24 @@
     "input": "214H",
     "aliases": [
       "Bonding and Dissolving",
-      "BND"
+      "BND",
+      "Keygrab"
     ]
   },
   {
     "input": "214K",
     "aliases": [
       "Haul and Heed",
-      "HNH"
+      "HNH",
+      "Slide"
     ]
   },
   {
     "input": "214S",
     "aliases": [
       "Frenzy and Astonishment",
-      "FNA"
+      "FNA",
+      "Parry"
     ]
   },
   {
@@ -77,7 +80,8 @@
     "input": "236S",
     "aliases": [
       "Menace and Groan",
-      "MNG"
+      "MNG",
+      "Rekka"
     ]
   },
   {
@@ -86,14 +90,16 @@
       "Restriction and Constraint",
       "236S 6S",
       "236S6S",
-      "RNC"
+      "RNC",
+      "Rekka2"
     ]
   },
   {
     "input": "623H",
     "aliases": [
       "Judgment and Sentiment",
-      "JNS"
+      "JNS",
+      "Danzai"
     ]
   },
   {
@@ -101,7 +107,8 @@
     "aliases": [
       "Changing and Swaying",
       "CNS",
-      "624P"
+      "624P",
+      "Install"
     ]
   },
   {
@@ -109,7 +116,8 @@
     "aliases": [
       "JR Bonding and Dissolving",
       "JR214H",
-      "JRBND"
+      "JRBND",
+      "JR Keygrab"
     ]
   },
   {
@@ -117,7 +125,8 @@
     "aliases": [
       "JR Haul and Heed",
       "JR214K",
-      "JRHNH"
+      "JRHNH",
+      "JR Slide"
     ]
   },
   {
@@ -133,7 +142,8 @@
     "aliases": [
       "JR Menace and Groan",
       "JR236S",
-      "JRMNG"
+      "JRMNG",
+      "JR Rekka"
     ]
   },
   {
@@ -142,7 +152,8 @@
       "JR Restriction and Constraint",
       "JR236S6S",
       "JR236S 6S",
-      "JRRNC"
+      "JRRNC",
+      "JR Rekka2"
     ]
   },
   {
@@ -150,7 +161,8 @@
     "aliases": [
       "JR Changing and Swaying",
       "JR63214P",
-      "JRCNS"
+      "JRCNS",
+      "Uninstall"
     ]
   },
   {
