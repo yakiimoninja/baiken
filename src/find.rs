@@ -67,8 +67,8 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     // Replace '.' with regex (may contain any number of '.')
     // Replace '-' with regex (may contain any number of '-')
     // Replace any horizontal whitespace char with regex (may contain any number of)
-    let patterns = &[" ",".","-","\t", "[", "]"];
-    let replace_with = &["[\\s]*","[\\.|\\s]*","[-|\\s]*","[\\s]*", "\\[", "\\]"];
+    let patterns = &[" ",".","-","\t", "[", "]","{", "}"];
+    let replace_with = &["[\\s]*","[\\.|\\s]*","[-|\\s]*","[\\s]*", "\\[", "\\]","\\{", "\\}"];
 
     let mut move_regex = Vec::new();
 
