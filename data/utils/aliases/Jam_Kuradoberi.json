@@ -83,7 +83,7 @@
     "aliases": [
       "Choujin",
       "Flip",
-      "DemonFlip"
+      "Demon Flip"
     ]
   },
   {
@@ -91,13 +91,14 @@
     "aliases": [
       "Asanagi no Kokyuu",
       "Stock",
+      "Card",
       "22K",
       "22S",
       "22H",
       "Card",
-      "KCard",
-      "SCard",
-      "HCard"
+      "K Card",
+      "S Card",
+      "H Card"
     ]
   },
   {
@@ -147,7 +148,7 @@
     "aliases": [
       "Enhanced Gekirin",
       "Blue Overhead",
-      "BlueHigh",
+      "Blue High",
       "EG",
       "BO"
     ]
@@ -157,7 +158,7 @@
     "aliases": [
       "Air Gekirin",
       "Air Overhead",
-      "AirHigh",
+      "Air High",
       "AG",
       "AO"
     ]
@@ -167,7 +168,7 @@
     "aliases": [
       "Enhanced Air Gekirin",
       "Blue Air Overhead",
-      "BlueAirHigh",
+      "Blue Air High",
       "EAG",
       "BAO"
     ]

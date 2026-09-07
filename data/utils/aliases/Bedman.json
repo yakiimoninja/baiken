@@ -37,6 +37,7 @@
     "input": "!H",
     "aliases": [
       "error 6E H",
+      "H error",
       "6EH",
       "Herror",
       "EH"
@@ -46,6 +47,7 @@
     "input": "!{H}",
     "aliases": [
       "Partial error 6E {H}",
+      "{H} error",
       "6EH!",
       "P6EH",
       "{H}error",
@@ -57,6 +59,7 @@
     "input": "![H]",
     "aliases": [
       "Charged error 6E [H]",
+      "[H] error",
       "6EH!!",
       "C6EH",
       "[H]error",
@@ -68,6 +71,7 @@
     "input": "!P",
     "aliases": [
       "error 6E P",
+      "P error",
       "6EP",
       "EP",
       "Perror"
@@ -77,6 +81,7 @@
     "input": "!S",
     "aliases": [
       "error 6E S",
+      "S error",
       "6ES",
       "ES",
       "Serror"
