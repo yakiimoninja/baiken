@@ -1,10 +1,10 @@
 use std::string::String;
-use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
+use poise::serenity_prelude::CreateEmbed;
 use crate::{check, find, Context, Error, EMBED_COLOR};
 
 /// Display a move's frame data in a simplified view, with no image.
 #[poise::command(prefix_command, slash_command)]
-pub async fn short(
+pub async fn tiny(
     ctx: Context<'_>,
     #[min_length = 2]
     #[description = "Character name or nickname."] character: String,

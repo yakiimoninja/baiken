@@ -1,11 +1,11 @@
 mod meter;
 mod simple;
-mod short;
+mod tiny;
 mod advanced;
 mod utils;
 use meter::meter;
 use simple::simple;
-use short::short;
+use tiny::tiny;
 use advanced::advanced;
 use std::string::String;
 use crate::{Context, Error};
@@ -14,7 +14,7 @@ use crate::{Context, Error};
 #[poise::command(
     prefix_command,
     slash_command,
-    subcommands("simple", "short", "advanced", "meter"),
+    subcommands("simple", "tiny", "advanced", "meter"),
     subcommand_required
 )]
 pub async fn frames(_: Context<'_>) -> Result<(), Error> {
