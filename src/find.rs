@@ -65,9 +65,14 @@ pub async fn find_character(character: &str, db: Arc<Mutex<SqlConnection>>) -> R
 pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnection>>) -> Result<(MoveInfo, usize), Error> {
 
     // Fix 'low' matching 'followup' as a substring
+    // and 'focus' matching `focus aim`
+    // TODO fix this with regex
     let mut sub_move = char_move;
     if char_move.to_lowercase() == "low" {
         sub_move = "low$";
+    }
+    else if char_move.to_lowercase() == "focus" {
+        sub_move = "focus$";
     }
 
     // Replace '.' with regex (may contain any number of '.')
