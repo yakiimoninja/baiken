@@ -64,6 +64,12 @@ pub async fn find_character(character: &str, db: Arc<Mutex<SqlConnection>>) -> R
 /// Searches database for a character move from user input.
 pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnection>>) -> Result<(MoveInfo, usize), Error> {
 
+    // Fix 'low' matching 'followup' as a substring
+    let mut sub_move = char_move;
+    if char_move.to_lowercase() == "low" {
+        sub_move = "low$";
+    }
+
     // Replace '.' with regex (may contain any number of '.')
     // Replace '-' with regex (may contain any number of '-')
     // Replace any horizontal whitespace char with regex (may contain any number of)
@@ -73,7 +79,7 @@ pub async fn find_move(char_id: usize, char_move: &str, db: Arc<Mutex<SqlConnect
     let mut move_regex = Vec::new();
 
     let ac = AhoCorasick::new(patterns).unwrap();
-    ac.try_stream_replace_all(char_move.trim().to_lowercase().as_bytes(), &mut  move_regex, replace_with).unwrap();
+    ac.try_stream_replace_all(sub_move.trim().to_lowercase().as_bytes(), &mut  move_regex, replace_with).unwrap();
     let move_regex = String::from_utf8(move_regex).unwrap();
     let move_input_regex = format!("^{}$", move_regex);
 
