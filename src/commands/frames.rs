@@ -14,7 +14,7 @@ use crate::{Context, Error};
 #[poise::command(
     prefix_command,
     slash_command,
-    subcommands("simple", "tiny", "advanced", "meter"),
+    subcommands("advanced", "meter", "simple", "tiny"),
     subcommand_required
 )]
 pub async fn frames(_: Context<'_>) -> Result<(), Error> {
