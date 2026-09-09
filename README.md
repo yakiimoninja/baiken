@@ -46,6 +46,15 @@
         </p>
 </details>
 
+## **Command**: `/frames tiny`.
+**Display a move's frame data in a simple text only view.**
+<details open>
+    <summary>Show example.</summary>
+        <p align="center">
+            <img src="data/images/commands/frames_tiny.png" />
+        </p>
+</details>
+
 ## **Command**: `/frames meter`.
 **Display visually, a move's startup, active and recovery frames.**
 <details open>
@@ -160,37 +169,37 @@ _**This command works only for admins.**_
 
 - **Move searching.**
     - Moves can be found either using a part of their name, input, or any of their existing aliases.
-        - Example: `/frames Anji Needles` = `/frames Anji 236HP` = `/frames Anji ichi`.
+        - Example: `/frames simple Anji Needles` = `/frames simple Anji 236HP` = `/frames simple Anji ichi`.
     - Charged moves can be found with or without the use of `[]`.
-        - Example `/frames may 46S` = `/frames may [4]6S`.
+        - Example `/frames simple may 46S` = `/frames simple may [4]6S`.
     - All dots in move names are automatically ignored.
-        - Example: `/frames leo bts` = `/frames leo bt.S`.
+        - Example: `/frames simple leo bts` = `/frames simple leo bt.S`.
     - For a fully charged dust attack, the alias `5D!` can be used instead.
-        - Example: `/frames chipp 5D!`.
+        - Example: `/frames simple chipp 5D!`.
 
 - **Character specifics.**
     - **For normals that have levels. (e.g. Nagoriyuki).**
         - Add the level number next to the normal.
-        - For Level 1 `fS`: `/frames nago fs`. 
-        - For Level 2 `fS`: `/frames nago fs2`.
-        - For Level 3 `fS`: `/frames nago fs3`.
+        - For Level 1 `fS`: `/frames simple nago fs`.
+        - For Level 2 `fS`: `/frames simple nago fs2`.
+        - For Level 3 `fS`: `/frames simple nago fs3`.
         - For Level 1 normals nothing needs to be added since it's the default state.
 
     - **For specials that have levels. (e.g. Goldlewis).**
         - Add the level number next to the special.
-        - For Level 1 `Thunderbird`: `/frames gold Drone`.
-        - For Level 2 `Thunderbird`: `/frames gold Drone 2`.
-        - For Level 3 `Thunderbird`: `/frames gold Drone 3`.
+        - For Level 1 `Thunderbird`: `/frames simple gold Drone`.
+        - For Level 2 `Thunderbird`: `/frames simple gold Drone 2`.
+        - For Level 3 `Thunderbird`: `/frames simple gold Drone 3`.
         - The above is not always the case depending on the special move and alias used.
-        - For Level 1 `Thunderbird`: `/frames gold D1`.
-        - For Level 2 `Thunderbird`: `/frames gold D2`.
-        - For Level 3 `Thunderbird`: `/frames gold D3`.
+        - For Level 1 `Thunderbird`: `/frames simple gold D1`.
+        - For Level 2 `Thunderbird`: `/frames simple gold D2`.
+        - For Level 3 `Thunderbird`: `/frames simple gold D3`.
         - See `/moves gold` for more info on his aliases.
 
     - **For Testament's different Grave Reaper versions.**
-        - Regular version: `/frames testament 236S`.
-        - Partially charged version: `/frames testament 236S!`.
-        - Fully charged version: `/frames testament 236S!!`.
+        - Regular version: `/frames simple testament 236S`.
+        - Partially charged version: `/frames simple testament 236S!`.
+        - Fully charged version: `/frames simple testament 236S!!`.
 #
 # Support.
 Support the project by donating here.
