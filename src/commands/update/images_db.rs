@@ -1,5 +1,6 @@
 extern crate ureq;
 use aho_corasick::AhoCorasick;
+use base16ct::HexDisplay;
 use rusqlite::{named_params, Connection as SqlConnection};
 use md5::{Digest, Md5};
 use serde::Deserialize;
@@ -180,7 +181,7 @@ async fn make_link(image_name: String) -> String {
     let mut hasher = Md5::new();
     hasher.update(image_bytes);
     // Converting hex to string
-    let result = format!("{:x}", hasher.finalize());
+    let result = format!("{:x}", HexDisplay(&hasher.finalize()));
     // Getting the first two hex digits from the md5sum
     // let char1 = result.chars().nth(0).unwrap();
     let char1 = result.chars().next().unwrap();
