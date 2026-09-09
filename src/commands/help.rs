@@ -8,6 +8,8 @@ pub enum HelpChoice{
     FramesSimple,
     #[name = "frames advanced"]
     FramesAdvanced,
+    #[name = "frames tiny"]
+    FramesTiny,
     #[name = "frames meter"]
     FramesMeter,
     #[name = "hitboxes"]
@@ -41,6 +43,9 @@ pub async fn help(ctx: Context<'_>,
             },
         HelpChoice::FramesAdvanced => {
             help_frames_advanced().await
+        },
+        HelpChoice::FramesTiny => {
+            help_frames_tiny().await
         },
         HelpChoice::FramesMeter => {
             help_frames_meter().await
@@ -118,7 +123,7 @@ __**character**__: Character name or nickname.
 __**move**__: Character move name, input or alias.
 
 Display a move's frame data in an advanced view."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_advanced.png");
 
     (msg, img)
@@ -132,7 +137,7 @@ __**character**__: Character name or nickname.
 __**move**__: Character move name, input or alias.
 
 Display visually, a move's startup, active and recovery frames."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_meter.png");
 
     (msg, img)
@@ -146,8 +151,22 @@ __**character**__: Character name or nickname.
 __**move**__: Character move name, input or alias.
 
 Display a move's frame data in a simplified view."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_simple.png");
+
+    (msg, img)
+}
+
+async fn help_frames_tiny() -> (String, String){
+    let msg = String::from(r#"
+## __**Command**__: `/frames tiny`
+
+__**character**__: Character name or nickname.
+__**move**__: Character move name, input or alias.
+
+Display a move's frame data in a simple text only view."#);
+
+    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/frames_tiny.png");
 
     (msg, img)
 }
@@ -160,7 +179,7 @@ __**character**__: Character name or nickname.
 __**move**__: Character move name, input or alias.
 
 Display a move's hitbox images."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/hitboxes.png");
 
     (msg, img)
@@ -202,7 +221,7 @@ __**character**__: Character name or nickname.
 __**type**__: `all`, `normals`, `specials` or `supers`.
 
 Display a character's moves, inputs and move aliases."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/moves.png");
 
     (msg, img)
@@ -213,7 +232,7 @@ async fn help_nicknames() -> (String, String) {
 ## __Command__: `/nicknames`
 
 Display all character nicknames."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/nicknames.png");
 
     (msg, img)
@@ -274,7 +293,7 @@ async fn help_register() -> (String, String) {
 
 Register or remove all slash commands in the current or every server the bot is present.
 _**This command only works for owners.**_"#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/register.png");
 
     (msg, img)
@@ -288,7 +307,7 @@ __**subject**__: `feature`, `bug` or `other`.
 __**text**__: Text to be sent.
 
 Send a report or feedback."#);
-    
+
     let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/feedback.png");
 
     (msg, img)
