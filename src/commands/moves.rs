@@ -1,7 +1,7 @@
 mod utils;
 use utils::{get_normal_moves, get_special_moves, get_super_moves};
 use crate::{check, find::{self, find_move_list}, Context, Error, EMBED_COLOR};
-use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
+use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum TypeChoice{
@@ -46,7 +46,7 @@ pub async fn moves(
         }
     };
 
-    let mut vec_embeds = Vec::new();
+    let mut builder = CreateReply::new();
 
     let embed_title = "__**".to_owned() + &character.replace('_', " ") + " Moves / Aliases**__";
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
@@ -74,9 +74,9 @@ pub async fn moves(
                 .description(super_moves)
                 .footer(embed_footer);
             
-            vec_embeds.push(normals_embed);
-            vec_embeds.push(specials_embed);
-            vec_embeds.push(supers_embed);
+            builder = builder.embed(normals_embed);
+            builder = builder.embed(specials_embed);
+            builder = builder.embed(supers_embed);
         },
         TypeChoice::Normals => {
             let normal_moves = get_normal_moves(&move_list).await;
@@ -88,7 +88,7 @@ pub async fn moves(
                 .description(normal_moves)
                 .footer(embed_footer);
             
-            vec_embeds.push(normals_embed);
+            builder = builder.embed(normals_embed);
         },
         TypeChoice::Specials => {
             let special_moves = get_special_moves(&move_list).await;
@@ -100,7 +100,7 @@ pub async fn moves(
                 .description(special_moves)
                 .footer(embed_footer);
             
-            vec_embeds.push(specials_embed);
+            builder = builder.embed(specials_embed);
         },
         TypeChoice::Supers => {
             let super_moves = get_super_moves(&move_list).await;
@@ -112,14 +112,11 @@ pub async fn moves(
                 .description(super_moves)
                 .footer(embed_footer);
             
-            vec_embeds.push(supers_embed);
+            builder = builder.embed(supers_embed);
         },
     };
 
-    let mut reply = poise::CreateReply::default();
-    reply.embeds.extend(vec_embeds);
-
-    ctx.send(reply).await?;
+    ctx.send(builder).await?;
 
     Ok(())
 }

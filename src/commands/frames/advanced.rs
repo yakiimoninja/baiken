@@ -1,5 +1,5 @@
 use std::string::String;
-use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
+use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
 use crate::{check, find, ran, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
 use super::utils::strip_angle_brackets;
 
@@ -51,7 +51,7 @@ pub async fn advanced(
         }
     }
 
-    let mut vec_embeds = Vec::new();
+    let mut builder = CreateReply::new();
 
     let mut embed_title = "__**".to_owned()
         + &character.replace("_", " ") + " "
@@ -96,7 +96,7 @@ pub async fn advanced(
         ])
         .footer(embed_footer);
 
-    vec_embeds.push(embed);
+    builder = builder.embed(embed);
 
     let notes_text = strip_angle_brackets(&move_data.notes).await;
 
@@ -105,12 +105,10 @@ pub async fn advanced(
             .color(EMBED_COLOR)
             .description(&notes_text);
 
-        vec_embeds.push(embed2);
+        builder = builder.embed(embed2);
     }
 
-    let mut reply = poise::CreateReply::default();
-    reply.embeds.extend(vec_embeds);
-    ctx.send(reply).await?;
+    ctx.send(builder).await?;
 
     // New version notification
     //ctx.channel_id().say(ctx, r"[__**Patch.**__](<https://github.com/yakiimoninja/baiken/releases>)").await?;

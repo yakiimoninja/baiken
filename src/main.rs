@@ -148,7 +148,7 @@ async fn main() {
         skip_checks_for_owners: false,
         // On ready event start the task of auto updating 
         // the character data every 24 hours
-        event_handler: |_ctx, event, _framework, _data| {
+        event_handler: |_framework, event| {
             Box::pin(async move {
                 match event {
                     serenity::FullEvent::Ready { data_about_bot: _ } => {

@@ -1,5 +1,5 @@
 use std::string::String;
-use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
+use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
 use crate::{check, find, Context, Error, EMBED_COLOR, HITBOX_DEFAULT};
 
 /// Display a move's hitbox images.
@@ -37,7 +37,7 @@ pub async fn hitboxes(
     // Finding hitboxes
     let hitbox_data = (find::find_hitboxes(move_id, ctx.data().db.clone()).await).unwrap();
 
-    let mut vec_embeds = Vec::new();
+    let mut builder = CreateReply::new();
 
     let mut embed_title = "__**".to_owned()
         + &character.replace("_", " ") + " "
@@ -62,7 +62,7 @@ pub async fn hitboxes(
                 .url(&embed_url)
                 .image(&hitbox_data[0].hitbox);
 
-            vec_embeds.push(embed);
+            builder = builder.embed(embed);
         },
         // More than one hitbox image
         2.. => {
@@ -78,7 +78,7 @@ pub async fn hitboxes(
                     .image(&hitbox_data[x].hitbox)
                     .footer(embed_footer);
 
-                vec_embeds.push(embed);
+                builder = builder.embed(embed);
             }
         },
         // No hitbox image
@@ -89,19 +89,15 @@ pub async fn hitboxes(
                 .url(&embed_url)
                 .image(HITBOX_DEFAULT);
 
-            vec_embeds.push(empty_embed);
+            builder = builder.embed(empty_embed);
         }
     };
 
     if !hitbox_data[0].hitbox_caption.trim().is_empty() {
-        vec_embeds.push(CreateEmbed::new().color(EMBED_COLOR)
+        builder = builder.embed(CreateEmbed::new().color(EMBED_COLOR)
             .description(&hitbox_data[0].hitbox_caption));
     }
 
-    let mut reply = poise::CreateReply::default();
-    reply.embeds.extend(vec_embeds);
-
-    ctx.send(reply).await?;
-
+    ctx.send(builder).await?;
     Ok(())
 }

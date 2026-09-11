@@ -1,4 +1,5 @@
 use std::string::String;
+use poise::CreateReply;
 use poise::serenity_prelude::CreateEmbed;
 use crate::{check, find, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
 use crate::structs::MoveInfo;
@@ -20,7 +21,7 @@ async fn startup_frames(move_data: &MoveInfo) -> String {
         meter_msg += "-";
     }
     // Otherwise execute logic
-    else{
+    else {
 
         // This bool to determine if bracket was present
         let mut startup_bra = false;
@@ -312,10 +313,8 @@ pub async fn meter(
         .color(EMBED_COLOR)
         .description(&meter_msg);
 
-    let vec_embeds = vec![embed, embed2];
-    let mut reply = poise::CreateReply::default();
-    reply.embeds.extend(vec_embeds);
-    ctx.send(reply).await?;
+    let builder = CreateReply::new().embed(embed).embed(embed2);
+    ctx.send(builder).await?;
 
     Ok(())
 }
