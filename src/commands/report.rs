@@ -38,7 +38,7 @@ pub async fn report(
         + "\n[Subject: " + &subject
         + "]\n" + &text + "\n\n";
 
-    write!(file, "{}", &new_text)
+    write!(file, "{}", new_text)
         .expect("\nFailed to write to 'report.txt'");
     
     println!("{}", "Done writting to 'report.txt'".yellow());
