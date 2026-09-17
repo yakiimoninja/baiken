@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.5.0] - 2026-09-09
+
+### Changed
+- Update dependencies.
+- Update data.
+
+### Added
+- Add new command `/frames tiny`. #16
+- Add new alieases for `A.B.A`, `Asuka`,`Bedman`,`Giovanna`,`I-no`,`Jack-O`,`Jam`,`Johnny`,`Ky`,`Millia`,`Nagoriyuki`,`Dizzy`,`Leo`.
+- Add new nickname for `Robo-Ky`.
+
+### Fixed
+- Fix bot returning moves different from what requested. #13 #14 #15 #16
+
 ## [2.4.0] - 2026-07-03
 
 ### Added
