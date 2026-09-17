@@ -190,7 +190,6 @@ pub async fn find_all(move_type: &String, filter: &str, value: &str, db: Arc<Mut
     ac.try_stream_replace_all(value.trim().to_lowercase().as_bytes(), &mut value_regex, replace_with).unwrap();
 
     let value = String::from_utf8(value_regex).unwrap();
-    println!("{}", value);
     let db = db.lock().unwrap();
 
     if move_type.is_empty() {
