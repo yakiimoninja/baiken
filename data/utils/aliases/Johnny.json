@@ -53,6 +53,8 @@
     "input": "214]K[",
     "aliases": [
       "Mist Finer (Horizontal)",
+      "Mist Finer K",
+      "K Mist Finer",
       "214K",
       "Mist Finer",
       "MFH",
@@ -64,8 +66,10 @@
     "input": "214]P[",
     "aliases": [
       "Mist Finer (Upward)",
-      "214P",
+      "Mist Finer P",
+      "P Mist Finer",
       "Mist Finer Up",
+      "214P",
       "MFU",
       "MFP",
       "PMF"
@@ -75,8 +79,10 @@
     "input": "214]S[",
     "aliases": [
       "Mist Finer (Downward)",
-      "214S",
+      "Mist Finer S",
+      "S Mist Finer",
       "Mist Finer Down",
+      "214S",
       "MFD",
       "MFS",
       "SMF"
@@ -114,7 +120,8 @@
       "Card Cut,",
       "Card Pop",
       "TU",
-      "CC"
+      "CC",
+      "CP"
     ]
   },
   {
