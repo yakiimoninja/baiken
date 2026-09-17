@@ -8,7 +8,7 @@ pub async fn get_normal_moves(move_list: &[MoveList]) -> String {
         if move_list[x].move_type.to_lowercase().trim() == "normal" {
 
             if x == 0 || (x > 0 && move_list[x].id != move_list[x-1].id) {
-                if move_list[x].input == move_list[x].name {
+                if move_list[x].input == move_list[x].name || move_list[x].name.is_empty() {
                     normal_moves += &("\n- **".to_owned() + &move_list[x].input + "**");
                 }
                 else {
@@ -47,7 +47,7 @@ pub async fn get_special_moves(move_list: &[MoveList]) -> String {
         if move_list[x].move_type.to_lowercase().trim() == "special" || move_list[x].move_type.to_lowercase().trim() == "other" {
 
             if x > 0 && move_list[x].id != move_list[x-1].id {
-                if move_list[x].input == move_list[x].name {
+                if move_list[x].input == move_list[x].name || move_list[x].name.is_empty() {
                     special_moves += &("\n- **".to_owned() + &move_list[x].input + "**");
                 }
                 else {
@@ -86,7 +86,7 @@ pub async fn get_super_moves(move_list: &[MoveList]) -> String {
         if move_list[x].move_type.to_lowercase().trim() == "super" {
 
             if x > 0 && move_list[x].id != move_list[x-1].id {
-                if move_list[x].input == move_list[x].name {
+                if move_list[x].input == move_list[x].name || move_list[x].name.is_empty() {
                     super_moves += &("\n- **".to_owned() + &move_list[x].input + "**");
                 }
                 else {
