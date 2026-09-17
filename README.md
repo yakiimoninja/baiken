@@ -109,15 +109,6 @@
         </p>
 </details>
 
-## **Command**: `/help`.
-**Display a relative help message per option selected.**
-<details open>
-    <summary>Show example.</summary>
-        <p align="center">
-            <img src="data/images/commands/help.png"/>
-        </p>
-</details>
-
 ## **Command**: `/report`.
 **Send feedback or requests to the dev.**
 <details open>
@@ -156,6 +147,9 @@ _**This command works only for admins.**_
             <img src="data/images/commands/xx.png"/>
         </p>
 </details>
+
+## **Command**: `/help`.
+**Display a relative help message per option selected.**
 
 # Usage notes.
 
