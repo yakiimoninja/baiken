@@ -83,7 +83,7 @@ pub async fn list(
     for (x, move_struct) in move_list.iter().enumerate() {
 
         if x == 0 || (x > 0 && move_list[x].char_id != move_list[x-1].char_id) {
-            if move_struct.name == move_struct.input {
+            if move_struct.input == move_struct.name || move_struct.name.is_empty() {
                 msg += &("- **".to_owned() + CHARS[move_struct.char_id-1] + " →** `" +  &move_struct.input + "`");
             }
             else {
@@ -91,10 +91,17 @@ pub async fn list(
             }
         }
         
-        //fix multiple entries by same character to display in one line
+        // fix multiple entries by same character to display in one line
+        println!("movelist[{}], {:#?}", x, move_struct);
         if x + 1 < move_list.len() {
             if move_list[x].char_id == move_list[x+1].char_id {
-                msg += &(", `".to_owned() + &move_list[x+1].name + " / " + &move_list[x+1].input + "`");
+
+                if move_list[x+1].input == move_list[x+1].name || move_list[x+1].name.is_empty() {
+                    msg += &(", `".to_owned() + &move_list[x+1].input + "`");
+                }
+                else {
+                    msg += &(", `".to_owned() + &move_list[x+1].name + " / " + &move_list[x+1].input + "`");
+                }
             }
             else {
                 msg += "\n";
