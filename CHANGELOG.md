@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fix bot returning moves different from what requested. #13 #14 #15 #16
+- Fix unnecessary `/` when using `/moves` or `/list`.
 
 ## [2.4.0] - 2026-07-03
 
