@@ -92,7 +92,6 @@ pub async fn list(
         }
         
         // fix multiple entries by same character to display in one line
-        println!("movelist[{}], {:#?}", x, move_struct);
         if x + 1 < move_list.len() {
             if move_list[x].char_id == move_list[x+1].char_id {
 
