@@ -6,19 +6,18 @@ use crate::structs::{MoveAliases, Nicknames};
 /// Creates `data.db` database.
 pub async fn create_db() -> Result<(), Error> {
 
-    let schema_path = "data/schema.sql";
+    let schema_path = "data/utils/data.schema";
     let nicknames_path = "data/utils/nicknames.json";
 
-    // check for schema.sql
-    // Checking if gids db exists
-    if !Path::new(&schema_path).exists() {
-        // Error message cause schema does not exist
-        let error_msg = "Failed to open 'schema.sql' file.";
-        return Err(error_msg.into());
-    }
     // utils directory
     if !Path::new("data/utils/").exists() {
         let error_msg = "Failed to open 'utils' directory.";
+        return Err(error_msg.into());
+    }
+    // check for data.schema
+    if !Path::new(&schema_path).exists() {
+        // Error message cause schema does not exist
+        let error_msg = "Failed to open 'data.schema' file.";
         return Err(error_msg.into());
     }
     // nicknames json
@@ -107,15 +106,26 @@ VALUES
 }
 
 /// Creates the `gid.db` database.
-pub async fn create_gid_db() -> Result<(), Error> {
+pub async fn create_gset_db() -> Result<(), Error> {
 
-    let db = SqlConnection::open("data/gids.db").unwrap();
-    db.execute(r#"
-CREATE TABLE IF NOT EXISTS "gids" (
-	"id" INTEGER NOT NULL UNIQUE,
-	"gid" TEXT NOT NULL UNIQUE,
-	PRIMARY KEY ("id")
-)"#, ()).unwrap();
+    let schema_path = "data/utils/gset.schema";
 
+    // utils directory
+    if !Path::new("data/utils/").exists() {
+        let error_msg = "Failed to open 'utils' directory.";
+        return Err(error_msg.into());
+    }
+    // check for gset.schema
+    if !Path::new(&schema_path).exists() {
+        // Error message cause schema does not exist
+        let error_msg = "Failed to open 'data.schema' file.";
+        return Err(error_msg.into());
+    }
+    // execute schema
+    let db = SqlConnection::open("data/gset.db").unwrap();
+    let schema = fs::read_to_string(schema_path).unwrap();
+    db.execute_batch(&schema).unwrap();
+
+    println!("Database 'gset.db' created.");
     Ok(())
 }

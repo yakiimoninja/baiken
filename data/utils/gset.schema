@@ -1,0 +1,8 @@
+
+CREATE TABLE IF NOT EXISTS "settings" (
+	"id" INTEGER NOT NULL UNIQUE,
+	"gid" TEXT NOT NULL UNIQUE,
+	"easter_egg" BOOLEAN NOT NULL CHECK ("easter_egg" IN (0,1)) DEFAULT 1,
+	"ephemeral_reply" BOOLEAN NOT NULL CHECK ("ephemeral_reply" IN (0,1)) DEFAULT 1,
+	PRIMARY KEY ("id")
+);

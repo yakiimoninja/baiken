@@ -93,8 +93,8 @@ async fn main() {
     if check::data_db_exists().await.is_err() {
         create::create_db().await.unwrap();
     }
-    if check::gids_db_exists().await.is_err() {
-        create::create_gid_db().await.unwrap();
+    if check::gset_db_exists().await.is_err() {
+        create::create_gset_db().await.unwrap();
     }
 
     // FrameworkOptions contains all of poise's configuration option in one struct
