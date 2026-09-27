@@ -110,9 +110,9 @@ async fn main() {
             moves::moves(),
             register::register(),
             report::report(),
+            settings::settings(),
             stats::stats(),
             update::update(),
-            xx::xx(),
         ],
         // The global error handler for all error cases that may occur
         on_error: |error| Box::pin(on_error(error)),
