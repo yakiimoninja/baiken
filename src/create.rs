@@ -1,4 +1,5 @@
 use std::{fs, path::Path};
+use colored::Colorize;
 use rusqlite::{named_params, Connection as SqlConnection};
 use crate::{update::update_all_char_data, Error, CHARS};
 use crate::structs::{MoveAliases, Nicknames};
@@ -102,6 +103,7 @@ VALUES
         }
     }
 
+    println!("{}", ("Database 'data.db' succesfully created!").green());
     Ok(())
 }
 
@@ -126,6 +128,6 @@ pub async fn create_gset_db() -> Result<(), Error> {
     let schema = fs::read_to_string(schema_path).unwrap();
     db.execute_batch(&schema).unwrap();
 
-    println!("Database 'gset.db' created.");
+    println!("{}", ("Database 'gset.db' succesfully created!").green());
     Ok(())
 }

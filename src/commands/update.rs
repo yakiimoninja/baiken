@@ -10,7 +10,7 @@ use crate::{CHARS, Context, Error, check, commands::update::login::dustloop_conn
 
 
 #[derive(Debug, poise::ChoiceParameter)]
-pub enum UpdateChoice{
+pub enum UpdateChoice {
     #[name = "all"]
     All,
     #[name = "frames"]
