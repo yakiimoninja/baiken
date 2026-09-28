@@ -32,6 +32,7 @@ struct ImageTitle {
 const IMAGE_HALF: &str = "https://www.dustloop.com/wiki/images";
 
 
+#[allow(clippy:: unnecessary_unwrap)]
 pub async fn images_to_db(char_images_response_json: &str, mut db: SqlConnection, char_count: usize) -> SqlConnection {
 
     let patterns = &[

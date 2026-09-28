@@ -52,6 +52,8 @@ struct Title {
     //hitboxes: Option<String>,
 }
 
+
+#[allow(clippy:: unnecessary_unwrap)]
 pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
 
     let empty = String::from("-");

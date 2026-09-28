@@ -72,6 +72,8 @@ struct Title {
     high_jump_gravity: Option<String>,
 }
 
+
+#[allow(clippy:: unnecessary_unwrap)]
 pub async fn info_to_db(char_info_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
 
     let empty = String::from("-");
