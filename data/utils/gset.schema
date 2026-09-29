@@ -3,6 +3,6 @@ CREATE TABLE IF NOT EXISTS "settings" (
 	"id" INTEGER NOT NULL UNIQUE,
 	"gid" TEXT NOT NULL UNIQUE,
 	"easter_eggs" BOOLEAN NOT NULL CHECK ("easter_eggs" IN (0,1)) DEFAULT 1,
-	"ephemeral_replies" BOOLEAN NOT NULL CHECK ("ephemeral_replies" IN (0,1)) DEFAULT 1,
+	"ephemeral_replies" BOOLEAN NOT NULL CHECK ("ephemeral_replies" IN (0,1)) DEFAULT 0,
 	PRIMARY KEY ("id")
 );
