@@ -107,7 +107,7 @@ VALUES
     Ok(())
 }
 
-/// Creates the `gid.db` database.
+/// Creates the `gset.db` database.
 pub async fn create_gset_db() -> Result<(), Error> {
 
     let schema_path = "data/utils/gset.schema";
