@@ -32,7 +32,7 @@ pub enum HelpChoice{
     Report,
 }
 /// Display a help message.
-#[poise::command(prefix_command, slash_command)]
+#[poise::command(prefix_command, slash_command, ephemeral)]
 pub async fn help(ctx: Context<'_>,
     #[description = "Pick a command to display help for."] option: HelpChoice
     ) -> Result<(), Error> {
