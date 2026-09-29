@@ -1,4 +1,4 @@
-use crate::{check, Context, Error};
+use crate::{Context, Error, check};
 use colored::Colorize;
 use rusqlite::{named_params, Connection as SqlConnection, OpenFlags};
 
@@ -49,34 +49,52 @@ pub async fn settings (
 
     // Open gset.db and check if gid is in db
     let db = SqlConnection::open_with_flags("data/gset.db", OpenFlags::SQLITE_OPEN_READ_WRITE).unwrap();
-    let guild_id_exists = check::gid_exists(&guild_id).await;
+    let easter_eggs_enabled = check::guild_ee_enabled(&guild_id).await;
+    let ephemeral_replies_enabled = check::guild_er_enabled(&guild_id).await;
+    let guild_exists = check::guild_exists(&guild_id).await;
 
     match setting {
         SettingChoice::EasterEggs => {
             match toggle {
                 ToggleChoice::Disable => {
-                    // Gid already exists
-                    if guild_id_exists {
+
+                    if !easter_eggs_enabled {
                         println!("{}", "Easter eggs are already disabled.".purple());
                         ctx.say("Easter eggs for this server are already disabled.").await?;
                         return Ok(());
                     }
+                    else if !guild_exists {
+                        db.execute("INSERT INTO settings (gid, easter_eggs) VALUES (:gid, :bool)",
+                            named_params! {":gid": guild_id, ":bool": 0}).unwrap();
+                        println!("{}", "Easter eggs have been disabled.".purple());
+                        ctx.say("Easter eggs for this server have been disabled.").await?;
+                        return Ok(());
+                    }
 
                     // Toggling disable
-                    db.execute("INSERT INTO settings (gid, easter_eggs) VALUES (:gid, :disable)", named_params! {":gid": guild_id, ":disable": 0}).unwrap();
+                    db.execute("UPDATE settings set easter_eggs = :bool WHERE gid = :gid",
+                        named_params! {":gid": guild_id, ":bool": 0}).unwrap();
                     println!("{}", "Easter eggs have been disabled.".purple());
                     ctx.say("Easter eggs for this server have been disabled.").await?;
                 }
                 ToggleChoice::Enable => {
-                    // Gid already exists
-                    if guild_id_exists {
+
+                    if easter_eggs_enabled {
                         println!("{}", "Easter eggs are already enabled".purple());
                         ctx.say("Easter eggs for this server are already enabled.").await?;
                         return Ok(());
                     }
+                    else if !guild_exists {
+                        db.execute("INSERT INTO settings (gid, easter_eggs) VALUES (:gid, :bool)",
+                            named_params! {":gid": guild_id, ":bool": 1}).unwrap();
+                        println!("{}", "Easter eggs have been enabled.".purple());
+                        ctx.say("Easter eggs for this server have been enabled.").await?;
+                        return Ok(());
+                    }
 
                     // Toggling enable
-                    db.execute("UPDATE settings set easter_eggs = :enable WHERE gid = :gid", named_params! {":gid": guild_id, ":enable": 1}).unwrap();
+                    db.execute("UPDATE settings set easter_eggs = :bool WHERE gid = :gid",
+                        named_params! {":gid": guild_id, ":bool": 1}).unwrap();
                     println!("{}", "Easter eggs have been enabled.".purple());
                     ctx.say("Easter eggs for this server have been enabled.").await?;
                 }
