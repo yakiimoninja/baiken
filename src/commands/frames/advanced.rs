@@ -1,7 +1,7 @@
 use std::string::String;
 use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
-use crate::{check, find, ran, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
-use super::utils::strip_angle_brackets;
+use crate::{Context, EMBED_COLOR, Error, IMAGE_DEFAULT, check::{self, guild_er_enabled}, find, ran};
+
 
 /// Display a move's frame data in an advanced view.
 #[poise::command(prefix_command, slash_command)]
@@ -66,8 +66,7 @@ pub async fn advanced(
     embed_title += "**__";
  
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
-    let embed_footer_text = strip_angle_brackets(&move_data.caption).await;
-    let embed_footer = CreateEmbedFooter::new(&embed_footer_text);
+    let embed_footer = CreateEmbedFooter::new(&move_data.caption);
 
     let embed = CreateEmbed::new()
         .color(EMBED_COLOR)
@@ -98,12 +97,10 @@ pub async fn advanced(
 
     builder = builder.embed(embed);
 
-    let notes_text = strip_angle_brackets(&move_data.notes).await;
-
-    if !notes_text.is_empty() {
+    if !&move_data.notes.is_empty() {
         let embed2 = CreateEmbed::new()
             .color(EMBED_COLOR)
-            .description(&notes_text);
+            .description(&move_data.notes);
 
         builder = builder.embed(embed2);
     }

@@ -66,8 +66,7 @@ pub async fn simple(
     embed_title += "**__";
  
     let embed_url = "https://dustloop.com/w/GGST/".to_owned() + &character.replace(" ", "_") + "#Overview";
-    let embed_footer_text = strip_angle_brackets(&move_data.caption).await;
-    let embed_footer = CreateEmbedFooter::new(&embed_footer_text);
+    let embed_footer = CreateEmbedFooter::new(&move_data.caption);
     
     // Sending the data as an embed
     let embed = CreateEmbed::new()

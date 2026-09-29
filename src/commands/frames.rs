@@ -2,7 +2,6 @@ mod meter;
 mod simple;
 mod tiny;
 mod advanced;
-mod utils;
 use meter::meter;
 use simple::simple;
 use tiny::tiny;

@@ -2,6 +2,8 @@ extern crate ureq;
 use aho_corasick::AhoCorasick;
 use serde::Deserialize;
 use rusqlite::{named_params, Connection as SqlConnection};
+use regex::Regex;
+
 
 #[derive(Deserialize, Debug)]
 struct Response {
@@ -52,6 +54,13 @@ struct Title {
     //hitboxes: Option<String>,
 }
 
+/// Removes any text enclosed in angle brackets, e.g. "<internal note>".
+pub fn strip_angle_brackets(text: &str) -> String {
+
+    let re = Regex::new(r"<[^>]*>").unwrap();
+
+    re.replace_all(text, "").trim().to_string()
+}
 
 #[allow(clippy:: unnecessary_unwrap)]
 pub async fn frames_to_db(char_page_response_json: &str, db: SqlConnection, char_count: usize) -> SqlConnection {
@@ -293,8 +302,8 @@ notes = :notes
         ":scaling":        move_data.title.scaling.as_ref().unwrap_or(&empty).to_string(),
         ":invincibility":  move_data.title.invincibility.as_ref().unwrap_or(&empty).to_string(),
         ":cancel":         move_data.title.cancel.as_ref().unwrap_or(&empty).to_string(),
-        ":caption":        move_data.title.caption.as_ref().unwrap_or(&String::from("")).to_string(),
-        ":notes":          move_data.title.notes.as_ref().unwrap_or(&String::from("")).to_string(),
+        ":caption":        strip_angle_brackets(move_data.title.caption.as_ref().unwrap_or(&String::from(""))),
+        ":notes":          strip_angle_brackets(move_data.title.notes.as_ref().unwrap_or(&String::from(""))),
         }).unwrap();
     }
 
