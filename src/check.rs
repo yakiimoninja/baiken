@@ -67,13 +67,43 @@ pub async fn adaptive_check(
 }
 
 /// Checks if given guild id exists in database.
-pub async fn gid_exists(guild_id: &String) -> bool {
+pub async fn guild_exists(guild_id: &String) -> bool {
+
+    // Open gids.db
+    let db = SqlConnection::open_with_flags("data/gset.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    // Check if gid is in db
+    let guild_exists = db.prepare("SELECT 0 FROM settings WHERE gid = :gid").unwrap()
+        .exists(named_params! {":gid": guild_id}).unwrap();
+
+    guild_exists
+}
+
+/// Checks if given guild has ee enabled.
+pub async fn guild_ee_enabled(guild_id: &String) -> bool {
 
     // Open gset.db
     let db = SqlConnection::open_with_flags("data/gset.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
-    // Check if gid is in db
-    let guild_id_exists = db.prepare("SELECT 0 FROM gset WHERE gid = :gid").unwrap()
-        .exists(named_params! {":gid": guild_id}).unwrap();
+    // Check if ee are disabled
+    let guild_ee = db.prepare("SELECT 0 FROM settings WHERE gid = :gid AND easter_eggs = :bool").unwrap()
+        .exists(named_params! {":gid": guild_id, ":bool": 0}).unwrap();
 
-    guild_id_exists
+    if !guild_ee {
+        return true;
+    }
+    false
+}
+
+/// Checks if given guild has er enabled.
+pub async fn guild_er_enabled(guild_id: &String) -> bool {
+
+    // Open gset.db
+    let db = SqlConnection::open_with_flags("data/gset.db", OpenFlags::SQLITE_OPEN_READ_ONLY).unwrap();
+    // Check if er are enabled
+    let guild_er = db.prepare("SELECT 0 FROM settings WHERE gid = :gid AND ephemeral_replies = :bool").unwrap()
+        .exists(named_params! {":gid": guild_id, ":bool": 1}).unwrap();
+
+    if !guild_er {
+        return false;
+    }
+    true
 }
