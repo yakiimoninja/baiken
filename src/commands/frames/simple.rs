@@ -1,7 +1,7 @@
 use std::string::String;
-use poise::serenity_prelude::{CreateEmbed, CreateEmbedFooter};
-use crate::{check, find, ran, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
-use super::utils::strip_angle_brackets;
+use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
+use crate::{Context, EMBED_COLOR, Error, IMAGE_DEFAULT, check::{self, guild_er_enabled}, find, ran};
+
 
 /// Display a move's frame data in a simplified view.
 #[poise::command(prefix_command, slash_command)]
@@ -43,10 +43,10 @@ pub async fn simple(
         embed_image = move_data.image.to_string();
     }
 
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
     {
-        // Parse guild id to string
-        let guild_id = ctx.guild_id().unwrap().to_string();
-        if !check::gid_exists(&guild_id).await {
+        if !check::guild_ee_enabled(&guild_id).await {
             if let Some(image_path) = ran::ran_p().await {
                 embed_image = image_path;
             }
@@ -87,7 +87,7 @@ pub async fn simple(
         ])
         .footer(embed_footer);
         
-    ctx.send(poise::CreateReply::default().embed(embed)).await?;
+    ctx.send(CreateReply::new().embed(embed).ephemeral(guild_er_enabled(&guild_id).await)).await?;
     
     // New version notification
     // ctx.channel_id().say(ctx, r"[__**Patch.**__](<https://github.com/yakiimoninja/baiken/releases>)").await?;

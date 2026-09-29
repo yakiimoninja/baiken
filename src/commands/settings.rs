@@ -103,34 +103,49 @@ pub async fn settings (
         SettingChoice::EphemeralReplies => {
             match toggle {
                 ToggleChoice::Disable => {
-                    // Gid already exists
-                    if guild_id_exists {
+
+                    if !ephemeral_replies_enabled {
                         println!("{}", "Ephemeral replies are already disabled.".purple());
                         ctx.say("Ephemeral replies for this server are already disabled.").await?;
                         return Ok(());
                     }
+                    else if !guild_exists {
+                        db.execute("INSERT INTO settings (gid, ephemeral_replies) VALUES (:gid, :bool)",
+                            named_params! {":gid": guild_id, ":bool": 0}).unwrap();
+                        println!("{}", "Ephemeral replies have been disabled.".purple());
+                        ctx.say("Ephemeral replies for this server have been disabled.").await?;
+                        return Ok(());
+                    }
 
                     // Toggling disable
-                    db.execute("INSERT INTO settings (gid, ephemeral_replies) VALUES (:gid, :disable)", named_params! {":gid": guild_id, ":disable": 0}).unwrap();
+                    db.execute("UPDATE settings set ephemeral_replies = :bool WHERE gid = :gid",
+                        named_params! {":gid": guild_id, ":bool": 0}).unwrap();
                     println!("{}", "Ephemeral replies have been disabled.".purple());
                     ctx.say("Ephemeral replies for this server have been disabled.").await?;
                 }
                 ToggleChoice::Enable => {
-                    // Gid already exists
-                    if guild_id_exists {
+
+                    if ephemeral_replies_enabled {
                         println!("{}", "Ephemeral replies are already enabled".purple());
                         ctx.say("Ephemeral replies for this server are already enabled.").await?;
                         return Ok(());
                     }
+                    else if !guild_exists {
+                        db.execute("INSERT INTO settings (gid, ephemeral_replies) VALUES (:gid, :bool)",
+                            named_params! {":gid": guild_id, ":bool": 1}).unwrap();
+                        println!("{}", "Ephemeral replies have been enabled.".purple());
+                        ctx.say("Ephemeral replies for this server have been enabled.").await?;
+                        return Ok(());
+                    }
 
                     // Toggling enable
-                    db.execute("UPDATE settings set ephemeral_replies = :enable WHERE gid = :gid", named_params! {":gid": guild_id, ":enable": 1}).unwrap();
+                    db.execute("UPDATE settings set ephemeral_replies = :bool WHERE gid = :gid",
+                        named_params! {":gid": guild_id, ":bool": 1}).unwrap();
                     println!("{}", "Ephemeral replies have been enabled.".purple());
                     ctx.say("Ephemeral replies for this server have been enabled.").await?;
                 }
             }
         }
     }
-
     Ok(())
 }

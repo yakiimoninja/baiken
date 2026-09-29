@@ -1,5 +1,5 @@
-use crate::{check, find::find_all, Context, Error, CHARS, EMBED_COLOR};
-use poise::{serenity_prelude::{CreateEmbed, CreateEmbedFooter}, ChoiceParameter};
+use crate::{CHARS, Context, EMBED_COLOR, Error, check::{self, guild_er_enabled}, find::find_all};
+use poise::{ChoiceParameter, CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
 
 #[derive(Debug, poise::ChoiceParameter)]
 pub enum TypeChoice {
@@ -114,7 +114,9 @@ pub async fn list(
         .description(msg)
         .footer(embed_footer);
 
-    ctx.send(poise::CreateReply::default().embed(embed)).await?;
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+    ctx.send(CreateReply::new().embed(embed).ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     Ok(())
 }

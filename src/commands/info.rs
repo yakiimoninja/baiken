@@ -1,6 +1,6 @@
 use std::string::String;
-use poise::serenity_prelude::CreateEmbed;
-use crate::{check, find::{self}, Context, Error, EMBED_COLOR};
+use poise::{CreateReply, serenity_prelude::CreateEmbed};
+use crate::{Context, EMBED_COLOR, Error, check::{self, guild_er_enabled}, find::{self}};
 
 /// Display a character's general info.
 #[poise::command(prefix_command, slash_command)]
@@ -72,7 +72,9 @@ pub async fn info(
     //reply.embeds.extend(vec_embeds);
         //.content(&msg)
 
-    ctx.send(poise::CreateReply::default().embed(embed)).await?;
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+    ctx.send(CreateReply::new().embed(embed).ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     Ok(())
 }

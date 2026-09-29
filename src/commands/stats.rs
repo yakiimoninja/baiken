@@ -1,6 +1,6 @@
 use colored::Colorize;
-use crate::{Context, Error, EMBED_COLOR};
-use poise::serenity_prelude::CreateEmbed;
+use crate::{Context, EMBED_COLOR, Error, check::guild_er_enabled};
+use poise::{CreateReply, serenity_prelude::CreateEmbed};
 
 /// Display Baiken stats.
 #[poise::command(prefix_command, slash_command)]
@@ -33,7 +33,9 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
         .color(EMBED_COLOR)
         .description(msg);
 
-    ctx.send(poise::CreateReply::default().embed(embed)).await?;
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+    ctx.send(CreateReply::new().embed(embed).ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     Ok(())
 }

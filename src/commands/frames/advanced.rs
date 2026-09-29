@@ -41,10 +41,10 @@ pub async fn advanced(
         embed_image = move_data.image.to_string();
     }
 
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
     {
-        // Parse guild id to string
-        let guild_id = ctx.guild_id().unwrap().to_string();
-        if !check::gid_exists(&guild_id).await {
+        if !check::guild_ee_enabled(&guild_id).await {
             if let Some(image_path) = ran::ran_p().await {
                 embed_image = image_path;
             }
@@ -105,7 +105,7 @@ pub async fn advanced(
         builder = builder.embed(embed2);
     }
 
-    ctx.send(builder).await?;
+    ctx.send(builder.ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     // New version notification
     //ctx.channel_id().say(ctx, r"[__**Patch.**__](<https://github.com/yakiimoninja/baiken/releases>)").await?;

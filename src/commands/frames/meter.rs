@@ -1,6 +1,7 @@
 use std::string::String;
 use poise::CreateReply;
 use poise::serenity_prelude::CreateEmbed;
+use crate::check::guild_er_enabled;
 use crate::{check, find, Context, Error, EMBED_COLOR, IMAGE_DEFAULT};
 use crate::structs::MoveInfo;
 
@@ -313,8 +314,10 @@ pub async fn meter(
         .color(EMBED_COLOR)
         .description(&meter_msg);
 
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
     let builder = CreateReply::new().embed(embed).embed(embed2);
-    ctx.send(builder).await?;
+    ctx.send(builder.ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     Ok(())
 }

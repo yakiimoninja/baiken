@@ -1,5 +1,7 @@
 use std::{fs, string::String};
+use poise::CreateReply;
 use poise::serenity_prelude::CreateEmbed;
+use crate::check::guild_er_enabled;
 use crate::structs::Nicknames;
 use crate::{check, Context, Error, EMBED_COLOR};
 
@@ -62,7 +64,9 @@ pub async fn nicknames(
         .url("https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json")
         .description(nicks_as_msg);
 
-    ctx.send(poise::CreateReply::default().embed(embed)).await?;
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+    ctx.send(CreateReply::default().embed(embed).ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     Ok(())
 }

@@ -1,6 +1,6 @@
 mod utils;
 use utils::{get_normal_moves, get_special_moves, get_super_moves};
-use crate::{check, find::{self, find_move_list}, Context, Error, EMBED_COLOR};
+use crate::{Context, EMBED_COLOR, Error, check::{self, guild_er_enabled}, find::{self, find_move_list}};
 use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
 
 #[derive(Debug, poise::ChoiceParameter)]
@@ -116,7 +116,9 @@ pub async fn moves(
         },
     };
 
-    ctx.send(builder).await?;
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+    ctx.send(builder.ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
     Ok(())
 }

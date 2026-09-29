@@ -1,6 +1,5 @@
-use std::string::String;
 use poise::{CreateReply, serenity_prelude::{CreateEmbed, CreateEmbedFooter}};
-use crate::{check, find, Context, Error, EMBED_COLOR, HITBOX_DEFAULT};
+use crate::{check, find, Context, Error, EMBED_COLOR, HITBOX_DEFAULT, check::guild_er_enabled};
 
 /// Display a move's hitbox images.
 #[poise::command(prefix_command, slash_command)]
@@ -98,6 +97,8 @@ pub async fn hitboxes(
             .description(&hitbox_data[0].hitbox_caption));
     }
 
-    ctx.send(builder).await?;
+    // Parse guild id to string
+    let guild_id = ctx.guild_id().unwrap().to_string();
+    ctx.send(builder.ephemeral(guild_er_enabled(&guild_id).await)).await?;
     Ok(())
 }
