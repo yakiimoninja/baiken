@@ -146,7 +146,7 @@
 <details open>
     <summary>Show example.</summary>
         <p align="center">
-            <img src="data/images/commands/xx.png"/>
+            <img src="data/images/commands/settings.png"/>
         </p>
 </details>
 
