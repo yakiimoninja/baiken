@@ -44,7 +44,7 @@ pub async fn advanced(
     // Parse guild id to string
     let guild_id = ctx.guild_id().unwrap().to_string();
     {
-        if !check::guild_ee_enabled(&guild_id).await {
+        if check::guild_ee_enabled(&guild_id).await {
             if let Some(image_path) = ran::ran_p().await {
                 embed_image = image_path;
             }
