@@ -15,7 +15,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Build
         run: cargo build --release --verbose
   
@@ -30,16 +30,16 @@ jobs:
           echo "current_version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
         shell: bash
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Get Changelog Entry
         id: changelog_reader
-        uses: mindsers/changelog-reader-action@v2.2.3
+        uses: mindsers/changelog-reader-action@v2
         with:
-          validation_level: none
+          validation_level: warn
           version: ${{ steps.tag_name.outputs.current_version }}
           path: CHANGELOG.md
       - name: Create/update release
-        uses: ncipollo/release-action@v1.14.0
+        uses: ncipollo/release-action@v1
         with:
           # This pulls from the "Get Changelog Entry" step above, referencing it's ID to get its outputs object.
           # See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
