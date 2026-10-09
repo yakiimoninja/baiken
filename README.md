@@ -119,8 +119,9 @@
 </details>
 
 ## **Command**: `/update`.
-**Update the frame data, image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).** \
-_**This command works only for owners.**_
+**Update the frame data, image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).**
+> [!NOTE]
+> _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -129,8 +130,9 @@ _**This command works only for owners.**_
 </details>
 
 ## **Command**: `/register`.
-**Register or remove all slash commands in the current or every server the bot is present.** \
-_**This command works only for owners.**_
+**Register or remove all slash commands in the current or every server the bot is present.**
+> [!NOTE]
+> _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
@@ -139,8 +141,9 @@ _**This command works only for owners.**_
 </details>
 
 ## **Command**: `/xx`.
-**Disable or enable easter eggs in the current server.** \
-_**This command works only for admins.**_
+**Disable or enable easter eggs in the current server.**
+> [!NOTE]
+> _**This command works only for owners.**_
 <details open>
     <summary>Show example.</summary>
         <p align="center">
