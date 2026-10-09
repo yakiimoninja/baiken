@@ -140,7 +140,7 @@
 </details>
 
 ## **Command**: `/settings`.
-**Disable or enable easter eggs and ephemeral replies in the current server.**
+**Disable or enable easter eggs and or ephemeral replies in the current server.**
 > [!NOTE]
 > _**This command works only for owners.**_
 <details open>
