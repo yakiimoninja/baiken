@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.6.0] - 2026-10-09
+
+### Added
+- Add new toggle for ephemeral replies that can be per server configured.
+
+### Changed
+- Change `/help` replies to ephemeral.
+
 ## [2.5.0] - 2026-09-09
 
 ### Changed
