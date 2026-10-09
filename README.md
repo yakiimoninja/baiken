@@ -13,8 +13,8 @@
 - **[Inviting Baiken to a server](#inviting-baiken-to-a-server)**
 - **[Support](#support)**
 - **[Commands](#commands)**
-    - **[Usage notes](#usage-notes)**
-    - **[Nicknames](data/nicknames.json)**
+- **[Usage notes](#usage-notes)**
+- **[Nicknames](data/utils/nicknames.json)**
 
 # Patch notes.
 - You can view the latest patch notes by [**pressing here**](https://github.com/yakiimoninja/baiken/releases).
@@ -28,6 +28,27 @@
 </p>
 
 # Commands.
+<details open>
+    <summary><h3>List of commands<h3></summary>
+
+- **[frames simple](#command-frames-simple)**
+- **[frames advanced](#command-frames-advanced)**
+- **[frames tiny](#command-frames-tiny)**
+- **[frames meter](#command-frames-meter)**
+- **[hitboxes](#command-hitboxes)**
+- **[moves](#command-moves)**
+- **[list](#command-list)**
+- **[info](#command-info)**
+- **[nicknames](#command-nicknames)**
+- **[report](#command-report)**
+- **[settings](#command-settings)**
+- **[update](#command-update)**
+- **[help](#command-help)**   
+
+</details>
+
+#
+
 ## **Command**: `/frames simple`.
 **Display a move's frame data in a simplified view.**
 <details open>
@@ -118,6 +139,17 @@
         </p>
 </details>
 
+## **Command**: `/settings`.
+**Disable or enable easter eggs in the current server.**
+> [!NOTE]
+> _**This command works only for owners.**_
+<details open>
+    <summary>Show example.</summary>
+        <p align="center">
+            <img src="data/images/commands/xx.png"/>
+        </p>
+</details>
+
 ## **Command**: `/update`.
 **Update the frame data, image links and or info for all or a specific character according to [**dustloop**](https://dustloop.com).**
 > [!NOTE]
@@ -140,28 +172,17 @@
         </p>
 </details>
 
-## **Command**: `/xx`.
-**Disable or enable easter eggs in the current server.**
-> [!NOTE]
-> _**This command works only for owners.**_
-<details open>
-    <summary>Show example.</summary>
-        <p align="center">
-            <img src="data/images/commands/xx.png"/>
-        </p>
-</details>
-
 ## **Command**: `/help`.
 **Display a relative help message per option selected.**
 
 # Usage notes.
 
 - **All searching is case insensitive.**
-  - All names, nicknames, moves and aliases are case agnostic.
-  - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
+    - All names, nicknames, moves and aliases are case agnostic.
+    - Example: `/hitboxes ky dp` = `/hitboxes KY dP`.
 
 - **Character searching.**
-    - Characters can be found either using a part of their name, or any of their existing [nickname's](https://github.com/yakiimoninja/baiken/blob/main/data/nicknames.json).
+    - Characters can be found either using a part of their name, or any of their existing [nickname's](https://github.com/yakiimoninja/baiken/blob/main/data/utils/nicknames.json).
     - Example: `/moves Happy Chaos` = `/moves happy` = `/moves hc`.
 
 - **Move searching.**
