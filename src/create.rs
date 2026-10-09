@@ -120,7 +120,7 @@ pub async fn create_gset_db() -> Result<(), Error> {
     // check for gset.schema
     if !Path::new(&schema_path).exists() {
         // Error message cause schema does not exist
-        let error_msg = "Failed to open 'data.schema' file.";
+        let error_msg = "Failed to open 'gset.schema' file.";
         return Err(error_msg.into());
     }
     // execute schema
