@@ -29,7 +29,7 @@ pub enum ToggleChoice{
 )]
 pub async fn settings (
     ctx: Context<'_>,
-    #[description = "Pick a setting to configure."] setting: SettingChoice,
+    #[description = "Select a setting to configure."] setting: SettingChoice,
     #[description = "Enable or disable setting."] toggle: ToggleChoice,
 ) -> Result<(), Error> {
 
