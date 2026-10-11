@@ -4,6 +4,8 @@ use crate::{Context, Error, EMBED_COLOR};
 pub enum HelpChoice{
     #[name = "general"]
     General,
+    #[name = "notes"]
+    Notes,
     #[name = "frames simple"]
     FramesSimple,
     #[name = "frames advanced"]
@@ -22,12 +24,8 @@ pub enum HelpChoice{
     Info,
     #[name = "nicknames"]
     Nicknames,
-    #[name = "notes"]
-    Notes,
-    #[name = "register"]
-    Register,
-    #[name = "update"]
-    Update,
+    #[name = "settings"]
+    Settings,
     #[name = "report"]
     Report,
 }
@@ -71,15 +69,12 @@ pub async fn help(ctx: Context<'_>,
         HelpChoice::Notes => {
             help_notes().await
         },
-        HelpChoice::Register => {
-            help_register().await
-        },
         HelpChoice::Report => {
             help_report().await
         },
-        HelpChoice::Update => {
-            help_update().await
-        },
+        HelpChoice::Settings=> {
+            help_settings().await
+        }
     };
 
     // Sending the data as an embed
@@ -99,13 +94,16 @@ async fn help_general() -> (String, String){
 ## __**List of commands**__
 1. `frames`
 1. `hitboxes`
-1. `fmeter`
 1. `moves`
+1. `list`
 1. `info`
 1. `nicknames`
-1. `feedback`
-1. `help`
+1. `report`
+1. `settings`
 
+Try `/help notes` for more tips.
+
+**[__Baiken bot server__](https://discord.gg/PrFtCK7zqJ>)**
 **[__Patch notes__](https://github.com/yakiimoninja/baiken/releases>)**
 **[__Support the project__](<https://github.com/sponsors/yakiimoninja>)**
 "#);
@@ -287,18 +285,6 @@ async fn help_notes() -> (String, String) {
     (msg, img)
 }
 
-async fn help_register() -> (String, String) {
-    let msg = String::from(r#"
-## __**Command**__: `/register`
-
-Register or remove all slash commands in the current or every server the bot is present.
-_**This command only works for owners.**_"#);
-
-    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/register.png");
-
-    (msg, img)
-}
-
 async fn help_report() -> (String, String) {
     let msg = String::from(r#"
 ## __**Command**__: `/report`
@@ -313,17 +299,19 @@ Send a report or feedback."#);
     (msg, img)
 }
 
-async fn help_update() -> (String, String) {
+async fn help_settings() -> (String, String) {
     let msg = String::from(r#"
-__**Command**__: `/update`
+__**Command**__: `/settings`
 
-__**option**__: `all`, `frames`, `images` or `info`.
-__**character**__: Character name or nickname.
+__**option**__: `easter eggs`, `ephemeral replies`.
+__**toggle**__: `enable`, `disable`.
 
-Update the frame data and, image links or info for all or a specific character according to dustloop.
+Disable or enable easter eggs and or ephemeral replies in the current server.
+Configuration is saved for future use.
+
 _**This command only works for owners.**_"#);
 
-    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/update.png");
+    let img = String::from("https://raw.githubusercontent.com/yakiimoninja/baiken/main/data/images/commands/settings.png");
 
     (msg, img)
 }
