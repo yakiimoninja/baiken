@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Find a non blocking way to update the db.
 
+## [2.6.1] - 2026-10-11
+
+## Changed shuffled arround and updated command `/help` options.
+
 ## [2.6.0] - 2026-10-09
 
 ### Added
@@ -24,7 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add new command `/frames tiny`. #16
-- Add new alieases for `A.B.A`, `Asuka`,`Bedman`,`Giovanna`,`I-no`,`Jack-O`,`Jam`,`Johnny`,`Ky`,`Millia`,`Nagoriyuki`,`Dizzy`,`Leo`.
+- Add new aliases for `A.B.A`, `Asuka`,`Bedman`,`Giovanna`,`I-no`,`Jack-O`,`Jam`,`Johnny`,`Ky`,`Millia`,`Nagoriyuki`,`Dizzy`,`Leo`.
 - Add new nickname for `Robo-Ky`.
 
 ### Fixed
