@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.6.1] - 2026-10-11
 
-## Changed shuffled arround and updated command `/help` options.
+## Changed
+- Shuffle arround and update command `/help` options.
+- Update README.
 
 ## [2.6.0] - 2026-10-09
 
