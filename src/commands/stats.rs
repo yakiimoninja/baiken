@@ -19,9 +19,9 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
                 .to_string(),
         )
     };
-    
+
     // To view sharding amount allowed by discord
-    //println!("{:#?}", ctx.http().get_bot_gateway().await);
+    // println!("{:#?}", ctx.http().get_bot_gateway().await);
     println!("{}", ("Server count: ".to_owned() + &total_guild_count + "\nMembers count: " + &total_members).purple());
 
     let msg = "- **Version →** ".to_owned() + env!("CARGO_PKG_VERSION")
@@ -37,5 +37,7 @@ pub async fn stats(ctx: Context<'_>) -> Result<(), Error> {
     let guild_id = ctx.guild_id().unwrap().to_string();
     ctx.send(CreateReply::new().embed(embed).ephemeral(guild_er_enabled(&guild_id).await)).await?;
 
+    // Details about servers
+    // poise::builtins::servers(ctx).await?;
     Ok(())
 }
